@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+dist/
+build/
+
+# Generated files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Public assets
+public/
+
+# Environment files
+.env*
+
+# Cache directories
+.cache/
+.eslintcache
+.stylelintcache
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Coverage reports
+coverage/
+
+# TypeScript build info
+*.tsbuildinfo 

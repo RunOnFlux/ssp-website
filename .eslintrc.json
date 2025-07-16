@@ -1,0 +1,112 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:import/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    // React specific rules
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "react/no-unescaped-entities": "off",
+    "react/no-unknown-property": "error",
+    "react/jsx-key": "error",
+    "react/jsx-no-duplicate-props": "error",
+    "react/jsx-no-undef": "error",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/no-deprecated": "warn",
+    "react/no-unsafe": "warn",
+    // React Hooks rules
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    // General JavaScript rules
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "no-debugger": "warn",
+    "no-alert": "warn",
+    "no-var": "error",
+    "prefer-const": "error",
+    "no-duplicate-imports": "error",
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1
+      }
+    ],
+    "eol-last": "error",
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never"
+      }
+    ],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "allowTemplateLiterals": true,
+        "avoidEscape": true
+      }
+    ],
+    "semi": [
+      "error",
+      "never"
+    ],
+    // Import rules
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          [
+            "parent",
+            "sibling"
+          ],
+          "index"
+        ],
+        "newlines-between": "never",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    // Next.js specific
+    "@next/next/no-img-element": "error",
+    "@next/next/no-page-custom-font": "error"
+  },
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
