@@ -31,7 +31,7 @@ const techFeatures = [
 
 export function TechnicalFeatures() {
   return (
-    <section className='section-padding bg-gray-50 dark:bg-dark-800'>
+    <section className='section-padding dark:bg-dark-800 bg-gray-50'>
       <div className='container-custom'>
         <div className='mb-16 text-center'>
           <h2 className='mb-6 text-4xl font-bold md:text-5xl'>
@@ -55,7 +55,7 @@ export function TechnicalFeatures() {
                 className='card card-hover'
               >
                 <div className='text-center'>
-                  <div className='mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500 to-primary-600'>
+                  <div className='from-primary-500 to-primary-600 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br'>
                     <Icon className='h-8 w-8 text-white' />
                   </div>
                   <h3 className='mb-4 text-xl font-bold'>{feature.title}</h3>

@@ -82,7 +82,7 @@ export function Security() {
   }
 
   return (
-    <section className='section-padding bg-gray-50 dark:bg-dark-800'>
+    <section className='section-padding dark:bg-dark-800 bg-gray-50'>
       <div className='container-custom'>
         <motion.div
           ref={ref}
@@ -117,17 +117,17 @@ export function Security() {
                 <motion.div key={index} variants={itemVariants} className='group text-center'>
                   {/* Icon Container */}
                   <div className='relative mb-6'>
-                    <div className='mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-lg transition-shadow duration-300 group-hover:shadow-xl dark:bg-dark-700'>
-                      <Icon className='h-10 w-10 text-primary-600 dark:text-primary-400' />
+                    <div className='dark:bg-dark-700 mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-lg transition-shadow duration-300 group-hover:shadow-xl'>
+                      <Icon className='text-primary-600 dark:text-primary-400 h-10 w-10' />
                     </div>
 
                     {/* Floating badge */}
-                    <div className='absolute -right-2 -top-2 rounded-full bg-red-500 px-2 py-1 text-xs font-bold text-white'>
+                    <div className='absolute -top-2 -right-2 rounded-full bg-red-500 px-2 py-1 text-xs font-bold text-white'>
                       {feature.highlight}
                     </div>
                   </div>
 
-                  <h3 className='mb-3 text-lg font-bold transition-colors duration-200 group-hover:text-primary-600 dark:group-hover:text-primary-400'>
+                  <h3 className='group-hover:text-primary-600 dark:group-hover:text-primary-400 mb-3 text-lg font-bold transition-colors duration-200'>
                     {feature.title}
                   </h3>
 
@@ -142,7 +142,7 @@ export function Security() {
           {/* Audit Reports Section */}
           <motion.div
             variants={itemVariants}
-            className='rounded-2xl bg-white p-8 shadow-lg dark:bg-dark-900'
+            className='dark:bg-dark-900 rounded-2xl bg-white p-8 shadow-lg'
           >
             <div className='grid items-center gap-12 lg:grid-cols-2'>
               {/* Left Content */}
@@ -215,7 +215,7 @@ export function Security() {
                     <motion.div
                       key={index}
                       variants={itemVariants}
-                      className='rounded-lg bg-gray-50 p-4 transition-colors duration-200 hover:bg-gray-100 dark:bg-dark-800 dark:hover:bg-dark-700'
+                      className='dark:bg-dark-800 dark:hover:bg-dark-700 rounded-lg bg-gray-50 p-4 transition-colors duration-200 hover:bg-gray-100'
                     >
                       <div className='flex items-center justify-between'>
                         <div className='flex-1'>
@@ -231,7 +231,7 @@ export function Security() {
                           href={report.link}
                           target='_blank'
                           rel='noopener noreferrer'
-                          className='flex items-center text-primary-600 transition-colors duration-200 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300'
+                          className='text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 flex items-center transition-colors duration-200'
                         >
                           <span className='mr-1 text-sm font-medium'>View Report</span>
                           <ExternalLink className='h-4 w-4' />
@@ -242,8 +242,8 @@ export function Security() {
                 </div>
 
                 {/* Additional Security Info */}
-                <div className='mt-8 rounded-lg border border-primary-200 bg-primary-50 p-4 dark:border-primary-800 dark:bg-primary-900/20'>
-                  <p className='text-sm text-primary-800 dark:text-primary-200'>
+                <div className='border-primary-200 bg-primary-50 dark:border-primary-800 dark:bg-primary-900/20 mt-8 rounded-lg border p-4'>
+                  <p className='text-primary-800 dark:text-primary-200 text-sm'>
                     <strong>Security Bug Bounty:</strong> We offer rewards for responsible
                     disclosure of security vulnerabilities. Help us keep SSP secure.
                   </p>

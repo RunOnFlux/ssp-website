@@ -32,11 +32,11 @@ const securityFeatures = [
 
 export function SecurityFeatures() {
   return (
-    <section className='section-padding bg-white dark:bg-dark-900'>
+    <section className='section-padding dark:bg-dark-900 bg-white'>
       <div className='container-custom'>
         <div className='mb-16 text-center'>
           <h2 className='mb-6 text-4xl font-bold md:text-5xl'>
-            <spsan className='gradient-text'>Security</spsan> Features
+            <span className='gradient-text'>Security</span> Features
           </h2>
           <p className='mx-auto max-w-3xl text-xl text-gray-600 dark:text-gray-300'>
             Your crypto security is our top priority. Every feature is designed with security-first
@@ -57,7 +57,7 @@ export function SecurityFeatures() {
                 className='card card-hover'
               >
                 <div className='flex items-start space-x-4'>
-                  <div className='flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary-500'>
+                  <div className='bg-primary-500 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg'>
                     <Icon className='h-6 w-6 text-white' />
                   </div>
                   <div>

@@ -37,9 +37,9 @@ export function Header() {
   return (
     <header
       className={cn(
-        'fixed left-0 right-0 top-0 z-50 transition-all duration-300',
+        'fixed top-0 right-0 left-0 z-50 transition-all duration-300',
         isScrolled
-          ? 'border-b border-gray-200/20 bg-white/80 backdrop-blur-md dark:border-white/10 dark:bg-dark-900/80'
+          ? 'dark:bg-dark-900/80 border-b border-gray-200/20 bg-white/80 backdrop-blur-md dark:border-white/10'
           : 'bg-transparent'
       )}
     >
@@ -47,7 +47,7 @@ export function Header() {
         <div className='flex h-16 items-center justify-between md:h-20'>
           {/* Logo */}
           <Link href='/' className='flex items-center space-x-2'>
-            <Logo width={120} height={40} className='h-8 w-auto md:h-10' />
+            <Logo width={120} height={40} className='h-8 md:h-10' />
           </Link>
 
           {/* Desktop Navigation */}
@@ -57,7 +57,7 @@ export function Header() {
                 key={item.name}
                 href={item.href}
                 className={cn(
-                  'relative text-sm font-medium transition-colors duration-200 hover:text-primary-600 dark:hover:text-primary-400',
+                  'hover:text-primary-600 dark:hover:text-primary-400 relative text-sm font-medium transition-colors duration-200',
                   router.pathname === item.href
                     ? 'text-primary-600 dark:text-primary-400'
                     : 'text-gray-700 dark:text-gray-300'
@@ -66,7 +66,7 @@ export function Header() {
                 {item.name}
                 {router.pathname === item.href && (
                   <motion.div
-                    className='absolute -bottom-1 left-0 right-0 h-0.5 bg-primary-600 dark:bg-primary-400'
+                    className='bg-primary-600 dark:bg-primary-400 absolute right-0 -bottom-1 left-0 h-0.5'
                     layoutId='activeTab'
                     transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
                   />
@@ -81,7 +81,7 @@ export function Header() {
             {mounted && (
               <button
                 onClick={toggleTheme}
-                className='rounded-lg bg-gray-100 p-2 transition-colors duration-200 hover:bg-gray-200 dark:bg-dark-800 dark:hover:bg-dark-700'
+                className='dark:bg-dark-800 dark:hover:bg-dark-700 rounded-lg bg-gray-100 p-2 transition-colors duration-200 hover:bg-gray-200'
                 aria-label='Toggle theme'
               >
                 {theme === 'dark' ? (
@@ -101,7 +101,7 @@ export function Header() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className='rounded-lg bg-gray-100 p-2 transition-colors duration-200 hover:bg-gray-200 dark:bg-dark-800 dark:hover:bg-dark-700 lg:hidden'
+              className='dark:bg-dark-800 dark:hover:bg-dark-700 rounded-lg bg-gray-100 p-2 transition-colors duration-200 hover:bg-gray-200 lg:hidden'
               aria-label='Toggle menu'
             >
               {isMenuOpen ? (
@@ -123,7 +123,7 @@ export function Header() {
               transition={{ duration: 0.3 }}
               className='overflow-hidden lg:hidden'
             >
-              <div className='mt-2 space-y-2 rounded-lg border border-gray-200/20 bg-white/95 py-4 backdrop-blur-md dark:border-white/10 dark:bg-dark-900/95'>
+              <div className='dark:bg-dark-900/95 mt-2 space-y-2 rounded-lg border border-gray-200/20 bg-white/95 py-4 backdrop-blur-md dark:border-white/10'>
                 {navigation.map((item, index) => (
                   <motion.div
                     key={item.name}
@@ -138,7 +138,7 @@ export function Header() {
                         'block px-4 py-2 text-base font-medium transition-colors duration-200',
                         router.pathname === item.href
                           ? 'bg-primary-50 text-primary-600 dark:bg-primary-900/20 dark:text-primary-400'
-                          : 'text-gray-700 hover:bg-gray-50 hover:text-primary-600 dark:text-gray-300 dark:hover:bg-dark-800 dark:hover:text-primary-400'
+                          : 'hover:text-primary-600 dark:hover:bg-dark-800 dark:hover:text-primary-400 text-gray-700 hover:bg-gray-50 dark:text-gray-300'
                       )}
                     >
                       {item.name}

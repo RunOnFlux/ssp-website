@@ -49,13 +49,13 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className='border-t border-gray-200 bg-gray-50 dark:border-dark-600 dark:bg-dark-800'>
+    <footer className='dark:border-dark-600 dark:bg-dark-800 border-t border-gray-200 bg-gray-50'>
       <div className='container-custom section-padding'>
         <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-6 lg:gap-12'>
           {/* Logo and Description */}
           <div className='lg:col-span-2'>
             <Link href='/' className='mb-4 flex items-center space-x-2'>
-              <Logo width={120} height={40} className='h-8 w-auto' />
+              <Logo width={120} height={40} className='h-8' />
             </Link>
             <p className='mb-6 max-w-sm text-gray-600 dark:text-gray-400'>
               Secure, Simple, Powerful. SSP is a groundbreaking, self-custody, multi-signature
@@ -71,7 +71,7 @@ export function Footer() {
                 {['BTC', 'ETH', 'LTC', 'ZEC', 'RVN', 'DOGE', 'BCH', 'FLUX'].map(chain => (
                   <span
                     key={chain}
-                    className='rounded bg-gray-200 px-2 py-1 text-xs font-medium text-gray-700 dark:bg-dark-700 dark:text-gray-300'
+                    className='dark:bg-dark-700 rounded bg-gray-200 px-2 py-1 text-xs font-medium text-gray-700 dark:text-gray-300'
                   >
                     {chain}
                   </span>
@@ -89,7 +89,7 @@ export function Footer() {
                     href={item.href}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='rounded-lg bg-gray-200 p-2 transition-colors duration-200 hover:bg-gray-300 dark:bg-dark-700 dark:hover:bg-dark-600'
+                    className='dark:bg-dark-700 dark:hover:bg-dark-600 rounded-lg bg-gray-200 p-2 transition-colors duration-200 hover:bg-gray-300'
                     aria-label={item.name}
                   >
                     <Icon className='h-5 w-5 text-gray-600 dark:text-gray-400' />
@@ -184,7 +184,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className='mt-12 border-t border-gray-200 pt-8 dark:border-dark-600'>
+        <div className='dark:border-dark-600 mt-12 border-t border-gray-200 pt-8'>
           <div className='flex flex-col items-center justify-between sm:flex-row'>
             <p className='text-sm text-gray-500 dark:text-gray-400'>
               © {new Date().getFullYear()} SSP Wallet. All rights reserved.

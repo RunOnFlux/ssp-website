@@ -1,8 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@config '../tailwind.config.js';
+
+@source "./pages/**/*.{js,jsx,ts,tsx,mdx}";
+@source "./components/**/*.{js,jsx,ts,tsx,mdx}";
+@source "./app/**/*.{js,jsx,ts,tsx,mdx}";
+
+@theme {
+  /* Custom colors from your tailwind.config.js */
+  --color-primary-50: #fef9e7;
+  --color-primary-100: #fef3c7;
+  --color-primary-200: #fde68a;
+  --color-primary-300: #fcd34d;
+  --color-primary-400: #fbbf24;
+  --color-primary-500: #f59e0b;
+  --color-primary-600: #d97706;
+  --color-primary-700: #b45309;
+  --color-primary-800: #92400e;
+  --color-primary-900: #78350f;
+  --color-primary-950: #451a03;
+
+  --color-dark-50: oklch(0.99 0.01 210);
+  --color-dark-100: oklch(0.85 0.02 220);
+  --color-dark-200: oklch(0.7 0.05 240);
+  --color-dark-300: oklch(0.55 0.08 250);
+  --color-dark-400: oklch(0.45 0.1 250);
+  --color-dark-500: oklch(0.35 0.08 260);
+  --color-dark-600: oklch(0.25 0.06 260);
+  --color-dark-700: oklch(0.2 0.05 265);
+  --color-dark-800: oklch(0.15 0.04 270);
+  --color-dark-900: oklch(0.08 0.02 270);
+
+  /* Custom fonts */
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+  --font-family-display: 'Montserrat', system-ui, sans-serif;
+
+  /* Custom animations */
+  --animate-fade-in-up: fadeInUp 0.6s ease-out forwards;
+  --animate-fade-in-down: fadeInDown 0.6s ease-out forwards;
+  --animate-slide-in-left: slideInLeft 0.6s ease-out forwards;
+  --animate-slide-in-right: slideInRight 0.6s ease-out forwards;
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-bounce-slow: bounce 2s infinite;
+
+  /* Keyframes */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
 
 :root {
   /* Color system */
@@ -57,7 +143,7 @@
   }
 
   body {
-    @apply bg-white text-gray-900 transition-colors duration-300 dark:bg-dark-900 dark:text-white;
+    @apply dark:bg-dark-900 bg-white text-gray-900 transition-colors duration-300 dark:text-white;
     font-family:
       'Inter',
       system-ui,
@@ -109,33 +195,33 @@
   }
 
   a {
-    @apply text-primary-600 transition-colors duration-200 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300;
+    @apply text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 transition-colors duration-200;
   }
 }
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center rounded-lg px-6 py-3 text-base font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center rounded-lg px-6 py-3 text-base font-medium transition-all duration-200 focus:ring-2 focus:ring-offset-2 focus:outline-none;
   }
 
   .btn-primary {
-    @apply transform bg-primary-600 text-white shadow-lg hover:scale-105 hover:bg-primary-700 hover:shadow-xl focus:ring-primary-500;
+    @apply bg-primary-600 hover:bg-primary-700 focus:ring-primary-500 transform text-white shadow-lg hover:scale-105 hover:shadow-xl;
   }
 
   .btn-secondary {
-    @apply border border-gray-300 bg-white text-gray-900 hover:bg-gray-50 focus:ring-gray-500 dark:border-dark-600 dark:bg-dark-800 dark:text-white dark:hover:bg-dark-700;
+    @apply dark:border-dark-600 dark:bg-dark-800 dark:hover:bg-dark-700 border border-gray-300 bg-white text-gray-900 hover:bg-gray-50 focus:ring-gray-500 dark:text-white;
   }
 
   .btn-outline {
-    @apply border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white focus:ring-primary-500;
+    @apply border-primary-600 text-primary-600 hover:bg-primary-600 focus:ring-primary-500 border-2 hover:text-white;
   }
 
   .btn-ghost {
-    @apply text-gray-600 hover:bg-gray-100 hover:text-gray-900 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-dark-800 dark:hover:text-white;
+    @apply dark:hover:bg-dark-800 text-gray-600 hover:bg-gray-100 hover:text-gray-900 focus:ring-gray-500 dark:text-gray-300 dark:hover:text-white;
   }
 
   .card {
-    @apply rounded-xl border border-gray-200 bg-white p-6 shadow-lg transition-all duration-300 dark:border-dark-600 dark:bg-dark-800 dark:shadow-2xl;
+    @apply dark:border-dark-600 dark:bg-dark-800 rounded-xl border border-gray-200 bg-white p-6 shadow-lg transition-all duration-300 dark:shadow-2xl;
   }
 
   .card-hover {
@@ -143,11 +229,11 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent;
+    @apply from-primary-600 to-primary-400 bg-gradient-to-r bg-clip-text text-transparent;
   }
 
   .gradient-bg {
-    @apply bg-gradient-to-br from-primary-600 via-primary-500 to-primary-700;
+    @apply from-primary-600 via-primary-500 to-primary-700 bg-gradient-to-br;
   }
 
   .section-padding {
@@ -196,15 +282,15 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-gray-100 dark:bg-dark-800;
+  @apply dark:bg-dark-800 bg-gray-100;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply rounded-full bg-gray-300 dark:bg-dark-600;
+  @apply dark:bg-dark-600 rounded-full bg-gray-300;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-gray-400 dark:bg-dark-500;
+  @apply dark:bg-dark-500 bg-gray-400;
 }
 
 /* Smooth scrolling */
@@ -214,7 +300,7 @@ html {
 
 /* Focus styles */
 .focus-visible:focus {
-  @apply outline-none ring-2 ring-primary-500 ring-offset-2 dark:ring-offset-dark-900;
+  @apply ring-primary-500 dark:ring-offset-dark-900 ring-2 ring-offset-2 outline-none;
 }
 
 /* Selection styles */

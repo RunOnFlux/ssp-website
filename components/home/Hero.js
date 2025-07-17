@@ -62,12 +62,12 @@ export function Hero() {
   }
 
   return (
-    <section className='relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-dark-900 dark:via-dark-800 dark:to-dark-900'>
+    <section className='dark:from-dark-900 dark:via-dark-800 dark:to-dark-900 relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100'>
       {/* Background Elements */}
       <div className='absolute inset-0'>
         {/* Gradient Orbs */}
-        <div className='absolute left-1/4 top-1/4 h-96 w-96 animate-pulse-slow rounded-full bg-primary-500/20 blur-3xl' />
-        <div className='animation-delay-400 absolute bottom-1/4 right-1/4 h-96 w-96 animate-pulse-slow rounded-full bg-blue-500/20 blur-3xl' />
+        <div className='animate-pulse-slow bg-primary-500/20 absolute top-1/4 left-1/4 h-96 w-96 rounded-full blur-3xl' />
+        <div className='animation-delay-400 animate-pulse-slow absolute right-1/4 bottom-1/4 h-96 w-96 rounded-full bg-blue-500/20 blur-3xl' />
 
         {/* Grid Pattern */}
         <div className='absolute inset-0 opacity-30 dark:opacity-10'>
@@ -99,12 +99,12 @@ export function Hero() {
           {/* Left Content */}
           <div className='text-center lg:text-left'>
             <motion.div variants={itemVariants} className='mb-6'>
-              <div className='mb-6 inline-flex items-center rounded-full bg-primary-100 px-4 py-2 text-sm font-medium text-primary-800 dark:bg-primary-900/30 dark:text-primary-200'>
-                <span className='mr-2 h-2 w-2 animate-pulse rounded-full bg-primary-500'></span>
+              <div className='bg-primary-100 text-primary-800 dark:bg-primary-900/30 dark:text-primary-200 mb-6 inline-flex items-center rounded-full px-4 py-2 text-sm font-medium'>
+                <span className='bg-primary-500 mr-2 h-2 w-2 animate-pulse rounded-full'></span>
                 Security Audited by Halborn
               </div>
 
-              <h1 className='mb-6 text-balance text-5xl font-bold md:text-6xl lg:text-7xl'>
+              <h1 className='mb-6 text-5xl font-bold text-balance md:text-6xl lg:text-7xl'>
                 <span className='gradient-text'>Secure</span>,{' '}
                 <span className='gradient-text'>Simple</span>,{' '}
                 <span className='gradient-text'>Powerful</span>
@@ -113,7 +113,7 @@ export function Hero() {
 
             <motion.p
               variants={itemVariants}
-              className='mb-8 max-w-2xl text-balance text-xl text-gray-600 dark:text-gray-300 md:text-2xl'
+              className='mb-8 max-w-2xl text-xl text-balance text-gray-600 md:text-2xl dark:text-gray-300'
             >
               The next-generation crypto wallet with multi-signature security, seamless DApp
               integration, and support for multiple blockchains.
@@ -129,9 +129,9 @@ export function Hero() {
                 return (
                   <div
                     key={index}
-                    className='flex items-center space-x-2 rounded-full border border-gray-200 bg-white/60 px-4 py-2 backdrop-blur-sm dark:border-dark-600 dark:bg-dark-800/60'
+                    className='dark:border-dark-600 dark:bg-dark-800/60 flex items-center space-x-2 rounded-full border border-gray-200 bg-white/60 px-4 py-2 backdrop-blur-sm'
                   >
-                    <Icon className='h-4 w-4 text-primary-600 dark:text-primary-400' />
+                    <Icon className='text-primary-600 dark:text-primary-400 h-4 w-4' />
                     <span className='text-sm font-medium text-gray-700 dark:text-gray-300'>
                       {feature.text}
                     </span>
@@ -160,22 +160,22 @@ export function Hero() {
             {/* Stats */}
             <motion.div
               variants={itemVariants}
-              className='mt-12 grid grid-cols-3 gap-8 border-t border-gray-200 pt-8 dark:border-dark-600'
+              className='dark:border-dark-600 mt-12 grid grid-cols-3 gap-8 border-t border-gray-200 pt-8'
             >
               <div className='text-center'>
-                <div className='text-2xl font-bold text-gray-900 dark:text-white md:text-3xl'>
+                <div className='text-2xl font-bold text-gray-900 md:text-3xl dark:text-white'>
                   12+
                 </div>
                 <div className='text-sm text-gray-600 dark:text-gray-400'>Supported Chains</div>
               </div>
               <div className='text-center'>
-                <div className='text-2xl font-bold text-gray-900 dark:text-white md:text-3xl'>
+                <div className='text-2xl font-bold text-gray-900 md:text-3xl dark:text-white'>
                   100K+
                 </div>
                 <div className='text-sm text-gray-600 dark:text-gray-400'>Active Users</div>
               </div>
               <div className='text-center'>
-                <div className='text-2xl font-bold text-gray-900 dark:text-white md:text-3xl'>
+                <div className='text-2xl font-bold text-gray-900 md:text-3xl dark:text-white'>
                   99.9%
                 </div>
                 <div className='text-sm text-gray-600 dark:text-gray-400'>Uptime</div>
@@ -197,12 +197,12 @@ export function Hero() {
                 />
 
                 {/* Glow Effect */}
-                <div className='absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-primary-500/20 to-blue-500/20 blur-3xl' />
+                <div className='from-primary-500/20 absolute inset-0 -z-10 rounded-full bg-gradient-to-r to-blue-500/20 blur-3xl' />
               </div>
 
               {/* Floating Elements */}
               <motion.div
-                className='absolute -right-8 -top-8 flex h-16 w-16 items-center justify-center rounded-full bg-primary-500 shadow-lg'
+                className='bg-primary-500 absolute -top-8 -right-8 flex h-16 w-16 items-center justify-center rounded-full shadow-lg'
                 animate={{
                   y: [-5, 5, -5],
                   rotate: [0, 180, 360],

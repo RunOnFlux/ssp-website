@@ -71,7 +71,7 @@ export default function DownloadPage() {
       </Head>
 
       {/* Hero Section */}
-      <section className='section-padding to-secondary-50 relative overflow-hidden bg-gradient-to-br from-primary-50 via-white dark:from-dark-900 dark:via-dark-800 dark:to-dark-900'>
+      <section className='section-padding to-secondary-50 from-primary-50 dark:from-dark-900 dark:via-dark-800 dark:to-dark-900 relative overflow-hidden bg-gradient-to-br via-white'>
         <div className='bg-grid-pattern absolute inset-0 opacity-5'></div>
         <div className='container-custom relative'>
           <motion.div
@@ -80,7 +80,7 @@ export default function DownloadPage() {
             transition={{ duration: 0.8 }}
             className='mx-auto max-w-4xl text-center'
           >
-            <div className='mb-6 inline-flex items-center rounded-full bg-primary-100 px-4 py-2 text-sm font-medium text-primary-700 dark:bg-primary-900/30 dark:text-primary-300'>
+            <div className='bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300 mb-6 inline-flex items-center rounded-full px-4 py-2 text-sm font-medium'>
               <Download className='mr-2 h-4 w-4' />
               Start with SSP Wallet, Continue with SSP Key
             </div>
@@ -123,9 +123,9 @@ export default function DownloadPage() {
                   <div
                     className={`h-full rounded-2xl border-2 p-8 transition-all duration-300 ${
                       option.available
-                        ? 'border-primary-200 bg-white hover:border-primary-300 hover:shadow-lg dark:border-primary-800 dark:bg-dark-800 dark:hover:border-primary-700'
-                        : 'border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-dark-700'
-                    } ${option.primary ? 'border-primary-300 bg-gradient-to-br from-primary-50 to-white dark:border-primary-600 dark:from-primary-900/20 dark:to-dark-800' : ''} `}
+                        ? 'border-primary-200 hover:border-primary-300 dark:border-primary-800 dark:bg-dark-800 dark:hover:border-primary-700 bg-white hover:shadow-lg'
+                        : 'dark:bg-dark-700 border-gray-200 bg-gray-50 dark:border-gray-700'
+                    } ${option.primary ? 'border-primary-300 from-primary-50 dark:border-primary-600 dark:from-primary-900/20 dark:to-dark-800 bg-gradient-to-br to-white' : ''} `}
                   >
                     <div className='mb-6 flex items-start justify-between'>
                       <div>
@@ -161,7 +161,7 @@ export default function DownloadPage() {
                       <Link
                         href={option.link}
                         target='_blank'
-                        className='inline-flex items-center rounded-lg bg-primary-600 px-6 py-3 font-medium text-white transition-colors hover:bg-primary-700'
+                        className='bg-primary-600 hover:bg-primary-700 inline-flex items-center rounded-lg px-6 py-3 font-medium text-white transition-colors'
                       >
                         <Download className='mr-2 h-4 w-4' />
                         Download Now
@@ -175,14 +175,15 @@ export default function DownloadPage() {
 
                     {/* Extension Preview for Chrome option */}
                     {option.primary && option.available && (
-                      <div className='mt-8 rounded-xl border border-gray-200 bg-white p-6 dark:border-gray-600 dark:bg-dark-700'>
+                      <div className='dark:bg-dark-700 mt-8 rounded-xl border border-gray-200 bg-white p-6 dark:border-gray-600'>
                         <div className='text-center'>
-                          <div className='mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary-100 dark:bg-primary-900/30'>
+                          <div className='bg-primary-100 dark:bg-primary-900/30 mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full'>
                             <Image
                               src='/Icon Logo Black.svg'
                               alt='SSP Wallet'
                               width={32}
                               height={32}
+                              style={{ width: 'auto', height: 'auto' }}
                             />
                           </div>
                           <h4 className='mb-2 text-lg font-semibold text-gray-900 dark:text-white'>
@@ -194,7 +195,7 @@ export default function DownloadPage() {
                             Secure. Simple. Powerful.
                           </p>
                           <div className='space-y-2'>
-                            <div className='text-sm font-medium text-primary-600 dark:text-primary-400'>
+                            <div className='text-primary-600 dark:text-primary-400 text-sm font-medium'>
                               Get Started!
                             </div>
                             <div className='text-sm text-gray-500 dark:text-gray-400'>
@@ -213,7 +214,7 @@ export default function DownloadPage() {
       </section>
 
       {/* Supported Browsers */}
-      <section className='section-padding bg-gray-50 dark:bg-dark-800'>
+      <section className='section-padding dark:bg-dark-800 bg-gray-50'>
         <div className='container-custom'>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -227,7 +228,7 @@ export default function DownloadPage() {
             <div className='flex items-center justify-center space-x-12'>
               {supportedBrowsers.map(browser => (
                 <div key={browser.name} className='group text-center'>
-                  <div className='mx-auto mb-3 h-16 w-16 rounded-xl bg-white p-3 shadow-sm transition-shadow group-hover:shadow-md dark:bg-dark-700'>
+                  <div className='dark:bg-dark-700 mx-auto mb-3 h-16 w-16 rounded-xl bg-white p-3 shadow-sm transition-shadow group-hover:shadow-md'>
                     <Image
                       src={browser.icon}
                       alt={browser.name}
@@ -265,7 +266,7 @@ export default function DownloadPage() {
 
               <div className='mb-8 space-y-4'>
                 <div className='flex items-start'>
-                  <QrCode className='mr-3 mt-1 h-5 w-5 flex-shrink-0 text-primary-600 dark:text-primary-400' />
+                  <QrCode className='text-primary-600 dark:text-primary-400 mt-1 mr-3 h-5 w-5 flex-shrink-0' />
                   <div>
                     <h4 className='font-semibold text-gray-900 dark:text-white'>QR Code Sync</h4>
                     <p className='text-gray-600 dark:text-gray-400'>
@@ -275,7 +276,7 @@ export default function DownloadPage() {
                 </div>
 
                 <div className='flex items-start'>
-                  <Shield className='mr-3 mt-1 h-5 w-5 flex-shrink-0 text-primary-600 dark:text-primary-400' />
+                  <Shield className='text-primary-600 dark:text-primary-400 mt-1 mr-3 h-5 w-5 flex-shrink-0' />
                   <div>
                     <h4 className='font-semibold text-gray-900 dark:text-white'>
                       Enhanced Security
@@ -291,7 +292,7 @@ export default function DownloadPage() {
                 <Link
                   href='https://play.google.com/store/apps/details?id=io.runonflux.sspkey'
                   target='_blank'
-                  className='inline-flex items-center justify-center rounded-lg bg-primary-600 px-6 py-3 font-medium text-white transition-colors hover:bg-primary-700'
+                  className='bg-primary-600 hover:bg-primary-700 inline-flex items-center justify-center rounded-lg px-6 py-3 font-medium text-white transition-colors'
                 >
                   <Smartphone className='mr-2 h-5 w-5' />
                   Download for Android
@@ -300,7 +301,7 @@ export default function DownloadPage() {
                 <Link
                   href='https://apps.apple.com/us/app/ssp-key/id6463717332'
                   target='_blank'
-                  className='inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 font-medium text-gray-700 transition-colors hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-dark-700'
+                  className='dark:hover:bg-dark-700 inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 font-medium text-gray-700 transition-colors hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300'
                 >
                   <Smartphone className='mr-2 h-5 w-5' />
                   Download for iOS
@@ -339,12 +340,12 @@ export default function DownloadPage() {
             viewport={{ once: true }}
           >
             <h2 className='mb-4 text-3xl font-bold text-white'>Ready to Get Started?</h2>
-            <p className='mx-auto mb-8 max-w-2xl text-xl text-primary-100'>
+            <p className='text-primary-100 mx-auto mb-8 max-w-2xl text-xl'>
               Join thousands of users who trust SSP Wallet for their crypto security
             </p>
             <Link
               href='/guide'
-              className='inline-flex items-center rounded-lg bg-white px-8 py-4 font-semibold text-primary-600 transition-colors hover:bg-gray-50'
+              className='text-primary-600 inline-flex items-center rounded-lg bg-white px-8 py-4 font-semibold transition-colors hover:bg-gray-50'
             >
               View Setup Guide
               <ArrowRight className='ml-2 h-5 w-5' />

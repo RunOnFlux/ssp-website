@@ -150,7 +150,7 @@ function FAQItem({ faq, index, categoryIndex }) {
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className='flex w-full items-center justify-between p-6 text-left transition-colors hover:bg-gray-50 dark:hover:bg-dark-700'
+        className='dark:hover:bg-dark-700 flex w-full items-center justify-between p-6 text-left transition-colors hover:bg-gray-50'
       >
         <span className='pr-4 font-semibold text-gray-900 dark:text-white'>{faq.question}</span>
         {isOpen ? (
@@ -251,7 +251,7 @@ function ContactForm() {
           required
           value={formData.email}
           onChange={handleChange}
-          className='w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 focus:ring-primary-500 dark:border-gray-600 dark:bg-dark-700 dark:text-white'
+          className='focus:ring-primary-500 dark:bg-dark-700 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
           placeholder='your.email@example.com'
         />
       </div>
@@ -269,7 +269,7 @@ function ContactForm() {
           required
           value={formData.type}
           onChange={handleChange}
-          className='w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 focus:ring-primary-500 dark:border-gray-600 dark:bg-dark-700 dark:text-white'
+          className='focus:ring-primary-500 dark:bg-dark-700 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
         >
           <option value='general'>General Question</option>
           <option value='technical'>Technical Issue</option>
@@ -293,7 +293,7 @@ function ContactForm() {
           required
           value={formData.subject}
           onChange={handleChange}
-          className='w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 focus:ring-primary-500 dark:border-gray-600 dark:bg-dark-700 dark:text-white'
+          className='focus:ring-primary-500 dark:bg-dark-700 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
           placeholder='Brief description of your issue'
         />
       </div>
@@ -312,7 +312,7 @@ function ContactForm() {
           rows={6}
           value={formData.description}
           onChange={handleChange}
-          className='w-full resize-none rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 focus:ring-primary-500 dark:border-gray-600 dark:bg-dark-700 dark:text-white'
+          className='focus:ring-primary-500 dark:bg-dark-700 w-full resize-none rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
           placeholder='Please provide detailed information about your issue...'
         />
       </div>
@@ -327,7 +327,7 @@ function ContactForm() {
       <button
         type='submit'
         disabled={isSubmitting}
-        className='inline-flex w-full items-center justify-center rounded-lg bg-primary-600 px-6 py-3 font-medium text-white transition-colors hover:bg-primary-700 disabled:bg-primary-400'
+        className='bg-primary-600 hover:bg-primary-700 disabled:bg-primary-400 inline-flex w-full items-center justify-center rounded-lg px-6 py-3 font-medium text-white transition-colors'
       >
         {isSubmitting ? (
           <>
@@ -377,7 +377,7 @@ export default function Support() {
       </Head>
 
       {/* Hero Section */}
-      <section className='section-padding relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-dark-900 dark:via-dark-800 dark:to-dark-900'>
+      <section className='section-padding dark:from-dark-900 dark:via-dark-800 dark:to-dark-900 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50'>
         <div className='bg-grid-pattern absolute inset-0 opacity-5'></div>
         <div className='container-custom relative'>
           <motion.div
@@ -400,7 +400,7 @@ export default function Support() {
             </p>
 
             <div className='mx-auto grid max-w-3xl gap-6 md:grid-cols-3'>
-              <div className='flex items-center rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-dark-800'>
+              <div className='dark:bg-dark-800 flex items-center rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700'>
                 <Book className='mr-3 h-8 w-8 flex-shrink-0 text-blue-500' />
                 <div className='text-left'>
                   <h3 className='font-semibold text-gray-900 dark:text-white'>Documentation</h3>
@@ -408,7 +408,7 @@ export default function Support() {
                 </div>
               </div>
 
-              <div className='flex items-center rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-dark-800'>
+              <div className='dark:bg-dark-800 flex items-center rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700'>
                 <Users className='mr-3 h-8 w-8 flex-shrink-0 text-green-500' />
                 <div className='text-left'>
                   <h3 className='font-semibold text-gray-900 dark:text-white'>Community</h3>
@@ -416,7 +416,7 @@ export default function Support() {
                 </div>
               </div>
 
-              <div className='flex items-center rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-dark-800'>
+              <div className='dark:bg-dark-800 flex items-center rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700'>
                 <MessageCircle className='mr-3 h-8 w-8 flex-shrink-0 text-purple-500' />
                 <div className='text-left'>
                   <h3 className='font-semibold text-gray-900 dark:text-white'>Direct Support</h3>
@@ -454,10 +454,10 @@ export default function Support() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className='rounded-2xl border border-gray-200 bg-white p-8 transition-shadow hover:shadow-lg dark:border-gray-700 dark:bg-dark-800'
+                  className='dark:bg-dark-800 rounded-2xl border border-gray-200 bg-white p-8 transition-shadow hover:shadow-lg dark:border-gray-700'
                 >
                   <div className='mb-6 text-center'>
-                    <div className='mb-4 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400'>
+                    <div className='bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400 mb-4 inline-flex h-16 w-16 items-center justify-center rounded-2xl'>
                       <ChannelIcon className='h-8 w-8' />
                     </div>
                     <h3 className='mb-2 text-xl font-bold text-gray-900 dark:text-white'>
@@ -474,12 +474,12 @@ export default function Support() {
                           key={linkIndex}
                           href={link.url}
                           target={link.internal ? '_self' : '_blank'}
-                          className='group flex items-center rounded-lg border border-gray-200 p-3 transition-colors hover:bg-gray-50 dark:border-gray-600 dark:hover:bg-dark-700'
+                          className='group dark:hover:bg-dark-700 flex items-center rounded-lg border border-gray-200 p-3 transition-colors hover:bg-gray-50 dark:border-gray-600'
                         >
                           {LinkIcon && (
-                            <LinkIcon className='mr-3 h-5 w-5 text-gray-500 group-hover:text-primary-600 dark:text-gray-400 dark:group-hover:text-primary-400' />
+                            <LinkIcon className='group-hover:text-primary-600 dark:group-hover:text-primary-400 mr-3 h-5 w-5 text-gray-500 dark:text-gray-400' />
                           )}
-                          <span className='text-gray-700 group-hover:text-primary-600 dark:text-gray-300 dark:group-hover:text-primary-400'>
+                          <span className='group-hover:text-primary-600 dark:group-hover:text-primary-400 text-gray-700 dark:text-gray-300'>
                             {link.name}
                           </span>
                         </Link>
@@ -494,7 +494,7 @@ export default function Support() {
       </section>
 
       {/* FAQ Section */}
-      <section className='section-padding bg-gray-50 dark:bg-dark-900'>
+      <section className='section-padding dark:bg-dark-900 bg-gray-50'>
         <div className='container-custom'>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -521,7 +521,7 @@ export default function Support() {
                     viewport={{ once: true }}
                     className='mb-8 flex items-center'
                   >
-                    <div className='mr-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400'>
+                    <div className='bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400 mr-4 flex h-10 w-10 items-center justify-center rounded-lg'>
                       <CategoryIcon className='h-5 w-5' />
                     </div>
                     <h3 className='text-2xl font-bold text-gray-900 dark:text-white'>
@@ -565,7 +565,7 @@ export default function Support() {
 
               <div className='space-y-6'>
                 <div className='flex items-start'>
-                  <Mail className='mr-4 mt-1 h-6 w-6 flex-shrink-0 text-primary-600 dark:text-primary-400' />
+                  <Mail className='text-primary-600 dark:text-primary-400 mt-1 mr-4 h-6 w-6 flex-shrink-0' />
                   <div>
                     <h4 className='mb-1 font-semibold text-gray-900 dark:text-white'>
                       Email Support
@@ -577,7 +577,7 @@ export default function Support() {
                 </div>
 
                 <div className='flex items-start'>
-                  <Github className='mr-4 mt-1 h-6 w-6 flex-shrink-0 text-primary-600 dark:text-primary-400' />
+                  <Github className='text-primary-600 dark:text-primary-400 mt-1 mr-4 h-6 w-6 flex-shrink-0' />
                   <div>
                     <h4 className='mb-1 font-semibold text-gray-900 dark:text-white'>
                       Open Source
@@ -589,7 +589,7 @@ export default function Support() {
                 </div>
 
                 <div className='flex items-start'>
-                  <Users className='mr-4 mt-1 h-6 w-6 flex-shrink-0 text-primary-600 dark:text-primary-400' />
+                  <Users className='text-primary-600 dark:text-primary-400 mt-1 mr-4 h-6 w-6 flex-shrink-0' />
                   <div>
                     <h4 className='mb-1 font-semibold text-gray-900 dark:text-white'>Community</h4>
                     <p className='text-gray-600 dark:text-gray-400'>
@@ -607,7 +607,7 @@ export default function Support() {
               viewport={{ once: true }}
               className='mt-12 lg:mt-0'
             >
-              <div className='rounded-2xl border border-gray-200 bg-white p-8 dark:border-gray-700 dark:bg-dark-800'>
+              <div className='dark:bg-dark-800 rounded-2xl border border-gray-200 bg-white p-8 dark:border-gray-700'>
                 <h3 className='mb-6 text-xl font-bold text-gray-900 dark:text-white'>
                   Contact Support
                 </h3>

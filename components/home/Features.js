@@ -85,7 +85,7 @@ export function Features() {
   }
 
   return (
-    <section className='section-padding bg-white dark:bg-dark-900'>
+    <section className='section-padding dark:bg-dark-900 bg-white'>
       <div className='container-custom'>
         <motion.div
           ref={ref}
@@ -132,7 +132,7 @@ export function Features() {
                     </div>
 
                     {/* Text Content */}
-                    <h3 className='mb-3 text-xl font-bold transition-colors duration-200 group-hover:text-primary-600 dark:group-hover:text-primary-400'>
+                    <h3 className='group-hover:text-primary-600 dark:group-hover:text-primary-400 mb-3 text-xl font-bold transition-colors duration-200'>
                       {feature.title}
                     </h3>
 
@@ -154,7 +154,7 @@ export function Features() {
                   </div>
 
                   {/* Hover Effect */}
-                  <div className='absolute inset-0 rounded-xl border-2 border-transparent transition-colors duration-300 group-hover:border-primary-200 dark:group-hover:border-primary-800' />
+                  <div className='group-hover:border-primary-200 dark:group-hover:border-primary-800 absolute inset-0 rounded-xl border-2 border-transparent transition-colors duration-300' />
                 </motion.div>
               )
             })}
@@ -171,7 +171,7 @@ export function Features() {
               </h3>
               <div className='space-y-6'>
                 <div className='flex items-start space-x-4'>
-                  <div className='flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary-500'>
+                  <div className='bg-primary-500 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full'>
                     <span className='text-sm font-bold text-white'>1</span>
                   </div>
                   <div>
@@ -183,7 +183,7 @@ export function Features() {
                 </div>
 
                 <div className='flex items-start space-x-4'>
-                  <div className='flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary-500'>
+                  <div className='bg-primary-500 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full'>
                     <span className='text-sm font-bold text-white'>2</span>
                   </div>
                   <div>
@@ -195,7 +195,7 @@ export function Features() {
                 </div>
 
                 <div className='flex items-start space-x-4'>
-                  <div className='flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary-500'>
+                  <div className='bg-primary-500 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full'>
                     <span className='text-sm font-bold text-white'>3</span>
                   </div>
                   <div>
@@ -210,11 +210,11 @@ export function Features() {
 
             {/* Video/Animation Section */}
             <div className='relative'>
-              <div className='aspect-video overflow-hidden rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 dark:from-dark-800 dark:to-dark-700'>
+              <div className='dark:from-dark-800 dark:to-dark-700 aspect-video overflow-hidden rounded-xl bg-gradient-to-br from-gray-100 to-gray-200'>
                 {/* Placeholder for video */}
                 <div className='flex h-full w-full items-center justify-center'>
                   <div className='text-center'>
-                    <div className='mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary-500'>
+                    <div className='bg-primary-500 mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full'>
                       <motion.div
                         animate={{ scale: [1, 1.2, 1] }}
                         transition={{ duration: 2, repeat: Infinity }}
@@ -230,7 +230,7 @@ export function Features() {
               </div>
 
               {/* Decorative elements */}
-              <div className='absolute -right-4 -top-4 h-24 w-24 rounded-full bg-primary-200 opacity-60 blur-xl dark:bg-primary-800' />
+              <div className='bg-primary-200 dark:bg-primary-800 absolute -top-4 -right-4 h-24 w-24 rounded-full opacity-60 blur-xl' />
               <div className='absolute -bottom-4 -left-4 h-32 w-32 rounded-full bg-blue-200 opacity-40 blur-xl dark:bg-blue-800' />
             </div>
           </motion.div>

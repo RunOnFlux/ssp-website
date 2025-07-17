@@ -133,7 +133,7 @@ export function SupportedChains() {
   }
 
   return (
-    <section className='section-padding bg-white dark:bg-dark-900'>
+    <section className='section-padding dark:bg-dark-900 bg-white'>
       <div className='container-custom'>
         <motion.div
           ref={ref}
@@ -177,7 +177,7 @@ export function SupportedChains() {
                     <div
                       className={`absolute inset-0 bg-gradient-to-br ${chain.color} rounded-full opacity-20 blur-sm`}
                     />
-                    <div className='relative flex h-full w-full items-center justify-center rounded-full bg-white shadow-lg dark:bg-dark-700'>
+                    <div className='dark:bg-dark-700 relative flex h-full w-full items-center justify-center rounded-full bg-white shadow-lg'>
                       <span
                         className={`bg-gradient-to-br text-lg font-bold ${chain.color} bg-clip-text text-transparent`}
                       >
@@ -187,7 +187,7 @@ export function SupportedChains() {
                   </div>
 
                   {/* Chain Info */}
-                  <h3 className='mb-1 text-sm font-bold transition-colors duration-200 group-hover:text-primary-600 dark:group-hover:text-primary-400'>
+                  <h3 className='group-hover:text-primary-600 dark:group-hover:text-primary-400 mb-1 text-sm font-bold transition-colors duration-200'>
                     {chain.name}
                   </h3>
 
@@ -209,7 +209,7 @@ export function SupportedChains() {
           {/* Additional Info Section */}
           <motion.div
             variants={headerVariants}
-            className='rounded-2xl bg-gray-50 p-8 dark:bg-dark-800'
+            className='dark:bg-dark-800 rounded-2xl bg-gray-50 p-8'
           >
             <div className='grid items-center gap-12 lg:grid-cols-2'>
               {/* Left Content */}
@@ -226,15 +226,15 @@ export function SupportedChains() {
 
                 <div className='mb-8 space-y-4'>
                   <div className='flex items-center space-x-3'>
-                    <div className='h-2 w-2 rounded-full bg-primary-500'></div>
+                    <div className='bg-primary-500 h-2 w-2 rounded-full'></div>
                     <span className='text-sm'>Native Segwit & P2SH Support</span>
                   </div>
                   <div className='flex items-center space-x-3'>
-                    <div className='h-2 w-2 rounded-full bg-primary-500'></div>
+                    <div className='bg-primary-500 h-2 w-2 rounded-full'></div>
                     <span className='text-sm'>Account Abstraction (ERC-4337)</span>
                   </div>
                   <div className='flex items-center space-x-3'>
-                    <div className='h-2 w-2 rounded-full bg-primary-500'></div>
+                    <div className='bg-primary-500 h-2 w-2 rounded-full'></div>
                     <span className='text-sm'>Cross-chain Asset Management</span>
                   </div>
                 </div>
@@ -243,7 +243,7 @@ export function SupportedChains() {
                   href='https://docs.google.com/spreadsheets/d/1GUqGeV4hCwjKlxazY1vPY52owrEqXQ1UTchOKfkyS7c'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='inline-flex items-center font-medium text-primary-600 transition-colors duration-200 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300'
+                  className='text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 inline-flex items-center font-medium transition-colors duration-200'
                 >
                   View Full Asset List
                   <ExternalLink className='ml-2 h-4 w-4' />
@@ -256,7 +256,7 @@ export function SupportedChains() {
                   {supportedChains.slice(0, 9).map((chain, index) => (
                     <motion.div
                       key={index}
-                      className='flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-lg dark:bg-dark-700'
+                      className='dark:bg-dark-700 flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-lg'
                       animate={{
                         y: [0, -10, 0],
                         rotate: [0, 5, 0],
@@ -278,7 +278,7 @@ export function SupportedChains() {
                 </div>
 
                 {/* Background Glow */}
-                <div className='absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-primary-500/20 to-blue-500/20 blur-3xl' />
+                <div className='from-primary-500/20 absolute inset-0 -z-10 rounded-full bg-gradient-to-r to-blue-500/20 blur-3xl' />
               </div>
             </div>
           </motion.div>

@@ -168,11 +168,11 @@ function StepCard({ step, phaseColor, index }) {
       className={`relative rounded-xl border-2 p-6 transition-all duration-300 ${
         step.important
           ? 'border-amber-300 bg-amber-50 dark:border-amber-600 dark:bg-amber-900/20'
-          : 'border-gray-200 bg-white dark:border-gray-700 dark:bg-dark-800'
+          : 'dark:bg-dark-800 border-gray-200 bg-white dark:border-gray-700'
       } hover:shadow-lg`}
     >
       {step.important && (
-        <div className='absolute -right-2 -top-2'>
+        <div className='absolute -top-2 -right-2'>
           <div className='inline-flex items-center rounded-full bg-amber-500 px-2 py-1 text-xs font-medium text-white'>
             <AlertTriangle className='mr-1 h-3 w-3' />
             Important
@@ -206,7 +206,7 @@ function StepCard({ step, phaseColor, index }) {
               <Link
                 href={step.link}
                 target='_blank'
-                className='text-sm text-primary-600 hover:underline dark:text-primary-400'
+                className='text-primary-600 dark:text-primary-400 text-sm hover:underline'
               >
                 Open Link →
               </Link>
@@ -273,7 +273,7 @@ export default function Guide() {
       </Head>
 
       {/* Hero Section */}
-      <section className='section-padding relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-green-50 dark:from-dark-900 dark:via-dark-800 dark:to-dark-900'>
+      <section className='section-padding dark:from-dark-900 dark:via-dark-800 dark:to-dark-900 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-green-50'>
         <div className='bg-grid-pattern absolute inset-0 opacity-5'></div>
         <div className='container-custom relative'>
           <motion.div
@@ -296,7 +296,7 @@ export default function Guide() {
             </p>
 
             <div className='mx-auto grid max-w-2xl gap-6 md:grid-cols-2'>
-              <div className='flex items-center rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-dark-800'>
+              <div className='dark:bg-dark-800 flex items-center rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700'>
                 <Chrome className='mr-3 h-8 w-8 flex-shrink-0 text-blue-500' />
                 <div className='text-left'>
                   <h3 className='font-semibold text-gray-900 dark:text-white'>Browser Extension</h3>
@@ -306,7 +306,7 @@ export default function Guide() {
                 </div>
               </div>
 
-              <div className='flex items-center rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-dark-800'>
+              <div className='dark:bg-dark-800 flex items-center rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700'>
                 <Smartphone className='mr-3 h-8 w-8 flex-shrink-0 text-green-500' />
                 <div className='text-left'>
                   <h3 className='font-semibold text-gray-900 dark:text-white'>Mobile Key</h3>
@@ -332,11 +332,7 @@ export default function Guide() {
               viewport={{ once: true }}
             >
               <div className='relative aspect-video overflow-hidden rounded-2xl bg-gray-900'>
-                <video
-                  controls
-                  poster='/video-thumbnail.jpg'
-                  className='h-full w-full object-cover'
-                >
+                <video controls className='h-full w-full object-cover'>
                   <source
                     src='/Video Guide_ How to Install SSP Wallet and SSP Key.mp4'
                     type='video/mp4'
@@ -359,9 +355,9 @@ export default function Guide() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className='rounded-2xl border border-gray-200 bg-white p-8 dark:border-gray-700 dark:bg-dark-800'>
+              <div className='dark:bg-dark-800 rounded-2xl border border-gray-200 bg-white p-8 dark:border-gray-700'>
                 <div className='mb-6 flex items-center'>
-                  <Play className='mr-3 h-8 w-8 text-primary-600 dark:text-primary-400' />
+                  <Play className='text-primary-600 dark:text-primary-400 mr-3 h-8 w-8' />
                   <div>
                     <h3 className='text-xl font-bold text-gray-900 dark:text-white'>
                       Video Setup Guide
@@ -396,7 +392,7 @@ export default function Guide() {
       </section>
 
       {/* Step-by-Step Guide */}
-      <section className='section-padding bg-gray-50 dark:bg-dark-900'>
+      <section className='section-padding dark:bg-dark-900 bg-gray-50'>
         <div className='container-custom'>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -435,7 +431,7 @@ export default function Guide() {
                     </div>
                     <div>
                       <div
-                        className={`text-sm font-semibold uppercase tracking-wider ${phase.color === 'blue' ? 'text-blue-600 dark:text-blue-400' : 'text-green-600 dark:text-green-400'} `}
+                        className={`text-sm font-semibold tracking-wider uppercase ${phase.color === 'blue' ? 'text-blue-600 dark:text-blue-400' : 'text-green-600 dark:text-green-400'} `}
                       >
                         {phase.phase}
                       </div>
@@ -461,7 +457,7 @@ export default function Guide() {
                   {phaseIndex < steps.length - 1 && (
                     <div className='mt-16 flex items-center justify-center'>
                       <div className='h-px flex-1 bg-gray-300 dark:bg-gray-600'></div>
-                      <div className='mx-4 rounded-full border-2 border-gray-300 bg-white p-3 dark:border-gray-600 dark:bg-dark-800'>
+                      <div className='dark:bg-dark-800 mx-4 rounded-full border-2 border-gray-300 bg-white p-3 dark:border-gray-600'>
                         <ArrowRight className='h-5 w-5 text-gray-500 dark:text-gray-400' />
                       </div>
                       <div className='h-px flex-1 bg-gray-300 dark:bg-gray-600'></div>

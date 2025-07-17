@@ -147,7 +147,7 @@ function ContactForm() {
             required
             value={formData.name}
             onChange={handleChange}
-            className='w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 focus:ring-primary-500 dark:border-gray-600 dark:bg-dark-700 dark:text-white'
+            className='focus:ring-primary-500 dark:bg-dark-700 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
             placeholder='Your full name'
           />
         </div>
@@ -166,7 +166,7 @@ function ContactForm() {
             required
             value={formData.email}
             onChange={handleChange}
-            className='w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 focus:ring-primary-500 dark:border-gray-600 dark:bg-dark-700 dark:text-white'
+            className='focus:ring-primary-500 dark:bg-dark-700 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
             placeholder='your.email@example.com'
           />
         </div>
@@ -185,7 +185,7 @@ function ContactForm() {
           name='company'
           value={formData.company}
           onChange={handleChange}
-          className='w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 focus:ring-primary-500 dark:border-gray-600 dark:bg-dark-700 dark:text-white'
+          className='focus:ring-primary-500 dark:bg-dark-700 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
           placeholder='Your company name'
         />
       </div>
@@ -203,7 +203,7 @@ function ContactForm() {
           required
           value={formData.type}
           onChange={handleChange}
-          className='w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 focus:ring-primary-500 dark:border-gray-600 dark:bg-dark-700 dark:text-white'
+          className='focus:ring-primary-500 dark:bg-dark-700 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
         >
           <option value='general'>General Inquiry</option>
           <option value='support'>Technical Support</option>
@@ -228,7 +228,7 @@ function ContactForm() {
           required
           value={formData.subject}
           onChange={handleChange}
-          className='w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 focus:ring-primary-500 dark:border-gray-600 dark:bg-dark-700 dark:text-white'
+          className='focus:ring-primary-500 dark:bg-dark-700 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
           placeholder='Brief subject of your message'
         />
       </div>
@@ -247,7 +247,7 @@ function ContactForm() {
           rows={6}
           value={formData.message}
           onChange={handleChange}
-          className='w-full resize-none rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 focus:ring-primary-500 dark:border-gray-600 dark:bg-dark-700 dark:text-white'
+          className='focus:ring-primary-500 dark:bg-dark-700 w-full resize-none rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
           placeholder='Please provide details about your inquiry...'
         />
       </div>
@@ -262,7 +262,7 @@ function ContactForm() {
       <button
         type='submit'
         disabled={isSubmitting}
-        className='inline-flex w-full items-center justify-center rounded-lg bg-primary-600 px-6 py-3 font-medium text-white transition-colors hover:bg-primary-700 disabled:bg-primary-400'
+        className='bg-primary-600 hover:bg-primary-700 disabled:bg-primary-400 inline-flex w-full items-center justify-center rounded-lg px-6 py-3 font-medium text-white transition-colors'
       >
         {isSubmitting ? (
           <>
@@ -312,7 +312,7 @@ export default function Contact() {
       </Head>
 
       {/* Hero Section */}
-      <section className='section-padding relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-dark-900 dark:via-dark-800 dark:to-dark-900'>
+      <section className='section-padding dark:from-dark-900 dark:via-dark-800 dark:to-dark-900 relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50'>
         <div className='bg-grid-pattern absolute inset-0 opacity-5'></div>
         <div className='container-custom relative'>
           <motion.div
@@ -335,7 +335,7 @@ export default function Contact() {
             </p>
 
             <div className='mx-auto grid max-w-3xl gap-6 md:grid-cols-3'>
-              <div className='flex items-center rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-dark-800'>
+              <div className='dark:bg-dark-800 flex items-center rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700'>
                 <Mail className='mr-3 h-8 w-8 flex-shrink-0 text-purple-500' />
                 <div className='text-left'>
                   <h3 className='font-semibold text-gray-900 dark:text-white'>Email</h3>
@@ -343,7 +343,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className='flex items-center rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-dark-800'>
+              <div className='dark:bg-dark-800 flex items-center rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700'>
                 <Users className='mr-3 h-8 w-8 flex-shrink-0 text-blue-500' />
                 <div className='text-left'>
                   <h3 className='font-semibold text-gray-900 dark:text-white'>Community</h3>
@@ -351,7 +351,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className='flex items-center rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-dark-800'>
+              <div className='dark:bg-dark-800 flex items-center rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700'>
                 <Globe className='mr-3 h-8 w-8 flex-shrink-0 text-green-500' />
                 <div className='text-left'>
                   <h3 className='font-semibold text-gray-900 dark:text-white'>Global</h3>
@@ -389,10 +389,10 @@ export default function Contact() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className='rounded-2xl border border-gray-200 bg-white p-8 transition-shadow hover:shadow-lg dark:border-gray-700 dark:bg-dark-800'
+                  className='dark:bg-dark-800 rounded-2xl border border-gray-200 bg-white p-8 transition-shadow hover:shadow-lg dark:border-gray-700'
                 >
                   <div className='mb-6 text-center'>
-                    <div className='mb-4 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400'>
+                    <div className='bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400 mb-4 inline-flex h-16 w-16 items-center justify-center rounded-2xl'>
                       <MethodIcon className='h-8 w-8' />
                     </div>
                     <h3 className='mb-2 text-xl font-bold text-gray-900 dark:text-white'>
@@ -416,7 +416,7 @@ export default function Contact() {
                   <Link
                     href={method.href}
                     target='_blank'
-                    className='block w-full rounded-lg bg-primary-600 px-6 py-3 text-center font-medium text-white transition-colors hover:bg-primary-700'
+                    className='bg-primary-600 hover:bg-primary-700 block w-full rounded-lg px-6 py-3 text-center font-medium text-white transition-colors'
                   >
                     {method.action}
                   </Link>
@@ -428,7 +428,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Form */}
-      <section className='section-padding bg-gray-50 dark:bg-dark-900'>
+      <section className='section-padding dark:bg-dark-900 bg-gray-50'>
         <div className='container-custom'>
           <div className='mx-auto max-w-4xl'>
             <motion.div
@@ -449,7 +449,7 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className='rounded-2xl border border-gray-200 bg-white p-8 dark:border-gray-700 dark:bg-dark-800 lg:p-12'
+              className='dark:bg-dark-800 rounded-2xl border border-gray-200 bg-white p-8 lg:p-12 dark:border-gray-700'
             >
               <ContactForm />
             </motion.div>
@@ -486,10 +486,10 @@ export default function Contact() {
                     <Link
                       href={social.href}
                       target='_blank'
-                      className='group flex flex-col items-center rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:shadow-lg dark:border-gray-700 dark:bg-dark-800'
+                      className='group dark:bg-dark-800 flex flex-col items-center rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:shadow-lg dark:border-gray-700'
                     >
-                      <div className='mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-100 transition-colors group-hover:bg-primary-200 dark:bg-primary-900/30 dark:group-hover:bg-primary-800/50'>
-                        <SocialIcon className='h-8 w-8 text-primary-600 dark:text-primary-400' />
+                      <div className='bg-primary-100 group-hover:bg-primary-200 dark:bg-primary-900/30 dark:group-hover:bg-primary-800/50 mb-4 flex h-16 w-16 items-center justify-center rounded-2xl transition-colors'>
+                        <SocialIcon className='text-primary-600 dark:text-primary-400 h-8 w-8' />
                       </div>
                       <h3 className='mb-2 font-semibold text-gray-900 dark:text-white'>
                         {social.name}
@@ -516,13 +516,13 @@ export default function Contact() {
             viewport={{ once: true }}
           >
             <h2 className='mb-4 text-3xl font-bold text-white'>Need Help Right Away?</h2>
-            <p className='mx-auto mb-8 max-w-2xl text-xl text-primary-100'>
+            <p className='text-primary-100 mx-auto mb-8 max-w-2xl text-xl'>
               Check out our support center for immediate assistance and frequently asked questions
             </p>
             <div className='flex flex-col justify-center gap-4 sm:flex-row'>
               <Link
                 href='/support'
-                className='inline-flex items-center rounded-lg bg-white px-8 py-4 font-semibold text-primary-600 transition-colors hover:bg-gray-50'
+                className='text-primary-600 inline-flex items-center rounded-lg bg-white px-8 py-4 font-semibold transition-colors hover:bg-gray-50'
               >
                 Visit Support Center
               </Link>

@@ -59,11 +59,11 @@ export function CTA() {
   }
 
   return (
-    <section className='section-padding relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-blue-50 dark:from-dark-900 dark:via-dark-800 dark:to-dark-900'>
+    <section className='section-padding from-primary-50 dark:from-dark-900 dark:via-dark-800 dark:to-dark-900 relative overflow-hidden bg-gradient-to-br via-white to-blue-50'>
       {/* Background Elements */}
       <div className='absolute inset-0'>
         {/* Gradient Orbs */}
-        <div className='absolute right-1/4 top-1/4 h-96 w-96 rounded-full bg-primary-500/10 blur-3xl' />
+        <div className='bg-primary-500/10 absolute top-1/4 right-1/4 h-96 w-96 rounded-full blur-3xl' />
         <div className='absolute bottom-1/4 left-1/4 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl' />
 
         {/* Grid Pattern */}
@@ -95,16 +95,16 @@ export function CTA() {
           {/* Main CTA Content */}
           <div className='mb-16 text-center'>
             <motion.div variants={itemVariants}>
-              <div className='mb-6 inline-flex items-center rounded-full bg-primary-100 px-4 py-2 text-sm font-medium text-primary-800 dark:bg-primary-900/30 dark:text-primary-200'>
+              <div className='bg-primary-100 text-primary-800 dark:bg-primary-900/30 dark:text-primary-200 mb-6 inline-flex items-center rounded-full px-4 py-2 text-sm font-medium'>
                 <Download className='mr-2 h-4 w-4' />
                 Ready to Get Started?
               </div>
 
-              <h2 className='mb-6 text-balance text-4xl font-bold md:text-5xl lg:text-6xl'>
+              <h2 className='mb-6 text-4xl font-bold text-balance md:text-5xl lg:text-6xl'>
                 Join the <span className='gradient-text'>Future of Crypto</span>
               </h2>
 
-              <p className='mx-auto mb-8 max-w-3xl text-balance text-xl text-gray-600 dark:text-gray-300 md:text-2xl'>
+              <p className='mx-auto mb-8 max-w-3xl text-xl text-balance text-gray-600 md:text-2xl dark:text-gray-300'>
                 Download SSP Wallet today and experience the next generation of cryptocurrency
                 management with unmatched security and simplicity.
               </p>
@@ -142,7 +142,7 @@ export function CTA() {
                     key={index}
                     className={`card group text-center transition-all duration-300 ${
                       option.primary
-                        ? 'scale-105 shadow-lg ring-2 ring-primary-500'
+                        ? 'ring-primary-500 scale-105 shadow-lg ring-2'
                         : 'opacity-75 hover:opacity-100'
                     }`}
                   >
@@ -150,7 +150,7 @@ export function CTA() {
                       className={`mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full ${
                         option.primary
                           ? 'bg-primary-500 text-white'
-                          : 'bg-gray-100 text-gray-600 dark:bg-dark-700 dark:text-gray-400'
+                          : 'dark:bg-dark-700 bg-gray-100 text-gray-600 dark:text-gray-400'
                       }`}
                     >
                       <Icon className='h-8 w-8' />
@@ -160,7 +160,7 @@ export function CTA() {
                     <p
                       className={`text-sm ${
                         option.primary
-                          ? 'font-medium text-primary-600 dark:text-primary-400'
+                          ? 'text-primary-600 dark:text-primary-400 font-medium'
                           : 'text-gray-500 dark:text-gray-400'
                       }`}
                     >
@@ -169,7 +169,7 @@ export function CTA() {
 
                     {option.primary && (
                       <div className='mt-3'>
-                        <span className='inline-block rounded-full bg-primary-100 px-3 py-1 text-xs font-medium text-primary-800 dark:bg-primary-900/30 dark:text-primary-200'>
+                        <span className='bg-primary-100 text-primary-800 dark:bg-primary-900/30 dark:text-primary-200 inline-block rounded-full px-3 py-1 text-xs font-medium'>
                           Recommended
                         </span>
                       </div>
@@ -182,7 +182,7 @@ export function CTA() {
             {/* Social Proof */}
             <motion.div
               variants={itemVariants}
-              className='rounded-2xl border border-gray-200/50 bg-white/60 p-8 backdrop-blur-sm dark:border-dark-600/50 dark:bg-dark-800/60'
+              className='dark:border-dark-600/50 dark:bg-dark-800/60 rounded-2xl border border-gray-200/50 bg-white/60 p-8 backdrop-blur-sm'
             >
               <div className='grid items-center gap-8 md:grid-cols-3'>
                 <div className='text-center'>
@@ -202,7 +202,7 @@ export function CTA() {
               </div>
 
               {/* Trust Indicators */}
-              <div className='mt-8 flex items-center justify-center space-x-8 border-t border-gray-200 pt-8 dark:border-dark-600'>
+              <div className='dark:border-dark-600 mt-8 flex items-center justify-center space-x-8 border-t border-gray-200 pt-8'>
                 <div className='flex items-center space-x-2 text-gray-600 dark:text-gray-400'>
                   <div className='h-3 w-3 rounded-full bg-green-500'></div>
                   <span className='text-sm font-medium'>Security Audited</span>
@@ -234,7 +234,7 @@ export function CTA() {
             </motion.div>
 
             {/* Glow Effect */}
-            <div className='absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-primary-500/30 to-blue-500/30 blur-2xl' />
+            <div className='from-primary-500/30 absolute inset-0 -z-10 rounded-full bg-gradient-to-r to-blue-500/30 blur-2xl' />
           </motion.div>
         </motion.div>
       </div>

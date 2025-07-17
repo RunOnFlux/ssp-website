@@ -44,7 +44,7 @@ const comparisonData = [
 
 export function ComparisonSection() {
   return (
-    <section className='section-padding bg-white dark:bg-dark-900'>
+    <section className='section-padding dark:bg-dark-900 bg-white'>
       <div className='container-custom'>
         <div className='mb-16 text-center'>
           <h2 className='mb-6 text-4xl font-bold md:text-5xl'>
@@ -61,14 +61,14 @@ export function ComparisonSection() {
           transition={{ duration: 0.6 }}
           className='overflow-x-auto'
         >
-          <div className='min-w-full overflow-hidden rounded-2xl bg-white shadow-lg dark:bg-dark-800'>
+          <div className='dark:bg-dark-800 min-w-full overflow-hidden rounded-2xl bg-white shadow-lg'>
             <table className='w-full'>
-              <thead className='bg-gray-50 dark:bg-dark-700'>
+              <thead className='dark:bg-dark-700 bg-gray-50'>
                 <tr>
                   <th className='px-6 py-4 text-left text-sm font-semibold text-gray-900 dark:text-white'>
                     Feature
                   </th>
-                  <th className='px-6 py-4 text-center text-sm font-semibold text-primary-600 dark:text-primary-400'>
+                  <th className='text-primary-600 dark:text-primary-400 px-6 py-4 text-center text-sm font-semibold'>
                     SSP Wallet
                   </th>
                   <th className='px-6 py-4 text-center text-sm font-semibold text-gray-900 dark:text-white'>
@@ -79,14 +79,14 @@ export function ComparisonSection() {
                   </th>
                 </tr>
               </thead>
-              <tbody className='divide-y divide-gray-200 dark:divide-dark-600'>
+              <tbody className='dark:divide-dark-600 divide-y divide-gray-200'>
                 {comparisonData.map((row, index) => (
                   <motion.tr
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className='hover:bg-gray-50 dark:hover:bg-dark-700/50'
+                    className='dark:hover:bg-dark-700/50 hover:bg-gray-50'
                   >
                     <td className='px-6 py-4 text-sm font-medium text-gray-900 dark:text-white'>
                       {row.feature}
