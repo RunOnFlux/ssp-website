@@ -62,7 +62,7 @@ export function Hero() {
   }
 
   return (
-    <section className='dark:from-dark-900 dark:via-dark-800 dark:to-dark-900 relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100'>
+    <section className='dark:from-dark-900 dark:via-dark-800 dark:to-dark-900 relative flex min-h-screen items-center justify-center overflow-hidden bg-linear-to-br from-gray-50 via-white to-gray-100'>
       {/* Background Elements */}
       <div className='absolute inset-0'>
         {/* Gradient Orbs */}
@@ -197,7 +197,7 @@ export function Hero() {
                 />
 
                 {/* Glow Effect */}
-                <div className='from-primary-500/20 absolute inset-0 -z-10 rounded-full bg-gradient-to-r to-blue-500/20 blur-3xl' />
+                <div className='from-primary-500/20 absolute inset-0 -z-10 rounded-full bg-linear-to-r to-blue-500/20 blur-3xl' />
               </div>
 
               {/* Floating Elements */}

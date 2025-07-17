@@ -377,7 +377,7 @@ export default function Support() {
       </Head>
 
       {/* Hero Section */}
-      <section className='section-padding dark:from-dark-900 dark:via-dark-800 dark:to-dark-900 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50'>
+      <section className='section-padding dark:from-dark-900 dark:via-dark-800 dark:to-dark-900 relative overflow-hidden bg-linear-to-br from-blue-50 via-white to-purple-50'>
         <div className='bg-grid-pattern absolute inset-0 opacity-5'></div>
         <div className='container-custom relative'>
           <motion.div

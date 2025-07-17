@@ -5,7 +5,7 @@ import { Shield, Zap, Lock } from 'lucide-react'
 
 export function FeaturesHero() {
   return (
-    <section className='section-padding dark:from-dark-900 dark:via-dark-800 dark:to-dark-900 bg-gradient-to-br from-gray-50 via-white to-gray-100'>
+    <section className='section-padding dark:from-dark-900 dark:via-dark-800 dark:to-dark-900 bg-linear-to-br from-gray-50 via-white to-gray-100'>
       <div className='container-custom'>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

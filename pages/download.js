@@ -71,7 +71,7 @@ export default function DownloadPage() {
       </Head>
 
       {/* Hero Section */}
-      <section className='section-padding to-secondary-50 from-primary-50 dark:from-dark-900 dark:via-dark-800 dark:to-dark-900 relative overflow-hidden bg-gradient-to-br via-white'>
+      <section className='section-padding to-secondary-50 from-primary-50 dark:from-dark-900 dark:via-dark-800 dark:to-dark-900 relative overflow-hidden bg-linear-to-br via-white'>
         <div className='bg-grid-pattern absolute inset-0 opacity-5'></div>
         <div className='container-custom relative'>
           <motion.div
@@ -125,7 +125,7 @@ export default function DownloadPage() {
                       option.available
                         ? 'border-primary-200 hover:border-primary-300 dark:border-primary-800 dark:bg-dark-800 dark:hover:border-primary-700 bg-white hover:shadow-lg'
                         : 'dark:bg-dark-700 border-gray-200 bg-gray-50 dark:border-gray-700'
-                    } ${option.primary ? 'border-primary-300 from-primary-50 dark:border-primary-600 dark:from-primary-900/20 dark:to-dark-800 bg-gradient-to-br to-white' : ''} `}
+                    } ${option.primary ? 'border-primary-300 from-primary-50 dark:border-primary-600 dark:from-primary-900/20 dark:to-dark-800 bg-linear-to-br to-white' : ''} `}
                   >
                     <div className='mb-6 flex items-start justify-between'>
                       <div>

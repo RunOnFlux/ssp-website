@@ -200,7 +200,7 @@ export function Security() {
                 </div>
 
                 {/* Halborn Badge */}
-                <div className='inline-flex items-center rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 font-medium text-white shadow-lg'>
+                <div className='inline-flex items-center rounded-lg bg-linear-to-r from-blue-600 to-purple-600 px-6 py-3 font-medium text-white shadow-lg'>
                   <Award className='mr-2 h-5 w-5' />
                   Audited by Halborn
                 </div>

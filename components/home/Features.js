@@ -119,14 +119,14 @@ export function Features() {
                 >
                   {/* Gradient Background */}
                   <div
-                    className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 transition-opacity duration-300 group-hover:opacity-10`}
+                    className={`absolute inset-0 bg-linear-to-br ${feature.color} opacity-0 transition-opacity duration-300 group-hover:opacity-10`}
                   />
 
                   {/* Content */}
                   <div className='relative z-10'>
                     {/* Icon */}
                     <div
-                      className={`inline-flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br ${feature.color} mb-4`}
+                      className={`inline-flex h-12 w-12 items-center justify-center rounded-lg bg-linear-to-br ${feature.color} mb-4`}
                     >
                       <Icon className='h-6 w-6 text-white' />
                     </div>
@@ -210,7 +210,7 @@ export function Features() {
 
             {/* Video/Animation Section */}
             <div className='relative'>
-              <div className='dark:from-dark-800 dark:to-dark-700 aspect-video overflow-hidden rounded-xl bg-gradient-to-br from-gray-100 to-gray-200'>
+              <div className='dark:from-dark-800 dark:to-dark-700 aspect-video overflow-hidden rounded-xl bg-linear-to-br from-gray-100 to-gray-200'>
                 {/* Placeholder for video */}
                 <div className='flex h-full w-full items-center justify-center'>
                   <div className='text-center'>

@@ -55,7 +55,7 @@ export function TechnicalFeatures() {
                 className='card card-hover'
               >
                 <div className='text-center'>
-                  <div className='from-primary-500 to-primary-600 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br'>
+                  <div className='from-primary-500 to-primary-600 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-linear-to-br'>
                     <Icon className='h-8 w-8 text-white' />
                   </div>
                   <h3 className='mb-4 text-xl font-bold'>{feature.title}</h3>

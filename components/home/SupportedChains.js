@@ -167,7 +167,7 @@ export function SupportedChains() {
               >
                 {/* Background Gradient */}
                 <div
-                  className={`absolute inset-0 bg-gradient-to-br ${chain.color} opacity-0 transition-opacity duration-300 group-hover:opacity-10`}
+                  className={`absolute inset-0 bg-linear-to-br ${chain.color} opacity-0 transition-opacity duration-300 group-hover:opacity-10`}
                 />
 
                 {/* Content */}
@@ -175,11 +175,11 @@ export function SupportedChains() {
                   {/* Chain Logo */}
                   <div className='relative mx-auto mb-3 h-12 w-12'>
                     <div
-                      className={`absolute inset-0 bg-gradient-to-br ${chain.color} rounded-full opacity-20 blur-sm`}
+                      className={`absolute inset-0 bg-linear-to-br ${chain.color} rounded-full opacity-20 blur-sm`}
                     />
                     <div className='dark:bg-dark-700 relative flex h-full w-full items-center justify-center rounded-full bg-white shadow-lg'>
                       <span
-                        className={`bg-gradient-to-br text-lg font-bold ${chain.color} bg-clip-text text-transparent`}
+                        className={`bg-linear-to-br text-lg font-bold ${chain.color} bg-clip-text text-transparent`}
                       >
                         {chain.symbol}
                       </span>
@@ -200,7 +200,7 @@ export function SupportedChains() {
 
                 {/* Hover Border Effect */}
                 <div
-                  className={`group-hover:border-gradient-to-br absolute inset-0 border-2 border-transparent group-hover:${chain.color} rounded-xl opacity-0 transition-colors duration-300 group-hover:opacity-50`}
+                  className={`absolute inset-0 border-2 border-transparent group-hover:${chain.color} rounded-xl opacity-0 transition-colors duration-300 group-hover:opacity-50`}
                 />
               </motion.div>
             ))}
@@ -269,7 +269,7 @@ export function SupportedChains() {
                       }}
                     >
                       <span
-                        className={`bg-gradient-to-br text-sm font-bold ${chain.color} bg-clip-text text-transparent`}
+                        className={`bg-linear-to-br text-sm font-bold ${chain.color} bg-clip-text text-transparent`}
                       >
                         {chain.symbol}
                       </span>
@@ -278,7 +278,7 @@ export function SupportedChains() {
                 </div>
 
                 {/* Background Glow */}
-                <div className='from-primary-500/20 absolute inset-0 -z-10 rounded-full bg-gradient-to-r to-blue-500/20 blur-3xl' />
+                <div className='from-primary-500/20 absolute inset-0 -z-10 rounded-full bg-linear-to-r to-blue-500/20 blur-3xl' />
               </div>
             </div>
           </motion.div>

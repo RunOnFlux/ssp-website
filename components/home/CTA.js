@@ -59,7 +59,7 @@ export function CTA() {
   }
 
   return (
-    <section className='section-padding from-primary-50 dark:from-dark-900 dark:via-dark-800 dark:to-dark-900 relative overflow-hidden bg-gradient-to-br via-white to-blue-50'>
+    <section className='section-padding from-primary-50 dark:from-dark-900 dark:via-dark-800 dark:to-dark-900 relative overflow-hidden bg-linear-to-br via-white to-blue-50'>
       {/* Background Elements */}
       <div className='absolute inset-0'>
         {/* Gradient Orbs */}
@@ -234,7 +234,7 @@ export function CTA() {
             </motion.div>
 
             {/* Glow Effect */}
-            <div className='from-primary-500/30 absolute inset-0 -z-10 rounded-full bg-gradient-to-r to-blue-500/30 blur-2xl' />
+            <div className='from-primary-500/30 absolute inset-0 -z-10 rounded-full bg-linear-to-r to-blue-500/30 blur-2xl' />
           </motion.div>
         </motion.div>
       </div>
