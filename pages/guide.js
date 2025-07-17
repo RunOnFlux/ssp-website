@@ -164,7 +164,7 @@ function StepCard({ step, phaseColor, index }) {
       ref={ref}
       initial={{ opacity: 0, x: -30 }}
       animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
+      transition={{ duration: 0.3, delay: index * 0.05 }}
       className={`relative rounded-xl border-2 p-6 transition-all duration-300 ${
         step.important
           ? 'border-amber-300 bg-amber-50 dark:border-amber-600 dark:bg-amber-900/20'
@@ -280,7 +280,7 @@ export default function Guide() {
             ref={heroRef}
             initial={{ opacity: 0, y: 30 }}
             animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             className='mx-auto max-w-4xl text-center'
           >
             <div className='mb-6 inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'>
@@ -332,7 +332,7 @@ export default function Guide() {
               viewport={{ once: true }}
             >
               <div className='relative aspect-video overflow-hidden rounded-2xl bg-gray-900'>
-                <video controls className='h-full w-full object-cover'>
+                <video controls autoPlay muted loop className='h-full w-full object-cover'>
                   <source
                     src='/Video Guide_ How to Install SSP Wallet and SSP Key.mp4'
                     type='video/mp4'

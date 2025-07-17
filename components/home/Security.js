@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Shield, Lock, Eye, Award, ExternalLink } from 'lucide-react'
+import { Award, ExternalLink, Eye, Lock, Shield } from 'lucide-react'
 import Link from 'next/link'
 import { useInView } from 'react-intersection-observer'
 
@@ -75,7 +75,7 @@ export function Security() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.3,
         ease: 'easeOut',
       },
     },

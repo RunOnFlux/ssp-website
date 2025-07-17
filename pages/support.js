@@ -127,8 +127,8 @@ const supportChannels = [
     description: 'Watch step-by-step tutorials',
     icon: Youtube,
     links: [
-      { name: 'Installation Guide', url: '#', icon: Youtube },
-      { name: 'Security Best Practices', url: '#', icon: Youtube },
+      { name: 'Installation Guide', url: 'https://www.youtube.com/@ZelLabs', icon: Youtube },
+      { name: 'Security Best Practices', url: 'https://www.youtube.com/@ZelLabs', icon: Youtube },
     ],
   },
 ]

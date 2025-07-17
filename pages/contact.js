@@ -62,7 +62,7 @@ const socialLinks = [
   },
   {
     name: 'YouTube',
-    href: '#',
+    href: 'https://www.youtube.com/@ZelLabs',
     icon: Youtube,
     description: 'Video tutorials & guides',
   },

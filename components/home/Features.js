@@ -67,7 +67,7 @@ export function Features() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.1,
       },
     },
   }
@@ -78,7 +78,7 @@ export function Features() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.3,
         ease: 'easeOut',
       },
     },

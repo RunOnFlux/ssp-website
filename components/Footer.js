@@ -12,15 +12,19 @@ const footerNavigation = {
   ],
   product: [
     { name: 'Download', href: '/download' },
-    { name: 'Chrome Extension', href: '#', external: true },
-    { name: 'Security Audits', href: '/features#security' },
+    { name: 'Mobile SSP Key', href: '/download#mobile', external: false },
+    {
+      name: 'Security Audits',
+      href: 'https://www.halborn.com/audits/influx-technologies',
+      external: true,
+    },
     { name: 'Documentation', href: 'https://docs.sspwallet.io', external: true },
   ],
   community: [
     { name: 'GitHub', href: 'https://github.com/RunOnFlux', external: true },
     { name: 'Twitter', href: 'https://twitter.com/sspwallet_io', external: true },
     { name: 'Medium', href: 'https://medium.com/@ssp_wallet', external: true },
-    { name: 'YouTube', href: '#', external: true },
+    { name: 'YouTube', href: 'https://www.youtube.com/@ZelLabs', external: true },
   ],
   legal: [
     { name: 'Privacy Policy', href: '/privacy' },
@@ -42,7 +46,7 @@ const socialLinks = [
   },
   {
     name: 'YouTube',
-    href: '#',
+    href: 'https://www.youtube.com/@ZelLabs',
     icon: Youtube,
   },
 ]
@@ -68,7 +72,20 @@ export function Footer() {
                 Supported Chains
               </h4>
               <div className='flex flex-wrap gap-2'>
-                {['BTC', 'ETH', 'LTC', 'ZEC', 'RVN', 'DOGE', 'BCH', 'FLUX'].map(chain => (
+                {[
+                  'BTC',
+                  'ETH',
+                  'LTC',
+                  'ZEC',
+                  'RVN',
+                  'DOGE',
+                  'BCH',
+                  'FLUX',
+                  'MATIC',
+                  'BSC',
+                  'AVAX',
+                  'BASE',
+                ].map(chain => (
                   <span
                     key={chain}
                     className='dark:bg-dark-700 rounded bg-gray-200 px-2 py-1 text-xs font-medium text-gray-700 dark:text-gray-300'
@@ -193,6 +210,15 @@ export function Footer() {
               <span className='text-sm text-gray-500 dark:text-gray-400'>
                 Built with ❤️ for Web3
               </span>
+              <span className='text-sm text-gray-500 dark:text-gray-400'>•</span>
+              <a
+                href='https://runonflux.io'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-sm text-gray-500 transition-colors hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'
+              >
+                Powered by Flux
+              </a>
             </div>
           </div>
         </div>

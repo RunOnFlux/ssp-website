@@ -8,13 +8,23 @@ const downloadOptions = [
   {
     id: 'chrome',
     icon: Chrome,
-    title: 'Chrome Extension',
+    title: 'Chrome/Brave Extension',
     subtitle: 'Available Now',
     description:
-      'Install SSP Wallet directly in your Chromium-based browser for seamless Web3 integration.',
+      'Install SSP Wallet in Chrome, Brave, Edge, and other Chromium-based browsers for seamless Web3 integration.',
     link: 'https://chromewebstore.google.com/detail/ssp-wallet/mgfbabcnedcejkfibpafadgkhmkifhbd',
     available: true,
     primary: true,
+  },
+  {
+    id: 'firefox',
+    icon: Globe,
+    title: 'Firefox Extension',
+    subtitle: 'Available Now',
+    description: 'Download the Firefox build directly from our GitHub releases page.',
+    link: 'https://github.com/RunOnFlux/ssp-wallet/releases/latest',
+    available: true,
+    primary: false,
   },
   {
     id: 'mobile',
@@ -26,21 +36,12 @@ const downloadOptions = [
     available: false,
     primary: false,
   },
-  {
-    id: 'web',
-    icon: Globe,
-    title: 'Web Version',
-    subtitle: 'Coming Soon',
-    description: 'Access your wallet from any device with our secure web interface.',
-    link: '#',
-    available: false,
-    primary: false,
-  },
 ]
 
 const supportedBrowsers = [
   { name: 'Chrome', icon: '/chrome.svg' },
   { name: 'Brave', icon: '/brave.svg' },
+  { name: 'Firefox', icon: '/firefox.svg' },
   { name: 'Edge', icon: '/chrome.svg' }, // Using Chrome icon as placeholder
 ]
 
@@ -77,7 +78,7 @@ export default function DownloadPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             className='mx-auto max-w-4xl text-center'
           >
             <div className='bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300 mb-6 inline-flex items-center rounded-full px-4 py-2 text-sm font-medium'>
