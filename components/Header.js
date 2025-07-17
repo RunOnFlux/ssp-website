@@ -81,7 +81,7 @@ export function Header() {
             {mounted && (
               <button
                 onClick={toggleTheme}
-                className='dark:bg-dark-800 dark:hover:bg-dark-700 rounded-lg bg-gray-100 p-2 transition-colors duration-200 hover:bg-gray-200'
+                className='dark:bg-dark-800 dark:hover:bg-dark-700 cursor-pointer rounded-lg bg-gray-100 p-2 transition-colors duration-200 hover:bg-gray-200'
                 aria-label='Toggle theme'
               >
                 {theme === 'dark' ? (

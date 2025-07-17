@@ -7,14 +7,14 @@ A modern, responsive website for SSP Wallet - the secure, simple, and powerful c
 ## 🚀 Features
 
 - **Modern Design**: Beautiful, responsive UI with dark/light theme support
-- **Performance Optimized**: Built with Next.js 14, optimized images and code splitting
+- **Performance Optimized**: Built with Next.js 15, optimized images and code splitting
 - **Accessibility**: WCAG compliant with proper contrast and keyboard navigation
 - **SEO Ready**: Comprehensive meta tags, Open Graph, and structured data
 - **Developer Experience**: ESLint, Prettier, TypeScript ready, and GitHub Actions CI
 
 ## 🛠️ Tech Stack
 
-- **Framework**: [Next.js 14](https://nextjs.org/)
+- **Framework**: [Next.js 15](https://nextjs.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Animations**: [Framer Motion](https://www.framer.com/motion/)
 - **Icons**: [Lucide React](https://lucide.dev/)

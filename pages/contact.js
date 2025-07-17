@@ -92,7 +92,7 @@ function ContactForm() {
       await new Promise(resolve => setTimeout(resolve, 2000))
       setIsSubmitted(true)
       setFormData({ name: '', email: '', company: '', subject: '', message: '', type: 'general' })
-    } catch (err) {
+    } catch {
       setError('Failed to send message. Please try again.')
     } finally {
       setIsSubmitting(false)
