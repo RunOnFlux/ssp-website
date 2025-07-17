@@ -29,7 +29,7 @@ const faqCategories = [
       {
         question: 'What is SSP Wallet?',
         answer:
-          'SSP Wallet is a groundbreaking, self-custody, multi-signature browser wallet for multiple blockchains. It emphasizes Security, Simplicity, and Powerful features with cutting-edge encryption and mobile-integrated authentication.',
+          'SSP Wallet is a true 2-of-2 multisignature system consisting of two components: SSP Wallet (browser extension) and SSP Key (mobile 2FA app). Both devices are required to authorize transactions, providing unmatched security for your crypto assets across 13+ blockchains.',
       },
       {
         question: 'How do I install SSP Wallet?',
@@ -44,7 +44,12 @@ const faqCategories = [
       {
         question: 'What cryptocurrencies does SSP Wallet support?',
         answer:
-          'SSP Wallet supports 12+ blockchains including Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), Zcash (ZEC), Ravencoin (RVN), Dogecoin (DOGE), Bitcoin Cash (BCH), and Flux (FLUX).',
+          'SSP Wallet supports 12+ blockchains including Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), Zcash (ZEC), Ravencoin (RVN), Dogecoin (DOGE), Bitcoin Cash (BCH), Flux (FLUX), Polygon (MATIC), BSC, Avalanche (AVAX), and Base. Solana support is coming soon.',
+      },
+      {
+        question: 'Can I use SSP Wallet with dApps and DeFi?',
+        answer:
+          'Yes! SSP Wallet features full WalletConnect v2 (Reown) integration, allowing you to connect to thousands of decentralized applications across all supported EVM chains. You can use DeFi protocols, NFT marketplaces, and other dApps while maintaining the security of the 2-of-2 multisignature system.',
       },
     ],
   },
@@ -58,9 +63,9 @@ const faqCategories = [
           "SSP Wallet uses multi-signature technology with mobile-integrated authentication, providing two-key protection. We use cutting-edge encryption and don't store any of your data - everything is stored locally and controlled by you.",
       },
       {
-        question: 'What is the SSP Key mobile app?',
+        question: 'What is SSP Key and why do I need it?',
         answer:
-          'SSP Key is the mobile companion app that provides second-factor authentication for your SSP Wallet. It creates a secure connection between your mobile device and browser wallet for enhanced security.',
+          'SSP Key is a mobile app that holds the second private key required for the 2-of-2 multisignature system. Every transaction must be signed by both your browser extension AND your mobile device. This ensures your funds remain secure even if one device is compromised. SSP Key is available for iOS 15.1+ and Android 7+.',
       },
       {
         question: 'Can I recover my wallet if I lose my device?',
@@ -81,7 +86,7 @@ const faqCategories = [
       {
         question: 'Which browsers are supported?',
         answer:
-          "SSP Wallet works with all Chromium-based browsers including Google Chrome, Brave, Microsoft Edge, and Opera. We're working on Firefox support for future releases.",
+          'SSP Wallet supports Google Chrome, Brave, Microsoft Edge, Firefox, and other Chromium-based browsers like Opera. You can download the Chrome Web Store version for Chromium browsers or the Firefox version directly from our GitHub releases.',
       },
       {
         question: "I'm having trouble syncing my mobile key",

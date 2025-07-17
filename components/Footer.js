@@ -1,4 +1,5 @@
 import { ExternalLink, Github, Twitter, Youtube } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Logo } from './Logo'
 
@@ -62,8 +63,8 @@ export function Footer() {
               <Logo width={120} height={40} className='h-8' />
             </Link>
             <p className='mb-6 max-w-sm text-gray-600 dark:text-gray-400'>
-              Secure, Simple, Powerful. SSP is a groundbreaking, self-custody, multi-signature
-              browser wallet for multiple blockchains.
+              Secure, Simple, Powerful. SSP is a groundbreaking, open-source, self-custody, BIP48
+              multi-signature browser wallet for multiple blockchains with Account Abstraction.
             </p>
 
             {/* Supported Chains */}
@@ -179,6 +180,17 @@ export function Footer() {
                   </a>
                 </li>
               ))}
+              <li>
+                <a
+                  href='https://translate.sspwallet.io'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='inline-flex items-center text-gray-600 transition-colors duration-200 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white'
+                >
+                  Help Translate
+                  <ExternalLink className='ml-1 h-3 w-3' />
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -212,12 +224,19 @@ export function Footer() {
               </span>
               <span className='text-sm text-gray-500 dark:text-gray-400'>•</span>
               <a
-                href='https://runonflux.io'
+                href='https://runonflux.com'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='text-sm text-gray-500 transition-colors hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'
+                className='flex items-center space-x-2 text-sm text-gray-500 transition-colors hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'
               >
-                Powered by Flux
+                <span>Powered by Flux</span>
+                <Image
+                  src='/flux-logo.svg'
+                  alt='Flux'
+                  width={80}
+                  height={24}
+                  className='h-5 w-auto'
+                />
               </a>
             </div>
           </div>

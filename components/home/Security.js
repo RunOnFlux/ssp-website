@@ -14,9 +14,10 @@ const securityFeatures = [
   },
   {
     icon: Lock,
-    title: 'Multi-Signature',
-    description: 'Advanced BIP48-Multi-Sig with mobile-integrated 2FA authentication',
-    highlight: 'Military Grade',
+    title: 'BIP48 Multisignature',
+    description:
+      'True 2-of-2 multisignature using BIP48 derivation with device fingerprinting and AES-GCM encryption',
+    highlight: 'Cryptographically Secure',
   },
   {
     icon: Eye,
@@ -26,9 +27,10 @@ const securityFeatures = [
   },
   {
     icon: Award,
-    title: 'No Data Storage',
-    description: 'Zero data storage policy - your information never leaves your device',
-    highlight: 'Privacy First',
+    title: 'Zero Data Storage',
+    description:
+      'PBKDF2-based encryption with device fingerprinting ensures no sensitive data is ever stored on servers',
+    highlight: 'Self-Custody Only',
   },
 ]
 

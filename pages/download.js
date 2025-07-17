@@ -26,16 +26,6 @@ const downloadOptions = [
     available: true,
     primary: false,
   },
-  {
-    id: 'mobile',
-    icon: Smartphone,
-    title: 'Mobile App',
-    subtitle: 'Coming Soon',
-    description: 'Native mobile experience for iOS and Android with enhanced security features.',
-    link: '#',
-    available: false,
-    primary: false,
-  },
 ]
 
 const supportedBrowsers = [
@@ -89,9 +79,38 @@ export default function DownloadPage() {
             <h1 className='heading-1 mb-6'>Download SSP Wallet</h1>
 
             <p className='mx-auto mb-8 max-w-2xl text-xl text-gray-600 dark:text-gray-400'>
-              Get started with the most secure crypto wallet. Available as a browser extension with
-              mobile authentication support.
+              SSP consists of two components: <strong>SSP Wallet</strong> (browser extension) and{' '}
+              <strong>SSP Key</strong> (mobile 2FA app). Both are required for the secure 2-of-2
+              multisignature system.
             </p>
+
+            <div className='mx-auto mb-8 max-w-3xl rounded-lg border border-blue-200 bg-blue-50 p-6 dark:border-blue-800 dark:bg-blue-900/20'>
+              <h3 className='mb-3 text-lg font-semibold text-blue-900 dark:text-blue-100'>
+                📱 Two-Step Setup Process:
+              </h3>
+              <div className='grid gap-4 text-sm text-blue-800 md:grid-cols-2 dark:text-blue-200'>
+                <div className='flex items-start space-x-2'>
+                  <span className='mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-xs font-bold text-white'>
+                    1
+                  </span>
+                  <div>
+                    <strong>Install SSP Wallet</strong>
+                    <br />
+                    Browser extension for Chrome, Brave, Firefox, or Edge
+                  </div>
+                </div>
+                <div className='flex items-start space-x-2'>
+                  <span className='mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-xs font-bold text-white'>
+                    2
+                  </span>
+                  <div>
+                    <strong>Install SSP Key</strong>
+                    <br />
+                    Mobile app for iOS/Android to provide 2nd factor authentication
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div className='inline-flex items-center rounded-lg bg-amber-100 px-6 py-3 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300'>
               <Shield className='mr-2 h-5 w-5' />

@@ -291,8 +291,9 @@ export default function Guide() {
             <h1 className='heading-1 mb-6'>How to Install SSP Wallet & SSP Key</h1>
 
             <p className='mx-auto mb-8 max-w-3xl text-xl text-gray-600 dark:text-gray-400'>
-              Follow our comprehensive guide to set up both SSP Wallet and SSP Key for maximum
-              security with dual-signature protection.
+              SSP requires a <strong>2-step setup process</strong>: install the browser extension
+              AND the mobile app. Both devices are required for the secure 2-of-2 multisignature
+              system that protects your crypto.
             </p>
 
             <div className='mx-auto grid max-w-2xl gap-6 md:grid-cols-2'>

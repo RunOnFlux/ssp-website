@@ -11,7 +11,7 @@ export default function Features() {
         <title>Features - SSP Wallet | Advanced Crypto Security & Multi-Chain Support</title>
         <meta
           name='description'
-          content="Discover SSP Wallet's advanced features: multi-signature security, 12+ blockchain support, Account Abstraction, and cutting-edge encryption technology."
+          content="Discover SSP Wallet's advanced features: true 2-of-2 multisignature security, WalletConnect v2 support, 12+ blockchain support, Account Abstraction, and hardware key support coming soon."
         />
         <meta
           name='keywords'

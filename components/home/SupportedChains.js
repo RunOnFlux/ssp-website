@@ -90,6 +90,13 @@ const supportedChains = [
     color: 'from-blue-500 to-blue-700',
     description: 'Coinbase L2 solution',
   },
+  {
+    name: 'Solana',
+    symbol: 'SOL',
+    logo: '/browsers.svg',
+    color: 'from-purple-600 to-pink-600',
+    description: 'Coming soon',
+  },
 ]
 
 export function SupportedChains() {
@@ -149,11 +156,12 @@ export function SupportedChains() {
             </div>
 
             <h2 className='mb-6 text-4xl font-bold md:text-5xl'>
-              <span className='gradient-text'>12+ Blockchains</span> in One Wallet
+              <span className='gradient-text'>13+ Blockchains</span> in One Wallet
             </h2>
             <p className='mx-auto max-w-3xl text-xl text-gray-600 dark:text-gray-300'>
               Manage all your crypto assets from Bitcoin to Ethereum and beyond. SSP Wallet provides
-              unified access to multiple blockchain networks.
+              unified access to multiple blockchain networks with WalletConnect v2 support for dApps
+              and offline QR code transaction capabilities.
             </p>
           </motion.div>
 
@@ -215,27 +223,33 @@ export function SupportedChains() {
               {/* Left Content */}
               <div>
                 <h3 className='mb-6 text-3xl font-bold'>
-                  More Chains <span className='gradient-text'>Coming Soon</span>
+                  More Features <span className='gradient-text'>Coming Soon</span>
                 </h3>
 
                 <p className='mb-6 leading-relaxed text-gray-600 dark:text-gray-300'>
-                  We&apos;re constantly adding support for new blockchain networks based on
-                  community demand and technological advancement. Your feedback helps us prioritize
-                  which chains to add next.
+                  We&apos;re constantly expanding SSP Wallet with new blockchain networks and
+                  advanced security features based on community demand and technological
+                  advancement.
                 </p>
 
                 <div className='mb-8 space-y-4'>
                   <div className='flex items-center space-x-3'>
-                    <div className='bg-primary-500 h-2 w-2 rounded-full'></div>
-                    <span className='text-sm'>Native Segwit & P2SH Support</span>
+                    <div className='h-2 w-2 rounded-full bg-green-500'></div>
+                    <span className='text-sm'>
+                      <strong>WalletConnect v2 (Reown)</strong> - Connect to thousands of dApps
+                    </span>
                   </div>
                   <div className='flex items-center space-x-3'>
-                    <div className='bg-primary-500 h-2 w-2 rounded-full'></div>
-                    <span className='text-sm'>Account Abstraction (ERC-4337)</span>
+                    <div className='h-2 w-2 rounded-full bg-green-500'></div>
+                    <span className='text-sm'>
+                      <strong>Account Abstraction (ERC-4337)</strong> - Smart contract wallets
+                    </span>
                   </div>
                   <div className='flex items-center space-x-3'>
-                    <div className='bg-primary-500 h-2 w-2 rounded-full'></div>
-                    <span className='text-sm'>Cross-chain Asset Management</span>
+                    <div className='h-2 w-2 rounded-full bg-orange-500'></div>
+                    <span className='text-sm'>
+                      <strong>Solana Support</strong> - Coming soon with multisig
+                    </span>
                   </div>
                 </div>
 

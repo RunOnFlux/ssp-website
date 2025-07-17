@@ -12,11 +12,11 @@ export default function Home() {
         <title>SSP Wallet - Secure, Simple, Powerful Crypto Wallet</title>
         <meta
           name='description'
-          content='SSP Wallet is a groundbreaking, self-custody, multi-signature browser wallet for multiple blockchains. Secure your crypto with advanced encryption and mobile-integrated authentication.'
+          content='SSP Wallet is a true 2-of-2 multisignature wallet using BIP48 derivation, requiring both browser extension and mobile device. Features WalletConnect v2, ERC-4337 Account Abstraction with Schnorr signatures, and 13+ blockchain support.'
         />
         <meta
           name='keywords'
-          content='crypto wallet, bitcoin wallet, ethereum wallet, multi-signature, browser extension, self-custody, blockchain, DeFi, Web3'
+          content='crypto wallet, bitcoin wallet, ethereum wallet, BIP48 multi-signature, browser extension, self-custody, blockchain, DeFi, Web3, Account Abstraction, ERC-4337, Schnorr signatures, WalletConnect v2'
         />
 
         {/* Open Graph */}

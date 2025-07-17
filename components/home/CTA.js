@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Chrome, Download, Globe, Smartphone } from 'lucide-react'
+import { ArrowRight, Chrome, Download, Smartphone } from 'lucide-react'
 import Link from 'next/link'
 import { useInView } from 'react-intersection-observer'
 import { Logo } from '../Logo'
@@ -9,24 +9,17 @@ import { Logo } from '../Logo'
 const downloadOptions = [
   {
     icon: Chrome,
-    title: 'Chrome Extension',
-    description: 'Available now',
+    title: 'Browser Extension',
+    description: 'Available now - Chrome, Brave, Firefox',
     link: '/download',
     primary: true,
   },
   {
     icon: Smartphone,
-    title: 'Mobile App',
-    description: 'Coming soon',
-    link: '#',
-    primary: false,
-  },
-  {
-    icon: Globe,
-    title: 'Web Version',
-    description: 'Coming soon',
-    link: '#',
-    primary: false,
+    title: 'SSP Key Mobile 2FA',
+    description: 'Required for transactions',
+    link: '/download#mobile',
+    primary: true,
   },
 ]
 

@@ -1,31 +1,38 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Globe, Smartphone, Code, Zap } from 'lucide-react'
+import { Code, Globe, Smartphone, Zap } from 'lucide-react'
 
 const techFeatures = [
   {
     icon: Globe,
     title: 'Multi-Chain Support',
     description:
-      'Support for 12+ blockchains including Bitcoin, Ethereum, and more with unified experience.',
+      'Support for 13+ blockchains including Bitcoin, Ethereum, Polygon, BSC, Avalanche, Base, and more with unified experience.',
   },
   {
     icon: Code,
-    title: 'Account Abstraction',
+    title: 'Schnorr Multisig ERC-4337',
     description:
-      'First wallet to introduce true multi-signature accounts to Ethereum with ERC-4337.',
+      'First wallet with native Schnorr multisignature Account Abstraction on Ethereum, removing EOA requirements.',
   },
   {
     icon: Smartphone,
-    title: 'Mobile Integration',
+    title: 'BIP48 Two-Device Security',
     description:
-      'Seamless mobile app integration for secure authentication and transaction approval.',
+      'True 2-of-2 multisignature using BIP48 derivation with browser extension and mobile app authentication.',
   },
   {
     icon: Zap,
-    title: 'DApp Integration',
-    description: 'Compatible with major DApp platforms for complete Web3 ecosystem access.',
+    title: 'Developer API & WalletConnect v2',
+    description:
+      'JavaScript API for dApp integration, WalletConnect v2 support, and EIP-712 message signing.',
+  },
+  {
+    icon: Smartphone,
+    title: 'Hardware Key Support',
+    description:
+      'Enhanced security with hardware key integration - coming soon for ultimate protection.',
   },
 ]
 
@@ -42,7 +49,7 @@ export function TechnicalFeatures() {
           </p>
         </div>
 
-        <div className='grid gap-8 md:grid-cols-2'>
+        <div className='grid gap-8 md:grid-cols-2 xl:grid-cols-3'>
           {techFeatures.map((feature, index) => {
             const Icon = feature.icon
 

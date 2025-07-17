@@ -9,15 +9,15 @@ import { useInView } from 'react-intersection-observer'
 const features = [
   {
     icon: Shield,
-    text: 'Multi-signature Security',
+    text: 'True 2-of-2 Multisig',
   },
   {
     icon: Zap,
-    text: 'Lightning Fast',
+    text: '13+ Blockchains',
   },
   {
     icon: Lock,
-    text: 'Self-custody',
+    text: 'Zero Data Storage',
   },
 ]
 
@@ -115,8 +115,9 @@ export function Hero() {
               variants={itemVariants}
               className='mb-8 max-w-2xl text-xl text-balance text-gray-600 md:text-2xl dark:text-gray-300'
             >
-              The next-generation crypto wallet with multi-signature security, seamless DApp
-              integration, and support for multiple blockchains.
+              True 2-of-2 multisignature wallet using BIP48 derivation, requiring both your browser
+              extension and mobile device for every transaction. Features WalletConnect v2, ERC-4337
+              Account Abstraction with Schnorr signatures, and 13+ blockchains.
             </motion.p>
 
             {/* Feature Highlights */}

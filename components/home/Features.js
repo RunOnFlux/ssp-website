@@ -8,25 +8,25 @@ import { useInView } from 'react-intersection-observer'
 const features = [
   {
     icon: Shield,
-    title: 'Multi-Signature Security',
+    title: 'True 2-of-2 Multisignature',
     description:
-      'Advanced BIP48-Multi-Sig design with 2FA system provides dual-signature protection, mitigating single-point-of-failure risks.',
+      'Advanced BIP48 derivation with true two-factor authentication requiring both browser extension and mobile device signatures for every transaction.',
     image: '/security.svg',
     color: 'from-red-500 to-pink-500',
   },
   {
     icon: Zap,
-    title: 'Lightning Fast',
+    title: 'WalletConnect v2 Integration',
     description:
-      'Optimized for speed with instant transactions and seamless user experience across all supported blockchains.',
+      'Seamless dApp connectivity with WalletConnect v2, EIP-712 message signing, and real-time communication across DeFi protocols.',
     image: '/simplicity.svg',
     color: 'from-blue-500 to-cyan-500',
   },
   {
     icon: Lock,
-    title: 'Self-Custody',
+    title: 'Zero Data Storage',
     description:
-      'Complete control over your assets with private keys that never leave your device. Your crypto, your rules.',
+      'No sensitive data ever stored on servers. Keys, seeds, and transactions remain exclusively on your devices with AES-GCM encryption.',
     image: '/powerful.svg',
     color: 'from-green-500 to-emerald-500',
   },
@@ -34,23 +34,23 @@ const features = [
     icon: Globe,
     title: 'Multi-Chain Support',
     description:
-      'Support for 12+ blockchains including Bitcoin, Ethereum, and many more with unified wallet experience.',
+      'Support for 13+ blockchains including Bitcoin, Ethereum, Polygon, BSC, Avalanche, Base, and many more with unified experience.',
     image: '/browsers.svg',
     color: 'from-purple-500 to-violet-500',
   },
   {
     icon: Smartphone,
-    title: 'Mobile Integration',
+    title: 'Account Abstraction (ERC-4337)',
     description:
-      'Seamless mobile integration for secure authentication and transaction approval on the go.',
+      'First wallet with native Schnorr multisignature Account Abstraction on Ethereum, enabling smart contract wallets without EOAs.',
     image: '/iphone.svg',
     color: 'from-orange-500 to-red-500',
   },
   {
     icon: Users,
-    title: 'DApp Integration',
+    title: 'WalletConnect v2 Integration',
     description:
-      'Compatible with major DApp platforms and protocols for a complete Web3 experience.',
+      'Connect to thousands of dApps with WalletConnect v2 (Reown) support across all EVM chains.',
     image: '/icons.svg',
     color: 'from-indigo-500 to-blue-500',
   },
