@@ -121,27 +121,20 @@ export default function DownloadPage() {
                   className={`group relative ${option.primary ? 'lg:col-span-2' : ''}`}
                 >
                   <div
-                    className={`
-                    h-full rounded-2xl border-2 p-8 transition-all duration-300
-                    ${
+                    className={`h-full rounded-2xl border-2 p-8 transition-all duration-300 ${
                       option.available
                         ? 'border-primary-200 bg-white hover:border-primary-300 hover:shadow-lg dark:border-primary-800 dark:bg-dark-800 dark:hover:border-primary-700'
                         : 'border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-dark-700'
-                    }
-                    ${option.primary ? 'border-primary-300 bg-gradient-to-br from-primary-50 to-white dark:border-primary-600 dark:from-primary-900/20 dark:to-dark-800' : ''}
-                  `}
+                    } ${option.primary ? 'border-primary-300 bg-gradient-to-br from-primary-50 to-white dark:border-primary-600 dark:from-primary-900/20 dark:to-dark-800' : ''} `}
                   >
                     <div className='mb-6 flex items-start justify-between'>
                       <div>
                         <div
-                          className={`
-                          mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl
-                          ${
+                          className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl ${
                             option.available
                               ? 'bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400'
                               : 'bg-gray-200 text-gray-500 dark:bg-gray-600 dark:text-gray-400'
-                          }
-                        `}
+                          } `}
                         >
                           <Icon className='h-6 w-6' />
                         </div>
@@ -151,14 +144,11 @@ export default function DownloadPage() {
                         </h3>
 
                         <p
-                          className={`
-                          inline-flex items-center rounded-full px-3 py-1 text-sm font-medium
-                          ${
+                          className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-medium ${
                             option.available
                               ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
                               : 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400'
-                          }
-                        `}
+                          } `}
                         >
                           {option.subtitle}
                         </p>

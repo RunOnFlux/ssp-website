@@ -165,15 +165,11 @@ function StepCard({ step, phaseColor, index }) {
       initial={{ opacity: 0, x: -30 }}
       animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className={`
-        relative rounded-xl border-2 p-6 transition-all duration-300
-        ${
-          step.important
-            ? 'border-amber-300 bg-amber-50 dark:border-amber-600 dark:bg-amber-900/20'
-            : 'border-gray-200 bg-white dark:border-gray-700 dark:bg-dark-800'
-        }
-        hover:shadow-lg
-      `}
+      className={`relative rounded-xl border-2 p-6 transition-all duration-300 ${
+        step.important
+          ? 'border-amber-300 bg-amber-50 dark:border-amber-600 dark:bg-amber-900/20'
+          : 'border-gray-200 bg-white dark:border-gray-700 dark:bg-dark-800'
+      } hover:shadow-lg`}
     >
       {step.important && (
         <div className='absolute -right-2 -top-2'>
@@ -186,10 +182,7 @@ function StepCard({ step, phaseColor, index }) {
 
       <div className='flex items-start'>
         <div
-          className={`
-          mr-4 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold text-white
-          ${phaseColor === 'blue' ? 'bg-blue-500' : 'bg-green-500'}
-        `}
+          className={`mr-4 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold text-white ${phaseColor === 'blue' ? 'bg-blue-500' : 'bg-green-500'} `}
         >
           {step.step}
         </div>
@@ -200,14 +193,11 @@ function StepCard({ step, phaseColor, index }) {
 
           <div className='flex items-center space-x-4'>
             <span
-              className={`
-              inline-flex items-center rounded-full px-3 py-1 text-sm font-medium
-              ${
+              className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-medium ${
                 phaseColor === 'blue'
                   ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'
                   : 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'
-              }
-            `}
+              } `}
             >
               {step.action}
             </span>
@@ -435,23 +425,17 @@ export default function Guide() {
                     className='mb-8 flex items-center'
                   >
                     <div
-                      className={`
-                      mr-4 flex h-12 w-12 items-center justify-center rounded-xl
-                      ${
+                      className={`mr-4 flex h-12 w-12 items-center justify-center rounded-xl ${
                         phase.color === 'blue'
                           ? 'bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400'
                           : 'bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400'
-                      }
-                    `}
+                      } `}
                     >
                       <PhaseIcon className='h-6 w-6' />
                     </div>
                     <div>
                       <div
-                        className={`
-                        text-sm font-semibold uppercase tracking-wider
-                        ${phase.color === 'blue' ? 'text-blue-600 dark:text-blue-400' : 'text-green-600 dark:text-green-400'}
-                      `}
+                        className={`text-sm font-semibold uppercase tracking-wider ${phase.color === 'blue' ? 'text-blue-600 dark:text-blue-400' : 'text-green-600 dark:text-green-400'} `}
                       >
                         {phase.phase}
                       </div>

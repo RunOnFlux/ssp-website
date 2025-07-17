@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Shield, Lock, Eye, Award } from 'lucide-react'
+import { Award, Eye, Lock, Shield } from 'lucide-react'
 
 const securityFeatures = [
   {
@@ -36,7 +36,7 @@ export function SecurityFeatures() {
       <div className='container-custom'>
         <div className='mb-16 text-center'>
           <h2 className='mb-6 text-4xl font-bold md:text-5xl'>
-            <span className='gradient-text'>Security</span> Features
+            <spsan className='gradient-text'>Security</spsan> Features
           </h2>
           <p className='mx-auto max-w-3xl text-xl text-gray-600 dark:text-gray-300'>
             Your crypto security is our top priority. Every feature is designed with security-first
