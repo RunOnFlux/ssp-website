@@ -29,7 +29,7 @@ const faqCategories = [
       {
         question: 'What is SSP Wallet?',
         answer:
-          'SSP Wallet is a true 2-of-2 multisignature system consisting of two components: SSP Wallet (browser extension) and SSP Key (mobile 2FA app). Both devices are required to authorize transactions, providing unmatched security for your crypto assets across 13+ blockchains.',
+          'SSP Wallet is a true 2-of-2 multisignature system consisting of two components: SSP Wallet (browser extension) and SSP Key (mobile 2FA app). Both devices are required to authorize transactions, providing unmatched security for your crypto assets across 15+ blockchains.',
       },
       {
         question: 'How do I install SSP Wallet?',
@@ -44,7 +44,7 @@ const faqCategories = [
       {
         question: 'What cryptocurrencies does SSP Wallet support?',
         answer:
-          'SSP Wallet supports 12+ blockchains including Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), Zcash (ZEC), Ravencoin (RVN), Dogecoin (DOGE), Bitcoin Cash (BCH), Flux (FLUX), Polygon (MATIC), BSC, Avalanche (AVAX), and Base. Solana support is coming soon.',
+          'SSP Wallet supports 15+ blockchains including Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), Zcash (ZEC), Ravencoin (RVN), Dogecoin (DOGE), Bitcoin Cash (BCH), Flux (FLUX), Polygon (MATIC), BSC, Avalanche (AVAX), and Base. Solana support is coming soon.',
       },
       {
         question: 'Can I use SSP Wallet with dApps and DeFi?',

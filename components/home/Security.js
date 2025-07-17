@@ -29,7 +29,7 @@ const securityFeatures = [
     icon: Award,
     title: 'Zero Data Storage',
     description:
-      'PBKDF2-based encryption with device fingerprinting ensures no sensitive data is ever stored on servers',
+      'PBKDF2-based encryption with device fingerprinting ensures all your locally stored data is super secure. Nothing ever touches servers.',
     highlight: 'Self-Custody Only',
   },
 ]
@@ -155,7 +155,7 @@ export function Security() {
 
                 <p className='mb-8 leading-relaxed text-gray-600 dark:text-gray-300'>
                   All critical components of the SSP ecosystem have undergone rigorous security
-                  audits by Halborn, a leading blockchain security firm. Our commitment to
+                  audits by Halborn, a renowned blockchain security firm. Our commitment to
                   transparency means all audit reports are publicly available.
                 </p>
 
@@ -171,7 +171,7 @@ export function Security() {
                         />
                       </svg>
                     </div>
-                    <span className='font-medium'>Zero Critical Vulnerabilities Found</span>
+                    <span className='font-medium'>Industry Leading Best Practices</span>
                   </div>
 
                   <div className='flex items-center space-x-3'>
@@ -184,7 +184,7 @@ export function Security() {
                         />
                       </svg>
                     </div>
-                    <span className='font-medium'>All Issues Resolved</span>
+                    <span className='font-medium'>Engineered to Top Security Standards</span>
                   </div>
 
                   <div className='flex items-center space-x-3'>
@@ -202,10 +202,15 @@ export function Security() {
                 </div>
 
                 {/* Halborn Badge */}
-                <div className='inline-flex items-center rounded-lg bg-linear-to-r from-blue-600 to-purple-600 px-6 py-3 font-medium text-white shadow-lg'>
+                <a
+                  href='https://www.halborn.com/audits/influx-technologies'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='inline-flex items-center rounded-lg bg-linear-to-r from-blue-600 to-purple-600 px-6 py-3 font-medium text-white shadow-lg transition-transform hover:scale-105'
+                >
                   <Award className='mr-2 h-5 w-5' />
                   Audited by Halborn
-                </div>
+                </a>
               </div>
 
               {/* Right Content - Audit Reports */}

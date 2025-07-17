@@ -8,25 +8,25 @@ import { useInView } from 'react-intersection-observer'
 const features = [
   {
     icon: Shield,
-    title: 'True 2-of-2 Multisignature',
+    title: 'Secure 2-of-2 Multisignature',
     description:
-      'Advanced BIP48 derivation with true two-factor authentication requiring both browser extension and mobile device signatures for every transaction.',
+      'Advanced BIP48 derivation with true two-factor authentication requiring both browser extension and mobile device signatures for every transaction. Maximum security through dual-device protection.',
     image: '/security.svg',
     color: 'from-red-500 to-pink-500',
   },
   {
     icon: Zap,
-    title: 'WalletConnect v2 Integration',
+    title: 'Simple Yet Advanced',
     description:
-      'Seamless dApp connectivity with WalletConnect v2, EIP-712 message signing, and real-time communication across DeFi protocols.',
+      'Complex multi-asset multisignature technology made simple. Advanced BIP48 security and Account Abstraction delivered through an intuitive interface anyone can use.',
     image: '/simplicity.svg',
     color: 'from-blue-500 to-cyan-500',
   },
   {
-    icon: Lock,
-    title: 'Zero Data Storage',
+    icon: Users,
+    title: 'Powerful dApp Interaction',
     description:
-      'No sensitive data ever stored on servers. Keys, seeds, and transactions remain exclusively on your devices with AES-GCM encryption.',
+      'Connect to thousands of dApps with WalletConnect v2 (Reown) support, EIP-712 message signing, and real-time communication across all EVM chains and DeFi protocols.',
     image: '/powerful.svg',
     color: 'from-green-500 to-emerald-500',
   },
@@ -34,23 +34,23 @@ const features = [
     icon: Globe,
     title: 'Multi-Chain Support',
     description:
-      'Support for 13+ blockchains including Bitcoin, Ethereum, Polygon, BSC, Avalanche, Base, and many more with unified experience.',
+      'Support for 15+ blockchains including Bitcoin, Ethereum, Polygon, BSC, Avalanche, Base, and many more with unified experience.',
     image: '/browsers.svg',
     color: 'from-purple-500 to-violet-500',
   },
   {
     icon: Smartphone,
-    title: 'Account Abstraction (ERC-4337)',
+    title: 'Account Abstraction',
     description:
-      'First wallet with native Schnorr multisignature Account Abstraction on Ethereum, enabling smart contract wallets without EOAs.',
+      'First wallet with native Schnorr multisignature Account Abstraction (ERC-4337) on Ethereum, enabling smart contract wallets without EOAs.',
     image: '/iphone.svg',
     color: 'from-orange-500 to-red-500',
   },
   {
-    icon: Users,
-    title: 'WalletConnect v2 Integration',
+    icon: Lock,
+    title: 'Zero Data Storage',
     description:
-      'Connect to thousands of dApps with WalletConnect v2 (Reown) support across all EVM chains.',
+      'No sensitive data ever stored on servers. Keys, seeds, and transactions remain exclusively on your devices with AES-GCM encryption.',
     image: '/icons.svg',
     color: 'from-indigo-500 to-blue-500',
   },

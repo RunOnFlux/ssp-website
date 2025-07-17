@@ -12,7 +12,7 @@ export default function Home() {
         <title>SSP Wallet - Secure, Simple, Powerful Crypto Wallet</title>
         <meta
           name='description'
-          content='SSP Wallet is a true 2-of-2 multisignature wallet using BIP48 derivation, requiring both browser extension and mobile device. Features WalletConnect v2, ERC-4337 Account Abstraction with Schnorr signatures, and 13+ blockchain support.'
+          content='SSP Wallet is a true 2-of-2 multisignature wallet using BIP48 derivation, requiring both browser extension and mobile device. Features WalletConnect v2, ERC-4337 Account Abstraction with Schnorr signatures, and 15+ blockchain support.'
         />
         <meta
           name='keywords'

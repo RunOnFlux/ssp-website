@@ -1,14 +1,14 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Code, Globe, Smartphone, Zap } from 'lucide-react'
+import { Code, Globe, Shield, Smartphone, Zap } from 'lucide-react'
 
 const techFeatures = [
   {
     icon: Globe,
     title: 'Multi-Chain Support',
     description:
-      'Support for 13+ blockchains including Bitcoin, Ethereum, Polygon, BSC, Avalanche, Base, and more with unified experience.',
+      'Support for 15+ blockchains including Bitcoin, Ethereum, Polygon, BSC, Avalanche, Base, and more with unified experience.',
   },
   {
     icon: Code,
@@ -29,10 +29,16 @@ const techFeatures = [
       'JavaScript API for dApp integration, WalletConnect v2 support, and EIP-712 message signing.',
   },
   {
+    icon: Shield,
+    title: 'Open Source & Security Audited',
+    description:
+      'Fully transparent, verifiable code with professional security audits by Halborn. Unique combination of openness and enterprise-grade security.',
+  },
+  {
     icon: Smartphone,
     title: 'Hardware Key Support',
     description:
-      'Enhanced security with hardware key integration - coming soon for ultimate protection.',
+      'Enhanced multisig security with hardware key integration - coming soon for enterprise customers and multisig businesses protection.',
   },
 ]
 

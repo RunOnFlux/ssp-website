@@ -90,13 +90,6 @@ const supportedChains = [
     color: 'from-blue-500 to-blue-700',
     description: 'Coinbase L2 solution',
   },
-  {
-    name: 'Solana',
-    symbol: 'SOL',
-    logo: '/browsers.svg',
-    color: 'from-purple-600 to-pink-600',
-    description: 'Coming soon',
-  },
 ]
 
 export function SupportedChains() {
@@ -156,7 +149,7 @@ export function SupportedChains() {
             </div>
 
             <h2 className='mb-6 text-4xl font-bold md:text-5xl'>
-              <span className='gradient-text'>13+ Blockchains</span> in One Wallet
+              <span className='gradient-text'>15+ Blockchains</span> in One Wallet
             </h2>
             <p className='mx-auto max-w-3xl text-xl text-gray-600 dark:text-gray-300'>
               Manage all your crypto assets from Bitcoin to Ethereum and beyond. SSP Wallet provides

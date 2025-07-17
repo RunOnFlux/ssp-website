@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Chrome, Download, Smartphone } from 'lucide-react'
+import { ArrowRight, Chrome, Download, Key, Smartphone } from 'lucide-react'
 import Link from 'next/link'
 import { useInView } from 'react-intersection-observer'
 import { Logo } from '../Logo'
@@ -9,17 +9,25 @@ import { Logo } from '../Logo'
 const downloadOptions = [
   {
     icon: Chrome,
-    title: 'Browser Extension',
+    title: 'SSP Wallet - Browser Extension',
     description: 'Available now - Chrome, Brave, Firefox',
     link: '/download',
     primary: true,
   },
   {
     icon: Smartphone,
-    title: 'SSP Key Mobile 2FA',
-    description: 'Required for transactions',
+    title: 'SSP Key - Mobile 2FA App',
+    description: 'Required for transactions approving and more',
     link: '/download#mobile',
     primary: true,
+  },
+  {
+    icon: Key,
+    title: 'Hardware Keys - Enterprise',
+    description: 'For businesses requiring multisignature security',
+    link: '/contact',
+    primary: true,
+    comingSoon: true,
   },
 ]
 
@@ -130,20 +138,23 @@ export function CTA() {
               {downloadOptions.map((option, index) => {
                 const Icon = option.icon
 
-                return (
+                const CardContent = (
                   <div
-                    key={index}
                     className={`card group text-center transition-all duration-300 ${
                       option.primary
                         ? 'ring-primary-500 scale-105 shadow-lg ring-2'
-                        : 'opacity-75 hover:opacity-100'
+                        : option.comingSoon
+                          ? 'border-dashed opacity-60'
+                          : 'opacity-75 hover:opacity-100'
                     }`}
                   >
                     <div
                       className={`mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full ${
                         option.primary
                           ? 'bg-primary-500 text-white'
-                          : 'dark:bg-dark-700 bg-gray-100 text-gray-600 dark:text-gray-400'
+                          : option.comingSoon
+                            ? 'bg-orange-100 text-orange-600 dark:bg-orange-900/30 dark:text-orange-400'
+                            : 'dark:bg-dark-700 bg-gray-100 text-gray-600 dark:text-gray-400'
                       }`}
                     >
                       <Icon className='h-8 w-8' />
@@ -154,20 +165,38 @@ export function CTA() {
                       className={`text-sm ${
                         option.primary
                           ? 'text-primary-600 dark:text-primary-400 font-medium'
-                          : 'text-gray-500 dark:text-gray-400'
+                          : option.comingSoon
+                            ? 'text-orange-600 dark:text-orange-400'
+                            : 'text-gray-500 dark:text-gray-400'
                       }`}
                     >
                       {option.description}
                     </p>
 
-                    {option.primary && (
+                    {option.primary && !option.comingSoon && (
                       <div className='mt-3'>
                         <span className='bg-primary-100 text-primary-800 dark:bg-primary-900/30 dark:text-primary-200 inline-block rounded-full px-3 py-1 text-xs font-medium'>
-                          Recommended
+                          Available Now
+                        </span>
+                      </div>
+                    )}
+
+                    {option.comingSoon && (
+                      <div className='mt-3'>
+                        <span className='inline-block rounded-full bg-orange-100 px-3 py-1 text-xs font-medium text-orange-800 dark:bg-orange-900/30 dark:text-orange-200'>
+                          Coming Soon
                         </span>
                       </div>
                     )}
                   </div>
+                )
+
+                return option.comingSoon ? (
+                  <div key={index}>{CardContent}</div>
+                ) : (
+                  <Link key={index} href={option.link}>
+                    {CardContent}
+                  </Link>
                 )
               })}
             </motion.div>
@@ -179,7 +208,7 @@ export function CTA() {
             >
               <div className='grid items-center gap-8 md:grid-cols-3'>
                 <div className='text-center'>
-                  <div className='mb-2 text-3xl font-bold text-gray-900 dark:text-white'>100K+</div>
+                  <div className='mb-2 text-3xl font-bold text-gray-900 dark:text-white'>1000+</div>
                   <p className='text-gray-600 dark:text-gray-400'>Active Users</p>
                 </div>
 
@@ -189,7 +218,7 @@ export function CTA() {
                 </div>
 
                 <div className='text-center'>
-                  <div className='mb-2 text-3xl font-bold text-gray-900 dark:text-white'>12+</div>
+                  <div className='mb-2 text-3xl font-bold text-gray-900 dark:text-white'>15+</div>
                   <p className='text-gray-600 dark:text-gray-400'>Blockchains Supported</p>
                 </div>
               </div>

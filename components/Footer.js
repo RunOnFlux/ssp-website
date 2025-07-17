@@ -231,11 +231,11 @@ export function Footer() {
               >
                 <span>Powered by Flux</span>
                 <Image
-                  src='/flux-logo.svg'
+                  src='/flux-symbol.svg'
                   alt='Flux'
-                  width={80}
+                  width={24}
                   height={24}
-                  className='h-5 w-auto'
+                  className='h-5 w-5'
                 />
               </a>
             </div>
