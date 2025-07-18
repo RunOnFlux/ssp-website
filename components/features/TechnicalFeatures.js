@@ -6,39 +6,39 @@ import { Code, Globe, Shield, Smartphone, Zap } from 'lucide-react'
 const techFeatures = [
   {
     icon: Globe,
-    title: 'Multi-Chain Support',
+    title: 'Multi-Chain Support (15+)',
     description:
-      'Support for 15+ blockchains including Bitcoin, Ethereum, Polygon, BSC, Avalanche, Base, and more with unified experience.',
-  },
-  {
-    icon: Code,
-    title: 'Schnorr Multisig ERC-4337',
-    description:
-      'First wallet with native Schnorr multisignature Account Abstraction on Ethereum, removing EOA requirements.',
-  },
-  {
-    icon: Smartphone,
-    title: 'BIP48 Two-Device Security',
-    description:
-      'True 2-of-2 multisignature using BIP48 derivation with browser extension and mobile app authentication.',
+      'Native support for Bitcoin, Ethereum, Polygon, BSC, Avalanche, Base, Arbitrum, Optimism, and more with unified portfolio management.',
   },
   {
     icon: Zap,
-    title: 'Developer API & WalletConnect v2',
+    title: 'Built-in Crypto Trading',
     description:
-      'JavaScript API for dApp integration, WalletConnect v2 support, and EIP-712 message signing.',
+      'Seamless crypto swapping via integrated DEX aggregators, plus fiat on-ramp/off-ramp for buying and selling crypto with payment cards.',
   },
   {
-    icon: Shield,
-    title: 'Open Source & Security Audited',
+    icon: Code,
+    title: 'Account Abstraction (ERC-4337)',
     description:
-      'Fully transparent, verifiable code with professional security audits by Halborn. Unique combination of openness and enterprise-grade security.',
+      'First wallet with native Schnorr multisignature Account Abstraction on Ethereum, enabling gasless transactions and smart contract wallets.',
   },
   {
     icon: Smartphone,
-    title: 'Hardware Key Support',
+    title: 'True 2-of-2 Multisig Security',
     description:
-      'Enhanced multisig security with hardware key integration - coming soon for enterprise customers and multisig businesses protection.',
+      'Revolutionary BIP48 dual-device security with browser extension and mobile app. Both devices required for every transaction - ultimate protection.',
+  },
+  {
+    icon: Shield,
+    title: 'Security Audited & Open Source',
+    description:
+      'Fully transparent, verifiable code professionally audited by Halborn security experts. Open source with enterprise-grade security standards.',
+  },
+  {
+    icon: Code,
+    title: 'Advanced dApp Integration',
+    description:
+      'WalletConnect v2 support, EIP-712 message signing, and comprehensive browser integration for seamless dApp connectivity.',
   },
 ]
 

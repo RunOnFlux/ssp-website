@@ -6,27 +6,27 @@ import { Award, Eye, Lock, Shield } from 'lucide-react'
 const securityFeatures = [
   {
     icon: Shield,
-    title: 'Multi-Signature Protection',
+    title: 'True 2-of-2 Multisig Protection',
     description:
-      'Advanced BIP48-Multi-Sig design with mobile-integrated 2FA system provides dual-signature protection.',
-  },
-  {
-    icon: Lock,
-    title: 'Zero Data Storage',
-    description:
-      'Strict no-storing policy eliminates risk of data breaches. Your information never leaves your device.',
-  },
-  {
-    icon: Eye,
-    title: 'Open Source & Audited',
-    description:
-      'Transparent, verifiable code audited by Halborn security experts for maximum trust.',
+      'Revolutionary BIP48 multisignature requiring both browser and mobile device signatures. No single point of failure - impossible to compromise with just one device.',
   },
   {
     icon: Award,
-    title: 'Military-Grade Encryption',
+    title: 'Halborn Security Audit',
     description:
-      'State-of-the-art encryption technology protects your assets with bank-level security.',
+      'Professionally audited by Halborn, the leading blockchain security firm trusted by major protocols. Comprehensive penetration testing and code review completed.',
+  },
+  {
+    icon: Lock,
+    title: 'Zero Data Storage Policy',
+    description:
+      'Strict no-server-storage policy eliminates centralized attack vectors. Your private keys, transactions, and personal data never leave your devices.',
+  },
+  {
+    icon: Eye,
+    title: 'Fully Open Source & Transparent',
+    description:
+      'Complete codebase transparency allows security researchers and developers to verify our claims. No hidden backdoors or proprietary black boxes.',
   },
 ]
 

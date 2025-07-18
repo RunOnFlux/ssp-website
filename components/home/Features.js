@@ -223,7 +223,7 @@ export function Features() {
             </div>
 
             {/* Interactive Demo Section */}
-            <div className='relative'>
+            <div className='relative hidden md:block'>
               <div className='dark:from-dark-800 dark:to-dark-700 aspect-video overflow-hidden rounded-xl border-2 border-gray-200 bg-linear-to-br from-gray-100 to-gray-200 dark:border-gray-600'>
                 {/* Interactive Demo Preview */}
                 <div className='flex h-full w-full items-center justify-center p-8'>
