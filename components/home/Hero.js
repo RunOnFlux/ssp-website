@@ -126,9 +126,9 @@ export function Hero() {
                 variants={itemVariants}
                 className='mb-8 max-w-2xl text-xl text-balance text-gray-600 md:text-2xl dark:text-gray-300'
               >
-                True 2-of-2 multisignature wallet using BIP48 derivation, requiring both your browser
-                extension and mobile device for every transaction. Features WalletConnect v2, ERC-4337
-                Account Abstraction with Schnorr signatures, and 15+ blockchains.
+                True 2-of-2 multisignature wallet using BIP48 derivation, requiring both your
+                browser extension and mobile device for every transaction. Features WalletConnect
+                v2, ERC-4337 Account Abstraction with Schnorr signatures, and 15+ blockchains.
               </motion.p>
 
               {/* Feature Highlights */}
@@ -165,7 +165,7 @@ export function Hero() {
 
                 <button
                   onClick={openModal}
-                  className='btn btn-secondary group px-8 py-4 text-lg hover:scale-105 hover:shadow-xl transition-all duration-200 cursor-pointer'
+                  className='btn btn-secondary group cursor-pointer px-8 py-4 text-lg transition-all duration-200 hover:scale-105 hover:shadow-xl'
                 >
                   <Play className='mr-2 h-5 w-5' />
                   Watch Demo
@@ -327,20 +327,20 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className='fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-md p-4'
+          className='fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-md'
           onClick={closeModal}
         >
           <motion.div
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.5, opacity: 0 }}
-            className='relative max-h-[90vh] max-w-4xl w-full'
-            onClick={(e) => e.stopPropagation()}
+            className='relative max-h-[90vh] w-full max-w-4xl'
+            onClick={e => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
               onClick={closeModal}
-              className='absolute -top-12 right-0 flex h-10 w-10 items-center justify-center rounded-full bg-white text-gray-900 hover:bg-gray-100 transition-colors z-10'
+              className='absolute -top-12 right-0 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white text-gray-900 transition-colors hover:bg-gray-100'
               aria-label='Close modal'
             >
               <X className='h-6 w-6' />

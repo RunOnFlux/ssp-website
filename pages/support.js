@@ -84,7 +84,7 @@ const faqCategories = [
       {
         question: 'Can I use SSP Wallet on multiple devices?',
         answer:
-          'Yes, you can use SSP Wallet on multiple devices. To set up on a new device, you\'ll need to restore your wallet and key using the corresponding seed phrases. Each device requires proper setup and synchronization.',
+          "Yes, you can use SSP Wallet on multiple devices. To set up on a new device, you'll need to restore your wallet and key using the corresponding seed phrases. Each device requires proper setup and synchronization.",
       },
     ],
   },
@@ -151,7 +151,7 @@ const faqCategories = [
       {
         question: 'What fees does SSP Wallet charge?',
         answer:
-          'SSP Wallet has zero fees - we don\'t charge anything for using the wallet. You only pay the standard blockchain network fees that go directly to miners/validators for processing your transactions. The wallet includes automatic fee selection to optimize your transaction costs.',
+          "SSP Wallet has zero fees - we don't charge anything for using the wallet. You only pay the standard blockchain network fees that go directly to miners/validators for processing your transactions. The wallet includes automatic fee selection to optimize your transaction costs.",
       },
       {
         question: 'Why do some transactions fail to construct?',

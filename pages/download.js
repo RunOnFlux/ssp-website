@@ -95,7 +95,7 @@ export default function DownloadPage() {
                   <div>
                     <strong>Install SSP Wallet</strong>
                     <br />
-                                                Browser extension for Chrome, Brave, and Firefox
+                    Browser extension for Chrome, Brave, and Firefox
                   </div>
                 </div>
                 <div className='flex items-start space-x-2'>
