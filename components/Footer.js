@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Twitter, Youtube } from 'lucide-react'
+import { ExternalLink, Github, MessageCircle, Twitter } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Logo } from './Logo'
@@ -23,6 +23,7 @@ const footerNavigation = {
   ],
   community: [
     { name: 'GitHub', href: 'https://github.com/RunOnFlux', external: true },
+    { name: 'Discord', href: 'https://discord.gg/runonflux', external: true },
     { name: 'Twitter', href: 'https://twitter.com/sspwallet_io', external: true },
     { name: 'Medium', href: 'https://medium.com/@ssp_wallet', external: true },
     { name: 'YouTube', href: 'https://www.youtube.com/@ZelLabs', external: true },
@@ -41,14 +42,14 @@ const socialLinks = [
     icon: Github,
   },
   {
+    name: 'Discord',
+    href: 'https://discord.gg/runonflux',
+    icon: MessageCircle,
+  },
+  {
     name: 'Twitter',
     href: 'https://twitter.com/sspwallet_io',
     icon: Twitter,
-  },
-  {
-    name: 'YouTube',
-    href: 'https://www.youtube.com/@ZelLabs',
-    icon: Youtube,
   },
 ]
 

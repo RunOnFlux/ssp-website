@@ -5,6 +5,8 @@ import {
   CheckCircle,
   ChevronDown,
   ChevronUp,
+  ExternalLink,
+  FileText,
   Github,
   HelpCircle,
   Mail,
@@ -12,9 +14,9 @@ import {
   Send,
   Shield,
   Smartphone,
+  Star,
   Twitter,
   Users,
-  Youtube,
 } from 'lucide-react'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -169,31 +171,42 @@ const faqCategories = [
 
 const supportChannels = [
   {
+    title: 'Documentation',
+    description: 'Comprehensive guides and docs',
+    icon: Book,
+    links: [
+      {
+        name: 'Complete Documentation',
+        url: 'https://docs.sspwallet.io',
+        internal: false,
+        icon: FileText,
+      },
+      { name: 'Setup Guide', url: '/guide', internal: true, icon: Book },
+      { name: 'Feature Documentation', url: '/features', internal: true, icon: Star },
+    ],
+  },
+  {
     title: 'Community Support',
     description: 'Get help from our community',
     icon: Users,
     links: [
       { name: 'GitHub Discussions', url: 'https://github.com/RunOnFlux', icon: Github },
+      { name: 'Discord Community', url: 'https://discord.gg/runonflux', icon: MessageCircle },
       { name: 'Twitter Support', url: 'https://twitter.com/sspwallet_io', icon: Twitter },
     ],
   },
   {
-    title: 'Documentation',
-    description: 'Comprehensive guides and docs',
-    icon: Book,
+    title: 'Direct Support',
+    description: 'Get personalized technical assistance',
+    icon: Mail,
     links: [
-      { name: 'Complete Documentation', url: 'https://docs.sspwallet.io', internal: false },
-      { name: 'Setup Guide', url: '/guide', internal: true },
-      { name: 'Feature Documentation', url: '/features', internal: true },
-    ],
-  },
-  {
-    title: 'Video Tutorials',
-    description: 'Watch step-by-step tutorials',
-    icon: Youtube,
-    links: [
-      { name: 'Installation Guide', url: 'https://www.youtube.com/@ZelLabs', icon: Youtube },
-      { name: 'Security Best Practices', url: 'https://www.youtube.com/@ZelLabs', icon: Youtube },
+      {
+        name: 'Support Ticketing System',
+        url: 'https://support.runonflux.io',
+        internal: false,
+        icon: ExternalLink,
+      },
+      { name: 'Email Support', url: 'mailto:support@sspwallet.io', icon: Mail },
     ],
   },
 ]
@@ -216,6 +229,9 @@ function FAQItem({ faq, index, categoryIndex }) {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className='dark:hover:bg-dark-700 flex w-full items-center justify-between p-6 text-left transition-colors hover:bg-gray-50'
+        aria-expanded={isOpen}
+        aria-controls={`faq-content-${categoryIndex}-${index}`}
+        id={`faq-button-${categoryIndex}-${index}`}
       >
         <span className='pr-4 font-semibold text-gray-900 dark:text-white'>{faq.question}</span>
         {isOpen ? (
@@ -232,6 +248,9 @@ function FAQItem({ faq, index, categoryIndex }) {
           exit={{ height: 0, opacity: 0 }}
           transition={{ duration: 0.3 }}
           className='px-6 pb-6'
+          id={`faq-content-${categoryIndex}-${index}`}
+          role='region'
+          aria-labelledby={`faq-button-${categoryIndex}-${index}`}
         >
           <p className='leading-relaxed text-gray-600 dark:text-gray-400'>{faq.answer}</p>
         </motion.div>
@@ -422,12 +441,13 @@ export default function Support() {
         <title>Support - SSP Wallet | Get Help & Technical Support</title>
         <meta
           name='description'
-          content='Get help with SSP Wallet. Find answers to common questions, access our support resources, or contact our team for technical assistance.'
+          content='Get comprehensive support for SSP Wallet. Find answers to FAQs, access documentation, connect with community, or contact our expert support team.'
         />
         <meta
           name='keywords'
-          content='SSP wallet support, crypto wallet help, technical support, FAQ, troubleshooting, customer service'
+          content='SSP wallet support, crypto wallet help, technical support, FAQ, troubleshooting, customer service, documentation, community support'
         />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
 
         {/* Open Graph */}
         <meta property='og:title' content='SSP Wallet Support | Get Help & Technical Support' />
@@ -442,7 +462,7 @@ export default function Support() {
       </Head>
 
       {/* Hero Section */}
-      <section className='section-padding dark:from-dark-900 dark:via-dark-800 dark:to-dark-900 relative overflow-hidden bg-linear-to-br from-blue-50 via-white to-purple-50'>
+      <section className='section-padding dark:bg-dark-900 relative overflow-hidden bg-white'>
         <div className='bg-grid-pattern absolute inset-0 opacity-5'></div>
         <div className='container-custom relative'>
           <motion.div
@@ -457,44 +477,65 @@ export default function Support() {
               Support Center
             </div>
 
-            <h1 className='heading-1 mb-6'>How can we help you?</h1>
+            <h1 className='heading-1 mb-6 text-gray-900 dark:text-white'>How can we help you?</h1>
 
             <p className='mx-auto mb-8 max-w-3xl text-xl text-gray-600 dark:text-gray-400'>
               Find answers to common questions, access our documentation, or get in touch with our
               support team.
             </p>
 
-            <div className='mx-auto grid max-w-3xl gap-6 md:grid-cols-3'>
-              <div className='dark:bg-dark-800 flex items-center rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700'>
-                <Book className='mr-3 h-8 w-8 flex-shrink-0 text-blue-500' />
-                <div className='text-left'>
-                  <h3 className='font-semibold text-gray-900 dark:text-white'>Documentation</h3>
-                  <p className='text-sm text-gray-600 dark:text-gray-400'>Guides & tutorials</p>
+            <div className='mx-auto grid max-w-4xl gap-4 sm:gap-6 md:grid-cols-3'>
+              <Link
+                href='https://docs.sspwallet.io'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='dark:bg-dark-800 flex items-center rounded-lg border border-gray-200 bg-white p-4 transition-all hover:border-blue-300 hover:shadow-md sm:p-6 dark:border-gray-700 dark:hover:border-blue-600'
+              >
+                <Book className='mr-3 h-6 w-6 flex-shrink-0 text-blue-500 sm:h-8 sm:w-8' />
+                <div className='min-w-0 flex-1 text-left'>
+                  <h3 className='text-sm font-semibold text-gray-900 sm:text-base dark:text-white'>
+                    Docs
+                  </h3>
+                  <p className='text-xs text-gray-600 sm:text-sm dark:text-gray-400'>Guides</p>
                 </div>
-              </div>
+              </Link>
 
-              <div className='dark:bg-dark-800 flex items-center rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700'>
-                <Users className='mr-3 h-8 w-8 flex-shrink-0 text-green-500' />
-                <div className='text-left'>
-                  <h3 className='font-semibold text-gray-900 dark:text-white'>Community</h3>
-                  <p className='text-sm text-gray-600 dark:text-gray-400'>User discussions</p>
+              <Link
+                href='https://discord.gg/runonflux'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='dark:bg-dark-800 flex items-center rounded-lg border border-gray-200 bg-white p-4 transition-all hover:border-green-300 hover:shadow-md sm:p-6 dark:border-gray-700 dark:hover:border-green-600'
+              >
+                <Users className='mr-3 h-6 w-6 flex-shrink-0 text-green-500 sm:h-8 sm:w-8' />
+                <div className='min-w-0 flex-1 text-left'>
+                  <h3 className='text-sm font-semibold text-gray-900 sm:text-base dark:text-white'>
+                    Community
+                  </h3>
+                  <p className='text-xs text-gray-600 sm:text-sm dark:text-gray-400'>Chat</p>
                 </div>
-              </div>
+              </Link>
 
-              <div className='dark:bg-dark-800 flex items-center rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700'>
-                <MessageCircle className='mr-3 h-8 w-8 flex-shrink-0 text-purple-500' />
-                <div className='text-left'>
-                  <h3 className='font-semibold text-gray-900 dark:text-white'>Direct Support</h3>
-                  <p className='text-sm text-gray-600 dark:text-gray-400'>Contact our team</p>
+              <Link
+                href='https://support.runonflux.io'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='dark:bg-dark-800 flex items-center rounded-lg border border-gray-200 bg-white p-4 transition-all hover:border-purple-300 hover:shadow-md sm:p-6 dark:border-gray-700 dark:hover:border-purple-600'
+              >
+                <MessageCircle className='mr-3 h-6 w-6 flex-shrink-0 text-purple-500 sm:h-8 sm:w-8' />
+                <div className='min-w-0 flex-1 text-left'>
+                  <h3 className='text-sm font-semibold text-gray-900 sm:text-base dark:text-white'>
+                    Support
+                  </h3>
+                  <p className='text-xs text-gray-600 sm:text-sm dark:text-gray-400'>Help</p>
                 </div>
-              </div>
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Support Channels */}
-      <section className='section-padding'>
+      <section className='section-padding dark:bg-dark-900 bg-gray-50'>
         <div className='container-custom'>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
