@@ -1,9 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Globe, Lock, Shield, Smartphone, Users, Zap } from 'lucide-react'
+import { ArrowRight, Chrome, Globe, Lock, Play, QrCode, Shield, Smartphone, Users, Zap } from 'lucide-react'
 import Image from 'next/image'
+import { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
+import { InteractiveDemo } from '../InteractiveDemo/InteractiveDemo'
 
 const features = [
   {
@@ -34,25 +36,25 @@ const features = [
     icon: Globe,
     title: 'Multi-Chain Support',
     description:
-      'Support for 15+ blockchains including Bitcoin, Ethereum, Polygon, BSC, Avalanche, Base, and many more with unified experience.',
+      'Support for 15+ blockchains including Bitcoin, Ethereum, Polygon, BSC, Avalanche, Base, and more. First wallet with native Schnorr multisignature Account Abstraction (ERC-4337) on Ethereum, enabling smart contract wallets without EOAs.',
     image: '/browsers.svg',
     color: 'from-purple-500 to-violet-500',
-  },
-  {
-    icon: Smartphone,
-    title: 'Account Abstraction',
-    description:
-      'First wallet with native Schnorr multisignature Account Abstraction (ERC-4337) on Ethereum, enabling smart contract wallets without EOAs.',
-    image: '/iphone.svg',
-    color: 'from-orange-500 to-red-500',
   },
   {
     icon: Lock,
     title: 'Zero Data Storage',
     description:
-      'No sensitive data ever stored on servers. Keys, seeds, and transactions remain exclusively on your devices with AES-GCM encryption.',
+      'Complete self-custody with zero server-side data storage. Private keys, seeds, and transactions remain exclusively on your devices using military-grade AES-GCM encryption and device fingerprinting for maximum security and privacy.',
     image: '/icons.svg',
     color: 'from-indigo-500 to-blue-500',
+  },
+  {
+    icon: ArrowRight,
+    title: 'Buy, Sell & Swap',
+    description:
+      'Buy cryptocurrencies directly with credit cards or bank transfers, sell crypto back to fiat currency, and swap between different cryptocurrencies seamlessly within the wallet. Powered by an aggregated engine of multiple providers for the best rates and options.',
+    image: '/card1-img.svg',
+    color: 'from-emerald-500 to-teal-500',
   },
 ]
 
@@ -61,6 +63,7 @@ export function Features() {
     threshold: 0.1,
     triggerOnce: true,
   })
+  const [isDemoOpen, setIsDemoOpen] = useState(false)
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -208,22 +211,53 @@ export function Features() {
               </div>
             </div>
 
-            {/* Video/Animation Section */}
+            {/* Interactive Demo Section */}
             <div className='relative'>
-              <div className='dark:from-dark-800 dark:to-dark-700 aspect-video overflow-hidden rounded-xl bg-linear-to-br from-gray-100 to-gray-200'>
-                {/* Placeholder for video */}
-                <div className='flex h-full w-full items-center justify-center'>
+              <div className='dark:from-dark-800 dark:to-dark-700 aspect-video overflow-hidden rounded-xl bg-linear-to-br from-gray-100 to-gray-200 border-2 border-gray-200 dark:border-gray-600'>
+                {/* Interactive Demo Preview */}
+                <div className='flex h-full w-full items-center justify-center p-8'>
                   <div className='text-center'>
-                    <div className='bg-primary-500 mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full'>
+                    {/* Demo Preview Icons */}
+                    <div className='mb-6 flex items-center justify-center space-x-6'>
+                      <div className='rounded-lg border border-gray-300 bg-white p-3 shadow-sm dark:border-gray-600 dark:bg-gray-700'>
+                        <Chrome className='h-8 w-8 text-blue-600' />
+                      </div>
+                      
                       <motion.div
                         animate={{ scale: [1, 1.2, 1] }}
                         transition={{ duration: 2, repeat: Infinity }}
+                        className='flex items-center'
                       >
-                        <Zap className='h-10 w-10 text-white' />
+                        <div className='h-0.5 w-8 bg-gradient-to-r from-blue-500 to-purple-500'></div>
+                        <QrCode className='h-6 w-6 mx-2 text-purple-600' />
+                        <div className='h-0.5 w-8 bg-gradient-to-r from-purple-500 to-blue-500'></div>
                       </motion.div>
+                      
+                      <div className='rounded-lg border border-gray-300 bg-white p-3 shadow-sm dark:border-gray-600 dark:bg-gray-700'>
+                        <Smartphone className='h-8 w-8 text-green-600' />
+                      </div>
                     </div>
-                    <p className='font-medium text-gray-600 dark:text-gray-300'>
-                      Interactive Demo Coming Soon
+                    
+                    <h4 className='mb-3 text-xl font-semibold text-gray-900 dark:text-white'>
+                      Try SSP Wallet Interactive Demo
+                    </h4>
+                    <p className='mb-6 text-gray-600 dark:text-gray-300'>
+                      Experience the complete setup and transaction flow
+                    </p>
+                    
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      onClick={() => setIsDemoOpen(true)}
+                      className='btn btn-primary group px-6 py-3 cursor-pointer'
+                    >
+                      <Play className='mr-2 h-4 w-4' />
+                      Launch Interactive Demo
+                      <ArrowRight className='ml-2 h-4 w-4 transition-transform group-hover:translate-x-1' />
+                    </motion.button>
+                    
+                    <p className='mt-3 text-sm text-gray-500 dark:text-gray-400'>
+                      No installation required • 3-minute experience
                     </p>
                   </div>
                 </div>
@@ -236,6 +270,9 @@ export function Features() {
           </motion.div>
         </motion.div>
       </div>
+
+      {/* Interactive Demo Modal */}
+      <InteractiveDemo isOpen={isDemoOpen} onClose={() => setIsDemoOpen(false)} />
     </section>
   )
 }

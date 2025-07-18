@@ -51,6 +51,41 @@ const faqCategories = [
         answer:
           'Yes! SSP Wallet features full WalletConnect v2 (Reown) integration, allowing you to connect to thousands of decentralized applications across all supported EVM chains. You can use DeFi protocols, NFT marketplaces, and other dApps while maintaining the security of the 2-of-2 multisignature system.',
       },
+      {
+        question: 'What are FluxNodes and how can I use them?',
+        answer:
+          'FluxNodes are nodes in the Flux network that help secure and maintain the blockchain. With SSP Wallet, you can easily set up and manage Fluxnodes, monitor their performance, and claim rewards directly through the wallet interface. Fluxnodes require a collateral amount of FLUX tokens and provide passive income through network rewards.',
+      },
+      {
+        question: 'Does SSP Wallet support fiat onboarding and offboarding?',
+        answer:
+          'Yes! SSP Wallet supports fiat onboarding and offboarding through integrated partners. You can buy cryptocurrencies directly with your credit card, bank transfer, or other payment methods, and sell your crypto back to fiat currency. This feature is available in supported regions and requires KYC verification.',
+      },
+      {
+        question: 'Can I swap cryptocurrencies within SSP Wallet?',
+        answer:
+          'Yes, SSP Wallet includes built-in crypto swap functionality. You can easily exchange one cryptocurrency for another across supported blockchains through our integrated swap partners. The swap feature provides competitive rates and executes swaps securely while maintaining your private keys.',
+      },
+      {
+        question: 'Can I export my transaction history?',
+        answer:
+          'Yes! SSP Wallet supports CSV export of your transaction history. You can export detailed transaction records for accounting, tax purposes, or personal record-keeping. The CSV export includes transaction dates, amounts, addresses, fees, and other relevant details for each supported blockchain.',
+      },
+      {
+        question: 'How can I request a new coin to be added?',
+        answer:
+          'We encourage users to reach out to our support team or contribute directly on our GitHub repository to request new cryptocurrency support. We evaluate each request based on community demand, technical feasibility, and security considerations.',
+      },
+      {
+        question: 'Is there a mobile wallet available?',
+        answer:
+          'Good news! We are actively working on expanding SSP Wallet to mobile platforms. Currently, SSP Wallet consists of a browser extension (SSP Wallet) and a mobile 2FA app (SSP Key). A full mobile wallet experience is in development.',
+      },
+      {
+        question: 'Can I use SSP Wallet on multiple devices?',
+        answer:
+          'Yes, you can use SSP Wallet on multiple devices. To set up on a new device, you\'ll need to restore your wallet and key using the corresponding seed phrases. Each device requires proper setup and synchronization.',
+      },
     ],
   },
   {
@@ -86,7 +121,7 @@ const faqCategories = [
       {
         question: 'Which browsers are supported?',
         answer:
-          'SSP Wallet supports Google Chrome, Brave, Microsoft Edge, Firefox, and other Chromium-based browsers like Opera. You can download the Chrome Web Store version for Chromium browsers or the Firefox version directly from our GitHub releases.',
+          'SSP Wallet supports Google Chrome, Brave, Firefox, and other Chromium-based browsers like Opera. You can download the Chrome Web Store version for Chromium browsers or the Firefox version directly from our GitHub releases.',
       },
       {
         question: "I'm having trouble syncing my mobile key",
@@ -102,6 +137,31 @@ const faqCategories = [
         question: 'How do I update SSP Wallet?',
         answer:
           "Browser extensions typically update automatically. You can manually check for updates in your browser's extension management page. For the mobile app, check your device's app store for updates.",
+      },
+      {
+        question: 'What is SSP Relay and how does it work?',
+        answer:
+          'SSP Relay is an open-source relay service that acts as a bridge between your SSP Wallet and SSP Key. It provides market information, fee data, enables transaction synchronization, and delivers push notifications. The relay enhances the user experience while maintaining security.',
+      },
+      {
+        question: 'Does SSP Wallet support Replace-By-Fee (RBF)?',
+        answer:
+          'Yes, SSP Wallet fully supports Replace-By-Fee (RBF) functionality. You can modify transaction fees and even change recipients after broadcasting a transaction, giving you flexibility in managing your transactions on the blockchain.',
+      },
+      {
+        question: 'What fees does SSP Wallet charge?',
+        answer:
+          'SSP Wallet has zero fees - we don\'t charge anything for using the wallet. You only pay the standard blockchain network fees that go directly to miners/validators for processing your transactions. The wallet includes automatic fee selection to optimize your transaction costs.',
+      },
+      {
+        question: 'Why do some transactions fail to construct?',
+        answer:
+          'Some transactions may fail due to blockchain size restrictions and UTXO complexity. When you have many small inputs, the transaction size can exceed network limits. In such cases, you may need to consolidate your UTXOs or break the transaction into smaller parts.',
+      },
+      {
+        question: 'Do I need to restore my wallet when changing devices?',
+        answer:
+          'Yes, due to device-specific encryption, you must restore both your wallet and key when changing devices or making significant system changes. Keep your seed phrases secure and accessible for this process.',
       },
     ],
   },

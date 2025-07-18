@@ -11,7 +11,7 @@ const downloadOptions = [
     title: 'Chrome/Brave Extension',
     subtitle: 'Available Now',
     description:
-      'Install SSP Wallet in Chrome, Brave, Edge, and other Chromium-based browsers for seamless Web3 integration.',
+      'Install SSP Wallet in Chrome, Brave, and other Chromium-based browsers for seamless Web3 integration.',
     link: 'https://chromewebstore.google.com/detail/ssp-wallet/mgfbabcnedcejkfibpafadgkhmkifhbd',
     available: true,
     primary: true,
@@ -32,7 +32,6 @@ const supportedBrowsers = [
   { name: 'Chrome', icon: '/chrome.svg' },
   { name: 'Brave', icon: '/brave.svg' },
   { name: 'Firefox', icon: '/firefox.svg' },
-  { name: 'Edge', icon: '/chrome.svg' }, // Using Chrome icon as placeholder
 ]
 
 export default function DownloadPage() {
@@ -96,7 +95,7 @@ export default function DownloadPage() {
                   <div>
                     <strong>Install SSP Wallet</strong>
                     <br />
-                    Browser extension for Chrome, Brave, Firefox, or Edge
+                                                Browser extension for Chrome, Brave, and Firefox
                   </div>
                 </div>
                 <div className='flex items-start space-x-2'>
