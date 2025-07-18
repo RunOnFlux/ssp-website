@@ -59,7 +59,7 @@ const phases = [
     id: 'transaction',
     title: 'Send Transaction',
     subtitle: 'Experience the dual-device security flow',
-    steps: 5,
+    steps: 4,
   },
 ]
 
@@ -880,14 +880,95 @@ export function InteractiveDemo({ isOpen, onClose }) {
                     {/* QR Code with SSP Logo */}
                     <div className='relative mb-4 rounded-lg border-2 border-gray-300 bg-white p-4'>
                       <div className='relative h-32 w-32 rounded border border-gray-200 bg-white'>
-                        {/* QR Code Pattern */}
-                        <div className='absolute inset-0 grid grid-cols-8 gap-px p-1'>
-                          {[...Array(64)].map((_, i) => (
-                            <div
-                              key={i}
-                              className={` ${[0, 1, 2, 3, 4, 5, 6, 8, 13, 15, 16, 22, 24, 25, 31, 32, 38, 40, 41, 47, 48, 49, 50, 51, 52, 53, 54, 56, 57, 58, 59, 60, 61, 62, 63].includes(i) ? 'bg-black' : 'bg-white'} rounded-sm`}
-                            ></div>
-                          ))}
+                        {/* Enhanced QR Code Pattern */}
+                        <div
+                          className='absolute inset-0 grid grid-cols-21 p-1'
+                          style={{ gap: '0.5px' }}
+                        >
+                          {[...Array(441)].map((_, i) => {
+                            const row = Math.floor(i / 21)
+                            const col = i % 21
+
+                            // Create authentic QR code pattern
+                            let isBlack = false
+
+                            // Corner finder patterns (7x7 squares in corners)
+                            if (
+                              (row <= 6 && col <= 6) || // Top-left
+                              (row <= 6 && col >= 14) || // Top-right
+                              (row >= 14 && col <= 6)
+                            ) {
+                              // Bottom-left
+                              // Outer border
+                              if (
+                                row === 0 ||
+                                row === 6 ||
+                                col === 0 ||
+                                col === 6 ||
+                                (row >= 14 && (row === 14 || row === 20)) ||
+                                (col >= 14 && (col === 14 || col === 20))
+                              ) {
+                                isBlack = true
+                              }
+                              // Inner 3x3 center
+                              if (
+                                (row >= 2 && row <= 4 && col >= 2 && col <= 4) ||
+                                (row >= 2 && row <= 4 && col >= 16 && col <= 18) ||
+                                (row >= 16 && row <= 18 && col >= 2 && col <= 4)
+                              ) {
+                                isBlack = true
+                              }
+                            }
+
+                            // Timing patterns (alternating dots on row 6 and col 6)
+                            else if (row === 6 && col >= 8 && col <= 12) {
+                              isBlack = col % 2 === 0
+                            } else if (col === 6 && row >= 8 && row <= 12) {
+                              isBlack = row % 2 === 0
+                            }
+
+                            // Alignment pattern (small square in bottom-right area)
+                            else if (row >= 16 && row <= 18 && col >= 16 && col <= 18) {
+                              if (
+                                row === 16 ||
+                                row === 18 ||
+                                col === 16 ||
+                                col === 18 ||
+                                (row === 17 && col === 17)
+                              ) {
+                                isBlack = true
+                              }
+                            }
+
+                            // Format information areas (around finder patterns)
+                            else if (
+                              (row === 8 && (col <= 5 || col >= 15)) ||
+                              (col === 8 && (row <= 5 || row >= 15))
+                            ) {
+                              // Semi-random pattern for format info
+                              isBlack = (row + col) % 3 === 0
+                            }
+
+                            // Data modules (the rest)
+                            else {
+                              // Create realistic data pattern
+                              const seed = row * 21 + col
+                              isBlack =
+                                (seed % 3 === 0 ||
+                                  seed % 7 === 1 ||
+                                  seed % 11 === 3 ||
+                                  (row + col) % 5 === 2 ||
+                                  (row % 4 === 1 && col % 3 === 0)) &&
+                                !((row + col) % 13 === 0)
+                            }
+
+                            return (
+                              <div
+                                key={i}
+                                className={`${isBlack ? 'bg-black' : 'bg-white'} aspect-square`}
+                              ></div>
+                            )
+                          })}
                         </div>
 
                         {/* SSP Logo in center */}
@@ -1193,15 +1274,15 @@ export function InteractiveDemo({ isOpen, onClose }) {
       case 0:
         return (
           <div className='flex flex-col items-center'>
-            <div className='relative mx-auto mb-6 h-96 w-[400px] rounded-lg border-2 border-gray-200 bg-white shadow-lg'>
+            <div className='relative mx-auto mb-4 h-[420px] w-[380px] rounded-lg border-2 border-gray-200 bg-white shadow-lg'>
               <div className='absolute inset-0 overflow-hidden rounded-lg'>
                 <div className='flex h-8 items-center border-b border-gray-200 bg-gray-100 px-3'>
                   <Send className='mr-2 h-4 w-4 text-gray-600' />
                   <div className='text-xs text-gray-600'>Send Transaction</div>
                 </div>
-                <div className='flex h-full flex-col p-5 pt-6'>
-                  <h3 className='mb-4 text-center text-lg font-semibold'>Send Ethereum</h3>
-                  <div className='flex-1 space-y-4'>
+                <div className='flex flex-col p-3 pt-5'>
+                  <h3 className='mb-2 text-center text-base font-semibold'>Send Ethereum</h3>
+                  <div className='flex-1 space-y-5'>
                     <div>
                       <label className='mb-1 block text-left text-sm text-gray-600'>
                         Recipient Address
@@ -1210,7 +1291,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
                         type='text'
                         value={transactionAddress}
                         onChange={e => setTransactionAddress(e.target.value)}
-                        className='w-full rounded border border-gray-300 px-3 py-2 font-mono text-sm'
+                        className='w-full rounded border border-gray-300 px-2 py-1 font-mono text-sm'
                       />
                     </div>
                     <div>
@@ -1221,10 +1302,10 @@ export function InteractiveDemo({ isOpen, onClose }) {
                         type='text'
                         value={transactionAmount}
                         onChange={e => setTransactionAmount(e.target.value)}
-                        className='w-full rounded border border-gray-300 px-3 py-2 text-sm'
+                        className='w-full rounded border border-gray-300 px-2 py-1 text-sm'
                       />
                     </div>
-                    <div className='rounded border border-gray-200 bg-gray-50 p-3 text-left'>
+                    <div className='rounded border border-gray-200 bg-gray-50 p-2 text-left'>
                       <div className='mb-1 text-sm text-gray-600'>Transaction Summary</div>
                       <div className='space-y-1 text-sm'>
                         <div className='flex justify-between'>
@@ -1247,7 +1328,8 @@ export function InteractiveDemo({ isOpen, onClose }) {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className='mt-4 w-full cursor-pointer rounded bg-blue-600 py-2 text-sm font-medium text-white'
+                    onClick={goNext}
+                    className='mt-5 w-full cursor-pointer rounded bg-blue-600 py-2 text-sm font-medium text-white'
                   >
                     Send Transaction
                   </motion.button>
@@ -1257,8 +1339,8 @@ export function InteractiveDemo({ isOpen, onClose }) {
             <div className='max-w-lg text-center'>
               <h3 className='mb-3 text-xl font-semibold'>Create Transaction</h3>
               <p className='text-gray-600'>
-                Fill in the recipient address and amount. The transaction will require approval from
-                both your browser and mobile device.
+                Fill in the recipient address and amount. The transaction will require further
+                approval from your mobile device.
               </p>
             </div>
           </div>
@@ -1267,78 +1349,9 @@ export function InteractiveDemo({ isOpen, onClose }) {
       case 1:
         return (
           <div className='flex flex-col items-center'>
-            <div className='relative mx-auto mb-8 h-[450px] w-[450px] rounded-lg border-2 border-blue-300 bg-white shadow-lg'>
-              <div className='absolute inset-0 overflow-hidden rounded-lg'>
-                <div className='flex h-8 items-center border-b border-blue-200 bg-blue-100 px-3'>
-                  <motion.div
-                    animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ duration: 1, repeat: Infinity }}
-                  >
-                    <Shield className='mr-2 h-4 w-4 text-blue-600' />
-                  </motion.div>
-                  <div className='text-xs text-blue-800'>Signature Required (1/2)</div>
-                </div>
-                <div className='flex h-full flex-col p-6 pt-8'>
-                  <h3 className='mb-6 text-center text-lg font-semibold text-blue-800'>
-                    Confirm Transaction
-                  </h3>
-                  <div className='flex-1 space-y-4 text-left'>
-                    <div className='rounded border border-gray-200 bg-gray-50 p-4'>
-                      <div className='mb-1 text-sm text-gray-600'>Sending To</div>
-                      <div className='font-mono text-sm break-all'>{transactionAddress}</div>
-                    </div>
-                    <div className='rounded border border-gray-200 bg-gray-50 p-4'>
-                      <div className='mb-1 text-sm text-gray-600'>Amount</div>
-                      <div className='text-xl font-semibold'>{transactionAmount} ETH</div>
-                      <div className='text-sm text-gray-500'>
-                        ≈ ${(parseFloat(transactionAmount) * 3000).toFixed(2)} USD
-                      </div>
-                    </div>
-                    <div className='rounded border border-gray-200 bg-gray-50 p-4'>
-                      <div className='mb-1 text-sm text-gray-600'>Gas Fee</div>
-                      <div className='text-sm'>0.002 ETH (~$6.00)</div>
-                    </div>
-
-                    <div className='rounded border border-amber-200 bg-amber-50 p-4'>
-                      <div className='flex items-center text-amber-800'>
-                        <AlertCircle className='mr-2 h-5 w-5' />
-                        <span className='text-sm font-semibold'>Requires mobile confirmation</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className='mt-6 flex space-x-3'>
-                    <button className='flex-1 rounded bg-gray-300 py-3 text-sm font-medium text-gray-700'>
-                      Reject
-                    </button>
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      onClick={() => setShowNotification(true)}
-                      className='flex-1 rounded bg-blue-600 py-3 text-sm font-medium text-white'
-                    >
-                      Approve (1/2)
-                    </motion.button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className='max-w-lg text-center'>
-              <h3 className='mb-3 text-xl font-semibold'>Browser Approval</h3>
-              <p className='text-gray-600'>
-                First signature complete. The transaction is now being sent to your mobile device
-                for the second approval.
-              </p>
-            </div>
-          </div>
-        )
-
-      case 2:
-        return (
-          <div className='flex flex-col items-center'>
             <div className='mb-8 flex justify-center space-x-6'>
               {/* Browser Extension */}
-              <div className='relative h-80 w-80 rounded-lg border-2 border-gray-300 bg-white shadow-lg'>
+              <div className='relative h-[420px] w-80 rounded-lg border-2 border-gray-300 bg-white shadow-lg'>
                 <div className='absolute inset-0 overflow-hidden rounded-lg'>
                   <div className='flex h-8 items-center border-b border-gray-200 bg-gray-100 px-3'>
                     <div className='flex items-center'>
@@ -1346,18 +1359,18 @@ export function InteractiveDemo({ isOpen, onClose }) {
                       <div className='text-xs text-gray-600'>Waiting for mobile approval...</div>
                     </div>
                   </div>
-                  <div className='flex h-full flex-col p-6 pt-8 text-center'>
+                  <div className='flex h-full flex-col p-4 pt-4 text-center'>
                     <motion.div
                       animate={{ rotate: 360 }}
                       transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
-                      className='mx-auto mb-4 h-16 w-16 rounded-full border-4 border-gray-200 border-t-amber-500'
+                      className='mx-auto mb-3 h-12 w-12 rounded-full border-4 border-gray-200 border-t-amber-500'
                     ></motion.div>
                     <h4 className='mb-2 font-semibold'>Pending Mobile Approval</h4>
-                    <p className='mb-4 text-sm text-gray-600'>
+                    <p className='mb-3 text-sm text-gray-600'>
                       Signature 1/2 complete. Check your mobile device to approve the transaction.
                     </p>
 
-                    <div className='mb-4 rounded border border-amber-200 bg-amber-50 p-3'>
+                    <div className='mb-2 rounded border border-amber-200 bg-amber-50 p-2'>
                       <div className='text-sm text-amber-800'>
                         <div className='font-semibold'>Transaction Details</div>
                         <div className='mt-1 text-xs'>
@@ -1379,7 +1392,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
               </div>
 
               {/* Mobile App with Notification */}
-              <div className='relative h-96 w-64 rounded-2xl border-2 border-red-300 bg-black shadow-lg'>
+              <div className='relative h-[420px] w-72 rounded-2xl border-2 border-red-300 bg-black shadow-lg'>
                 {showNotification && (
                   <motion.div
                     initial={{ y: -50, opacity: 0 }}
@@ -1396,43 +1409,43 @@ export function InteractiveDemo({ isOpen, onClose }) {
                   <div className='relative h-6 rounded-t-xl bg-gray-900'>
                     <div className='absolute top-1 left-1/2 h-1 w-8 -translate-x-1/2 transform rounded-full bg-gray-600'></div>
                   </div>
-                  <div className='flex h-full flex-col p-4 pt-3'>
-                    <div className='mb-4 rounded bg-red-100 p-3'>
+                  <div className='flex h-full flex-col p-3 pt-2'>
+                    <div className='mb-2 rounded bg-red-100 p-1'>
                       <div className='flex items-center text-red-800'>
                         <Bell className='mr-2 h-5 w-5' />
                         <span className='text-sm font-semibold'>Transaction Approval</span>
                       </div>
                     </div>
 
-                    <div className='flex-1 space-y-3 text-sm'>
-                      <div className='rounded bg-gray-50 p-3'>
+                    <div className='space-y-1 text-sm'>
+                      <div className='rounded bg-gray-50 p-1'>
                         <div className='text-gray-600'>Amount</div>
                         <div className='font-semibold'>{transactionAmount} ETH</div>
                         <div className='text-gray-500'>
                           ${(parseFloat(transactionAmount) * 3000).toFixed(2)}
                         </div>
                       </div>
-                      <div className='rounded bg-gray-50 p-3'>
+                      <div className='rounded bg-gray-50 p-1'>
                         <div className='text-gray-600'>To Address</div>
                         <div className='font-mono text-sm'>
                           {transactionAddress.substring(0, 18)}...
                         </div>
                       </div>
-                      <div className='rounded bg-gray-50 p-3'>
+                      <div className='rounded bg-gray-50 p-1'>
                         <div className='text-gray-600'>Gas Fee</div>
                         <div className='font-semibold'>0.002 ETH</div>
                       </div>
-                      <div className='rounded bg-gray-50 p-3'>
+                      <div className='rounded bg-gray-50 p-1'>
                         <div className='text-gray-600'>Status</div>
                         <div className='font-semibold text-amber-600'>Awaiting Approval (2/2)</div>
                       </div>
                     </div>
 
-                    <div className='mt-4 space-y-2'>
+                    <div className='mt-10 space-y-1'>
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className='w-full rounded bg-green-600 py-3 text-sm font-medium text-white'
+                        className='w-full rounded bg-green-600 py-1 text-sm font-medium text-white'
                       >
                         {biometricsEnabled ? (
                           <div className='flex items-center justify-center'>
@@ -1443,7 +1456,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
                           'Approve (2/2)'
                         )}
                       </motion.button>
-                      <button className='w-full rounded bg-gray-300 py-3 text-sm text-gray-700'>
+                      <button className='w-full rounded bg-gray-300 py-1 text-sm text-gray-700'>
                         Reject
                       </button>
                     </div>
@@ -1462,16 +1475,16 @@ export function InteractiveDemo({ isOpen, onClose }) {
           </div>
         )
 
-      case 3:
+      case 2:
         return (
           <div className='flex flex-col items-center'>
-            <div className='relative mx-auto mb-8 h-96 w-64 rounded-2xl border-2 border-green-300 bg-black shadow-lg'>
+            <div className='relative mx-auto mb-8 h-[450px] w-72 rounded-2xl border-2 border-green-300 bg-black shadow-lg'>
               <div className='absolute inset-1 overflow-hidden rounded-xl bg-white'>
                 <div className='relative h-6 rounded-t-xl bg-gray-900'>
                   <div className='absolute top-1 left-1/2 h-1 w-8 -translate-x-1/2 transform rounded-full bg-gray-600'></div>
                 </div>
                 <div className='flex h-full flex-col p-4 pt-3'>
-                  <div className='mb-4 rounded bg-green-100 p-3 text-center'>
+                  <div className='mb-3 rounded bg-green-100 p-2 text-center'>
                     <motion.div
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
@@ -1479,110 +1492,111 @@ export function InteractiveDemo({ isOpen, onClose }) {
                     >
                       <CheckCircle className='mx-auto mb-2 h-8 w-8 text-green-600' />
                     </motion.div>
-                    <p className='text-sm font-semibold text-green-800'>Transaction Approved!</p>
+                    <p className='text-sm font-semibold text-green-800'>Transaction Broadcasted!</p>
                   </div>
 
-                  <div className='flex-1 space-y-3 text-sm'>
-                    <div className='rounded bg-gray-50 p-3 text-center'>
-                      <div className='mb-2 text-gray-600'>Broadcasting to Network</div>
-                      <motion.div
-                        animate={{ rotate: 360 }}
-                        transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
-                        className='mx-auto h-8 w-8 rounded-full border-2 border-blue-200 border-t-blue-600'
-                      ></motion.div>
-                    </div>
-
-                    <div className='rounded bg-gray-50 p-3'>
-                      <div className='mb-2 text-gray-600'>Signatures</div>
-                      <div className='space-y-2'>
+                  <div className='space-y-2 text-sm'>
+                    <div className='mb-3 rounded bg-gray-50 p-2'>
+                      <div className='mb-1 text-gray-600'>Signatures Collected</div>
+                      <div className='space-y-1'>
                         <div className='flex items-center'>
                           <Check className='mr-2 h-4 w-4 text-green-600' />
-                          <span className='text-sm'>Browser (1/2)</span>
+                          <span className='text-sm'>Browser Wallet (1/2)</span>
                         </div>
                         <div className='flex items-center'>
                           <Check className='mr-2 h-4 w-4 text-green-600' />
-                          <span className='text-sm'>Mobile (2/2)</span>
+                          <span className='text-sm'>Mobile Key (2/2)</span>
                         </div>
                       </div>
                     </div>
-                  </div>
 
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() => setTransactionSent(true)}
-                    className='mt-4 w-full rounded bg-blue-600 py-3 text-sm font-medium text-white'
-                  >
-                    Broadcast Transaction
-                  </motion.button>
+                    <div className='mb-3 rounded border border-yellow-200 bg-yellow-50 p-2 text-center'>
+                      <div className='mb-1 font-semibold text-yellow-700'>Network Status</div>
+                      <div className='text-sm text-yellow-800'>Confirming on Ethereum network</div>
+                      <div className='mt-1 text-xs text-yellow-600'>Usually takes 1-3 minutes</div>
+                    </div>
+
+                    <div className='rounded bg-gray-50 p-2'>
+                      <div className='mb-1 text-xs text-gray-600'>Transaction Hash</div>
+                      <div className='mb-2 font-mono text-xs text-gray-800'>0xabc123...def789</div>
+                      <button
+                        onClick={() =>
+                          window.open('https://etherscan.io/tx/0xabc123def789', '_blank')
+                        }
+                        className='w-full rounded bg-blue-600 py-1.5 text-xs font-medium text-white hover:bg-blue-700'
+                      >
+                        View on Etherscan
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div className='max-w-lg text-center'>
-              <h3 className='mb-3 text-xl font-semibold'>Both Devices Approved</h3>
+              <h3 className='mb-3 text-xl font-semibold'>Transaction Submitted</h3>
               <p className='text-gray-600'>
-                Perfect! Both signatures collected. The transaction is now ready to be broadcast to
-                the Ethereum network.
+                Perfect! Both signatures collected and transaction broadcast to Ethereum. The
+                network is now mining and confirming your secure 2-of-2 multisig transaction.
               </p>
             </div>
           </div>
         )
 
-      case 4:
+      case 3:
         return (
           <div className='flex flex-col items-center'>
             <div className='relative mx-auto mb-6 h-80 w-[420px] rounded-lg border-2 border-green-300 bg-white shadow-lg'>
               <div className='absolute inset-0 overflow-hidden rounded-lg'>
                 <div className='flex h-8 items-center border-b border-green-200 bg-green-100 px-3'>
                   <CheckCircle className='mr-2 h-4 w-4 text-green-600' />
-                  <div className='text-xs text-green-800'>Transaction Broadcast</div>
+                  <div className='text-xs text-green-800'>Transaction Confirmed</div>
                 </div>
-                <div className='flex h-full flex-col p-5 pt-6 text-center'>
+                <div className='flex h-full flex-col p-3 pt-2 text-center'>
                   <motion.div
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ type: 'spring', duration: 0.5 }}
-                    className='mb-4'
+                    className='mb-2'
                   >
-                    <div className='mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-full bg-green-100'>
-                      <Check className='h-8 w-8 text-green-600' />
+                    <div className='mx-auto mb-1 flex h-10 w-10 items-center justify-center rounded-full bg-green-100'>
+                      <Check className='h-5 w-5 text-green-600' />
                     </div>
                   </motion.div>
-                  <h3 className='mb-3 text-xl font-semibold text-green-800'>
+                  <h3 className='mb-2 text-base font-semibold text-green-800'>
                     Transaction Successful!
                   </h3>
-                  <p className='mb-4 text-sm text-gray-600'>
-                    Your transaction has been broadcast to the Ethereum network and is being
-                    confirmed.
-                  </p>
+                  <p className='mb-2 text-xs text-gray-600'>Confirmed on Ethereum network.</p>
 
-                  <div className='mb-4 flex-1 rounded border border-gray-200 bg-gray-50 p-4 text-left'>
-                    <div className='space-y-2 text-sm'>
+                  <div className='mb-2 rounded border border-gray-200 bg-gray-50 p-2 text-left'>
+                    <div className='space-y-1 text-xs'>
                       <div className='flex justify-between'>
-                        <span className='text-gray-600'>Amount Sent:</span>
+                        <span className='text-gray-600'>Amount:</span>
                         <span className='font-semibold'>{transactionAmount} ETH</span>
                       </div>
                       <div className='flex justify-between'>
                         <span className='text-gray-600'>Gas Fee:</span>
                         <span>0.002 ETH</span>
                       </div>
-                      <div className='mt-2 flex justify-between border-t border-gray-300 pt-2'>
-                        <span className='text-gray-600'>Transaction Hash:</span>
-                        <span className='ml-4 font-mono text-xs break-all'>0xabc123...def789</span>
+                      <div className='flex justify-between border-t border-gray-300 pt-1'>
+                        <span className='text-gray-600'>Hash:</span>
+                        <span className='font-mono text-xs'>0xabc123...def789</span>
                       </div>
                     </div>
                   </div>
 
-                  <div className='space-y-2'>
+                  <div className='space-y-1'>
                     <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className='w-full cursor-pointer rounded bg-blue-600 py-2 text-sm font-medium text-white'
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={() =>
+                        window.open('https://etherscan.io/tx/0xabc123def789', '_blank')
+                      }
+                      className='w-full cursor-pointer rounded bg-blue-600 py-1.5 text-xs font-medium text-white'
                     >
                       View on Etherscan
                     </motion.button>
-                    <button className='w-full rounded bg-gray-200 py-2 text-sm font-medium text-gray-700'>
+                    <button className='w-full rounded bg-gray-200 py-1.5 text-xs font-medium text-gray-700'>
                       Send Another Transaction
                     </button>
                   </div>
