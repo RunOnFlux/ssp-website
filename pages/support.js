@@ -46,7 +46,12 @@ const faqCategories = [
       {
         question: 'What cryptocurrencies does SSP Wallet support?',
         answer:
-          'SSP Wallet supports 15+ blockchains including Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), Zcash (ZEC), Ravencoin (RVN), Dogecoin (DOGE), Bitcoin Cash (BCH), Flux (FLUX), Polygon (MATIC), BSC, Avalanche (AVAX), and Base. Solana support is coming soon.',
+          'SSP Wallet supports 15+ blockchains including Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), Zcash (ZEC), Ravencoin (RVN), Dogecoin (DOGE), Bitcoin Cash (BCH), Flux (FLUX), Polygon (MATIC), BSC, Avalanche (AVAX), and Base. For EVM-compatible chains, we support all ERC-20 tokens and you can import your own custom token lists. Solana support is coming soon.',
+      },
+      {
+        question: 'Where can I find the complete list of supported assets?',
+        answer:
+          'For a comprehensive and up-to-date list of all natively supported chains and tokens, please refer to our official SSP Asset Spreadsheet: https://docs.google.com/spreadsheets/d/1GUqGeV4hCwjKlxazY1vPY52owrEqXQ1UTchOKfkyS7c. This spreadsheet is regularly updated with new additions and contains detailed information about each supported asset.',
       },
       {
         question: 'Can I use SSP Wallet with dApps and DeFi?',
@@ -123,7 +128,7 @@ const faqCategories = [
       {
         question: 'Which browsers are supported?',
         answer:
-          'SSP Wallet supports Google Chrome, Brave, Firefox, and other Chromium-based browsers like Opera. You can download the Chrome Web Store version for Chromium browsers or the Firefox version directly from our GitHub releases.',
+          'SSP Wallet supports Google Chrome, Brave, Firefox, and other Chromium-based browsers. You can download the Chrome Web Store version for Chromium browsers or the Firefox version directly from our GitHub releases.',
       },
       {
         question: "I'm having trouble syncing my mobile key",
@@ -190,7 +195,7 @@ const supportChannels = [
     description: 'Get help from our community',
     icon: Users,
     links: [
-      { name: 'GitHub Discussions', url: 'https://github.com/RunOnFlux', icon: Github },
+      { name: 'GitHub Discussions', url: 'https://github.com/RunOnFlux/ssp-wallet', icon: Github },
       { name: 'Discord Community', url: 'https://discord.gg/runonflux', icon: MessageCircle },
       { name: 'Twitter Support', url: 'https://twitter.com/sspwallet_io', icon: Twitter },
     ],

@@ -164,16 +164,14 @@ function StepCard({ step, phaseColor, index }) {
       ref={ref}
       initial={{ opacity: 0, x: -30 }}
       animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
-      transition={{ duration: 0.3, delay: index * 0.05 }}
-      className={`relative rounded-xl border-2 p-6 transition-all duration-300 ${
-        step.important
-          ? 'border-amber-300 bg-amber-50 dark:border-amber-600 dark:bg-amber-900/20'
-          : 'dark:bg-dark-800 border-gray-200 bg-white dark:border-gray-700'
-      } hover:shadow-lg`}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      className={`dark:bg-dark-800 relative rounded-lg border border-gray-200 bg-white p-6 transition-shadow hover:shadow-lg dark:border-gray-700 ${
+        step.important ? 'ring-2 ring-blue-500/20' : ''
+      }`}
     >
       {step.important && (
         <div className='absolute -top-2 -right-2'>
-          <div className='inline-flex items-center rounded-full bg-amber-500 px-2 py-1 text-xs font-medium text-white'>
+          <div className='inline-flex items-center rounded-full bg-blue-500 px-2 py-1 text-xs font-medium text-white'>
             <AlertTriangle className='mr-1 h-3 w-3' />
             Important
           </div>
@@ -273,14 +271,14 @@ export default function Guide() {
       </Head>
 
       {/* Hero Section */}
-      <section className='section-padding dark:from-dark-900 dark:via-dark-800 dark:to-dark-900 relative overflow-hidden bg-linear-to-br from-blue-50 via-white to-green-50'>
+      <section className='section-padding dark:bg-dark-900 relative overflow-hidden bg-white'>
         <div className='bg-grid-pattern absolute inset-0 opacity-5'></div>
         <div className='container-custom relative'>
           <motion.div
             ref={heroRef}
             initial={{ opacity: 0, y: 30 }}
             animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.8 }}
             className='mx-auto max-w-4xl text-center'
           >
             <div className='mb-6 inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'>
@@ -288,7 +286,9 @@ export default function Guide() {
               Complete Setup Guide
             </div>
 
-            <h1 className='heading-1 mb-6'>How to Install SSP Wallet & SSP Key</h1>
+            <h1 className='heading-1 mb-6 text-gray-900 dark:text-white'>
+              How to Install SSP Wallet & SSP Key
+            </h1>
 
             <p className='mx-auto mb-8 max-w-3xl text-xl text-gray-600 dark:text-gray-400'>
               SSP requires a <strong>2-step setup process</strong>: install the browser extension
@@ -296,26 +296,34 @@ export default function Guide() {
               system that protects your crypto.
             </p>
 
-            <div className='mx-auto grid max-w-2xl gap-6 md:grid-cols-2'>
-              <div className='dark:bg-dark-800 flex items-center rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700'>
-                <Chrome className='mr-3 h-8 w-8 flex-shrink-0 text-blue-500' />
-                <div className='text-left'>
-                  <h3 className='font-semibold text-gray-900 dark:text-white'>Browser Extension</h3>
-                  <p className='text-sm text-gray-600 dark:text-gray-400'>
-                    Install wallet in browser
+            <div className='mx-auto grid max-w-3xl gap-4 sm:gap-6 md:grid-cols-2'>
+              <Link
+                href='/download'
+                className='dark:bg-dark-800 flex items-center rounded-lg border border-gray-200 bg-white p-4 transition-all hover:border-blue-300 hover:shadow-md sm:p-6 dark:border-gray-700 dark:hover:border-blue-600'
+              >
+                <Chrome className='mr-3 h-6 w-6 flex-shrink-0 text-blue-500 sm:h-8 sm:w-8' />
+                <div className='min-w-0 flex-1 text-left'>
+                  <h3 className='text-sm font-semibold text-gray-900 sm:text-base dark:text-white'>
+                    Browser Extension
+                  </h3>
+                  <p className='text-xs text-gray-600 sm:text-sm dark:text-gray-400'>
+                    Install wallet
                   </p>
                 </div>
-              </div>
+              </Link>
 
-              <div className='dark:bg-dark-800 flex items-center rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700'>
-                <Smartphone className='mr-3 h-8 w-8 flex-shrink-0 text-green-500' />
-                <div className='text-left'>
-                  <h3 className='font-semibold text-gray-900 dark:text-white'>Mobile Key</h3>
-                  <p className='text-sm text-gray-600 dark:text-gray-400'>
-                    Add mobile authentication
-                  </p>
+              <Link
+                href='/download#mobile'
+                className='dark:bg-dark-800 flex items-center rounded-lg border border-gray-200 bg-white p-4 transition-all hover:border-green-300 hover:shadow-md sm:p-6 dark:border-gray-700 dark:hover:border-green-600'
+              >
+                <Smartphone className='mr-3 h-6 w-6 flex-shrink-0 text-green-500 sm:h-8 sm:w-8' />
+                <div className='min-w-0 flex-1 text-left'>
+                  <h3 className='text-sm font-semibold text-gray-900 sm:text-base dark:text-white'>
+                    Mobile Key
+                  </h3>
+                  <p className='text-xs text-gray-600 sm:text-sm dark:text-gray-400'>Mobile auth</p>
                 </div>
-              </div>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -333,7 +341,12 @@ export default function Guide() {
               viewport={{ once: true }}
             >
               <div className='relative aspect-video overflow-hidden rounded-2xl bg-gray-900'>
-                <video controls autoPlay muted loop className='h-full w-full object-cover'>
+                <video
+                  controls
+                  preload='metadata'
+                  className='h-full w-full object-cover'
+                  poster='/video-poster.svg'
+                >
                   <source
                     src='/Video Guide_ How to Install SSP Wallet and SSP Key.mp4'
                     type='video/mp4'
@@ -341,12 +354,6 @@ export default function Guide() {
                   <track kind='captions' srcLang='en' label='English' />
                   Your browser does not support the video tag.
                 </video>
-
-                <div className='absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 transition-opacity hover:opacity-100'>
-                  <div className='flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm'>
-                    <Play className='ml-1 h-8 w-8 text-white' />
-                  </div>
-                </div>
               </div>
             </motion.div>
 
@@ -497,12 +504,12 @@ export default function Guide() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className='rounded-xl border border-amber-200 bg-amber-50 p-6 text-center dark:border-amber-800 dark:bg-amber-900/20'
+                  className='dark:bg-dark-800 rounded-2xl border border-gray-200 bg-white p-8 text-center transition-shadow hover:shadow-lg dark:border-gray-700'
                 >
-                  <div className='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'>
-                    <TipIcon className='h-6 w-6' />
+                  <div className='bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400 mb-4 inline-flex h-16 w-16 items-center justify-center rounded-2xl'>
+                    <TipIcon className='h-8 w-8' />
                   </div>
-                  <h3 className='mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
+                  <h3 className='mb-2 text-xl font-bold text-gray-900 dark:text-white'>
                     {tip.title}
                   </h3>
                   <p className='text-gray-600 dark:text-gray-400'>{tip.description}</p>

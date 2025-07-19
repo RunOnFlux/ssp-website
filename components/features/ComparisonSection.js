@@ -11,7 +11,7 @@ const comparisonData = [
     custodial: false,
     hardware: false,
     exchange: false,
-    description: 'BIP48 true multisignature with dual-device requirement'
+    description: 'BIP48 true multisignature with dual-device requirement',
   },
   {
     feature: 'Built-in Crypto Swap',
@@ -20,7 +20,7 @@ const comparisonData = [
     custodial: true,
     hardware: 'Limited',
     exchange: true,
-    description: 'Native DEX integration for seamless token swapping'
+    description: 'Native DEX integration for seamless token swapping',
   },
   {
     feature: 'Buy/Sell Crypto',
@@ -29,7 +29,7 @@ const comparisonData = [
     custodial: true,
     hardware: 'Limited',
     exchange: true,
-    description: 'Fiat on-ramp/off-ramp with payment card support'
+    description: 'Fiat on-ramp/off-ramp with payment card support',
   },
   {
     feature: 'Self-Custody Control',
@@ -38,7 +38,7 @@ const comparisonData = [
     custodial: false,
     hardware: true,
     exchange: false,
-    description: 'You own and control your private keys'
+    description: 'You own and control your private keys',
   },
   {
     feature: 'Mobile 2FA Security',
@@ -47,7 +47,7 @@ const comparisonData = [
     custodial: false,
     hardware: false,
     exchange: 'Some',
-    description: 'Mobile app acts as secure second authentication factor'
+    description: 'Mobile app acts as secure second authentication factor',
   },
   {
     feature: 'DApp Integration',
@@ -56,7 +56,7 @@ const comparisonData = [
     custodial: 'Limited',
     hardware: 'Limited',
     exchange: false,
-    description: 'WalletConnect v2 and direct dApp browser support'
+    description: 'WalletConnect v2 and direct dApp browser support',
   },
   {
     feature: 'Multi-Chain Support (15+)',
@@ -65,7 +65,7 @@ const comparisonData = [
     custodial: 'Limited',
     hardware: 'Limited',
     exchange: 'Limited',
-    description: 'Bitcoin, Ethereum, Polygon, BSC, Avalanche, and more'
+    description: 'Bitcoin, Ethereum, Polygon, BSC, Avalanche, and more',
   },
   {
     feature: 'Zero Counterparty Risk',
@@ -74,7 +74,7 @@ const comparisonData = [
     custodial: false,
     hardware: true,
     exchange: false,
-    description: 'No risk of platform bankruptcy or seizure'
+    description: 'No risk of platform bankruptcy or seizure',
   },
   {
     feature: 'Open Source',
@@ -83,7 +83,7 @@ const comparisonData = [
     custodial: false,
     hardware: 'Varies',
     exchange: false,
-    description: 'Fully transparent and verifiable code'
+    description: 'Fully transparent and verifiable code',
   },
   {
     feature: 'Security Audited',
@@ -92,7 +92,7 @@ const comparisonData = [
     custodial: 'Some',
     hardware: 'Some',
     exchange: 'Some',
-    description: 'Professional security audit by leading firms'
+    description: 'Professional security audit by leading firms',
   },
   {
     feature: 'Account Abstraction (ERC-4337)',
@@ -101,7 +101,7 @@ const comparisonData = [
     custodial: false,
     hardware: false,
     exchange: false,
-    description: 'Gasless transactions and smart contract wallets'
+    description: 'Gasless transactions and smart contract wallets',
   },
   {
     feature: 'No Single Seed Phrase',
@@ -110,7 +110,7 @@ const comparisonData = [
     custodial: 'N/A',
     hardware: false,
     exchange: 'N/A',
-    description: 'Eliminates single seed phrase vulnerability - uses dual-device backup'
+    description: 'Eliminates single seed phrase vulnerability - uses dual-device backup',
   },
   {
     feature: 'Ease of Use',
@@ -119,7 +119,7 @@ const comparisonData = [
     custodial: true,
     hardware: false,
     exchange: true,
-    description: 'Simple, intuitive interface for both beginners and experts'
+    description: 'Simple, intuitive interface for both beginners and experts',
   },
   {
     feature: 'Transaction Speed',
@@ -128,7 +128,7 @@ const comparisonData = [
     custodial: true,
     hardware: false,
     exchange: true,
-    description: 'Fast transaction signing and blockchain interaction'
+    description: 'Fast transaction signing and blockchain interaction',
   },
   {
     feature: 'Privacy Protection',
@@ -137,8 +137,8 @@ const comparisonData = [
     custodial: false,
     hardware: true,
     exchange: false,
-    description: 'No personal data collection or transaction tracking'
-  }
+    description: 'No personal data collection or transaction tracking',
+  },
 ]
 
 export function ComparisonSection() {
@@ -159,81 +159,97 @@ export function ComparisonSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className='hidden lg:block overflow-x-auto'
+          className='hidden lg:block'
         >
-          <div className='dark:bg-dark-800 min-w-full overflow-hidden rounded-2xl bg-white shadow-lg'>
-            <table className='w-full'>
-              <thead className='dark:bg-dark-700 bg-gray-50'>
-                <tr>
-                  <th className='px-6 py-4 text-left text-sm font-semibold text-gray-900 dark:text-white'>
-                    Feature
-                  </th>
-                  <th className='text-primary-600 dark:text-primary-400 px-6 py-4 text-center text-sm font-semibold'>
-                    SSP Wallet
-                  </th>
-                  <th className='px-6 py-4 text-center text-sm font-semibold text-gray-900 dark:text-white'>
-                    Self-Custody Wallets
-                  </th>
-                  <th className='px-6 py-4 text-center text-sm font-semibold text-gray-900 dark:text-white'>
-                    Custodial Wallets
-                  </th>
-                  <th className='px-6 py-4 text-center text-sm font-semibold text-gray-900 dark:text-white'>
-                    Hardware Wallets
-                  </th>
-                  <th className='px-6 py-4 text-center text-sm font-semibold text-gray-900 dark:text-white'>
-                    Crypto Exchanges
-                  </th>
-                </tr>
-              </thead>
-              <tbody className='dark:divide-dark-600 divide-y divide-gray-200'>
-                {comparisonData.map((row, index) => {
-                  const renderCell = (value) => {
-                    if (value === true) return <Check className='mx-auto h-5 w-5 text-green-500' />
-                    if (value === false) return <X className='mx-auto h-5 w-5 text-red-500' />
-                    return <span className='text-xs font-medium text-amber-600 dark:text-amber-400'>{value}</span>
-                  }
+          <div className='dark:bg-dark-800 w-full overflow-x-auto rounded-2xl bg-white shadow-lg'>
+            <div className='min-w-full overflow-hidden'>
+              <table className='w-full'>
+                <thead className='dark:bg-dark-700 bg-gray-50'>
+                  <tr>
+                    <th className='px-6 py-4 text-left text-sm font-semibold text-gray-900 dark:text-white'>
+                      Feature
+                    </th>
+                    <th className='text-primary-600 dark:text-primary-400 px-6 py-4 text-center text-sm font-semibold'>
+                      SSP Wallet
+                    </th>
+                    <th className='px-6 py-4 text-center text-sm font-semibold text-gray-900 dark:text-white'>
+                      Self-Custody Wallets
+                    </th>
+                    <th className='px-6 py-4 text-center text-sm font-semibold text-gray-900 dark:text-white'>
+                      Custodial Wallets
+                    </th>
+                    <th className='px-6 py-4 text-center text-sm font-semibold text-gray-900 dark:text-white'>
+                      Hardware Wallets
+                    </th>
+                    <th className='px-6 py-4 text-center text-sm font-semibold text-gray-900 dark:text-white'>
+                      Crypto Exchanges
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className='dark:divide-dark-600 divide-y divide-gray-200'>
+                  {comparisonData.map((row, index) => {
+                    const renderCell = value => {
+                      if (value === true)
+                        return <Check className='mx-auto h-5 w-5 text-green-500' />
+                      if (value === false) return <X className='mx-auto h-5 w-5 text-red-500' />
+                      return (
+                        <span className='text-xs font-medium text-amber-600 dark:text-amber-400'>
+                          {value}
+                        </span>
+                      )
+                    }
 
-                  return (
-                    <motion.tr
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
-                      className='dark:hover:bg-dark-700/50 hover:bg-gray-50'
-                    >
-                      <td className='px-6 py-4 text-sm font-medium text-gray-900 dark:text-white'>
-                        {row.feature}
-                      </td>
-                      <td className='px-6 py-4 text-center'>
-                        {renderCell(row.ssp)}
-                      </td>
-                      <td className='px-6 py-4 text-center'>
-                        {renderCell(row.selfCustody)}
-                      </td>
-                      <td className='px-6 py-4 text-center'>
-                        {renderCell(row.custodial)}
-                      </td>
-                      <td className='px-6 py-4 text-center'>
-                        {renderCell(row.hardware)}
-                      </td>
-                      <td className='px-6 py-4 text-center'>
-                        {renderCell(row.exchange)}
-                      </td>
-                    </motion.tr>
-                  )
-                })}
-              </tbody>
-            </table>
+                    return (
+                      <motion.tr
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.4, delay: index * 0.1 }}
+                        className='dark:hover:bg-dark-700/50 hover:bg-gray-50'
+                      >
+                        <td className='px-6 py-4 text-sm font-medium text-gray-900 dark:text-white'>
+                          {row.feature}
+                        </td>
+                        <td className='px-6 py-4 text-center'>{renderCell(row.ssp)}</td>
+                        <td className='px-6 py-4 text-center'>{renderCell(row.selfCustody)}</td>
+                        <td className='px-6 py-4 text-center'>{renderCell(row.custodial)}</td>
+                        <td className='px-6 py-4 text-center'>{renderCell(row.hardware)}</td>
+                        <td className='px-6 py-4 text-center'>{renderCell(row.exchange)}</td>
+                      </motion.tr>
+                    )
+                  })}
+                </tbody>
+              </table>
+            </div>
           </div>
         </motion.div>
 
         {/* Mobile Cards */}
-        <div className='lg:hidden space-y-6'>
+        <div className='space-y-6 lg:hidden'>
           {comparisonData.map((row, index) => {
             const renderMobileCell = (value, label) => {
-              if (value === true) return <div className='flex items-center'><Check className='h-4 w-4 text-green-500 mr-2' /><span className='text-sm'>{label}</span></div>
-              if (value === false) return <div className='flex items-center'><X className='h-4 w-4 text-red-500 mr-2' /><span className='text-sm text-gray-500'>{label}</span></div>
-              return <div className='flex items-center'><span className='text-xs font-medium text-amber-600 dark:text-amber-400 mr-2'>{value}</span><span className='text-sm'>{label}</span></div>
+              if (value === true)
+                return (
+                  <div className='flex items-center'>
+                    <Check className='mr-2 h-4 w-4 text-green-500' />
+                    <span className='text-sm'>{label}</span>
+                  </div>
+                )
+              if (value === false)
+                return (
+                  <div className='flex items-center'>
+                    <X className='mr-2 h-4 w-4 text-red-500' />
+                    <span className='text-sm text-gray-500'>{label}</span>
+                  </div>
+                )
+              return (
+                <div className='flex items-center'>
+                  <span className='mr-2 text-xs font-medium text-amber-600 dark:text-amber-400'>
+                    {value}
+                  </span>
+                  <span className='text-sm'>{label}</span>
+                </div>
+              )
             }
 
             return (
@@ -242,10 +258,12 @@ export function ComparisonSection() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className='dark:bg-dark-800 bg-white rounded-xl shadow-lg p-6'
+                className='dark:bg-dark-800 rounded-xl bg-white p-6 shadow-lg'
               >
-                <h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>{row.feature}</h3>
-                <p className='text-sm text-gray-600 dark:text-gray-300 mb-4'>{row.description}</p>
+                <h3 className='mb-2 text-lg font-semibold text-gray-900 dark:text-white'>
+                  {row.feature}
+                </h3>
+                <p className='mb-4 text-sm text-gray-600 dark:text-gray-300'>{row.description}</p>
                 <div className='space-y-3'>
                   {renderMobileCell(row.ssp, 'SSP Wallet')}
                   {renderMobileCell(row.selfCustody, 'Self-Custody Wallets')}

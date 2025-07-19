@@ -22,7 +22,7 @@ const footerNavigation = {
     { name: 'Documentation', href: 'https://docs.sspwallet.io', external: true },
   ],
   community: [
-    { name: 'GitHub', href: 'https://github.com/RunOnFlux', external: true },
+    { name: 'GitHub', href: 'https://github.com/RunOnFlux/ssp-wallet', external: true },
     { name: 'Discord', href: 'https://discord.gg/runonflux', external: true },
     { name: 'Twitter', href: 'https://twitter.com/sspwallet_io', external: true },
     { name: 'Medium', href: 'https://medium.com/@ssp_wallet', external: true },

@@ -156,7 +156,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
       case 0:
         return (
           <div className='flex flex-col items-center'>
-            <div className='relative mx-auto mb-6 h-96 w-[450px] rounded-lg border-2 border-gray-200 bg-white shadow-lg'>
+            <div className='relative mx-auto mb-6 h-96 w-full max-w-md rounded-lg border-2 border-gray-200 bg-white shadow-lg'>
               <div className='absolute inset-0 overflow-hidden rounded-lg'>
                 <div className='flex h-8 items-center border-b border-gray-200 bg-gray-100 px-3'>
                   <div className='flex space-x-2'>
@@ -211,7 +211,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
       case 1:
         return (
           <div className='flex flex-col items-center'>
-            <div className='relative mx-auto mb-6 h-96 w-[450px] rounded-lg border-2 border-gray-200 bg-white shadow-lg'>
+            <div className='relative mx-auto mb-6 h-96 w-full max-w-md rounded-lg border-2 border-gray-200 bg-white shadow-lg'>
               <div className='absolute inset-0 overflow-hidden rounded-lg'>
                 <div className='flex h-8 items-center border-b border-gray-200 bg-gray-100 px-3'>
                   <Image
@@ -290,7 +290,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
       case 2:
         return (
           <div className='flex flex-col items-center'>
-            <div className='relative mx-auto mb-6 h-96 w-[450px] rounded-lg border-2 border-amber-300 bg-white shadow-lg'>
+            <div className='relative mx-auto mb-6 h-96 w-full max-w-md rounded-lg border-2 border-amber-300 bg-white shadow-lg'>
               <div className='absolute inset-0 overflow-hidden rounded-lg'>
                 <div className='flex h-8 items-center border-b border-amber-200 bg-amber-100 px-3'>
                   <AlertCircle className='mr-2 h-4 w-4 text-amber-600' />
@@ -397,7 +397,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
       case 3:
         return (
           <div className='flex flex-col items-center'>
-            <div className='relative mx-auto mb-6 h-96 w-[450px] rounded-lg border-2 border-green-300 bg-white shadow-lg'>
+            <div className='relative mx-auto mb-6 h-96 w-full max-w-md rounded-lg border-2 border-green-300 bg-white shadow-lg'>
               <div className='absolute inset-0 overflow-hidden rounded-lg'>
                 <div className='flex h-8 items-center border-b border-green-200 bg-green-100 px-3'>
                   <CheckCircle className='mr-2 h-4 w-4 text-green-600' />
@@ -1274,7 +1274,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
       case 0:
         return (
           <div className='flex flex-col items-center'>
-            <div className='relative mx-auto mb-4 h-[420px] w-[380px] rounded-lg border-2 border-gray-200 bg-white shadow-lg'>
+            <div className='relative mx-auto mb-4 h-[420px] w-full max-w-sm rounded-lg border-2 border-gray-200 bg-white shadow-lg'>
               <div className='absolute inset-0 overflow-hidden rounded-lg'>
                 <div className='flex h-8 items-center border-b border-gray-200 bg-gray-100 px-3'>
                   <Send className='mr-2 h-4 w-4 text-gray-600' />
@@ -1546,7 +1546,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
       case 3:
         return (
           <div className='flex flex-col items-center'>
-            <div className='relative mx-auto mb-6 h-80 w-[420px] rounded-lg border-2 border-green-300 bg-white shadow-lg'>
+            <div className='relative mx-auto mb-6 h-80 w-full max-w-md rounded-lg border-2 border-green-300 bg-white shadow-lg'>
               <div className='absolute inset-0 overflow-hidden rounded-lg'>
                 <div className='flex h-8 items-center border-b border-green-200 bg-green-100 px-3'>
                   <CheckCircle className='mr-2 h-4 w-4 text-green-600' />
