@@ -88,14 +88,30 @@ function ContactForm() {
     setIsSubmitting(true)
     setError('')
 
-    // Simulate form submission
     try {
-      // In a real app, you'd send this to your backend
-      await new Promise(resolve => setTimeout(resolve, 2000))
+      const response = await fetch('https://relay.ssp.runonflux.io/v1/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-challenge': 'ssp',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: `Subject: ${formData.subject}\n\nCompany: ${formData.company || 'Not specified'}\n\nType: ${formData.type}\n\nMessage:\n${formData.message}`,
+        }),
+      })
+
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to send message')
+      }
+
       setIsSubmitted(true)
       setFormData({ name: '', email: '', company: '', subject: '', message: '', type: 'general' })
-    } catch {
-      setError('Failed to send message. Please try again.')
+    } catch (error) {
+      setError(error.message || 'Failed to send message. Please try again.')
     } finally {
       setIsSubmitting(false)
     }
