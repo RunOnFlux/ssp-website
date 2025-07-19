@@ -64,7 +64,7 @@ export function TechnicalFeatures() {
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
                 className='card card-hover'
               >
                 <div className='text-center'>

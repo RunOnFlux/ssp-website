@@ -53,7 +53,7 @@ export function SecurityFeatures() {
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
                 className='card card-hover'
               >
                 <div className='flex items-start space-x-4'>

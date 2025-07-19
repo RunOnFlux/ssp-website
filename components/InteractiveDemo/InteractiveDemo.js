@@ -405,7 +405,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
                   <motion.div
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
-                    transition={{ type: 'spring', duration: 0.5 }}
+                    transition={{ type: 'spring', duration: 0.3 }}
                   >
                     <div className='mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-full bg-green-100'>
                       <Check className='h-8 w-8 text-green-600' />
@@ -808,7 +808,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
                   <motion.div
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
-                    transition={{ type: 'spring', duration: 0.5 }}
+                    transition={{ type: 'spring', duration: 0.3 }}
                   >
                     <div className='mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-green-100'>
                       <Check className='h-7 w-7 text-green-600' />
@@ -1094,7 +1094,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
                     <motion.div
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: devicesPaired ? 1 : 0, scale: devicesPaired ? 1 : 0.8 }}
-                      transition={{ duration: 0.5, delay: 3.5 }}
+                      transition={{ duration: 0.3, delay: 2 }}
                       className='rounded bg-green-100 p-2 text-center'
                     >
                       <CheckCircle className='mx-auto mb-1 h-5 w-5 text-green-600' />
@@ -1181,7 +1181,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
                     <motion.div
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
-                      transition={{ type: 'spring', duration: 0.5 }}
+                      transition={{ type: 'spring', duration: 0.3 }}
                     >
                       <div className='mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-green-100'>
                         <Check className='h-10 w-10 text-green-600' />
@@ -1486,7 +1486,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
                     <motion.div
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
-                      transition={{ type: 'spring', duration: 0.5 }}
+                      transition={{ type: 'spring', duration: 0.3 }}
                     >
                       <CheckCircle className='mx-auto mb-2 h-8 w-8 text-green-600' />
                     </motion.div>
@@ -1554,7 +1554,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
                   <motion.div
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
-                    transition={{ type: 'spring', duration: 0.5 }}
+                    transition={{ type: 'spring', duration: 0.3 }}
                     className='mb-2'
                   >
                     <div className='mx-auto mb-1 flex h-10 w-10 items-center justify-center rounded-full bg-green-100'>

@@ -158,7 +158,7 @@ export function ComparisonSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.3 }}
           className='hidden lg:block'
         >
           <div className='dark:bg-dark-800 w-full overflow-x-auto rounded-2xl bg-white shadow-lg'>

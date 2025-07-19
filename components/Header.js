@@ -68,7 +68,7 @@ export function Header() {
                   <motion.div
                     className='bg-primary-600 dark:bg-primary-400 absolute right-0 -bottom-1 left-0 h-0.5'
                     layoutId='activeTab'
-                    transition={{ type: 'spring', bounce: 0.2, duration: 0.3 }}
+                    transition={{ type: 'spring', bounce: 0.2, duration: 0.15 }}
                   />
                 )}
               </Link>
@@ -120,7 +120,7 @@ export function Header() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.15 }}
+              transition={{ duration: 0.1 }}
               className='overflow-hidden lg:hidden'
             >
               <div className='dark:bg-dark-900/95 mt-2 space-y-2 rounded-lg border border-gray-200/20 bg-white/95 py-4 backdrop-blur-md dark:border-white/10'>
@@ -129,7 +129,7 @@ export function Header() {
                     key={item.name}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
+                    transition={{ delay: index * 0.03 }}
                   >
                     <Link
                       href={item.href}
@@ -148,7 +148,7 @@ export function Header() {
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: navigation.length * 0.1 }}
+                  transition={{ delay: navigation.length * 0.03 }}
                   className='px-4 pt-2'
                 >
                   <Link href='/download' onClick={closeMenu} className='btn btn-primary w-full'>

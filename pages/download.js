@@ -103,7 +103,7 @@ export default function DownloadPage() {
             ref={heroRef}
             initial={{ opacity: 0, y: 30 }}
             animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             className='mx-auto max-w-4xl text-center'
           >
             <div className='mb-6 inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'>
@@ -129,7 +129,7 @@ export default function DownloadPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             viewport={{ once: true }}
             className='mb-12 text-center'
           >
@@ -147,7 +147,7 @@ export default function DownloadPage() {
                   key={option.id}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className='group'
                 >
@@ -206,7 +206,7 @@ export default function DownloadPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             viewport={{ once: true }}
             className='text-center'
           >
@@ -258,7 +258,7 @@ export default function DownloadPage() {
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
               viewport={{ once: true }}
             >
               <div className='mb-6 inline-flex items-center rounded-full bg-green-100 px-4 py-2 text-sm font-medium text-green-700 dark:bg-green-900/30 dark:text-green-300'>
@@ -347,7 +347,7 @@ export default function DownloadPage() {
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
               viewport={{ once: true }}
               className='mt-12 text-center lg:mt-0'
             >
@@ -371,7 +371,7 @@ export default function DownloadPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             viewport={{ once: true }}
             className='mb-12 text-center'
           >
@@ -386,7 +386,7 @@ export default function DownloadPage() {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
+                transition={{ duration: 0.4, delay: 0.1 }}
                 viewport={{ once: true }}
                 className='text-center'
               >
@@ -404,7 +404,7 @@ export default function DownloadPage() {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                transition={{ duration: 0.4, delay: 0.2 }}
                 viewport={{ once: true }}
                 className='text-center'
               >
@@ -422,7 +422,7 @@ export default function DownloadPage() {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
+                transition={{ duration: 0.4, delay: 0.3 }}
                 viewport={{ once: true }}
                 className='text-center'
               >
@@ -447,7 +447,7 @@ export default function DownloadPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             viewport={{ once: true }}
           >
             <h2 className='mb-4 text-3xl font-bold text-white'>Ready to Get Started?</h2>

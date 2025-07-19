@@ -228,7 +228,7 @@ function FAQItem({ faq, index, categoryIndex }) {
       ref={ref}
       initial={{ opacity: 0, y: 30 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-      transition={{ duration: 0.6, delay: (categoryIndex * 4 + index) * 0.1 }}
+      transition={{ duration: 0.3, delay: (categoryIndex * 2 + index) * 0.05 }}
       className='overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700'
     >
       <button
@@ -492,7 +492,7 @@ export default function Support() {
             ref={heroRef}
             initial={{ opacity: 0, y: 30 }}
             animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             className='mx-auto max-w-4xl text-center'
           >
             <div className='mb-6 inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'>
@@ -563,7 +563,7 @@ export default function Support() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             viewport={{ once: true }}
             className='mb-12 text-center'
           >
@@ -581,7 +581,7 @@ export default function Support() {
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className='dark:bg-dark-800 rounded-2xl border border-gray-200 bg-white p-8 transition-shadow hover:shadow-lg dark:border-gray-700'
                 >
@@ -628,7 +628,7 @@ export default function Support() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             viewport={{ once: true }}
             className='mb-16 text-center'
           >
@@ -646,7 +646,7 @@ export default function Support() {
                   <motion.div
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8 }}
+                    transition={{ duration: 0.4 }}
                     viewport={{ once: true }}
                     className='mb-8 flex items-center'
                   >
@@ -682,7 +682,7 @@ export default function Support() {
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
               viewport={{ once: true }}
             >
               <h2 className='heading-2 mb-6'>Still need help?</h2>
@@ -732,7 +732,7 @@ export default function Support() {
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
               viewport={{ once: true }}
               className='mt-12 lg:mt-0'
             >
