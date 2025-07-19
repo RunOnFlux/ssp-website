@@ -84,7 +84,6 @@ export function InteractiveDemo({ isOpen, onClose }) {
   const [transactionAmount, setTransactionAmount] = useState('0.5')
   const [transactionAddress, setTransactionAddress] = useState('0x742d35Cc632C4532C3...aBF5')
   const [showNotification, setShowNotification] = useState(false)
-  const [transactionSent, setTransactionSent] = useState(false)
   const [mobileKeyPassword, setMobileKeyPassword] = useState('SecurePass123')
 
   // Theme management for demo
@@ -146,7 +145,6 @@ export function InteractiveDemo({ isOpen, onClose }) {
     setBiometricsEnabled(false)
     setDevicesPaired(false)
     setShowNotification(false)
-    setTransactionSent(false)
     setPassword('')
     setMobileKeyPassword('')
   }
