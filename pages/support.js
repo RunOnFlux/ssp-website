@@ -267,7 +267,7 @@ function FAQItem({ faq, index, categoryIndex }) {
 function ContactForm() {
   const [formData, setFormData] = useState({
     email: '',
-    type: 'general',
+    type: 'Question',
     subject: '',
     description: '',
   })
@@ -280,14 +280,26 @@ function ContactForm() {
     setIsSubmitting(true)
     setError('')
 
-    // Simulate form submission
     try {
-      // In a real app, you'd send this to your backend
-      await new Promise(resolve => setTimeout(resolve, 2000))
+      const response = await fetch('https://relay.ssp.runonflux.io/v1/ticket', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-challenge': 'ssp',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to submit ticket')
+      }
+
       setIsSubmitted(true)
-      setFormData({ email: '', type: 'general', subject: '', description: '' })
-    } catch {
-      setError('Failed to send message. Please try again.')
+      setFormData({ email: '', type: 'Question', subject: '', description: '' })
+    } catch (error) {
+      setError(error.message || 'Failed to send message. Please try again.')
     } finally {
       setIsSubmitting(false)
     }
@@ -360,11 +372,11 @@ function ContactForm() {
           onChange={handleChange}
           className='focus:ring-primary-500 dark:bg-dark-700 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
         >
-          <option value='general'>General Question</option>
-          <option value='technical'>Technical Issue</option>
-          <option value='security'>Security Concern</option>
-          <option value='feature'>Feature Request</option>
-          <option value='bug'>Bug Report</option>
+          <option value='Question'>General Question</option>
+          <option value='Incident'>Technical Issue</option>
+          <option value='Problem'>Help Needed</option>
+          <option value='Feature Request'>Feature Request</option>
+          <option value='Incident'>Bug Report</option>
         </select>
       </div>
 
