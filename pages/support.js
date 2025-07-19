@@ -50,8 +50,22 @@ const faqCategories = [
       },
       {
         question: 'Where can I find the complete list of supported assets?',
-        answer:
-          'For a comprehensive and up-to-date list of all natively supported chains and tokens, please refer to our official SSP Asset Spreadsheet: https://docs.google.com/spreadsheets/d/1GUqGeV4hCwjKlxazY1vPY52owrEqXQ1UTchOKfkyS7c. This spreadsheet is regularly updated with new additions and contains detailed information about each supported asset.',
+        answer: (
+          <>
+            For a comprehensive and up-to-date list of all natively supported chains and tokens,
+            please refer to our official{' '}
+            <a
+              href='https://docs.google.com/spreadsheets/d/1GUqGeV4hCwjKlxazY1vPY52owrEqXQ1UTchOKfkyS7c'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-blue-600 underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300'
+            >
+              SSP Asset Spreadsheet
+            </a>
+            . This spreadsheet is regularly updated with new additions and contains detailed
+            information about each supported asset.
+          </>
+        ),
       },
       {
         question: 'Can I use SSP Wallet with dApps and DeFi?',
