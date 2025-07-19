@@ -26,9 +26,14 @@ export default function Home() {
           content='Experience the future of crypto with SSP Wallet. Multi-signature security, seamless DApp integration, and support for multiple blockchains.'
         />
         <meta property='og:url' content='https://sspwallet.io' />
-        <meta property='og:image' content='https://sspwallet.io/logo.svg' />
+        <meta property='og:image' content='https://sspwallet.io/og-image.png' />
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='630' />
+        <meta property='og:image:type' content='image/png' />
+        <meta
+          property='og:image:alt'
+          content='SSP Wallet - Secure, Simple, Powerful Crypto Wallet'
+        />
 
         {/* Twitter */}
         <meta name='twitter:title' content='SSP Wallet - Secure, Simple, Powerful Crypto Wallet' />
@@ -36,7 +41,11 @@ export default function Home() {
           name='twitter:description'
           content='Experience the future of crypto with SSP Wallet. Multi-signature security, seamless DApp integration, and support for multiple blockchains.'
         />
-        <meta name='twitter:image' content='https://sspwallet.io/logo.svg' />
+        <meta name='twitter:image' content='https://sspwallet.io/og-image.png' />
+        <meta
+          name='twitter:image:alt'
+          content='SSP Wallet - Secure, Simple, Powerful Crypto Wallet'
+        />
 
         {/* Additional SEO */}
         <meta name='viewport' content='width=device-width, initial-scale=1' />

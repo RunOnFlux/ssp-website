@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://sspwallet.io/sitemap.xml
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Block irrelevant paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /node_modules/
+
+# Allow important files
+Allow: /api/sitemap
+Allow: /_next/static/

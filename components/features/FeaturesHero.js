@@ -27,7 +27,7 @@ export function FeaturesHero() {
             advanced crypto wallet available.
           </p>
 
-          <div className='mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8'>
+          <div className='mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-8'>
             <div className='flex items-center space-x-2'>
               <Shield className='text-primary-600 h-6 w-6' />
               <span className='font-medium'>Security First</span>

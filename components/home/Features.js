@@ -13,10 +13,24 @@ import {
   Users,
   Zap,
 } from 'lucide-react'
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
-import { InteractiveDemo } from '../InteractiveDemo/InteractiveDemo'
+
+// Lazy load the InteractiveDemo component for better performance
+const InteractiveDemo = dynamic(
+  () =>
+    import('../InteractiveDemo/InteractiveDemo').then(mod => ({ default: mod.InteractiveDemo })),
+  {
+    ssr: false,
+    loading: () => (
+      <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-md'>
+        <div className='h-12 w-12 animate-spin rounded-full border-b-2 border-white'></div>
+      </div>
+    ),
+  }
+)
 
 const features = [
   {

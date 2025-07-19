@@ -461,6 +461,24 @@ export default function Support() {
           content='Find answers to your questions and get technical support for SSP Wallet.'
         />
         <meta property='og:url' content='https://sspwallet.io/support' />
+        <meta property='og:image' content='https://sspwallet.io/og-image-support.png' />
+        <meta property='og:image:width' content='1200' />
+        <meta property='og:image:height' content='630' />
+        <meta property='og:image:type' content='image/png' />
+        <meta property='og:image:alt' content='SSP Wallet Support - Get Help & Technical Support' />
+
+        {/* Twitter */}
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content='SSP Wallet Support | Get Help & Technical Support' />
+        <meta
+          name='twitter:description'
+          content='Find answers to your questions and get technical support for SSP Wallet.'
+        />
+        <meta name='twitter:image' content='https://sspwallet.io/og-image-support.png' />
+        <meta
+          name='twitter:image:alt'
+          content='SSP Wallet Support - Get Help & Technical Support'
+        />
 
         {/* Additional SEO */}
         <link rel='canonical' href='https://sspwallet.io/support' />

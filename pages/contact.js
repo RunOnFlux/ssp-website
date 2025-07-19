@@ -308,6 +308,21 @@ export default function Contact() {
           content='Get in touch with the SSP Wallet team for support, partnerships, or general inquiries.'
         />
         <meta property='og:url' content='https://sspwallet.io/contact' />
+        <meta property='og:image' content='https://sspwallet.io/og-image.png' />
+        <meta property='og:image:width' content='1200' />
+        <meta property='og:image:height' content='630' />
+        <meta property='og:image:type' content='image/png' />
+        <meta property='og:image:alt' content='Contact SSP Wallet - Get in Touch' />
+
+        {/* Twitter */}
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content='Contact SSP Wallet | Get in Touch' />
+        <meta
+          name='twitter:description'
+          content='Get in touch with the SSP Wallet team for support, partnerships, or general inquiries.'
+        />
+        <meta name='twitter:image' content='https://sspwallet.io/og-image.png' />
+        <meta name='twitter:image:alt' content='Contact SSP Wallet - Get in Touch' />
 
         {/* Additional SEO */}
         <link rel='canonical' href='https://sspwallet.io/contact' />

@@ -25,6 +25,21 @@ export default function Features() {
           content='Explore the powerful features that make SSP Wallet the most secure and versatile crypto wallet.'
         />
         <meta property='og:url' content='https://sspwallet.io/features' />
+        <meta property='og:image' content='https://sspwallet.io/og-image-features.png' />
+        <meta property='og:image:width' content='1200' />
+        <meta property='og:image:height' content='630' />
+        <meta property='og:image:type' content='image/png' />
+        <meta property='og:image:alt' content='SSP Wallet Features - Advanced Crypto Security' />
+
+        {/* Twitter */}
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content='Features - SSP Wallet | Advanced Crypto Security' />
+        <meta
+          name='twitter:description'
+          content='Explore the powerful features that make SSP Wallet the most secure and versatile crypto wallet.'
+        />
+        <meta name='twitter:image' content='https://sspwallet.io/og-image-features.png' />
+        <meta name='twitter:image:alt' content='SSP Wallet Features - Advanced Crypto Security' />
 
         {/* Additional SEO */}
         <link rel='canonical' href='https://sspwallet.io/features' />
