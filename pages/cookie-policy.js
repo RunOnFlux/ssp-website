@@ -196,7 +196,7 @@ export default function Cookies() {
                   </li>
                 </ul>
 
-                <h3 className='mb-3 mt-6 text-lg font-semibold text-gray-900 dark:text-white'>
+                <h3 className='mt-6 mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
                   5.2 Changing Your Preferences
                 </h3>
                 <p className='mb-4 text-gray-600 dark:text-gray-400'>
@@ -208,7 +208,7 @@ export default function Cookies() {
                   <li>Using your browser's cookie management settings</li>
                 </ul>
 
-                <h3 className='mb-3 mt-6 text-lg font-semibold text-gray-900 dark:text-white'>
+                <h3 className='mt-6 mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
                   5.3 Browser Settings
                 </h3>
                 <p className='mb-4 text-gray-600 dark:text-gray-400'>

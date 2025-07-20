@@ -127,7 +127,7 @@ export default function Privacy() {
                   </li>
                 </ul>
 
-                <h3 className='mb-3 mt-6 text-lg font-semibold text-gray-900 dark:text-white'>
+                <h3 className='mt-6 mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
                   4.2 Device Security Data
                 </h3>
                 <p className='mb-4 text-gray-600 dark:text-gray-400'>
@@ -143,7 +143,7 @@ export default function Privacy() {
                   encryption layers, not for tracking or advertising purposes.
                 </p>
 
-                <h3 className='mb-3 mt-6 text-lg font-semibold text-gray-900 dark:text-white'>
+                <h3 className='mt-6 mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
                   4.3 Website Usage Data
                 </h3>
                 <p className='mb-4 text-gray-600 dark:text-gray-400'>
@@ -175,7 +175,7 @@ export default function Privacy() {
                   <li>Selected blockchain network</li>
                 </ul>
 
-                <h3 className='mb-3 mt-6 text-lg font-semibold text-gray-900 dark:text-white'>
+                <h3 className='mt-6 mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
                   5.2 WalletConnect Integration
                 </h3>
                 <p className='mb-4 text-gray-600 dark:text-gray-400'>
@@ -188,7 +188,7 @@ export default function Privacy() {
                   <li>We do not monitor or store your dApp interactions</li>
                 </ul>
 
-                <h3 className='mb-3 mt-6 text-lg font-semibold text-gray-900 dark:text-white'>
+                <h3 className='mt-6 mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
                   5.3 Firebase Cloud Messaging
                 </h3>
                 <p className='mb-4 text-gray-600 dark:text-gray-400'>
