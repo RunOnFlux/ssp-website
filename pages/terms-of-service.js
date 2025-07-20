@@ -284,12 +284,242 @@ export default function Terms() {
 
               <section className='mb-8'>
                 <h2 className='mb-4 text-2xl font-bold text-gray-900 dark:text-white'>
-                  6. Risk Disclosures and Disclaimers
+                  6. Wallet-Specific Terms and Self-Custody Responsibilities
+                </h2>
+
+                <h3 className='mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
+                  6.1 Self-Custody Responsibility
+                </h3>
+                <p className='mb-4 text-gray-600 dark:text-gray-400'>
+                  SSP Wallet is a self-custody cryptocurrency wallet. You are entirely responsible
+                  for managing and securing your seed phrases, wallet addresses, and digital assets.
+                  We do not store, manage, or have access to your seed phrases, passwords, or
+                  private keys. Any loss, compromise, or unauthorized access to your wallet is
+                  solely your responsibility.
+                </p>
+                <p className='mb-4 text-gray-600 dark:text-gray-400'>
+                  <strong>Critical Warning:</strong> If you lose your seed phrase or password, we
+                  cannot assist in recovering your assets. It is critical that you securely store
+                  your seed phrase in a safe and offline location.
+                </p>
+
+                <h3 className='mt-6 mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
+                  6.2 Third-Party Services and Integrations
+                </h3>
+                <p className='mb-4 text-gray-600 dark:text-gray-400'>
+                  SSP Wallet provides access to third-party services, including but not limited to:
+                </p>
+                <ul className='list-disc space-y-2 pl-6 text-gray-600 dark:text-gray-400'>
+                  <li>
+                    <strong>Cryptocurrency swaps and exchanges</strong> (including QuickSwap and
+                    other decentralized exchange solutions)
+                  </li>
+                  <li>
+                    <strong>Onramp and offramp services</strong> for purchasing and selling
+                    cryptocurrencies
+                  </li>
+                  <li>
+                    <strong>Integration with decentralized applications (DApps)</strong>
+                  </li>
+                  <li>
+                    <strong>WalletConnect protocol</strong> for dApp connections
+                  </li>
+                </ul>
+                <p className='mb-4 text-gray-600 dark:text-gray-400'>
+                  These services are operated by independent providers. We do not control, endorse,
+                  or guarantee their availability, functionality, or security. When using
+                  third-party services, their respective terms and conditions apply. SSP Wallet is
+                  not liable for any loss, errors, or security breaches resulting from these
+                  services.
+                </p>
+
+                <h3 className='mt-6 mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
+                  6.3 Cryptocurrency Swapping Services
+                </h3>
+                <p className='mb-4 text-gray-600 dark:text-gray-400'>
+                  SSP Wallet integrates QuickSwap and other decentralized exchange (DEX) solutions
+                  to allow users to swap cryptocurrencies. However, all swaps are executed on
+                  third-party platforms, and SSP Wallet does not facilitate or process the
+                  transactions directly.
+                </p>
+                <div className='mb-4 rounded-lg border border-amber-200 bg-amber-50 p-4 dark:border-amber-700 dark:bg-amber-900/20'>
+                  <h4 className='mb-2 text-lg font-semibold text-amber-900 dark:text-amber-100'>
+                    Key Considerations When Using Swap Services:
+                  </h4>
+                  <ul className='list-disc space-y-2 pl-6 text-amber-800 dark:text-amber-200'>
+                    <li>
+                      Transactions occur on the blockchain and are <strong>irreversible</strong>{' '}
+                      once executed
+                    </li>
+                    <li>
+                      Exchange rates and liquidity are determined by third-party providers and can
+                      fluctuate rapidly
+                    </li>
+                    <li>
+                      <strong>Floating rates apply:</strong> The final amount received may differ
+                      from the initially displayed estimate due to market volatility
+                    </li>
+                    <li>
+                      Network fees (gas fees) apply and vary depending on blockchain congestion
+                    </li>
+                    <li>Users must verify all swap details before confirming any transactions</li>
+                  </ul>
+                </div>
+
+                <h3 className='mt-6 mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
+                  6.4 Purchasing and Selling Cryptocurrencies
+                </h3>
+                <p className='mb-4 text-gray-600 dark:text-gray-400'>
+                  SSP Wallet provides access to third-party cryptocurrency onramp and offramp
+                  services through integration with Onramper and other providers. These services are
+                  provided by independent financial institutions, payment processors, and
+                  cryptocurrency exchanges.
+                </p>
+                <h4 className='mb-2 text-base font-semibold text-gray-900 dark:text-white'>
+                  Purchasing Cryptocurrencies:
+                </h4>
+                <ul className='list-disc space-y-1 pl-6 text-gray-600 dark:text-gray-400'>
+                  <li>Transactions are processed through third-party providers, not SSP Wallet</li>
+                  <li>Payment methods, fees, and exchange rates vary depending on the provider</li>
+                  <li>
+                    Users must complete identity verification (KYC) as required by third-party
+                    providers
+                  </li>
+                  <li>
+                    SSP Wallet does not guarantee the availability, speed, or security of these
+                    services
+                  </li>
+                </ul>
+                <h4 className='mt-4 mb-2 text-base font-semibold text-gray-900 dark:text-white'>
+                  Selling Cryptocurrencies:
+                </h4>
+                <ul className='list-disc space-y-1 pl-6 text-gray-600 dark:text-gray-400'>
+                  <li>Cryptocurrency sales are processed through third-party offramp providers</li>
+                  <li>Settlement times and payout methods depend on the service provider</li>
+                  <li>
+                    <strong>Floating rates may apply,</strong> meaning the final amount received may
+                    differ from the quoted price
+                  </li>
+                  <li>
+                    Fees may apply and vary based on market conditions and third-party policies
+                  </li>
+                </ul>
+
+                <h3 className='mt-6 mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
+                  6.5 Transaction Accuracy and Blockchain Data
+                </h3>
+                <p className='mb-4 text-gray-600 dark:text-gray-400'>
+                  The transaction history and balance displayed in SSP Wallet may not always reflect
+                  real-time blockchain data due to:
+                </p>
+                <ul className='list-disc space-y-1 pl-6 text-gray-600 dark:text-gray-400'>
+                  <li>Blockchain confirmation delays</li>
+                  <li>API errors from third-party providers</li>
+                  <li>Market fluctuations affecting exchange rates</li>
+                  <li>Network congestion or RPC provider issues</li>
+                </ul>
+                <p className='mb-4 text-gray-600 dark:text-gray-400'>
+                  Users should verify important transactions using blockchain explorers or other
+                  trusted sources.
+                </p>
+              </section>
+
+              <section className='mb-8'>
+                <h2 className='mb-4 text-2xl font-bold text-gray-900 dark:text-white'>
+                  7. No Liability for Trading and Transaction Discrepancies
+                </h2>
+                <p className='mb-4 text-gray-600 dark:text-gray-400'>
+                  SSP Wallet is not responsible for any losses, discrepancies, or issues related to
+                  cryptocurrency transactions, including but not limited to:
+                </p>
+                <ul className='list-disc space-y-2 pl-6 text-gray-600 dark:text-gray-400'>
+                  <li>
+                    <strong>
+                      Loss of funds due to bugs, technical errors, or issues with third-party
+                      services
+                    </strong>
+                  </li>
+                  <li>
+                    <strong>Inaccuracies in displayed balances or transaction statuses</strong>{' '}
+                    caused by network congestion, API errors, or service delays
+                  </li>
+                  <li>
+                    <strong>Discrepancies between quoted and actual exchange rates</strong> due to
+                    floating-rate fluctuations in swap and trading services
+                  </li>
+                  <li>
+                    <strong>
+                      Loss of funds due to incorrect addresses or unauthorized transactions
+                    </strong>
+                  </li>
+                  <li>
+                    <strong>Slippage in cryptocurrency swaps</strong> resulting in different amounts
+                    than initially displayed
+                  </li>
+                  <li>
+                    <strong>Failed transactions or delayed confirmations</strong> due to blockchain
+                    network issues
+                  </li>
+                  <li>
+                    <strong>Price movements during transaction processing</strong> that affect final
+                    amounts received
+                  </li>
+                </ul>
+                <div className='mb-4 rounded-lg border border-red-200 bg-red-50 p-4 dark:border-red-700 dark:bg-red-900/20'>
+                  <p className='text-red-800 dark:text-red-200'>
+                    <strong>Critical Warning:</strong> Users must double-check all transaction
+                    details before confirming any transaction. Once a cryptocurrency transaction is
+                    broadcast to the blockchain, it is <strong>irreversible</strong> and cannot be
+                    undone under any circumstances.
+                  </p>
+                </div>
+              </section>
+
+              <section className='mb-8'>
+                <h2 className='mb-4 text-2xl font-bold text-gray-900 dark:text-white'>
+                  8. Third-Party Service Support and Responsibility
+                </h2>
+                <p className='mb-4 text-gray-600 dark:text-gray-400'>
+                  SSP Wallet integrates with numerous third-party services to provide enhanced
+                  functionality. However, we explicitly disclaim responsibility for these services:
+                </p>
+                <ul className='list-disc space-y-2 pl-6 text-gray-600 dark:text-gray-400'>
+                  <li>
+                    <strong>No technical support:</strong> SSP Wallet does not provide technical
+                    support for third-party services
+                  </li>
+                  <li>
+                    <strong>Direct contact required:</strong> If you encounter issues with
+                    integrated services, you must contact the respective service provider for
+                    assistance
+                  </li>
+                  <li>
+                    <strong>No dispute resolution:</strong> We are not responsible for
+                    troubleshooting or dispute resolution with third-party providers
+                  </li>
+                  <li>
+                    <strong>Service availability:</strong> Third-party services may become
+                    unavailable, discontinued, or change their terms without notice
+                  </li>
+                  <li>
+                    <strong>Data handling:</strong> Third-party services may collect data in
+                    accordance with their own privacy policies
+                  </li>
+                </ul>
+                <p className='mb-4 text-gray-600 dark:text-gray-400'>
+                  You are responsible for reviewing the privacy terms and conditions of any
+                  third-party service you use through SSP Wallet.
+                </p>
+              </section>
+
+              <section className='mb-8'>
+                <h2 className='mb-4 text-2xl font-bold text-gray-900 dark:text-white'>
+                  9. Cryptocurrency and Technology Risk Disclosures
                 </h2>
 
                 <div className='mb-6 rounded-lg border border-red-200 bg-red-50 p-4 dark:border-red-700 dark:bg-red-900/20'>
                   <h3 className='mb-2 text-lg font-semibold text-red-900 dark:text-red-100'>
-                    ⚠️ Important Risk Warning
+                    Important Risk Warning
                   </h3>
                   <p className='text-red-800 dark:text-red-200'>
                     Cryptocurrency involves significant financial risk. Only use funds you can
@@ -328,78 +558,157 @@ export default function Terms() {
                     cease operations
                   </li>
                 </ul>
+              </section>
 
-                <h3 className='mt-6 mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
-                  6.2 Technology Risks
-                </h3>
-                <ul className='list-disc space-y-2 pl-6 text-gray-600 dark:text-gray-400'>
-                  <li>
-                    <strong>Device Loss/Theft:</strong> Loss of devices containing wallet data may
-                    result in permanent fund loss
-                  </li>
-                  <li>
-                    <strong>Malware/Phishing:</strong> Malicious software or social engineering
-                    attacks may compromise security
-                  </li>
-                  <li>
-                    <strong>User Error:</strong> Incorrect addresses, amounts, or other mistakes may
-                    cause irreversible losses
-                  </li>
-                  <li>
-                    <strong>Network Attacks:</strong> Blockchain networks may suffer attacks
-                    affecting transaction processing
-                  </li>
-                  <li>
-                    <strong>Software Vulnerabilities:</strong> Unknown bugs or security flaws may be
-                    discovered
-                  </li>
-                </ul>
-
-                <h3 className='mt-6 mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
-                  6.3 No Financial Advice
-                </h3>
+              <section className='mb-8'>
+                <h2 className='mb-4 text-2xl font-bold text-gray-900 dark:text-white'>
+                  10. Security Best Practices and User Obligations
+                </h2>
                 <p className='mb-4 text-gray-600 dark:text-gray-400'>
-                  The Services provide technology tools only. We do not provide:
+                  To protect your digital assets and maintain account security, we strongly
+                  recommend following these security best practices:
                 </p>
                 <ul className='list-disc space-y-2 pl-6 text-gray-600 dark:text-gray-400'>
-                  <li>Investment advice or recommendations</li>
-                  <li>Financial planning or advisory services</li>
-                  <li>Tax or legal advice</li>
-                  <li>Market predictions or guarantees</li>
+                  <li>
+                    <strong>Securely store your seed phrases offline</strong> in multiple safe
+                    locations, never on internet-connected devices
+                  </li>
+                  <li>
+                    <strong>Be cautious of phishing attempts and scams</strong> - always verify URLs
+                    and never enter your seed phrase on suspicious websites
+                  </li>
+                  <li>
+                    <strong>Keep your wallet software updated</strong> to the latest version to
+                    benefit from security improvements
+                  </li>
+                  <li>
+                    <strong>Use strong, unique passwords</strong> for wallet encryption and avoid
+                    reusing passwords from other services
+                  </li>
+                  <li>
+                    <strong>Verify transaction details carefully</strong> before confirming any
+                    cryptocurrency transaction
+                  </li>
+                  <li>
+                    <strong>Be aware of social engineering attacks</strong> - we will never ask for
+                    your seed phrase or private keys
+                  </li>
+                </ul>
+                <div className='mb-4 rounded-lg border border-amber-200 bg-amber-50 p-4 dark:border-amber-700 dark:bg-amber-900/20'>
+                  <p className='text-amber-800 dark:text-amber-200'>
+                    <strong>Important:</strong> SSP Wallet is not responsible for losses resulting
+                    from compromised seed phrases, phishing attacks, user negligence, or failure to
+                    follow security best practices.
+                  </p>
+                </div>
+              </section>
+
+              <section className='mb-8'>
+                <h2 className='mb-4 text-2xl font-bold text-gray-900 dark:text-white'>
+                  11. Legal Compliance and Tax Obligations
+                </h2>
+
+                <h3 className='mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
+                  11.1 Compliance with Local Laws
+                </h3>
+                <p className='mb-4 text-gray-600 dark:text-gray-400'>
+                  Users are entirely responsible for ensuring that their use of SSP Wallet complies
+                  with all applicable laws and regulations in their jurisdiction. This includes but
+                  is not limited to:
+                </p>
+                <ul className='list-disc space-y-1 pl-6 text-gray-600 dark:text-gray-400'>
+                  <li>Cryptocurrency trading and holding regulations</li>
+                  <li>Anti-money laundering (AML) requirements</li>
+                  <li>Know Your Customer (KYC) obligations</li>
+                  <li>Financial services regulations</li>
+                  <li>Import/export restrictions on cryptographic software</li>
+                </ul>
+                <p className='mb-4 text-gray-600 dark:text-gray-400'>
+                  We do not guarantee that our services are legal or available in all locations.
+                  Users in restricted jurisdictions use the Services at their own risk.
+                </p>
+
+                <h3 className='mt-6 mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
+                  11.2 Tax and Reporting Obligations
+                </h3>
+                <p className='mb-4 text-gray-600 dark:text-gray-400'>
+                  You are solely responsible for determining and fulfilling any tax obligations
+                  arising from cryptocurrency transactions. This includes:
+                </p>
+                <ul className='list-disc space-y-1 pl-6 text-gray-600 dark:text-gray-400'>
+                  <li>Calculating and reporting capital gains or losses</li>
+                  <li>Maintaining accurate records of all transactions</li>
+                  <li>Filing required tax returns and forms</li>
+                  <li>Paying any taxes owed on cryptocurrency activities</li>
+                </ul>
+                <p className='mb-4 text-gray-600 dark:text-gray-400'>
+                  <strong>Important:</strong> SSP Wallet does not provide tax, legal, financial, or
+                  investment advice. We do not provide market predictions, financial planning
+                  services, or investment recommendations. Consult with qualified professionals
+                  regarding your specific obligations.
+                </p>
+              </section>
+
+              <section className='mb-8'>
+                <h2 className='mb-4 text-2xl font-bold text-gray-900 dark:text-white'>
+                  12. Enhanced Warranties Disclaimer
+                </h2>
+                <p className='mb-4 text-gray-600 dark:text-gray-400'>
+                  SSP Wallet and all associated services are provided "as-is" and "as-available"
+                  without warranties of any kind, express, implied, or statutory. We specifically
+                  disclaim and do not guarantee:
+                </p>
+                <ul className='list-disc space-y-2 pl-6 text-gray-600 dark:text-gray-400'>
+                  <li>
+                    <strong>Accuracy or completeness</strong> of displayed balances, transaction
+                    history, or market data
+                  </li>
+                  <li>
+                    <strong>Security or uninterrupted operation</strong> of our platform or
+                    third-party services
+                  </li>
+                  <li>
+                    <strong>Compatibility</strong> with all devices, browsers, or operating systems
+                  </li>
+                  <li>
+                    <strong>Availability of third-party services</strong> including swaps, onramps,
+                    or dApp integrations
+                  </li>
+                  <li>
+                    <strong>Real-time accuracy</strong> of exchange rates, gas fees, or transaction
+                    estimates
+                  </li>
+                  <li>
+                    <strong>Successful completion</strong> of any cryptocurrency transaction
+                  </li>
+                  <li>
+                    <strong>Protection against</strong> market volatility, slippage, or price
+                    movements
+                  </li>
                 </ul>
               </section>
 
               <section className='mb-8'>
                 <h2 className='mb-4 text-2xl font-bold text-gray-900 dark:text-white'>
-                  7. Limitation of Liability and Disclaimers
+                  13. Limitation of Liability and Disclaimers
                 </h2>
 
                 <h3 className='mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
-                  7.1 "AS IS" Provision and Complete Disclaimer
+                  13.1 Complete Disclaimer of Warranties and Liability
                 </h3>
                 <p className='mb-4 text-gray-600 dark:text-gray-400'>
                   THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY
-                  KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY. WE EXPRESSLY DISCLAIM ALL LIABILITY
-                  AND RESPONSIBILITY FOR ANY DAMAGES, LOSSES, OR HARM ARISING FROM YOUR USE OF THE
-                  SERVICES, INCLUDING BUT NOT LIMITED TO:
+                  KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING MERCHANTABILITY, FITNESS
+                  FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, UNINTERRUPTED OPERATION, SECURITY,
+                  ACCURACY, OR PROTECTION AGAINST LOSS OF CRYPTOCURRENCY OR DIGITAL ASSETS.
                 </p>
-                <ul className='list-disc space-y-2 pl-6 text-gray-600 dark:text-gray-400'>
-                  <li>MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE</li>
-                  <li>NON-INFRINGEMENT OF THIRD-PARTY RIGHTS</li>
-                  <li>UNINTERRUPTED OR ERROR-FREE OPERATION</li>
-                  <li>SECURITY OR FREEDOM FROM VULNERABILITIES</li>
-                  <li>ACCURACY OR COMPLETENESS OF INFORMATION</li>
-                  <li>PROTECTION AGAINST LOSS OF CRYPTOCURRENCY OR DIGITAL ASSETS</li>
-                  <li>RECOVERY OF LOST FUNDS, PASSWORDS, OR SEED PHRASES</li>
-                  <li>COMPATIBILITY WITH ALL DEVICES OR SYSTEMS</li>
-                </ul>
                 <p className='mb-4 text-gray-600 dark:text-gray-400'>
-                  WE ACCEPT NO RESPONSIBILITY OR LIABILITY FOR ANY LOSSES, DAMAGES, OR HARM
-                  WHATSOEVER ARISING FROM YOUR USE OF THE SERVICES.
+                  WE EXPRESSLY DISCLAIM ALL LIABILITY AND RESPONSIBILITY FOR ANY DAMAGES, LOSSES, OR
+                  HARM ARISING FROM YOUR USE OF THE SERVICES.
                 </p>
 
                 <h3 className='mt-6 mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
-                  7.2 Complete Exclusion of Liability
+                  13.2 Complete Exclusion of Liability
                 </h3>
                 <p className='mb-4 text-gray-600 dark:text-gray-400'>
                   TO THE MAXIMUM EXTENT PERMITTED BY LAW, INFLUX TECHNOLOGIES LIMITED, ITS
@@ -428,7 +737,7 @@ export default function Terms() {
                 </p>
 
                 <h3 className='mt-6 mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
-                  7.3 No Liability Under Any Circumstances
+                  13.3 No Liability Under Any Circumstances
                 </h3>
                 <p className='mb-4 text-gray-600 dark:text-gray-400'>
                   NOTWITHSTANDING ANY OTHER PROVISION IN THESE TERMS, AND TO THE MAXIMUM EXTENT
@@ -446,7 +755,7 @@ export default function Terms() {
 
               <section className='mb-8'>
                 <h2 className='mb-4 text-2xl font-bold text-gray-900 dark:text-white'>
-                  8. Indemnification
+                  14. Indemnification
                 </h2>
                 <p className='mb-4 text-gray-600 dark:text-gray-400'>
                   You agree to indemnify, defend, and hold harmless InFlux Technologies Limited and
@@ -465,7 +774,7 @@ export default function Terms() {
 
               <section className='mb-8'>
                 <h2 className='mb-4 text-2xl font-bold text-gray-900 dark:text-white'>
-                  9. Privacy and Data Protection
+                  15. Privacy and Data Protection
                 </h2>
                 <p className='mb-4 text-gray-600 dark:text-gray-400'>
                   Our collection and use of information is governed by our Privacy Policy, which is
@@ -484,11 +793,11 @@ export default function Terms() {
 
               <section className='mb-8'>
                 <h2 className='mb-4 text-2xl font-bold text-gray-900 dark:text-white'>
-                  10. Dispute Resolution
+                  16. Dispute Resolution
                 </h2>
 
                 <h3 className='mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
-                  10.1 Governing Law
+                  16.1 Governing Law
                 </h3>
                 <p className='mb-4 text-gray-600 dark:text-gray-400'>
                   These Terms shall be governed by and construed in accordance with the laws of
@@ -496,7 +805,7 @@ export default function Terms() {
                 </p>
 
                 <h3 className='mt-6 mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
-                  10.2 Jurisdiction
+                  16.2 Jurisdiction
                 </h3>
                 <p className='mb-4 text-gray-600 dark:text-gray-400'>
                   Any disputes arising from these Terms or your use of the Services shall be subject
@@ -504,7 +813,7 @@ export default function Terms() {
                 </p>
 
                 <h3 className='mt-6 mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
-                  10.3 Alternative Dispute Resolution
+                  16.3 Alternative Dispute Resolution
                 </h3>
                 <p className='mb-4 text-gray-600 dark:text-gray-400'>
                   Before initiating formal legal proceedings, parties agree to attempt resolution
@@ -514,11 +823,11 @@ export default function Terms() {
 
               <section className='mb-8'>
                 <h2 className='mb-4 text-2xl font-bold text-gray-900 dark:text-white'>
-                  11. Service Modifications and Termination
+                  17. Service Modifications and Termination
                 </h2>
 
                 <h3 className='mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
-                  11.1 Right to Modify
+                  17.1 Right to Modify
                 </h3>
                 <p className='mb-4 text-gray-600 dark:text-gray-400'>
                   We reserve the right to modify, suspend, or discontinue any part of the Services
@@ -527,7 +836,7 @@ export default function Terms() {
                 </p>
 
                 <h3 className='mt-6 mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
-                  11.2 User Termination
+                  17.2 User Termination
                 </h3>
                 <p className='mb-4 text-gray-600 dark:text-gray-400'>
                   You may stop using the Services at any time by uninstalling the applications and
@@ -536,7 +845,7 @@ export default function Terms() {
                 </p>
 
                 <h3 className='mt-6 mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
-                  11.3 Effect of Termination
+                  17.3 Effect of Termination
                 </h3>
                 <p className='mb-4 text-gray-600 dark:text-gray-400'>
                   Upon termination of your use:
@@ -551,7 +860,7 @@ export default function Terms() {
 
               <section className='mb-8'>
                 <h2 className='mb-4 text-2xl font-bold text-gray-900 dark:text-white'>
-                  12. Age Restrictions and Capacity
+                  18. Age Restrictions and Capacity
                 </h2>
                 <p className='mb-4 text-gray-600 dark:text-gray-400'>
                   The Services are not intended for use by individuals under 18 years of age. By
@@ -567,7 +876,7 @@ export default function Terms() {
 
               <section className='mb-8'>
                 <h2 className='mb-4 text-2xl font-bold text-gray-900 dark:text-white'>
-                  13. Updates to Terms
+                  19. Updates to Terms
                 </h2>
                 <p className='mb-4 text-gray-600 dark:text-gray-400'>
                   We may update these Terms periodically to reflect changes in our services, legal
@@ -587,7 +896,7 @@ export default function Terms() {
 
               <section className='mb-8'>
                 <h2 className='mb-4 text-2xl font-bold text-gray-900 dark:text-white'>
-                  14. Severability and Entire Agreement
+                  20. Severability and Entire Agreement
                 </h2>
                 <p className='mb-4 text-gray-600 dark:text-gray-400'>
                   If any provision of these Terms is found to be unenforceable, the remaining
@@ -599,7 +908,7 @@ export default function Terms() {
 
               <section className='mb-8'>
                 <h2 className='mb-4 text-2xl font-bold text-gray-900 dark:text-white'>
-                  15. Contact Information
+                  21. Contact Information
                 </h2>
                 <p className='mb-4 text-gray-600 dark:text-gray-400'>
                   For questions about these Terms of Service, please contact:
@@ -626,7 +935,7 @@ export default function Terms() {
 
               <div className='mt-12 rounded-lg border border-blue-200 bg-blue-50 p-6 dark:border-blue-700 dark:bg-blue-900/20'>
                 <h3 className='mb-3 text-lg font-semibold text-blue-900 dark:text-blue-100'>
-                  📋 Summary of Key Points
+                  Summary of Key Points
                 </h3>
                 <ul className='list-disc space-y-2 pl-6 text-blue-800 dark:text-blue-200'>
                   <li>
@@ -641,7 +950,8 @@ export default function Terms() {
                     <strong>No Warranties:</strong> Services provided "as is" without guarantees
                   </li>
                   <li>
-                    <strong>No Liability:</strong> We accept no liability for any losses or damages
+                    <strong>No Liability:</strong> We accept no liability for any losses, damages,
+                    or trading discrepancies
                   </li>
                   <li>
                     <strong>Privacy-First:</strong> Minimal data collection with automatic deletion
