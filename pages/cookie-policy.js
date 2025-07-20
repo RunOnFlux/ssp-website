@@ -143,11 +143,18 @@ export default function Cookies() {
 
               <section className='mb-8'>
                 <h2 className='mb-4 text-2xl font-bold text-gray-900 dark:text-white'>
-                  4. Google Analytics
+                  4. Google Analytics (Consent Required)
                 </h2>
+                <div className='mb-4 rounded-lg border border-blue-200 bg-blue-50 p-4 dark:border-blue-700 dark:bg-blue-900/20'>
+                  <p className='text-blue-800 dark:text-blue-200'>
+                    <strong>Privacy-First Approach:</strong> Google Analytics is completely disabled
+                    by default. The analytics script only loads after you explicitly accept
+                    analytics cookies through our consent banner.
+                  </p>
+                </div>
                 <p className='mb-4 text-gray-600 dark:text-gray-400'>
-                  We use Google Analytics to understand how our Website is used and to improve our
-                  services. Google Analytics collects information such as:
+                  When you consent to analytics cookies, Google Analytics collects information such
+                  as:
                 </p>
                 <ul className='list-disc space-y-2 pl-6 text-gray-600 dark:text-gray-400'>
                   <li>Pages visited and time spent on each page</li>

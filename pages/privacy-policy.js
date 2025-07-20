@@ -72,8 +72,8 @@ export default function Privacy() {
                     within 15 minutes
                   </li>
                   <li>
-                    <strong>No Tracking:</strong> We do not use analytics, tracking pixels, or
-                    behavioral monitoring tools
+                    <strong>Consent-Based Analytics:</strong> We only use Google Analytics after
+                    explicit user consent, never by default
                   </li>
                 </ul>
               </section>
@@ -154,6 +154,34 @@ export default function Privacy() {
                   <li>Browser type and version</li>
                   <li>Referring websites</li>
                   <li>Access timestamps</li>
+                </ul>
+
+                <h3 className='mt-6 mb-3 text-lg font-semibold text-gray-900 dark:text-white'>
+                  4.4 Optional Analytics Data (Consent Required)
+                </h3>
+                <p className='mb-4 text-gray-600 dark:text-gray-400'>
+                  <strong>Important:</strong> Analytics tracking is completely disabled by default
+                  and only activated with your explicit consent through our cookie banner.
+                </p>
+                <p className='mb-4 text-gray-600 dark:text-gray-400'>
+                  When you choose to accept analytics cookies, we use Google Analytics to collect:
+                </p>
+                <ul className='list-disc space-y-2 pl-6 text-gray-600 dark:text-gray-400'>
+                  <li>Page views and navigation patterns</li>
+                  <li>Session duration and bounce rates</li>
+                  <li>Device and browser information</li>
+                  <li>Geographic location (country/region level only)</li>
+                  <li>Referral sources</li>
+                </ul>
+                <p className='mb-4 text-gray-600 dark:text-gray-400'>
+                  <strong>Privacy Controls:</strong>
+                </p>
+                <ul className='list-disc space-y-2 pl-6 text-gray-600 dark:text-gray-400'>
+                  <li>Analytics tracking never starts without your consent</li>
+                  <li>You can decline analytics while still using our website</li>
+                  <li>Analytics cookies are automatically cleared if you decline</li>
+                  <li>You can change your preference at any time via our cookie settings</li>
+                  <li>All analytics data is anonymized and aggregated</li>
                 </ul>
               </section>
 

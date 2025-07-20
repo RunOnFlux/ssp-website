@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import CookieConsent from '../components/CookieConsent'
 import { Layout } from '../components/Layout'
 import { ThemeProvider } from '../components/ThemeProvider'
-import { GA_TRACKING_ID, pageview } from '../lib/gtag'
+import { pageview } from '../lib/gtag'
 import '../styles/globals.css'
 
 export default function App({ Component, pageProps }) {
@@ -25,26 +25,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      <Head>
-        {/* Global Site Tag (gtag.js) - Google Analytics */}
-        {GA_TRACKING_ID && (
-          <>
-            <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${GA_TRACKING_ID}', {
-                    page_path: window.location.pathname,
-                  });
-                `,
-              }}
-            />
-          </>
-        )}
-      </Head>
+      <Head>{/* Google Analytics will be loaded by CookieConsent component after consent */}</Head>
       <ThemeProvider>
         <Layout>
           <Component {...pageProps} />

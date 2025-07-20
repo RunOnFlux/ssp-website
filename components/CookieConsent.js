@@ -40,6 +40,7 @@ export default function CookieConsent() {
           if (process.env.NODE_ENV === 'development') {
             console.log('📈 Initializing GA based on saved consent')
           }
+          // Load GA script for returning users with consent
           initializeGoogleAnalytics()
         } else {
           if (process.env.NODE_ENV === 'development') {
@@ -75,33 +76,54 @@ export default function CookieConsent() {
   }, [showBanner])
 
   const initializeGoogleAnalytics = () => {
-    // Initialize Google Analytics consent
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('consent', 'update', {
-        analytics_storage: 'granted',
-      })
+    // Load Google Analytics script only after consent
+    if (typeof window !== 'undefined' && process.env.NEXT_PUBLIC_GA_ID) {
+      const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID
 
-      // Track the consent event
-      window.gtag('event', 'consent_granted', {
-        event_category: 'engagement',
-        event_label: 'analytics',
-      })
+      // Create and append GA script
+      const script1 = document.createElement('script')
+      script1.async = true
+      script1.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`
+      document.head.appendChild(script1)
+
+      // Initialize gtag
+      const script2 = document.createElement('script')
+      script2.innerHTML = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${GA_TRACKING_ID}', {
+          page_path: window.location.pathname,
+        });
+      `
+      document.head.appendChild(script2)
+
+      // Track the consent event after gtag is loaded
+      setTimeout(() => {
+        if (window.gtag) {
+          window.gtag('event', 'consent_granted', {
+            event_category: 'engagement',
+            event_label: 'analytics',
+          })
+        }
+      }, 100)
     }
   }
 
   const disableGoogleAnalytics = () => {
-    // Disable Google Analytics
+    // Disable Google Analytics if it's loaded
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('consent', 'update', {
         analytics_storage: 'denied',
       })
 
-      // Track the consent denial event
+      // Track the consent denial event (optional since user declined)
       window.gtag('event', 'consent_denied', {
         event_category: 'engagement',
         event_label: 'analytics',
       })
     }
+    // Note: If GA script isn't loaded yet, there's nothing to disable
   }
 
   const savePreferences = newPreferences => {
@@ -291,8 +313,9 @@ export default function CookieConsent() {
                     🍪 We use cookies
                   </h3>
                   <p className='text-sm text-gray-600 dark:text-gray-400'>
-                    We use essential cookies for website functionality and analytics cookies to help
-                    us improve our website. You can accept or decline analytics cookies.
+                    We use essential cookies for website functionality and optional analytics
+                    cookies to help us improve our website. Analytics are completely disabled by
+                    default and only activate with your consent.
                   </p>
                   <p className='mt-1 text-xs text-gray-500 dark:text-gray-500'>
                     Read our{' '}
