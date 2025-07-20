@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' })
@@ -18,7 +19,9 @@ export default async function handler(req, res) {
     const result = await relayResponse.json()
     return res.status(relayResponse.status).json(result)
   } catch (error) {
-    console.error('Error submitting support ticket:', error)
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error submitting support ticket:', error)
+    }
     return res.status(500).json({ error: 'Failed to submit support ticket' })
   }
 }

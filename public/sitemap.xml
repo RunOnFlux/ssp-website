@@ -37,19 +37,19 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sspwallet.io/privacy</loc>
+    <loc>https://sspwallet.io/privacy-policy</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://sspwallet.io/terms</loc>
+    <loc>https://sspwallet.io/terms-of-service</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://sspwallet.io/cookies</loc>
+    <loc>https://sspwallet.io/cookie-policy</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>

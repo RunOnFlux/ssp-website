@@ -323,3 +323,50 @@ html {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   pointer-events: none;
 }
+
+/* Cookie banner visibility handling */
+.cookie-banner-visible {
+  padding-bottom: 30px; /* Space for cookie banner */
+}
+
+@media (max-width: 1250px) {
+  .cookie-banner-visible {
+    padding-bottom: 50px; /* More space on mobile due to text wrapping */
+  }
+}
+
+@media (max-width: 1023px) {
+  .cookie-banner-visible {
+    padding-bottom: 120px; /* More space on mobile due to text wrapping */
+  }
+}
+
+@media (max-width: 767px) {
+  .cookie-banner-visible {
+    padding-bottom: 140px; /* More space on mobile due to text wrapping */
+  }
+}
+
+@media (max-width: 639px) {
+  .cookie-banner-visible {
+    padding-bottom: 180px; /* More space on mobile due to text wrapping */
+  }
+}
+
+@media (max-width: 533px) {
+  .cookie-banner-visible {
+    padding-bottom: 200px; /* More space on mobile due to text wrapping */
+  }
+}
+
+@media (max-width: 399px) {
+  .cookie-banner-visible {
+    padding-bottom: 220px; /* More space on mobile due to text wrapping */
+  }
+}
+
+@media (max-width: 362px) {
+  .cookie-banner-visible {
+    padding-bottom: 250px; /* More space on mobile due to text wrapping */
+  }
+}

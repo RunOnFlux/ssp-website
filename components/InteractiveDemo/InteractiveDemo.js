@@ -26,7 +26,7 @@ import {
 } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useTheme } from '../../hooks/useTheme'
 
 // Android Icon Component (since Lucide doesn't have it)
@@ -69,8 +69,7 @@ const walletSeedPhrase = Array(24).fill('abandon')
 const keySeedPhrase = Array(24).fill('abandon')
 
 export function InteractiveDemo({ isOpen, onClose }) {
-  const { theme, setTheme } = useTheme()
-  const [originalTheme, setOriginalTheme] = useState(null)
+  const { isDark } = useTheme()
   const [currentPhase, setCurrentPhase] = useState(0)
   const [currentStep, setCurrentStep] = useState(0)
   const [showPassword, setShowPassword] = useState(false)
@@ -86,33 +85,8 @@ export function InteractiveDemo({ isOpen, onClose }) {
   const [showNotification, setShowNotification] = useState(false)
   const [mobileKeyPassword, setMobileKeyPassword] = useState('SecurePass123')
 
-  // Theme management for demo
-  useEffect(() => {
-    if (isOpen && originalTheme === null) {
-      // Store the original theme only when first opening the demo
-      setOriginalTheme(theme)
-      // If user is in dark mode, temporarily switch to light
-      if (theme === 'dark') {
-        setTheme('light')
-      }
-    }
-  }, [isOpen, theme, setTheme, originalTheme])
-
-  // Cleanup effect to restore theme on unmount
-  useEffect(() => {
-    return () => {
-      if (originalTheme !== null) {
-        setTheme(originalTheme)
-      }
-    }
-  }, [originalTheme, setTheme])
-
-  // Enhanced close handler to restore theme
+  // Simple close handler - no theme manipulation needed
   const handleClose = () => {
-    if (originalTheme !== null) {
-      setTheme(originalTheme)
-      setOriginalTheme(null)
-    }
     onClose()
   }
 
@@ -154,23 +128,29 @@ export function InteractiveDemo({ isOpen, onClose }) {
       case 0:
         return (
           <div className='flex flex-col items-center'>
-            <div className='relative mx-auto mb-6 h-96 w-full max-w-md rounded-lg border-2 border-gray-200 bg-white shadow-lg'>
+            <div className='relative mx-auto mb-6 h-96 w-full max-w-md rounded-lg border-2 border-gray-200 bg-white shadow-lg dark:border-gray-700 dark:bg-gray-800'>
               <div className='absolute inset-0 overflow-hidden rounded-lg'>
-                <div className='flex h-8 items-center border-b border-gray-200 bg-gray-100 px-3'>
+                <div className='flex h-8 items-center border-b border-gray-200 bg-gray-100 px-3 dark:border-gray-700 dark:bg-gray-700'>
                   <div className='flex space-x-2'>
                     <div className='h-3 w-3 rounded-full bg-red-400'></div>
                     <div className='h-3 w-3 rounded-full bg-yellow-400'></div>
                     <div className='h-3 w-3 rounded-full bg-green-400'></div>
                   </div>
-                  <div className='ml-4 text-xs text-gray-600'>Chrome Web Store</div>
+                  <div className='ml-4 text-xs text-gray-600 dark:text-gray-300'>
+                    Chrome Web Store
+                  </div>
                 </div>
                 <div className='flex h-full flex-col p-6 pt-8'>
-                  <div className='mb-4 rounded-lg border border-blue-200 bg-blue-50 p-4'>
-                    <Chrome className='mx-auto mb-3 h-10 w-10 text-blue-600' />
-                    <h3 className='text-center font-semibold text-blue-900'>SSP Wallet</h3>
-                    <p className='text-center text-sm text-blue-700'>by InFlux Technologies</p>
+                  <div className='mb-4 rounded-lg border border-blue-200 bg-blue-50 p-4 dark:border-blue-700 dark:bg-blue-900/50'>
+                    <Chrome className='mx-auto mb-3 h-10 w-10 text-blue-600 dark:text-blue-400' />
+                    <h3 className='text-center font-semibold text-blue-900 dark:text-blue-100'>
+                      SSP Wallet
+                    </h3>
+                    <p className='text-center text-sm text-blue-700 dark:text-blue-300'>
+                      by InFlux Technologies
+                    </p>
                   </div>
-                  <p className='mb-4 text-center text-sm text-gray-600'>
+                  <p className='mb-4 text-center text-sm text-gray-600 dark:text-gray-300'>
                     Secure, Simple, Powerful crypto wallet with 2-of-2 multisig
                   </p>
                   <motion.button
@@ -197,8 +177,10 @@ export function InteractiveDemo({ isOpen, onClose }) {
               </div>
             </div>
             <div className='max-w-lg text-center'>
-              <h3 className='mb-3 text-xl font-semibold'>Install SSP Wallet Extension</h3>
-              <p className='text-gray-600'>
+              <h3 className='mb-3 text-xl font-semibold dark:text-white'>
+                Install SSP Wallet Extension
+              </h3>
+              <p className='text-gray-600 dark:text-gray-300'>
                 Download the browser extension from Chrome Web Store. Available for Chrome, Brave,
                 and Firefox.
               </p>
@@ -209,30 +191,32 @@ export function InteractiveDemo({ isOpen, onClose }) {
       case 1:
         return (
           <div className='flex flex-col items-center'>
-            <div className='relative mx-auto mb-6 h-96 w-full max-w-md rounded-lg border-2 border-gray-200 bg-white shadow-lg'>
+            <div className='relative mx-auto mb-6 h-96 w-full max-w-md rounded-lg border-2 border-gray-200 bg-white shadow-lg dark:border-gray-700 dark:bg-gray-800'>
               <div className='absolute inset-0 overflow-hidden rounded-lg'>
-                <div className='flex h-8 items-center border-b border-gray-200 bg-gray-100 px-3'>
+                <div className='flex h-8 items-center border-b border-gray-200 bg-gray-100 px-3 dark:border-gray-700 dark:bg-gray-700'>
                   <Image
-                    src='/ssp-logo-black.svg'
+                    src={isDark ? '/ssp-logo-white.svg' : '/ssp-logo-black.svg'}
                     alt='SSP'
                     width={16}
                     height={16}
                     className='mr-2'
                   />
-                  <div className='text-xs text-gray-600'>SSP Wallet Setup</div>
+                  <div className='text-xs text-gray-600 dark:text-gray-300'>SSP Wallet Setup</div>
                 </div>
                 <div className='flex h-full flex-col p-6 pt-8'>
                   <Image
-                    src='/ssp-logo-black.svg'
+                    src={isDark ? '/ssp-logo-white.svg' : '/ssp-logo-black.svg'}
                     alt='SSP Logo'
                     width={48}
                     height={48}
                     className='mx-auto mb-4'
                   />
-                  <h3 className='mb-4 text-center text-lg font-semibold'>Create Your Wallet</h3>
+                  <h3 className='mb-4 text-center text-lg font-semibold dark:text-white'>
+                    Create Your Wallet
+                  </h3>
                   <div className='flex-1 space-y-4'>
                     <div>
-                      <label className='mb-1 block text-left text-sm text-gray-600'>
+                      <label className='mb-1 block text-left text-sm text-gray-600 dark:text-gray-300'>
                         New Password
                       </label>
                       <div className='relative'>
@@ -241,11 +225,11 @@ export function InteractiveDemo({ isOpen, onClose }) {
                           value={password}
                           onChange={e => setPassword(e.target.value)}
                           placeholder='Enter secure password'
-                          className='w-full rounded border border-gray-300 px-3 py-2 text-sm'
+                          className='w-full rounded border border-gray-300 px-3 py-2 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400'
                         />
                         <button
                           onClick={() => setShowPassword(!showPassword)}
-                          className='absolute top-2 right-2 text-gray-400'
+                          className='absolute top-2 right-2 cursor-pointer text-gray-400 dark:text-gray-300'
                         >
                           {showPassword ? (
                             <EyeOff className='h-4 w-4' />
@@ -256,17 +240,17 @@ export function InteractiveDemo({ isOpen, onClose }) {
                       </div>
                     </div>
                     <div>
-                      <label className='mb-1 block text-left text-sm text-gray-600'>
+                      <label className='mb-1 block text-left text-sm text-gray-600 dark:text-gray-300'>
                         Confirm Password
                       </label>
                       <input
                         type='password'
                         placeholder='Confirm password'
-                        className='w-full rounded border border-gray-300 px-3 py-2 text-sm'
+                        className='w-full rounded border border-gray-300 px-3 py-2 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400'
                       />
                     </div>
                     <div className='pt-2 text-sm'>
-                      <label className='flex items-center'>
+                      <label className='flex items-center text-gray-700 dark:text-gray-300'>
                         <input type='checkbox' className='mr-2' />I have read and agree to the Terms
                         of Service
                       </label>
@@ -276,8 +260,8 @@ export function InteractiveDemo({ isOpen, onClose }) {
               </div>
             </div>
             <div className='max-w-lg text-center'>
-              <h3 className='mb-3 text-xl font-semibold'>Create Secure Password</h3>
-              <p className='text-gray-600'>
+              <h3 className='mb-3 text-xl font-semibold dark:text-white'>Create Secure Password</h3>
+              <p className='text-gray-600 dark:text-gray-300'>
                 This password encrypts your wallet locally. It never leaves your browser and
                 protects your seed phrase.
               </p>
@@ -288,31 +272,31 @@ export function InteractiveDemo({ isOpen, onClose }) {
       case 2:
         return (
           <div className='flex flex-col items-center'>
-            <div className='relative mx-auto mb-6 h-96 w-full max-w-md rounded-lg border-2 border-amber-300 bg-white shadow-lg'>
+            <div className='relative mx-auto mb-6 h-96 w-full max-w-md rounded-lg border-2 border-amber-300 bg-white shadow-lg dark:border-amber-600 dark:bg-gray-800'>
               <div className='absolute inset-0 overflow-hidden rounded-lg'>
-                <div className='flex h-8 items-center border-b border-amber-200 bg-amber-100 px-3'>
-                  <AlertCircle className='mr-2 h-4 w-4 text-amber-600' />
-                  <div className='text-xs text-amber-800'>Backup Required</div>
+                <div className='flex h-8 items-center border-b border-amber-200 bg-amber-100 px-3 dark:border-amber-700 dark:bg-amber-900/50'>
+                  <AlertCircle className='mr-2 h-4 w-4 text-amber-600 dark:text-amber-400' />
+                  <div className='text-xs text-amber-800 dark:text-amber-200'>Backup Required</div>
                 </div>
                 <div className='flex h-full flex-col overflow-hidden p-4 pt-3'>
-                  <h3 className='mb-2 text-center text-lg font-semibold text-amber-800'>
+                  <h3 className='mb-2 text-center text-lg font-semibold text-amber-800 dark:text-amber-200'>
                     Your Wallet Seed Phrase
                   </h3>
-                  <div className='mb-3 rounded border border-red-200 bg-red-50 p-2'>
-                    <p className='text-center text-xs font-medium text-red-800'>
+                  <div className='mb-3 rounded border border-red-200 bg-red-50 p-2 dark:border-red-700 dark:bg-red-900/50'>
+                    <p className='text-center text-xs font-medium text-red-800 dark:text-red-200'>
                       ⚠️ Write this down and store it safely!
                     </p>
                   </div>
 
                   <div className='flex min-h-0 flex-1 flex-col'>
                     {!showSeed ? (
-                      <div className='flex max-h-48 flex-1 flex-col justify-center rounded bg-gray-100 p-6 text-center'>
-                        <p className='mb-4 text-sm text-gray-600'>
+                      <div className='flex max-h-48 flex-1 flex-col justify-center rounded bg-gray-100 p-6 text-center dark:bg-gray-700'>
+                        <p className='mb-4 text-sm text-gray-600 dark:text-gray-300'>
                           Click to reveal your 24-word seed phrase
                         </p>
                         <button
                           onClick={() => setShowSeed(true)}
-                          className='cursor-pointer rounded bg-amber-600 px-4 py-2 text-sm font-medium text-white'
+                          className='cursor-pointer rounded bg-amber-600 px-4 py-2 text-sm font-medium text-white hover:bg-amber-700 dark:bg-amber-700 dark:hover:bg-amber-600'
                         >
                           <Eye className='mr-2 inline h-4 w-4' />
                           Show Seed Phrase
@@ -324,9 +308,11 @@ export function InteractiveDemo({ isOpen, onClose }) {
                           {walletSeedPhrase.map((word, index) => (
                             <div
                               key={index}
-                              className='flex min-h-[1.2rem] items-center justify-center rounded border bg-gray-50 p-1 text-center text-xs'
+                              className='flex min-h-[1.2rem] items-center justify-center rounded border bg-gray-50 p-1 text-center text-xs dark:border-gray-600 dark:bg-gray-600 dark:text-gray-200'
                             >
-                              <span className='mr-1 text-gray-400'>{index + 1}.</span>
+                              <span className='mr-1 text-gray-400 dark:text-gray-300'>
+                                {index + 1}.
+                              </span>
                               <span>{word}</span>
                             </div>
                           ))}
@@ -342,7 +328,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
                                 '<svg class="h-4 w-4 inline mr-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Copied!'
                               setTimeout(() => (btn.innerHTML = originalText), 1500)
                             }}
-                            className='flex-1 cursor-pointer rounded bg-gray-200 py-2 text-sm text-gray-700 hover:bg-gray-300'
+                            className='flex-1 cursor-pointer rounded bg-gray-200 py-2 text-sm text-gray-700 hover:bg-gray-300 dark:bg-gray-600 dark:text-gray-200 dark:hover:bg-gray-500'
                           >
                             <Copy className='mr-1 inline h-4 w-4' />
                             Copy
@@ -362,7 +348,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
                                   'flex-1 bg-green-600 text-white py-2 rounded text-sm font-medium cursor-pointer hover:bg-green-700'
                               }, 1500)
                             }}
-                            className='flex-1 cursor-pointer rounded bg-green-600 py-2 text-sm font-medium text-white hover:bg-green-700'
+                            className='flex-1 cursor-pointer rounded bg-green-600 py-2 text-sm font-medium text-white hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-600'
                           >
                             ✓ I've Written It Down
                           </button>
@@ -371,7 +357,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
                           <motion.div
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className='mt-2 rounded bg-green-100 p-2 text-center text-xs text-green-800'
+                            className='mt-2 rounded bg-green-100 p-2 text-center text-xs text-green-800 dark:bg-green-900/50 dark:text-green-200'
                           >
                             ✓ Seed phrase confirmed and ready to proceed
                           </motion.div>
@@ -383,8 +369,10 @@ export function InteractiveDemo({ isOpen, onClose }) {
               </div>
             </div>
             <div className='max-w-lg text-center'>
-              <h3 className='mb-3 text-xl font-semibold'>Backup Your Seed Phrase</h3>
-              <p className='text-gray-600'>
+              <h3 className='mb-3 text-xl font-semibold dark:text-white'>
+                Backup Your Seed Phrase
+              </h3>
+              <p className='text-gray-600 dark:text-gray-300'>
                 This 24-word phrase is your master key. Write it down and store it securely offline.
                 This is seed phrase #1 of 2.
               </p>
@@ -395,11 +383,11 @@ export function InteractiveDemo({ isOpen, onClose }) {
       case 3:
         return (
           <div className='flex flex-col items-center'>
-            <div className='relative mx-auto mb-6 h-96 w-full max-w-md rounded-lg border-2 border-green-300 bg-white shadow-lg'>
+            <div className='relative mx-auto mb-6 h-96 w-full max-w-md rounded-lg border-2 border-green-300 bg-white shadow-lg dark:border-green-600 dark:bg-gray-800'>
               <div className='absolute inset-0 overflow-hidden rounded-lg'>
-                <div className='flex h-8 items-center border-b border-green-200 bg-green-100 px-3'>
-                  <CheckCircle className='mr-2 h-4 w-4 text-green-600' />
-                  <div className='text-xs text-green-800'>Wallet Created</div>
+                <div className='flex h-8 items-center border-b border-green-200 bg-green-100 px-3 dark:border-green-700 dark:bg-green-900/50'>
+                  <CheckCircle className='mr-2 h-4 w-4 text-green-600 dark:text-green-400' />
+                  <div className='text-xs text-green-800 dark:text-green-200'>Wallet Created</div>
                 </div>
                 <div className='flex h-full flex-col p-5 pt-6 text-center'>
                   <motion.div
@@ -407,46 +395,56 @@ export function InteractiveDemo({ isOpen, onClose }) {
                     animate={{ scale: 1 }}
                     transition={{ type: 'spring', duration: 0.3 }}
                   >
-                    <div className='mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-full bg-green-100'>
-                      <Check className='h-8 w-8 text-green-600' />
+                    <div className='mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/50'>
+                      <Check className='h-8 w-8 text-green-600 dark:text-green-400' />
                     </div>
                   </motion.div>
-                  <h3 className='mb-2 text-lg font-semibold text-green-800'>SSP Wallet Ready!</h3>
-                  <p className='mb-3 text-sm text-gray-600'>Your browser wallet is set up with:</p>
+                  <h3 className='mb-2 text-lg font-semibold text-green-800 dark:text-green-200'>
+                    SSP Wallet Ready!
+                  </h3>
+                  <p className='mb-3 text-sm text-gray-600 dark:text-gray-300'>
+                    Your browser wallet is set up with:
+                  </p>
                   <div className='mb-4 space-y-2 text-left text-sm'>
                     <div className='flex items-center'>
-                      <Check className='mr-2 h-4 w-4 flex-shrink-0 text-green-600' />
-                      <span>Secure password protection</span>
+                      <Check className='mr-2 h-4 w-4 flex-shrink-0 text-green-600 dark:text-green-400' />
+                      <span className='dark:text-gray-300'>Secure password protection</span>
                     </div>
                     <div className='flex items-center'>
-                      <Check className='mr-2 h-4 w-4 flex-shrink-0 text-green-600' />
-                      <span>24-word seed phrase backed up</span>
+                      <Check className='mr-2 h-4 w-4 flex-shrink-0 text-green-600 dark:text-green-400' />
+                      <span className='dark:text-gray-300'>24-word seed phrase backed up</span>
                     </div>
                     <div className='flex items-center'>
-                      <ArrowRight className='mr-2 h-4 w-4 flex-shrink-0 text-blue-600' />
-                      <span className='text-blue-700'>Ready for mobile app setup</span>
+                      <ArrowRight className='mr-2 h-4 w-4 flex-shrink-0 text-blue-600 dark:text-blue-400' />
+                      <span className='text-blue-700 dark:text-blue-300'>
+                        Ready for mobile app setup
+                      </span>
                     </div>
                   </div>
-                  <div className='flex items-center justify-center rounded-lg border border-blue-200 bg-blue-50 p-4'>
+                  <div className='flex items-center justify-center rounded-lg border border-blue-200 bg-blue-50 p-4 dark:border-blue-700 dark:bg-blue-900/50'>
                     <div className='text-center'>
                       <div className='mb-1 flex items-center justify-center'>
-                        <span className='text-sm font-medium text-blue-800'>Next Step</span>
+                        <span className='text-sm font-medium text-blue-800 dark:text-blue-200'>
+                          Next Step
+                        </span>
                         <motion.div
                           animate={{ x: [0, 5, 0] }}
                           transition={{ duration: 1.5, repeat: Infinity }}
                         >
-                          <ArrowRight className='ml-2 h-4 w-4 text-blue-600' />
+                          <ArrowRight className='ml-2 h-4 w-4 text-blue-600 dark:text-blue-400' />
                         </motion.div>
                       </div>
-                      <p className='text-sm text-blue-700'>Set up SSP Key mobile app</p>
+                      <p className='text-sm text-blue-700 dark:text-blue-300'>
+                        Set up SSP Key mobile app
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div className='max-w-lg text-center'>
-              <h3 className='mb-3 text-xl font-semibold'>Wallet Setup Complete</h3>
-              <p className='text-gray-600'>
+              <h3 className='mb-3 text-xl font-semibold dark:text-white'>Wallet Setup Complete</h3>
+              <p className='text-gray-600 dark:text-gray-300'>
                 Your browser wallet is ready! Now you need to set up the mobile app for the second
                 signature.
               </p>
@@ -466,34 +464,40 @@ export function InteractiveDemo({ isOpen, onClose }) {
           <div className='flex flex-col items-center'>
             <div className='mb-6 flex flex-wrap justify-center gap-4 space-x-4 sm:space-x-6'>
               {/* iOS App Store */}
-              <div className='relative h-[26rem] w-64 rounded-2xl border-2 border-gray-300 bg-gradient-to-b from-blue-500 to-blue-600 shadow-lg'>
-                <div className='absolute inset-2 overflow-hidden rounded-xl bg-white'>
+              <div className='relative h-[26rem] w-64 rounded-2xl border-2 border-gray-300 bg-gradient-to-b from-blue-500 to-blue-600 shadow-lg dark:border-gray-600'>
+                <div className='absolute inset-2 overflow-hidden rounded-xl bg-white dark:bg-gray-800'>
                   <div className='flex h-full flex-col p-4'>
                     <div className='mb-3 text-center'>
                       <Apple className='mx-auto mb-2 h-8 w-8 text-blue-600' />
-                      <h3 className='text-sm font-semibold text-blue-900'>SSP Key</h3>
-                      <p className='text-xs text-gray-600'>2FA Multisig Security</p>
+                      <h3 className='text-sm font-semibold text-blue-900 dark:text-blue-300'>
+                        SSP Key
+                      </h3>
+                      <p className='text-xs text-gray-600 dark:text-gray-300'>
+                        2FA Multisig Security
+                      </p>
                     </div>
                     <div className='flex-1 space-y-3 text-xs'>
                       <div className='flex justify-between'>
-                        <span>Rating:</span>
-                        <span>⭐⭐⭐⭐⭐ 5.0</span>
+                        <span className='dark:text-gray-300'>Rating:</span>
+                        <span className='dark:text-gray-300'>⭐⭐⭐⭐⭐ 5.0</span>
                       </div>
                       <div className='flex justify-between'>
-                        <span>Developer:</span>
-                        <span className='font-medium text-gray-800'>Influx Technologies</span>
+                        <span className='dark:text-gray-300'>Developer:</span>
+                        <span className='font-medium text-gray-800 dark:text-gray-200'>
+                          Influx Technologies
+                        </span>
                       </div>
                       <div className='flex justify-between'>
-                        <span>Downloads:</span>
-                        <span>1,000+</span>
+                        <span className='dark:text-gray-300'>Downloads:</span>
+                        <span className='dark:text-gray-300'>1,000+</span>
                       </div>
                       <div className='flex justify-between'>
-                        <span>Size:</span>
-                        <span>35 MB</span>
+                        <span className='dark:text-gray-300'>Size:</span>
+                        <span className='dark:text-gray-300'>35 MB</span>
                       </div>
                       <div className='flex justify-between'>
-                        <span>Requires:</span>
-                        <span>iOS 15.1+</span>
+                        <span className='dark:text-gray-300'>Requires:</span>
+                        <span className='dark:text-gray-300'>iOS 15.1+</span>
                       </div>
                     </div>
                     <motion.button
@@ -529,34 +533,40 @@ export function InteractiveDemo({ isOpen, onClose }) {
               </div>
 
               {/* Android Play Store */}
-              <div className='relative h-[26rem] w-64 rounded-2xl border-2 border-gray-300 bg-gradient-to-b from-green-500 to-green-600 shadow-lg'>
-                <div className='absolute inset-2 overflow-hidden rounded-xl bg-white'>
+              <div className='relative h-[26rem] w-64 rounded-2xl border-2 border-gray-300 bg-gradient-to-b from-green-500 to-green-600 shadow-lg dark:border-gray-600'>
+                <div className='absolute inset-2 overflow-hidden rounded-xl bg-white dark:bg-gray-800'>
                   <div className='flex h-full flex-col p-4'>
                     <div className='mb-3 text-center'>
                       <AndroidIcon className='mx-auto mb-2 h-8 w-8 text-green-600' />
-                      <h3 className='text-sm font-semibold text-green-900'>SSP Key</h3>
-                      <p className='text-xs text-gray-600'>2FA Multisig Security</p>
+                      <h3 className='text-sm font-semibold text-green-900 dark:text-green-300'>
+                        SSP Key
+                      </h3>
+                      <p className='text-xs text-gray-600 dark:text-gray-300'>
+                        2FA Multisig Security
+                      </p>
                     </div>
                     <div className='flex-1 space-y-3 text-xs'>
                       <div className='flex justify-between'>
-                        <span>Rating:</span>
-                        <span>⭐⭐⭐⭐⭐ 5.0</span>
+                        <span className='dark:text-gray-300'>Rating:</span>
+                        <span className='dark:text-gray-300'>⭐⭐⭐⭐⭐ 5.0</span>
                       </div>
                       <div className='flex justify-between'>
-                        <span>Developer:</span>
-                        <span className='font-medium text-gray-800'>Influx Technologies</span>
+                        <span className='dark:text-gray-300'>Developer:</span>
+                        <span className='font-medium text-gray-800 dark:text-gray-200'>
+                          Influx Technologies
+                        </span>
                       </div>
                       <div className='flex justify-between'>
-                        <span>Downloads:</span>
-                        <span>1,000+</span>
+                        <span className='dark:text-gray-300'>Downloads:</span>
+                        <span className='dark:text-gray-300'>1,000+</span>
                       </div>
                       <div className='flex justify-between'>
-                        <span>Size:</span>
-                        <span>46 MB</span>
+                        <span className='dark:text-gray-300'>Size:</span>
+                        <span className='dark:text-gray-300'>46 MB</span>
                       </div>
                       <div className='flex justify-between'>
-                        <span>Requires:</span>
-                        <span>Android 7.0+</span>
+                        <span className='dark:text-gray-300'>Requires:</span>
+                        <span className='dark:text-gray-300'>Android 7.0+</span>
                       </div>
                     </div>
                     <motion.button
@@ -595,8 +605,10 @@ export function InteractiveDemo({ isOpen, onClose }) {
               </div>
             </div>
             <div className='max-w-lg px-4 text-center'>
-              <h3 className='mb-3 text-xl font-semibold'>Download SSP Key Mobile App</h3>
-              <p className='text-gray-600'>
+              <h3 className='mb-3 text-xl font-semibold dark:text-white'>
+                Download SSP Key Mobile App
+              </h3>
+              <p className='text-gray-600 dark:text-gray-300'>
                 Install the mobile companion app from App Store or Google Play. This provides the
                 second signature for your transactions.
               </p>
@@ -607,26 +619,28 @@ export function InteractiveDemo({ isOpen, onClose }) {
       case 1:
         return (
           <div className='flex flex-col items-center'>
-            <div className='relative mx-auto mb-6 h-96 w-64 rounded-2xl border-2 border-gray-300 bg-black shadow-lg'>
-              <div className='absolute inset-1 overflow-hidden rounded-xl bg-white'>
+            <div className='relative mx-auto mb-6 h-96 w-64 rounded-2xl border-2 border-gray-300 bg-black shadow-lg dark:border-gray-600'>
+              <div className='absolute inset-1 overflow-hidden rounded-xl bg-white dark:bg-gray-800'>
                 <div className='relative h-6 rounded-t-xl bg-gray-900'>
                   <div className='absolute top-1 left-1/2 h-1 w-8 -translate-x-1/2 transform rounded-full bg-gray-600'></div>
                 </div>
                 <div className='flex h-full flex-col p-4 pt-3'>
                   <div className='mb-4 text-center'>
                     <Image
-                      src='/ssp-logo-black.svg'
+                      src={isDark ? '/ssp-logo-white.svg' : '/ssp-logo-black.svg'}
                       alt='SSP Key'
                       width={30}
                       height={30}
                       className='mx-auto mb-2'
                     />
-                    <h4 className='text-sm font-semibold text-gray-900'>SSP Key Setup</h4>
+                    <h4 className='text-sm font-semibold text-gray-900 dark:text-white'>
+                      SSP Key Setup
+                    </h4>
                   </div>
 
                   <div className='max-h-48 flex-1 space-y-3'>
                     <div>
-                      <label className='mb-1 block text-left text-sm text-gray-600'>
+                      <label className='mb-1 block text-left text-sm text-gray-600 dark:text-gray-300'>
                         App Password
                       </label>
                       <input
@@ -634,19 +648,19 @@ export function InteractiveDemo({ isOpen, onClose }) {
                         value={mobileKeyPassword}
                         onChange={e => setMobileKeyPassword(e.target.value)}
                         placeholder='Create password'
-                        className='w-full rounded border border-gray-300 px-3 py-2 text-sm'
+                        className='w-full rounded border border-gray-300 px-3 py-2 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400'
                       />
                     </div>
 
-                    <div className='rounded border border-blue-200 bg-blue-50 p-2'>
-                      <label className='flex items-center text-sm'>
+                    <div className='rounded border border-blue-200 bg-blue-50 p-2 dark:border-blue-700 dark:bg-blue-900/50'>
+                      <label className='flex items-center text-sm dark:text-gray-300'>
                         <input
                           type='checkbox'
                           className='mr-2'
                           checked={biometricsEnabled}
                           onChange={e => setBiometricsEnabled(e.target.checked)}
                         />
-                        <Fingerprint className='mr-2 h-4 w-4' />
+                        <Fingerprint className='mr-2 h-4 w-4 dark:text-gray-300' />
                         <span>Enable Biometrics</span>
                       </label>
                     </div>
@@ -665,7 +679,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className='mt-2 rounded bg-green-100 p-2 text-sm text-green-800'
+                      className='mt-2 rounded bg-green-100 p-2 text-sm text-green-800 dark:bg-green-900/50 dark:text-green-200'
                     >
                       ✓ Touch ID / Face ID Enabled
                     </motion.div>
@@ -674,8 +688,8 @@ export function InteractiveDemo({ isOpen, onClose }) {
               </div>
             </div>
             <div className='max-w-lg text-center'>
-              <h3 className='mb-3 text-xl font-semibold'>Secure Your Mobile Key</h3>
-              <p className='text-gray-600'>
+              <h3 className='mb-3 text-xl font-semibold dark:text-white'>Secure Your Mobile Key</h3>
+              <p className='text-gray-600 dark:text-gray-300'>
                 Create a password for your mobile app and enable biometric authentication for
                 enhanced security.
               </p>
@@ -686,15 +700,15 @@ export function InteractiveDemo({ isOpen, onClose }) {
       case 2:
         return (
           <div className='flex flex-col items-center'>
-            <div className='relative mx-auto mb-6 h-96 w-64 rounded-2xl border-2 border-amber-300 bg-black shadow-lg'>
-              <div className='absolute inset-1 overflow-hidden rounded-xl bg-white'>
+            <div className='relative mx-auto mb-6 h-96 w-64 rounded-2xl border-2 border-amber-300 bg-black shadow-lg dark:border-amber-600'>
+              <div className='absolute inset-1 overflow-hidden rounded-xl bg-white dark:bg-gray-800'>
                 <div className='relative h-6 rounded-t-xl bg-gray-900'>
                   <div className='absolute top-1 left-1/2 h-1 w-8 -translate-x-1/2 transform rounded-full bg-gray-600'></div>
                 </div>
                 <div className='flex h-full flex-col overflow-hidden p-3 pt-2'>
-                  <div className='mb-3 rounded bg-amber-100 p-2'>
-                    <AlertCircle className='mx-auto mb-1 h-4 w-4 text-amber-600' />
-                    <p className='text-center text-sm font-semibold text-amber-800'>
+                  <div className='mb-3 rounded bg-amber-100 p-2 dark:bg-amber-900/50'>
+                    <AlertCircle className='mx-auto mb-1 h-4 w-4 text-amber-600 dark:text-amber-400' />
+                    <p className='text-center text-sm font-semibold text-amber-800 dark:text-amber-200'>
                       Key Seed Phrase
                     </p>
                   </div>
@@ -702,12 +716,12 @@ export function InteractiveDemo({ isOpen, onClose }) {
                   <div className='flex max-h-44 min-h-0 flex-1 flex-col'>
                     {!showKeySeed ? (
                       <div className='flex flex-1 flex-col justify-center text-center'>
-                        <p className='mb-3 text-sm text-gray-600'>
+                        <p className='mb-3 text-sm text-gray-600 dark:text-gray-300'>
                           Generate your separate mobile key seed phrase
                         </p>
                         <button
                           onClick={() => setShowKeySeed(true)}
-                          className='w-full cursor-pointer rounded bg-amber-600 px-3 py-2 text-sm font-medium text-white'
+                          className='w-full cursor-pointer rounded bg-amber-600 px-3 py-2 text-sm font-medium text-white hover:bg-amber-700 dark:bg-amber-700 dark:hover:bg-amber-600'
                         >
                           <Eye className='mr-2 inline h-4 w-4' />
                           Show Key Seed
@@ -720,9 +734,9 @@ export function InteractiveDemo({ isOpen, onClose }) {
                           {keySeedPhrase.map((word, index) => (
                             <div
                               key={index}
-                              className='flex min-h-[1.2rem] items-center justify-center rounded bg-gray-50 p-1 text-center text-xs'
+                              className='flex min-h-[1.2rem] items-center justify-center rounded bg-gray-50 p-1 text-center text-xs dark:bg-gray-600 dark:text-gray-200'
                             >
-                              <span className='text-gray-400'>{index + 1}.</span>
+                              <span className='text-gray-400 dark:text-gray-300'>{index + 1}.</span>
                               <span className='ml-1'>{word}</span>
                             </div>
                           ))}
@@ -738,7 +752,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
                               btn.innerHTML = '✓ Copied!'
                               setTimeout(() => (btn.innerHTML = originalText), 1500)
                             }}
-                            className='flex-1 cursor-pointer rounded bg-gray-200 py-1 text-xs text-gray-700 hover:bg-gray-300'
+                            className='flex-1 cursor-pointer rounded bg-gray-200 py-1 text-xs text-gray-700 hover:bg-gray-300 dark:bg-gray-600 dark:text-gray-200 dark:hover:bg-gray-500'
                           >
                             Copy
                           </button>
@@ -757,7 +771,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
                                   'flex-1 bg-green-600 text-white py-1 rounded text-xs font-medium cursor-pointer hover:bg-green-700'
                               }, 1500)
                             }}
-                            className='flex-1 cursor-pointer rounded bg-green-600 py-1 text-xs font-medium text-white hover:bg-green-700'
+                            className='flex-1 cursor-pointer rounded bg-green-600 py-1 text-xs font-medium text-white hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-600'
                           >
                             ✓ Saved
                           </button>
@@ -768,7 +782,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
                             <motion.div
                               initial={{ opacity: 0, y: 10 }}
                               animate={{ opacity: 1, y: 0 }}
-                              className='rounded bg-green-100 px-2 py-1 text-center text-xs text-green-800'
+                              className='rounded bg-green-100 px-2 py-1 text-center text-xs text-green-800 dark:bg-green-900/50 dark:text-green-200'
                             >
                               ✓ Key seed confirmed
                             </motion.div>
@@ -778,8 +792,8 @@ export function InteractiveDemo({ isOpen, onClose }) {
                     )}
                   </div>
 
-                  <div className='mt-6 rounded border border-red-200 bg-red-50 p-2'>
-                    <p className='text-center text-xs text-red-800'>
+                  <div className='mt-6 rounded border border-red-200 bg-red-50 p-2 dark:border-red-700 dark:bg-red-900/50'>
+                    <p className='text-center text-xs text-red-800 dark:text-red-200'>
                       ⚠️ Store separately from wallet seed!
                     </p>
                   </div>
@@ -787,8 +801,8 @@ export function InteractiveDemo({ isOpen, onClose }) {
               </div>
             </div>
             <div className='max-w-lg text-center'>
-              <h3 className='mb-3 text-xl font-semibold'>Backup Mobile Key Seed</h3>
-              <p className='text-gray-600'>
+              <h3 className='mb-3 text-xl font-semibold dark:text-white'>Backup Mobile Key Seed</h3>
+              <p className='text-gray-600 dark:text-gray-300'>
                 This is a separate 24-word seed phrase for your mobile key. Both seeds are required
                 for full SSP recovery.
               </p>
@@ -799,8 +813,8 @@ export function InteractiveDemo({ isOpen, onClose }) {
       case 3:
         return (
           <div className='flex flex-col items-center'>
-            <div className='relative mx-auto mb-6 h-96 w-64 rounded-2xl border-2 border-green-300 bg-black shadow-lg'>
-              <div className='absolute inset-1 overflow-hidden rounded-xl bg-white'>
+            <div className='relative mx-auto mb-6 h-96 w-64 rounded-2xl border-2 border-green-300 bg-black shadow-lg dark:border-green-600'>
+              <div className='absolute inset-1 overflow-hidden rounded-xl bg-white dark:bg-gray-800'>
                 <div className='relative h-6 rounded-t-xl bg-gray-900'>
                   <div className='absolute top-1 left-1/2 h-1 w-8 -translate-x-1/2 transform rounded-full bg-gray-600'></div>
                 </div>
@@ -810,33 +824,33 @@ export function InteractiveDemo({ isOpen, onClose }) {
                     animate={{ scale: 1 }}
                     transition={{ type: 'spring', duration: 0.3 }}
                   >
-                    <div className='mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-green-100'>
-                      <Check className='h-7 w-7 text-green-600' />
+                    <div className='mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/50'>
+                      <Check className='h-7 w-7 text-green-600 dark:text-green-400' />
                     </div>
                   </motion.div>
-                  <h4 className='mb-3 text-center text-base font-semibold text-green-800'>
+                  <h4 className='mb-3 text-center text-base font-semibold text-green-800 dark:text-green-200'>
                     SSP Key Ready!
                   </h4>
                   <div className='max-h-32 flex-1 space-y-2 text-left text-sm'>
                     <div className='flex items-center'>
-                      <Check className='mr-2 h-4 w-4 flex-shrink-0 text-green-600' />
-                      <span>Password protection</span>
+                      <Check className='mr-2 h-4 w-4 flex-shrink-0 text-green-600 dark:text-green-400' />
+                      <span className='dark:text-gray-300'>Password protection</span>
                     </div>
                     <div className='flex items-center'>
-                      <Check className='mr-2 h-4 w-4 flex-shrink-0 text-green-600' />
-                      <span>Biometric security</span>
+                      <Check className='mr-2 h-4 w-4 flex-shrink-0 text-green-600 dark:text-green-400' />
+                      <span className='dark:text-gray-300'>Biometric security</span>
                     </div>
                     <div className='flex items-center'>
-                      <Check className='mr-2 h-4 w-4 flex-shrink-0 text-green-600' />
-                      <span>Key seed backed up</span>
+                      <Check className='mr-2 h-4 w-4 flex-shrink-0 text-green-600 dark:text-green-400' />
+                      <span className='dark:text-gray-300'>Key seed backed up</span>
                     </div>
                     <div className='flex items-center'>
-                      <Wifi className='mr-2 h-4 w-4 flex-shrink-0 text-blue-600' />
-                      <span>Ready to pair</span>
+                      <Wifi className='mr-2 h-4 w-4 flex-shrink-0 text-blue-600 dark:text-blue-400' />
+                      <span className='dark:text-gray-300'>Ready to pair</span>
                     </div>
                   </div>
-                  <div className='mt-3 rounded border border-blue-200 bg-blue-50 p-3'>
-                    <p className='text-center text-sm text-blue-800'>
+                  <div className='mt-3 rounded border border-blue-200 bg-blue-50 p-3 dark:border-blue-700 dark:bg-blue-900/50'>
+                    <p className='text-center text-sm text-blue-800 dark:text-blue-200'>
                       Next: Scan QR code to connect devices
                     </p>
                   </div>
@@ -845,8 +859,10 @@ export function InteractiveDemo({ isOpen, onClose }) {
             </div>
 
             <div className='max-w-lg text-center'>
-              <h3 className='mb-3 text-xl font-semibold'>Mobile Key Setup Complete</h3>
-              <p className='text-gray-600'>
+              <h3 className='mb-3 text-xl font-semibold dark:text-white'>
+                Mobile Key Setup Complete
+              </h3>
+              <p className='text-gray-600 dark:text-gray-300'>
                 Your mobile app is ready! Now let's connect it to your browser wallet for the 2-of-2
                 security.
               </p>
@@ -866,18 +882,22 @@ export function InteractiveDemo({ isOpen, onClose }) {
           <div className='flex flex-col items-center'>
             <div className='mb-6 flex flex-wrap justify-center gap-4 space-x-6'>
               {/* Browser Extension */}
-              <div className='relative h-[420px] w-96 rounded-lg border-2 border-blue-300 bg-white shadow-lg'>
+              <div className='relative h-[420px] w-96 rounded-lg border-2 border-blue-300 bg-white shadow-lg dark:border-blue-600 dark:bg-gray-800'>
                 <div className='absolute inset-0 overflow-hidden rounded-lg'>
-                  <div className='flex h-8 items-center border-b border-blue-200 bg-blue-100 px-3'>
-                    <Chrome className='mr-2 h-4 w-4 text-blue-600' />
-                    <div className='text-xs text-blue-800'>SSP Wallet - Sync Device</div>
+                  <div className='flex h-8 items-center border-b border-blue-200 bg-blue-100 px-3 dark:border-blue-700 dark:bg-blue-900/50'>
+                    <Chrome className='mr-2 h-4 w-4 text-blue-600 dark:text-blue-400' />
+                    <div className='text-xs text-blue-800 dark:text-blue-200'>
+                      SSP Wallet - Sync Device
+                    </div>
                   </div>
                   <div className='flex h-full flex-col items-center p-5 pt-4'>
-                    <h4 className='mb-4 text-base font-semibold'>Connect Mobile Device</h4>
+                    <h4 className='mb-4 text-base font-semibold dark:text-white'>
+                      Connect Mobile Device
+                    </h4>
 
                     {/* QR Code with SSP Logo */}
-                    <div className='relative mb-4 rounded-lg border-2 border-gray-300 bg-white p-4'>
-                      <div className='relative h-32 w-32 rounded border border-gray-200 bg-white'>
+                    <div className='relative mb-4 rounded-lg border-2 border-gray-300 bg-white p-4 dark:border-gray-600 dark:bg-gray-700'>
+                      <div className='relative h-32 w-32 rounded border border-gray-200 bg-white dark:border-gray-600 dark:bg-gray-600'>
                         {/* Enhanced QR Code Pattern */}
                         <div
                           className='absolute inset-0 grid grid-cols-21 p-1'
@@ -971,20 +991,27 @@ export function InteractiveDemo({ isOpen, onClose }) {
 
                         {/* SSP Logo in center */}
                         <div className='absolute inset-0 flex items-center justify-center'>
-                          <div className='rounded border border-gray-300 bg-white p-1'>
-                            <Image src='/ssp-logo-black.svg' alt='SSP' width={16} height={16} />
+                          <div className='rounded border border-gray-300 bg-white p-1 dark:border-gray-500 dark:bg-gray-500'>
+                            <Image
+                              src={isDark ? '/ssp-logo-white.svg' : '/ssp-logo-black.svg'}
+                              alt='SSP'
+                              width={16}
+                              height={16}
+                            />
                           </div>
                         </div>
                       </div>
                     </div>
 
-                    <p className='mb-4 text-center text-sm text-gray-600'>
+                    <p className='mb-4 text-center text-sm text-gray-600 dark:text-gray-300'>
                       Scan this QR code with SSP Key app
                     </p>
 
-                    <div className='mb-3 w-full rounded border border-gray-200 bg-gray-50 p-3'>
-                      <div className='mb-1 text-xs text-gray-600'>Connection ID:</div>
-                      <div className='rounded bg-white p-2 font-mono text-xs break-all'>
+                    <div className='mb-3 w-full rounded border border-gray-200 bg-gray-50 p-3 dark:border-gray-600 dark:bg-gray-700'>
+                      <div className='mb-1 text-xs text-gray-600 dark:text-gray-300'>
+                        Connection ID:
+                      </div>
+                      <div className='rounded bg-white p-2 font-mono text-xs break-all dark:bg-gray-600 dark:text-gray-200'>
                         eth:xpub661MyMwAqRbcFtXgS5sYJABqqG9YLmC4Q1Rdap9gSE8Nq...
                       </div>
                     </div>
@@ -992,7 +1019,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
                     <div className='text-center'>
                       <button
                         onClick={() => window.open('https://sspwallet.io', '_blank')}
-                        className='text-xs text-blue-600 hover:underline'
+                        className='cursor-pointer text-xs text-blue-600 hover:underline'
                       >
                         Learn more at sspwallet.io
                       </button>
@@ -1002,18 +1029,18 @@ export function InteractiveDemo({ isOpen, onClose }) {
               </div>
 
               {/* Mobile App */}
-              <div className='relative h-[420px] w-64 rounded-2xl border-2 border-green-300 bg-black shadow-lg'>
-                <div className='absolute inset-1 overflow-hidden rounded-xl bg-white'>
+              <div className='relative h-[420px] w-64 rounded-2xl border-2 border-green-300 bg-black shadow-lg dark:border-green-600'>
+                <div className='absolute inset-1 overflow-hidden rounded-xl bg-white dark:bg-gray-800'>
                   <div className='relative h-6 rounded-t-xl bg-gray-900'>
                     <div className='absolute top-1 left-1/2 h-1 w-8 -translate-x-1/2 transform rounded-full bg-gray-600'></div>
                   </div>
                   <div className='flex h-full flex-col p-3 pt-2'>
                     <div className='mb-3 text-center'>
                       <QrCode className='mx-auto mb-2 h-8 w-8 text-green-600' />
-                      <h4 className='text-sm font-semibold'>Scan QR Code</h4>
+                      <h4 className='text-sm font-semibold dark:text-white'>Scan QR Code</h4>
                     </div>
 
-                    <div className='flex max-h-48 flex-1 items-center justify-center rounded border-2 border-dashed border-green-300 p-3'>
+                    <div className='flex max-h-48 flex-1 items-center justify-center rounded border-2 border-dashed border-green-300 p-3 dark:border-green-500'>
                       <div className='text-center'>
                         <div className='mx-auto mb-2 flex h-16 w-16 items-center justify-center rounded border-2 border-green-400'>
                           <motion.div
@@ -1024,11 +1051,13 @@ export function InteractiveDemo({ isOpen, onClose }) {
                             📷
                           </motion.div>
                         </div>
-                        <p className='text-xs text-gray-600'>Position QR code in frame</p>
+                        <p className='text-xs text-gray-600 dark:text-gray-300'>
+                          Position QR code in frame
+                        </p>
                       </div>
                     </div>
 
-                    <button className='mt-2 w-full rounded bg-green-600 py-2 text-sm font-medium text-white'>
+                    <button className='mt-2 w-full cursor-pointer rounded bg-green-600 py-2 text-sm font-medium text-white'>
                       Ready to Scan
                     </button>
                   </div>
@@ -1037,8 +1066,10 @@ export function InteractiveDemo({ isOpen, onClose }) {
             </div>
 
             <div className='max-w-lg px-4 text-center'>
-              <h3 className='mb-3 text-xl font-semibold'>Generate Pairing QR Code</h3>
-              <p className='text-gray-600'>
+              <h3 className='mb-3 text-xl font-semibold dark:text-white'>
+                Generate Pairing QR Code
+              </h3>
+              <p className='text-gray-600 dark:text-gray-300'>
                 Your browser wallet shows a QR code with SSP logo. Open SSP Key app and scan to
                 connect securely.
               </p>
@@ -1051,16 +1082,16 @@ export function InteractiveDemo({ isOpen, onClose }) {
           <div className='flex flex-col items-center'>
             <div className='mb-6 flex justify-center space-x-6'>
               {/* Browser Extension */}
-              <div className='relative h-[450px] w-96 rounded-lg border-2 border-blue-300 bg-white shadow-lg'>
+              <div className='relative h-[450px] w-96 rounded-lg border-2 border-blue-300 bg-white shadow-lg dark:border-blue-600 dark:bg-gray-800'>
                 <div className='absolute inset-0 overflow-hidden rounded-lg'>
-                  <div className='flex h-8 items-center border-b border-blue-200 bg-blue-100 px-3'>
+                  <div className='flex h-8 items-center border-b border-blue-200 bg-blue-100 px-3 dark:border-blue-700 dark:bg-blue-900/50'>
                     <motion.div
                       animate={{ scale: [1, 1.2, 1] }}
                       transition={{ duration: 1, repeat: Infinity }}
                     >
-                      <Wifi className='mr-2 h-4 w-4 text-blue-600' />
+                      <Wifi className='mr-2 h-4 w-4 text-blue-600 dark:text-blue-400' />
                     </motion.div>
-                    <div className='text-xs text-blue-800'>Synchronising...</div>
+                    <div className='text-xs text-blue-800 dark:text-blue-200'>Synchronising...</div>
                   </div>
                   <div className='flex h-full flex-col items-center p-5 pt-6'>
                     <motion.div
@@ -1068,11 +1099,13 @@ export function InteractiveDemo({ isOpen, onClose }) {
                       transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
                       className='mb-6 h-16 w-16 rounded-full border-4 border-blue-200 border-t-blue-600'
                     ></motion.div>
-                    <h4 className='mb-3 text-lg font-semibold'>Pairing in Progress</h4>
-                    <p className='mb-6 text-center text-sm text-gray-600'>
+                    <h4 className='mb-3 text-lg font-semibold dark:text-white'>
+                      Pairing in Progress
+                    </h4>
+                    <p className='mb-6 text-center text-sm text-gray-600 dark:text-gray-300'>
                       Establishing secure connection with mobile device...
                     </p>
-                    <div className='mb-4 h-3 w-full rounded-full bg-gray-200'>
+                    <div className='mb-4 h-3 w-full rounded-full bg-gray-200 dark:bg-gray-600'>
                       <motion.div
                         className='h-3 rounded-full bg-blue-600'
                         initial={{ width: '0%' }}
@@ -1080,12 +1113,12 @@ export function InteractiveDemo({ isOpen, onClose }) {
                         transition={{ duration: 4, ease: 'easeInOut' }}
                       ></motion.div>
                     </div>
-                    <div className='mb-4 text-sm text-gray-500'>
+                    <div className='mb-4 text-sm text-gray-500 dark:text-gray-400'>
                       Exchanging encryption keys and public keys...
                     </div>
 
-                    <div className='mb-2 w-full rounded border border-blue-200 bg-blue-50 p-3'>
-                      <div className='text-center text-xs text-blue-800'>
+                    <div className='mb-2 w-full rounded border border-blue-200 bg-blue-50 p-3 dark:border-blue-700 dark:bg-blue-900/50'>
+                      <div className='text-center text-xs text-blue-800 dark:text-blue-200'>
                         <div className='mb-1 font-semibold'>Connection Details</div>
                         <div>Establishing secure SSP relay connection...</div>
                       </div>
@@ -1095,10 +1128,10 @@ export function InteractiveDemo({ isOpen, onClose }) {
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: devicesPaired ? 1 : 0, scale: devicesPaired ? 1 : 0.8 }}
                       transition={{ duration: 0.3, delay: 2 }}
-                      className='rounded bg-green-100 p-2 text-center'
+                      className='rounded bg-green-100 p-2 text-center dark:bg-green-900/50'
                     >
                       <CheckCircle className='mx-auto mb-1 h-5 w-5 text-green-600' />
-                      <p className='text-xs font-semibold text-green-800'>
+                      <p className='text-xs font-semibold text-green-800 dark:text-green-200'>
                         Synchronisation Complete!
                       </p>
                     </motion.div>
@@ -1107,13 +1140,13 @@ export function InteractiveDemo({ isOpen, onClose }) {
               </div>
 
               {/* Mobile App */}
-              <div className='relative h-[450px] w-64 rounded-2xl border-2 border-green-300 bg-black shadow-lg'>
-                <div className='absolute inset-1 overflow-hidden rounded-xl bg-white'>
+              <div className='relative h-[450px] w-64 rounded-2xl border-2 border-green-300 bg-black shadow-lg dark:border-green-600'>
+                <div className='absolute inset-1 overflow-hidden rounded-xl bg-white dark:bg-gray-800'>
                   <div className='relative h-6 rounded-t-xl bg-gray-900'>
                     <div className='absolute top-1 left-1/2 h-1 w-8 -translate-x-1/2 transform rounded-full bg-gray-600'></div>
                   </div>
                   <div className='flex h-full flex-col justify-start p-2 pt-5 pb-10'>
-                    <div className='mb-1.5 rounded bg-green-100 p-1.5'>
+                    <div className='mb-1.5 rounded bg-green-100 p-1.5 dark:bg-green-900/50'>
                       <div className='text-center'>
                         <motion.div
                           animate={{ scale: [1, 1.1, 1] }}
@@ -1121,22 +1154,26 @@ export function InteractiveDemo({ isOpen, onClose }) {
                         >
                           <CheckCircle className='mx-auto mb-0.5 h-4 w-4 text-green-600' />
                         </motion.div>
-                        <p className='text-xs font-semibold text-green-800'>QR Code Scanned!</p>
+                        <p className='text-xs font-semibold text-green-800 dark:text-green-200'>
+                          QR Code Scanned!
+                        </p>
                       </div>
                     </div>
 
                     <div className='mb-1.5 flex-1 space-y-1 text-xs'>
-                      <div className='rounded bg-gray-50 p-1'>
-                        <div className='text-gray-600'>Browser Wallet:</div>
-                        <div className='font-mono text-xs'>Chrome Extension</div>
+                      <div className='rounded bg-gray-50 p-1 dark:bg-gray-700'>
+                        <div className='text-gray-600 dark:text-gray-300'>Browser Wallet:</div>
+                        <div className='font-mono text-xs dark:text-gray-200'>Chrome Extension</div>
                       </div>
-                      <div className='rounded bg-gray-50 p-1'>
-                        <div className='text-gray-600'>Connection ID:</div>
-                        <div className='font-mono text-xs break-all'>eth:xpub661My...</div>
+                      <div className='rounded bg-gray-50 p-1 dark:bg-gray-700'>
+                        <div className='text-gray-600 dark:text-gray-300'>Connection ID:</div>
+                        <div className='font-mono text-xs break-all dark:text-gray-200'>
+                          eth:xpub661My...
+                        </div>
                       </div>
-                      <div className='rounded bg-gray-50 p-1'>
-                        <div className='text-gray-600'>Encryption:</div>
-                        <div className='font-mono text-xs'>AES-256-GCM</div>
+                      <div className='rounded bg-gray-50 p-1 dark:bg-gray-700'>
+                        <div className='text-gray-600 dark:text-gray-300'>Encryption:</div>
+                        <div className='font-mono text-xs dark:text-gray-200'>AES-256-GCM</div>
                       </div>
                     </div>
 
@@ -1147,7 +1184,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
                         setDevicesPaired(true)
                         setTimeout(() => goNext(), 1000)
                       }}
-                      className='w-full rounded bg-green-600 py-1.5 text-sm font-medium text-white'
+                      className='w-full cursor-pointer rounded bg-green-600 py-1.5 text-sm font-medium text-white'
                     >
                       Confirm Pairing
                     </motion.button>
@@ -1157,8 +1194,8 @@ export function InteractiveDemo({ isOpen, onClose }) {
             </div>
 
             <div className='max-w-lg px-4 text-center'>
-              <h3 className='mb-3 text-xl font-semibold'>Scanning QR Code</h3>
-              <p className='text-gray-600'>
+              <h3 className='mb-3 text-xl font-semibold dark:text-white'>Scanning QR Code</h3>
+              <p className='text-gray-600 dark:text-gray-300'>
                 The mobile app reads the QR code and establishes an encrypted connection with your
                 browser wallet.
               </p>
@@ -1171,11 +1208,13 @@ export function InteractiveDemo({ isOpen, onClose }) {
           <div className='flex flex-col items-center'>
             <div className='mb-6 flex justify-center space-x-6'>
               {/* Browser Extension */}
-              <div className='relative h-[450px] w-96 rounded-lg border-2 border-green-300 bg-white shadow-lg'>
+              <div className='relative h-[450px] w-96 rounded-lg border-2 border-green-300 bg-white shadow-lg dark:border-green-600 dark:bg-gray-800'>
                 <div className='absolute inset-0 overflow-hidden rounded-lg'>
-                  <div className='flex h-8 items-center border-b border-green-200 bg-green-100 px-3'>
-                    <CheckCircle className='mr-2 h-4 w-4 text-green-600' />
-                    <div className='text-xs text-green-800'>Device Connected</div>
+                  <div className='flex h-8 items-center border-b border-green-200 bg-green-100 px-3 dark:border-green-700 dark:bg-green-900/50'>
+                    <CheckCircle className='mr-2 h-4 w-4 text-green-600 dark:text-green-400' />
+                    <div className='text-xs text-green-800 dark:text-green-200'>
+                      Device Connected
+                    </div>
                   </div>
                   <div className='flex h-full flex-col items-center p-5 pt-6'>
                     <motion.div
@@ -1183,29 +1222,35 @@ export function InteractiveDemo({ isOpen, onClose }) {
                       animate={{ scale: 1 }}
                       transition={{ type: 'spring', duration: 0.3 }}
                     >
-                      <div className='mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-green-100'>
-                        <Check className='h-10 w-10 text-green-600' />
+                      <div className='mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/50'>
+                        <Check className='h-10 w-10 text-green-600 dark:text-green-400' />
                       </div>
                     </motion.div>
-                    <h4 className='mb-2 text-lg font-semibold text-green-800'>
+                    <h4 className='mb-2 text-lg font-semibold text-green-800 dark:text-green-200'>
                       Successfully Paired!
                     </h4>
-                    <p className='mb-4 text-center text-sm text-gray-600'>
+                    <p className='mb-4 text-center text-sm text-gray-600 dark:text-gray-300'>
                       Your devices are now securely connected
                     </p>
 
                     <div className='mb-4 w-full space-y-3 text-sm'>
-                      <div className='flex items-center justify-between rounded border border-green-200 bg-green-50 p-3'>
-                        <span>🔐 Encryption:</span>
-                        <span className='font-semibold text-green-700'>Active</span>
+                      <div className='flex items-center justify-between rounded border border-green-200 bg-green-50 p-3 dark:border-green-700 dark:bg-green-900/50'>
+                        <span className='dark:text-gray-300'>🔐 Encryption:</span>
+                        <span className='font-semibold text-green-700 dark:text-green-300'>
+                          Active
+                        </span>
                       </div>
-                      <div className='flex items-center justify-between rounded border border-green-200 bg-green-50 p-3'>
-                        <span>📱 Mobile Device:</span>
-                        <span className='font-semibold text-green-700'>Connected</span>
+                      <div className='flex items-center justify-between rounded border border-green-200 bg-green-50 p-3 dark:border-green-700 dark:bg-green-900/50'>
+                        <span className='dark:text-gray-300'>📱 Mobile Device:</span>
+                        <span className='font-semibold text-green-700 dark:text-green-300'>
+                          Connected
+                        </span>
                       </div>
-                      <div className='flex items-center justify-between rounded border border-green-200 bg-green-50 p-3'>
-                        <span>🔑 2-of-2 Multisig:</span>
-                        <span className='font-semibold text-green-700'>Ready</span>
+                      <div className='flex items-center justify-between rounded border border-green-200 bg-green-50 p-3 dark:border-green-700 dark:bg-green-900/50'>
+                        <span className='dark:text-gray-300'>🔑 2-of-2 Multisig:</span>
+                        <span className='font-semibold text-green-700 dark:text-green-300'>
+                          Ready
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -1213,37 +1258,47 @@ export function InteractiveDemo({ isOpen, onClose }) {
               </div>
 
               {/* Mobile App */}
-              <div className='relative h-[450px] w-64 rounded-2xl border-2 border-green-300 bg-black shadow-lg'>
-                <div className='absolute inset-1 overflow-hidden rounded-xl bg-white'>
+              <div className='relative h-[450px] w-64 rounded-2xl border-2 border-green-300 bg-black shadow-lg dark:border-green-600'>
+                <div className='absolute inset-1 overflow-hidden rounded-xl bg-white dark:bg-gray-800'>
                   <div className='relative h-6 rounded-t-xl bg-gray-900'>
                     <div className='absolute top-1 left-1/2 h-1 w-8 -translate-x-1/2 transform rounded-full bg-gray-600'></div>
                   </div>
                   <div className='pg-5 flex h-full flex-col justify-start p-2 pt-5 pb-10'>
-                    <div className='mb-1.5 rounded bg-green-100 p-1.5 text-center'>
+                    <div className='mb-1.5 rounded bg-green-100 p-1.5 text-center dark:bg-green-900/50'>
                       <Shield className='mx-auto mb-0.5 h-4 w-4 text-green-600' />
-                      <p className='text-xs font-semibold text-green-800'>Secure Connection</p>
+                      <p className='text-xs font-semibold text-green-800 dark:text-green-200'>
+                        Secure Connection
+                      </p>
                     </div>
 
                     <div className='mb-1.5 flex-1 space-y-1 text-xs'>
-                      <div className='rounded bg-gray-50 p-1 text-center'>
-                        <div className='mb-0.5 text-gray-600'>Ready for Transactions</div>
+                      <div className='rounded bg-gray-50 p-1 text-center dark:bg-gray-700'>
+                        <div className='mb-0.5 text-gray-600 dark:text-gray-300'>
+                          Ready for Transactions
+                        </div>
                         <div className='flex items-center justify-center'>
                           <div className='mr-1 h-2 w-2 animate-pulse rounded-full bg-green-500'></div>
-                          <span className='text-xs font-semibold text-green-700'>Online</span>
+                          <span className='text-xs font-semibold text-green-700 dark:text-green-300'>
+                            Online
+                          </span>
                         </div>
                       </div>
-                      <div className='rounded bg-gray-50 p-1'>
-                        <div className='text-gray-600'>Connection Type:</div>
-                        <div className='text-xs font-semibold'>SSP Relay Secured</div>
+                      <div className='rounded bg-gray-50 p-1 dark:bg-gray-700'>
+                        <div className='text-gray-600 dark:text-gray-300'>Connection Type:</div>
+                        <div className='text-xs font-semibold dark:text-gray-200'>
+                          SSP Relay Secured
+                        </div>
                       </div>
-                      <div className='rounded bg-gray-50 p-1'>
-                        <div className='text-gray-600'>Multisig Status:</div>
-                        <div className='text-xs font-semibold text-green-700'>2-of-2 Active</div>
+                      <div className='rounded bg-gray-50 p-1 dark:bg-gray-700'>
+                        <div className='text-gray-600 dark:text-gray-300'>Multisig Status:</div>
+                        <div className='text-xs font-semibold text-green-700 dark:text-green-300'>
+                          2-of-2 Active
+                        </div>
                       </div>
                     </div>
 
-                    <div className='rounded border border-blue-200 bg-blue-50 p-1'>
-                      <p className='text-center text-xs text-blue-800'>
+                    <div className='rounded border border-blue-200 bg-blue-50 p-1 dark:border-blue-700 dark:bg-blue-900/50'>
+                      <p className='text-center text-xs text-blue-800 dark:text-blue-200'>
                         Wallet protected by true 2-of-2 multisig!
                       </p>
                     </div>
@@ -1253,8 +1308,10 @@ export function InteractiveDemo({ isOpen, onClose }) {
             </div>
 
             <div className='max-w-lg px-4 text-center'>
-              <h3 className='mb-3 text-xl font-semibold'>Devices Successfully Paired</h3>
-              <p className='text-gray-600'>
+              <h3 className='mb-3 text-xl font-semibold dark:text-white'>
+                Devices Successfully Paired
+              </h3>
+              <p className='text-gray-600 dark:text-gray-300'>
                 Perfect! Your browser and mobile are now connected with end-to-end encryption. You
                 can now send secure transactions.
               </p>
@@ -1272,51 +1329,57 @@ export function InteractiveDemo({ isOpen, onClose }) {
       case 0:
         return (
           <div className='flex flex-col items-center'>
-            <div className='relative mx-auto mb-4 h-[420px] w-full max-w-sm rounded-lg border-2 border-gray-200 bg-white shadow-lg'>
+            <div className='relative mx-auto mb-4 h-[420px] w-full max-w-sm rounded-lg border-2 border-gray-200 bg-white shadow-lg dark:border-gray-600 dark:bg-gray-800'>
               <div className='absolute inset-0 overflow-hidden rounded-lg'>
-                <div className='flex h-8 items-center border-b border-gray-200 bg-gray-100 px-3'>
-                  <Send className='mr-2 h-4 w-4 text-gray-600' />
-                  <div className='text-xs text-gray-600'>Send Transaction</div>
+                <div className='flex h-8 items-center border-b border-gray-200 bg-gray-100 px-3 dark:border-gray-600 dark:bg-gray-700'>
+                  <Send className='mr-2 h-4 w-4 text-gray-600 dark:text-gray-300' />
+                  <div className='text-xs text-gray-600 dark:text-gray-300'>Send Transaction</div>
                 </div>
                 <div className='flex flex-col p-3 pt-5'>
-                  <h3 className='mb-2 text-center text-base font-semibold'>Send Ethereum</h3>
+                  <h3 className='mb-2 text-center text-base font-semibold dark:text-white'>
+                    Send Ethereum
+                  </h3>
                   <div className='flex-1 space-y-5'>
                     <div>
-                      <label className='mb-1 block text-left text-sm text-gray-600'>
+                      <label className='mb-1 block text-left text-sm text-gray-600 dark:text-gray-300'>
                         Recipient Address
                       </label>
                       <input
                         type='text'
                         value={transactionAddress}
                         onChange={e => setTransactionAddress(e.target.value)}
-                        className='w-full rounded border border-gray-300 px-2 py-1 font-mono text-sm'
+                        className='w-full rounded border border-gray-300 px-2 py-1 font-mono text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white'
                       />
                     </div>
                     <div>
-                      <label className='mb-1 block text-left text-sm text-gray-600'>
+                      <label className='mb-1 block text-left text-sm text-gray-600 dark:text-gray-300'>
                         Amount (ETH)
                       </label>
                       <input
                         type='text'
                         value={transactionAmount}
                         onChange={e => setTransactionAmount(e.target.value)}
-                        className='w-full rounded border border-gray-300 px-2 py-1 text-sm'
+                        className='w-full rounded border border-gray-300 px-2 py-1 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white'
                       />
                     </div>
-                    <div className='rounded border border-gray-200 bg-gray-50 p-2 text-left'>
-                      <div className='mb-1 text-sm text-gray-600'>Transaction Summary</div>
+                    <div className='rounded border border-gray-200 bg-gray-50 p-2 text-left dark:border-gray-600 dark:bg-gray-700'>
+                      <div className='mb-1 text-sm text-gray-600 dark:text-gray-300'>
+                        Transaction Summary
+                      </div>
                       <div className='space-y-1 text-sm'>
                         <div className='flex justify-between'>
-                          <span>Amount:</span>
-                          <span className='font-semibold'>{transactionAmount} ETH</span>
+                          <span className='dark:text-gray-300'>Amount:</span>
+                          <span className='font-semibold dark:text-white'>
+                            {transactionAmount} ETH
+                          </span>
                         </div>
                         <div className='flex justify-between'>
-                          <span>Gas Fee:</span>
-                          <span>~0.002 ETH ($6.00)</span>
+                          <span className='dark:text-gray-300'>Gas Fee:</span>
+                          <span className='dark:text-gray-300'>~0.002 ETH ($6.00)</span>
                         </div>
-                        <div className='mt-1 flex justify-between border-t border-gray-300 pt-1'>
-                          <span className='font-semibold'>Total:</span>
-                          <span className='font-semibold'>
+                        <div className='mt-1 flex justify-between border-t border-gray-300 pt-1 dark:border-gray-600'>
+                          <span className='font-semibold dark:text-white'>Total:</span>
+                          <span className='font-semibold dark:text-white'>
                             {(parseFloat(transactionAmount) + 0.002).toFixed(3)} ETH
                           </span>
                         </div>
@@ -1335,8 +1398,8 @@ export function InteractiveDemo({ isOpen, onClose }) {
               </div>
             </div>
             <div className='max-w-lg text-center'>
-              <h3 className='mb-3 text-xl font-semibold'>Create Transaction</h3>
-              <p className='text-gray-600'>
+              <h3 className='mb-3 text-xl font-semibold dark:text-white'>Create Transaction</h3>
+              <p className='text-gray-600 dark:text-gray-300'>
                 Fill in the recipient address and amount. The transaction will require further
                 approval from your mobile device.
               </p>
@@ -1349,12 +1412,14 @@ export function InteractiveDemo({ isOpen, onClose }) {
           <div className='flex flex-col items-center'>
             <div className='mb-8 flex justify-center space-x-6'>
               {/* Browser Extension */}
-              <div className='relative h-[420px] w-80 rounded-lg border-2 border-gray-300 bg-white shadow-lg'>
+              <div className='relative h-[420px] w-80 rounded-lg border-2 border-gray-300 bg-white shadow-lg dark:border-gray-600 dark:bg-gray-800'>
                 <div className='absolute inset-0 overflow-hidden rounded-lg'>
-                  <div className='flex h-8 items-center border-b border-gray-200 bg-gray-100 px-3'>
+                  <div className='flex h-8 items-center border-b border-gray-200 bg-gray-100 px-3 dark:border-gray-600 dark:bg-gray-700'>
                     <div className='flex items-center'>
                       <div className='mr-2 h-2 w-2 animate-pulse rounded-full bg-amber-500'></div>
-                      <div className='text-xs text-gray-600'>Waiting for mobile approval...</div>
+                      <div className='text-xs text-gray-600 dark:text-gray-300'>
+                        Waiting for mobile approval...
+                      </div>
                     </div>
                   </div>
                   <div className='flex h-full flex-col p-4 pt-4 text-center'>
@@ -1363,13 +1428,13 @@ export function InteractiveDemo({ isOpen, onClose }) {
                       transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
                       className='mx-auto mb-3 h-12 w-12 rounded-full border-4 border-gray-200 border-t-amber-500'
                     ></motion.div>
-                    <h4 className='mb-2 font-semibold'>Pending Mobile Approval</h4>
-                    <p className='mb-3 text-sm text-gray-600'>
+                    <h4 className='mb-2 font-semibold dark:text-white'>Pending Mobile Approval</h4>
+                    <p className='mb-3 text-sm text-gray-600 dark:text-gray-300'>
                       Signature 1/2 complete. Check your mobile device to approve the transaction.
                     </p>
 
-                    <div className='mb-2 rounded border border-amber-200 bg-amber-50 p-2'>
-                      <div className='text-sm text-amber-800'>
+                    <div className='mb-2 rounded border border-amber-200 bg-amber-50 p-2 dark:border-amber-700 dark:bg-amber-900/50'>
+                      <div className='text-sm text-amber-800 dark:text-amber-200'>
                         <div className='font-semibold'>Transaction Details</div>
                         <div className='mt-1 text-xs'>
                           Send {transactionAmount} ETH
@@ -1379,7 +1444,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
                       </div>
                     </div>
 
-                    <div className='text-xs text-gray-500'>
+                    <div className='text-xs text-gray-500 dark:text-gray-400'>
                       <div className='flex items-center justify-center'>
                         <Smartphone className='mr-1 h-3 w-3' />
                         Notification sent to mobile device
@@ -1403,39 +1468,41 @@ export function InteractiveDemo({ isOpen, onClose }) {
                     </div>
                   </motion.div>
                 )}
-                <div className='absolute inset-1 overflow-hidden rounded-xl bg-white'>
+                <div className='absolute inset-1 overflow-hidden rounded-xl bg-white dark:bg-gray-800'>
                   <div className='relative h-6 rounded-t-xl bg-gray-900'>
                     <div className='absolute top-1 left-1/2 h-1 w-8 -translate-x-1/2 transform rounded-full bg-gray-600'></div>
                   </div>
                   <div className='flex h-full flex-col p-3 pt-2'>
-                    <div className='mb-2 rounded bg-red-100 p-1'>
-                      <div className='flex items-center text-red-800'>
+                    <div className='mb-2 rounded bg-red-100 p-1 dark:bg-red-900/50'>
+                      <div className='flex items-center text-red-800 dark:text-red-200'>
                         <Bell className='mr-2 h-5 w-5' />
                         <span className='text-sm font-semibold'>Transaction Approval</span>
                       </div>
                     </div>
 
                     <div className='space-y-1 text-sm'>
-                      <div className='rounded bg-gray-50 p-1'>
-                        <div className='text-gray-600'>Amount</div>
-                        <div className='font-semibold'>{transactionAmount} ETH</div>
-                        <div className='text-gray-500'>
+                      <div className='rounded bg-gray-50 p-1 dark:bg-gray-700'>
+                        <div className='text-gray-600 dark:text-gray-300'>Amount</div>
+                        <div className='font-semibold dark:text-white'>{transactionAmount} ETH</div>
+                        <div className='text-gray-500 dark:text-gray-400'>
                           ${(parseFloat(transactionAmount) * 3000).toFixed(2)}
                         </div>
                       </div>
-                      <div className='rounded bg-gray-50 p-1'>
-                        <div className='text-gray-600'>To Address</div>
-                        <div className='font-mono text-sm'>
+                      <div className='rounded bg-gray-50 p-1 dark:bg-gray-700'>
+                        <div className='text-gray-600 dark:text-gray-300'>To Address</div>
+                        <div className='font-mono text-sm dark:text-white'>
                           {transactionAddress.substring(0, 18)}...
                         </div>
                       </div>
-                      <div className='rounded bg-gray-50 p-1'>
-                        <div className='text-gray-600'>Gas Fee</div>
-                        <div className='font-semibold'>0.002 ETH</div>
+                      <div className='rounded bg-gray-50 p-1 dark:bg-gray-700'>
+                        <div className='text-gray-600 dark:text-gray-300'>Gas Fee</div>
+                        <div className='font-semibold dark:text-white'>0.002 ETH</div>
                       </div>
-                      <div className='rounded bg-gray-50 p-1'>
-                        <div className='text-gray-600'>Status</div>
-                        <div className='font-semibold text-amber-600'>Awaiting Approval (2/2)</div>
+                      <div className='rounded bg-gray-50 p-1 dark:bg-gray-700'>
+                        <div className='text-gray-600 dark:text-gray-300'>Status</div>
+                        <div className='font-semibold text-amber-600 dark:text-amber-400'>
+                          Awaiting Approval (2/2)
+                        </div>
                       </div>
                     </div>
 
@@ -1443,7 +1510,8 @@ export function InteractiveDemo({ isOpen, onClose }) {
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className='w-full rounded bg-green-600 py-1 text-sm font-medium text-white'
+                        onClick={goNext}
+                        className='w-full cursor-pointer rounded bg-green-600 py-1 text-sm font-medium text-white'
                       >
                         {biometricsEnabled ? (
                           <div className='flex items-center justify-center'>
@@ -1454,7 +1522,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
                           'Approve (2/2)'
                         )}
                       </motion.button>
-                      <button className='w-full rounded bg-gray-300 py-1 text-sm text-gray-700'>
+                      <button className='w-full cursor-pointer rounded bg-gray-300 py-1 text-sm text-gray-700 dark:bg-gray-600 dark:text-gray-300'>
                         Reject
                       </button>
                     </div>
@@ -1464,8 +1532,10 @@ export function InteractiveDemo({ isOpen, onClose }) {
             </div>
 
             <div className='max-w-lg text-center'>
-              <h3 className='mb-3 text-xl font-semibold'>Mobile Confirmation Required</h3>
-              <p className='text-gray-600'>
+              <h3 className='mb-3 text-xl font-semibold dark:text-white'>
+                Mobile Confirmation Required
+              </h3>
+              <p className='text-gray-600 dark:text-gray-300'>
                 A notification appeared on your mobile device. Review the transaction details and
                 approve with {biometricsEnabled ? 'biometric authentication' : 'your password'}.
               </p>
@@ -1477,12 +1547,12 @@ export function InteractiveDemo({ isOpen, onClose }) {
         return (
           <div className='flex flex-col items-center'>
             <div className='relative mx-auto mb-8 h-[450px] w-72 rounded-2xl border-2 border-green-300 bg-black shadow-lg'>
-              <div className='absolute inset-1 overflow-hidden rounded-xl bg-white'>
+              <div className='absolute inset-1 overflow-hidden rounded-xl bg-white dark:bg-gray-800'>
                 <div className='relative h-6 rounded-t-xl bg-gray-900'>
                   <div className='absolute top-1 left-1/2 h-1 w-8 -translate-x-1/2 transform rounded-full bg-gray-600'></div>
                 </div>
                 <div className='flex h-full flex-col p-4 pt-3'>
-                  <div className='mb-3 rounded bg-green-100 p-2 text-center'>
+                  <div className='mb-3 rounded bg-green-100 p-2 text-center dark:bg-green-900/50'>
                     <motion.div
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
@@ -1490,38 +1560,52 @@ export function InteractiveDemo({ isOpen, onClose }) {
                     >
                       <CheckCircle className='mx-auto mb-2 h-8 w-8 text-green-600' />
                     </motion.div>
-                    <p className='text-sm font-semibold text-green-800'>Transaction Broadcasted!</p>
+                    <p className='text-sm font-semibold text-green-800 dark:text-green-200'>
+                      Transaction Broadcasted!
+                    </p>
                   </div>
 
                   <div className='space-y-2 text-sm'>
-                    <div className='mb-3 rounded bg-gray-50 p-2'>
-                      <div className='mb-1 text-gray-600'>Signatures Collected</div>
+                    <div className='mb-3 rounded bg-gray-50 p-2 dark:bg-gray-700'>
+                      <div className='mb-1 text-gray-600 dark:text-gray-300'>
+                        Signatures Collected
+                      </div>
                       <div className='space-y-1'>
                         <div className='flex items-center'>
                           <Check className='mr-2 h-4 w-4 text-green-600' />
-                          <span className='text-sm'>Browser Wallet (1/2)</span>
+                          <span className='text-sm dark:text-gray-300'>Browser Wallet (1/2)</span>
                         </div>
                         <div className='flex items-center'>
                           <Check className='mr-2 h-4 w-4 text-green-600' />
-                          <span className='text-sm'>Mobile Key (2/2)</span>
+                          <span className='text-sm dark:text-gray-300'>Mobile Key (2/2)</span>
                         </div>
                       </div>
                     </div>
 
-                    <div className='mb-3 rounded border border-yellow-200 bg-yellow-50 p-2 text-center'>
-                      <div className='mb-1 font-semibold text-yellow-700'>Network Status</div>
-                      <div className='text-sm text-yellow-800'>Confirming on Ethereum network</div>
-                      <div className='mt-1 text-xs text-yellow-600'>Usually takes 1-3 minutes</div>
+                    <div className='mb-3 rounded border border-yellow-200 bg-yellow-50 p-2 text-center dark:border-yellow-700 dark:bg-yellow-900/50'>
+                      <div className='mb-1 font-semibold text-yellow-700 dark:text-yellow-300'>
+                        Network Status
+                      </div>
+                      <div className='text-sm text-yellow-800 dark:text-yellow-200'>
+                        Confirming on Ethereum network
+                      </div>
+                      <div className='mt-1 text-xs text-yellow-600 dark:text-yellow-400'>
+                        Usually takes 1-3 minutes
+                      </div>
                     </div>
 
-                    <div className='rounded bg-gray-50 p-2'>
-                      <div className='mb-1 text-xs text-gray-600'>Transaction Hash</div>
-                      <div className='mb-2 font-mono text-xs text-gray-800'>0xabc123...def789</div>
+                    <div className='rounded bg-gray-50 p-2 dark:bg-gray-700'>
+                      <div className='mb-1 text-xs text-gray-600 dark:text-gray-300'>
+                        Transaction Hash
+                      </div>
+                      <div className='mb-2 font-mono text-xs text-gray-800 dark:text-gray-200'>
+                        0xabc123...def789
+                      </div>
                       <button
                         onClick={() =>
                           window.open('https://etherscan.io/tx/0xabc123def789', '_blank')
                         }
-                        className='w-full rounded bg-blue-600 py-1.5 text-xs font-medium text-white hover:bg-blue-700'
+                        className='w-full cursor-pointer rounded bg-blue-600 py-1.5 text-xs font-medium text-white hover:bg-blue-700'
                       >
                         View on Etherscan
                       </button>
@@ -1532,8 +1616,8 @@ export function InteractiveDemo({ isOpen, onClose }) {
             </div>
 
             <div className='max-w-lg text-center'>
-              <h3 className='mb-3 text-xl font-semibold'>Transaction Submitted</h3>
-              <p className='text-gray-600'>
+              <h3 className='mb-3 text-xl font-semibold dark:text-white'>Transaction Submitted</h3>
+              <p className='text-gray-600 dark:text-gray-300'>
                 Perfect! Both signatures collected and transaction broadcast to Ethereum. The
                 network is now mining and confirming your secure 2-of-2 multisig transaction.
               </p>
@@ -1544,11 +1628,13 @@ export function InteractiveDemo({ isOpen, onClose }) {
       case 3:
         return (
           <div className='flex flex-col items-center'>
-            <div className='relative mx-auto mb-6 h-80 w-full max-w-md rounded-lg border-2 border-green-300 bg-white shadow-lg'>
+            <div className='relative mx-auto mb-6 h-80 w-full max-w-md rounded-lg border-2 border-green-300 bg-white shadow-lg dark:border-green-600 dark:bg-gray-800'>
               <div className='absolute inset-0 overflow-hidden rounded-lg'>
-                <div className='flex h-8 items-center border-b border-green-200 bg-green-100 px-3'>
-                  <CheckCircle className='mr-2 h-4 w-4 text-green-600' />
-                  <div className='text-xs text-green-800'>Transaction Confirmed</div>
+                <div className='flex h-8 items-center border-b border-green-200 bg-green-100 px-3 dark:border-green-700 dark:bg-green-900/50'>
+                  <CheckCircle className='mr-2 h-4 w-4 text-green-600 dark:text-green-400' />
+                  <div className='text-xs text-green-800 dark:text-green-200'>
+                    Transaction Confirmed
+                  </div>
                 </div>
                 <div className='flex h-full flex-col p-3 pt-2 text-center'>
                   <motion.div
@@ -1557,28 +1643,34 @@ export function InteractiveDemo({ isOpen, onClose }) {
                     transition={{ type: 'spring', duration: 0.3 }}
                     className='mb-2'
                   >
-                    <div className='mx-auto mb-1 flex h-10 w-10 items-center justify-center rounded-full bg-green-100'>
-                      <Check className='h-5 w-5 text-green-600' />
+                    <div className='mx-auto mb-1 flex h-10 w-10 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/50'>
+                      <Check className='h-5 w-5 text-green-600 dark:text-green-400' />
                     </div>
                   </motion.div>
-                  <h3 className='mb-2 text-base font-semibold text-green-800'>
+                  <h3 className='mb-2 text-base font-semibold text-green-800 dark:text-green-200'>
                     Transaction Successful!
                   </h3>
-                  <p className='mb-2 text-xs text-gray-600'>Confirmed on Ethereum network.</p>
+                  <p className='mb-2 text-xs text-gray-600 dark:text-gray-300'>
+                    Confirmed on Ethereum network.
+                  </p>
 
-                  <div className='mb-2 rounded border border-gray-200 bg-gray-50 p-2 text-left'>
+                  <div className='mb-2 rounded border border-gray-200 bg-gray-50 p-2 text-left dark:border-gray-600 dark:bg-gray-700'>
                     <div className='space-y-1 text-xs'>
                       <div className='flex justify-between'>
-                        <span className='text-gray-600'>Amount:</span>
-                        <span className='font-semibold'>{transactionAmount} ETH</span>
+                        <span className='text-gray-600 dark:text-gray-300'>Amount:</span>
+                        <span className='font-semibold dark:text-white'>
+                          {transactionAmount} ETH
+                        </span>
                       </div>
                       <div className='flex justify-between'>
-                        <span className='text-gray-600'>Gas Fee:</span>
-                        <span>0.002 ETH</span>
+                        <span className='text-gray-600 dark:text-gray-300'>Gas Fee:</span>
+                        <span className='dark:text-gray-300'>0.002 ETH</span>
                       </div>
-                      <div className='flex justify-between border-t border-gray-300 pt-1'>
-                        <span className='text-gray-600'>Hash:</span>
-                        <span className='font-mono text-xs'>0xabc123...def789</span>
+                      <div className='flex justify-between border-t border-gray-300 pt-1 dark:border-gray-600'>
+                        <span className='text-gray-600 dark:text-gray-300'>Hash:</span>
+                        <span className='font-mono text-xs dark:text-gray-300'>
+                          0xabc123...def789
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -1594,7 +1686,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
                     >
                       View on Etherscan
                     </motion.button>
-                    <button className='w-full rounded bg-gray-200 py-1.5 text-xs font-medium text-gray-700'>
+                    <button className='w-full cursor-pointer rounded bg-gray-200 py-1.5 text-xs font-medium text-gray-700 dark:bg-gray-600 dark:text-gray-300'>
                       Send Another Transaction
                     </button>
                   </div>
@@ -1603,15 +1695,19 @@ export function InteractiveDemo({ isOpen, onClose }) {
             </div>
 
             <div className='max-w-2xl px-4 text-center'>
-              <h3 className='mb-3 text-xl font-semibold'>🎉 Transaction Complete!</h3>
-              <p className='mb-4 text-gray-600'>
+              <h3 className='mb-3 text-xl font-semibold dark:text-white'>
+                🎉 Transaction Complete!
+              </h3>
+              <p className='mb-4 text-gray-600 dark:text-gray-300'>
                 Your funds have been securely transferred using true 2-of-2 multisignature
                 technology. Both devices were required to authorize and sign this transaction.
               </p>
 
-              <div className='rounded-lg border border-blue-200 bg-blue-50 p-4'>
-                <h4 className='mb-3 font-semibold text-blue-900'>Why This Is Ultra-Secure</h4>
-                <div className='grid grid-cols-2 gap-3 text-sm text-blue-800'>
+              <div className='rounded-lg border border-blue-200 bg-blue-50 p-4 dark:border-blue-700 dark:bg-blue-900/50'>
+                <h4 className='mb-3 font-semibold text-blue-900 dark:text-blue-200'>
+                  Why This Is Ultra-Secure
+                </h4>
+                <div className='grid grid-cols-2 gap-3 text-sm text-blue-800 dark:text-blue-200'>
                   <div className='flex items-center'>
                     <Shield className='mr-2 h-4 w-4 flex-shrink-0' />
                     <span>2 separate devices required</span>
@@ -1671,11 +1767,11 @@ export function InteractiveDemo({ isOpen, onClose }) {
         initial={{ scale: 0.5, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.5, opacity: 0 }}
-        className='relative mx-4 max-h-[95vh] w-full max-w-7xl overflow-hidden rounded-xl bg-white shadow-2xl'
+        className='relative mx-4 max-h-[95vh] w-full max-w-7xl overflow-hidden rounded-xl bg-white shadow-2xl dark:bg-gray-900'
         onClick={e => e.stopPropagation()}
       >
         {/* Header */}
-        <div className='from-primary-600 bg-gradient-to-r to-blue-600 p-6 text-white'>
+        <div className='from-primary-600 dark:from-primary-700 bg-gradient-to-r to-blue-600 p-6 text-white dark:to-blue-700'>
           <div className='flex items-center justify-between'>
             <div>
               <h2 className='text-2xl font-bold'>Complete SSP Wallet Experience</h2>
@@ -1685,7 +1781,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
             </div>
             <button
               onClick={handleClose}
-              className='flex h-10 w-10 items-center justify-center rounded-full bg-white/20 transition-colors hover:bg-white/30'
+              className='flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-white/20 transition-colors hover:bg-white/30'
               aria-label='Close demo'
             >
               <X className='h-6 w-6' />
@@ -1764,30 +1860,33 @@ export function InteractiveDemo({ isOpen, onClose }) {
         </div>
 
         {/* Navigation */}
-        <div className='flex items-center justify-between bg-gray-50 px-8 py-4'>
+        <div className='flex items-center justify-between bg-gray-50 px-8 py-4 dark:bg-gray-800'>
           <button
             onClick={goPrevious}
             disabled={currentPhase === 0 && currentStep === 0}
-            className='flex items-center px-4 py-2 text-gray-600 hover:text-gray-800 disabled:cursor-not-allowed disabled:opacity-50'
+            className='flex cursor-pointer items-center px-4 py-2 text-gray-600 hover:text-gray-800 disabled:cursor-not-allowed disabled:opacity-50 dark:text-gray-300 dark:hover:text-gray-100'
           >
             <ChevronLeft className='mr-1 h-4 w-4' />
             Previous
           </button>
 
           <div className='flex items-center space-x-4'>
-            <span className='text-sm text-gray-500'>
+            <span className='text-sm text-gray-500 dark:text-gray-400'>
               {phases[currentPhase].title} - Step {currentStep + 1} of {phases[currentPhase].steps}
             </span>
 
             {isLastStep ? (
               <div className='flex space-x-2'>
-                <button onClick={reset} className='px-4 py-2 text-gray-600 hover:text-gray-800'>
+                <button
+                  onClick={reset}
+                  className='cursor-pointer px-4 py-2 text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-100'
+                >
                   Restart Demo
                 </button>
                 <Link href='/download'>
                   <button
                     onClick={handleClose}
-                    className='bg-primary-600 hover:bg-primary-700 rounded-lg px-6 py-2 text-white transition-colors'
+                    className='bg-primary-600 hover:bg-primary-700 cursor-pointer rounded-lg px-6 py-2 text-white transition-colors'
                   >
                     Download SSP Wallet
                   </button>
@@ -1796,7 +1895,7 @@ export function InteractiveDemo({ isOpen, onClose }) {
             ) : (
               <button
                 onClick={goNext}
-                className='bg-primary-600 hover:bg-primary-700 flex items-center rounded-lg px-6 py-2 text-white transition-colors'
+                className='bg-primary-600 hover:bg-primary-700 flex cursor-pointer items-center rounded-lg px-6 py-2 text-white transition-colors'
               >
                 Next
                 <ChevronRight className='ml-1 h-4 w-4' />

@@ -29,9 +29,9 @@ const footerNavigation = {
     { name: 'YouTube', href: 'https://www.youtube.com/@ZelLabs', external: true },
   ],
   legal: [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
+    { name: 'Privacy Policy', href: '/privacy-policy' },
+    { name: 'Terms of Service', href: '/terms-of-service' },
+    { name: 'Cookie Policy', href: '/cookie-policy' },
   ],
 }
 
@@ -209,6 +209,18 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <button
+                  onClick={() => {
+                    if (typeof window !== 'undefined' && window.openCookieSettings) {
+                      window.openCookieSettings()
+                    }
+                  }}
+                  className='cursor-pointer text-gray-600 transition-colors duration-200 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white'
+                >
+                  Cookie Settings
+                </button>
+              </li>
             </ul>
           </div>
         </div>
