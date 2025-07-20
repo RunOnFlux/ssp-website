@@ -75,10 +75,16 @@ export default function CookieConsent() {
   }, [showBanner])
 
   const initializeGoogleAnalytics = () => {
-    // Initialize Google Analytics here when implemented
+    // Initialize Google Analytics consent
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('consent', 'update', {
         analytics_storage: 'granted',
+      })
+
+      // Track the consent event
+      window.gtag('event', 'consent_granted', {
+        event_category: 'engagement',
+        event_label: 'analytics',
       })
     }
   }
@@ -88,6 +94,12 @@ export default function CookieConsent() {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('consent', 'update', {
         analytics_storage: 'denied',
+      })
+
+      // Track the consent denial event
+      window.gtag('event', 'consent_denied', {
+        event_category: 'engagement',
+        event_label: 'analytics',
       })
     }
   }
