@@ -917,7 +917,7 @@ export default function Terms() {
                   <p className='text-gray-600 dark:text-gray-400'>
                     <strong>InFlux Technologies Limited</strong>
                     <br />
-                    Email: legal@sspwallet.io
+                    Email: info@sspwallet.io
                     <br />
                     Subject Line: Terms of Service Inquiry
                   </p>

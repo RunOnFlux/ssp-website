@@ -215,7 +215,7 @@ export function Hero() {
                     src='/ssp animation 3_6 1.svg'
                     alt='SSP Wallet Animation'
                     fill
-                    className='object-contain'
+                    className='scale-150 object-contain'
                     priority
                   />
                   {/* Glow Effect */}
@@ -261,12 +261,12 @@ export function Hero() {
                 animate='floating'
                 className='relative lg:hidden'
               >
-                <div className='relative mx-auto h-80 w-80 sm:h-96 sm:w-96'>
+                <div className='relative mx-auto h-96 w-96 sm:h-[450px] sm:w-[450px]'>
                   <Image
                     src='/ssp animation 3_6 1.svg'
                     alt='SSP Wallet Animation'
                     fill
-                    className='object-contain'
+                    className='scale-125 object-contain'
                     priority
                   />
                   {/* Glow Effect */}

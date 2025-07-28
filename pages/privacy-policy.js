@@ -369,7 +369,7 @@ export default function Privacy() {
                   <p className='text-gray-600 dark:text-gray-400'>
                     <strong>InFlux Technologies Limited</strong>
                     <br />
-                    Email: privacy@sspwallet.io
+                    Email: info@sspwallet.io
                     <br />
                     Subject Line: Privacy Policy Inquiry
                   </p>
