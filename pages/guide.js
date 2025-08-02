@@ -265,9 +265,9 @@ export default function Guide() {
           content='Learn how to install and set up SSP Wallet with our comprehensive step-by-step guide.'
         />
         <meta property='og:url' content='https://sspwallet.io/guide' />
-        <meta property='og:image' content='https://sspwallet.io/og-image-guide.png' />
-        <meta property='og:image:width' content='1200' />
-        <meta property='og:image:height' content='630' />
+        <meta property='og:image' content='https://sspwallet.io/og-image.png' />
+        <meta property='og:image:width' content='745' />
+        <meta property='og:image:height' content='280' />
         <meta property='og:image:type' content='image/png' />
         <meta
           property='og:image:alt'
@@ -284,7 +284,7 @@ export default function Guide() {
           name='twitter:description'
           content='Learn how to install and set up SSP Wallet with our comprehensive step-by-step guide.'
         />
-        <meta name='twitter:image' content='https://sspwallet.io/og-image-guide.png' />
+        <meta name='twitter:image' content='https://sspwallet.io/og-image.png' />
         <meta
           name='twitter:image:alt'
           content='SSP Wallet Setup Guide - Complete Installation Instructions'
