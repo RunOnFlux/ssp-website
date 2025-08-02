@@ -27,7 +27,7 @@ export default function Document() {
         {/* Open Graph meta tags */}
         <meta property='og:type' content='website' />
         <meta property='og:site_name' content='SSP Wallet' />
-        <meta property='og:image' content='https://sspwallet.io/logo-light-mode.png' />
+        <meta property='og:image' content='https://sspwallet.io/op-image.png' />
         <meta property='og:image:width' content='745' />
         <meta property='og:image:height' content='280' />
         <meta property='og:image:type' content='image/png' />
@@ -36,7 +36,7 @@ export default function Document() {
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@sspwallet_io' />
         <meta name='twitter:creator' content='@sspwallet_io' />
-        <meta name='twitter:image' content='https://sspwallet.io/logo-light-mode.png' />
+        <meta name='twitter:image' content='https://sspwallet.io/op-image.png' />
 
         {/* Enhanced Structured data for search engines */}
         <script
