@@ -36,7 +36,7 @@ export default function Document() {
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@sspwallet_io' />
         <meta name='twitter:creator' content='@sspwallet_io' />
-        <meta name='twitter:image' content='https://sspwallet.iologo-light-mode.png' />
+        <meta name='twitter:image' content='https://sspwallet.io/logo-light-mode.png' />
 
         {/* Enhanced Structured data for search engines */}
         <script
