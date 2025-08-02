@@ -76,8 +76,8 @@ export default function DownloadPage() {
         />
         <meta property='og:url' content='https://sspwallet.io/download' />
         <meta property='og:image' content='https://sspwallet.io/og-image.png' />
-        <meta property='og:image:width' content='745' />
-        <meta property='og:image:height' content='280' />
+        <meta property='og:image:width' content='1200' />
+        <meta property='og:image:height' content='630' />
         <meta property='og:image:type' content='image/png' />
         <meta property='og:image:alt' content='Download SSP Wallet - Secure Crypto Wallet' />
 
