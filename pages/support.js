@@ -133,6 +133,70 @@ const faqCategories = [
         answer:
           'No, SSP Wallet is committed to not storing any data information. Your private keys, transaction history, and personal data remain entirely under your control and are stored locally on your devices.',
       },
+      {
+        question: 'What are deterministic builds and why do they matter?',
+        answer:
+          'Deterministic builds ensure that identical source code produces identical binary outputs. SSP Wallet uses Docker-based deterministic builds that enable anyone to independently verify that the distributed extension matches exactly what was built from the published source code. This eliminates potential supply chain attacks and provides cryptographic proof of build integrity.',
+      },
+      {
+        question: 'How can I verify the deterministic build of SSP Wallet?',
+        answer: (
+          <>
+            To verify SSP Wallet builds: 1) Download the release files (Chrome/Firefox zips,
+            SHA256SUMS, SHA256SUMS.asc) from{' '}
+            <a
+              href='https://github.com/RunOnFlux/ssp-wallet/releases'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-blue-600 underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300'
+            >
+              GitHub releases
+            </a>
+            . 2) Import our public key from{' '}
+            <a
+              href='https://keys.openpgp.org/search?q=security%40runonflux.io'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-blue-600 underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300'
+            >
+              OpenPGP keyserver
+            </a>
+            . 3) Verify GPG signature:{' '}
+            <code className='rounded bg-gray-100 px-1 py-0.5 text-sm dark:bg-gray-800'>
+              gpg --verify SHA256SUMS.asc SHA256SUMS
+            </code>
+            . 4) Verify hashes:{' '}
+            <code className='rounded bg-gray-100 px-1 py-0.5 text-sm dark:bg-gray-800'>
+              sha256sum -c SHA256SUMS
+            </code>
+            . 5) Optionally reproduce the build:{' '}
+            <code className='rounded bg-gray-100 px-1 py-0.5 text-sm dark:bg-gray-800'>
+              git checkout [version] && npm run build:deterministic
+            </code>
+            .
+          </>
+        ),
+      },
+      {
+        question: 'Who signs the SSP Wallet releases?',
+        answer: (
+          <>
+            All SSP Wallet releases are cryptographically signed by security@runonflux.io using GPG
+            signatures. Our public key is available on{' '}
+            <a
+              href='https://keys.openpgp.org/search?q=security%40runonflux.io'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-blue-600 underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300'
+            >
+              OpenPGP keyserver
+            </a>{' '}
+            for verification. The deterministic build process includes Docker-based isolated
+            environments and comprehensive checksums (SHA256SUMS) that are also GPG-signed to ensure
+            authenticity and integrity.
+          </>
+        ),
+      },
     ],
   },
   {

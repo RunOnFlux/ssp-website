@@ -21,9 +21,10 @@ const securityFeatures = [
   },
   {
     icon: Eye,
-    title: 'Open Source',
-    description: 'Transparent, verifiable code available for community review',
-    highlight: 'Fully Transparent',
+    title: 'Open Source & Deterministic',
+    description:
+      'Transparent code with deterministic builds - anyone can verify the distributed wallet matches the source code exactly',
+    highlight: 'Fully Verifiable',
   },
   {
     icon: Award,
@@ -254,6 +255,151 @@ export function Security() {
                     <strong>Security Bug Bounty:</strong> We offer rewards for responsible
                     disclosure of security vulnerabilities. Help us keep SSP secure.
                   </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Deterministic Builds Section */}
+          <motion.div
+            variants={itemVariants}
+            className='dark:bg-dark-900 mt-16 rounded-2xl bg-white p-8 shadow-lg'
+          >
+            <div className='grid items-center gap-12 lg:grid-cols-2'>
+              {/* Left Content */}
+              <div>
+                <h3 className='mb-6 text-3xl font-bold'>
+                  <span className='gradient-text'>Deterministic Builds</span> for Ultimate Trust
+                </h3>
+
+                <p className='mb-8 leading-relaxed text-gray-600 dark:text-gray-300'>
+                  SSP Wallet features deterministic builds using Docker. This means identical source
+                  code produces identical binaries, allowing anyone to independently verify the
+                  wallet you download matches exactly what was built from our published source code.
+                </p>
+
+                {/* Trust Indicators */}
+                <div className='mb-8 space-y-4'>
+                  <div className='flex items-center space-x-3'>
+                    <div className='flex h-6 w-6 items-center justify-center rounded-full bg-blue-500'>
+                      <svg className='h-4 w-4 text-white' fill='currentColor' viewBox='0 0 20 20'>
+                        <path
+                          fillRule='evenodd'
+                          d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
+                          clipRule='evenodd'
+                        />
+                      </svg>
+                    </div>
+                    <span className='font-medium'>Docker-Based Isolated Build Environment</span>
+                  </div>
+
+                  <div className='flex items-center space-x-3'>
+                    <div className='flex h-6 w-6 items-center justify-center rounded-full bg-blue-500'>
+                      <svg className='h-4 w-4 text-white' fill='currentColor' viewBox='0 0 20 20'>
+                        <path
+                          fillRule='evenodd'
+                          d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
+                          clipRule='evenodd'
+                        />
+                      </svg>
+                    </div>
+                    <span className='font-medium'>Cryptographically Signed Release Checksums</span>
+                  </div>
+
+                  <div className='flex items-center space-x-3'>
+                    <div className='flex h-6 w-6 items-center justify-center rounded-full bg-blue-500'>
+                      <svg className='h-4 w-4 text-white' fill='currentColor' viewBox='0 0 20 20'>
+                        <path
+                          fillRule='evenodd'
+                          d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
+                          clipRule='evenodd'
+                        />
+                      </svg>
+                    </div>
+                    <span className='font-medium'>Eliminates Supply Chain Attack Vectors</span>
+                  </div>
+                </div>
+
+                {/* Verification Button */}
+                <Link
+                  href='/support#security--privacy'
+                  className='inline-flex items-center rounded-lg bg-linear-to-r from-blue-600 to-purple-600 px-6 py-3 font-medium text-white shadow-lg transition-transform hover:scale-105'
+                >
+                  <Shield className='mr-2 h-5 w-5' />
+                  Learn How to Verify
+                </Link>
+              </div>
+
+              {/* Right Content - Verification Steps */}
+              <div>
+                <h4 className='mb-6 text-xl font-bold'>Verification Process</h4>
+
+                <div className='space-y-4'>
+                  <div className='dark:bg-dark-800 dark:hover:bg-dark-700 rounded-lg bg-gray-50 p-4 transition-colors duration-200'>
+                    <div className='flex items-start space-x-3'>
+                      <div className='flex h-8 w-8 items-center justify-center rounded-full bg-blue-500 text-sm font-bold text-white'>
+                        1
+                      </div>
+                      <div>
+                        <h5 className='mb-1 font-semibold text-gray-900 dark:text-white'>
+                          Download Release Files
+                        </h5>
+                        <p className='text-sm text-gray-600 dark:text-gray-400'>
+                          Get the extension files, SHA256SUMS, and GPG signature from GitHub
+                          releases
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className='dark:bg-dark-800 dark:hover:bg-dark-700 rounded-lg bg-gray-50 p-4 transition-colors duration-200'>
+                    <div className='flex items-start space-x-3'>
+                      <div className='flex h-8 w-8 items-center justify-center rounded-full bg-blue-500 text-sm font-bold text-white'>
+                        2
+                      </div>
+                      <div>
+                        <h5 className='mb-1 font-semibold text-gray-900 dark:text-white'>
+                          Verify GPG Signature
+                        </h5>
+                        <p className='text-sm text-gray-600 dark:text-gray-400'>
+                          Import our public key from OpenPGP keyserver and verify the signed
+                          checksums
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className='dark:bg-dark-800 dark:hover:bg-dark-700 rounded-lg bg-gray-50 p-4 transition-colors duration-200'>
+                    <div className='flex items-start space-x-3'>
+                      <div className='flex h-8 w-8 items-center justify-center rounded-full bg-blue-500 text-sm font-bold text-white'>
+                        3
+                      </div>
+                      <div>
+                        <h5 className='mb-1 font-semibold text-gray-900 dark:text-white'>
+                          Verify File Hashes
+                        </h5>
+                        <p className='text-sm text-gray-600 dark:text-gray-400'>
+                          Check that downloaded files match the signed checksums
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className='dark:bg-dark-800 dark:hover:bg-dark-700 rounded-lg bg-gray-50 p-4 transition-colors duration-200'>
+                    <div className='flex items-start space-x-3'>
+                      <div className='flex h-8 w-8 items-center justify-center rounded-full bg-green-500 text-sm font-bold text-white'>
+                        ✓
+                      </div>
+                      <div>
+                        <h5 className='mb-1 font-semibold text-gray-900 dark:text-white'>
+                          Optional: Reproduce Build
+                        </h5>
+                        <p className='text-sm text-gray-600 dark:text-gray-400'>
+                          Advanced users can build from source and verify identical output
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

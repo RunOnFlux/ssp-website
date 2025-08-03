@@ -26,7 +26,7 @@ const securityFeatures = [
     icon: Eye,
     title: 'Fully Open Source & Transparent',
     description:
-      'Complete codebase transparency allows security researchers and developers to verify our claims. No hidden backdoors or proprietary black boxes.',
+      'Complete codebase transparency with deterministic builds allows security researchers and developers to independently verify build integrity. No hidden backdoors or proprietary black boxes.',
   },
 ]
 
