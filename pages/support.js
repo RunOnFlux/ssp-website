@@ -732,7 +732,14 @@ export default function Support() {
             {faqCategories.map((category, categoryIndex) => {
               const CategoryIcon = category.icon
               return (
-                <div key={categoryIndex}>
+                <div
+                  key={categoryIndex}
+                  id={category.title
+                    .toLowerCase()
+                    .replace(/\s+&\s+/g, '--')
+                    .replace(/\s+/g, '-')}
+                  style={{ scrollMarginTop: '100px' }}
+                >
                   <motion.div
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
