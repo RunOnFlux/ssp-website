@@ -77,6 +77,19 @@ export function Header() {
 
           {/* Right side actions */}
           <div className='flex items-center space-x-4'>
+            {/* Help Button */}
+            {/* {mounted && (
+              <button
+                onClick={() => window.kapa?.open?.()}
+                className='dark:bg-dark-800 dark:hover:bg-dark-700 cursor-pointer rounded-lg bg-gray-100 p-2 transition-colors duration-200 hover:bg-gray-200'
+                aria-label='Open AI Assistant'
+                title='AI Assistant'
+                id='kapa-button'
+              >
+                <HelpCircle className='h-5 w-5 text-gray-700 dark:text-gray-300' />
+              </button>
+            )} */}
+
             {/* Theme Toggle */}
             {mounted && (
               <button

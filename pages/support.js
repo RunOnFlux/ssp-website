@@ -324,20 +324,18 @@ function FAQItem({ faq, index, categoryIndex }) {
         )}
       </button>
 
-      {isOpen && (
-        <motion.div
-          initial={{ height: 0, opacity: 0 }}
-          animate={{ height: 'auto', opacity: 1 }}
-          exit={{ height: 0, opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          className='px-6 pb-6'
-          id={`faq-content-${categoryIndex}-${index}`}
-          role='region'
-          aria-labelledby={`faq-button-${categoryIndex}-${index}`}
-        >
-          <p className='leading-relaxed text-gray-600 dark:text-gray-400'>{faq.answer}</p>
-        </motion.div>
-      )}
+      <motion.div
+        initial={{ height: 0, opacity: 0 }}
+        animate={isOpen ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
+        transition={{ duration: 0.3 }}
+        className={`px-6 ${isOpen ? 'pb-6' : ''} overflow-hidden`}
+        id={`faq-content-${categoryIndex}-${index}`}
+        role='region'
+        aria-labelledby={`faq-button-${categoryIndex}-${index}`}
+        style={!isOpen ? { height: 0, paddingBottom: 0 } : {}}
+      >
+        <p className='leading-relaxed text-gray-600 dark:text-gray-400'>{faq.answer}</p>
+      </motion.div>
     </motion.div>
   )
 }

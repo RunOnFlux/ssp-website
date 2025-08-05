@@ -121,6 +121,27 @@ export default function Document() {
             }),
           }}
         />
+        <script
+          async
+          src='https://widget.kapa.ai/kapa-widget.bundle.js'
+          data-website-id='1d29b730-6686-4ae2-b724-41d41c754e7b'
+          data-project-name='SSP'
+          data-project-color='#f59e0b'
+          data-user-analytics-fingerprint-enabled='true'
+          data-search-mode-enabled='true'
+          data-project-logo='https://raw.githubusercontent.com/RunOnFlux/ssp-wallet/refs/heads/master/public/ssp-logo-white.svg'
+          data-modal-image='https://raw.githubusercontent.com/RunOnFlux/ssp-wallet/refs/heads/master/public/ssp-logo-black.svg'
+          data-button-image-width='18'
+          data-button-image-height='24'
+          data-button-height='3.125rem'
+          data-button-width='2.8125rem'
+          data-button-text-font-size='0.7rem'
+          data-modal-image-width='36'
+          data-modal-image-height='48'
+          data-modal-disclaimer='This is a custom LLM for answering questions about SSP and other Flux products. The answers are based on the contents of Whitepapers, Documentation, Support articles, API references, website and knowledgebases. Give it a try!'
+          data-button-hide='false'
+          data-modal-override-open-id='kapa-button'
+        />
       </Head>
       <body>
         <Main />
