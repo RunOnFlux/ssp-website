@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle, Chrome, Download, QrCode, Shield, Smartphone }
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 
 const downloadOptions = [
@@ -13,7 +14,7 @@ const downloadOptions = [
     subtitle: 'Browser Extension',
     description: 'Install on Chrome, Brave, Firefox and other Chromium-based browsers',
     features: ['Multi-signature security', 'WalletConnect v2 support', 'Cross-chain compatibility'],
-    link: 'https://chromewebstore.google.com/detail/ssp-wallet/mgfbabcnedcejkfibpafadgkhmkifhbd',
+    link: '/download#extension',
     available: true,
     primary: true,
   },
@@ -54,6 +55,19 @@ export default function DownloadPage() {
     threshold: 0.3,
     triggerOnce: true,
   })
+
+  const [extensionLink, setExtensionLink] = useState(
+    'https://chromewebstore.google.com/detail/ssp-wallet/mgfbabcnedcejkfibpafadgkhmkifhbd'
+  )
+
+  useEffect(() => {
+    const isFirefox = navigator.userAgent.toLowerCase().includes('firefox')
+    setExtensionLink(
+      isFirefox
+        ? 'https://addons.mozilla.org/en-US/firefox/addon/ssp-wallet'
+        : 'https://chromewebstore.google.com/detail/ssp-wallet/mgfbabcnedcejkfibpafadgkhmkifhbd'
+    )
+  }, [])
 
   return (
     <>
@@ -186,7 +200,7 @@ export default function DownloadPage() {
                     </div>
 
                     <Link
-                      href={option.link}
+                      href={option.id === 'chrome' ? extensionLink : option.link}
                       target={option.id === 'chrome' ? '_blank' : '_self'}
                       className='bg-primary-600 hover:bg-primary-700 block w-full rounded-lg px-6 py-3 text-center font-medium text-white transition-colors'
                     >
