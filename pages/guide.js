@@ -23,16 +23,17 @@ const steps = [
     steps: [
       {
         step: 1,
-        title: 'Visit Chrome Web Store',
-        description: 'Open your Chromium browser and navigate to the SSP Wallet Extension page',
+        title: 'Visit Extension Store',
+        description:
+          'Open your browser and navigate to the SSP Wallet Extension page for your browser (Chrome, Firefox, Brave)',
         action: 'Navigate to extension page',
-        link: 'https://chromewebstore.google.com/detail/ssp-wallet/mgfbabcnedcejkfibpafadgkhmkifhbd',
+        link: '/download',
       },
       {
         step: 2,
         title: 'Install Extension',
         description:
-          "Click 'Add to Chrome.' A pop-up window will appear asking if you want to add SSP Wallet. Click 'Add' to complete installation.",
+          "Click 'Add to Chrome/Firefox' or 'Install' button. A pop-up window will appear asking if you want to add SSP Wallet. Click 'Add' or 'Install' to complete installation.",
         action: 'Add to browser',
       },
       {

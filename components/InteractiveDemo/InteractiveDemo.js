@@ -156,15 +156,10 @@ export function InteractiveDemo({ isOpen, onClose }) {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    onClick={() =>
-                      window.open(
-                        'https://chromewebstore.google.com/detail/ssp-wallet/mgfbabcnedcejkfibpafadgkhmkifhbd',
-                        '_blank'
-                      )
-                    }
+                    onClick={() => window.open('/download', '_blank')}
                     className='mb-4 w-full cursor-pointer rounded bg-blue-600 py-3 text-sm font-medium text-white'
                   >
-                    Add to Chrome
+                    Get to Browser
                   </motion.button>
                   <div className='text-xs text-gray-500'>
                     <div className='flex flex-wrap items-center justify-center space-x-2'>

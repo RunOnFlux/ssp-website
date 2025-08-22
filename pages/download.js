@@ -45,7 +45,7 @@ const supportedBrowsers = [
   {
     name: 'Firefox',
     icon: '/firefox.svg',
-    link: 'https://github.com/RunOnFlux/ssp-wallet/releases/latest',
+    link: 'https://addons.mozilla.org/en-US/firefox/addon/ssp-wallet',
   },
 ]
 

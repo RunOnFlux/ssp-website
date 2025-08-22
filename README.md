@@ -277,7 +277,7 @@ The AGPL-3.0 license ensures that any modifications to this software, including 
 ## 🔗 Links
 
 - **🌐 Website**: [https://sspwallet.io](https://sspwallet.io)
-- **🛒 Chrome Extension**: [SSP Wallet](https://chromewebstore.google.com/detail/ssp-wallet/mgfbabcnedcejkfibpafadgkhmkifhbd)
+- **🛒 Browser Extensions**: [Chrome Web Store](https://chromewebstore.google.com/detail/ssp-wallet/mgfbabcnedcejkfibpafadgkhmkifhbd) | [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/ssp-wallet)
 - **📱 Mobile App**: [SSP Key](https://sspwallet.io/download) (iOS & Android)
 - **💾 GitHub**: [RunOnFlux Organization](https://github.com/RunOnFlux)
 - **🐦 Twitter**: [@sspwallet_io](https://twitter.com/sspwallet_io)

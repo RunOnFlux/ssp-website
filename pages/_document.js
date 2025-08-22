@@ -56,8 +56,7 @@ export default function Document() {
               ],
               operatingSystem: ['Chrome Extension', 'Browser Extension', 'iOS', 'Android'],
               url: 'https://sspwallet.io',
-              downloadUrl:
-                'https://chromewebstore.google.com/detail/ssp-wallet/mgfbabcnedcejkfibpafadgkhmkifhbd',
+              downloadUrl: 'https://sspwallet.io/download',
               softwareVersion: '2.0.0',
               datePublished: '2023-01-01',
               dateModified: new Date().toISOString().split('T')[0],
