@@ -107,6 +107,16 @@ const faqCategories = [
         answer:
           "Yes, you can use SSP Wallet on multiple devices. To set up on a new device, you'll need to restore your wallet and key using the corresponding seed phrases. Each device requires proper setup and synchronization.",
       },
+      {
+        question: 'Is there a transaction limit with SSP Wallet?',
+        answer:
+          "SSP Wallet doesn't impose transaction limits. However, you're subject to the blockchain network limits and your available balance. Some networks may have minimum transaction amounts or maximum transaction sizes based on their protocols.",
+      },
+      {
+        question: 'Can I use SSP Wallet offline?',
+        answer:
+          'SSP Wallet requires an internet connection for most operations including transaction broadcasting, balance updates, and synchronization between devices. While you can view some cached information offline, you cannot send transactions without connectivity.',
+      },
     ],
   },
   {
@@ -197,6 +207,11 @@ const faqCategories = [
           </>
         ),
       },
+      {
+        question: 'Can I use multiple SSP Keys with one SSP Wallet?',
+        answer:
+          'No, each SSP Wallet can only be paired with one SSP Key. The 2-of-2 multisignature system requires device-specific synchronization for public nonces and chain data. Using multiple SSP Keys would cause synchronization conflicts.',
+      },
     ],
   },
   {
@@ -247,6 +262,26 @@ const faqCategories = [
         question: 'Do I need to restore my wallet when changing devices?',
         answer:
           'Yes, due to device-specific encryption, you must restore both your wallet and key when changing devices or making significant system changes. Keep your seed phrases secure and accessible for this process.',
+      },
+      {
+        question: 'What happens if I lose my SSP Key device?',
+        answer:
+          "If you lose your SSP Key device, you can restore it on a new device using your SSP Key seed phrase. Install the SSP Key app on your new device and use the seed phrase to recover access. You'll need to re-sync with your SSP Wallet browser extension after restoration.",
+      },
+      {
+        question: 'Can I backup my wallet to cloud storage?',
+        answer:
+          "SSP Wallet doesn't support automatic cloud backups for security reasons. Your seed phrases should be stored offline in a secure location. Never store seed phrases in cloud storage, email, or any digital format that could be compromised.",
+      },
+      {
+        question: "What's the difference between SSP Wallet seed phrase and SSP Key seed phrase?",
+        answer:
+          'SSP Wallet and SSP Key each have separate seed phrases. The wallet seed phrase controls the browser extension component, while the key seed phrase controls the mobile 2FA component. Both are required for full wallet recovery and should be stored separately and securely.',
+      },
+      {
+        question: 'How do I migrate to a new computer?',
+        answer:
+          'To move SSP Wallet to a new computer: 1) Install the SSP Wallet extension on the new device, 2) Use your wallet seed phrase to restore the browser extension, 3) Re-sync with your existing SSP Key mobile app. Your transaction history and settings will need to be reconfigured.',
       },
     ],
   },
