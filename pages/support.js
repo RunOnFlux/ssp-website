@@ -283,6 +283,17 @@ const faqCategories = [
         answer:
           'To move SSP Wallet to a new computer: 1) Install the SSP Wallet extension on the new device, 2) Use your wallet seed phrase to restore the browser extension, 3) Re-sync with your existing SSP Key mobile app. Your transaction history and settings will need to be reconfigured.',
       },
+      {
+        question: 'I\'m getting "Synchronisation with SSP wallet needed" error on mobile',
+        answer:
+          'This error typically occurs when changing phones or when a blockchain is not yet synchronized with your SSP Key. To resolve: 1) Open SSP Wallet, 2) Switch to the blockchain you want to re-synchronize, 3) Click the burger menu (top right corner), 4) Select "SSP Wallet Details", 5) Confirm access with your password, 6) In the first row, find "Chain Sync with SSP Key" and click the eye icon to show the QR code, 7) Scan the QR code with your SSP Key and approve the chain synchronization.',
+      },
+      {
+        question:
+          'I\'m getting "SSP Key Public nonces do not match or SSP Key Public nonces are missing" error',
+        answer:
+          'This error occurs when public nonces used to construct transactions are not synchronized between your SSP Wallet and SSP Key. To resolve: 1) Open the burger menu (top right corner), 2) Navigate to Settings, 3) Find the "Public Nonces" section and click "Sync Public Nonces", 4) Scan the QR code shown with your SSP Key, 5) Approve the request on your mobile device. Your public nonces are now synchronized and you can begin transacting.',
+      },
     ],
   },
 ]
