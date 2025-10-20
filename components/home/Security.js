@@ -260,6 +260,155 @@ export function Security() {
             </div>
           </motion.div>
 
+          {/* LavaMoat Runtime Security Section */}
+          <motion.div
+            variants={itemVariants}
+            className='dark:bg-dark-900 mt-16 rounded-2xl bg-white p-8 shadow-lg'
+          >
+            <div className='grid items-center gap-12 lg:grid-cols-2'>
+              {/* Left Content */}
+              <div>
+                <h3 className='mb-6 text-3xl font-bold'>
+                  <span className='gradient-text'>LavaMoat</span> Runtime Protection
+                </h3>
+
+                <p className='mb-8 leading-relaxed text-gray-600 dark:text-gray-300'>
+                  SSP Wallet integrates LavaMoat, a security framework that protects against supply
+                  chain attacks. LavaMoat wraps each dependency in compartments and only gives them
+                  access to what they need, preventing malicious code from stealing secrets or
+                  compromising your wallet.
+                </p>
+
+                {/* Trust Indicators */}
+                <div className='mb-8 space-y-4'>
+                  <div className='flex items-center space-x-3'>
+                    <div className='flex h-6 w-6 items-center justify-center rounded-full bg-purple-500'>
+                      <svg className='h-4 w-4 text-white' fill='currentColor' viewBox='0 0 20 20'>
+                        <path
+                          fillRule='evenodd'
+                          d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
+                          clipRule='evenodd'
+                        />
+                      </svg>
+                    </div>
+                    <span className='font-medium'>Packages Wrapped in SES Compartments</span>
+                  </div>
+
+                  <div className='flex items-center space-x-3'>
+                    <div className='flex h-6 w-6 items-center justify-center rounded-full bg-purple-500'>
+                      <svg className='h-4 w-4 text-white' fill='currentColor' viewBox='0 0 20 20'>
+                        <path
+                          fillRule='evenodd'
+                          d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
+                          clipRule='evenodd'
+                        />
+                      </svg>
+                    </div>
+                    <span className='font-medium'>Limited Platform Access Per Package</span>
+                  </div>
+
+                  <div className='flex items-center space-x-3'>
+                    <div className='flex h-6 w-6 items-center justify-center rounded-full bg-purple-500'>
+                      <svg className='h-4 w-4 text-white' fill='currentColor' viewBox='0 0 20 20'>
+                        <path
+                          fillRule='evenodd'
+                          d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
+                          clipRule='evenodd'
+                        />
+                      </svg>
+                    </div>
+                    <span className='font-medium'>
+                      Prevents Modification of JavaScript Primordials
+                    </span>
+                  </div>
+                </div>
+
+                {/* Learn More Button */}
+                <a
+                  href='https://github.com/LavaMoat/LavaMoat'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='inline-flex items-center rounded-lg bg-linear-to-r from-purple-600 to-pink-600 px-6 py-3 font-medium text-white shadow-lg transition-transform hover:scale-105'
+                >
+                  <Shield className='mr-2 h-5 w-5' />
+                  Learn About LavaMoat
+                </a>
+              </div>
+
+              {/* Right Content - Security Features */}
+              <div>
+                <h4 className='mb-6 text-xl font-bold'>Protection Layers</h4>
+
+                <div className='space-y-4'>
+                  <div className='dark:bg-dark-800 dark:hover:bg-dark-700 rounded-lg bg-gray-50 p-4 transition-colors duration-200'>
+                    <div className='flex items-start space-x-3'>
+                      <div className='flex h-8 w-8 items-center justify-center rounded-full bg-purple-500 text-sm font-bold text-white'>
+                        1
+                      </div>
+                      <div>
+                        <h5 className='mb-1 font-semibold text-gray-900 dark:text-white'>
+                          Package Compartments
+                        </h5>
+                        <p className='text-sm text-gray-600 dark:text-gray-400'>
+                          Each package runs in its own compartment, preventing unauthorized access
+                          to sensitive resources
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className='dark:bg-dark-800 dark:hover:bg-dark-700 rounded-lg bg-gray-50 p-4 transition-colors duration-200'>
+                    <div className='flex items-start space-x-3'>
+                      <div className='flex h-8 w-8 items-center justify-center rounded-full bg-purple-500 text-sm font-bold text-white'>
+                        2
+                      </div>
+                      <div>
+                        <h5 className='mb-1 font-semibold text-gray-900 dark:text-white'>
+                          Policy Enforcement
+                        </h5>
+                        <p className='text-sm text-gray-600 dark:text-gray-400'>
+                          Policy files define exactly which resources each package can access
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className='dark:bg-dark-800 dark:hover:bg-dark-700 rounded-lg bg-gray-50 p-4 transition-colors duration-200'>
+                    <div className='flex items-start space-x-3'>
+                      <div className='flex h-8 w-8 items-center justify-center rounded-full bg-purple-500 text-sm font-bold text-white'>
+                        3
+                      </div>
+                      <div>
+                        <h5 className='mb-1 font-semibold text-gray-900 dark:text-white'>
+                          Supply Chain Defense
+                        </h5>
+                        <p className='text-sm text-gray-600 dark:text-gray-400'>
+                          Protects against compromised dependencies attempting malicious actions
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className='dark:bg-dark-800 dark:hover:bg-dark-700 rounded-lg bg-gray-50 p-4 transition-colors duration-200'>
+                    <div className='flex items-start space-x-3'>
+                      <div className='flex h-8 w-8 items-center justify-center rounded-full bg-purple-500 text-sm font-bold text-white'>
+                        4
+                      </div>
+                      <div>
+                        <h5 className='mb-1 font-semibold text-gray-900 dark:text-white'>
+                          Runtime Monitoring
+                        </h5>
+                        <p className='text-sm text-gray-600 dark:text-gray-400'>
+                          Continuous enforcement ensures security policies remain active at runtime
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
           {/* Deterministic Builds Section */}
           <motion.div
             variants={itemVariants}
