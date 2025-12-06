@@ -56,6 +56,7 @@ module.exports = [
 
       // React Hooks rules
       ...reactHooksPlugin.configs.recommended.rules,
+      'react-hooks/set-state-in-effect': 'off', // Allow setState in effects for client-only browser detection
 
       // Next.js specific rules
       '@next/next/no-img-element': 'error',

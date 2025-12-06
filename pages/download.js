@@ -6,6 +6,10 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 
+const CHROME_STORE_LINK =
+  'https://chromewebstore.google.com/detail/ssp-wallet/mgfbabcnedcejkfibpafadgkhmkifhbd'
+const FIREFOX_ADDON_LINK = 'https://addons.mozilla.org/en-US/firefox/addon/ssp-wallet'
+
 const downloadOptions = [
   {
     id: 'chrome',
@@ -33,21 +37,9 @@ const downloadOptions = [
 ]
 
 const supportedBrowsers = [
-  {
-    name: 'Chrome',
-    icon: '/chrome.svg',
-    link: 'https://chromewebstore.google.com/detail/ssp-wallet/mgfbabcnedcejkfibpafadgkhmkifhbd',
-  },
-  {
-    name: 'Brave',
-    icon: '/brave.svg',
-    link: 'https://chromewebstore.google.com/detail/ssp-wallet/mgfbabcnedcejkfibpafadgkhmkifhbd',
-  },
-  {
-    name: 'Firefox',
-    icon: '/firefox.svg',
-    link: 'https://addons.mozilla.org/en-US/firefox/addon/ssp-wallet',
-  },
+  { name: 'Chrome', icon: '/chrome.svg', link: CHROME_STORE_LINK },
+  { name: 'Brave', icon: '/brave.svg', link: CHROME_STORE_LINK },
+  { name: 'Firefox', icon: '/firefox.svg', link: FIREFOX_ADDON_LINK },
 ]
 
 export default function DownloadPage() {
@@ -56,17 +48,12 @@ export default function DownloadPage() {
     triggerOnce: true,
   })
 
-  const [extensionLink, setExtensionLink] = useState(
-    'https://chromewebstore.google.com/detail/ssp-wallet/mgfbabcnedcejkfibpafadgkhmkifhbd'
-  )
+  const [extensionLink, setExtensionLink] = useState(CHROME_STORE_LINK)
 
   useEffect(() => {
-    const isFirefox = navigator.userAgent.toLowerCase().includes('firefox')
-    setExtensionLink(
-      isFirefox
-        ? 'https://addons.mozilla.org/en-US/firefox/addon/ssp-wallet'
-        : 'https://chromewebstore.google.com/detail/ssp-wallet/mgfbabcnedcejkfibpafadgkhmkifhbd'
-    )
+    if (navigator.userAgent.toLowerCase().includes('firefox')) {
+      setExtensionLink(FIREFOX_ADDON_LINK)
+    }
   }, [])
 
   return (
