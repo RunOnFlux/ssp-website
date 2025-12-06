@@ -152,23 +152,23 @@
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center rounded-lg px-6 py-3 text-base font-medium transition-all duration-200 focus:ring-2 focus:ring-offset-2 focus:outline-none;
+    @apply inline-flex items-center justify-center rounded-lg px-6 py-3 text-base font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus:outline-none;
   }
 
   .btn-primary {
-    @apply bg-primary-600 hover:bg-primary-700 focus:ring-primary-500 transform text-white shadow-lg hover:scale-105 hover:shadow-xl;
+    @apply bg-primary-600 hover:bg-primary-700 focus-visible:ring-primary-500 transform text-white shadow-lg hover:scale-105 hover:shadow-xl;
   }
 
   .btn-secondary {
-    @apply dark:border-dark-600 dark:bg-dark-800 dark:hover:bg-dark-700 border border-gray-300 bg-white text-gray-900 hover:bg-gray-50 focus:ring-gray-500 dark:text-white;
+    @apply dark:border-dark-600 dark:bg-dark-800 dark:hover:bg-dark-700 border border-gray-300 bg-white text-gray-900 hover:bg-gray-50 focus-visible:ring-gray-500 dark:text-white;
   }
 
   .btn-outline {
-    @apply border-primary-600 text-primary-600 hover:bg-primary-600 focus:ring-primary-500 border-2 hover:text-white;
+    @apply border-primary-600 text-primary-600 hover:bg-primary-600 focus-visible:ring-primary-500 border-2 hover:text-white;
   }
 
   .btn-ghost {
-    @apply dark:hover:bg-dark-800 text-gray-600 hover:bg-gray-100 hover:text-gray-900 focus:ring-gray-500 dark:text-gray-300 dark:hover:text-white;
+    @apply dark:hover:bg-dark-800 text-gray-600 hover:bg-gray-100 hover:text-gray-900 focus-visible:ring-gray-500 dark:text-gray-300 dark:hover:text-white;
   }
 
   .card {
