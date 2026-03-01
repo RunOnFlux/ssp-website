@@ -1,7 +1,7 @@
 'use client'
 
 import { AnimatePresence, motion } from 'framer-motion'
-import { Download, Menu, Moon, Sun, X } from 'lucide-react'
+import { Building2, Download, Menu, Moon, Sun, X } from 'lucide-react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
@@ -15,6 +15,7 @@ const navigation = [
   { name: 'Guide', href: '/guide' },
   { name: 'Support', href: '/support' },
   { name: 'Contact', href: '/contact' },
+  { name: 'Enterprise', href: '/enterprise' },
 ]
 
 export function Header() {

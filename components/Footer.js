@@ -10,10 +10,12 @@ const footerNavigation = {
     { name: 'Guide', href: '/guide' },
     { name: 'Support', href: '/support' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Enterprise', href: '/enterprise' },
   ],
   product: [
     { name: 'Download', href: '/download' },
     { name: 'Mobile SSP Key', href: '/download#mobile', external: false },
+    { name: 'SSP Enterprise', href: '/enterprise' },
     {
       name: 'Security Audits',
       href: 'https://www.halborn.com/audits/influx-technologies',
