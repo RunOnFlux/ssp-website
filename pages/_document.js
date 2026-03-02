@@ -140,6 +140,8 @@ export default function Document() {
           data-modal-disclaimer='This is a custom LLM for answering questions about SSP and other Flux products. The answers are based on the contents of Whitepapers, Documentation, Support articles, API references, website and knowledgebases. Give it a try!'
           data-button-hide='false'
           data-modal-override-open-id='kapa-button'
+          data-mcp-enabled='true'
+          data-mcp-server-url='https://flux.mcp.kapa.ai'
         />
       </Head>
       <body>
