@@ -2,20 +2,28 @@ import { motion } from 'framer-motion'
 import {
   AlertTriangle,
   ArrowRight,
+  Ban,
   Building2,
   CheckCircle,
   ChevronRight,
   ClipboardCheck,
+  Clock,
+  DollarSign,
   Eye,
+  Gauge,
   Globe,
   KeyRound,
   Layers,
+  ListChecks,
   Lock,
   Mail,
   Send,
   Shield,
+  ShieldAlert,
   ShieldCheck,
   Smartphone,
+  Snowflake,
+  UserCog,
   Users,
   Vault,
   X,
@@ -57,10 +65,67 @@ const features = [
     icon: ClipboardCheck,
   },
   {
+    title: 'Transaction Policy Engine',
+    description:
+      'Spending limits, address whitelists, time-lock delays, admin approvals, and per-signer overrides. 3-tier hierarchy — signer, vault, org.',
+    icon: ListChecks,
+  },
+  {
     title: 'Complete Audit Trail',
     description:
       'Every action logged permanently. Member changes, vault operations, transaction approvals — full accountability.',
     icon: Eye,
+  },
+]
+
+const policyFeatures = [
+  {
+    title: 'Spending Limits',
+    description:
+      'Per-transaction, daily, weekly, and monthly limits. Set in USD or native token. Aggregate and per-token controls.',
+    icon: DollarSign,
+  },
+  {
+    title: 'Address Whitelist',
+    description:
+      'Three modes: disabled, warn, or enforce. Label addresses, restrict by chain. Block unknown destinations entirely.',
+    icon: Ban,
+  },
+  {
+    title: 'Time-Lock Delays',
+    description:
+      'Configurable waiting period before broadcast. Trigger automatically above a USD threshold. Cancel before execution.',
+    icon: Clock,
+  },
+  {
+    title: 'Admin Approval',
+    description:
+      'Require admin sign-off on high-value transactions. Set a USD threshold — anything above it needs explicit approval.',
+    icon: ShieldAlert,
+  },
+  {
+    title: 'Per-Signer Overrides',
+    description:
+      'Set individual spending limits for each team member. Junior traders get tighter controls, senior execs get higher limits.',
+    icon: UserCog,
+  },
+  {
+    title: 'Velocity Tracking',
+    description:
+      'Rolling 30-day spending windows per vault, per signer, and per token. Automatic enforcement with TTL-based cleanup.',
+    icon: Gauge,
+  },
+  {
+    title: 'Emergency Vault Freeze',
+    description:
+      'Instantly freeze any vault with dual-device WK signing. Blocks all proposals until unfrozen. Incident response in seconds.',
+    icon: Snowflake,
+  },
+  {
+    title: '3-Tier Policy Hierarchy',
+    description:
+      'Organization defaults cascade to vaults and signers. Vault-level overrides refine the rules. Stricter policy always wins.',
+    icon: Layers,
   },
 ]
 
@@ -82,7 +147,8 @@ const securityLayers = [
   },
   {
     layer: 'Business Policies',
-    description: 'Spending limits, approval workflows, and risk controls',
+    description:
+      'Spending limits, address whitelists, time-locks, admin approvals, per-signer overrides, velocity tracking — 14+ configurable controls',
     icon: ClipboardCheck,
   },
   {
@@ -138,6 +204,13 @@ const comparisonData = [
     safe: true,
   },
   {
+    feature: 'Transaction Policy Engine',
+    ssp: true,
+    fireblocks: true,
+    bitgo: 'partial',
+    safe: false,
+  },
+  {
     feature: 'Mobile Signing',
     ssp: true,
     fireblocks: 'partial',
@@ -174,9 +247,7 @@ function ComparisonValue({ value }) {
   if (value === false) {
     return <X className='mx-auto h-5 w-5 text-red-400' />
   }
-  return (
-    <span className='text-sm font-medium text-yellow-500 dark:text-yellow-400'>Partial</span>
-  )
+  return <span className='text-sm font-medium text-yellow-500 dark:text-yellow-400'>Partial</span>
 }
 
 const supportedChains = [
@@ -454,18 +525,15 @@ export default function Enterprise() {
         <title>SSP Enterprise | Self-Custody Multisig for Business</title>
         <meta
           name='description'
-          content='SSP Enterprise: self-custody M-of-N multisig vaults for businesses. Manage your organization&#x27;s crypto with role-based access, two-device signing, and complete audit trails. No custodians. No MPC. Your keys, your rules.'
+          content='SSP Enterprise: self-custody M-of-N multisig vaults for businesses. Transaction policy engine with spending limits, address whitelists, time-locks, and admin approvals. Role-based access, two-device signing, and complete audit trails. No custodians. No MPC. Your keys, your rules.'
         />
         <meta
           name='keywords'
-          content='enterprise crypto custody, business multisig wallet, self-custody enterprise, M-of-N multisig, crypto treasury management, DAO treasury, corporate crypto, multisig vault'
+          content='enterprise crypto custody, business multisig wallet, self-custody enterprise, M-of-N multisig, crypto treasury management, DAO treasury, corporate crypto, multisig vault, transaction policy engine, spending limits, address whitelist, vault freeze, time-lock delay, admin approval'
         />
 
         {/* Open Graph */}
-        <meta
-          property='og:title'
-          content='SSP Enterprise | Self-Custody Multisig for Business'
-        />
+        <meta property='og:title' content='SSP Enterprise | Self-Custody Multisig for Business' />
         <meta
           property='og:description'
           content='M-of-N multisig vaults for businesses. Two-device signing, role-based access, complete audit trails. No custodians. Your keys, your rules.'
@@ -482,10 +550,7 @@ export default function Enterprise() {
 
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />
-        <meta
-          name='twitter:title'
-          content='SSP Enterprise | Self-Custody Multisig for Business'
-        />
+        <meta name='twitter:title' content='SSP Enterprise | Self-Custody Multisig for Business' />
         <meta
           name='twitter:description'
           content='M-of-N multisig vaults for businesses. Two-device signing, role-based access, complete audit trails. No custodians.'
@@ -530,8 +595,8 @@ export default function Enterprise() {
             </h1>
 
             <p className='mx-auto mb-8 max-w-3xl text-xl text-gray-600 dark:text-gray-400'>
-              M-of-N multisig vaults for your organization. Every signer uses two devices —
-              browser extension and mobile app. No custodians. No MPC. No single point of failure.
+              M-of-N multisig vaults for your organization. Every signer uses two devices — browser
+              extension and mobile app. No custodians. No MPC. No single point of failure.
             </p>
 
             <div className='flex flex-col items-center justify-center gap-4 sm:flex-row'>
@@ -589,11 +654,7 @@ export default function Enterprise() {
               {
                 title: 'Single Hardware Wallet',
                 problem: 'One person, one device',
-                risks: [
-                  'Key person risk',
-                  'No team governance',
-                  'Lost device = lost funds',
-                ],
+                risks: ['Key person risk', 'No team governance', 'Lost device = lost funds'],
                 icon: KeyRound,
               },
             ].map((item, index) => {
@@ -620,7 +681,7 @@ export default function Enterprise() {
                         key={i}
                         className='flex items-start text-sm text-gray-600 dark:text-gray-400'
                       >
-                        <X className='mr-2 mt-0.5 h-4 w-4 flex-shrink-0 text-red-400' />
+                        <X className='mt-0.5 mr-2 h-4 w-4 flex-shrink-0 text-red-400' />
                         {risk}
                       </li>
                     ))}
@@ -807,8 +868,103 @@ export default function Enterprise() {
         </div>
       </section>
 
-      {/* Security Section */}
+      {/* Policy Engine Section */}
       <section className='section-padding dark:bg-dark-900 bg-white'>
+        <div className='container-custom'>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            viewport={{ once: true }}
+            className='mx-auto mb-6 max-w-3xl text-center'
+          >
+            <h2 className='heading-2 mb-4'>Transaction Policy Engine</h2>
+            <p className='text-lg text-gray-600 dark:text-gray-400'>
+              Granular controls that cascade from organization to vault to individual signer.
+              Stricter policy always wins.
+            </p>
+          </motion.div>
+
+          {/* 3-tier cascade visual */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+            viewport={{ once: true }}
+            className='mx-auto mb-16 max-w-2xl'
+          >
+            <div className='flex items-center justify-center gap-3 text-sm font-medium sm:gap-4'>
+              <div className='dark:bg-dark-800 rounded-xl border border-gray-200 px-4 py-3 text-center sm:px-6 dark:border-gray-700'>
+                <Building2 className='text-primary-500 mx-auto mb-1 h-5 w-5' />
+                <span className='text-gray-900 dark:text-white'>Organization</span>
+                <p className='mt-0.5 text-xs text-gray-500 dark:text-gray-400'>Default policies</p>
+              </div>
+              <ChevronRight className='h-5 w-5 flex-shrink-0 text-gray-400' />
+              <div className='dark:bg-dark-800 rounded-xl border border-gray-200 px-4 py-3 text-center sm:px-6 dark:border-gray-700'>
+                <Vault className='text-primary-500 mx-auto mb-1 h-5 w-5' />
+                <span className='text-gray-900 dark:text-white'>Vault</span>
+                <p className='mt-0.5 text-xs text-gray-500 dark:text-gray-400'>Override & refine</p>
+              </div>
+              <ChevronRight className='h-5 w-5 flex-shrink-0 text-gray-400' />
+              <div className='dark:bg-dark-800 rounded-xl border border-gray-200 px-4 py-3 text-center sm:px-6 dark:border-gray-700'>
+                <UserCog className='text-primary-500 mx-auto mb-1 h-5 w-5' />
+                <span className='text-gray-900 dark:text-white'>Signer</span>
+                <p className='mt-0.5 text-xs text-gray-500 dark:text-gray-400'>Individual limits</p>
+              </div>
+            </div>
+            <p className='mt-3 text-center text-xs text-gray-400 dark:text-gray-500'>
+              Policies merge top-down — the stricter limit at any tier is enforced
+            </p>
+          </motion.div>
+
+          {/* Policy features grid */}
+          <motion.div
+            initial='hidden'
+            whileInView='visible'
+            viewport={{ once: true }}
+            variants={containerVariants}
+            className='grid gap-6 md:grid-cols-2 lg:grid-cols-4'
+          >
+            {policyFeatures.map((feature, index) => {
+              const FeatureIcon = feature.icon
+              return (
+                <motion.div key={index} variants={itemVariants}>
+                  <div className='dark:bg-dark-800 h-full rounded-2xl border border-gray-200 bg-gray-50 p-6 transition-all duration-300 hover:shadow-lg dark:border-gray-700'>
+                    <div className='bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400 mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg'>
+                      <FeatureIcon className='h-5 w-5' />
+                    </div>
+                    <h3 className='mb-1.5 text-lg font-bold text-gray-900 dark:text-white'>
+                      {feature.title}
+                    </h3>
+                    <p className='text-sm text-gray-600 dark:text-gray-400'>
+                      {feature.description}
+                    </p>
+                  </div>
+                </motion.div>
+              )
+            })}
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
+            viewport={{ once: true }}
+            className='mx-auto mt-10 max-w-2xl text-center'
+          >
+            <p className='text-sm text-gray-500 dark:text-gray-400'>
+              Most competitors offer basic approval rules. SSP provides a{' '}
+              <span className='font-semibold text-gray-900 dark:text-white'>
+                3-tier policy hierarchy with 14+ configurable controls
+              </span>{' '}
+              — included in every plan.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Security Section */}
+      <section className='section-padding dark:bg-dark-900 bg-gray-50'>
         <div className='container-custom'>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -1061,8 +1217,8 @@ export default function Enterprise() {
             >
               <h2 className='heading-2 mb-4'>Request Early Access</h2>
               <p className='mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-400'>
-                Be among the first organizations to use SSP Enterprise. Early adopters help shape the
-                product and get priority onboarding.
+                Be among the first organizations to use SSP Enterprise. Early adopters help shape
+                the product and get priority onboarding.
               </p>
             </motion.div>
 
@@ -1076,10 +1232,7 @@ export default function Enterprise() {
               <div className='border-primary-200 bg-primary-50 dark:border-primary-800 dark:bg-primary-900/20 mb-6 rounded-lg border p-4'>
                 <p className='text-primary-800 dark:text-primary-200 text-sm'>
                   <strong>Prefer direct contact?</strong> Reach out to{' '}
-                  <a
-                    href='mailto:tadeas@sspwallet.com'
-                    className='underline hover:no-underline'
-                  >
+                  <a href='mailto:tadeas@sspwallet.com' className='underline hover:no-underline'>
                     tadeas@sspwallet.com
                   </a>{' '}
                   or DM{' '}
@@ -1113,8 +1266,8 @@ export default function Enterprise() {
             <ShieldCheck className='text-primary-600 dark:text-primary-400 mx-auto mb-6 h-16 w-16' />
             <h2 className='heading-2 mb-4'>Your Keys. Your Rules.</h2>
             <p className='mb-8 text-lg text-gray-600 dark:text-gray-400'>
-              SSP Enterprise gives your organization the security of self-custody with the governance
-              of enterprise software. No custodians. No middlemen. No compromises.
+              SSP Enterprise gives your organization the security of self-custody with the
+              governance of enterprise software. No custodians. No middlemen. No compromises.
             </p>
             <div className='flex flex-col items-center justify-center gap-4 sm:flex-row'>
               <Link href='#early-access' className='btn btn-primary'>
