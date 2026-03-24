@@ -65,12 +65,6 @@ const features = [
     icon: ClipboardCheck,
   },
   {
-    title: 'Transaction Policy Engine',
-    description:
-      'Spending limits, address whitelists, time-lock delays, admin approvals, and per-signer overrides. 3-tier hierarchy — signer, vault, org.',
-    icon: ListChecks,
-  },
-  {
     title: 'Complete Audit Trail',
     description:
       'Every action logged permanently. Member changes, vault operations, transaction approvals — full accountability.',
@@ -953,7 +947,6 @@ export default function Enterprise() {
             className='mx-auto mt-10 max-w-2xl text-center'
           >
             <p className='text-sm text-gray-500 dark:text-gray-400'>
-              Most competitors offer basic approval rules. SSP provides a{' '}
               <span className='font-semibold text-gray-900 dark:text-white'>
                 3-tier policy hierarchy with 14+ configurable controls
               </span>{' '}
