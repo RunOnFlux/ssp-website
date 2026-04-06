@@ -492,7 +492,7 @@ function EarlyAccessForm() {
         ) : (
           <>
             <Send className='mr-2 h-4 w-4' />
-            Request Early Access
+            Get Started
           </>
         )}
       </button>
@@ -594,8 +594,8 @@ export default function Enterprise() {
             </p>
 
             <div className='flex flex-col items-center justify-center gap-4 sm:flex-row'>
-              <Link href='#early-access' className='btn btn-primary'>
-                Request Early Access
+              <Link href='#get-started' className='btn btn-primary'>
+                Get Started
                 <ArrowRight className='ml-2 h-4 w-4' />
               </Link>
               <Link href='#how-it-works' className='btn btn-secondary'>
@@ -1197,8 +1197,8 @@ export default function Enterprise() {
         </div>
       </section>
 
-      {/* Early Access Form */}
-      <section id='early-access' className='section-padding dark:bg-dark-900 bg-white'>
+      {/* Get Started Form */}
+      <section id='get-started' className='section-padding dark:bg-dark-900 bg-white'>
         <div className='container-custom'>
           <div className='mx-auto max-w-3xl'>
             <motion.div
@@ -1208,10 +1208,10 @@ export default function Enterprise() {
               viewport={{ once: true }}
               className='mb-12 text-center'
             >
-              <h2 className='heading-2 mb-4'>Request Early Access</h2>
+              <h2 className='heading-2 mb-4'>Get Started</h2>
               <p className='mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-400'>
-                Be among the first organizations to use SSP Enterprise. Early adopters help shape
-                the product and get priority onboarding.
+                Set up SSP Enterprise for your organization. Get priority onboarding and dedicated
+                support.
               </p>
             </motion.div>
 
@@ -1263,9 +1263,9 @@ export default function Enterprise() {
               governance of enterprise software. No custodians. No middlemen. No compromises.
             </p>
             <div className='flex flex-col items-center justify-center gap-4 sm:flex-row'>
-              <Link href='#early-access' className='btn btn-primary'>
+              <Link href='#get-started' className='btn btn-primary'>
                 <Mail className='mr-2 h-4 w-4' />
-                Request Early Access
+                Get Started
               </Link>
               <Link href='/download' className='btn btn-secondary'>
                 Download SSP Wallet
