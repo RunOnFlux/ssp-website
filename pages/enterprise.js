@@ -14,9 +14,7 @@ import {
   Globe,
   KeyRound,
   Layers,
-  ListChecks,
   Lock,
-  Mail,
   Send,
   Shield,
   ShieldAlert,
@@ -259,7 +257,7 @@ const supportedChains = [
   'Base',
 ]
 
-function EarlyAccessForm() {
+function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -287,7 +285,7 @@ function EarlyAccessForm() {
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
-          message: `[SSP ENTERPRISE - EARLY ACCESS REQUEST]\n\nCompany: ${formData.company || 'Not specified'}\nTeam Size: ${formData.teamSize || 'Not specified'}\nUse Case: ${formData.useCase || 'Not specified'}\n\nMessage:\n${formData.message || 'No additional message'}`,
+          message: `[SSP ENTERPRISE - CONTACT REQUEST]\n\nCompany: ${formData.company || 'Not specified'}\nTeam Size: ${formData.teamSize || 'Not specified'}\nUse Case: ${formData.useCase || 'Not specified'}\n\nMessage:\n${formData.message || 'No additional message'}`,
         }),
       })
 
@@ -594,8 +592,13 @@ export default function Enterprise() {
             </p>
 
             <div className='flex flex-col items-center justify-center gap-4 sm:flex-row'>
-              <Link href='#get-started' className='btn btn-primary'>
-                Get Started
+              <Link
+                href='https://enterprise.sspwallet.com'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='btn btn-primary'
+              >
+                Launch Enterprise App
                 <ArrowRight className='ml-2 h-4 w-4' />
               </Link>
               <Link href='#how-it-works' className='btn btn-secondary'>
@@ -1105,15 +1108,14 @@ export default function Enterprise() {
               </tbody>
             </table>
             <p className='mt-3 text-center text-xs text-gray-400 dark:text-gray-500'>
-              * Open-source wallet is free. Enterprise platform pricing scales with your
-              organization.{' '}
+              * Open-source wallet is free. Enterprise platform has a free tier to get started.{' '}
               <Link
-                href='#early-access'
+                href='#get-started'
                 className='text-primary-500 dark:text-primary-400 underline'
               >
-                Get in touch
+                Contact sales
               </Link>{' '}
-              for tailored plans.
+              for custom plans.
             </p>
           </motion.div>
         </div>
@@ -1197,7 +1199,7 @@ export default function Enterprise() {
         </div>
       </section>
 
-      {/* Get Started Form */}
+      {/* Contact Section */}
       <section id='get-started' className='section-padding dark:bg-dark-900 bg-white'>
         <div className='container-custom'>
           <div className='mx-auto max-w-3xl'>
@@ -1208,11 +1210,30 @@ export default function Enterprise() {
               viewport={{ once: true }}
               className='mb-12 text-center'
             >
-              <h2 className='heading-2 mb-4'>Get Started</h2>
+              <h2 className='heading-2 mb-4'>Contact Sales</h2>
               <p className='mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-400'>
-                Set up SSP Enterprise for your organization. Get priority onboarding and dedicated
-                support.
+                Need a custom Enterprise plan, dedicated support, or priority onboarding? Get in
+                touch with our team.
               </p>
+              <div className='mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row'>
+                <Link
+                  href='https://enterprise.sspwallet.com'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='btn btn-primary'
+                >
+                  Launch Enterprise App
+                  <ArrowRight className='ml-2 h-4 w-4' />
+                </Link>
+                <a
+                  href='https://calendar.app.google/NZd7n1d6Hjmd7XFD6'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='btn btn-secondary'
+                >
+                  Schedule a Call
+                </a>
+              </div>
             </motion.div>
 
             <motion.div
@@ -1240,7 +1261,7 @@ export default function Enterprise() {
                   on X.
                 </p>
               </div>
-              <EarlyAccessForm />
+              <ContactForm />
             </motion.div>
           </div>
         </div>
@@ -1263,9 +1284,14 @@ export default function Enterprise() {
               governance of enterprise software. No custodians. No middlemen. No compromises.
             </p>
             <div className='flex flex-col items-center justify-center gap-4 sm:flex-row'>
-              <Link href='#get-started' className='btn btn-primary'>
-                <Mail className='mr-2 h-4 w-4' />
-                Get Started
+              <Link
+                href='https://enterprise.sspwallet.com'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='btn btn-primary'
+              >
+                Launch Enterprise App
+                <ArrowRight className='ml-2 h-4 w-4' />
               </Link>
               <Link href='/download' className='btn btn-secondary'>
                 Download SSP Wallet
