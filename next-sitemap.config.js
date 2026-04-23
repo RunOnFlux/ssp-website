@@ -2,6 +2,7 @@
 module.exports = {
   siteUrl: 'https://sspwallet.io',
   generateRobotsTxt: false,
+  generateIndexSitemap: false,
   changefreq: 'weekly',
   priority: 0.7,
   sitemapSize: 5000,
