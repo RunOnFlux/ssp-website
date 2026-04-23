@@ -4,6 +4,15 @@ import { FeaturesHero } from '../components/features/FeaturesHero'
 import { SecurityFeatures } from '../components/features/SecurityFeatures'
 import { TechnicalFeatures } from '../components/features/TechnicalFeatures'
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sspwallet.io/' },
+    { '@type': 'ListItem', position: 2, name: 'Features', item: 'https://sspwallet.io/features' },
+  ],
+}
+
 export default function Features() {
   return (
     <>
@@ -11,11 +20,7 @@ export default function Features() {
         <title>Features - SSP Wallet | Advanced Crypto Security & Multi-Chain Support</title>
         <meta
           name='description'
-          content="Discover SSP Wallet's advanced features: true 2-of-2 multisignature security, WalletConnect v2 support, 15+ blockchain support, fiat on-ramp/off-ramp, cryptocurrency swapping, CSV export, and Account Abstraction."
-        />
-        <meta
-          name='keywords'
-          content='crypto wallet features, multi-signature security, blockchain support, Account Abstraction, ERC-4337, crypto security'
+          content='True 2-of-2 multisig, WalletConnect v2, 15+ blockchains, fiat on/off-ramp, crypto swap, CSV export, and Account Abstraction. See all SSP Wallet features.'
         />
 
         {/* Open Graph */}
@@ -43,6 +48,11 @@ export default function Features() {
 
         {/* Additional SEO */}
         <link rel='canonical' href='https://sspwallet.io/features' />
+
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
       </Head>
 
       <FeaturesHero />

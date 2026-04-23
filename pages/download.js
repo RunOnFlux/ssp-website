@@ -10,6 +10,15 @@ const CHROME_STORE_LINK =
   'https://chromewebstore.google.com/detail/ssp-wallet/mgfbabcnedcejkfibpafadgkhmkifhbd'
 const FIREFOX_ADDON_LINK = 'https://addons.mozilla.org/en-US/firefox/addon/ssp-wallet'
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sspwallet.io/' },
+    { '@type': 'ListItem', position: 2, name: 'Download', item: 'https://sspwallet.io/download' },
+  ],
+}
+
 const downloadOptions = [
   {
     id: 'chrome',
@@ -64,10 +73,6 @@ export default function DownloadPage() {
           name='description'
           content='Download SSP Wallet for your browser. Secure, simple, powerful crypto wallet with multi-signature security and mobile authentication.'
         />
-        <meta
-          name='keywords'
-          content='download SSP wallet, chrome extension, crypto wallet download, browser wallet, multi-signature wallet'
-        />
 
         {/* Open Graph */}
         <meta property='og:title' content='Download SSP Wallet | Secure Crypto Wallet' />
@@ -94,6 +99,11 @@ export default function DownloadPage() {
 
         {/* Additional SEO */}
         <link rel='canonical' href='https://sspwallet.io/download' />
+
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
       </Head>
 
       {/* Hero Section */}

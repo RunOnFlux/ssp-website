@@ -16,6 +16,15 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sspwallet.io/' },
+    { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://sspwallet.io/contact' },
+  ],
+}
+
 const contactMethods = [
   {
     title: 'Support Tickets',
@@ -312,10 +321,6 @@ export default function Contact() {
           name='description'
           content='Contact SSP Wallet team. Get support, ask questions, or discuss partnerships. Join our Discord community or reach out directly.'
         />
-        <meta
-          name='keywords'
-          content='contact SSP wallet, crypto wallet support, get in touch, customer service, technical support, discord community'
-        />
 
         {/* Open Graph */}
         <meta property='og:title' content='Contact SSP Wallet | Get in Touch' />
@@ -342,6 +347,11 @@ export default function Contact() {
 
         {/* Additional SEO */}
         <link rel='canonical' href='https://sspwallet.io/contact' />
+
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
       </Head>
 
       {/* Hero Section */}

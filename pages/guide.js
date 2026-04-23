@@ -134,6 +134,59 @@ const steps = [
   },
 ]
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sspwallet.io/' },
+    { '@type': 'ListItem', position: 2, name: 'Setup Guide', item: 'https://sspwallet.io/guide' },
+  ],
+}
+
+const videoSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'VideoObject',
+  name: 'How to Install SSP Wallet and SSP Key',
+  description:
+    'Complete video walkthrough: install the SSP Wallet browser extension and sync the SSP Key mobile app for 2-of-2 multisignature security.',
+  thumbnailUrl: 'https://sspwallet.io/ssp-setup-guide-poster.jpg',
+  contentUrl: 'https://sspwallet.io/ssp-setup-guide.mp4',
+  uploadDate: '2023-12-01',
+  duration: 'PT3M36S',
+  publisher: {
+    '@type': 'Organization',
+    name: 'SSP Wallet',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://sspwallet.io/ssp-logo-black-512x512.png',
+      width: 512,
+      height: 512,
+    },
+  },
+}
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to Install SSP Wallet & SSP Key',
+  description:
+    'Complete installation guide for the SSP Wallet browser extension and the SSP Key mobile companion app required for 2-of-2 multisignature security.',
+  totalTime: 'PT15M',
+  supply: [
+    { '@type': 'HowToSupply', name: 'Desktop browser (Chrome, Brave, or Firefox)' },
+    { '@type': 'HowToSupply', name: 'Mobile device (iOS 15.1+ or Android 7+)' },
+  ],
+  step: steps.flatMap((phase, phaseIndex) =>
+    phase.steps.map((s, stepIndex) => ({
+      '@type': 'HowToStep',
+      position: phaseIndex * 100 + stepIndex + 1,
+      name: `${phase.title}: ${s.title}`,
+      text: s.description,
+      url: `https://sspwallet.io/guide#${phase.phase.toLowerCase().replace(/\s+/g, '-')}-step-${s.step}`,
+    }))
+  ),
+}
+
 const securityTips = [
   {
     icon: Lock,
@@ -251,10 +304,6 @@ export default function Guide() {
           name='description'
           content='Step-by-step guide to install and set up SSP Wallet and SSP Key. Complete setup instructions for secure crypto wallet with multi-signature protection.'
         />
-        <meta
-          name='keywords'
-          content='SSP wallet setup, installation guide, crypto wallet tutorial, multi-signature setup, SSP Key installation'
-        />
 
         {/* Open Graph */}
         <meta
@@ -293,6 +342,19 @@ export default function Guide() {
 
         {/* Additional SEO */}
         <link rel='canonical' href='https://sspwallet.io/guide' />
+
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+        />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+        />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
       </Head>
 
       {/* Hero Section */}
@@ -369,13 +431,13 @@ export default function Guide() {
                 <video
                   controls
                   preload='metadata'
+                  width='1280'
+                  height='720'
                   className='h-full w-full object-cover'
-                  poster='/video-poster.svg'
+                  poster='/ssp-setup-guide-poster.jpg'
                 >
-                  <source
-                    src='/Video Guide_ How to Install SSP Wallet and SSP Key.mp4'
-                    type='video/mp4'
-                  />
+                  <source src='/ssp-setup-guide.webm' type='video/webm' />
+                  <source src='/ssp-setup-guide.mp4' type='video/mp4' />
                   <track kind='captions' srcLang='en' label='English' />
                   Your browser does not support the video tag.
                 </video>

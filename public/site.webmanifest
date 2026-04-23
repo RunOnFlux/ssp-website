@@ -1,0 +1,22 @@
+{
+  "name": "SSP Wallet",
+  "short_name": "SSP Wallet",
+  "description": "True 2-of-2 multisignature crypto wallet with Account Abstraction and 15+ blockchain support.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f59e0b",
+  "icons": [
+    {
+      "src": "/ssp-logo-black-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/ssp-logo-black-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

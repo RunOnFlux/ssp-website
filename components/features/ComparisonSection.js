@@ -1,7 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Check, X } from 'lucide-react'
+import { ArrowRight, Check, X } from 'lucide-react'
+import Link from 'next/link'
 
 const comparisonData = [
   {
@@ -275,6 +276,26 @@ export function ComparisonSection() {
             )
           })}
         </div>
+
+        {/* Cross-page CTAs */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          viewport={{ once: true }}
+          className='mt-16 flex flex-col items-center justify-center gap-4 sm:flex-row'
+        >
+          <Link href='/download' className='btn btn-primary'>
+            Download SSP Wallet
+            <ArrowRight className='ml-2 h-4 w-4' />
+          </Link>
+          <Link href='/guide' className='btn btn-secondary'>
+            Read the Setup Guide
+          </Link>
+          <Link href='/enterprise' className='btn btn-secondary'>
+            SSP for Business
+          </Link>
+        </motion.div>
       </div>
     </section>
   )

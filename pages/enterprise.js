@@ -31,6 +31,20 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sspwallet.io/' },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Enterprise',
+      item: 'https://sspwallet.io/enterprise',
+    },
+  ],
+}
+
 const features = [
   {
     title: 'M-of-N Multisig Vaults',
@@ -517,11 +531,7 @@ export default function Enterprise() {
         <title>SSP Enterprise | Self-Custody Multisig for Business</title>
         <meta
           name='description'
-          content='SSP Enterprise: self-custody M-of-N multisig vaults for businesses. Transaction policy engine with spending limits, address whitelists, time-locks, and admin approvals. Role-based access, two-device signing, and complete audit trails. No custodians. No MPC. Your keys, your rules.'
-        />
-        <meta
-          name='keywords'
-          content='enterprise crypto custody, business multisig wallet, self-custody enterprise, M-of-N multisig, crypto treasury management, DAO treasury, corporate crypto, multisig vault, transaction policy engine, spending limits, address whitelist, vault freeze, time-lock delay, admin approval'
+          content='Self-custody M-of-N multisig vaults for business treasuries. Policy engine, spending limits, two-device signing, role-based access. No custodians, no MPC.'
         />
 
         {/* Open Graph */}
@@ -555,6 +565,11 @@ export default function Enterprise() {
 
         {/* Additional SEO */}
         <link rel='canonical' href='https://sspwallet.io/enterprise' />
+
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
       </Head>
 
       {/* Hero Section */}
@@ -1295,6 +1310,9 @@ export default function Enterprise() {
               </Link>
               <Link href='/download' className='btn btn-secondary'>
                 Download SSP Wallet
+              </Link>
+              <Link href='/features' className='btn btn-secondary'>
+                Explore All Features
               </Link>
             </div>
           </motion.div>

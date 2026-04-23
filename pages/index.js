@@ -12,11 +12,7 @@ export default function Home() {
         <title>SSP Wallet - Secure, Simple, Powerful Crypto Wallet</title>
         <meta
           name='description'
-          content='SSP Wallet is a true 2-of-2 multisignature wallet using BIP48 derivation, requiring both browser extension and mobile device. Features WalletConnect v2, ERC-4337 Account Abstraction with Schnorr signatures, and 15+ blockchain support.'
-        />
-        <meta
-          name='keywords'
-          content='crypto wallet, bitcoin wallet, ethereum wallet, BIP48 multi-signature, browser extension, self-custody, blockchain, DeFi, Web3, Account Abstraction, ERC-4337, Schnorr signatures, WalletConnect v2'
+          content='True 2-of-2 multisig crypto wallet. Browser extension + mobile required for every transaction. Supports Bitcoin, Ethereum, and 15+ blockchains.'
         />
 
         {/* Open Graph */}
@@ -36,6 +32,7 @@ export default function Home() {
         />
 
         {/* Twitter */}
+        <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:title' content='SSP Wallet - Secure, Simple, Powerful Crypto Wallet' />
         <meta
           name='twitter:description'

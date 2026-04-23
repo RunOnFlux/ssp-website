@@ -50,6 +50,8 @@ const faqCategories = [
       },
       {
         question: 'Where can I find the complete list of supported assets?',
+        answerText:
+          'For a comprehensive and up-to-date list of all natively supported chains and tokens, please refer to our official SSP Asset Spreadsheet at https://docs.google.com/spreadsheets/d/1GUqGeV4hCwjKlxazY1vPY52owrEqXQ1UTchOKfkyS7c. This spreadsheet is regularly updated with new additions and contains detailed information about each supported asset.',
         answer: (
           <>
             For a comprehensive and up-to-date list of all natively supported chains and tokens,
@@ -150,6 +152,8 @@ const faqCategories = [
       },
       {
         question: 'How can I verify the deterministic build of SSP Wallet?',
+        answerText:
+          'To verify SSP Wallet builds: 1) Download the release files (Chrome/Firefox zips, SHA256SUMS, SHA256SUMS.asc) from https://github.com/RunOnFlux/ssp-wallet/releases. 2) Import our public key from https://keys.openpgp.org/search?q=security%40runonflux.io. 3) Verify GPG signature: gpg --verify SHA256SUMS.asc SHA256SUMS. 4) Verify hashes: sha256sum -c SHA256SUMS. 5) Optionally reproduce the build: git checkout [version] && npm run build:deterministic.',
         answer: (
           <>
             To verify SSP Wallet builds: 1) Download the release files (Chrome/Firefox zips,
@@ -189,6 +193,8 @@ const faqCategories = [
       },
       {
         question: 'Who signs the SSP Wallet releases?',
+        answerText:
+          'All SSP Wallet releases are cryptographically signed by security@runonflux.io using GPG signatures. Our public key is available on the OpenPGP keyserver at https://keys.openpgp.org/search?q=security%40runonflux.io for verification. The deterministic build process includes Docker-based isolated environments and comprehensive checksums (SHA256SUMS) that are also GPG-signed to ensure authenticity and integrity.',
         answer: (
           <>
             All SSP Wallet releases are cryptographically signed by security@runonflux.io using GPG
@@ -297,6 +303,30 @@ const faqCategories = [
     ],
   },
 ]
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sspwallet.io/' },
+    { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://sspwallet.io/support' },
+  ],
+}
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqCategories.flatMap(category =>
+    category.faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answerText || faq.answer,
+      },
+    }))
+  ),
+}
 
 const supportChannels = [
   {
@@ -582,11 +612,6 @@ export default function Support() {
           name='description'
           content='Get comprehensive support for SSP Wallet. Find answers to FAQs, access documentation, connect with community, or contact our expert support team.'
         />
-        <meta
-          name='keywords'
-          content='SSP wallet support, crypto wallet help, technical support, FAQ, troubleshooting, customer service, documentation, community support'
-        />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
 
         {/* Open Graph */}
         <meta property='og:title' content='SSP Wallet Support | Get Help & Technical Support' />
@@ -616,6 +641,15 @@ export default function Support() {
 
         {/* Additional SEO */}
         <link rel='canonical' href='https://sspwallet.io/support' />
+
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
       </Head>
 
       {/* Hero Section */}
