@@ -1,0 +1,37 @@
+# SSP Wallet
+
+> Secure, Simple, Powerful — a true 2-of-2 multisignature crypto wallet using BIP48 derivation. Requires both a browser extension and a mobile app to co-sign every transaction. Supports Account Abstraction (ERC-4337) and 15+ blockchains. Non-custodial, open source, security-audited by Halborn.
+
+SSP Wallet is developed by InFlux Technologies (RunOnFlux). It consists of two components: **SSP Wallet**, a browser extension for Chrome, Brave, and Firefox that holds the first private key, and **SSP Key**, an iOS/Android mobile app that holds the second. Every transaction requires signatures from both devices, creating a genuine 2-of-2 multisig without relying on MPC, social recovery, or custodians. The two keys are derived independently and synchronized locally via QR code; no seed phrase or private key ever leaves the device that generated it.
+
+## Product
+
+- [Homepage](https://sspwallet.io/): overview, positioning, and primary download link
+- [Features](https://sspwallet.io/features): full feature list — 2-of-2 multisig, WalletConnect v2 (Reown), Account Abstraction with Schnorr signatures, fiat on/off-ramp, built-in crypto swap, CSV export — plus a comparison table against self-custody wallets, custodial wallets, hardware wallets, and exchanges
+- [Download](https://sspwallet.io/download): Chrome Web Store, Firefox Add-ons, Google Play, and App Store links
+- [Setup Guide](https://sspwallet.io/guide): step-by-step installation and synchronization for both components, including a video walkthrough
+- [Enterprise](https://sspwallet.io/enterprise): self-custody M-of-N multisig vaults for business treasuries — transaction policy engine (spending limits, address whitelists, time-locks, admin approvals), role-based access, two-device signing, and complete audit trails. No custodians, no MPC
+
+## Supported blockchains
+
+Native support: Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), Zcash (ZEC), Ravencoin (RVN), Dogecoin (DOGE), Bitcoin Cash (BCH), Flux (FLUX), Polygon (MATIC), Binance Smart Chain (BSC), Avalanche (AVAX), Base. Full ERC-20 token support on all EVM chains with custom token list import. Solana support is in development.
+
+## Documentation and support
+
+- [Full documentation](https://docs.sspwallet.io): technical docs, developer guides, integration references
+- [Support](https://sspwallet.io/support): 38 FAQ entries across Getting Started, Security & Privacy, and Technical Support, plus contact form
+- [Contact](https://sspwallet.io/contact): partnership inquiries and direct communication
+
+## Community and source
+
+- [GitHub — RunOnFlux/ssp-wallet](https://github.com/RunOnFlux/ssp-wallet): browser extension source, deterministic builds, GPG-signed releases
+- [Discord](https://discord.gg/runonflux): community and real-time support
+- [Twitter / X](https://twitter.com/sspwallet_io): updates and announcements
+- [Medium](https://medium.com/@ssp_wallet): long-form articles
+- [YouTube](https://www.youtube.com/@ZelLabs): video content from the parent organization
+
+## Policies
+
+- [Privacy Policy](https://sspwallet.io/privacy-policy)
+- [Terms of Service](https://sspwallet.io/terms-of-service)
+- [Cookie Policy](https://sspwallet.io/cookie-policy)
