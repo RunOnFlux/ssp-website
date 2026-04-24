@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ExternalLink, Plus } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useInView } from 'react-intersection-observer'
 
@@ -9,84 +10,84 @@ const supportedChains = [
   {
     name: 'Bitcoin',
     symbol: 'BTC',
-    logo: '/browsers.svg', // We'll use placeholder for now
+    logo: '/chains/btc.svg',
     color: 'from-orange-400 to-orange-600',
     description: 'The original cryptocurrency',
   },
   {
     name: 'Ethereum',
     symbol: 'ETH',
-    logo: '/browsers.svg',
+    logo: '/chains/eth.svg',
     color: 'from-blue-400 to-blue-600',
     description: 'Smart contract platform',
   },
   {
     name: 'Litecoin',
     symbol: 'LTC',
-    logo: '/browsers.svg',
+    logo: '/chains/ltc.svg',
     color: 'from-gray-400 to-gray-600',
     description: 'Digital silver',
   },
   {
     name: 'Zcash',
     symbol: 'ZEC',
-    logo: '/browsers.svg',
+    logo: '/chains/zec.svg',
     color: 'from-yellow-400 to-yellow-600',
     description: 'Privacy-focused',
   },
   {
     name: 'Ravencoin',
     symbol: 'RVN',
-    logo: '/browsers.svg',
+    logo: '/chains/rvn.svg',
     color: 'from-blue-400 to-indigo-600',
     description: 'Asset transfer blockchain',
   },
   {
     name: 'Dogecoin',
     symbol: 'DOGE',
-    logo: '/browsers.svg',
+    logo: '/chains/doge.svg',
     color: 'from-yellow-400 to-orange-500',
-    description: 'The people&apos;s crypto',
+    description: "The people's crypto",
   },
   {
     name: 'Bitcoin Cash',
     symbol: 'BCH',
-    logo: '/browsers.svg',
+    logo: '/chains/bch.svg',
     color: 'from-green-400 to-green-600',
     description: 'Peer-to-peer electronic cash',
   },
   {
     name: 'Flux',
     symbol: 'FLUX',
-    logo: '/browsers.svg',
+    logo: '/chains/flux.svg',
     color: 'from-purple-400 to-purple-600',
     description: 'Decentralized computing',
   },
   {
     name: 'Polygon',
     symbol: 'MATIC',
-    logo: '/browsers.svg',
+    logo: '/chains/matic.svg',
     color: 'from-purple-500 to-indigo-600',
     description: 'Ethereum scaling',
   },
   {
-    name: 'Binance Smart Chain',
+    name: 'BNB Smart Chain',
     symbol: 'BSC',
-    logo: '/browsers.svg',
+    logo: '/chains/bnb.svg',
     color: 'from-yellow-400 to-yellow-600',
     description: 'Fast, low-cost transactions',
   },
   {
     name: 'Avalanche',
     symbol: 'AVAX',
-    logo: '/browsers.svg',
+    logo: '/chains/avax.svg',
     color: 'from-red-400 to-red-600',
     description: 'High-performance blockchain',
   },
   {
     name: 'Base',
     symbol: 'BASE',
-    logo: '/browsers.svg',
+    logo: '/chains/base.svg',
     color: 'from-blue-500 to-blue-700',
     description: 'Coinbase L2 solution',
   },
@@ -178,12 +179,14 @@ export function SupportedChains() {
                     <div
                       className={`absolute inset-0 bg-linear-to-br ${chain.color} rounded-full opacity-20 blur-sm`}
                     />
-                    <div className='dark:bg-dark-700 relative flex h-full w-full items-center justify-center rounded-full bg-white shadow-lg'>
-                      <span
-                        className={`bg-linear-to-br text-lg font-bold ${chain.color} bg-clip-text text-transparent`}
-                      >
-                        {chain.symbol}
-                      </span>
+                    <div className='dark:bg-dark-700 relative flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-white shadow-lg'>
+                      <Image
+                        src={chain.logo}
+                        alt={`${chain.name} logo`}
+                        width={36}
+                        height={36}
+                        className='h-9 w-9 object-contain'
+                      />
                     </div>
                   </div>
 
@@ -263,7 +266,7 @@ export function SupportedChains() {
                   {supportedChains.slice(0, 9).map((chain, index) => (
                     <motion.div
                       key={index}
-                      className='dark:bg-dark-700 flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-lg'
+                      className='dark:bg-dark-700 flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-white shadow-lg'
                       animate={{
                         y: [0, -10, 0],
                         rotate: [0, 5, 0],
@@ -275,11 +278,13 @@ export function SupportedChains() {
                         ease: 'easeInOut',
                       }}
                     >
-                      <span
-                        className={`bg-linear-to-br text-sm font-bold ${chain.color} bg-clip-text text-transparent`}
-                      >
-                        {chain.symbol}
-                      </span>
+                      <Image
+                        src={chain.logo}
+                        alt={`${chain.name} logo`}
+                        width={40}
+                        height={40}
+                        className='h-10 w-10 object-contain'
+                      />
                     </motion.div>
                   ))}
                 </div>

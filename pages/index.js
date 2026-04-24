@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { CTA } from '../components/home/CTA'
+import { EnterpriseBand } from '../components/home/EnterpriseBand'
 import { Features } from '../components/home/Features'
 import { Hero } from '../components/home/Hero'
 import { Security } from '../components/home/Security'
@@ -52,6 +53,7 @@ export default function Home() {
       <Hero />
       <Features />
       <Security />
+      <EnterpriseBand />
       <SupportedChains />
       <CTA />
     </>
