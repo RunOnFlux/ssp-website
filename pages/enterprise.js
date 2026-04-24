@@ -27,6 +27,7 @@ import {
   X,
 } from 'lucide-react'
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
@@ -643,6 +644,47 @@ export default function Enterprise() {
                 <ChevronRight className='ml-2 h-4 w-4' />
               </Link>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* In production with — Flux Foundation case study link */}
+      <section className='dark:bg-dark-800 border-y border-gray-200 bg-gray-50 py-10 dark:border-gray-700'>
+        <div className='container-custom'>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            viewport={{ once: true }}
+            className='mx-auto max-w-4xl'
+          >
+            <Link
+              href='/case-studies/flux-foundation'
+              className='hover:border-primary-400/60 dark:hover:border-primary-500/40 group flex flex-col items-center gap-4 rounded-2xl border border-gray-200 bg-white p-6 transition-colors duration-300 sm:flex-row sm:items-center sm:gap-6 dark:border-gray-700 dark:bg-gray-900/40'
+            >
+              <div className='dark:bg-dark-700/60 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl bg-gray-50 p-2'>
+                <Image
+                  src='/flux-symbol.svg'
+                  alt='Flux Foundation'
+                  width={40}
+                  height={40}
+                  className='h-10 w-10'
+                />
+              </div>
+              <div className='flex-1 text-center sm:text-left'>
+                <p className='text-primary-600 dark:text-primary-400 mb-0.5 text-xs font-semibold tracking-wider uppercase'>
+                  In production with Flux Foundation
+                </p>
+                <p className='text-sm text-gray-700 md:text-base dark:text-gray-300'>
+                  Securing the Fusion bridge and Foundation treasury across BTC, ETH, FLUX, and EVM
+                  L2s.
+                </p>
+              </div>
+              <span className='text-primary-600 group-hover:text-primary-700 dark:text-primary-400 inline-flex items-center text-sm font-medium whitespace-nowrap'>
+                Read the case study
+                <ArrowRight className='ml-1 h-4 w-4 transition-transform group-hover:translate-x-1' />
+              </span>
+            </Link>
           </motion.div>
         </div>
       </section>

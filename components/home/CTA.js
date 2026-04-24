@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Chrome, Download, Key, Smartphone } from 'lucide-react'
+import { ArrowRight, Building2, Chrome, Download, Smartphone } from 'lucide-react'
 import Link from 'next/link'
 import { useInView } from 'react-intersection-observer'
 import { Logo } from '../Logo'
@@ -22,12 +22,11 @@ const downloadOptions = [
     primary: true,
   },
   {
-    icon: Key,
-    title: 'Hardware Keys - Enterprise',
-    description: 'For businesses requiring multisignature security',
-    link: '/contact',
+    icon: Building2,
+    title: 'SSP Enterprise - For Teams',
+    description: 'M-of-N multisig vaults for organizations. Available now.',
+    link: '/enterprise',
     primary: true,
-    comingSoon: true,
   },
 ]
 
