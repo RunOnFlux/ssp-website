@@ -113,31 +113,39 @@ export function EnterpriseBand() {
           </motion.div>
 
           {/* Social proof — Flux Foundation case study */}
-          <motion.div
-            variants={itemVariants}
-            className='dark:bg-dark-800/60 mx-auto mb-10 max-w-3xl rounded-2xl border border-gray-200 bg-white/80 p-6 backdrop-blur-sm md:p-8 dark:border-white/10'
-          >
-            <div className='flex flex-col items-center gap-6 sm:flex-row sm:items-start'>
-              <div className='dark:bg-dark-700/60 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-xl bg-gray-50 p-2'>
-                <Image
-                  src='/flux-symbol.svg'
-                  alt='Flux Foundation'
-                  width={48}
-                  height={48}
-                  className='h-12 w-12'
-                />
+          <motion.div variants={itemVariants} className='mx-auto mb-10 max-w-3xl'>
+            <Link
+              href='/case-studies/flux-foundation'
+              className='hover:border-primary-400/60 dark:hover:border-primary-500/40 dark:bg-dark-800/60 group block rounded-2xl border border-gray-200 bg-white/80 p-6 backdrop-blur-sm transition-colors duration-300 md:p-8 dark:border-white/10'
+            >
+              <div className='flex flex-col items-center gap-6 sm:flex-row sm:items-start'>
+                <div className='dark:bg-dark-700/60 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-xl bg-gray-50 p-2'>
+                  <Image
+                    src='/flux-symbol.svg'
+                    alt='Flux Foundation'
+                    width={48}
+                    height={48}
+                    className='h-12 w-12'
+                  />
+                </div>
+                <div className='flex-1 text-center sm:text-left'>
+                  <p className='text-primary-700 dark:text-primary-300 mb-1 text-xs font-semibold tracking-wider uppercase'>
+                    Flux Foundation
+                  </p>
+                  <p className='mb-3 text-base text-gray-700 md:text-lg dark:text-gray-200'>
+                    Uses SSP Enterprise to secure the{' '}
+                    <span className='font-semibold text-gray-900 dark:text-white'>
+                      Fusion bridge
+                    </span>{' '}
+                    and manage Foundation treasury with multi-party signing.
+                  </p>
+                  <span className='text-primary-600 group-hover:text-primary-700 dark:text-primary-400 inline-flex items-center text-sm font-medium'>
+                    Read the case study
+                    <ArrowRight className='ml-1 h-4 w-4 transition-transform group-hover:translate-x-1' />
+                  </span>
+                </div>
               </div>
-              <div className='text-center sm:text-left'>
-                <p className='text-primary-700 dark:text-primary-300 mb-1 text-xs font-semibold tracking-wider uppercase'>
-                  Flux Foundation
-                </p>
-                <p className='text-base text-gray-700 md:text-lg dark:text-gray-200'>
-                  Uses SSP Enterprise to secure the{' '}
-                  <span className='font-semibold text-gray-900 dark:text-white'>Fusion bridge</span>{' '}
-                  and manage Foundation treasury with multi-party signing.
-                </p>
-              </div>
-            </div>
+            </Link>
           </motion.div>
 
           {/* CTAs */}
