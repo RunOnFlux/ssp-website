@@ -82,8 +82,8 @@ export function EnterpriseBand() {
             </h2>
 
             <p className='mx-auto max-w-2xl text-lg text-gray-600 md:text-xl dark:text-gray-300'>
-              Multi-party multisig vaults with role-based access, granular policy controls, and full
-              audit trails. The same two-device security as SSP Wallet, built for organizations.
+              Your team holds the keys. Your team signs. SSP Enterprise handles the coordination —
+              proposals, policies, and the audit trail your CFO will actually want.
             </p>
           </motion.div>
 
@@ -129,12 +129,12 @@ export function EnterpriseBand() {
               </div>
               <div className='text-center sm:text-left'>
                 <p className='text-primary-700 dark:text-primary-300 mb-1 text-xs font-semibold tracking-wider uppercase'>
-                  Trusted by Flux Foundation
+                  Flux Foundation
                 </p>
                 <p className='text-base text-gray-700 md:text-lg dark:text-gray-200'>
-                  Securing the{' '}
+                  Uses SSP Enterprise to secure the{' '}
                   <span className='font-semibold text-gray-900 dark:text-white'>Fusion bridge</span>{' '}
-                  and managing Foundation resources with multi-party signing.
+                  and manage Foundation treasury with multi-party signing.
                 </p>
               </div>
             </div>

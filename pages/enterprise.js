@@ -45,44 +45,54 @@ const breadcrumbSchema = {
   ],
 }
 
+const DOCS_BASE = 'https://docs.sspwallet.io/enterprise'
+
 const features = [
   {
     title: 'M-of-N Multisig Vaults',
     description:
       'Configure any signing threshold for your team. 2-of-3, 3-of-5, or any combination that fits your governance model.',
     icon: Vault,
+    docsUrl: `${DOCS_BASE}/creating-vaults`,
   },
   {
     title: 'Role-Based Access',
     description:
       'Owner, Admin, Member, and Viewer roles. Control who can propose, sign, or simply observe transactions.',
     icon: Users,
+    docsUrl: `${DOCS_BASE}/inviting-members`,
   },
   {
     title: 'Two-Device Signing',
     description:
       'Every signer uses both a browser extension and a mobile app. Two keys per person, M-of-N across your team.',
     icon: Smartphone,
+    docsUrl: `${DOCS_BASE}/getting-started`,
   },
   {
     title: 'Multi-Chain Support',
     description:
       'Bitcoin, Ethereum, Litecoin, Dogecoin, Flux, Polygon, BSC, Base, Avalanche, and more. One platform for all chains.',
     icon: Globe,
+    docsUrl: `${DOCS_BASE}/creating-vaults`,
   },
   {
     title: 'Transaction Proposals',
     description:
       'Propose transactions with full details. Team members review, approve, or reject. Broadcast only when threshold is met.',
     icon: ClipboardCheck,
+    docsUrl: `${DOCS_BASE}/transactions`,
   },
   {
     title: 'Complete Audit Trail',
     description:
       'Every action logged permanently. Member changes, vault operations, transaction approvals — full accountability.',
     icon: Eye,
+    docsUrl: `${DOCS_BASE}/transactions`,
   },
 ]
+
+const POLICIES_DOCS = `${DOCS_BASE}/policies`
 
 const policyFeatures = [
   {
@@ -90,48 +100,56 @@ const policyFeatures = [
     description:
       'Per-transaction, daily, weekly, and monthly limits. Set in USD or native token. Aggregate and per-token controls.',
     icon: DollarSign,
+    docsUrl: `${POLICIES_DOCS}#spending-limits`,
   },
   {
     title: 'Address Whitelist',
     description:
       'Three modes: disabled, warn, or enforce. Label addresses, restrict by chain. Block unknown destinations entirely.',
     icon: Ban,
+    docsUrl: `${POLICIES_DOCS}#address-whitelist`,
   },
   {
     title: 'Time-Lock Delays',
     description:
       'Configurable waiting period before broadcast. Trigger automatically above a USD threshold. Cancel before execution.',
     icon: Clock,
+    docsUrl: `${POLICIES_DOCS}#time-lock-delays`,
   },
   {
     title: 'Admin Approval',
     description:
       'Require admin sign-off on high-value transactions. Set a USD threshold — anything above it needs explicit approval.',
     icon: ShieldAlert,
+    docsUrl: `${POLICIES_DOCS}#admin-approval`,
   },
   {
     title: 'Per-Signer Overrides',
     description:
       'Set individual spending limits for each team member. Junior traders get tighter controls, senior execs get higher limits.',
     icon: UserCog,
+    docsUrl: `${POLICIES_DOCS}#per-signer-spending-limits-vault-policies`,
   },
   {
     title: 'Velocity Tracking',
     description:
       'Rolling 30-day spending windows per vault, per signer, and per token. Automatic enforcement with TTL-based cleanup.',
     icon: Gauge,
+    docsUrl: `${POLICIES_DOCS}#velocity-tracking`,
   },
   {
     title: 'Emergency Vault Freeze',
     description:
       'Instantly freeze any vault with dual-device WK signing. Blocks all proposals until unfrozen. Incident response in seconds.',
     icon: Snowflake,
+    docsUrl: `${POLICIES_DOCS}#emergency-vault-freeze`,
   },
   {
     title: '3-Tier Policy Hierarchy',
     description:
       'Organization defaults cascade to vaults and signers. Vault-level overrides refine the rules. Stricter policy always wins.',
     icon: Layers,
+    docsUrl: `${POLICIES_DOCS}#policy-hierarchy-in-practice`,
   },
 ]
 
@@ -169,21 +187,25 @@ const useCases = [
     title: 'Corporate Treasury',
     description: 'Multi-signature approval for company funds. CEO + CFO + Board = 2-of-3.',
     example: '3 executives, 2 required to sign',
+    docsUrl: `${DOCS_BASE}/use-cases/corporate-treasury`,
   },
   {
     title: 'DAO Treasury',
     description: 'Decentralized decision-making with on-chain security for community funds.',
     example: '5 council members, 3 required',
+    docsUrl: `${DOCS_BASE}/use-cases/dao-treasury`,
   },
   {
     title: 'Investment Funds',
     description: 'Institutional-grade self-custody for fund managers and limited partners.',
     example: 'Fund manager + compliance + LP',
+    docsUrl: `${DOCS_BASE}/use-cases`,
   },
   {
     title: 'Partnerships & JVs',
     description: 'Shared control between partners with clear accountability and audit trails.',
     example: 'Equal control, transparent ops',
+    docsUrl: `${DOCS_BASE}/use-cases`,
   },
 ]
 
@@ -864,14 +886,25 @@ export default function Enterprise() {
               const FeatureIcon = feature.icon
               return (
                 <motion.div key={index} variants={itemVariants}>
-                  <div className='dark:bg-dark-800 h-full rounded-2xl border border-gray-200 bg-white p-8 transition-all duration-300 hover:shadow-lg dark:border-gray-700'>
+                  <div className='dark:bg-dark-800 flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-8 transition-all duration-300 hover:shadow-lg dark:border-gray-700'>
                     <div className='bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400 mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl'>
                       <FeatureIcon className='h-6 w-6' />
                     </div>
                     <h3 className='mb-2 text-xl font-bold text-gray-900 dark:text-white'>
                       {feature.title}
                     </h3>
-                    <p className='text-gray-600 dark:text-gray-400'>{feature.description}</p>
+                    <p className='flex-1 text-gray-600 dark:text-gray-400'>{feature.description}</p>
+                    {feature.docsUrl && (
+                      <a
+                        href={feature.docsUrl}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 mt-4 inline-flex items-center text-sm font-medium'
+                      >
+                        Read the guide
+                        <ArrowRight className='ml-1 h-3.5 w-3.5' />
+                      </a>
+                    )}
                   </div>
                 </motion.div>
               )
@@ -941,17 +974,26 @@ export default function Enterprise() {
               const FeatureIcon = feature.icon
               return (
                 <motion.div key={index} variants={itemVariants}>
-                  <div className='dark:bg-dark-800 h-full rounded-2xl border border-gray-200 bg-gray-50 p-6 transition-all duration-300 hover:shadow-lg dark:border-gray-700'>
+                  <a
+                    href={feature.docsUrl}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='dark:bg-dark-800 hover:border-primary-300 dark:hover:border-primary-600 group flex h-full flex-col rounded-2xl border border-gray-200 bg-gray-50 p-6 transition-all duration-300 hover:shadow-lg dark:border-gray-700'
+                  >
                     <div className='bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400 mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg'>
                       <FeatureIcon className='h-5 w-5' />
                     </div>
                     <h3 className='mb-1.5 text-lg font-bold text-gray-900 dark:text-white'>
                       {feature.title}
                     </h3>
-                    <p className='text-sm text-gray-600 dark:text-gray-400'>
+                    <p className='flex-1 text-sm text-gray-600 dark:text-gray-400'>
                       {feature.description}
                     </p>
-                  </div>
+                    <span className='text-primary-600 group-hover:text-primary-700 dark:text-primary-400 mt-3 inline-flex items-center text-xs font-medium opacity-0 transition-opacity group-hover:opacity-100'>
+                      Read more
+                      <ArrowRight className='ml-1 h-3 w-3' />
+                    </span>
+                  </a>
                 </motion.div>
               )
             })}
@@ -1132,6 +1174,43 @@ export default function Enterprise() {
               </Link>{' '}
               for custom plans.
             </p>
+
+            <div className='mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-6'>
+              <span className='text-sm text-gray-600 dark:text-gray-400'>
+                Already on one of these? See the migration guide:
+              </span>
+              <div className='flex flex-wrap items-center justify-center gap-3'>
+                <a
+                  href={`${DOCS_BASE}/migration/from-fireblocks`}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 inline-flex items-center text-sm font-medium'
+                >
+                  From Fireblocks
+                  <ArrowRight className='ml-1 h-3.5 w-3.5' />
+                </a>
+                <span className='text-gray-300 dark:text-gray-700'>·</span>
+                <a
+                  href={`${DOCS_BASE}/migration/from-safe`}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 inline-flex items-center text-sm font-medium'
+                >
+                  From Safe
+                  <ArrowRight className='ml-1 h-3.5 w-3.5' />
+                </a>
+                <span className='text-gray-300 dark:text-gray-700'>·</span>
+                <a
+                  href={`${DOCS_BASE}/migration/from-bitgo`}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 inline-flex items-center text-sm font-medium'
+                >
+                  From BitGo
+                  <ArrowRight className='ml-1 h-3.5 w-3.5' />
+                </a>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -1160,17 +1239,28 @@ export default function Enterprise() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.08 }}
                 viewport={{ once: true }}
-                className='dark:bg-dark-800 rounded-2xl border border-gray-200 bg-gray-50 p-6 dark:border-gray-700'
+                className='dark:bg-dark-800 flex flex-col rounded-2xl border border-gray-200 bg-gray-50 p-6 dark:border-gray-700'
               >
                 <h3 className='mb-2 text-lg font-bold text-gray-900 dark:text-white'>
                   {useCase.title}
                 </h3>
-                <p className='mb-4 text-sm text-gray-600 dark:text-gray-400'>
+                <p className='mb-4 flex-1 text-sm text-gray-600 dark:text-gray-400'>
                   {useCase.description}
                 </p>
-                <div className='bg-primary-50 text-primary-700 dark:bg-primary-900/20 dark:text-primary-300 rounded-lg px-3 py-2 text-xs font-medium'>
+                <div className='bg-primary-50 text-primary-700 dark:bg-primary-900/20 dark:text-primary-300 mb-3 rounded-lg px-3 py-2 text-xs font-medium'>
                   {useCase.example}
                 </div>
+                {useCase.docsUrl && (
+                  <a
+                    href={useCase.docsUrl}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 inline-flex items-center text-xs font-medium'
+                  >
+                    Read the playbook
+                    <ArrowRight className='ml-1 h-3 w-3' />
+                  </a>
+                )}
               </motion.div>
             ))}
           </div>
