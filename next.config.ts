@@ -1,7 +1,7 @@
-import type { NextConfig } from 'next';
-import createNextIntlPlugin from 'next-intl/plugin';
+import type { NextConfig } from 'next'
+import createNextIntlPlugin from 'next-intl/plugin'
 
-const withNextIntl = createNextIntlPlugin('./src/i18n/request');
+const withNextIntl = createNextIntlPlugin('./src/i18n/request')
 
 // HSTS is terminated at the Vercel/CDN edge, so we don't set Strict-Transport-Security here.
 // CSP is intentionally not set yet — wallet-site CSP needs an explicit allowlist for kapa.ai,
@@ -23,7 +23,7 @@ const PERMISSIONS_POLICY = [
   'serial=()',
   'usb=()',
   'interest-cohort=()',
-].join(', ');
+].join(', ')
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -35,8 +35,7 @@ const nextConfig: NextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
   compiler: {
-    removeConsole:
-      process.env.NODE_ENV === 'production' ? { exclude: ['error', 'warn'] } : false,
+    removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error', 'warn'] } : false,
   },
   experimental: { scrollRestoration: true },
   async headers() {
@@ -54,8 +53,8 @@ const nextConfig: NextConfig = {
         source: '/(.*)\\.(ico|png|jpg|jpeg|gif|webp|svg|woff|woff2|ttf|eot)',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
-    ];
+    ]
   },
-};
+}
 
-export default withNextIntl(nextConfig);
+export default withNextIntl(nextConfig)
