@@ -1,0 +1,84 @@
+{
+  "Common": {
+    "skipToContent": "__TODO_TRANSLATE__ Skip to content",
+    "loading": "__TODO_TRANSLATE__ Loading…",
+    "error": "__TODO_TRANSLATE__ Something went wrong.",
+    "retry": "__TODO_TRANSLATE__ Retry",
+    "readMore": "__TODO_TRANSLATE__ Read more"
+  },
+  "Header": {
+    "home": "__TODO_TRANSLATE__ Home",
+    "enterprise": "__TODO_TRANSLATE__ Enterprise",
+    "features": "__TODO_TRANSLATE__ Features",
+    "newsroom": "__TODO_TRANSLATE__ Newsroom",
+    "academy": "__TODO_TRANSLATE__ Academy",
+    "guide": "__TODO_TRANSLATE__ Guide",
+    "support": "__TODO_TRANSLATE__ Support",
+    "contact": "__TODO_TRANSLATE__ Contact",
+    "more": "__TODO_TRANSLATE__ More",
+    "download": "__TODO_TRANSLATE__ Download",
+    "toggleTheme": "__TODO_TRANSLATE__ Toggle theme",
+    "toggleMenu": "__TODO_TRANSLATE__ Toggle menu",
+    "selectLanguage": "__TODO_TRANSLATE__ Select language"
+  },
+  "Footer": {
+    "navigation": "__TODO_TRANSLATE__ Navigation",
+    "product": "__TODO_TRANSLATE__ Product",
+    "learn": "__TODO_TRANSLATE__ Learn",
+    "community": "__TODO_TRANSLATE__ Community",
+    "legal": "__TODO_TRANSLATE__ Legal",
+    "supportedChains": "__TODO_TRANSLATE__ Supported Chains",
+    "rssFeed": "__TODO_TRANSLATE__ RSS Feed",
+    "cookieSettings": "__TODO_TRANSLATE__ Cookie Settings",
+    "rights": "__TODO_TRANSLATE__ All rights reserved.",
+    "builtForWeb3": "__TODO_TRANSLATE__ Built with ❤️ for Web3",
+    "poweredByFlux": "__TODO_TRANSLATE__ Powered by Flux"
+  },
+  "Newsroom": {
+    "title": "__TODO_TRANSLATE__ Newsroom",
+    "description": "__TODO_TRANSLATE__ Latest news, product updates, and announcements from SSP.",
+    "filterAll": "__TODO_TRANSLATE__ All",
+    "loadMore": "__TODO_TRANSLATE__ Load more",
+    "noArticles": "__TODO_TRANSLATE__ No articles match this filter yet.",
+    "backToNewsroom": "__TODO_TRANSLATE__ Back to Newsroom",
+    "shareTitle": "__TODO_TRANSLATE__ Share this article",
+    "shareTwitter": "__TODO_TRANSLATE__ Share on Twitter",
+    "shareFacebook": "__TODO_TRANSLATE__ Share on Facebook",
+    "shareTelegram": "__TODO_TRANSLATE__ Share on Telegram",
+    "shareReddit": "__TODO_TRANSLATE__ Share on Reddit",
+    "shareCopy": "__TODO_TRANSLATE__ Copy link",
+    "shareCopied": "__TODO_TRANSLATE__ Link copied!",
+    "tableOfContents": "__TODO_TRANSLATE__ On this page",
+    "relatedArticles": "__TODO_TRANSLATE__ Related articles",
+    "minRead": "__TODO_TRANSLATE__ {minutes} min read",
+    "byAuthor": "__TODO_TRANSLATE__ By {author}",
+    "publishedOn": "__TODO_TRANSLATE__ Published {date}",
+    "updatedOn": "__TODO_TRANSLATE__ Updated {date}"
+  },
+  "Academy": {
+    "title": "__TODO_TRANSLATE__ SSP Academy",
+    "description": "__TODO_TRANSLATE__ Guides, tutorials, and deep dives to help you master self-custody with SSP.",
+    "browseByTopic": "__TODO_TRANSLATE__ Browse by topic",
+    "learningPaths": "__TODO_TRANSLATE__ Learning paths",
+    "viewAllSeries": "__TODO_TRANSLATE__ View all",
+    "latestArticles": "__TODO_TRANSLATE__ Latest articles",
+    "comingSoon": "__TODO_TRANSLATE__ New articles coming soon — check back shortly.",
+    "categoryEmpty": "__TODO_TRANSLATE__ New articles coming soon. In the meantime, explore related topics:",
+    "articleCount": "__TODO_TRANSLATE__ {count, plural, =0 {No articles} =1 {1 article} other {# articles}}",
+    "partsCount": "__TODO_TRANSLATE__ {count, plural, =0 {No parts} =1 {1 part} other {# parts}}",
+    "difficulty": {
+      "beginner": "__TODO_TRANSLATE__ Beginner",
+      "intermediate": "__TODO_TRANSLATE__ Intermediate",
+      "advanced": "__TODO_TRANSLATE__ Advanced"
+    },
+    "atAGlance": "__TODO_TRANSLATE__ At a glance",
+    "seriesPart": "__TODO_TRANSLATE__ Part {order} of {total}",
+    "previousPart": "__TODO_TRANSLATE__ Previous part",
+    "nextPart": "__TODO_TRANSLATE__ Next part"
+  },
+  "Author": {
+    "title": "__TODO_TRANSLATE__ {name}",
+    "postsBy": "__TODO_TRANSLATE__ Posts by {name}",
+    "noPosts": "__TODO_TRANSLATE__ No posts yet."
+  }
+}

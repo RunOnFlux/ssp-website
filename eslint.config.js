@@ -170,6 +170,7 @@ module.exports = [
       '.output/**',
       '.vercel/**',
       '.netlify/**',
+      'next-env.d.ts',
     ],
   },
 ]

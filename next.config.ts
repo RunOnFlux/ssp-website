@@ -1,7 +1,7 @@
 import type { NextConfig } from 'next'
 import createNextIntlPlugin from 'next-intl/plugin'
 
-const withNextIntl = createNextIntlPlugin('./src/i18n/request')
+const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts')
 
 // HSTS is terminated at the Vercel/CDN edge, so we don't set Strict-Transport-Security here.
 // CSP is intentionally not set yet — wallet-site CSP needs an explicit allowlist for kapa.ai,

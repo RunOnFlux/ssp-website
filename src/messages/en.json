@@ -1,0 +1,84 @@
+{
+  "Common": {
+    "skipToContent": "Skip to content",
+    "loading": "Loading…",
+    "error": "Something went wrong.",
+    "retry": "Retry",
+    "readMore": "Read more"
+  },
+  "Header": {
+    "home": "Home",
+    "enterprise": "Enterprise",
+    "features": "Features",
+    "newsroom": "Newsroom",
+    "academy": "Academy",
+    "guide": "Guide",
+    "support": "Support",
+    "contact": "Contact",
+    "more": "More",
+    "download": "Download",
+    "toggleTheme": "Toggle theme",
+    "toggleMenu": "Toggle menu",
+    "selectLanguage": "Select language"
+  },
+  "Footer": {
+    "navigation": "Navigation",
+    "product": "Product",
+    "learn": "Learn",
+    "community": "Community",
+    "legal": "Legal",
+    "supportedChains": "Supported Chains",
+    "rssFeed": "RSS Feed",
+    "cookieSettings": "Cookie Settings",
+    "rights": "All rights reserved.",
+    "builtForWeb3": "Built with ❤️ for Web3",
+    "poweredByFlux": "Powered by Flux"
+  },
+  "Newsroom": {
+    "title": "Newsroom",
+    "description": "Latest news, product updates, and announcements from SSP.",
+    "filterAll": "All",
+    "loadMore": "Load more",
+    "noArticles": "No articles match this filter yet.",
+    "backToNewsroom": "Back to Newsroom",
+    "shareTitle": "Share this article",
+    "shareTwitter": "Share on Twitter",
+    "shareFacebook": "Share on Facebook",
+    "shareTelegram": "Share on Telegram",
+    "shareReddit": "Share on Reddit",
+    "shareCopy": "Copy link",
+    "shareCopied": "Link copied!",
+    "tableOfContents": "On this page",
+    "relatedArticles": "Related articles",
+    "minRead": "{minutes} min read",
+    "byAuthor": "By {author}",
+    "publishedOn": "Published {date}",
+    "updatedOn": "Updated {date}"
+  },
+  "Academy": {
+    "title": "SSP Academy",
+    "description": "Guides, tutorials, and deep dives to help you master self-custody with SSP.",
+    "browseByTopic": "Browse by topic",
+    "learningPaths": "Learning paths",
+    "viewAllSeries": "View all",
+    "latestArticles": "Latest articles",
+    "comingSoon": "New articles coming soon — check back shortly.",
+    "categoryEmpty": "New articles coming soon. In the meantime, explore related topics:",
+    "articleCount": "{count, plural, =0 {No articles} =1 {1 article} other {# articles}}",
+    "partsCount": "{count, plural, =0 {No parts} =1 {1 part} other {# parts}}",
+    "difficulty": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "atAGlance": "At a glance",
+    "seriesPart": "Part {order} of {total}",
+    "previousPart": "Previous part",
+    "nextPart": "Next part"
+  },
+  "Author": {
+    "title": "{name}",
+    "postsBy": "Posts by {name}",
+    "noPosts": "No posts yet."
+  }
+}
