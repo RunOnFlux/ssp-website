@@ -41,6 +41,14 @@ describe('renderArticleAsAgentMd', () => {
     expect(md).toContain('A short description of the test article.')
   })
 
+  it('includes section, tags, and content', () => {
+    const md = renderArticleAsAgentMd(basePost)
+    expect(md).toContain('section: newsroom')
+    expect(md).toContain('tags: ["security","multisig"]')
+    expect(md).toContain('## Body')
+    expect(md).toContain('Some body content.')
+  })
+
   it('builds academy path with category', () => {
     const post: NewsroomPost = {
       ...basePost,

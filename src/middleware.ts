@@ -35,20 +35,29 @@ export default async function middleware(req: NextRequest) {
         const md = await fs.readFile(path.resolve(process.cwd(), file), 'utf8')
         return mdResponse(md, req)
       } catch {
-        // fall through to dynamic resolution / next-intl
+        // expected ENOENT for routes without a sibling agent.md; fall through
       }
     }
     const dyn = isDynamicArticleRoute(pathname)
     if (dyn) {
       try {
-        if (dyn.kind === 'newsroom' || dyn.kind === 'academy') {
+        if (dyn.kind === 'newsroom') {
           const post = await getPostBySlug(dyn.slug)
-          if (post) return mdResponse(renderArticleAsAgentMd(post), req)
+          if (post && post.section === 'newsroom') {
+            return mdResponse(renderArticleAsAgentMd(post), req)
+          }
+        }
+        if (dyn.kind === 'academy') {
+          const post = await getPostBySlug(dyn.slug)
+          if (post && post.section === 'academy' && post.category === dyn.category) {
+            return mdResponse(renderArticleAsAgentMd(post), req)
+          }
         }
         if (dyn.kind === 'author') {
           const a = await getAuthorBySlug(dyn.slug)
           if (a) return mdResponse(renderAuthorAsAgentMd(a), req)
         }
+        // 'series' falls through to HTML — series rendering deferred to Phase 17/19
       } catch (err) {
         // eslint-disable-next-line no-console
         console.warn('[agent-md] dynamic render failed, falling through', err)

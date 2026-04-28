@@ -1,3 +1,7 @@
+import { routing } from '@/i18n/routing'
+
+const LOCALE_PREFIX = new RegExp(`^\\/(?:${routing.locales.join('|')})(\\/.*)?$`)
+
 const STATIC_ROUTES: Record<string, string> = {
   '': 'src/app/[locale]/agent.md',
   features: 'src/app/[locale]/features/agent.md',
@@ -15,7 +19,7 @@ const STATIC_ROUTES: Record<string, string> = {
 }
 
 function stripLocale(pathname: string): string | null {
-  const m = pathname.match(/^\/(?:en|es|zh)(\/.*)?$/)
+  const m = pathname.match(LOCALE_PREFIX)
   if (!m) return null
   return (m[1] ?? '').replace(/^\//, '').replace(/\/$/, '')
 }
