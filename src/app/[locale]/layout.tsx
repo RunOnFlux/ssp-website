@@ -11,6 +11,7 @@ import { Footer } from '@/components/footer/footer'
 import { Header } from '@/components/header/header'
 import { ThemeProvider } from '@/components/theme-provider'
 import { routing } from '@/i18n/routing'
+import { createSoftwareApplicationJsonLd } from '@/lib/seo'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -74,87 +75,6 @@ export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }))
 }
 
-const SOFTWARE_APPLICATION_JSON_LD: Record<string, unknown> = {
-  '@context': 'https://schema.org',
-  '@type': ['SoftwareApplication', 'WebApplication'],
-  name: 'SSP Wallet',
-  alternateName: 'Secure Simple Powerful Wallet',
-  description:
-    'True 2-of-2 BIP48 multisignature crypto wallet with Account Abstraction (ERC-4337), supporting 15+ blockchains including Bitcoin and Ethereum.',
-  applicationCategory: ['FinanceApplication', 'SecurityApplication', 'UtilitiesApplication'],
-  operatingSystem: ['Chrome Extension', 'Browser Extension', 'iOS', 'Android'],
-  url: 'https://sspwallet.io',
-  downloadUrl: 'https://sspwallet.io/download',
-  datePublished: '2023-01-01',
-  author: {
-    '@type': 'Organization',
-    name: 'InFlux Technologies',
-    url: 'https://runonflux.com',
-  },
-  creator: {
-    '@type': 'Organization',
-    name: 'InFlux Technologies',
-    url: 'https://runonflux.com',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'SSP Wallet',
-    url: 'https://sspwallet.io',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://sspwallet.io/ssp-logo-black-512x512.png',
-      width: 512,
-      height: 512,
-    },
-    sameAs: [
-      'https://twitter.com/sspwallet_io',
-      'https://github.com/RunOnFlux/ssp-wallet',
-      'https://discord.gg/runonflux',
-      'https://medium.com/@ssp_wallet',
-      'https://www.youtube.com/@ZelLabs',
-      'https://docs.sspwallet.io',
-    ],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      contactType: 'customer support',
-      email: 'support@sspwallet.io',
-      url: 'https://sspwallet.io/support',
-      availableLanguage: ['English'],
-    },
-  },
-  offers: {
-    '@type': 'Offer',
-    price: '0',
-    priceCurrency: 'USD',
-    availability: 'https://schema.org/InStock',
-  },
-  featureList: [
-    'True 2-of-2 BIP48 Multisignature',
-    'Account Abstraction (ERC-4337)',
-    'WalletConnect v2 Support',
-    '15+ Blockchain Support',
-    'Built-in Crypto Swap',
-    'Fiat On/Off Ramp',
-    'Mobile 2FA Security',
-    'Open Source & Audited',
-  ],
-  screenshots: ['https://sspwallet.io/screenshot.png'],
-  supportedCryptocurrencies: [
-    'Bitcoin (BTC)',
-    'Ethereum (ETH)',
-    'Litecoin (LTC)',
-    'Zcash (ZEC)',
-    'Ravencoin (RVN)',
-    'Dogecoin (DOGE)',
-    'Bitcoin Cash (BCH)',
-    'Flux (FLUX)',
-    'Polygon (MATIC)',
-    'Binance Smart Chain (BSC)',
-    'Avalanche (AVAX)',
-    'Base',
-  ],
-}
-
 export default async function LocaleLayout({
   children,
   params,
@@ -190,7 +110,7 @@ export default async function LocaleLayout({
           type='application/ld+json'
           strategy='afterInteractive'
         >
-          {JSON.stringify(SOFTWARE_APPLICATION_JSON_LD)}
+          {JSON.stringify(createSoftwareApplicationJsonLd())}
         </Script>
 
         <Script
