@@ -40,6 +40,18 @@ export function PostArticle({
   const [linkCopied, setLinkCopied] = useState(false)
 
   const headings = extractHeadings(content ?? post.content)
+  // Mirrors extractHeadings dedup so ToC anchors and rendered h2 ids stay in sync
+  // even when an article has duplicate h2 texts.
+  const seenIds = new Map<string, number>()
+  function slugifyHeading(text: string): string {
+    const base = text
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '')
+    const count = seenIds.get(base) ?? 0
+    seenIds.set(base, count + 1)
+    return count === 0 ? base : `${base}-${count}`
+  }
   const articleUrl = typeof window !== 'undefined' ? window.location.href : ''
   const encodedUrl = encodeURIComponent(articleUrl)
   const encodedTitle = encodeURIComponent(post.title)
@@ -120,18 +132,7 @@ export function PostArticle({
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             components={{
-              h2: ({ children }) => {
-                // Slug logic mirrors extractHeadings in src/lib/cms.ts.
-                // NOTE: duplicate h2 texts in a single document will share the
-                // same id here (no deduplication). Phase 19 seed content avoids
-                // duplicate h2s; a future refactor can share state if needed.
-                const text = String(children)
-                const id = text
-                  .toLowerCase()
-                  .replace(/[^a-z0-9]+/g, '-')
-                  .replace(/(^-|-$)/g, '')
-                return <h2 id={id}>{children}</h2>
-              },
+              h2: ({ children }) => <h2 id={slugifyHeading(String(children))}>{children}</h2>,
               a: ({ href, children, ...props }) => {
                 if (href?.startsWith('http')) {
                   return (
