@@ -32,7 +32,31 @@
     "cookieSettings": "Cookie Settings",
     "rights": "All rights reserved.",
     "builtForWeb3": "Built with ❤️ for Web3",
-    "poweredByFlux": "Powered by Flux"
+    "poweredByFlux": "Powered by Flux",
+    "brandDescription": "Secure, Simple, Powerful. SSP is a groundbreaking, open-source, self-custody, BIP48 multi-signature browser wallet for multiple blockchains with Account Abstraction.",
+    "links": {
+      "home": "Home",
+      "features": "Features",
+      "guide": "Guide",
+      "support": "Support",
+      "contact": "Contact",
+      "enterprise": "Enterprise",
+      "download": "Download",
+      "mobileSspKey": "Mobile SSP Key",
+      "sspEnterprise": "SSP Enterprise",
+      "securityAudits": "Security Audits",
+      "documentation": "Documentation",
+      "github": "GitHub",
+      "discord": "Discord",
+      "twitter": "Twitter",
+      "medium": "Medium",
+      "youtube": "YouTube",
+      "helpTranslate": "Help Translate",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "cookiePolicy": "Cookie Policy"
+    },
+    "fluxAlt": "Flux"
   },
   "Newsroom": {
     "title": "Newsroom",

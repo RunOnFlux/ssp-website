@@ -32,7 +32,31 @@
     "cookieSettings": "__TODO_TRANSLATE__ Cookie Settings",
     "rights": "__TODO_TRANSLATE__ All rights reserved.",
     "builtForWeb3": "__TODO_TRANSLATE__ Built with ❤️ for Web3",
-    "poweredByFlux": "__TODO_TRANSLATE__ Powered by Flux"
+    "poweredByFlux": "__TODO_TRANSLATE__ Powered by Flux",
+    "brandDescription": "__TODO_TRANSLATE__ Secure, Simple, Powerful. SSP is a groundbreaking, open-source, self-custody, BIP48 multi-signature browser wallet for multiple blockchains with Account Abstraction.",
+    "links": {
+      "home": "__TODO_TRANSLATE__ Home",
+      "features": "__TODO_TRANSLATE__ Features",
+      "guide": "__TODO_TRANSLATE__ Guide",
+      "support": "__TODO_TRANSLATE__ Support",
+      "contact": "__TODO_TRANSLATE__ Contact",
+      "enterprise": "__TODO_TRANSLATE__ Enterprise",
+      "download": "__TODO_TRANSLATE__ Download",
+      "mobileSspKey": "__TODO_TRANSLATE__ Mobile SSP Key",
+      "sspEnterprise": "__TODO_TRANSLATE__ SSP Enterprise",
+      "securityAudits": "__TODO_TRANSLATE__ Security Audits",
+      "documentation": "__TODO_TRANSLATE__ Documentation",
+      "github": "__TODO_TRANSLATE__ GitHub",
+      "discord": "__TODO_TRANSLATE__ Discord",
+      "twitter": "__TODO_TRANSLATE__ Twitter",
+      "medium": "__TODO_TRANSLATE__ Medium",
+      "youtube": "__TODO_TRANSLATE__ YouTube",
+      "helpTranslate": "__TODO_TRANSLATE__ Help Translate",
+      "privacyPolicy": "__TODO_TRANSLATE__ Privacy Policy",
+      "termsOfService": "__TODO_TRANSLATE__ Terms of Service",
+      "cookiePolicy": "__TODO_TRANSLATE__ Cookie Policy"
+    },
+    "fluxAlt": "__TODO_TRANSLATE__ Flux"
   },
   "Newsroom": {
     "title": "__TODO_TRANSLATE__ Newsroom",
