@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import { buildAcademyArticleJsonLd, buildAcademyBreadcrumbJsonLd } from './seo-academy'
 import type { NewsroomPost } from '@/types/newsroom'
+import { buildAcademyArticleJsonLd, buildAcademyBreadcrumbJsonLd } from './seo-academy'
 
 const samplePost: NewsroomPost = {
   slug: 'what-is-2-of-2-multisig',
