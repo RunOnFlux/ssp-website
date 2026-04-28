@@ -1,11 +1,31 @@
-import { useTranslations } from 'next-intl'
+import type { Metadata } from 'next'
+import { setRequestLocale } from 'next-intl/server'
+import { CTA } from '@/components/home/cta'
+import { EnterpriseBand } from '@/components/home/enterprise-band'
+import { Features } from '@/components/home/features'
+import { Hero } from '@/components/home/hero'
+import { Security } from '@/components/home/security'
+import { SupportedChains } from '@/components/home/supported-chains'
+import { createMetadata } from '@/lib/seo'
 
-export default function HomePage() {
-  const t = useTranslations('Header')
+export const metadata: Metadata = createMetadata({
+  title: 'SSP Wallet — Secure, Simple, Powerful Crypto Wallet',
+  description:
+    'True 2-of-2 multisig crypto wallet. Browser extension + mobile required for every transaction. Supports Bitcoin, Ethereum, and 15+ blockchains.',
+  path: '/',
+})
+
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  setRequestLocale(locale)
   return (
-    <main style={{ padding: '2rem' }}>
-      <h1>{t('home')}</h1>
-      <p>Foundation migration in progress. This placeholder is replaced in Phase 6.</p>
-    </main>
+    <>
+      <Hero />
+      <Features />
+      <Security />
+      <EnterpriseBand />
+      <SupportedChains />
+      <CTA />
+    </>
   )
 }
