@@ -7,6 +7,7 @@ import type {
   SeriesSummary,
   SeriesDetail,
   Author,
+  ArticleDifficulty,
 } from '@/types/newsroom'
 import { cmsFetch, isCmsConfigured } from './cms/cms-fetch'
 import { loadAllSeedPosts, loadSeedPostBySlug } from './cms/seed-loader'
@@ -33,7 +34,9 @@ async function withFallback<T>(
     const p = await primary()
     cache.set(key, { v: p })
     return p
-  } catch {
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.warn(`[cms] primary failed for ${key}, falling back to seed`, err)
     const f = await fallback()
     cache.set(key, { v: f })
     return f
@@ -89,7 +92,7 @@ export async function getAllSlugs(): Promise<string[]> {
 
 export interface AcademyFilters {
   category?: AcademyCategory
-  difficulty?: 'beginner' | 'intermediate' | 'advanced'
+  difficulty?: ArticleDifficulty
   series?: string
   featured?: boolean
   limit?: number
@@ -214,15 +217,25 @@ export async function getPostsByAuthor(authorId: string): Promise<NewsroomPost[]
 }
 
 export function extractHeadings(content: string): { id: string; text: string }[] {
-  const headingRegex = /^## (.+)$/gm
   const headings: { id: string; text: string }[] = []
-  let match
-  while ((match = headingRegex.exec(content)) !== null) {
+  const seen = new Map<string, number>()
+  let inFence = false
+  for (const line of content.split('\n')) {
+    if (/^```/.test(line)) {
+      inFence = !inFence
+      continue
+    }
+    if (inFence) continue
+    const match = /^## (.+)$/.exec(line)
+    if (!match) continue
     const text = match[1].trim().replace(/[*_`~]+/g, '')
-    const id = text
+    const baseId = text
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, '-')
       .replace(/(^-|-$)/g, '')
+    const count = seen.get(baseId) ?? 0
+    const id = count === 0 ? baseId : `${baseId}-${count}`
+    seen.set(baseId, count + 1)
     headings.push({ id, text })
   }
   return headings

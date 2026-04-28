@@ -130,4 +130,41 @@ describe('extractHeadings', () => {
   it('returns empty for content with no h2', () => {
     expect(extractHeadings('# h1\n### h3')).toEqual([])
   })
+
+  it('skips ## inside fenced code blocks', () => {
+    const md = [
+      '## Real heading',
+      '',
+      '```md',
+      '## Not a heading (in fence)',
+      '```',
+      '',
+      '## Another real heading',
+    ].join('\n')
+    expect(extractHeadings(md)).toEqual([
+      { id: 'real-heading', text: 'Real heading' },
+      { id: 'another-real-heading', text: 'Another real heading' },
+    ])
+  })
+
+  it('dedupes colliding slugs with numeric suffixes', () => {
+    expect(extractHeadings('## Foo\n\n## Foo\n\n## Foo')).toEqual([
+      { id: 'foo', text: 'Foo' },
+      { id: 'foo-1', text: 'Foo' },
+      { id: 'foo-2', text: 'Foo' },
+    ])
+  })
+})
+
+describe('withFallback (via getAllPosts)', () => {
+  it('logs a warning when CMS primary fails', async () => {
+    process.env.SSP_CMS_URL = 'https://cms.example.com'
+    process.env.SSP_CMS_API_KEY = 'k'
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {})
+    vi.spyOn(global, 'fetch').mockRejectedValue(new Error('network'))
+    await getAllPosts()
+    expect(warnSpy).toHaveBeenCalled()
+    const firstCallArgs = warnSpy.mock.calls[0]
+    expect(String(firstCallArgs[0])).toMatch(/cms.*allPosts/i)
+  })
 })
