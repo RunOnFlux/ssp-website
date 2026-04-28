@@ -37,6 +37,14 @@ export function Footer() {
       { name: t('links.medium'), href: 'https://medium.com/@ssp_wallet', external: true },
       { name: t('links.youtube'), href: 'https://www.youtube.com/@ZelLabs', external: true },
     ],
+    learn: [
+      { name: t('links.newsroom'), href: '/newsroom', external: false },
+      { name: t('links.academy'), href: '/academy', external: false },
+      { name: t('links.multisigExplained'), href: '/academy/multisig', external: false },
+      { name: t('links.security'), href: '/academy/security', external: false },
+      { name: t('links.gettingStarted'), href: '/academy/getting-started', external: false },
+      { name: t('links.rssFeed'), href: '/newsroom/rss.xml', external: true },
+    ],
     legal: [
       { name: t('links.privacyPolicy'), href: '/privacy-policy' },
       { name: t('links.termsOfService'), href: '/terms-of-service' },
@@ -65,7 +73,7 @@ export function Footer() {
   return (
     <footer className='dark:border-dark-600 dark:bg-dark-800 border-t border-gray-200 bg-gray-50'>
       <div className='container-custom section-padding'>
-        <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-6 lg:gap-12'>
+        <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-7 lg:gap-12'>
           {/* Logo and Description */}
           <div className='lg:col-span-2'>
             <Link href='/' className='mb-4 flex items-center space-x-2'>
@@ -138,6 +146,37 @@ export function Footer() {
             </h3>
             <ul className='space-y-3'>
               {footerNavigation.product.map(item => (
+                <li key={item.name}>
+                  {item.external ? (
+                    <a
+                      href={item.href}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='inline-flex items-center text-gray-600 transition-colors duration-200 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white'
+                    >
+                      {item.name}
+                      <ExternalLink className='ml-1 h-3 w-3' />
+                    </a>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className='text-gray-600 transition-colors duration-200 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white'
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Learn Links */}
+          <div>
+            <h3 className='mb-4 text-sm font-semibold text-gray-900 dark:text-white'>
+              {t('learn')}
+            </h3>
+            <ul className='space-y-3'>
+              {footerNavigation.learn.map(item => (
                 <li key={item.name}>
                   {item.external ? (
                     <a
