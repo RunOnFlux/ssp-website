@@ -1,9 +1,9 @@
 import { promises as fs } from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import type { NewsroomPost } from '@/types/newsroom'
 import type { AcademyCategory } from '@/constants/academy-categories'
 import { isAcademyCategory } from '@/constants/academy-categories'
+import type { NewsroomPost } from '@/types/newsroom'
 
 const CONTENT_DIR = path.resolve(process.cwd(), 'content')
 

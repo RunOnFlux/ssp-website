@@ -1,3 +1,6 @@
+import { LRUCache } from 'lru-cache'
+import type { AcademyCategory } from '@/constants/academy-categories'
+import { ACADEMY_CATEGORIES } from '@/constants/academy-categories'
 import type {
   NewsroomPost,
   CategoryWithCount,
@@ -5,9 +8,6 @@ import type {
   SeriesDetail,
   Author,
 } from '@/types/newsroom'
-import type { AcademyCategory } from '@/constants/academy-categories'
-import { ACADEMY_CATEGORIES } from '@/constants/academy-categories'
-import { LRUCache } from 'lru-cache'
 import { cmsFetch, isCmsConfigured } from './cms/cms-fetch'
 import { loadAllSeedPosts, loadSeedPostBySlug } from './cms/seed-loader'
 
