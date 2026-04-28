@@ -8,7 +8,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { NewsroomCard } from '@/components/newsroom/newsroom-card'
 import { Link } from '@/i18n/navigation'
-import { extractHeadings } from '@/lib/cms'
+import { extractHeadings } from '@/lib/content-utils'
 import type { NewsroomPost } from '@/types/newsroom'
 
 function formatDate(d: string): string {
