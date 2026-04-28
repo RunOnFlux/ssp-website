@@ -53,4 +53,30 @@ describe('autoLinkContent', () => {
     const out = autoLinkContent('Multisig is great.', 'other', map)
     expect(out).toContain('[Multisig](/academy/multisig/x)')
   })
+
+  it('prefers the longer term when terms overlap', () => {
+    const overlapping: GlossaryTerm[] = [
+      { term: 'multisig', definition: '', href: '/academy/multisig/x' },
+      { term: '2-of-2 multisig', definition: '', href: '/academy/multisig/x#2-of-2' },
+    ]
+    const overlapMap = new Map(overlapping.map(t => [t.term.toLowerCase(), t]))
+    const out = autoLinkContent('A 2-of-2 multisig wallet uses two signers.', 'other', overlapMap)
+    expect(out).toContain('[2-of-2 multisig](/academy/multisig/x#2-of-2)')
+    expect(out).not.toContain('[multisig](')
+  })
+
+  it('does not corrupt user text containing PH<n> tokens', () => {
+    const out = autoLinkContent('See PH0 for details. multisig wallet.', 'other', map)
+    expect(out).toContain('PH0 for details')
+    expect(out).not.toContain('undefined')
+    expect(out).toContain('[multisig](/academy/multisig/x)')
+  })
+
+  it('does not link inside reference-style markdown links', () => {
+    const md = 'See [multisig][1] elsewhere. Now multisig is here.\n\n[1]: https://example.com'
+    const out = autoLinkContent(md, 'other', map)
+    expect(out).toContain('[multisig][1]')
+    expect(out).toContain('[multisig](/academy/multisig/x)')
+    expect(out.match(/\[multisig\]/g)?.length).toBe(2)
+  })
 })
