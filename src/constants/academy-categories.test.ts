@@ -1,9 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import {
-  ACADEMY_CATEGORIES,
-  ACADEMY_CATEGORY_SLUGS,
-  isAcademyCategory,
-} from './academy-categories'
+import { ACADEMY_CATEGORIES, ACADEMY_CATEGORY_SLUGS, isAcademyCategory } from './academy-categories'
 
 describe('ACADEMY_CATEGORIES', () => {
   it('includes all 7 SSP categories in plan order', () => {

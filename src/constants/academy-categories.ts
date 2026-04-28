@@ -32,7 +32,7 @@ export const ACADEMY_CATEGORIES = {
 export type AcademyCategory = keyof typeof ACADEMY_CATEGORIES
 
 export const ACADEMY_CATEGORY_SLUGS: readonly AcademyCategory[] = Object.freeze(
-  Object.keys(ACADEMY_CATEGORIES) as AcademyCategory[],
+  Object.keys(ACADEMY_CATEGORIES) as AcademyCategory[]
 )
 
 export function isAcademyCategory(value: unknown): value is AcademyCategory {
