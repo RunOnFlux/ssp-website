@@ -25,16 +25,16 @@ x-api-key: <value of SSP_CMS_API_KEY>
 
 All responses must be `Content-Type: application/json`.
 
-| Path | Query params | Returns | Used by |
-|------|-------------|---------|---------|
-| `/api/v1/posts` | `section=newsroom`, `limit=100` | `NewsroomPost[]` or `{ posts: NewsroomPost[] }` | `getAllPosts()` |
-| `/api/v1/posts/:slug` | — | `NewsroomPost` | `getPostBySlug(slug)` |
-| `/api/v1/posts` | `section=academy`, `category`, `difficulty`, `series`, `featured`, `limit` | `NewsroomPost[]` or `{ posts: NewsroomPost[] }` | `getAcademyPosts(filters)` |
-| `/api/v1/categories` | — | `CategoryWithCount[]` | `getCategories()` |
-| `/api/v1/series` | — | `SeriesSummary[]` | `getAllSeries()` |
-| `/api/v1/series/:slug` | — | `SeriesDetail` | `getSeriesBySlug(slug)` |
-| `/api/v1/authors/:slug` | — | `Author` | `getAuthorBySlug(slug)` |
-| `/api/v1/tags` | — | `{ tag: string; count: number }[]` | `getAllTags()` |
+| Path                    | Query params                                                               | Returns                                         | Used by                    |
+| ----------------------- | -------------------------------------------------------------------------- | ----------------------------------------------- | -------------------------- |
+| `/api/v1/posts`         | `section=newsroom`, `limit=100`                                            | `NewsroomPost[]` or `{ posts: NewsroomPost[] }` | `getAllPosts()`            |
+| `/api/v1/posts/:slug`   | —                                                                          | `NewsroomPost`                                  | `getPostBySlug(slug)`      |
+| `/api/v1/posts`         | `section=academy`, `category`, `difficulty`, `series`, `featured`, `limit` | `NewsroomPost[]` or `{ posts: NewsroomPost[] }` | `getAcademyPosts(filters)` |
+| `/api/v1/categories`    | —                                                                          | `CategoryWithCount[]`                           | `getCategories()`          |
+| `/api/v1/series`        | —                                                                          | `SeriesSummary[]`                               | `getAllSeries()`           |
+| `/api/v1/series/:slug`  | —                                                                          | `SeriesDetail`                                  | `getSeriesBySlug(slug)`    |
+| `/api/v1/authors/:slug` | —                                                                          | `Author`                                        | `getAuthorBySlug(slug)`    |
+| `/api/v1/tags`          | —                                                                          | `{ tag: string; count: number }[]`              | `getAllTags()`             |
 
 For exact response shapes, `src/types/newsroom.ts` is the authoritative type definition.
 

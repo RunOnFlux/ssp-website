@@ -7,16 +7,16 @@ Marketing site, newsroom, and academy for [SSP Wallet](https://sspwallet.io) —
 
 ## Tech stack
 
-| Layer | Library |
-|-------|---------|
-| Framework | Next.js 16 (App Router) + React 19 + TypeScript 5 |
-| Styling | Tailwind v4 with `@theme` tokens and `@tailwindcss/typography` |
-| i18n | next-intl v4 (en / es / zh, `localePrefix: 'always'`) |
-| Tests | Vitest 4 + happy-dom |
-| UI primitives | Radix UI (accordion, dialog, dropdown-menu, navigation-menu, toast) |
-| Article rendering | react-markdown + remark-gfm + rehype-pretty-code |
-| CMS layer | gray-matter (seed Markdown) + lru-cache, optional remote CMS |
-| Animations | framer-motion |
+| Layer             | Library                                                             |
+| ----------------- | ------------------------------------------------------------------- |
+| Framework         | Next.js 16 (App Router) + React 19 + TypeScript 5                   |
+| Styling           | Tailwind v4 with `@theme` tokens and `@tailwindcss/typography`      |
+| i18n              | next-intl v4 (en / es / zh, `localePrefix: 'always'`)               |
+| Tests             | Vitest 4 + happy-dom                                                |
+| UI primitives     | Radix UI (accordion, dialog, dropdown-menu, navigation-menu, toast) |
+| Article rendering | react-markdown + remark-gfm + rehype-pretty-code                    |
+| CMS layer         | gray-matter (seed Markdown) + lru-cache, optional remote CMS        |
+| Animations        | framer-motion                                                       |
 
 ## Project layout
 
@@ -61,19 +61,19 @@ ssp-website/
 
 ## Available scripts
 
-| Script | What it does |
-|--------|--------------|
-| `dev` | `next dev` |
-| `build` | runs the prebuild guards then `next build` |
-| `start` | `next start` |
-| `lint` | `eslint .` |
-| `test` | `vitest run` |
-| `type-check` | `tsc --noEmit` |
-| `format` / `format:check` | Prettier write / check |
-| `check:public-safe` | refuses to continue if `/content`, `/src/app`, or `.env.example` contain internal-looking strings |
-| `check:agent-md-staleness` | refuses to continue if a `page.tsx` changed without its sibling `agent.md` |
-| `agent-skills:generate` | regenerates `list-supported-chains/SKILL.md` from `src/constants/supported-chains.ts` |
-| `check-all` | type-check + lint + format:check + test |
+| Script                     | What it does                                                                                      |
+| -------------------------- | ------------------------------------------------------------------------------------------------- |
+| `dev`                      | `next dev`                                                                                        |
+| `build`                    | runs the prebuild guards then `next build`                                                        |
+| `start`                    | `next start`                                                                                      |
+| `lint`                     | `eslint .`                                                                                        |
+| `test`                     | `vitest run`                                                                                      |
+| `type-check`               | `tsc --noEmit`                                                                                    |
+| `format` / `format:check`  | Prettier write / check                                                                            |
+| `check:public-safe`        | refuses to continue if `/content`, `/src/app`, or `.env.example` contain internal-looking strings |
+| `check:agent-md-staleness` | refuses to continue if a `page.tsx` changed without its sibling `agent.md`                        |
+| `agent-skills:generate`    | regenerates `list-supported-chains/SKILL.md` from `src/constants/supported-chains.ts`             |
+| `check-all`                | type-check + lint + format:check + test                                                           |
 
 ## Getting started
 
@@ -96,14 +96,14 @@ Set `SSP_CMS_URL` and `SSP_CMS_API_KEY` to connect a remote CMS. Without them th
 
 ## Routes
 
-| Section | Routes |
-|---------|--------|
+| Section   | Routes                                                                                                                                                                                                              |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Marketing | `/`, `/features`, `/enterprise`, `/case-studies/flux-foundation`, `/guide`, `/support`, `/contact`, `/download`, `/privacy-policy`, `/terms-of-service`, `/cookie-policy`, `/checkout_success`, `/checkout_failure` |
-| Newsroom | `/newsroom`, `/newsroom/[slug]`, `/newsroom/rss.xml` |
-| Academy | `/academy`, `/academy/[category]`, `/academy/[category]/[slug]`, `/academy/series`, `/academy/series/[slug]`, `/academy/rss.xml` |
-| Author | `/author/[slug]` |
-| API | `POST /api/contact`, `POST /api/support`, `GET /api/agent-skills/skills/[name]` |
-| SEO | `/sitemap.xml`, `/robots.txt` |
+| Newsroom  | `/newsroom`, `/newsroom/[slug]`, `/newsroom/rss.xml`                                                                                                                                                                |
+| Academy   | `/academy`, `/academy/[category]`, `/academy/[category]/[slug]`, `/academy/series`, `/academy/series/[slug]`, `/academy/rss.xml`                                                                                    |
+| Author    | `/author/[slug]`                                                                                                                                                                                                    |
+| API       | `POST /api/contact`, `POST /api/support`, `GET /api/agent-skills/skills/[name]`                                                                                                                                     |
+| SEO       | `/sitemap.xml`, `/robots.txt`                                                                                                                                                                                       |
 
 All routes live under `src/app/[locale]/` and are served at `/en/`, `/es/`, and `/zh/` prefixes.
 
