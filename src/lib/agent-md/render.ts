@@ -1,5 +1,5 @@
-import type { NewsroomPost, Author } from '@/types/newsroom'
 import { siteUrl } from '@/lib/seo'
+import type { NewsroomPost, Author } from '@/types/newsroom'
 
 export function renderArticleAsAgentMd(post: NewsroomPost): string {
   const path =

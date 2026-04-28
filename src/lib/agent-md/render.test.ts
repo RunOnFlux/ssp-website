@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import { renderArticleAsAgentMd, renderAuthorAsAgentMd } from './render'
 import type { NewsroomPost, Author } from '@/types/newsroom'
+import { renderArticleAsAgentMd, renderAuthorAsAgentMd } from './render'
 
 const basePost: NewsroomPost = {
   slug: 'test-article',
