@@ -97,5 +97,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // CMS unavailable — skip dynamic series entries
   }
 
+  // Author profiles
+  try {
+    const fs = await import('fs/promises')
+    const path = await import('path')
+    const authorsDir = path.resolve(process.cwd(), 'content/authors')
+    const authorEntries = await fs.readdir(authorsDir).catch(() => [] as string[])
+    for (const entry of authorEntries) {
+      if (!entry.endsWith('.json')) continue
+      const slug = entry.replace(/\.json$/, '')
+      for (const locale of routing.locales) {
+        entries.push({
+          url: buildLocaleUrl(locale, `/author/${slug}`),
+          lastModified,
+          changeFrequency: 'monthly',
+          priority: 0.5,
+        })
+      }
+    }
+  } catch {
+    // content/authors missing — skip author entries
+  }
+
   return entries
 }
