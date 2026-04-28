@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { setRequestLocale } from 'next-intl/server'
 import Script from 'next/script'
+import { setRequestLocale } from 'next-intl/server'
 import { PageHeader } from '@/components/header/page-header'
 import { NewsroomCard } from '@/components/newsroom/newsroom-card'
 import { Link } from '@/i18n/navigation'

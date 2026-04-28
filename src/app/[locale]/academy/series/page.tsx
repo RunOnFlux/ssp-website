@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { setRequestLocale } from 'next-intl/server'
 import Script from 'next/script'
+import { setRequestLocale } from 'next-intl/server'
 import { PageHeader } from '@/components/header/page-header'
 import { Breadcrumbs } from '@/components/shared/breadcrumbs'
 import { Link } from '@/i18n/navigation'
@@ -21,11 +21,7 @@ const breadcrumbJsonLd = buildAcademyBreadcrumbJsonLd([
   { name: 'Learning Paths' },
 ])
 
-export default async function SeriesIndexPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>
-}) {
+export default async function SeriesIndexPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   setRequestLocale(locale)
   const allSeries = await getAllSeries().catch(() => [])
@@ -57,7 +53,7 @@ export default async function SeriesIndexPage({
             </p>
             <Link
               href='/academy'
-              className='mt-4 inline-block text-primary-600 dark:text-primary-400 underline'
+              className='text-primary-600 dark:text-primary-400 mt-4 inline-block underline'
             >
               Back to Academy
             </Link>

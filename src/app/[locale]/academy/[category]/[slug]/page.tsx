@@ -6,16 +6,11 @@ import { AuthorByline } from '@/components/shared/author-byline'
 import { Breadcrumbs } from '@/components/shared/breadcrumbs'
 import { PostArticle } from '@/components/shared/post-article'
 import { ACADEMY_CATEGORIES, isAcademyCategory } from '@/constants/academy-categories'
-import {
-  getAcademyPostBySlug,
-  getAcademySlugs,
-  getAuthorBySlug,
-  getRelatedPosts,
-} from '@/lib/cms'
+import { getTermMap } from '@/lib/academy-terms'
+import { getAcademyPostBySlug, getAcademySlugs, getAuthorBySlug, getRelatedPosts } from '@/lib/cms'
+import { autoLinkContent } from '@/lib/glossary-linker'
 import { createMetadata, siteUrl } from '@/lib/seo'
 import { buildAcademyArticleJsonLd, buildAcademyBreadcrumbJsonLd } from '@/lib/seo-academy'
-import { autoLinkContent } from '@/lib/glossary-linker'
-import { getTermMap } from '@/lib/academy-terms'
 
 interface PageProps {
   params: Promise<{ locale: string; category: string; slug: string }>

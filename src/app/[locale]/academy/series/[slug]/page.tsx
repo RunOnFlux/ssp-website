@@ -37,9 +37,7 @@ export default async function SeriesDetailPage({ params }: PageProps) {
   const series = await getSeriesBySlug(slug).catch(() => undefined)
   if (!series) notFound()
 
-  const orderedPosts = [...series.posts].sort(
-    (a, b) => (a.seriesOrder ?? 0) - (b.seriesOrder ?? 0)
-  )
+  const orderedPosts = [...series.posts].sort((a, b) => (a.seriesOrder ?? 0) - (b.seriesOrder ?? 0))
 
   const breadcrumbJsonLd = buildAcademyBreadcrumbJsonLd([
     { name: 'Home', url: '/' },
@@ -67,10 +65,10 @@ export default async function SeriesDetailPage({ params }: PageProps) {
       <section className='dark:from-dark-900 dark:to-dark-950 relative overflow-hidden rounded-b-[40px] bg-linear-to-b from-white to-gray-50 pb-12 md:rounded-b-[60px] md:pb-16 lg:rounded-b-[100px] lg:pb-24'>
         <div className='container-custom pt-12 text-center md:pt-16 lg:pt-24'>
           <div className='mx-auto max-w-[800px] space-y-4'>
-            <h1 className='text-3xl font-bold leading-tight text-gray-900 md:text-5xl dark:text-white'>
+            <h1 className='text-3xl leading-tight font-bold text-gray-900 md:text-5xl dark:text-white'>
               {series.title}
             </h1>
-            <p className='text-base font-medium leading-relaxed text-gray-600 md:text-lg dark:text-gray-200'>
+            <p className='text-base leading-relaxed font-medium text-gray-600 md:text-lg dark:text-gray-200'>
               {series.description}
             </p>
             <p className='text-sm text-gray-500 dark:text-gray-400'>
