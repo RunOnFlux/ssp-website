@@ -7,6 +7,8 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, setRequestLocale } from 'next-intl/server'
 import type { ReactNode } from 'react'
 import CookieConsent from '@/components/cookie-consent'
+import { Footer } from '@/components/footer/footer'
+import { Header } from '@/components/header/header'
 import { ThemeProvider } from '@/components/theme-provider'
 import { routing } from '@/i18n/routing'
 
@@ -174,7 +176,11 @@ export default async function LocaleLayout({
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider>
-            {children}
+            <div className='flex min-h-screen flex-col overflow-x-hidden'>
+              <Header />
+              <main className='flex-1 overflow-x-hidden pt-16 md:pt-20'>{children}</main>
+              <Footer />
+            </div>
             <CookieConsent />
           </ThemeProvider>
         </NextIntlClientProvider>
