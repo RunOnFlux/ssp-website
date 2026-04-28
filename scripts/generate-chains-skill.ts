@@ -3,9 +3,7 @@ import { promises as fs } from 'fs'
 import path from 'path'
 import { SUPPORTED_CHAINS } from '../src/constants/supported-chains'
 
-const TARGET = path.resolve(
-  'src/app/api/agent-skills/skills/list-supported-chains/SKILL.md'
-)
+const TARGET = path.resolve('src/app/api/agent-skills/skills/list-supported-chains/SKILL.md')
 
 const HEADER = `---
 name: list-supported-chains
