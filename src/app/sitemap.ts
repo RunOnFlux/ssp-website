@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { routing } from '@/i18n/routing'
+import { getAllPosts, getAcademySlugs, getAllSeries } from '@/lib/cms'
 import { siteUrl } from '@/lib/seo'
 
 const STATIC_ROUTES: Array<{
@@ -27,6 +28,8 @@ function buildLocaleUrl(locale: string, path: string): string {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date()
   const entries: MetadataRoute.Sitemap = []
+
+  // Static routes
   for (const route of STATIC_ROUTES) {
     for (const locale of routing.locales) {
       entries.push({
@@ -42,5 +45,57 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       })
     }
   }
+
+  // Newsroom posts
+  try {
+    const newsroomPosts = await getAllPosts()
+    for (const post of newsroomPosts) {
+      for (const locale of routing.locales) {
+        entries.push({
+          url: buildLocaleUrl(locale, `/newsroom/${post.slug}`),
+          lastModified: new Date(post.modifiedDate ?? post.date),
+          changeFrequency: 'monthly',
+          priority: 0.6,
+        })
+      }
+    }
+  } catch {
+    // CMS unavailable — skip dynamic newsroom entries
+  }
+
+  // Academy articles
+  try {
+    const academySlugs = await getAcademySlugs()
+    for (const { category, slug } of academySlugs) {
+      for (const locale of routing.locales) {
+        entries.push({
+          url: buildLocaleUrl(locale, `/academy/${category}/${slug}`),
+          lastModified,
+          changeFrequency: 'monthly',
+          priority: 0.7,
+        })
+      }
+    }
+  } catch {
+    // CMS unavailable — skip dynamic academy entries
+  }
+
+  // Academy series
+  try {
+    const allSeries = await getAllSeries()
+    for (const series of allSeries) {
+      for (const locale of routing.locales) {
+        entries.push({
+          url: buildLocaleUrl(locale, `/academy/series/${series.slug}`),
+          lastModified: new Date(series.updatedAt),
+          changeFrequency: 'monthly',
+          priority: 0.6,
+        })
+      }
+    }
+  } catch {
+    // CMS unavailable — skip dynamic series entries
+  }
+
   return entries
 }
