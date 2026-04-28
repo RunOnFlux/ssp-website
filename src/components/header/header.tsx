@@ -1,9 +1,11 @@
 'use client'
 
+import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Download, Menu, Moon, Sun, X } from 'lucide-react'
+import { ChevronDown, Download, Menu, Moon, Sun, X } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
+import { LocaleSwitcher } from '@/components/header/locale-switcher'
 import { Logo } from '@/components/logo'
 import { useTheme } from '@/hooks/use-theme'
 import { Link, usePathname } from '@/i18n/navigation'
@@ -16,14 +18,21 @@ export function Header() {
   const { theme, toggleTheme, mounted } = useTheme()
   const pathname = usePathname()
 
-  const navigation = [
+  const primaryNav = [
     { name: t('home'), href: '/' },
-    { name: t('enterprise'), href: '/enterprise' },
     { name: t('features'), href: '/features' },
+    { name: t('newsroom'), href: '/newsroom' },
+    { name: t('academy'), href: '/academy' },
     { name: t('guide'), href: '/guide' },
     { name: t('support'), href: '/support' },
+  ]
+
+  const moreNav = [
+    { name: t('enterprise'), href: '/enterprise' },
     { name: t('contact'), href: '/contact' },
   ]
+
+  const allNavItems = [...primaryNav, ...moreNav]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +44,8 @@ export function Header() {
   }, [])
 
   const closeMenu = () => setIsMenuOpen(false)
+
+  const isMoreActive = moreNav.some(item => pathname === item.href)
 
   return (
     <header
@@ -53,8 +64,8 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className='hidden items-center space-x-8 lg:flex'>
-            {navigation.map(item => (
+          <div className='hidden items-center space-x-6 lg:flex'>
+            {primaryNav.map(item => (
               <Link
                 key={item.name}
                 href={item.href}
@@ -75,22 +86,51 @@ export function Header() {
                 )}
               </Link>
             ))}
+
+            {/* More dropdown */}
+            <DropdownMenu.Root>
+              <DropdownMenu.Trigger asChild>
+                <button
+                  className={cn(
+                    'hover:text-primary-600 dark:hover:text-primary-400 inline-flex items-center gap-1 text-sm font-medium transition-colors duration-200',
+                    isMoreActive
+                      ? 'text-primary-600 dark:text-primary-400'
+                      : 'text-gray-700 dark:text-gray-300'
+                  )}
+                >
+                  {t('more')}
+                  <ChevronDown className='h-4 w-4' />
+                </button>
+              </DropdownMenu.Trigger>
+              <DropdownMenu.Portal>
+                <DropdownMenu.Content
+                  sideOffset={8}
+                  className='rounded-card dark:border-dark-700 dark:bg-dark-800 z-50 border border-gray-200 bg-white p-2 shadow-md'
+                >
+                  {moreNav.map(item => (
+                    <DropdownMenu.Item key={item.name} asChild>
+                      <Link
+                        href={item.href}
+                        className={cn(
+                          'dark:hover:bg-dark-700 block cursor-pointer rounded px-3 py-2 text-sm hover:bg-gray-100',
+                          pathname === item.href
+                            ? 'text-primary-600 dark:text-primary-400 font-semibold'
+                            : 'text-gray-700 dark:text-gray-300'
+                        )}
+                      >
+                        {item.name}
+                      </Link>
+                    </DropdownMenu.Item>
+                  ))}
+                </DropdownMenu.Content>
+              </DropdownMenu.Portal>
+            </DropdownMenu.Root>
           </div>
 
           {/* Right side actions */}
-          <div className='flex items-center space-x-4'>
-            {/* Help Button */}
-            {/* {mounted && (
-              <button
-                onClick={() => window.kapa?.open?.()}
-                className='dark:bg-dark-800 dark:hover:bg-dark-700 cursor-pointer rounded-lg bg-gray-100 p-2 transition-colors duration-200 hover:bg-gray-200'
-                aria-label='Open AI Assistant'
-                title='AI Assistant'
-                id='kapa-button'
-              >
-                <HelpCircle className='h-5 w-5 text-gray-700 dark:text-gray-300' />
-              </button>
-            )} */}
+          <div className='flex items-center space-x-3'>
+            {/* Locale Switcher */}
+            {mounted && <LocaleSwitcher />}
 
             {/* Theme Toggle */}
             {mounted && (
@@ -139,7 +179,7 @@ export function Header() {
               className='overflow-hidden lg:hidden'
             >
               <div className='dark:bg-dark-900/95 mt-2 space-y-2 rounded-lg border border-gray-200/20 bg-white/95 py-4 backdrop-blur-md dark:border-white/10'>
-                {navigation.map((item, index) => (
+                {allNavItems.map((item, index) => (
                   <motion.div
                     key={item.name}
                     initial={{ opacity: 0, x: -20 }}
@@ -163,7 +203,7 @@ export function Header() {
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: navigation.length * 0.03 }}
+                  transition={{ delay: allNavItems.length * 0.03 }}
                   className='px-4 pt-2'
                 >
                   <Link href='/download' onClick={closeMenu} className='btn btn-primary w-full'>
