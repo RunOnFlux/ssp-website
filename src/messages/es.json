@@ -165,5 +165,93 @@
     "metaDescriptionFallback": "Artículos de {name}",
     "notFoundTitle": "Autor no encontrado",
     "breadcrumbLabel": "Autores"
+  },
+  "Contact": {
+    "metaTitle": "Contacto - SSP Wallet | Ponte en contacto",
+    "metaDescription": "Contacta con el equipo de SSP Wallet. Obtén soporte, haz preguntas o explora alianzas. Únete a nuestra comunidad de Discord o escríbenos directamente.",
+    "breadcrumbLabel": "Contacto",
+    "heroBadge": "Contacto",
+    "heroTitle": "Ponte en contacto",
+    "heroDescription": "¿Tienes preguntas sobre SSP Wallet? ¿Necesitas soporte o quieres explorar alianzas? Únete a nuestra comunidad o escríbenos directamente—estamos aquí para ayudarte.",
+    "methodsTitle": "Cómo contactarnos",
+    "methodsSubtitle": "Elige el método de contacto que mejor se adapte a tus necesidades",
+    "methods": {
+      "supportTickets": {
+        "title": "Tickets de soporte",
+        "description": "Recibe ayuda directa con incidencias técnicas a través de nuestro sistema de tickets",
+        "responseTime": "En menos de 24 horas",
+        "action": "Crear ticket"
+      },
+      "discord": {
+        "title": "Comunidad de Discord",
+        "description": "Únete a nuestra comunidad activa para soporte y conversaciones en tiempo real",
+        "responseTime": "Comunidad activa",
+        "action": "Unirse a Discord"
+      },
+      "github": {
+        "title": "Soporte en GitHub",
+        "description": "Reporta errores, solicita funciones o contribuye al desarrollo",
+        "contact": "Issues y discusiones en GitHub",
+        "responseTime": "Impulsado por la comunidad",
+        "action": "Ir a GitHub"
+      }
+    },
+    "resourcesTitle": "¿Necesitas ayuda ahora mismo?",
+    "resourcesSubtitle": "Consulta nuestros recursos de autoservicio para asistencia inmediata",
+    "resources": {
+      "supportCenter": {
+        "title": "Centro de soporte",
+        "description": "Preguntas frecuentes y guías de resolución de problemas"
+      },
+      "setupGuide": {
+        "title": "Guía de configuración",
+        "description": "Instrucciones de instalación paso a paso"
+      },
+      "documentation": {
+        "title": "Documentación",
+        "description": "Documentación técnica completa"
+      }
+    },
+    "formTitle": "Envíanos un mensaje",
+    "formSubtitle": "Rellena el formulario y te responderemos lo antes posible",
+    "formTipPrefix": "Consejo:",
+    "formTipBefore": "Para soporte técnico más rápido, considera usar nuestro",
+    "formTipLinkSupport": "sistema de tickets de soporte",
+    "formTipBetween": "o escribirnos a",
+    "form": {
+      "fullNameLabel": "Nombre completo *",
+      "fullNamePlaceholder": "Tu nombre completo",
+      "emailLabel": "Correo electrónico *",
+      "emailPlaceholder": "tu.correo@ejemplo.com",
+      "companyLabel": "Empresa (opcional)",
+      "companyPlaceholder": "Nombre de tu empresa",
+      "typeLabel": "Tipo de consulta *",
+      "typeOptions": {
+        "general": "Consulta general",
+        "support": "Soporte técnico",
+        "partnership": "Alianza",
+        "security": "Incidencia de seguridad",
+        "media": "Medios y prensa",
+        "business": "Desarrollo de negocio"
+      },
+      "subjectLabel": "Asunto *",
+      "subjectPlaceholder": "Asunto breve de tu mensaje",
+      "messageLabel": "Mensaje *",
+      "messagePlaceholder": "Por favor proporciona detalles sobre tu consulta...",
+      "submitting": "Enviando mensaje...",
+      "submit": "Enviar mensaje",
+      "errorFallback": "No se pudo enviar el mensaje. Inténtalo de nuevo.",
+      "errorGeneric": "No se pudo enviar el mensaje",
+      "successTitle": "¡Gracias!",
+      "successDescription": "Tu mensaje se envió correctamente. Te responderemos pronto.",
+      "successAgain": "Enviar otro mensaje"
+    },
+    "communityTitle": "Sigue a nuestra comunidad",
+    "communitySubtitle": "Mantente al día con las últimas noticias, conecta con otros usuarios y obtén soporte de la comunidad",
+    "social": {
+      "github": "Desarrollo open source y contribuciones",
+      "discord": "Chat de la comunidad y soporte en tiempo real",
+      "twitter": "Últimas actualizaciones, noticias y anuncios"
+    }
   }
 }

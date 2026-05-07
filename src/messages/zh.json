@@ -165,5 +165,93 @@
     "metaDescriptionFallback": "{name} 的文章",
     "notFoundTitle": "未找到作者",
     "breadcrumbLabel": "作者"
+  },
+  "Contact": {
+    "metaTitle": "联系我们 - SSP Wallet | 与我们取得联系",
+    "metaDescription": "联系 SSP Wallet 团队。获取支持、咨询问题或洽谈合作。加入我们的 Discord 社区或直接与我们联系。",
+    "breadcrumbLabel": "联系我们",
+    "heroBadge": "联系我们",
+    "heroTitle": "与我们取得联系",
+    "heroDescription": "对 SSP Wallet 有疑问？需要支持或希望洽谈合作？加入我们的社区或直接联系我们——我们随时为你提供帮助。",
+    "methodsTitle": "联系方式",
+    "methodsSubtitle": "选择最适合你需求的联系方式",
+    "methods": {
+      "supportTickets": {
+        "title": "支持工单",
+        "description": "通过我们的工单系统直接获取技术问题的帮助",
+        "responseTime": "24 小时内回复",
+        "action": "创建工单"
+      },
+      "discord": {
+        "title": "Discord 社区",
+        "description": "加入我们活跃的社区，获得实时支持与交流",
+        "responseTime": "活跃社区",
+        "action": "加入 Discord"
+      },
+      "github": {
+        "title": "GitHub 支持",
+        "description": "报告 Bug、提出功能建议或参与开发贡献",
+        "contact": "GitHub Issues 与讨论",
+        "responseTime": "由社区驱动",
+        "action": "访问 GitHub"
+      }
+    },
+    "resourcesTitle": "需要立即帮助？",
+    "resourcesSubtitle": "查看我们的自助资源以获得即时协助",
+    "resources": {
+      "supportCenter": {
+        "title": "支持中心",
+        "description": "完整的常见问题与故障排除指南"
+      },
+      "setupGuide": {
+        "title": "设置指南",
+        "description": "分步安装说明"
+      },
+      "documentation": {
+        "title": "文档",
+        "description": "完整的技术文档"
+      }
+    },
+    "formTitle": "向我们发送消息",
+    "formSubtitle": "填写下方表单，我们会尽快回复你",
+    "formTipPrefix": "提示：",
+    "formTipBefore": "如需更快的技术支持，请考虑使用我们的",
+    "formTipLinkSupport": "支持工单系统",
+    "formTipBetween": "或通过以下方式联系我们：",
+    "form": {
+      "fullNameLabel": "全名 *",
+      "fullNamePlaceholder": "你的全名",
+      "emailLabel": "电子邮箱 *",
+      "emailPlaceholder": "your.email@example.com",
+      "companyLabel": "公司（可选）",
+      "companyPlaceholder": "你的公司名称",
+      "typeLabel": "咨询类型 *",
+      "typeOptions": {
+        "general": "一般咨询",
+        "support": "技术支持",
+        "partnership": "合作",
+        "security": "安全问题",
+        "media": "媒体与新闻",
+        "business": "业务拓展"
+      },
+      "subjectLabel": "主题 *",
+      "subjectPlaceholder": "你的消息主题（简短）",
+      "messageLabel": "消息 *",
+      "messagePlaceholder": "请提供你咨询的详细信息……",
+      "submitting": "正在发送消息……",
+      "submit": "发送消息",
+      "errorFallback": "消息发送失败。请重试。",
+      "errorGeneric": "消息发送失败",
+      "successTitle": "感谢你！",
+      "successDescription": "你的消息已成功发送。我们会尽快回复你。",
+      "successAgain": "再发送一条消息"
+    },
+    "communityTitle": "关注我们的社区",
+    "communitySubtitle": "及时获取最新消息，与其他用户交流，并获得社区支持",
+    "social": {
+      "github": "开源开发与贡献",
+      "discord": "社区交流与实时支持",
+      "twitter": "最新动态、新闻与公告"
+    }
   }
 }

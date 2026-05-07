@@ -165,5 +165,93 @@
     "metaDescriptionFallback": "Articles by {name}",
     "notFoundTitle": "Author not found",
     "breadcrumbLabel": "Authors"
+  },
+  "Contact": {
+    "metaTitle": "Contact - SSP Wallet | Get in Touch",
+    "metaDescription": "Contact SSP Wallet team. Get support, ask questions, or discuss partnerships. Join our Discord community or reach out directly.",
+    "breadcrumbLabel": "Contact",
+    "heroBadge": "Contact Us",
+    "heroTitle": "Get in Touch",
+    "heroDescription": "Have questions about SSP Wallet? Need support or want to explore partnerships? Join our community or reach out directly—we're here to help.",
+    "methodsTitle": "Ways to Reach Us",
+    "methodsSubtitle": "Choose the contact method that works best for your needs",
+    "methods": {
+      "supportTickets": {
+        "title": "Support Tickets",
+        "description": "Get direct help with technical issues through our ticketing system",
+        "responseTime": "Within 24 hours",
+        "action": "Create Ticket"
+      },
+      "discord": {
+        "title": "Discord Community",
+        "description": "Join our active community for real-time support and discussions",
+        "responseTime": "Active community",
+        "action": "Join Discord"
+      },
+      "github": {
+        "title": "GitHub Support",
+        "description": "Report bugs, request features, or contribute to development",
+        "contact": "GitHub Issues & Discussions",
+        "responseTime": "Community driven",
+        "action": "Visit GitHub"
+      }
+    },
+    "resourcesTitle": "Need Help Right Away?",
+    "resourcesSubtitle": "Check out our self-service resources for immediate assistance",
+    "resources": {
+      "supportCenter": {
+        "title": "Support Center",
+        "description": "Comprehensive FAQ and troubleshooting guides"
+      },
+      "setupGuide": {
+        "title": "Setup Guide",
+        "description": "Step-by-step installation instructions"
+      },
+      "documentation": {
+        "title": "Documentation",
+        "description": "Complete technical documentation"
+      }
+    },
+    "formTitle": "Send Us a Message",
+    "formSubtitle": "Fill out the form below and we'll get back to you as soon as possible",
+    "formTipPrefix": "Tip:",
+    "formTipBefore": "For faster technical support, consider using our",
+    "formTipLinkSupport": "support ticket system",
+    "formTipBetween": "or reaching out via",
+    "form": {
+      "fullNameLabel": "Full Name *",
+      "fullNamePlaceholder": "Your full name",
+      "emailLabel": "Email Address *",
+      "emailPlaceholder": "your.email@example.com",
+      "companyLabel": "Company (Optional)",
+      "companyPlaceholder": "Your company name",
+      "typeLabel": "Inquiry Type *",
+      "typeOptions": {
+        "general": "General Inquiry",
+        "support": "Technical Support",
+        "partnership": "Partnership",
+        "security": "Security Issue",
+        "media": "Media & Press",
+        "business": "Business Development"
+      },
+      "subjectLabel": "Subject *",
+      "subjectPlaceholder": "Brief subject of your message",
+      "messageLabel": "Message *",
+      "messagePlaceholder": "Please provide details about your inquiry...",
+      "submitting": "Sending Message...",
+      "submit": "Send Message",
+      "errorFallback": "Failed to send message. Please try again.",
+      "errorGeneric": "Failed to send message",
+      "successTitle": "Thank You!",
+      "successDescription": "Your message has been sent successfully. We'll get back to you soon.",
+      "successAgain": "Send another message"
+    },
+    "communityTitle": "Follow Our Community",
+    "communitySubtitle": "Stay updated with the latest news, connect with other users, and get community support",
+    "social": {
+      "github": "Open source development & contributions",
+      "discord": "Community chat & real-time support",
+      "twitter": "Latest updates, news & announcements"
+    }
   }
 }
