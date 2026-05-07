@@ -4,7 +4,8 @@
     "loading": "__TODO_TRANSLATE__ Loading…",
     "error": "__TODO_TRANSLATE__ Something went wrong.",
     "retry": "__TODO_TRANSLATE__ Retry",
-    "readMore": "__TODO_TRANSLATE__ Read more"
+    "readMore": "__TODO_TRANSLATE__ Read more",
+    "breadcrumbHome": "主页"
   },
   "Header": {
     "home": "__TODO_TRANSLATE__ Home",
@@ -67,6 +68,8 @@
   "Newsroom": {
     "title": "__TODO_TRANSLATE__ Newsroom",
     "description": "__TODO_TRANSLATE__ Latest news, product updates, and announcements from SSP.",
+    "metaTitle": "新闻中心 — 最新新闻与更新",
+    "metaDescription": "及时了解 SSP 的最新新闻、产品更新与公告。",
     "filterAll": "__TODO_TRANSLATE__ All",
     "loadMore": "__TODO_TRANSLATE__ Load more",
     "noArticles": "__TODO_TRANSLATE__ No articles match this filter yet.",

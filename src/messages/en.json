@@ -4,7 +4,8 @@
     "loading": "Loading…",
     "error": "Something went wrong.",
     "retry": "Retry",
-    "readMore": "Read more"
+    "readMore": "Read more",
+    "breadcrumbHome": "Home"
   },
   "Header": {
     "home": "Home",
@@ -67,6 +68,8 @@
   "Newsroom": {
     "title": "Newsroom",
     "description": "Latest news, product updates, and announcements from SSP.",
+    "metaTitle": "Newsroom — Latest News & Updates",
+    "metaDescription": "Stay up to date with the latest news, product updates, and announcements from SSP.",
     "filterAll": "All",
     "loadMore": "Load more",
     "noArticles": "No articles match this filter yet.",

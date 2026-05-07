@@ -4,7 +4,8 @@
     "loading": "__TODO_TRANSLATE__ Loading…",
     "error": "__TODO_TRANSLATE__ Something went wrong.",
     "retry": "__TODO_TRANSLATE__ Retry",
-    "readMore": "__TODO_TRANSLATE__ Read more"
+    "readMore": "__TODO_TRANSLATE__ Read more",
+    "breadcrumbHome": "Inicio"
   },
   "Header": {
     "home": "__TODO_TRANSLATE__ Home",
@@ -67,6 +68,8 @@
   "Newsroom": {
     "title": "__TODO_TRANSLATE__ Newsroom",
     "description": "__TODO_TRANSLATE__ Latest news, product updates, and announcements from SSP.",
+    "metaTitle": "Sala de prensa — Últimas noticias y novedades",
+    "metaDescription": "Mantente al día con las últimas noticias, actualizaciones de producto y anuncios de SSP.",
     "filterAll": "__TODO_TRANSLATE__ All",
     "loadMore": "__TODO_TRANSLATE__ Load more",
     "noArticles": "__TODO_TRANSLATE__ No articles match this filter yet.",

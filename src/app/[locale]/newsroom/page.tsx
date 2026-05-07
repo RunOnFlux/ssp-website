@@ -1,26 +1,38 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
-import { setRequestLocale } from 'next-intl/server'
+import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { PageHeader } from '@/components/header/page-header'
 import { NewsroomListing } from '@/components/newsroom/newsroom-listing'
 import { getAllPosts, getAllTags } from '@/lib/cms'
 import { createBreadcrumbJsonLd, createCollectionPageJsonLd, createMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = createMetadata({
-  title: 'Newsroom — Latest News & Updates',
-  description: 'Stay up to date with the latest news, product updates, and announcements from SSP.',
-  path: '/newsroom',
-})
-
-const breadcrumbJsonLd = createBreadcrumbJsonLd([
-  { name: 'Home', url: '/' },
-  { name: 'Newsroom', url: '/newsroom' },
-])
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'Newsroom' })
+  return createMetadata({
+    title: t('metaTitle'),
+    description: t('metaDescription'),
+    path: '/newsroom',
+  })
+}
 
 export default async function NewsroomPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   setRequestLocale(locale)
-  const [posts, tags] = await Promise.all([getAllPosts(), getAllTags()])
+  const [posts, tags, t, tCommon] = await Promise.all([
+    getAllPosts(),
+    getAllTags(),
+    getTranslations({ locale, namespace: 'Newsroom' }),
+    getTranslations({ locale, namespace: 'Common' }),
+  ])
+  const breadcrumbJsonLd = createBreadcrumbJsonLd([
+    { name: tCommon('breadcrumbHome'), url: '/' },
+    { name: t('title'), url: '/newsroom' },
+  ])
   const collectionJsonLd = createCollectionPageJsonLd(
     posts.map(p => ({ title: p.title, url: `/newsroom/${p.slug}`, date: p.date }))
   )
@@ -32,10 +44,7 @@ export default async function NewsroomPage({ params }: { params: Promise<{ local
       <Script id='collection-page-jsonld' type='application/ld+json'>
         {JSON.stringify(collectionJsonLd)}
       </Script>
-      <PageHeader
-        title='Newsroom'
-        description='Stay up to date with the latest news, product updates, and announcements from SSP.'
-      />
+      <PageHeader title={t('title')} description={t('description')} />
       <NewsroomListing posts={posts} tags={tags} />
     </>
   )
