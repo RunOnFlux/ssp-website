@@ -894,6 +894,126 @@
       "heading": "Cookie 政策"
     }
   },
+  "CaseStudies": {
+    "breadcrumbLabel": "案例研究",
+    "fluxFoundation": {
+      "metaTitle": "案例研究：Flux 基金会 — 使用 SSP Enterprise 的自托管金库",
+      "metaDescription": "Flux 基金会如何从分散的多重签名和自定义脚本迁移到 SSP Enterprise — 使用 M-of-N 金库在他们使用的每条链上保护 Fusion 桥与基金会金库。",
+      "breadcrumbLabel": "Flux 基金会",
+      "logoAlt": "Flux 基金会",
+      "eyebrow": "案例研究",
+      "titlePart1": "Flux 基金会 ×",
+      "titlePart2": "SSP Enterprise",
+      "subtitle": "Flux 基金会如何从分散的多重签名和自定义脚本迁移到一个统一的自托管平台 — 在不向任何人交出私钥的前提下，保护 Fusion 桥与基金会金库。",
+      "heroQuote": "我们需要对资金的完全掌控、对社区的透明度，以及没有黑盒 MPC 横亘在我们与自家金库之间。SSP Enterprise 是我们找到的第一个同时满足这三点的平台 — 而且覆盖了我们实际使用的每一条链。",
+      "heroQuoteAttribution": "— Tadeas Kmenta，Flux 基金会",
+      "factSheet": {
+        "organizationLabel": "组织",
+        "organizationValue": "Flux 基金会",
+        "industryLabel": "行业",
+        "industryValue": "去中心化基础设施",
+        "useCaseLabel": "用例",
+        "useCaseValue": "基金会金库 + Fusion 桥多重签名",
+        "chainsLabel": "链",
+        "chainsValue": "BTC、ETH、FLUX、EVM L2",
+        "vaultModelLabel": "金库模型",
+        "vaultModelValue": "M-of-N 多重签名，每位签名者两台设备",
+        "statusLabel": "状态",
+        "statusValue": "已上线"
+      },
+      "before": {
+        "title": "之前：分散的多重签名与自定义脚本",
+        "intro": "Flux 基金会多年来一直在管理多方签名。问题不在于缺少多重签名 — 而是没有任何工具能跨链将其串联起来，而所有商业替代方案都要求做出团队不愿接受的取舍。",
+        "items": {
+          "0": {
+            "title": "分散的多重签名设置",
+            "description": "不同链上有不同的多重签名钱包，各自有独特的特性、签名者和恢复流程。"
+          },
+          "1": {
+            "title": "依赖自定义脚本拼接",
+            "description": "用于交易构造、签名协调与广播的内部工具 — 全部靠人工维护。"
+          },
+          "2": {
+            "title": "缺乏统一的审计记录",
+            "description": "审批散落在聊天记录和共享文档中。要弄清谁签了什么需要花费大量时间翻找。"
+          },
+          "3": {
+            "title": "市场上没有折中方案",
+            "description": "托管方与 MPC 厂商意味着信任一个黑盒。现成的多重签名工具又只支持以太坊。"
+          }
+        }
+      },
+      "decision": {
+        "title": "决策过程",
+        "intro": "团队评估了备选方案并将其归为三类。每一类都有无法接受的硬伤。",
+        "bucket1Eyebrow": "第 1 类",
+        "bucket1Title": "MPC 托管方",
+        "bucket1Description": "Fireblocks、BitGo 等。厂商持有每把密钥的一部分。",
+        "bucket1Verdict": "并非真正的自托管。",
+        "bucket2Eyebrow": "第 2 类",
+        "bucket2Title": "单链多重签名",
+        "bucket2Description": "Safe 之类。仅支持以太坊，没有原生 UTXO 支持。",
+        "bucket2Verdict": "我们也持有 Bitcoin 和 Flux。",
+        "bucket3Eyebrow": "第 3 类",
+        "bucket3Title": "极简多重签名",
+        "bucket3Description": "没有策略引擎、分析或正规审计记录的钱包。",
+        "bucket3Verdict": "我们又得自己来造工具。",
+        "conclusion": "SSP Enterprise 是唯一同时解决这三点的平台：原生多链（UTXO 与 EVM）、真正的自托管且厂商不持有任何密钥分片，并内置策略引擎、分析和审计记录。"
+      },
+      "whatChanged": {
+        "title": "改变了什么",
+        "intro": "一个平台覆盖基金会交互的每一条链，统一一致的签名模型。自定义脚本已退役。聊天记录式的审计被可归属的平台记录所取代。金库与桥的多重签名在同一治理体系下并行运行。",
+        "items": {
+          "0": {
+            "title": "覆盖所有相关链的 M-of-N 金库",
+            "description": "Bitcoin、Ethereum、Flux 与 EVM L2 — 同一平台、同一思维模型、同一安全保障。"
+          },
+          "1": {
+            "title": "每位签名者使用两台设备，无一例外",
+            "description": "每次签名都需要浏览器扩展和移动应用。单台设备被攻破无法签署交易。"
+          },
+          "2": {
+            "title": "经得起检验的审计记录",
+            "description": "每次提案、批准和拒绝都带有签名者和时间戳。取代了从聊天记录拼凑事实的做法。"
+          },
+          "3": {
+            "title": "全程自托管",
+            "description": "厂商不持有任何密钥分片。没有需要信任的 MPC 基础设施。即使 SSP 明天消失，我们的资金仍然可以通过签名者的助记词恢复。"
+          }
+        }
+      },
+      "fusionBridge": {
+        "title": "Fusion 桥",
+        "intro": "Fusion 桥是基金会运营中对安全最敏感的环节之一 — 它在 Flux 与其他链之间协调价值转移，单一签名失败可能造成灾难性后果。它也是 SSP Enterprise 模型最能体现价值的工作负载。",
+        "items": {
+          "0": {
+            "title": "链上多重签名",
+            "description": "桥所触及的每条链都使用原生多重签名 — 没有智能合约托管方，也没有可能拖延或抢跑的中继器。"
+          },
+          "1": {
+            "title": "每位签名者双设备签名",
+            "description": "攻破某位签名者的笔记本或手机不足以推送一笔桥接交易。每次都必须双设备。"
+          },
+          "2": {
+            "title": "按签名者粒度的策略控制",
+            "description": "限额和白名单在组织和金库层级配置，并在收集任何签名之前强制执行。"
+          },
+          "3": {
+            "title": "全程可审计",
+            "description": "每次批准与拒绝都有明确归属与时间戳。在不放弃自托管的前提下对社区负责。"
+          }
+        },
+        "quote": "Fusion 桥现在运行在我们端到端可控的基础设施上。我们对自家金库所拥有的安全保证，已经应用到了我们运营中风险最高的工作流之一。",
+        "quoteAttribution": "— Tadeas Kmenta，Flux 基金会"
+      },
+      "cta": {
+        "title": "同样的模型。同样可以服务你的团队。",
+        "description": "支撑 Flux 基金会运行 Fusion 桥的平台，同样面向任何希望获得无妥协自托管多重签名的团队开放。免费版即可起步。可按需提供定制方案。",
+        "exploreEnterprise": "了解 SSP Enterprise",
+        "launchEnterpriseApp": "启动 Enterprise 应用"
+      }
+    }
+  },
   "Enterprise": {
     "metaTitle": "SSP Enterprise | 面向企业的自托管多重签名",
     "metaDescription": "面向企业资金的 M-of-N 自托管多重签名金库。策略引擎、支出限额、双设备签名与基于角色的访问。无托管方，无 MPC。",

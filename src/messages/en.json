@@ -894,6 +894,126 @@
       "heading": "Cookie Policy"
     }
   },
+  "CaseStudies": {
+    "breadcrumbLabel": "Case Studies",
+    "fluxFoundation": {
+      "metaTitle": "Case Study: Flux Foundation — Self-Custody Treasury with SSP Enterprise",
+      "metaDescription": "How the Flux Foundation moved from scattered multisig and custom scripts to SSP Enterprise — securing the Fusion bridge and Foundation treasury with M-of-N vaults across every chain they use.",
+      "breadcrumbLabel": "Flux Foundation",
+      "logoAlt": "Flux Foundation",
+      "eyebrow": "Case Study",
+      "titlePart1": "Flux Foundation ×",
+      "titlePart2": "SSP Enterprise",
+      "subtitle": "How the Flux Foundation moved from scattered multisig and custom scripts to a single self-custody platform — securing the Fusion bridge and Foundation treasury without giving up keys to anyone.",
+      "heroQuote": "We needed full control of our funds, transparency for the community, and no black box MPC sitting between us and our own treasury. SSP Enterprise was the first platform we found that matches all three — across every chain we actually use.",
+      "heroQuoteAttribution": "— Tadeas Kmenta, Flux Foundation",
+      "factSheet": {
+        "organizationLabel": "Organization",
+        "organizationValue": "Flux Foundation",
+        "industryLabel": "Industry",
+        "industryValue": "Decentralized infrastructure",
+        "useCaseLabel": "Use case",
+        "useCaseValue": "Foundation treasury + Fusion bridge multisig",
+        "chainsLabel": "Chains",
+        "chainsValue": "BTC, ETH, FLUX, EVM L2s",
+        "vaultModelLabel": "Vault model",
+        "vaultModelValue": "M-of-N multisig, two-device per signer",
+        "statusLabel": "Status",
+        "statusValue": "In production"
+      },
+      "before": {
+        "title": "Before: scattered multisig and custom scripts",
+        "intro": "The Flux Foundation had been managing multi-party signing for years. The problem wasn't a lack of multisig — it was that nothing tied it together across chains, and the commercial alternatives all required a tradeoff the team wasn't willing to make.",
+        "items": {
+          "0": {
+            "title": "Scattered multisig setups",
+            "description": "Different multisig wallets across different chains, each with its own quirks, signers, and recovery procedures."
+          },
+          "1": {
+            "title": "Custom scripts to glue it together",
+            "description": "Internal tooling for transaction construction, signing coordination, and broadcast — maintained by hand."
+          },
+          "2": {
+            "title": "No unified audit trail",
+            "description": "Approvals lived in chat threads and shared docs. Reconstructing who signed what required digging."
+          },
+          "3": {
+            "title": "No middle ground in the market",
+            "description": "Custodians and MPC vendors meant trusting a black box. Off-the-shelf multisig tools were Ethereum-only."
+          }
+        }
+      },
+      "decision": {
+        "title": "The decision",
+        "intro": "The team evaluated the alternatives and grouped them into three buckets. Every bucket had a dealbreaker.",
+        "bucket1Eyebrow": "Bucket 1",
+        "bucket1Title": "MPC custodians",
+        "bucket1Description": "Fireblocks, BitGo, and similar. Vendor holds part of every key.",
+        "bucket1Verdict": "Not true self-custody.",
+        "bucket2Eyebrow": "Bucket 2",
+        "bucket2Title": "Single-chain multisig",
+        "bucket2Description": "Safe and the like. Ethereum-only, no native UTXO support.",
+        "bucket2Verdict": "We hold Bitcoin and Flux too.",
+        "bucket3Eyebrow": "Bucket 3",
+        "bucket3Title": "Bare-bones multisig",
+        "bucket3Description": "Wallets without policy engine, analytics, or proper audit trail.",
+        "bucket3Verdict": "We'd be back to building tooling ourselves.",
+        "conclusion": "SSP Enterprise was the only platform that addressed all three at once: native multi-chain (UTXO and EVM), true self-custody with no vendor key share, and a built-in policy engine, analytics, and audit trail."
+      },
+      "whatChanged": {
+        "title": "What changed",
+        "intro": "One platform, every chain the Foundation interacts with, one consistent signing model. The custom scripts are retired. The chat-thread audit trail is replaced by attributable on-platform records. Treasury and bridge multisig live side by side under the same governance.",
+        "items": {
+          "0": {
+            "title": "M-of-N vaults across every chain we touch",
+            "description": "Bitcoin, Ethereum, Flux, and the EVM L2s — same platform, same mental model, same security guarantees."
+          },
+          "1": {
+            "title": "Two devices per signer, no exceptions",
+            "description": "Browser extension and mobile app required for every signature. A single compromised device cannot sign."
+          },
+          "2": {
+            "title": "Audit trail that holds up",
+            "description": "Every proposal, approval, and rejection logged with the signer and timestamp. Replaces the chat-thread reconstruction."
+          },
+          "3": {
+            "title": "Self-custody, end to end",
+            "description": "No vendor key share. No MPC infrastructure to trust. If SSP went away tomorrow, our funds remain recoverable from signer seeds."
+          }
+        }
+      },
+      "fusionBridge": {
+        "title": "The Fusion bridge",
+        "intro": "The Fusion bridge is one of the most security-sensitive surfaces the Foundation operates — it coordinates value transfer between Flux and other chains, and a single signing failure could be catastrophic. It's also the workload where SSP Enterprise's model pays off most clearly.",
+        "items": {
+          "0": {
+            "title": "On-chain multisig",
+            "description": "Native multisig on every chain the bridge touches — no smart-contract custodian, no relayer that can stall or front-run."
+          },
+          "1": {
+            "title": "Two-device signing per signer",
+            "description": "Compromising one signer's laptop or phone is not enough to push a bridge transaction. Both devices, every time."
+          },
+          "2": {
+            "title": "Per-signer policy controls",
+            "description": "Limits and whitelists configured at the org and vault level, enforced before any signature is collected."
+          },
+          "3": {
+            "title": "Auditable end to end",
+            "description": "Every approval and rejection attributed and timestamped. Community accountability without giving up self-custody."
+          }
+        },
+        "quote": "The Fusion bridge runs on infrastructure we control end to end now. Same security guarantees we have for our own treasury, applied to one of the highest-stakes workflows we operate.",
+        "quoteAttribution": "— Tadeas Kmenta, Flux Foundation"
+      },
+      "cta": {
+        "title": "Same model. Available for your team.",
+        "description": "The platform the Flux Foundation runs the Fusion bridge on is the same platform available to any team that wants self-custody multisig without compromise. Free tier to start. Custom plans on request.",
+        "exploreEnterprise": "Explore SSP Enterprise",
+        "launchEnterpriseApp": "Launch Enterprise App"
+      }
+    }
+  },
   "Enterprise": {
     "metaTitle": "SSP Enterprise | Self-Custody Multisig for Business",
     "metaDescription": "Self-custody M-of-N multisig vaults for business treasuries. Policy engine, spending limits, two-device signing, role-based access. No custodians, no MPC.",

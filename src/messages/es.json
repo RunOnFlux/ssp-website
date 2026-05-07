@@ -894,6 +894,126 @@
       "heading": "Política de Cookies"
     }
   },
+  "CaseStudies": {
+    "breadcrumbLabel": "Casos de Éxito",
+    "fluxFoundation": {
+      "metaTitle": "Caso de éxito: Flux Foundation — Tesorería de autocustodia con SSP Enterprise",
+      "metaDescription": "Cómo la Flux Foundation pasó de un multifirma fragmentado y scripts personalizados a SSP Enterprise — protegiendo el puente Fusion y la tesorería de la fundación con bóvedas M-de-N en todas las cadenas que utilizan.",
+      "breadcrumbLabel": "Flux Foundation",
+      "logoAlt": "Flux Foundation",
+      "eyebrow": "Caso de éxito",
+      "titlePart1": "Flux Foundation ×",
+      "titlePart2": "SSP Enterprise",
+      "subtitle": "Cómo la Flux Foundation pasó de un multifirma fragmentado y scripts personalizados a una única plataforma de autocustodia — protegiendo el puente Fusion y la tesorería de la fundación sin entregar las claves a nadie.",
+      "heroQuote": "Necesitábamos control total sobre nuestros fondos, transparencia para la comunidad y ningún MPC de caja negra entre nosotros y nuestra propia tesorería. SSP Enterprise fue la primera plataforma que encontramos que cumple las tres cosas — en todas las cadenas que realmente usamos.",
+      "heroQuoteAttribution": "— Tadeas Kmenta, Flux Foundation",
+      "factSheet": {
+        "organizationLabel": "Organización",
+        "organizationValue": "Flux Foundation",
+        "industryLabel": "Sector",
+        "industryValue": "Infraestructura descentralizada",
+        "useCaseLabel": "Caso de uso",
+        "useCaseValue": "Tesorería de la fundación + multifirma del puente Fusion",
+        "chainsLabel": "Cadenas",
+        "chainsValue": "BTC, ETH, FLUX, L2 EVM",
+        "vaultModelLabel": "Modelo de bóveda",
+        "vaultModelValue": "Multifirma M-de-N, dos dispositivos por firmante",
+        "statusLabel": "Estado",
+        "statusValue": "En producción"
+      },
+      "before": {
+        "title": "Antes: multifirma fragmentado y scripts personalizados",
+        "intro": "La Flux Foundation llevaba años gestionando firmas multipartes. El problema no era la falta de multifirma — era que nada lo unificaba entre cadenas, y todas las alternativas comerciales exigían una concesión que el equipo no estaba dispuesto a aceptar.",
+        "items": {
+          "0": {
+            "title": "Configuraciones de multifirma fragmentadas",
+            "description": "Distintas carteras multifirma en distintas cadenas, cada una con sus propias particularidades, firmantes y procedimientos de recuperación."
+          },
+          "1": {
+            "title": "Scripts personalizados para unirlo todo",
+            "description": "Herramientas internas para construir transacciones, coordinar firmas y difundirlas — mantenidas a mano."
+          },
+          "2": {
+            "title": "Sin un registro de auditoría unificado",
+            "description": "Las aprobaciones vivían en hilos de chat y documentos compartidos. Reconstruir quién había firmado qué requería rebuscar."
+          },
+          "3": {
+            "title": "Sin término medio en el mercado",
+            "description": "Los custodios y proveedores de MPC implicaban confiar en una caja negra. Las herramientas multifirma listas para usar eran solo para Ethereum."
+          }
+        }
+      },
+      "decision": {
+        "title": "La decisión",
+        "intro": "El equipo evaluó las alternativas y las agrupó en tres categorías. Cada una tenía un punto inaceptable.",
+        "bucket1Eyebrow": "Categoría 1",
+        "bucket1Title": "Custodios MPC",
+        "bucket1Description": "Fireblocks, BitGo y similares. El proveedor guarda parte de cada clave.",
+        "bucket1Verdict": "No es verdadera autocustodia.",
+        "bucket2Eyebrow": "Categoría 2",
+        "bucket2Title": "Multifirma de una sola cadena",
+        "bucket2Description": "Safe y similares. Solo Ethereum, sin soporte nativo para UTXO.",
+        "bucket2Verdict": "También tenemos Bitcoin y Flux.",
+        "bucket3Eyebrow": "Categoría 3",
+        "bucket3Title": "Multifirma básico",
+        "bucket3Description": "Carteras sin motor de políticas, analítica ni un registro de auditoría adecuado.",
+        "bucket3Verdict": "Volveríamos a construir herramientas nosotros mismos.",
+        "conclusion": "SSP Enterprise fue la única plataforma que abordaba las tres a la vez: multi-cadena nativa (UTXO y EVM), autocustodia real sin parte de la clave en manos del proveedor, y motor de políticas, analítica y registro de auditoría integrados."
+      },
+      "whatChanged": {
+        "title": "Lo que cambió",
+        "intro": "Una plataforma, todas las cadenas con las que interactúa la fundación, un único modelo coherente de firma. Los scripts personalizados están retirados. El registro de auditoría en hilos de chat queda sustituido por registros atribuibles en la propia plataforma. La tesorería y el multifirma del puente conviven bajo la misma gobernanza.",
+        "items": {
+          "0": {
+            "title": "Bóvedas M-de-N en todas las cadenas que usamos",
+            "description": "Bitcoin, Ethereum, Flux y las L2 EVM — misma plataforma, mismo modelo mental, mismas garantías de seguridad."
+          },
+          "1": {
+            "title": "Dos dispositivos por firmante, sin excepciones",
+            "description": "Extensión de navegador y aplicación móvil obligatorias para cada firma. Un único dispositivo comprometido no puede firmar."
+          },
+          "2": {
+            "title": "Un registro de auditoría sólido",
+            "description": "Cada propuesta, aprobación y rechazo se registra con el firmante y la marca temporal. Sustituye la reconstrucción a partir de hilos de chat."
+          },
+          "3": {
+            "title": "Autocustodia de extremo a extremo",
+            "description": "Sin parte de la clave en manos del proveedor. Sin infraestructura MPC en la que confiar. Si SSP desapareciera mañana, nuestros fondos siguen siendo recuperables a partir de las semillas de los firmantes."
+          }
+        }
+      },
+      "fusionBridge": {
+        "title": "El puente Fusion",
+        "intro": "El puente Fusion es una de las superficies más sensibles a la seguridad que opera la fundación — coordina la transferencia de valor entre Flux y otras cadenas, y un único fallo de firma podría ser catastrófico. También es la carga de trabajo donde el modelo de SSP Enterprise demuestra su valor con mayor claridad.",
+        "items": {
+          "0": {
+            "title": "Multifirma en cadena",
+            "description": "Multifirma nativa en todas las cadenas que toca el puente — sin custodios mediante contratos inteligentes, sin relayers que puedan demorar o adelantarse."
+          },
+          "1": {
+            "title": "Firma con dos dispositivos por firmante",
+            "description": "Comprometer el portátil o el teléfono de un firmante no basta para empujar una transacción del puente. Los dos dispositivos, siempre."
+          },
+          "2": {
+            "title": "Controles de política por firmante",
+            "description": "Límites y listas blancas configurados a nivel de organización y de bóveda, aplicados antes de recolectar cualquier firma."
+          },
+          "3": {
+            "title": "Auditable de extremo a extremo",
+            "description": "Cada aprobación y rechazo se atribuye y se marca con su fecha y hora. Responsabilidad ante la comunidad sin renunciar a la autocustodia."
+          }
+        },
+        "quote": "El puente Fusion ahora corre sobre infraestructura que controlamos de extremo a extremo. Las mismas garantías de seguridad que tenemos para nuestra propia tesorería, aplicadas a uno de los flujos de mayor riesgo que operamos.",
+        "quoteAttribution": "— Tadeas Kmenta, Flux Foundation"
+      },
+      "cta": {
+        "title": "El mismo modelo. Disponible para tu equipo.",
+        "description": "La plataforma sobre la que la Flux Foundation opera el puente Fusion es la misma que está disponible para cualquier equipo que quiera multifirma de autocustodia sin concesiones. Plan gratuito para empezar. Planes a medida bajo petición.",
+        "exploreEnterprise": "Explora SSP Enterprise",
+        "launchEnterpriseApp": "Abrir Enterprise App"
+      }
+    }
+  },
   "Enterprise": {
     "metaTitle": "SSP Enterprise | Multifirma de autocustodia para empresas",
     "metaDescription": "Bóvedas multifirma M-de-N de autocustodia para tesorerías empresariales. Motor de políticas, límites de gasto, firma con dos dispositivos y acceso por roles. Sin custodios, sin MPC.",
