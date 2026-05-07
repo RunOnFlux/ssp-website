@@ -321,5 +321,159 @@
     "ctaSubtitle": "Follow our step-by-step guide to set up your secure crypto wallet",
     "ctaSetupGuide": "View Setup Guide",
     "ctaSupport": "Get Support"
+  },
+  "Features": {
+    "metaTitle": "Features - SSP Wallet | Advanced Crypto Security & Multi-Chain Support",
+    "metaDescription": "True 2-of-2 multisig, WalletConnect v2, 15+ blockchains, fiat on/off-ramp, crypto swap, CSV export, and Account Abstraction. See all SSP Wallet features.",
+    "breadcrumbLabel": "Features",
+    "hero": {
+      "badge": "Advanced Features",
+      "titleHighlight": "Powerful Features",
+      "titleSuffix": "for Modern Crypto",
+      "description": "Discover the cutting-edge technology and security features that make SSP Wallet the most advanced crypto wallet available.",
+      "securityFirst": "Security First",
+      "lightningFast": "Lightning Fast",
+      "selfCustody": "Self-Custody"
+    },
+    "security": {
+      "titleHighlight": "Security",
+      "titleSuffix": "Features",
+      "description": "Your crypto security is our top priority. Every feature is designed with security-first principles.",
+      "items": {
+        "0": {
+          "title": "True 2-of-2 Multisig Protection",
+          "description": "Revolutionary BIP48 multisignature requiring both browser and mobile device signatures. No single point of failure - impossible to compromise with just one device."
+        },
+        "1": {
+          "title": "Halborn Security Audit",
+          "description": "Professionally audited by Halborn, the leading blockchain security firm trusted by major protocols. Comprehensive penetration testing and code review completed."
+        },
+        "2": {
+          "title": "Zero Data Storage Policy",
+          "description": "Strict no-server-storage policy eliminates centralized attack vectors. Your private keys, transactions, and personal data never leave your devices."
+        },
+        "3": {
+          "title": "Fully Open Source & Transparent",
+          "description": "Complete codebase transparency with deterministic builds allows security researchers and developers to independently verify build integrity. No hidden backdoors or proprietary black boxes."
+        }
+      }
+    },
+    "technical": {
+      "titleHighlight": "Technical",
+      "titleSuffix": "Innovation",
+      "description": "Built with cutting-edge technology for the future of decentralized finance.",
+      "items": {
+        "0": {
+          "title": "Multi-Chain Support (15+)",
+          "description": "Native support for Bitcoin, Ethereum, Polygon, BSC, Avalanche, Base, Arbitrum, Optimism, and more with unified portfolio management."
+        },
+        "1": {
+          "title": "Built-in Crypto Trading",
+          "description": "Seamless crypto swapping via integrated DEX aggregators, plus fiat on-ramp/off-ramp for buying and selling crypto with payment cards."
+        },
+        "2": {
+          "title": "Account Abstraction (ERC-4337)",
+          "description": "First wallet with native Schnorr multisignature Account Abstraction on Ethereum, enabling gasless transactions and smart contract wallets."
+        },
+        "3": {
+          "title": "True 2-of-2 Multisig Security",
+          "description": "Revolutionary BIP48 dual-device security with browser extension and mobile app. Both devices required for every transaction - ultimate protection."
+        },
+        "4": {
+          "title": "Security Audited & Open Source",
+          "description": "Fully transparent, verifiable code professionally audited by Halborn security experts. Open source with enterprise-grade security standards."
+        },
+        "5": {
+          "title": "Advanced dApp Integration",
+          "description": "WalletConnect v2 support, EIP-712 message signing, and comprehensive browser integration for seamless dApp connectivity."
+        }
+      }
+    },
+    "comparison": {
+      "titlePrefix": "Why Choose",
+      "titleHighlight": "SSP Wallet",
+      "titleSuffix": "?",
+      "description": "Compare SSP Wallet to other crypto storage methods and see the difference.",
+      "columns": {
+        "feature": "Feature",
+        "ssp": "SSP Wallet",
+        "selfCustody": "Self-Custody Wallets",
+        "custodial": "Custodial Wallets",
+        "hardware": "Hardware Wallets",
+        "exchange": "Crypto Exchanges"
+      },
+      "values": {
+        "limited": "Limited",
+        "some": "Some",
+        "varies": "Varies",
+        "rare": "Rare",
+        "na": "N/A"
+      },
+      "rows": {
+        "0": {
+          "feature": "True 2-of-2 Multisig",
+          "description": "BIP48 true multisignature with dual-device requirement"
+        },
+        "1": {
+          "feature": "Built-in Crypto Swap",
+          "description": "Native DEX integration for seamless token swapping"
+        },
+        "2": {
+          "feature": "Buy/Sell Crypto",
+          "description": "Fiat on-ramp/off-ramp with payment card support"
+        },
+        "3": {
+          "feature": "Self-Custody Control",
+          "description": "You own and control your private keys"
+        },
+        "4": {
+          "feature": "Mobile 2FA Security",
+          "description": "Mobile app acts as secure second authentication factor"
+        },
+        "5": {
+          "feature": "DApp Integration",
+          "description": "WalletConnect v2 and direct dApp browser support"
+        },
+        "6": {
+          "feature": "Multi-Chain Support (15+)",
+          "description": "Bitcoin, Ethereum, Polygon, BSC, Avalanche, and more"
+        },
+        "7": {
+          "feature": "Zero Counterparty Risk",
+          "description": "No risk of platform bankruptcy or seizure"
+        },
+        "8": {
+          "feature": "Open Source",
+          "description": "Fully transparent and verifiable code"
+        },
+        "9": {
+          "feature": "Security Audited",
+          "description": "Professional security audit by leading firms"
+        },
+        "10": {
+          "feature": "Account Abstraction (ERC-4337)",
+          "description": "Gasless transactions and smart contract wallets"
+        },
+        "11": {
+          "feature": "No Single Seed Phrase",
+          "description": "Eliminates single seed phrase vulnerability - uses dual-device backup"
+        },
+        "12": {
+          "feature": "Ease of Use",
+          "description": "Simple, intuitive interface for both beginners and experts"
+        },
+        "13": {
+          "feature": "Transaction Speed",
+          "description": "Fast transaction signing and blockchain interaction"
+        },
+        "14": {
+          "feature": "Privacy Protection",
+          "description": "No personal data collection or transaction tracking"
+        }
+      },
+      "ctaDownload": "Download SSP Wallet",
+      "ctaGuide": "Read the Setup Guide",
+      "ctaEnterprise": "SSP for Business"
+    }
   }
 }

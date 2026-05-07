@@ -321,5 +321,159 @@
     "ctaSubtitle": "按照我们的分步指南配置你的安全加密钱包",
     "ctaSetupGuide": "查看设置指南",
     "ctaSupport": "获取支持"
+  },
+  "Features": {
+    "metaTitle": "功能 - SSP Wallet | 先进的加密安全与多链支持",
+    "metaDescription": "真正的 2-of-2 多重签名、WalletConnect v2、15+ 区块链、法币出入金、加密交换、CSV 导出与账户抽象。了解 SSP Wallet 全部功能。",
+    "breadcrumbLabel": "功能",
+    "hero": {
+      "badge": "高级功能",
+      "titleHighlight": "强大功能",
+      "titleSuffix": "为现代加密而生",
+      "description": "了解使 SSP Wallet 成为业界最先进加密钱包的尖端技术与安全功能。",
+      "securityFirst": "安全优先",
+      "lightningFast": "极速响应",
+      "selfCustody": "自托管"
+    },
+    "security": {
+      "titleHighlight": "安全",
+      "titleSuffix": "功能",
+      "description": "你的加密资产安全是我们的首要任务。每项功能都遵循安全优先原则进行设计。",
+      "items": {
+        "0": {
+          "title": "真正的 2-of-2 多重签名保护",
+          "description": "革命性的 BIP48 多重签名要求浏览器与移动设备同时签名。无单点故障——仅靠一台设备无法被攻破。"
+        },
+        "1": {
+          "title": "Halborn 安全审计",
+          "description": "由主流协议信赖的领先区块链安全公司 Halborn 进行专业审计。已完成全面渗透测试与代码审查。"
+        },
+        "2": {
+          "title": "零数据存储策略",
+          "description": "严格的不在服务器存储任何数据的策略，消除中心化攻击面。你的私钥、交易和个人数据从不离开你的设备。"
+        },
+        "3": {
+          "title": "完全开源且透明",
+          "description": "代码库完全透明且支持确定性构建，便于安全研究人员与开发者独立验证构建完整性。没有隐藏后门或专有黑盒。"
+        }
+      }
+    },
+    "technical": {
+      "titleHighlight": "技术",
+      "titleSuffix": "创新",
+      "description": "采用尖端技术构建，面向去中心化金融的未来。",
+      "items": {
+        "0": {
+          "title": "多链支持（15+）",
+          "description": "原生支持 Bitcoin、Ethereum、Polygon、BSC、Avalanche、Base、Arbitrum、Optimism 等，并提供统一的资产管理。"
+        },
+        "1": {
+          "title": "内置加密交易",
+          "description": "通过集成 DEX 聚合器实现无缝加密交换，并支持法币出入金，用支付卡买卖加密资产。"
+        },
+        "2": {
+          "title": "账户抽象（ERC-4337）",
+          "description": "首个在以太坊上原生采用 Schnorr 多重签名账户抽象的钱包，支持无 Gas 交易与智能合约钱包。"
+        },
+        "3": {
+          "title": "真正的 2-of-2 多重签名安全",
+          "description": "革命性的 BIP48 双设备安全：浏览器扩展与移动应用。每笔交易都需要两台设备共同确认——终极保护。"
+        },
+        "4": {
+          "title": "经过安全审计且开源",
+          "description": "代码完全透明、可验证，并由 Halborn 安全专家进行专业审计。开源并具备企业级安全标准。"
+        },
+        "5": {
+          "title": "高级 dApp 集成",
+          "description": "支持 WalletConnect v2、EIP-712 消息签名与全面的浏览器集成，实现与 dApp 的无缝连接。"
+        }
+      }
+    },
+    "comparison": {
+      "titlePrefix": "为什么选择",
+      "titleHighlight": "SSP Wallet",
+      "titleSuffix": "？",
+      "description": "对比 SSP Wallet 与其他加密资产存储方式，看看其中的差异。",
+      "columns": {
+        "feature": "功能",
+        "ssp": "SSP Wallet",
+        "selfCustody": "自托管钱包",
+        "custodial": "托管钱包",
+        "hardware": "硬件钱包",
+        "exchange": "加密交易所"
+      },
+      "values": {
+        "limited": "有限",
+        "some": "部分",
+        "varies": "不同",
+        "rare": "少见",
+        "na": "不适用"
+      },
+      "rows": {
+        "0": {
+          "feature": "真正的 2-of-2 多重签名",
+          "description": "BIP48 真多重签名，要求双设备共同签名"
+        },
+        "1": {
+          "feature": "内置加密交换",
+          "description": "原生 DEX 集成，实现无缝代币交换"
+        },
+        "2": {
+          "feature": "购买/出售加密资产",
+          "description": "支持支付卡的法币出入金"
+        },
+        "3": {
+          "feature": "自托管控制权",
+          "description": "你拥有并掌控自己的私钥"
+        },
+        "4": {
+          "feature": "移动 2FA 安全",
+          "description": "移动应用作为安全的第二认证因子"
+        },
+        "5": {
+          "feature": "dApp 集成",
+          "description": "支持 WalletConnect v2 和直接 dApp 浏览器"
+        },
+        "6": {
+          "feature": "多链支持（15+）",
+          "description": "Bitcoin、Ethereum、Polygon、BSC、Avalanche 等"
+        },
+        "7": {
+          "feature": "零交易对手风险",
+          "description": "没有平台破产或资产被冻结的风险"
+        },
+        "8": {
+          "feature": "开源",
+          "description": "代码完全透明且可验证"
+        },
+        "9": {
+          "feature": "经过安全审计",
+          "description": "由领先公司进行的专业安全审计"
+        },
+        "10": {
+          "feature": "账户抽象（ERC-4337）",
+          "description": "无 Gas 交易与智能合约钱包"
+        },
+        "11": {
+          "feature": "无单一助记词",
+          "description": "消除单一助记词的安全隐患——采用双设备备份"
+        },
+        "12": {
+          "feature": "易用性",
+          "description": "面向新手与专家的简洁直观界面"
+        },
+        "13": {
+          "feature": "交易速度",
+          "description": "快速的交易签名与区块链交互"
+        },
+        "14": {
+          "feature": "隐私保护",
+          "description": "不收集个人数据，不追踪交易"
+        }
+      },
+      "ctaDownload": "下载 SSP Wallet",
+      "ctaGuide": "查看设置指南",
+      "ctaEnterprise": "面向企业的 SSP"
+    }
   }
 }

@@ -321,5 +321,159 @@
     "ctaSubtitle": "Sigue nuestra guía paso a paso para configurar tu cartera cripto segura",
     "ctaSetupGuide": "Ver guía de configuración",
     "ctaSupport": "Obtener soporte"
+  },
+  "Features": {
+    "metaTitle": "Características - SSP Wallet | Seguridad cripto avanzada y soporte multicadena",
+    "metaDescription": "Multifirma 2 de 2 real, WalletConnect v2, más de 15 blockchains, on/off-ramp fiat, intercambio cripto, exportación CSV y Account Abstraction. Conoce todas las características de SSP Wallet.",
+    "breadcrumbLabel": "Características",
+    "hero": {
+      "badge": "Características avanzadas",
+      "titleHighlight": "Características potentes",
+      "titleSuffix": "para el cripto moderno",
+      "description": "Descubre la tecnología y las funciones de seguridad de vanguardia que hacen de SSP Wallet la cartera cripto más avanzada disponible.",
+      "securityFirst": "Seguridad ante todo",
+      "lightningFast": "Velocidad extrema",
+      "selfCustody": "Autocustodia"
+    },
+    "security": {
+      "titleHighlight": "Seguridad",
+      "titleSuffix": "y características",
+      "description": "La seguridad de tus criptos es nuestra máxima prioridad. Cada función está diseñada con principios centrados en la seguridad.",
+      "items": {
+        "0": {
+          "title": "Protección multifirma 2 de 2 real",
+          "description": "Multifirma BIP48 revolucionaria que requiere las firmas tanto del navegador como del dispositivo móvil. Sin punto único de fallo: imposible comprometer con un solo dispositivo."
+        },
+        "1": {
+          "title": "Auditoría de seguridad de Halborn",
+          "description": "Auditoría profesional realizada por Halborn, la firma líder en seguridad blockchain en la que confían los principales protocolos. Tests de penetración y revisión de código exhaustivos completados."
+        },
+        "2": {
+          "title": "Política de cero almacenamiento de datos",
+          "description": "Estricta política de no almacenamiento en servidores que elimina vectores de ataque centralizados. Tus claves privadas, transacciones y datos personales nunca salen de tus dispositivos."
+        },
+        "3": {
+          "title": "Totalmente open source y transparente",
+          "description": "Transparencia total del código fuente con builds deterministas que permite a investigadores y desarrolladores verificar la integridad de las builds de forma independiente. Sin puertas traseras ocultas ni cajas negras propietarias."
+        }
+      }
+    },
+    "technical": {
+      "titleHighlight": "Innovación",
+      "titleSuffix": "técnica",
+      "description": "Construida con tecnología de vanguardia para el futuro de las finanzas descentralizadas.",
+      "items": {
+        "0": {
+          "title": "Soporte multicadena (más de 15)",
+          "description": "Soporte nativo para Bitcoin, Ethereum, Polygon, BSC, Avalanche, Base, Arbitrum, Optimism y más, con gestión unificada de cartera."
+        },
+        "1": {
+          "title": "Trading cripto integrado",
+          "description": "Intercambios cripto fluidos mediante agregadores DEX integrados, además de on-ramp/off-ramp fiat para comprar y vender cripto con tarjeta."
+        },
+        "2": {
+          "title": "Account Abstraction (ERC-4337)",
+          "description": "Primera cartera con Account Abstraction nativa con multifirma Schnorr en Ethereum, que permite transacciones sin gas y carteras de contrato inteligente."
+        },
+        "3": {
+          "title": "Seguridad multifirma 2 de 2 real",
+          "description": "Seguridad BIP48 revolucionaria con dos dispositivos: extensión de navegador y app móvil. Ambos dispositivos son necesarios para cada transacción: protección máxima."
+        },
+        "4": {
+          "title": "Auditoría de seguridad y código abierto",
+          "description": "Código totalmente transparente y verificable, auditado profesionalmente por los expertos en seguridad de Halborn. Open source con estándares de seguridad de nivel empresarial."
+        },
+        "5": {
+          "title": "Integración avanzada con dApps",
+          "description": "Soporte de WalletConnect v2, firma de mensajes EIP-712 e integración completa con el navegador para una conectividad fluida con dApps."
+        }
+      }
+    },
+    "comparison": {
+      "titlePrefix": "¿Por qué elegir",
+      "titleHighlight": "SSP Wallet",
+      "titleSuffix": "?",
+      "description": "Compara SSP Wallet con otros métodos de almacenamiento cripto y descubre la diferencia.",
+      "columns": {
+        "feature": "Característica",
+        "ssp": "SSP Wallet",
+        "selfCustody": "Carteras de autocustodia",
+        "custodial": "Carteras custodiadas",
+        "hardware": "Carteras hardware",
+        "exchange": "Exchanges cripto"
+      },
+      "values": {
+        "limited": "Limitado",
+        "some": "Algunas",
+        "varies": "Varía",
+        "rare": "Raro",
+        "na": "N/D"
+      },
+      "rows": {
+        "0": {
+          "feature": "Multifirma 2 de 2 real",
+          "description": "Multifirma real BIP48 con requisito de dos dispositivos"
+        },
+        "1": {
+          "feature": "Intercambio cripto integrado",
+          "description": "Integración nativa con DEX para intercambiar tokens sin fricciones"
+        },
+        "2": {
+          "feature": "Compra/venta de cripto",
+          "description": "On-ramp/off-ramp fiat con soporte de tarjetas de pago"
+        },
+        "3": {
+          "feature": "Control de autocustodia",
+          "description": "Eres dueño y controlas tus claves privadas"
+        },
+        "4": {
+          "feature": "Seguridad 2FA móvil",
+          "description": "La app móvil actúa como segundo factor de autenticación seguro"
+        },
+        "5": {
+          "feature": "Integración con dApps",
+          "description": "Soporte de WalletConnect v2 y navegador dApp directo"
+        },
+        "6": {
+          "feature": "Soporte multicadena (más de 15)",
+          "description": "Bitcoin, Ethereum, Polygon, BSC, Avalanche y más"
+        },
+        "7": {
+          "feature": "Cero riesgo de contraparte",
+          "description": "Sin riesgo de quiebra de la plataforma o incautación"
+        },
+        "8": {
+          "feature": "Código abierto",
+          "description": "Código totalmente transparente y verificable"
+        },
+        "9": {
+          "feature": "Seguridad auditada",
+          "description": "Auditoría de seguridad profesional por firmas líderes"
+        },
+        "10": {
+          "feature": "Account Abstraction (ERC-4337)",
+          "description": "Transacciones sin gas y carteras de contrato inteligente"
+        },
+        "11": {
+          "feature": "Sin frase semilla única",
+          "description": "Elimina la vulnerabilidad de una única frase semilla: usa respaldo de dos dispositivos"
+        },
+        "12": {
+          "feature": "Facilidad de uso",
+          "description": "Interfaz simple e intuitiva tanto para principiantes como para expertos"
+        },
+        "13": {
+          "feature": "Velocidad de transacción",
+          "description": "Firma rápida de transacciones e interacción con la blockchain"
+        },
+        "14": {
+          "feature": "Protección de privacidad",
+          "description": "Sin recopilación de datos personales ni seguimiento de transacciones"
+        }
+      },
+      "ctaDownload": "Descargar SSP Wallet",
+      "ctaGuide": "Leer la guía de configuración",
+      "ctaEnterprise": "SSP para empresas"
+    }
   }
 }
