@@ -60,20 +60,24 @@ export default async function AcademyArticlePage({ params }: PageProps) {
   const post = await getAcademyPostBySlug(slug)
   if (!post) notFound()
 
-  const [author, relatedPosts, t] = await Promise.all([
+  const [author, relatedPosts, tCategories, tAcademy, tCommon] = await Promise.all([
     post.authorId ? getAuthorBySlug(post.authorId) : Promise.resolve(null),
     getRelatedPosts(post),
     getTranslations({ locale, namespace: 'Academy.categories' }),
+    getTranslations({ locale, namespace: 'Academy' }),
+    getTranslations({ locale, namespace: 'Common' }),
   ])
 
   const termMap = getTermMap()
   const linkedContent = autoLinkContent(post.content, post.slug, termMap)
 
-  const categoryTitle = t(`${category}.title`)
+  const categoryTitle = tCategories(`${category}.title`)
+  const homeLabel = tCommon('breadcrumbHome')
+  const academyTitle = tAcademy('title')
   const articleJsonLd = buildAcademyArticleJsonLd(post, category, author, categoryTitle)
   const breadcrumbJsonLd = buildAcademyBreadcrumbJsonLd([
-    { name: 'Home', url: '/' },
-    { name: 'Academy', url: '/academy' },
+    { name: homeLabel, url: '/' },
+    { name: academyTitle, url: '/academy' },
     { name: categoryTitle, url: `/academy/${category}` },
     { name: post.title, url: `/academy/${category}/${post.slug}` },
   ])
@@ -82,8 +86,8 @@ export default async function AcademyArticlePage({ params }: PageProps) {
     <div className='mb-6'>
       <Breadcrumbs
         items={[
-          { label: 'Home', href: '/' },
-          { label: 'Academy', href: '/academy' },
+          { label: homeLabel, href: '/' },
+          { label: academyTitle, href: '/academy' },
           { label: categoryTitle, href: `/academy/${category}` },
           { label: post.title },
         ]}
@@ -108,7 +112,7 @@ export default async function AcademyArticlePage({ params }: PageProps) {
         post={post}
         relatedPosts={relatedPosts}
         backHref={`/academy/${category}`}
-        backLabel={`Back to ${categoryTitle}`}
+        backLabel={tAcademy('backToCategory', { category: categoryTitle })}
         breadcrumb={breadcrumb}
         content={linkedContent}
       />

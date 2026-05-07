@@ -99,6 +99,7 @@
     "latestArticles": "最新文章",
     "comingSoon": "新文章即将上线 — 请稍后再来。",
     "categoryEmpty": "新文章即将上线。在此期间，请浏览相关主题：",
+    "backToCategory": "返回{category}",
     "articleCount": "{count, plural, =0 {暂无文章} =1 {1 篇文章} other {# 篇文章}}",
     "partsCount": "{count, plural, =0 {暂无章节} =1 {1 章} other {# 章}}",
     "difficulty": {

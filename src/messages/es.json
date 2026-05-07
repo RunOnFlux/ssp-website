@@ -99,6 +99,7 @@
     "latestArticles": "Últimos artículos",
     "comingSoon": "Pronto habrá nuevos artículos — vuelve dentro de poco.",
     "categoryEmpty": "Pronto habrá nuevos artículos. Mientras tanto, explora temas relacionados:",
+    "backToCategory": "Volver a {category}",
     "articleCount": "{count, plural, =0 {Ningún artículo} =1 {1 artículo} other {# artículos}}",
     "partsCount": "{count, plural, =0 {Ninguna parte} =1 {1 parte} other {# partes}}",
     "difficulty": {
