@@ -120,4 +120,4 @@ next-env.d.ts
 .turbo
 
 # Contentlayer
-.contentlayer/ 
+.contentlayer/ .worktrees/
