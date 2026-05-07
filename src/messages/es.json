@@ -104,7 +104,37 @@
     "atAGlance": "__TODO_TRANSLATE__ At a glance",
     "seriesPart": "__TODO_TRANSLATE__ Part {order} of {total}",
     "previousPart": "__TODO_TRANSLATE__ Previous part",
-    "nextPart": "__TODO_TRANSLATE__ Next part"
+    "nextPart": "__TODO_TRANSLATE__ Next part",
+    "categories": {
+      "multisig": {
+        "title": "Multifirma explicada",
+        "description": "Cómo funciona realmente la firma múltiple 2-de-2 en SSP — y por qué importa."
+      },
+      "getting-started": {
+        "title": "Conceptos básicos de cripto",
+        "description": "Conceptos fundamentales que todo usuario de cripto debe conocer."
+      },
+      "security": {
+        "title": "Seguridad y autocustodia",
+        "description": "Protege tus criptos: semillas, phishing, hardware, modelos de amenaza."
+      },
+      "how-to": {
+        "title": "Guías paso a paso",
+        "description": "Tutoriales detallados para las tareas más comunes de SSP."
+      },
+      "coin-guides": {
+        "title": "Guías de monedas y cadenas",
+        "description": "Análisis a fondo de las monedas y cadenas que SSP soporta."
+      },
+      "defi": {
+        "title": "DeFi y Account Abstraction",
+        "description": "Staking, préstamos, swaps y ERC-4337 explicados."
+      },
+      "news-explained": {
+        "title": "Noticias y análisis del sector",
+        "description": "Contexto y análisis sobre noticias y regulación cripto."
+      }
+    }
   },
   "Author": {
     "title": "__TODO_TRANSLATE__ {name}",

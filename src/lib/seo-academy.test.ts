@@ -21,12 +21,22 @@ const samplePost: NewsroomPost = {
 
 describe('buildAcademyArticleJsonLd', () => {
   it('emits BlogPosting with article-section and learningResourceType', () => {
-    const j = buildAcademyArticleJsonLd(samplePost, 'multisig', null) as Record<string, unknown>
+    const j = buildAcademyArticleJsonLd(
+      samplePost,
+      'multisig',
+      null,
+      'Multisig Explained'
+    ) as Record<string, unknown>
     expect(j['@type']).toBe('BlogPosting')
     expect(j.articleSection).toBe('Multisig Explained')
     expect(j.learningResourceType).toBe('Article')
     expect(j.educationalLevel).toBe('beginner')
     expect(j.keywords).toBe('multisig,security')
+  })
+
+  it('falls back to category slug when title is not provided', () => {
+    const j = buildAcademyArticleJsonLd(samplePost, 'multisig', null) as Record<string, unknown>
+    expect(j.articleSection).toBe('multisig')
   })
 })
 

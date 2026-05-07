@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
-import { setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { PageHeader } from '@/components/header/page-header'
 import { NewsroomCard } from '@/components/newsroom/newsroom-card'
+import { isAcademyCategory } from '@/constants/academy-categories'
 import { Link } from '@/i18n/navigation'
 import { getAcademyPosts, getAllSeries, getCategories } from '@/lib/cms'
 import { createMetadata } from '@/lib/seo'
@@ -26,10 +27,11 @@ export default async function AcademyLandingPage({
 }) {
   const { locale } = await params
   setRequestLocale(locale)
-  const [categories, allSeries, latest] = await Promise.all([
+  const [categories, allSeries, latest, t] = await Promise.all([
     getCategories().catch(() => []),
     getAllSeries().catch(() => []),
     getAcademyPosts({ limit: 12 }).catch(() => []),
+    getTranslations({ locale, namespace: 'Academy.categories' }),
   ])
   const seriesList = allSeries.filter(s => s.postCount > 0)
 
@@ -48,19 +50,25 @@ export default async function AcademyLandingPage({
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4'>
           {categories
             .filter(c => c.slug !== 'news-explained')
-            .map(c => (
-              <Link
-                key={c.slug}
-                href={`/academy/${c.slug}`}
-                className='card hover:border-primary-400'
-              >
-                <h3 className='text-lg font-semibold'>{c.title}</h3>
-                <p className='mt-1 text-sm text-gray-500 dark:text-gray-400'>{c.description}</p>
-                <p className='mt-3 text-xs text-gray-500 dark:text-gray-400'>
-                  {c.postCount} article{c.postCount === 1 ? '' : 's'}
-                </p>
-              </Link>
-            ))}
+            .map(c => {
+              const title = isAcademyCategory(c.slug) ? t(`${c.slug}.title`) : c.title
+              const description = isAcademyCategory(c.slug)
+                ? t(`${c.slug}.description`)
+                : c.description
+              return (
+                <Link
+                  key={c.slug}
+                  href={`/academy/${c.slug}`}
+                  className='card hover:border-primary-400'
+                >
+                  <h3 className='text-lg font-semibold'>{title}</h3>
+                  <p className='mt-1 text-sm text-gray-500 dark:text-gray-400'>{description}</p>
+                  <p className='mt-3 text-xs text-gray-500 dark:text-gray-400'>
+                    {c.postCount} article{c.postCount === 1 ? '' : 's'}
+                  </p>
+                </Link>
+              )
+            })}
         </div>
       </section>
 

@@ -104,7 +104,37 @@
     "atAGlance": "__TODO_TRANSLATE__ At a glance",
     "seriesPart": "__TODO_TRANSLATE__ Part {order} of {total}",
     "previousPart": "__TODO_TRANSLATE__ Previous part",
-    "nextPart": "__TODO_TRANSLATE__ Next part"
+    "nextPart": "__TODO_TRANSLATE__ Next part",
+    "categories": {
+      "multisig": {
+        "title": "多重签名详解",
+        "description": "SSP 中的 2/2 多重签名实际如何运作——以及为何重要。"
+      },
+      "getting-started": {
+        "title": "加密入门",
+        "description": "每位加密用户都应了解的基础概念。"
+      },
+      "security": {
+        "title": "安全与自托管",
+        "description": "保护你的加密资产：助记词、钓鱼、硬件钱包、威胁模型。"
+      },
+      "how-to": {
+        "title": "操作指南",
+        "description": "SSP 常见任务的分步演练。"
+      },
+      "coin-guides": {
+        "title": "币种与链指南",
+        "description": "深入了解 SSP 支持的各个币种和区块链。"
+      },
+      "defi": {
+        "title": "DeFi 与账户抽象",
+        "description": "解析质押、借贷、兑换以及 ERC-4337。"
+      },
+      "news-explained": {
+        "title": "新闻与行业分析",
+        "description": "加密新闻与监管动态的背景与解读。"
+      }
+    }
   },
   "Author": {
     "title": "__TODO_TRANSLATE__ {name}",

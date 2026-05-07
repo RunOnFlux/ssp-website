@@ -1,4 +1,4 @@
-import { ACADEMY_CATEGORIES, type AcademyCategory } from '@/constants/academy-categories'
+import type { AcademyCategory } from '@/constants/academy-categories'
 import type { NewsroomPost, Author } from '@/types/newsroom'
 import { siteName, siteUrl, createBreadcrumbJsonLd } from './seo'
 
@@ -9,9 +9,9 @@ function abs(url: string): string {
 export function buildAcademyArticleJsonLd(
   post: NewsroomPost,
   category: AcademyCategory | string,
-  author: Author | null
+  author: Author | null,
+  categoryTitle?: string
 ): Record<string, unknown> {
-  const cat = ACADEMY_CATEGORIES[category as AcademyCategory]
   return {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -33,7 +33,7 @@ export function buildAcademyArticleJsonLd(
       name: siteName,
       logo: { '@type': 'ImageObject', url: `${siteUrl}/ssp-logo-black-512x512.png` },
     },
-    articleSection: cat?.title ?? category,
+    articleSection: categoryTitle ?? category,
     learningResourceType: 'Article',
     ...(post.difficulty ? { educationalLevel: post.difficulty } : {}),
     keywords: post.tags.join(','),

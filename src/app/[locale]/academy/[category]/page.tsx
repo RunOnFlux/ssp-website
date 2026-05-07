@@ -1,15 +1,11 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Script from 'next/script'
-import { setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { PageHeader } from '@/components/header/page-header'
 import { NewsroomCard } from '@/components/newsroom/newsroom-card'
 import { Breadcrumbs } from '@/components/shared/breadcrumbs'
-import {
-  ACADEMY_CATEGORIES,
-  ACADEMY_CATEGORY_SLUGS,
-  isAcademyCategory,
-} from '@/constants/academy-categories'
+import { ACADEMY_CATEGORY_SLUGS, isAcademyCategory } from '@/constants/academy-categories'
 import { Link } from '@/i18n/navigation'
 import { getAcademyPosts } from '@/lib/cms'
 import { createMetadata, siteDescription } from '@/lib/seo'
@@ -23,9 +19,9 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ category: string }>
+  params: Promise<{ locale: string; category: string }>
 }): Promise<Metadata> {
-  const { category } = await params
+  const { locale, category } = await params
   if (!isAcademyCategory(category)) {
     return createMetadata({
       title: 'Academy',
@@ -33,12 +29,12 @@ export async function generateMetadata({
       path: '/academy',
     })
   }
-  const meta = ACADEMY_CATEGORIES[category]
+  const t = await getTranslations({ locale, namespace: 'Academy.categories' })
   const hero = CATEGORY_HEROES[category]
   const posts = await getAcademyPosts({ category, limit: 100 }).catch(() => [])
   return createMetadata({
     title: `${hero.h1} | SSP Academy`,
-    description: meta.description,
+    description: t(`${category}.description`),
     path: `/academy/${category}`,
     noindex: posts.length === 0,
   })
@@ -53,8 +49,10 @@ export default async function CategoryHubPage({
   setRequestLocale(locale)
   if (!isAcademyCategory(category)) notFound()
 
+  const t = await getTranslations({ locale, namespace: 'Academy.categories' })
   const hero = CATEGORY_HEROES[category]
   const posts = await getAcademyPosts({ category, limit: 100 }).catch(() => [])
+  const categoryTitle = t(`${category}.title`)
 
   return (
     <>
@@ -63,7 +61,7 @@ export default async function CategoryHubPage({
           buildAcademyBreadcrumbJsonLd([
             { name: 'Home', url: '/' },
             { name: 'Academy', url: '/academy' },
-            { name: ACADEMY_CATEGORIES[category].title },
+            { name: categoryTitle },
           ])
         )}
       </Script>
@@ -72,7 +70,7 @@ export default async function CategoryHubPage({
           items={[
             { label: 'Home', href: '/' },
             { label: 'Academy', href: '/academy' },
-            { label: ACADEMY_CATEGORIES[category].title },
+            { label: categoryTitle },
           ]}
         />
       </div>
@@ -95,7 +93,7 @@ export default async function CategoryHubPage({
                     href={`/academy/${s}`}
                     className='text-gray-600 underline hover:text-gray-900 dark:text-gray-400 dark:hover:text-white'
                   >
-                    {ACADEMY_CATEGORIES[s].title}
+                    {t(`${s}.title`)}
                   </Link>
                 ))}
             </div>

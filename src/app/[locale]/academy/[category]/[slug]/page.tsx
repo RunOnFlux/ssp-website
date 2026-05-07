@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Script from 'next/script'
-import { setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { AuthorByline } from '@/components/shared/author-byline'
 import { Breadcrumbs } from '@/components/shared/breadcrumbs'
 import { PostArticle } from '@/components/shared/post-article'
-import { ACADEMY_CATEGORIES, isAcademyCategory } from '@/constants/academy-categories'
+import { isAcademyCategory } from '@/constants/academy-categories'
 import { getTermMap } from '@/lib/academy-terms'
 import { getAcademyPostBySlug, getAcademySlugs, getAuthorBySlug, getRelatedPosts } from '@/lib/cms'
 import { autoLinkContent } from '@/lib/glossary-linker'
@@ -60,19 +60,21 @@ export default async function AcademyArticlePage({ params }: PageProps) {
   const post = await getAcademyPostBySlug(slug)
   if (!post) notFound()
 
-  const [author, relatedPosts] = await Promise.all([
+  const [author, relatedPosts, t] = await Promise.all([
     post.authorId ? getAuthorBySlug(post.authorId) : Promise.resolve(null),
     getRelatedPosts(post),
+    getTranslations({ locale, namespace: 'Academy.categories' }),
   ])
 
   const termMap = getTermMap()
   const linkedContent = autoLinkContent(post.content, post.slug, termMap)
 
-  const articleJsonLd = buildAcademyArticleJsonLd(post, category, author)
+  const categoryTitle = t(`${category}.title`)
+  const articleJsonLd = buildAcademyArticleJsonLd(post, category, author, categoryTitle)
   const breadcrumbJsonLd = buildAcademyBreadcrumbJsonLd([
     { name: 'Home', url: '/' },
     { name: 'Academy', url: '/academy' },
-    { name: ACADEMY_CATEGORIES[category].title, url: `/academy/${category}` },
+    { name: categoryTitle, url: `/academy/${category}` },
     { name: post.title, url: `/academy/${category}/${post.slug}` },
   ])
 
@@ -82,7 +84,7 @@ export default async function AcademyArticlePage({ params }: PageProps) {
         items={[
           { label: 'Home', href: '/' },
           { label: 'Academy', href: '/academy' },
-          { label: ACADEMY_CATEGORIES[category].title, href: `/academy/${category}` },
+          { label: categoryTitle, href: `/academy/${category}` },
           { label: post.title },
         ]}
       />
@@ -106,7 +108,7 @@ export default async function AcademyArticlePage({ params }: PageProps) {
         post={post}
         relatedPosts={relatedPosts}
         backHref={`/academy/${category}`}
-        backLabel={`Back to ${ACADEMY_CATEGORIES[category].title}`}
+        backLabel={`Back to ${categoryTitle}`}
         breadcrumb={breadcrumb}
         content={linkedContent}
       />
