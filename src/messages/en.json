@@ -6,6 +6,8 @@
     "retry": "Retry",
     "readMore": "Read more",
     "breadcrumbHome": "Home",
+    "breadcrumbAriaLabel": "Breadcrumb",
+    "websiteAriaLabel": "Website",
     "notFoundTitle": "Page not found",
     "notFoundDescription": "The page you were looking for doesn't exist or has moved.",
     "goHome": "Go home",

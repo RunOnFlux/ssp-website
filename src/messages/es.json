@@ -6,6 +6,8 @@
     "retry": "Reintentar",
     "readMore": "Leer más",
     "breadcrumbHome": "Inicio",
+    "breadcrumbAriaLabel": "Ruta de navegación",
+    "websiteAriaLabel": "Sitio web",
     "notFoundTitle": "Página no encontrada",
     "notFoundDescription": "La página que buscabas no existe o ha sido movida.",
     "goHome": "Volver al inicio",
