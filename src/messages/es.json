@@ -5,7 +5,13 @@
     "error": "Algo salió mal.",
     "retry": "Reintentar",
     "readMore": "Leer más",
-    "breadcrumbHome": "Inicio"
+    "breadcrumbHome": "Inicio",
+    "notFoundTitle": "Página no encontrada",
+    "notFoundDescription": "La página que buscabas no existe o ha sido movida.",
+    "goHome": "Volver al inicio",
+    "errorTitle": "Algo salió mal",
+    "errorDescription": "Ha ocurrido un error inesperado. Intenta recargar la página o volver al inicio.",
+    "tryAgain": "Reintentar"
   },
   "Header": {
     "home": "Inicio",

@@ -5,7 +5,13 @@
     "error": "Something went wrong.",
     "retry": "Retry",
     "readMore": "Read more",
-    "breadcrumbHome": "Home"
+    "breadcrumbHome": "Home",
+    "notFoundTitle": "Page not found",
+    "notFoundDescription": "The page you were looking for doesn't exist or has moved.",
+    "goHome": "Go home",
+    "errorTitle": "Something went wrong",
+    "errorDescription": "An unexpected error occurred. Try refreshing the page or returning home.",
+    "tryAgain": "Try again"
   },
   "Header": {
     "home": "Home",
