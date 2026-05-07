@@ -160,6 +160,10 @@
   "Author": {
     "title": "{name}",
     "postsBy": "{name} 的文章",
-    "noPosts": "暂无文章。"
+    "noPosts": "暂无文章。",
+    "metaTitle": "{name} — SSP 作者",
+    "metaDescriptionFallback": "{name} 的文章",
+    "notFoundTitle": "未找到作者",
+    "breadcrumbLabel": "作者"
   }
 }

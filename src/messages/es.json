@@ -160,6 +160,10 @@
   "Author": {
     "title": "{name}",
     "postsBy": "Publicaciones de {name}",
-    "noPosts": "Aún no hay publicaciones."
+    "noPosts": "Aún no hay publicaciones.",
+    "metaTitle": "{name} — Autor de SSP",
+    "metaDescriptionFallback": "Artículos de {name}",
+    "notFoundTitle": "Autor no encontrado",
+    "breadcrumbLabel": "Autores"
   }
 }

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import Script from 'next/script'
-import { setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { NewsroomCard } from '@/components/newsroom/newsroom-card'
 import { Breadcrumbs } from '@/components/shared/breadcrumbs'
 import { getAuthorBySlug, getPostsByAuthor } from '@/lib/cms'
@@ -11,14 +11,17 @@ import { createBreadcrumbJsonLd, createMetadata } from '@/lib/seo'
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ locale: string; slug: string }>
 }): Promise<Metadata> {
-  const { slug } = await params
-  const author = await getAuthorBySlug(slug)
-  if (!author) return { title: 'Author not found' }
+  const { locale, slug } = await params
+  const [author, t] = await Promise.all([
+    getAuthorBySlug(slug),
+    getTranslations({ locale, namespace: 'Author' }),
+  ])
+  if (!author) return { title: t('notFoundTitle') }
   return createMetadata({
-    title: `${author.name} — SSP Author`,
-    description: author.bio ?? `Articles by ${author.name}`,
+    title: t('metaTitle', { name: author.name }),
+    description: author.bio ?? t('metaDescriptionFallback', { name: author.name }),
     path: `/author/${slug}`,
   })
 }
@@ -30,13 +33,17 @@ export default async function AuthorPage({
 }) {
   const { locale, slug } = await params
   setRequestLocale(locale)
-  const author = await getAuthorBySlug(slug)
+  const [author, t, tCommon] = await Promise.all([
+    getAuthorBySlug(slug),
+    getTranslations({ locale, namespace: 'Author' }),
+    getTranslations({ locale, namespace: 'Common' }),
+  ])
   if (!author) notFound()
   const posts = await getPostsByAuthor(slug)
 
   const breadcrumbJsonLd = createBreadcrumbJsonLd([
-    { name: 'Home', url: '/' },
-    { name: 'Authors' },
+    { name: tCommon('breadcrumbHome'), url: '/' },
+    { name: t('breadcrumbLabel') },
     { name: author.name },
   ])
 
@@ -46,7 +53,9 @@ export default async function AuthorPage({
         {JSON.stringify(breadcrumbJsonLd)}
       </Script>
       <div className='container-custom pt-24 md:pt-32'>
-        <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: author.name }]} />
+        <Breadcrumbs
+          items={[{ label: tCommon('breadcrumbHome'), href: '/' }, { label: author.name }]}
+        />
       </div>
       <section className='container-custom py-12'>
         <div className='flex items-start gap-6'>
@@ -71,9 +80,9 @@ export default async function AuthorPage({
         </div>
       </section>
       <section className='container-custom pb-16 md:pb-24'>
-        <h2 className='mb-6 text-2xl font-bold'>Posts by {author.name}</h2>
+        <h2 className='mb-6 text-2xl font-bold'>{t('postsBy', { name: author.name })}</h2>
         {posts.length === 0 ? (
-          <p className='text-gray-600 dark:text-gray-300'>No posts yet.</p>
+          <p className='text-gray-600 dark:text-gray-300'>{t('noPosts')}</p>
         ) : (
           <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
             {posts.map(p => (
