@@ -24,6 +24,17 @@ const ALLOW = new Set<string>([
   'Telegram',
   'Facebook',
   'LinkedIn',
+  // App-store and OS brand names -- proper nouns, never translated.
+  'Google Play',
+  'App Store',
+  'iOS',
+  'Android',
+  // Brand company name appearing as legal entity attribution in policy pages
+  // ("InFlux Technologies Limited"). The audit catches the "InFlux Technologies"
+  // multi-word slice; the trailing "Limited" is part of the legal name and never
+  // localized.
+  'InFlux Technologies',
+  'InFlux Technologies Limited',
 ])
 
 type Hit = {
