@@ -91,6 +91,8 @@
   "Academy": {
     "title": "SSP Academy",
     "description": "Guides, tutorials, and deep dives to help you master self-custody with SSP.",
+    "metaTitle": "SSP Academy — Learn Crypto Self-Custody",
+    "metaDescription": "Guides, tutorials, and deep dives on SSP, multisig, security, DeFi, and more.",
     "browseByTopic": "Browse by topic",
     "learningPaths": "Learning paths",
     "viewAllSeries": "View all",

@@ -9,16 +9,19 @@ import { getAcademyPosts, getAllSeries, getCategories } from '@/lib/cms'
 import { createMetadata } from '@/lib/seo'
 import { buildAcademyBreadcrumbJsonLd } from '@/lib/seo-academy'
 
-export const metadata: Metadata = createMetadata({
-  title: 'SSP Academy — Learn Crypto Self-Custody',
-  description: 'Guides, tutorials, and deep dives on SSP, multisig, security, DeFi, and more.',
-  path: '/academy',
-})
-
-const breadcrumbJsonLd = buildAcademyBreadcrumbJsonLd([
-  { name: 'Home', url: '/' },
-  { name: 'Academy' },
-])
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'Academy' })
+  return createMetadata({
+    title: t('metaTitle'),
+    description: t('metaDescription'),
+    path: '/academy',
+  })
+}
 
 export default async function AcademyLandingPage({
   params,
@@ -27,33 +30,36 @@ export default async function AcademyLandingPage({
 }) {
   const { locale } = await params
   setRequestLocale(locale)
-  const [categories, allSeries, latest, t] = await Promise.all([
+  const [categories, allSeries, latest, t, tCategories, tCommon] = await Promise.all([
     getCategories().catch(() => []),
     getAllSeries().catch(() => []),
     getAcademyPosts({ limit: 12 }).catch(() => []),
+    getTranslations({ locale, namespace: 'Academy' }),
     getTranslations({ locale, namespace: 'Academy.categories' }),
+    getTranslations({ locale, namespace: 'Common' }),
   ])
   const seriesList = allSeries.filter(s => s.postCount > 0)
+  const breadcrumbJsonLd = buildAcademyBreadcrumbJsonLd([
+    { name: tCommon('breadcrumbHome'), url: '/' },
+    { name: t('title') },
+  ])
 
   return (
     <>
       <Script id='academy-breadcrumb-jsonld' type='application/ld+json'>
         {JSON.stringify(breadcrumbJsonLd)}
       </Script>
-      <PageHeader
-        title='SSP Academy'
-        description='Guides, tutorials, and deep dives to help you master self-custody with SSP.'
-      />
+      <PageHeader title={t('title')} description={t('description')} />
 
       <section className='container-custom py-12'>
-        <h2 className='mb-6 text-2xl font-bold md:text-3xl'>Browse by topic</h2>
+        <h2 className='mb-6 text-2xl font-bold md:text-3xl'>{t('browseByTopic')}</h2>
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4'>
           {categories
             .filter(c => c.slug !== 'news-explained')
             .map(c => {
-              const title = isAcademyCategory(c.slug) ? t(`${c.slug}.title`) : c.title
+              const title = isAcademyCategory(c.slug) ? tCategories(`${c.slug}.title`) : c.title
               const description = isAcademyCategory(c.slug)
-                ? t(`${c.slug}.description`)
+                ? tCategories(`${c.slug}.description`)
                 : c.description
               return (
                 <Link
@@ -64,7 +70,7 @@ export default async function AcademyLandingPage({
                   <h3 className='text-lg font-semibold'>{title}</h3>
                   <p className='mt-1 text-sm text-gray-500 dark:text-gray-400'>{description}</p>
                   <p className='mt-3 text-xs text-gray-500 dark:text-gray-400'>
-                    {c.postCount} article{c.postCount === 1 ? '' : 's'}
+                    {t('articleCount', { count: c.postCount })}
                   </p>
                 </Link>
               )
@@ -75,12 +81,12 @@ export default async function AcademyLandingPage({
       {seriesList.length > 0 && (
         <section className='container-custom py-12'>
           <div className='mb-6 flex items-baseline justify-between'>
-            <h2 className='text-2xl font-bold md:text-3xl'>Learning paths</h2>
+            <h2 className='text-2xl font-bold md:text-3xl'>{t('learningPaths')}</h2>
             <Link
               href='/academy/series'
               className='text-primary-600 dark:text-primary-400 text-sm underline'
             >
-              View all
+              {t('viewAllSeries')}
             </Link>
           </div>
           <div className='grid grid-cols-1 gap-6 md:grid-cols-3'>
@@ -92,7 +98,9 @@ export default async function AcademyLandingPage({
                   aria-label={s.heroImageAlt}
                 />
                 <h3 className='font-semibold'>{s.title}</h3>
-                <p className='text-sm text-gray-500 dark:text-gray-400'>{s.postCount} parts</p>
+                <p className='text-sm text-gray-500 dark:text-gray-400'>
+                  {t('partsCount', { count: s.postCount })}
+                </p>
               </Link>
             ))}
           </div>
@@ -100,11 +108,9 @@ export default async function AcademyLandingPage({
       )}
 
       <section className='container-custom py-12'>
-        <h2 className='mb-6 text-2xl font-bold md:text-3xl'>Latest articles</h2>
+        <h2 className='mb-6 text-2xl font-bold md:text-3xl'>{t('latestArticles')}</h2>
         {latest.length === 0 ? (
-          <p className='py-8 text-center text-gray-500 dark:text-gray-400'>
-            New articles coming soon — check back shortly.
-          </p>
+          <p className='py-8 text-center text-gray-500 dark:text-gray-400'>{t('comingSoon')}</p>
         ) : (
           <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
             {latest.map(p => (

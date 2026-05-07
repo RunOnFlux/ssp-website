@@ -91,6 +91,8 @@
   "Academy": {
     "title": "SSP 学院",
     "description": "通过指南、教程和深度解析，帮助你掌握 SSP 的自托管。",
+    "metaTitle": "SSP 学院 — 学习加密自托管",
+    "metaDescription": "关于 SSP、多重签名、安全、DeFi 等的指南、教程与深入解读。",
     "browseByTopic": "按主题浏览",
     "learningPaths": "学习路径",
     "viewAllSeries": "查看全部",
