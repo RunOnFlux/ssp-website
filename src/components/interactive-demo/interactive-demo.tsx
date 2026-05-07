@@ -25,6 +25,7 @@ import {
   Zap,
 } from 'lucide-react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { useState, type MouseEvent } from 'react'
 import { useTheme } from '@/hooks/use-theme'
 import { Link } from '@/i18n/navigation'
@@ -36,8 +37,12 @@ interface InteractiveDemoProps {
 
 interface Phase {
   id: 'wallet-setup' | 'key-setup' | 'device-sync' | 'transaction'
-  title: string
-  subtitle: string
+  titleKey: 'walletSetupTitle' | 'keySetupTitle' | 'deviceSyncTitle' | 'transactionTitle'
+  subtitleKey:
+    | 'walletSetupSubtitle'
+    | 'keySetupSubtitle'
+    | 'deviceSyncSubtitle'
+    | 'transactionSubtitle'
   steps: number
 }
 
@@ -64,26 +69,26 @@ const AndroidIcon = ({ className }: { className?: string }) => (
 const phases: Phase[] = [
   {
     id: 'wallet-setup',
-    title: 'SSP Wallet Setup',
-    subtitle: 'Create your browser wallet with secure seed phrase',
+    titleKey: 'walletSetupTitle',
+    subtitleKey: 'walletSetupSubtitle',
     steps: 4,
   },
   {
     id: 'key-setup',
-    title: 'SSP Key Setup',
-    subtitle: 'Set up mobile app with separate seed phrase',
+    titleKey: 'keySetupTitle',
+    subtitleKey: 'keySetupSubtitle',
     steps: 4,
   },
   {
     id: 'device-sync',
-    title: 'Device Synchronization',
-    subtitle: 'Connect your browser and mobile securely',
+    titleKey: 'deviceSyncTitle',
+    subtitleKey: 'deviceSyncSubtitle',
     steps: 3,
   },
   {
     id: 'transaction',
-    title: 'Send Transaction',
-    subtitle: 'Experience the dual-device security flow',
+    titleKey: 'transactionTitle',
+    subtitleKey: 'transactionSubtitle',
     steps: 4,
   },
 ]
@@ -92,6 +97,7 @@ const walletSeedPhrase: string[] = Array(24).fill('abandon')
 const keySeedPhrase: string[] = Array(24).fill('abandon')
 
 export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
+  const t = useTranslations('InteractiveDemo')
   const { isDark } = useTheme()
   const [currentPhase, setCurrentPhase] = useState<number>(0)
   const [currentStep, setCurrentStep] = useState<number>(0)
@@ -166,7 +172,7 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
       path.setAttribute('clip-rule', 'evenodd')
       svg.appendChild(path)
       wrapper.appendChild(svg)
-      wrapper.appendChild(document.createTextNode('Copied!'))
+      wrapper.appendChild(document.createTextNode(t('feedbackCopied')))
       return wrapper
     })
   }
@@ -177,7 +183,7 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
     const original: Node[] = Array.from(btn.childNodes).map(node => node.cloneNode(true))
     const originalClassName = btn.className
     while (btn.firstChild) btn.removeChild(btn.firstChild)
-    btn.appendChild(document.createTextNode('✓ Confirmed!'))
+    btn.appendChild(document.createTextNode(t('feedbackConfirmedCheck')))
     btn.className = 'flex-1 bg-green-700 text-white py-2 rounded text-sm font-medium cursor-pointer'
     setTimeout(() => {
       while (btn.firstChild) btn.removeChild(btn.firstChild)
@@ -188,7 +194,7 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
 
   const handleCopyKeySeed = (e: MouseEvent<HTMLButtonElement>) => {
     navigator.clipboard.writeText(keySeedPhrase.join(' '))
-    flashButtonContent(e.currentTarget, () => document.createTextNode('✓ Copied!'))
+    flashButtonContent(e.currentTarget, () => document.createTextNode(t('feedbackCopiedCheck')))
   }
 
   const handleConfirmKeySeed = (e: MouseEvent<HTMLButtonElement>) => {
@@ -197,7 +203,7 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
     const original: Node[] = Array.from(btn.childNodes).map(node => node.cloneNode(true))
     const originalClassName = btn.className
     while (btn.firstChild) btn.removeChild(btn.firstChild)
-    btn.appendChild(document.createTextNode('✓ Confirmed!'))
+    btn.appendChild(document.createTextNode(t('feedbackConfirmedCheck')))
     btn.className = 'flex-1 bg-green-700 text-white py-1 rounded text-xs font-medium cursor-pointer'
     setTimeout(() => {
       while (btn.firstChild) btn.removeChild(btn.firstChild)
@@ -220,21 +226,21 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                     <div className='h-3 w-3 rounded-full bg-green-400'></div>
                   </div>
                   <div className='ml-4 text-xs text-gray-600 dark:text-gray-300'>
-                    Chrome Web Store
+                    {t('chromeWebStore')}
                   </div>
                 </div>
                 <div className='flex h-full flex-col p-6 pt-8'>
                   <div className='mb-4 rounded-lg border border-blue-200 bg-blue-50 p-4 dark:border-blue-700 dark:bg-blue-900/50'>
                     <Chrome className='mx-auto mb-3 h-10 w-10 text-blue-600 dark:text-blue-400' />
                     <h3 className='text-center font-semibold text-blue-900 dark:text-blue-100'>
-                      SSP Wallet
+                      {t('sspWalletName')}
                     </h3>
                     <p className='text-center text-sm text-blue-700 dark:text-blue-300'>
-                      by InFlux Technologies
+                      {t('byInfluxTech')}
                     </p>
                   </div>
                   <p className='mb-4 text-center text-sm text-gray-600 dark:text-gray-300'>
-                    Secure, Simple, Powerful crypto wallet with 2-of-2 multisig
+                    {t('walletStoreTagline')}
                   </p>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
@@ -242,13 +248,13 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                     onClick={() => window.open('/download', '_blank')}
                     className='mb-4 w-full cursor-pointer rounded bg-blue-600 py-3 text-sm font-medium text-white'
                   >
-                    Get to Browser
+                    {t('getToBrowser')}
                   </motion.button>
                   <div className='text-xs text-gray-500'>
                     <div className='flex flex-wrap items-center justify-center space-x-2'>
-                      <span>⭐ 4.8</span>
-                      <span>1K+ users</span>
-                      <span>🛡️ Audited</span>
+                      <span>{t('walletRating')}</span>
+                      <span>{t('walletUserCount')}</span>
+                      <span>{t('walletAudited')}</span>
                     </div>
                   </div>
                 </div>
@@ -256,12 +262,9 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
             </div>
             <div className='max-w-lg text-center'>
               <h3 className='mb-3 text-xl font-semibold dark:text-white'>
-                Install SSP Wallet Extension
+                {t('installExtensionTitle')}
               </h3>
-              <p className='text-gray-600 dark:text-gray-300'>
-                Download the browser extension from Chrome Web Store. Available for Chrome, Brave,
-                and Firefox.
-              </p>
+              <p className='text-gray-600 dark:text-gray-300'>{t('installExtensionDescription')}</p>
             </div>
           </div>
         )
@@ -279,30 +282,32 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                     height={16}
                     className='mr-2'
                   />
-                  <div className='text-xs text-gray-600 dark:text-gray-300'>SSP Wallet Setup</div>
+                  <div className='text-xs text-gray-600 dark:text-gray-300'>
+                    {t('sspWalletSetup')}
+                  </div>
                 </div>
                 <div className='flex h-full flex-col p-6 pt-8'>
                   <Image
                     src={isDark ? '/ssp-logo-white.svg' : '/ssp-logo-black.svg'}
-                    alt='SSP Logo'
+                    alt={t('sspLogoAlt')}
                     width={48}
                     height={48}
                     className='mx-auto mb-4'
                   />
                   <h3 className='mb-4 text-center text-lg font-semibold dark:text-white'>
-                    Create Your Wallet
+                    {t('createYourWallet')}
                   </h3>
                   <div className='flex-1 space-y-4'>
                     <div>
                       <label className='mb-1 block text-left text-sm text-gray-600 dark:text-gray-300'>
-                        New Password
+                        {t('newPasswordLabel')}
                       </label>
                       <div className='relative'>
                         <input
                           type={showPassword ? 'text' : 'password'}
                           value={password}
                           onChange={e => setPassword(e.target.value)}
-                          placeholder='Enter secure password'
+                          placeholder={t('enterSecurePasswordPlaceholder')}
                           className='w-full rounded border border-gray-300 px-3 py-2 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400'
                         />
                         <button
@@ -319,18 +324,18 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                     </div>
                     <div>
                       <label className='mb-1 block text-left text-sm text-gray-600 dark:text-gray-300'>
-                        Confirm Password
+                        {t('confirmPasswordLabel')}
                       </label>
                       <input
                         type='password'
-                        placeholder='Confirm password'
+                        placeholder={t('confirmPasswordPlaceholder')}
                         className='w-full rounded border border-gray-300 px-3 py-2 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400'
                       />
                     </div>
                     <div className='pt-2 text-sm'>
                       <label className='flex items-center text-gray-700 dark:text-gray-300'>
-                        <input type='checkbox' className='mr-2' />I have read and agree to the Terms
-                        of Service
+                        <input type='checkbox' className='mr-2' />
+                        {t('agreeToTerms')}
                       </label>
                     </div>
                   </div>
@@ -338,10 +343,11 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
               </div>
             </div>
             <div className='max-w-lg text-center'>
-              <h3 className='mb-3 text-xl font-semibold dark:text-white'>Create Secure Password</h3>
+              <h3 className='mb-3 text-xl font-semibold dark:text-white'>
+                {t('createSecurePasswordTitle')}
+              </h3>
               <p className='text-gray-600 dark:text-gray-300'>
-                This password encrypts your wallet locally. It never leaves your browser and
-                protects your seed phrase.
+                {t('createSecurePasswordDescription')}
               </p>
             </div>
           </div>
@@ -354,15 +360,17 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
               <div className='absolute inset-0 overflow-hidden rounded-lg'>
                 <div className='flex h-8 items-center border-b border-amber-200 bg-amber-100 px-3 dark:border-amber-700 dark:bg-amber-900/50'>
                   <AlertCircle className='mr-2 h-4 w-4 text-amber-600 dark:text-amber-400' />
-                  <div className='text-xs text-amber-800 dark:text-amber-200'>Backup Required</div>
+                  <div className='text-xs text-amber-800 dark:text-amber-200'>
+                    {t('backupRequired')}
+                  </div>
                 </div>
                 <div className='flex h-full flex-col overflow-hidden p-4 pt-3'>
                   <h3 className='mb-2 text-center text-lg font-semibold text-amber-800 dark:text-amber-200'>
-                    Your Wallet Seed Phrase
+                    {t('walletSeedPhraseHeading')}
                   </h3>
                   <div className='mb-3 rounded border border-red-200 bg-red-50 p-2 dark:border-red-700 dark:bg-red-900/50'>
                     <p className='text-center text-xs font-medium text-red-800 dark:text-red-200'>
-                      ⚠️ Write this down and store it safely!
+                      {t('writeDownWarning')}
                     </p>
                   </div>
 
@@ -370,14 +378,14 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                     {!showSeed ? (
                       <div className='flex max-h-48 flex-1 flex-col justify-center rounded bg-gray-100 p-6 text-center dark:bg-gray-700'>
                         <p className='mb-4 text-sm text-gray-600 dark:text-gray-300'>
-                          Click to reveal your 24-word seed phrase
+                          {t('clickToRevealSeed')}
                         </p>
                         <button
                           onClick={() => setShowSeed(true)}
                           className='cursor-pointer rounded bg-amber-600 px-4 py-2 text-sm font-medium text-white hover:bg-amber-700 dark:bg-amber-700 dark:hover:bg-amber-600'
                         >
                           <Eye className='mr-2 inline h-4 w-4' />
-                          Show Seed Phrase
+                          {t('showSeedPhrase')}
                         </button>
                       </div>
                     ) : (
@@ -401,13 +409,13 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                             className='flex-1 cursor-pointer rounded bg-gray-200 py-2 text-sm text-gray-700 hover:bg-gray-300 dark:bg-gray-600 dark:text-gray-200 dark:hover:bg-gray-500'
                           >
                             <Copy className='mr-1 inline h-4 w-4' />
-                            Copy
+                            {t('copy')}
                           </button>
                           <button
                             onClick={handleConfirmWalletSeed}
                             className='flex-1 cursor-pointer rounded bg-green-600 py-2 text-sm font-medium text-white hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-600'
                           >
-                            ✓ I&apos;ve Written It Down
+                            {t('writtenItDown')}
                           </button>
                         </div>
                         {seedConfirmed && (
@@ -416,7 +424,7 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                             animate={{ opacity: 1, y: 0 }}
                             className='mt-2 rounded bg-green-100 p-2 text-center text-xs text-green-800 dark:bg-green-900/50 dark:text-green-200'
                           >
-                            ✓ Seed phrase confirmed and ready to proceed
+                            {t('seedConfirmedToast')}
                           </motion.div>
                         )}
                       </div>
@@ -426,13 +434,8 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
               </div>
             </div>
             <div className='max-w-lg text-center'>
-              <h3 className='mb-3 text-xl font-semibold dark:text-white'>
-                Backup Your Seed Phrase
-              </h3>
-              <p className='text-gray-600 dark:text-gray-300'>
-                This 24-word phrase is your master key. Write it down and store it securely offline.
-                This is seed phrase #1 of 2.
-              </p>
+              <h3 className='mb-3 text-xl font-semibold dark:text-white'>{t('backupSeedTitle')}</h3>
+              <p className='text-gray-600 dark:text-gray-300'>{t('backupSeedDescription')}</p>
             </div>
           </div>
         )
@@ -444,7 +447,9 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
               <div className='absolute inset-0 overflow-hidden rounded-lg'>
                 <div className='flex h-8 items-center border-b border-green-200 bg-green-100 px-3 dark:border-green-700 dark:bg-green-900/50'>
                   <CheckCircle className='mr-2 h-4 w-4 text-green-600 dark:text-green-400' />
-                  <div className='text-xs text-green-800 dark:text-green-200'>Wallet Created</div>
+                  <div className='text-xs text-green-800 dark:text-green-200'>
+                    {t('walletCreated')}
+                  </div>
                 </div>
                 <div className='flex h-full flex-col p-5 pt-6 text-center'>
                   <motion.div
@@ -457,24 +462,24 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                     </div>
                   </motion.div>
                   <h3 className='mb-2 text-lg font-semibold text-green-800 dark:text-green-200'>
-                    SSP Wallet Ready!
+                    {t('sspWalletReady')}
                   </h3>
                   <p className='mb-3 text-sm text-gray-600 dark:text-gray-300'>
-                    Your browser wallet is set up with:
+                    {t('walletSetUpWith')}
                   </p>
                   <div className='mb-4 space-y-2 text-left text-sm'>
                     <div className='flex items-center'>
                       <Check className='mr-2 h-4 w-4 flex-shrink-0 text-green-600 dark:text-green-400' />
-                      <span className='dark:text-gray-300'>Secure password protection</span>
+                      <span className='dark:text-gray-300'>{t('securePasswordProtection')}</span>
                     </div>
                     <div className='flex items-center'>
                       <Check className='mr-2 h-4 w-4 flex-shrink-0 text-green-600 dark:text-green-400' />
-                      <span className='dark:text-gray-300'>24-word seed phrase backed up</span>
+                      <span className='dark:text-gray-300'>{t('twentyFourWordSeedBackedUp')}</span>
                     </div>
                     <div className='flex items-center'>
                       <ArrowRight className='mr-2 h-4 w-4 flex-shrink-0 text-blue-600 dark:text-blue-400' />
                       <span className='text-blue-700 dark:text-blue-300'>
-                        Ready for mobile app setup
+                        {t('readyForMobileSetup')}
                       </span>
                     </div>
                   </div>
@@ -482,7 +487,7 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                     <div className='text-center'>
                       <div className='mb-1 flex items-center justify-center'>
                         <span className='text-sm font-medium text-blue-800 dark:text-blue-200'>
-                          Next Step
+                          {t('nextStep')}
                         </span>
                         <motion.div
                           animate={{ x: [0, 5, 0] }}
@@ -492,7 +497,7 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                         </motion.div>
                       </div>
                       <p className='text-sm text-blue-700 dark:text-blue-300'>
-                        Set up SSP Key mobile app
+                        {t('setUpKeyMobile')}
                       </p>
                     </div>
                   </div>
@@ -500,10 +505,11 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
               </div>
             </div>
             <div className='max-w-lg text-center'>
-              <h3 className='mb-3 text-xl font-semibold dark:text-white'>Wallet Setup Complete</h3>
+              <h3 className='mb-3 text-xl font-semibold dark:text-white'>
+                {t('walletSetupCompleteTitle')}
+              </h3>
               <p className='text-gray-600 dark:text-gray-300'>
-                Your browser wallet is ready! Now you need to set up the mobile app for the second
-                signature.
+                {t('walletSetupCompleteDescription')}
               </p>
             </div>
           </div>
@@ -527,34 +533,34 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                     <div className='mb-3 text-center'>
                       <Apple className='mx-auto mb-2 h-8 w-8 text-blue-600' />
                       <h3 className='text-sm font-semibold text-blue-900 dark:text-blue-300'>
-                        SSP Key
+                        {t('sspKeyName')}
                       </h3>
                       <p className='text-xs text-gray-600 dark:text-gray-300'>
-                        2FA Multisig Security
+                        {t('twoFaMultisigSecurity')}
                       </p>
                     </div>
                     <div className='flex-1 space-y-3 text-xs'>
                       <div className='flex justify-between'>
-                        <span className='dark:text-gray-300'>Rating:</span>
-                        <span className='dark:text-gray-300'>⭐⭐⭐⭐⭐ 5.0</span>
+                        <span className='dark:text-gray-300'>{t('ratingLabel')}</span>
+                        <span className='dark:text-gray-300'>{t('ratingValue')}</span>
                       </div>
                       <div className='flex justify-between'>
-                        <span className='dark:text-gray-300'>Developer:</span>
+                        <span className='dark:text-gray-300'>{t('developerLabel')}</span>
                         <span className='font-medium text-gray-800 dark:text-gray-200'>
-                          Influx Technologies
+                          {t('developerValue')}
                         </span>
                       </div>
                       <div className='flex justify-between'>
-                        <span className='dark:text-gray-300'>Downloads:</span>
-                        <span className='dark:text-gray-300'>1,000+</span>
+                        <span className='dark:text-gray-300'>{t('downloadsLabel')}</span>
+                        <span className='dark:text-gray-300'>{t('downloadsValue')}</span>
                       </div>
                       <div className='flex justify-between'>
-                        <span className='dark:text-gray-300'>Size:</span>
-                        <span className='dark:text-gray-300'>35 MB</span>
+                        <span className='dark:text-gray-300'>{t('sizeLabel')}</span>
+                        <span className='dark:text-gray-300'>{t('iosSizeValue')}</span>
                       </div>
                       <div className='flex justify-between'>
-                        <span className='dark:text-gray-300'>Requires:</span>
-                        <span className='dark:text-gray-300'>iOS 15.1+</span>
+                        <span className='dark:text-gray-300'>{t('requiresLabel')}</span>
+                        <span className='dark:text-gray-300'>{t('iosRequiresValue')}</span>
                       </div>
                     </div>
                     <motion.button
@@ -565,24 +571,24 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                       }
                       className='mt-3 w-full cursor-pointer rounded bg-blue-600 py-2 text-sm font-medium text-white'
                     >
-                      Download for iOS
+                      {t('downloadForIos')}
                     </motion.button>
                     <div className='mt-3 space-y-1'>
                       <div className='flex items-center text-xs text-gray-500'>
                         <Shield className='mr-1 h-3 w-3 flex-shrink-0' />
-                        <span>Security audited</span>
+                        <span>{t('securityAudited')}</span>
                       </div>
                       <div className='flex items-center text-xs text-gray-500'>
                         <Fingerprint className='mr-1 h-3 w-3 flex-shrink-0' />
-                        <span>Touch ID / Face ID</span>
+                        <span>{t('touchFaceId')}</span>
                       </div>
                       <div className='flex items-center text-xs text-gray-500'>
                         <QrCode className='mr-1 h-3 w-3 flex-shrink-0' />
-                        <span>QR code pairing</span>
+                        <span>{t('qrCodePairing')}</span>
                       </div>
                       <div className='flex items-center text-xs text-gray-500'>
                         <Eye className='mr-1 h-3 w-3 flex-shrink-0' />
-                        <span>Zero data storage</span>
+                        <span>{t('zeroDataStorage')}</span>
                       </div>
                     </div>
                   </div>
@@ -596,34 +602,34 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                     <div className='mb-3 text-center'>
                       <AndroidIcon className='mx-auto mb-2 h-8 w-8 text-green-600' />
                       <h3 className='text-sm font-semibold text-green-900 dark:text-green-300'>
-                        SSP Key
+                        {t('sspKeyName')}
                       </h3>
                       <p className='text-xs text-gray-600 dark:text-gray-300'>
-                        2FA Multisig Security
+                        {t('twoFaMultisigSecurity')}
                       </p>
                     </div>
                     <div className='flex-1 space-y-3 text-xs'>
                       <div className='flex justify-between'>
-                        <span className='dark:text-gray-300'>Rating:</span>
-                        <span className='dark:text-gray-300'>⭐⭐⭐⭐⭐ 5.0</span>
+                        <span className='dark:text-gray-300'>{t('ratingLabel')}</span>
+                        <span className='dark:text-gray-300'>{t('ratingValue')}</span>
                       </div>
                       <div className='flex justify-between'>
-                        <span className='dark:text-gray-300'>Developer:</span>
+                        <span className='dark:text-gray-300'>{t('developerLabel')}</span>
                         <span className='font-medium text-gray-800 dark:text-gray-200'>
-                          Influx Technologies
+                          {t('developerValue')}
                         </span>
                       </div>
                       <div className='flex justify-between'>
-                        <span className='dark:text-gray-300'>Downloads:</span>
-                        <span className='dark:text-gray-300'>1,000+</span>
+                        <span className='dark:text-gray-300'>{t('downloadsLabel')}</span>
+                        <span className='dark:text-gray-300'>{t('downloadsValue')}</span>
                       </div>
                       <div className='flex justify-between'>
-                        <span className='dark:text-gray-300'>Size:</span>
-                        <span className='dark:text-gray-300'>46 MB</span>
+                        <span className='dark:text-gray-300'>{t('sizeLabel')}</span>
+                        <span className='dark:text-gray-300'>{t('androidSizeValue')}</span>
                       </div>
                       <div className='flex justify-between'>
-                        <span className='dark:text-gray-300'>Requires:</span>
-                        <span className='dark:text-gray-300'>Android 7.0+</span>
+                        <span className='dark:text-gray-300'>{t('requiresLabel')}</span>
+                        <span className='dark:text-gray-300'>{t('androidRequiresValue')}</span>
                       </div>
                     </div>
                     <motion.button
@@ -637,24 +643,24 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                       }
                       className='mt-3 w-full cursor-pointer rounded bg-green-600 py-2 text-sm font-medium text-white'
                     >
-                      Download for Android
+                      {t('downloadForAndroid')}
                     </motion.button>
                     <div className='mt-3 space-y-1'>
                       <div className='flex items-center text-xs text-gray-500'>
                         <Shield className='mr-1 h-3 w-3 flex-shrink-0' />
-                        <span>Security audited</span>
+                        <span>{t('securityAudited')}</span>
                       </div>
                       <div className='flex items-center text-xs text-gray-500'>
                         <Fingerprint className='mr-1 h-3 w-3 flex-shrink-0' />
-                        <span>Biometric unlock</span>
+                        <span>{t('biometricUnlock')}</span>
                       </div>
                       <div className='flex items-center text-xs text-gray-500'>
                         <QrCode className='mr-1 h-3 w-3 flex-shrink-0' />
-                        <span>QR code pairing</span>
+                        <span>{t('qrCodePairing')}</span>
                       </div>
                       <div className='flex items-center text-xs text-gray-500'>
                         <Eye className='mr-1 h-3 w-3 flex-shrink-0' />
-                        <span>Zero data storage</span>
+                        <span>{t('zeroDataStorage')}</span>
                       </div>
                     </div>
                   </div>
@@ -663,11 +669,10 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
             </div>
             <div className='max-w-lg px-4 text-center'>
               <h3 className='mb-3 text-xl font-semibold dark:text-white'>
-                Download SSP Key Mobile App
+                {t('downloadKeyMobileTitle')}
               </h3>
               <p className='text-gray-600 dark:text-gray-300'>
-                Install the mobile companion app from App Store or Google Play. This provides the
-                second signature for your transactions.
+                {t('downloadKeyMobileDescription')}
               </p>
             </div>
           </div>
@@ -685,26 +690,26 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                   <div className='mb-4 text-center'>
                     <Image
                       src={isDark ? '/ssp-logo-white.svg' : '/ssp-logo-black.svg'}
-                      alt='SSP Key'
+                      alt={t('sspKeyAlt')}
                       width={30}
                       height={30}
                       className='mx-auto mb-2'
                     />
                     <h4 className='text-sm font-semibold text-gray-900 dark:text-white'>
-                      SSP Key Setup
+                      {t('sspKeySetup')}
                     </h4>
                   </div>
 
                   <div className='max-h-48 flex-1 space-y-3'>
                     <div>
                       <label className='mb-1 block text-left text-sm text-gray-600 dark:text-gray-300'>
-                        App Password
+                        {t('appPasswordLabel')}
                       </label>
                       <input
                         type='password'
                         value={mobileKeyPassword}
                         onChange={e => setMobileKeyPassword(e.target.value)}
-                        placeholder='Create password'
+                        placeholder={t('createPasswordPlaceholder')}
                         className='w-full rounded border border-gray-300 px-3 py-2 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400'
                       />
                     </div>
@@ -718,7 +723,7 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                           onChange={e => setBiometricsEnabled(e.target.checked)}
                         />
                         <Fingerprint className='mr-2 h-4 w-4 dark:text-gray-300' />
-                        <span>Enable Biometrics</span>
+                        <span>{t('enableBiometrics')}</span>
                       </label>
                     </div>
 
@@ -728,7 +733,7 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                       onClick={goNext}
                       className='w-full cursor-pointer rounded bg-blue-600 py-2 text-sm font-medium text-white'
                     >
-                      Continue Setup
+                      {t('continueSetup')}
                     </motion.button>
                   </div>
 
@@ -738,18 +743,17 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                       animate={{ opacity: 1, y: 0 }}
                       className='mt-2 rounded bg-green-100 p-2 text-sm text-green-800 dark:bg-green-900/50 dark:text-green-200'
                     >
-                      ✓ Touch ID / Face ID Enabled
+                      {t('touchFaceIdEnabled')}
                     </motion.div>
                   )}
                 </div>
               </div>
             </div>
             <div className='max-w-lg text-center'>
-              <h3 className='mb-3 text-xl font-semibold dark:text-white'>Secure Your Mobile Key</h3>
-              <p className='text-gray-600 dark:text-gray-300'>
-                Create a password for your mobile app and enable biometric authentication for
-                enhanced security.
-              </p>
+              <h3 className='mb-3 text-xl font-semibold dark:text-white'>
+                {t('secureMobileKeyTitle')}
+              </h3>
+              <p className='text-gray-600 dark:text-gray-300'>{t('secureMobileKeyDescription')}</p>
             </div>
           </div>
         )
@@ -766,7 +770,7 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                   <div className='mb-3 rounded bg-amber-100 p-2 dark:bg-amber-900/50'>
                     <AlertCircle className='mx-auto mb-1 h-4 w-4 text-amber-600 dark:text-amber-400' />
                     <p className='text-center text-sm font-semibold text-amber-800 dark:text-amber-200'>
-                      Key Seed Phrase
+                      {t('keySeedPhrase')}
                     </p>
                   </div>
 
@@ -774,14 +778,14 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                     {!showKeySeed ? (
                       <div className='flex flex-1 flex-col justify-center text-center'>
                         <p className='mb-3 text-sm text-gray-600 dark:text-gray-300'>
-                          Generate your separate mobile key seed phrase
+                          {t('generateKeySeed')}
                         </p>
                         <button
                           onClick={() => setShowKeySeed(true)}
                           className='w-full cursor-pointer rounded bg-amber-600 px-3 py-2 text-sm font-medium text-white hover:bg-amber-700 dark:bg-amber-700 dark:hover:bg-amber-600'
                         >
                           <Eye className='mr-2 inline h-4 w-4' />
-                          Show Key Seed
+                          {t('showKeySeed')}
                         </button>
                       </div>
                     ) : (
@@ -804,13 +808,13 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                             onClick={handleCopyKeySeed}
                             className='flex-1 cursor-pointer rounded bg-gray-200 py-1 text-xs text-gray-700 hover:bg-gray-300 dark:bg-gray-600 dark:text-gray-200 dark:hover:bg-gray-500'
                           >
-                            Copy
+                            {t('copy')}
                           </button>
                           <button
                             onClick={handleConfirmKeySeed}
                             className='flex-1 cursor-pointer rounded bg-green-600 py-1 text-xs font-medium text-white hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-600'
                           >
-                            ✓ Saved
+                            {t('saved')}
                           </button>
                         </div>
                         {/* Fixed height container for confirmation message */}
@@ -821,7 +825,7 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                               animate={{ opacity: 1, y: 0 }}
                               className='rounded bg-green-100 px-2 py-1 text-center text-xs text-green-800 dark:bg-green-900/50 dark:text-green-200'
                             >
-                              ✓ Key seed confirmed
+                              {t('keySeedConfirmedToast')}
                             </motion.div>
                           )}
                         </div>
@@ -831,18 +835,17 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
 
                   <div className='mt-6 rounded border border-red-200 bg-red-50 p-2 dark:border-red-700 dark:bg-red-900/50'>
                     <p className='text-center text-xs text-red-800 dark:text-red-200'>
-                      ⚠️ Store separately from wallet seed!
+                      {t('storeSeparatelyWarning')}
                     </p>
                   </div>
                 </div>
               </div>
             </div>
             <div className='max-w-lg text-center'>
-              <h3 className='mb-3 text-xl font-semibold dark:text-white'>Backup Mobile Key Seed</h3>
-              <p className='text-gray-600 dark:text-gray-300'>
-                This is a separate 24-word seed phrase for your mobile key. Both seeds are required
-                for full SSP recovery.
-              </p>
+              <h3 className='mb-3 text-xl font-semibold dark:text-white'>
+                {t('backupKeySeedTitle')}
+              </h3>
+              <p className='text-gray-600 dark:text-gray-300'>{t('backupKeySeedDescription')}</p>
             </div>
           </div>
         )
@@ -866,29 +869,29 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                     </div>
                   </motion.div>
                   <h4 className='mb-3 text-center text-base font-semibold text-green-800 dark:text-green-200'>
-                    SSP Key Ready!
+                    {t('sspKeyReady')}
                   </h4>
                   <div className='max-h-32 flex-1 space-y-2 text-left text-sm'>
                     <div className='flex items-center'>
                       <Check className='mr-2 h-4 w-4 flex-shrink-0 text-green-600 dark:text-green-400' />
-                      <span className='dark:text-gray-300'>Password protection</span>
+                      <span className='dark:text-gray-300'>{t('passwordProtection')}</span>
                     </div>
                     <div className='flex items-center'>
                       <Check className='mr-2 h-4 w-4 flex-shrink-0 text-green-600 dark:text-green-400' />
-                      <span className='dark:text-gray-300'>Biometric security</span>
+                      <span className='dark:text-gray-300'>{t('biometricSecurity')}</span>
                     </div>
                     <div className='flex items-center'>
                       <Check className='mr-2 h-4 w-4 flex-shrink-0 text-green-600 dark:text-green-400' />
-                      <span className='dark:text-gray-300'>Key seed backed up</span>
+                      <span className='dark:text-gray-300'>{t('keySeedBackedUp')}</span>
                     </div>
                     <div className='flex items-center'>
                       <Wifi className='mr-2 h-4 w-4 flex-shrink-0 text-blue-600 dark:text-blue-400' />
-                      <span className='dark:text-gray-300'>Ready to pair</span>
+                      <span className='dark:text-gray-300'>{t('readyToPair')}</span>
                     </div>
                   </div>
                   <div className='mt-3 rounded border border-blue-200 bg-blue-50 p-3 dark:border-blue-700 dark:bg-blue-900/50'>
                     <p className='text-center text-sm text-blue-800 dark:text-blue-200'>
-                      Next: Scan QR code to connect devices
+                      {t('nextScanQrToConnect')}
                     </p>
                   </div>
                 </div>
@@ -897,11 +900,10 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
 
             <div className='max-w-lg text-center'>
               <h3 className='mb-3 text-xl font-semibold dark:text-white'>
-                Mobile Key Setup Complete
+                {t('mobileKeyCompleteTitle')}
               </h3>
               <p className='text-gray-600 dark:text-gray-300'>
-                Your mobile app is ready! Now let&apos;s connect it to your browser wallet for the
-                2-of-2 security.
+                {t('mobileKeyCompleteDescription')}
               </p>
             </div>
           </div>
@@ -924,12 +926,12 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                   <div className='flex h-8 items-center border-b border-blue-200 bg-blue-100 px-3 dark:border-blue-700 dark:bg-blue-900/50'>
                     <Chrome className='mr-2 h-4 w-4 text-blue-600 dark:text-blue-400' />
                     <div className='text-xs text-blue-800 dark:text-blue-200'>
-                      SSP Wallet - Sync Device
+                      {t('sspWalletSyncDevice')}
                     </div>
                   </div>
                   <div className='flex h-full flex-col items-center p-5 pt-4'>
                     <h4 className='mb-4 text-base font-semibold dark:text-white'>
-                      Connect Mobile Device
+                      {t('connectMobileDevice')}
                     </h4>
 
                     {/* QR Code with SSP Logo */}
@@ -1041,12 +1043,12 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                     </div>
 
                     <p className='mb-4 text-center text-sm text-gray-600 dark:text-gray-300'>
-                      Scan this QR code with SSP Key app
+                      {t('scanQrWithKeyApp')}
                     </p>
 
                     <div className='mb-3 w-full rounded border border-gray-200 bg-gray-50 p-3 dark:border-gray-600 dark:bg-gray-700'>
                       <div className='mb-1 text-xs text-gray-600 dark:text-gray-300'>
-                        Connection ID:
+                        {t('connectionIdLabel')}
                       </div>
                       <div className='rounded bg-white p-2 font-mono text-xs break-all dark:bg-gray-600 dark:text-gray-200'>
                         eth:xpub661MyMwAqRbcFtXgS5sYJABqqG9YLmC4Q1Rdap9gSE8Nq...
@@ -1058,7 +1060,7 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                         onClick={() => window.open('https://sspwallet.io', '_blank')}
                         className='cursor-pointer text-xs text-blue-600 hover:underline'
                       >
-                        Learn more at sspwallet.io
+                        {t('learnMoreLink')}
                       </button>
                     </div>
                   </div>
@@ -1074,7 +1076,7 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                   <div className='flex h-full flex-col p-3 pt-2'>
                     <div className='mb-3 text-center'>
                       <QrCode className='mx-auto mb-2 h-8 w-8 text-green-600' />
-                      <h4 className='text-sm font-semibold dark:text-white'>Scan QR Code</h4>
+                      <h4 className='text-sm font-semibold dark:text-white'>{t('scanQrCode')}</h4>
                     </div>
 
                     <div className='flex max-h-48 flex-1 items-center justify-center rounded border-2 border-dashed border-green-300 p-3 dark:border-green-500'>
@@ -1089,13 +1091,13 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                           </motion.div>
                         </div>
                         <p className='text-xs text-gray-600 dark:text-gray-300'>
-                          Position QR code in frame
+                          {t('positionQrInFrame')}
                         </p>
                       </div>
                     </div>
 
                     <button className='mt-2 w-full cursor-pointer rounded bg-green-600 py-2 text-sm font-medium text-white'>
-                      Ready to Scan
+                      {t('readyToScan')}
                     </button>
                   </div>
                 </div>
@@ -1104,11 +1106,10 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
 
             <div className='max-w-lg px-4 text-center'>
               <h3 className='mb-3 text-xl font-semibold dark:text-white'>
-                Generate Pairing QR Code
+                {t('generatePairingQrTitle')}
               </h3>
               <p className='text-gray-600 dark:text-gray-300'>
-                Your browser wallet shows a QR code with SSP logo. Open SSP Key app and scan to
-                connect securely.
+                {t('generatePairingQrDescription')}
               </p>
             </div>
           </div>
@@ -1128,7 +1129,9 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                     >
                       <Wifi className='mr-2 h-4 w-4 text-blue-600 dark:text-blue-400' />
                     </motion.div>
-                    <div className='text-xs text-blue-800 dark:text-blue-200'>Synchronising...</div>
+                    <div className='text-xs text-blue-800 dark:text-blue-200'>
+                      {t('synchronising')}
+                    </div>
                   </div>
                   <div className='flex h-full flex-col items-center p-5 pt-6'>
                     <motion.div
@@ -1137,10 +1140,10 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                       className='mb-6 h-16 w-16 rounded-full border-4 border-blue-200 border-t-blue-600'
                     ></motion.div>
                     <h4 className='mb-3 text-lg font-semibold dark:text-white'>
-                      Pairing in Progress
+                      {t('pairingInProgress')}
                     </h4>
                     <p className='mb-6 text-center text-sm text-gray-600 dark:text-gray-300'>
-                      Establishing secure connection with mobile device...
+                      {t('establishingSecureConnection')}
                     </p>
                     <div className='mb-4 h-3 w-full rounded-full bg-gray-200 dark:bg-gray-600'>
                       <motion.div
@@ -1151,13 +1154,13 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                       ></motion.div>
                     </div>
                     <div className='mb-4 text-sm text-gray-500 dark:text-gray-400'>
-                      Exchanging encryption keys and public keys...
+                      {t('exchangingKeys')}
                     </div>
 
                     <div className='mb-2 w-full rounded border border-blue-200 bg-blue-50 p-3 dark:border-blue-700 dark:bg-blue-900/50'>
                       <div className='text-center text-xs text-blue-800 dark:text-blue-200'>
-                        <div className='mb-1 font-semibold'>Connection Details</div>
-                        <div>Establishing secure SSP relay connection...</div>
+                        <div className='mb-1 font-semibold'>{t('connectionDetailsHeading')}</div>
+                        <div>{t('establishingSspRelay')}</div>
                       </div>
                     </div>
 
@@ -1169,7 +1172,7 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                     >
                       <CheckCircle className='mx-auto mb-1 h-5 w-5 text-green-600' />
                       <p className='text-xs font-semibold text-green-800 dark:text-green-200'>
-                        Synchronisation Complete!
+                        {t('synchronisationComplete')}
                       </p>
                     </motion.div>
                   </div>
@@ -1192,24 +1195,32 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                           <CheckCircle className='mx-auto mb-0.5 h-4 w-4 text-green-600' />
                         </motion.div>
                         <p className='text-xs font-semibold text-green-800 dark:text-green-200'>
-                          QR Code Scanned!
+                          {t('qrCodeScanned')}
                         </p>
                       </div>
                     </div>
 
                     <div className='mb-1.5 flex-1 space-y-1 text-xs'>
                       <div className='rounded bg-gray-50 p-1 dark:bg-gray-700'>
-                        <div className='text-gray-600 dark:text-gray-300'>Browser Wallet:</div>
-                        <div className='font-mono text-xs dark:text-gray-200'>Chrome Extension</div>
+                        <div className='text-gray-600 dark:text-gray-300'>
+                          {t('browserWalletLabel')}
+                        </div>
+                        <div className='font-mono text-xs dark:text-gray-200'>
+                          {t('chromeExtensionValue')}
+                        </div>
                       </div>
                       <div className='rounded bg-gray-50 p-1 dark:bg-gray-700'>
-                        <div className='text-gray-600 dark:text-gray-300'>Connection ID:</div>
+                        <div className='text-gray-600 dark:text-gray-300'>
+                          {t('connectionIdLabel')}
+                        </div>
                         <div className='font-mono text-xs break-all dark:text-gray-200'>
                           eth:xpub661My...
                         </div>
                       </div>
                       <div className='rounded bg-gray-50 p-1 dark:bg-gray-700'>
-                        <div className='text-gray-600 dark:text-gray-300'>Encryption:</div>
+                        <div className='text-gray-600 dark:text-gray-300'>
+                          {t('encryptionLabel')}
+                        </div>
                         <div className='font-mono text-xs dark:text-gray-200'>AES-256-GCM</div>
                       </div>
                     </div>
@@ -1223,7 +1234,7 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                       }}
                       className='w-full cursor-pointer rounded bg-green-600 py-1.5 text-sm font-medium text-white'
                     >
-                      Confirm Pairing
+                      {t('confirmPairing')}
                     </motion.button>
                   </div>
                 </div>
@@ -1231,11 +1242,10 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
             </div>
 
             <div className='max-w-lg px-4 text-center'>
-              <h3 className='mb-3 text-xl font-semibold dark:text-white'>Scanning QR Code</h3>
-              <p className='text-gray-600 dark:text-gray-300'>
-                The mobile app reads the QR code and establishes an encrypted connection with your
-                browser wallet.
-              </p>
+              <h3 className='mb-3 text-xl font-semibold dark:text-white'>
+                {t('scanningQrCodeTitle')}
+              </h3>
+              <p className='text-gray-600 dark:text-gray-300'>{t('scanningQrCodeDescription')}</p>
             </div>
           </div>
         )
@@ -1250,7 +1260,7 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                   <div className='flex h-8 items-center border-b border-green-200 bg-green-100 px-3 dark:border-green-700 dark:bg-green-900/50'>
                     <CheckCircle className='mr-2 h-4 w-4 text-green-600 dark:text-green-400' />
                     <div className='text-xs text-green-800 dark:text-green-200'>
-                      Device Connected
+                      {t('deviceConnected')}
                     </div>
                   </div>
                   <div className='flex h-full flex-col items-center p-5 pt-6'>
@@ -1264,29 +1274,29 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                       </div>
                     </motion.div>
                     <h4 className='mb-2 text-lg font-semibold text-green-800 dark:text-green-200'>
-                      Successfully Paired!
+                      {t('successfullyPaired')}
                     </h4>
                     <p className='mb-4 text-center text-sm text-gray-600 dark:text-gray-300'>
-                      Your devices are now securely connected
+                      {t('devicesSecurelyConnected')}
                     </p>
 
                     <div className='mb-4 w-full space-y-3 text-sm'>
                       <div className='flex items-center justify-between rounded border border-green-200 bg-green-50 p-3 dark:border-green-700 dark:bg-green-900/50'>
-                        <span className='dark:text-gray-300'>🔐 Encryption:</span>
+                        <span className='dark:text-gray-300'>{t('encryptionRow')}</span>
                         <span className='font-semibold text-green-700 dark:text-green-300'>
-                          Active
+                          {t('active')}
                         </span>
                       </div>
                       <div className='flex items-center justify-between rounded border border-green-200 bg-green-50 p-3 dark:border-green-700 dark:bg-green-900/50'>
-                        <span className='dark:text-gray-300'>📱 Mobile Device:</span>
+                        <span className='dark:text-gray-300'>{t('mobileDeviceRow')}</span>
                         <span className='font-semibold text-green-700 dark:text-green-300'>
-                          Connected
+                          {t('connected')}
                         </span>
                       </div>
                       <div className='flex items-center justify-between rounded border border-green-200 bg-green-50 p-3 dark:border-green-700 dark:bg-green-900/50'>
-                        <span className='dark:text-gray-300'>🔑 2-of-2 Multisig:</span>
+                        <span className='dark:text-gray-300'>{t('twoOfTwoMultisigRow')}</span>
                         <span className='font-semibold text-green-700 dark:text-green-300'>
-                          Ready
+                          {t('ready')}
                         </span>
                       </div>
                     </div>
@@ -1304,39 +1314,43 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                     <div className='mb-1.5 rounded bg-green-100 p-1.5 text-center dark:bg-green-900/50'>
                       <Shield className='mx-auto mb-0.5 h-4 w-4 text-green-600' />
                       <p className='text-xs font-semibold text-green-800 dark:text-green-200'>
-                        Secure Connection
+                        {t('secureConnection')}
                       </p>
                     </div>
 
                     <div className='mb-1.5 flex-1 space-y-1 text-xs'>
                       <div className='rounded bg-gray-50 p-1 text-center dark:bg-gray-700'>
                         <div className='mb-0.5 text-gray-600 dark:text-gray-300'>
-                          Ready for Transactions
+                          {t('readyForTransactions')}
                         </div>
                         <div className='flex items-center justify-center'>
                           <div className='mr-1 h-2 w-2 animate-pulse rounded-full bg-green-500'></div>
                           <span className='text-xs font-semibold text-green-700 dark:text-green-300'>
-                            Online
+                            {t('online')}
                           </span>
                         </div>
                       </div>
                       <div className='rounded bg-gray-50 p-1 dark:bg-gray-700'>
-                        <div className='text-gray-600 dark:text-gray-300'>Connection Type:</div>
+                        <div className='text-gray-600 dark:text-gray-300'>
+                          {t('connectionTypeLabel')}
+                        </div>
                         <div className='text-xs font-semibold dark:text-gray-200'>
-                          SSP Relay Secured
+                          {t('sspRelaySecured')}
                         </div>
                       </div>
                       <div className='rounded bg-gray-50 p-1 dark:bg-gray-700'>
-                        <div className='text-gray-600 dark:text-gray-300'>Multisig Status:</div>
+                        <div className='text-gray-600 dark:text-gray-300'>
+                          {t('multisigStatusLabel')}
+                        </div>
                         <div className='text-xs font-semibold text-green-700 dark:text-green-300'>
-                          2-of-2 Active
+                          {t('twoOfTwoActive')}
                         </div>
                       </div>
                     </div>
 
                     <div className='rounded border border-blue-200 bg-blue-50 p-1 dark:border-blue-700 dark:bg-blue-900/50'>
                       <p className='text-center text-xs text-blue-800 dark:text-blue-200'>
-                        Wallet protected by true 2-of-2 multisig!
+                        {t('walletProtectedByMultisig')}
                       </p>
                     </div>
                   </div>
@@ -1346,12 +1360,9 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
 
             <div className='max-w-lg px-4 text-center'>
               <h3 className='mb-3 text-xl font-semibold dark:text-white'>
-                Devices Successfully Paired
+                {t('devicesPairedTitle')}
               </h3>
-              <p className='text-gray-600 dark:text-gray-300'>
-                Perfect! Your browser and mobile are now connected with end-to-end encryption. You
-                can now send secure transactions.
-              </p>
+              <p className='text-gray-600 dark:text-gray-300'>{t('devicesPairedDescription')}</p>
             </div>
           </div>
         )
@@ -1370,16 +1381,18 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
               <div className='absolute inset-0 overflow-hidden rounded-lg'>
                 <div className='flex h-8 items-center border-b border-gray-200 bg-gray-100 px-3 dark:border-gray-600 dark:bg-gray-700'>
                   <Send className='mr-2 h-4 w-4 text-gray-600 dark:text-gray-300' />
-                  <div className='text-xs text-gray-600 dark:text-gray-300'>Send Transaction</div>
+                  <div className='text-xs text-gray-600 dark:text-gray-300'>
+                    {t('sendTransaction')}
+                  </div>
                 </div>
                 <div className='flex flex-col p-3 pt-5'>
                   <h3 className='mb-2 text-center text-base font-semibold dark:text-white'>
-                    Send Ethereum
+                    {t('sendEthereum')}
                   </h3>
                   <div className='flex-1 space-y-5'>
                     <div>
                       <label className='mb-1 block text-left text-sm text-gray-600 dark:text-gray-300'>
-                        Recipient Address
+                        {t('recipientAddressLabel')}
                       </label>
                       <input
                         type='text'
@@ -1390,7 +1403,7 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                     </div>
                     <div>
                       <label className='mb-1 block text-left text-sm text-gray-600 dark:text-gray-300'>
-                        Amount (ETH)
+                        {t('amountEthLabel')}
                       </label>
                       <input
                         type='text'
@@ -1401,21 +1414,21 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                     </div>
                     <div className='rounded border border-gray-200 bg-gray-50 p-2 text-left dark:border-gray-600 dark:bg-gray-700'>
                       <div className='mb-1 text-sm text-gray-600 dark:text-gray-300'>
-                        Transaction Summary
+                        {t('transactionSummary')}
                       </div>
                       <div className='space-y-1 text-sm'>
                         <div className='flex justify-between'>
-                          <span className='dark:text-gray-300'>Amount:</span>
+                          <span className='dark:text-gray-300'>{t('amountLabel')}</span>
                           <span className='font-semibold dark:text-white'>
                             {transactionAmount} ETH
                           </span>
                         </div>
                         <div className='flex justify-between'>
-                          <span className='dark:text-gray-300'>Gas Fee:</span>
+                          <span className='dark:text-gray-300'>{t('gasFeeLabel')}</span>
                           <span className='dark:text-gray-300'>~0.002 ETH ($6.00)</span>
                         </div>
                         <div className='mt-1 flex justify-between border-t border-gray-300 pt-1 dark:border-gray-600'>
-                          <span className='font-semibold dark:text-white'>Total:</span>
+                          <span className='font-semibold dark:text-white'>{t('totalLabel')}</span>
                           <span className='font-semibold dark:text-white'>
                             {(parseFloat(transactionAmount) + 0.002).toFixed(3)} ETH
                           </span>
@@ -1429,16 +1442,17 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                     onClick={goNext}
                     className='mt-5 w-full cursor-pointer rounded bg-blue-600 py-2 text-sm font-medium text-white'
                   >
-                    Send Transaction
+                    {t('sendTransactionButton')}
                   </motion.button>
                 </div>
               </div>
             </div>
             <div className='max-w-lg text-center'>
-              <h3 className='mb-3 text-xl font-semibold dark:text-white'>Create Transaction</h3>
+              <h3 className='mb-3 text-xl font-semibold dark:text-white'>
+                {t('createTransactionTitle')}
+              </h3>
               <p className='text-gray-600 dark:text-gray-300'>
-                Fill in the recipient address and amount. The transaction will require further
-                approval from your mobile device.
+                {t('createTransactionDescription')}
               </p>
             </div>
           </div>
@@ -1455,7 +1469,7 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                     <div className='flex items-center'>
                       <div className='mr-2 h-2 w-2 animate-pulse rounded-full bg-amber-500'></div>
                       <div className='text-xs text-gray-600 dark:text-gray-300'>
-                        Waiting for mobile approval...
+                        {t('waitingForMobileApproval')}
                       </div>
                     </div>
                   </div>
@@ -1465,18 +1479,22 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                       transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
                       className='mx-auto mb-3 h-12 w-12 rounded-full border-4 border-gray-200 border-t-amber-500'
                     ></motion.div>
-                    <h4 className='mb-2 font-semibold dark:text-white'>Pending Mobile Approval</h4>
+                    <h4 className='mb-2 font-semibold dark:text-white'>
+                      {t('pendingMobileApproval')}
+                    </h4>
                     <p className='mb-3 text-sm text-gray-600 dark:text-gray-300'>
-                      Signature 1/2 complete. Check your mobile device to approve the transaction.
+                      {t('signatureOneCompleteCheckMobile')}
                     </p>
 
                     <div className='mb-2 rounded border border-amber-200 bg-amber-50 p-2 dark:border-amber-700 dark:bg-amber-900/50'>
                       <div className='text-sm text-amber-800 dark:text-amber-200'>
-                        <div className='font-semibold'>Transaction Details</div>
+                        <div className='font-semibold'>{t('transactionDetails')}</div>
                         <div className='mt-1 text-xs'>
-                          Send {transactionAmount} ETH
+                          {t('sendAmount', { amount: transactionAmount })}
                           <br />
-                          To: {transactionAddress.substring(0, 20)}...
+                          {t('toAddress', {
+                            address: `${transactionAddress.substring(0, 20)}...`,
+                          })}
                         </div>
                       </div>
                     </div>
@@ -1484,7 +1502,7 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                     <div className='text-xs text-gray-500 dark:text-gray-400'>
                       <div className='flex items-center justify-center'>
                         <Smartphone className='mr-1 h-3 w-3' />
-                        Notification sent to mobile device
+                        {t('notificationSentToMobile')}
                       </div>
                     </div>
                   </div>
@@ -1501,7 +1519,7 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                   >
                     <div className='flex items-center text-xs'>
                       <Bell className='mr-1 h-3 w-3' />
-                      Transaction Approval Required
+                      {t('transactionApprovalRequired')}
                     </div>
                   </motion.div>
                 )}
@@ -1513,32 +1531,34 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                     <div className='mb-2 rounded bg-red-100 p-1 dark:bg-red-900/50'>
                       <div className='flex items-center text-red-800 dark:text-red-200'>
                         <Bell className='mr-2 h-5 w-5' />
-                        <span className='text-sm font-semibold'>Transaction Approval</span>
+                        <span className='text-sm font-semibold'>{t('transactionApproval')}</span>
                       </div>
                     </div>
 
                     <div className='space-y-1 text-sm'>
                       <div className='rounded bg-gray-50 p-1 dark:bg-gray-700'>
-                        <div className='text-gray-600 dark:text-gray-300'>Amount</div>
+                        <div className='text-gray-600 dark:text-gray-300'>{t('amount')}</div>
                         <div className='font-semibold dark:text-white'>{transactionAmount} ETH</div>
                         <div className='text-gray-500 dark:text-gray-400'>
                           ${(parseFloat(transactionAmount) * 3000).toFixed(2)}
                         </div>
                       </div>
                       <div className='rounded bg-gray-50 p-1 dark:bg-gray-700'>
-                        <div className='text-gray-600 dark:text-gray-300'>To Address</div>
+                        <div className='text-gray-600 dark:text-gray-300'>
+                          {t('toAddressLabel')}
+                        </div>
                         <div className='font-mono text-sm dark:text-white'>
                           {transactionAddress.substring(0, 18)}...
                         </div>
                       </div>
                       <div className='rounded bg-gray-50 p-1 dark:bg-gray-700'>
-                        <div className='text-gray-600 dark:text-gray-300'>Gas Fee</div>
+                        <div className='text-gray-600 dark:text-gray-300'>{t('gasFee')}</div>
                         <div className='font-semibold dark:text-white'>0.002 ETH</div>
                       </div>
                       <div className='rounded bg-gray-50 p-1 dark:bg-gray-700'>
-                        <div className='text-gray-600 dark:text-gray-300'>Status</div>
+                        <div className='text-gray-600 dark:text-gray-300'>{t('status')}</div>
                         <div className='font-semibold text-amber-600 dark:text-amber-400'>
-                          Awaiting Approval (2/2)
+                          {t('awaitingApproval')}
                         </div>
                       </div>
                     </div>
@@ -1553,14 +1573,14 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                         {biometricsEnabled ? (
                           <div className='flex items-center justify-center'>
                             <Fingerprint className='mr-2 h-4 w-4' />
-                            Approve with Touch ID
+                            {t('approveWithTouchId')}
                           </div>
                         ) : (
-                          'Approve (2/2)'
+                          t('approveTwoOfTwo')
                         )}
                       </motion.button>
                       <button className='w-full cursor-pointer rounded bg-gray-300 py-1 text-sm text-gray-700 dark:bg-gray-600 dark:text-gray-300'>
-                        Reject
+                        {t('reject')}
                       </button>
                     </div>
                   </div>
@@ -1570,11 +1590,12 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
 
             <div className='max-w-lg text-center'>
               <h3 className='mb-3 text-xl font-semibold dark:text-white'>
-                Mobile Confirmation Required
+                {t('mobileConfirmationTitle')}
               </h3>
               <p className='text-gray-600 dark:text-gray-300'>
-                A notification appeared on your mobile device. Review the transaction details and
-                approve with {biometricsEnabled ? 'biometric authentication' : 'your password'}.
+                {biometricsEnabled
+                  ? t('mobileConfirmationDescriptionBiometric')
+                  : t('mobileConfirmationDescriptionPassword')}
               </p>
             </div>
           </div>
@@ -1598,42 +1619,46 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                       <CheckCircle className='mx-auto mb-2 h-8 w-8 text-green-600' />
                     </motion.div>
                     <p className='text-sm font-semibold text-green-800 dark:text-green-200'>
-                      Transaction Broadcasted!
+                      {t('transactionBroadcasted')}
                     </p>
                   </div>
 
                   <div className='space-y-2 text-sm'>
                     <div className='mb-3 rounded bg-gray-50 p-2 dark:bg-gray-700'>
                       <div className='mb-1 text-gray-600 dark:text-gray-300'>
-                        Signatures Collected
+                        {t('signaturesCollected')}
                       </div>
                       <div className='space-y-1'>
                         <div className='flex items-center'>
                           <Check className='mr-2 h-4 w-4 text-green-600' />
-                          <span className='text-sm dark:text-gray-300'>Browser Wallet (1/2)</span>
+                          <span className='text-sm dark:text-gray-300'>
+                            {t('browserWalletOneOfTwo')}
+                          </span>
                         </div>
                         <div className='flex items-center'>
                           <Check className='mr-2 h-4 w-4 text-green-600' />
-                          <span className='text-sm dark:text-gray-300'>Mobile Key (2/2)</span>
+                          <span className='text-sm dark:text-gray-300'>
+                            {t('mobileKeyTwoOfTwo')}
+                          </span>
                         </div>
                       </div>
                     </div>
 
                     <div className='mb-3 rounded border border-yellow-200 bg-yellow-50 p-2 text-center dark:border-yellow-700 dark:bg-yellow-900/50'>
                       <div className='mb-1 font-semibold text-yellow-700 dark:text-yellow-300'>
-                        Network Status
+                        {t('networkStatus')}
                       </div>
                       <div className='text-sm text-yellow-800 dark:text-yellow-200'>
-                        Confirming on Ethereum network
+                        {t('confirmingOnEthereum')}
                       </div>
                       <div className='mt-1 text-xs text-yellow-600 dark:text-yellow-400'>
-                        Usually takes 1-3 minutes
+                        {t('usuallyTakesMinutes')}
                       </div>
                     </div>
 
                     <div className='rounded bg-gray-50 p-2 dark:bg-gray-700'>
                       <div className='mb-1 text-xs text-gray-600 dark:text-gray-300'>
-                        Transaction Hash
+                        {t('transactionHash')}
                       </div>
                       <div className='mb-2 font-mono text-xs text-gray-800 dark:text-gray-200'>
                         0xabc123...def789
@@ -1644,7 +1669,7 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                         }
                         className='w-full cursor-pointer rounded bg-blue-600 py-1.5 text-xs font-medium text-white hover:bg-blue-700'
                       >
-                        View on Etherscan
+                        {t('viewOnEtherscan')}
                       </button>
                     </div>
                   </div>
@@ -1653,10 +1678,11 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
             </div>
 
             <div className='max-w-lg text-center'>
-              <h3 className='mb-3 text-xl font-semibold dark:text-white'>Transaction Submitted</h3>
+              <h3 className='mb-3 text-xl font-semibold dark:text-white'>
+                {t('transactionSubmittedTitle')}
+              </h3>
               <p className='text-gray-600 dark:text-gray-300'>
-                Perfect! Both signatures collected and transaction broadcast to Ethereum. The
-                network is now mining and confirming your secure 2-of-2 multisig transaction.
+                {t('transactionSubmittedDescription')}
               </p>
             </div>
           </div>
@@ -1670,7 +1696,7 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                 <div className='flex h-8 items-center border-b border-green-200 bg-green-100 px-3 dark:border-green-700 dark:bg-green-900/50'>
                   <CheckCircle className='mr-2 h-4 w-4 text-green-600 dark:text-green-400' />
                   <div className='text-xs text-green-800 dark:text-green-200'>
-                    Transaction Confirmed
+                    {t('transactionConfirmed')}
                   </div>
                 </div>
                 <div className='flex h-full flex-col p-3 pt-2 text-center'>
@@ -1685,26 +1711,26 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                     </div>
                   </motion.div>
                   <h3 className='mb-2 text-base font-semibold text-green-800 dark:text-green-200'>
-                    Transaction Successful!
+                    {t('transactionSuccessful')}
                   </h3>
                   <p className='mb-2 text-xs text-gray-600 dark:text-gray-300'>
-                    Confirmed on Ethereum network.
+                    {t('confirmedOnEthereum')}
                   </p>
 
                   <div className='mb-2 rounded border border-gray-200 bg-gray-50 p-2 text-left dark:border-gray-600 dark:bg-gray-700'>
                     <div className='space-y-1 text-xs'>
                       <div className='flex justify-between'>
-                        <span className='text-gray-600 dark:text-gray-300'>Amount:</span>
+                        <span className='text-gray-600 dark:text-gray-300'>{t('amountLabel')}</span>
                         <span className='font-semibold dark:text-white'>
                           {transactionAmount} ETH
                         </span>
                       </div>
                       <div className='flex justify-between'>
-                        <span className='text-gray-600 dark:text-gray-300'>Gas Fee:</span>
+                        <span className='text-gray-600 dark:text-gray-300'>{t('gasFeeLabel')}</span>
                         <span className='dark:text-gray-300'>0.002 ETH</span>
                       </div>
                       <div className='flex justify-between border-t border-gray-300 pt-1 dark:border-gray-600'>
-                        <span className='text-gray-600 dark:text-gray-300'>Hash:</span>
+                        <span className='text-gray-600 dark:text-gray-300'>{t('hashLabel')}</span>
                         <span className='font-mono text-xs dark:text-gray-300'>
                           0xabc123...def789
                         </span>
@@ -1721,10 +1747,10 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                       }
                       className='w-full cursor-pointer rounded bg-blue-600 py-1.5 text-xs font-medium text-white'
                     >
-                      View on Etherscan
+                      {t('viewOnEtherscan')}
                     </motion.button>
                     <button className='w-full cursor-pointer rounded bg-gray-200 py-1.5 text-xs font-medium text-gray-700 dark:bg-gray-600 dark:text-gray-300'>
-                      Send Another Transaction
+                      {t('sendAnotherTransaction')}
                     </button>
                   </div>
                 </div>
@@ -1733,33 +1759,32 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
 
             <div className='max-w-2xl px-4 text-center'>
               <h3 className='mb-3 text-xl font-semibold dark:text-white'>
-                🎉 Transaction Complete!
+                {t('transactionCompleteCelebration')}
               </h3>
               <p className='mb-4 text-gray-600 dark:text-gray-300'>
-                Your funds have been securely transferred using true 2-of-2 multisignature
-                technology. Both devices were required to authorize and sign this transaction.
+                {t('fundsTransferredSummary')}
               </p>
 
               <div className='rounded-lg border border-blue-200 bg-blue-50 p-4 dark:border-blue-700 dark:bg-blue-900/50'>
                 <h4 className='mb-3 font-semibold text-blue-900 dark:text-blue-200'>
-                  Why This Is Ultra-Secure
+                  {t('whyUltraSecure')}
                 </h4>
                 <div className='grid grid-cols-2 gap-3 text-sm text-blue-800 dark:text-blue-200'>
                   <div className='flex items-center'>
                     <Shield className='mr-2 h-4 w-4 flex-shrink-0' />
-                    <span>2 separate devices required</span>
+                    <span>{t('twoSeparateDevices')}</span>
                   </div>
                   <div className='flex items-center'>
                     <Lock className='mr-2 h-4 w-4 flex-shrink-0' />
-                    <span>2 separate seed phrases</span>
+                    <span>{t('twoSeparateSeeds')}</span>
                   </div>
                   <div className='flex items-center'>
                     <Zap className='mr-2 h-4 w-4 flex-shrink-0' />
-                    <span>True multisignature (BIP48)</span>
+                    <span>{t('trueMultisigBip48')}</span>
                   </div>
                   <div className='flex items-center'>
                     <Eye className='mr-2 h-4 w-4 flex-shrink-0' />
-                    <span>Zero server storage</span>
+                    <span>{t('zeroServerStorage')}</span>
                   </div>
                 </div>
               </div>
@@ -1816,15 +1841,13 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
         <div className='from-primary-600 dark:from-primary-700 bg-gradient-to-r to-blue-600 p-6 text-white dark:to-blue-700'>
           <div className='flex items-center justify-between'>
             <div>
-              <h2 className='text-2xl font-bold'>Complete SSP Wallet Experience</h2>
-              <p className='text-primary-100 mt-1'>
-                Full setup and transaction flow with true 2-of-2 multisig security
-              </p>
+              <h2 className='text-2xl font-bold'>{t('modalTitle')}</h2>
+              <p className='text-primary-100 mt-1'>{t('modalSubtitle')}</p>
             </div>
             <button
               onClick={handleClose}
               className='flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-white/20 transition-colors hover:bg-white/30'
-              aria-label='Close demo'
+              aria-label={t('closeDemo')}
             >
               <X className='h-6 w-6' />
             </button>
@@ -1850,14 +1873,14 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                         index <= currentPhase ? 'text-white' : 'text-white/60'
                       }`}
                     >
-                      {phase.title}
+                      {t(phase.titleKey)}
                     </div>
                     <div
                       className={`text-xs ${
                         index <= currentPhase ? 'text-primary-100' : 'text-white/40'
                       }`}
                     >
-                      {phase.subtitle}
+                      {t(phase.subtitleKey)}
                     </div>
                   </div>
                   {index < phases.length - 1 && (
@@ -1909,12 +1932,18 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
             className='flex cursor-pointer items-center px-4 py-2 text-gray-600 hover:text-gray-800 disabled:cursor-not-allowed disabled:opacity-50 dark:text-gray-300 dark:hover:text-gray-100'
           >
             <ChevronLeft className='mr-1 h-4 w-4' />
-            Previous
+            {t('previous')}
           </button>
 
           <div className='flex items-center space-x-4'>
             <span className='text-sm text-gray-500 dark:text-gray-400'>
-              {currentPhaseData?.title} - Step {currentStep + 1} of {currentPhaseData?.steps ?? 0}
+              {currentPhaseData
+                ? t('stepCounter', {
+                    phase: t(currentPhaseData.titleKey),
+                    current: currentStep + 1,
+                    total: currentPhaseData.steps,
+                  })
+                : ''}
             </span>
 
             {isLastStep ? (
@@ -1923,14 +1952,14 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                   onClick={reset}
                   className='cursor-pointer px-4 py-2 text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-100'
                 >
-                  Restart Demo
+                  {t('restartDemo')}
                 </button>
                 <Link href='/download'>
                   <button
                     onClick={handleClose}
                     className='bg-primary-600 hover:bg-primary-700 cursor-pointer rounded-lg px-6 py-2 text-white transition-colors'
                   >
-                    Download SSP Wallet
+                    {t('downloadSspWallet')}
                   </button>
                 </Link>
               </div>
@@ -1939,7 +1968,7 @@ export function InteractiveDemo({ isOpen, onClose }: InteractiveDemoProps) {
                 onClick={goNext}
                 className='bg-primary-600 hover:bg-primary-700 flex cursor-pointer items-center rounded-lg px-6 py-2 text-white transition-colors'
               >
-                Next
+                {t('next')}
                 <ChevronRight className='ml-1 h-4 w-4' />
               </button>
             )}
