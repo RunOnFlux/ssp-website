@@ -875,5 +875,313 @@
       "successDescription": "Thank you for contacting us. We'll get back to you as soon as possible.",
       "successAgain": "Send another message"
     }
+  },
+  "Enterprise": {
+    "metaTitle": "SSP Enterprise | Self-Custody Multisig for Business",
+    "metaDescription": "Self-custody M-of-N multisig vaults for business treasuries. Policy engine, spending limits, two-device signing, role-based access. No custodians, no MPC.",
+    "breadcrumbLabel": "Enterprise",
+    "heroBadge": "SSP Enterprise",
+    "heroTitlePart1": "Self-Custody",
+    "heroTitlePart2": "for Business",
+    "heroDescription": "M-of-N multisig vaults for your organization. Every signer uses two devices — browser extension and mobile app. No custodians. No MPC. No single point of failure.",
+    "heroLaunchApp": "Launch Enterprise App",
+    "heroHowItWorks": "How It Works",
+    "fluxBanner": {
+      "imageAlt": "Flux Foundation",
+      "eyebrow": "In production with Flux Foundation",
+      "description": "Securing the Fusion bridge and Foundation treasury across BTC, ETH, FLUX, and EVM L2s.",
+      "cta": "Read the case study"
+    },
+    "problem": {
+      "title": "The Problem",
+      "subtitle": "Businesses holding crypto today face impossible trade-offs",
+      "items": {
+        "0": {
+          "title": "Custodial Solutions",
+          "problem": "Trust a third party with your keys",
+          "risks": {
+            "0": "Counterparty risk (FTX, Celsius)",
+            "1": "Account freezes without warning",
+            "2": "Vendor lock-in and high fees"
+          }
+        },
+        "1": {
+          "title": "MPC Providers",
+          "problem": "Key shards on vendor servers",
+          "risks": {
+            "0": "Vendor shuts down, you scramble",
+            "1": "Cannot verify their infrastructure",
+            "2": "Still a trust dependency"
+          }
+        },
+        "2": {
+          "title": "Single Hardware Wallet",
+          "problem": "One person, one device",
+          "risks": {
+            "0": "Key person risk",
+            "1": "No team governance",
+            "2": "Lost device = lost funds"
+          }
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "True self-custody at enterprise scale — no compromises",
+      "steps": {
+        "0": {
+          "title": "Create Your Organization",
+          "description": "Set up your organization using your SSP Identity — a cryptographic proof derived from your devices, not just an email."
+        },
+        "1": {
+          "title": "Invite Your Team",
+          "description": "Add team members by their SSP Identity. Assign roles: Owner, Admin, Member, or Viewer. Every member needs SSP Wallet + SSP Key."
+        },
+        "2": {
+          "title": "Create Multisig Vaults",
+          "description": "Configure M-of-N vaults for different purposes — operations, treasury, payroll. Choose which signers are required."
+        },
+        "3": {
+          "title": "Sign Together",
+          "description": "Propose transactions through the web app. Each required signer approves with both their browser extension and mobile app. Broadcast when threshold is met."
+        }
+      },
+      "diagramTitle": "Signing Architecture",
+      "diagramSubtitle": "Every signature requires two devices per signer",
+      "signerLabel": "Signer {label}",
+      "signedLabel": "Signed",
+      "waitingLabel": "Waiting",
+      "thresholdLabel": "2 of 3 threshold met — ready to broadcast"
+    },
+    "features": {
+      "title": "Enterprise Features",
+      "subtitle": "Everything your organization needs for secure crypto management",
+      "readGuide": "Read the guide",
+      "items": {
+        "0": {
+          "title": "M-of-N Multisig Vaults",
+          "description": "Configure any signing threshold for your team. 2-of-3, 3-of-5, or any combination that fits your governance model."
+        },
+        "1": {
+          "title": "Role-Based Access",
+          "description": "Owner, Admin, Member, and Viewer roles. Control who can propose, sign, or simply observe transactions."
+        },
+        "2": {
+          "title": "Two-Device Signing",
+          "description": "Every signer uses both a browser extension and a mobile app. Two keys per person, M-of-N across your team."
+        },
+        "3": {
+          "title": "Multi-Chain Support",
+          "description": "Bitcoin, Ethereum, Litecoin, Dogecoin, Flux, Polygon, BSC, Base, Avalanche, and more. One platform for all chains."
+        },
+        "4": {
+          "title": "Transaction Proposals",
+          "description": "Propose transactions with full details. Team members review, approve, or reject. Broadcast only when threshold is met."
+        },
+        "5": {
+          "title": "Complete Audit Trail",
+          "description": "Every action logged permanently. Member changes, vault operations, transaction approvals — full accountability."
+        }
+      }
+    },
+    "policy": {
+      "title": "Transaction Policy Engine",
+      "subtitle": "Granular controls that cascade from organization to vault to individual signer. Stricter policy always wins.",
+      "tiers": {
+        "organization": "Organization",
+        "organizationSub": "Default policies",
+        "vault": "Vault",
+        "vaultSub": "Override & refine",
+        "signer": "Signer",
+        "signerSub": "Individual limits"
+      },
+      "tierFooter": "Policies merge top-down — the stricter limit at any tier is enforced",
+      "readMore": "Read more",
+      "items": {
+        "0": {
+          "title": "Spending Limits",
+          "description": "Per-transaction, daily, weekly, and monthly limits. Set in USD or native token. Aggregate and per-token controls."
+        },
+        "1": {
+          "title": "Address Whitelist",
+          "description": "Three modes: disabled, warn, or enforce. Label addresses, restrict by chain. Block unknown destinations entirely."
+        },
+        "2": {
+          "title": "Time-Lock Delays",
+          "description": "Configurable waiting period before broadcast. Trigger automatically above a USD threshold. Cancel before execution."
+        },
+        "3": {
+          "title": "Admin Approval",
+          "description": "Require admin sign-off on high-value transactions. Set a USD threshold — anything above it needs explicit approval."
+        },
+        "4": {
+          "title": "Per-Signer Overrides",
+          "description": "Set individual spending limits for each team member. Junior traders get tighter controls, senior execs get higher limits."
+        },
+        "5": {
+          "title": "Velocity Tracking",
+          "description": "Rolling 30-day spending windows per vault, per signer, and per token. Automatic enforcement with TTL-based cleanup."
+        },
+        "6": {
+          "title": "Emergency Vault Freeze",
+          "description": "Instantly freeze any vault with dual-device WK signing. Blocks all proposals until unfrozen. Incident response in seconds."
+        },
+        "7": {
+          "title": "3-Tier Policy Hierarchy",
+          "description": "Organization defaults cascade to vaults and signers. Vault-level overrides refine the rules. Stricter policy always wins."
+        }
+      },
+      "footerStrong": "3-tier policy hierarchy with 14+ configurable controls",
+      "footerSuffix": "— included in every plan."
+    },
+    "security": {
+      "title": "5-Layer Security",
+      "subtitle": "Defense in depth — every layer must be compromised for a breach",
+      "layerLabel": "Layer {n}: {name}",
+      "layers": {
+        "0": {
+          "name": "Device Security",
+          "description": "OS-level security, biometric auth, secure enclaves on mobile"
+        },
+        "1": {
+          "name": "Dual-Device 2FA",
+          "description": "Browser extension + mobile app required for every signature"
+        },
+        "2": {
+          "name": "On-Chain Multisig",
+          "description": "Native Bitcoin multisig and EVM smart contract verification"
+        },
+        "3": {
+          "name": "Business Policies",
+          "description": "Spending limits, address whitelists, time-locks, admin approvals, per-signer overrides, velocity tracking — 14+ configurable controls"
+        },
+        "4": {
+          "name": "Audit & Compliance",
+          "description": "Immutable logs, login tracking, and compliance reporting"
+        }
+      },
+      "footerBefore": "SSP Wallet is open source and ",
+      "footerLink": "audited by Halborn",
+      "footerAfter": ". Verify the code yourself."
+    },
+    "comparison": {
+      "title": "How We Compare",
+      "subtitle": "SSP Enterprise vs. the alternatives",
+      "columns": {
+        "feature": "Feature",
+        "ssp": "SSP Enterprise"
+      },
+      "values": {
+        "partial": "Partial"
+      },
+      "rows": {
+        "0": "True Self-Custody",
+        "1": "Multi-Chain",
+        "2": "On-Chain Multisig",
+        "3": "Transaction Policy Engine",
+        "4": "Mobile Signing",
+        "5": "Open Source",
+        "6": "No Vendor Lock-in",
+        "7": "Affordable"
+      },
+      "annualCostLabel": "Annual Cost",
+      "annualCostSsp": "Free*",
+      "annualCostFireblocks": "$100K+",
+      "annualCostBitgo": "$50K+",
+      "annualCostSafe": "Gas fees",
+      "footnoteBefore": "* Open-source wallet is free. Enterprise platform has a free tier to get started. ",
+      "footnoteLink": "Contact sales",
+      "footnoteAfter": " for custom plans.",
+      "migrationLabel": "Already on one of these? See the migration guide:",
+      "migrationFireblocks": "From Fireblocks",
+      "migrationSafe": "From Safe",
+      "migrationBitgo": "From BitGo"
+    },
+    "useCases": {
+      "title": "Built For",
+      "subtitle": "Any organization that holds crypto and needs team-based signing",
+      "readPlaybook": "Read the playbook",
+      "items": {
+        "0": {
+          "title": "Corporate Treasury",
+          "description": "Multi-signature approval for company funds. CEO + CFO + Board = 2-of-3.",
+          "example": "3 executives, 2 required to sign"
+        },
+        "1": {
+          "title": "DAO Treasury",
+          "description": "Decentralized decision-making with on-chain security for community funds.",
+          "example": "5 council members, 3 required"
+        },
+        "2": {
+          "title": "Investment Funds",
+          "description": "Institutional-grade self-custody for fund managers and limited partners.",
+          "example": "Fund manager + compliance + LP"
+        },
+        "3": {
+          "title": "Partnerships & JVs",
+          "description": "Shared control between partners with clear accountability and audit trails.",
+          "example": "Equal control, transparent ops"
+        }
+      }
+    },
+    "chains": {
+      "title": "Multi-Chain Native",
+      "subtitle": "One platform for all your chains — UTXO and EVM",
+      "footer": "More chains added regularly. All ERC-20 tokens supported on EVM chains."
+    },
+    "contact": {
+      "title": "Contact Sales",
+      "subtitle": "Need a custom Enterprise plan, dedicated support, or priority onboarding? Get in touch with our team.",
+      "launchApp": "Launch Enterprise App",
+      "scheduleCall": "Schedule a Call",
+      "directContactStrong": "Prefer direct contact?",
+      "directContactBefore": " Reach out to ",
+      "directContactBetween": " or DM ",
+      "directContactAfter": " on X."
+    },
+    "form": {
+      "fullNameLabel": "Full Name *",
+      "fullNamePlaceholder": "Your full name",
+      "emailLabel": "Email Address *",
+      "emailPlaceholder": "your.email@company.com",
+      "companyLabel": "Company / Organization",
+      "companyPlaceholder": "Your company name",
+      "teamSizeLabel": "Team Size",
+      "teamSizePlaceholder": "Select team size",
+      "teamSizeOptions": {
+        "2-5": "2-5 signers",
+        "6-10": "6-10 signers",
+        "11-25": "11-25 signers",
+        "25+": "25+ signers"
+      },
+      "useCaseLabel": "Primary Use Case",
+      "useCasePlaceholder": "Select use case",
+      "useCaseOptions": {
+        "corporate-treasury": "Corporate Treasury",
+        "dao-treasury": "DAO Treasury",
+        "investment-fund": "Investment Fund",
+        "partnership": "Partnership / Joint Venture",
+        "otc-desk": "OTC Desk",
+        "mining-operation": "Mining Operation",
+        "exchange": "Exchange",
+        "other": "Other"
+      },
+      "messageLabel": "Tell Us About Your Needs",
+      "messagePlaceholder": "What challenges are you facing with crypto custody? What features matter most to your team?",
+      "submitting": "Sending Request...",
+      "submit": "Get Started",
+      "errorFallback": "Failed to send request. Please try again.",
+      "errorGeneric": "Failed to send request",
+      "successTitle": "Request Received!",
+      "successDescription": "Thank you for your interest in SSP Enterprise. We'll be in touch soon.",
+      "successAgain": "Submit another request"
+    },
+    "finalCta": {
+      "title": "Your Keys. Your Rules.",
+      "description": "SSP Enterprise gives your organization the security of self-custody with the governance of enterprise software. No custodians. No middlemen. No compromises.",
+      "launchApp": "Launch Enterprise App",
+      "downloadWallet": "Download SSP Wallet",
+      "exploreFeatures": "Explore All Features"
+    }
   }
 }

@@ -17,6 +17,7 @@ import {
   KeyRound,
   Layers,
   Lock,
+  type LucideIcon,
   Send,
   Shield,
   ShieldAlert,
@@ -29,207 +30,79 @@ import {
   X,
 } from 'lucide-react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { Link } from '@/i18n/navigation'
 
 const DOCS_BASE = 'https://docs.sspwallet.io/enterprise'
-
-const features = [
-  {
-    title: 'M-of-N Multisig Vaults',
-    description:
-      'Configure any signing threshold for your team. 2-of-3, 3-of-5, or any combination that fits your governance model.',
-    icon: Vault,
-    docsUrl: `${DOCS_BASE}/creating-vaults`,
-  },
-  {
-    title: 'Role-Based Access',
-    description:
-      'Owner, Admin, Member, and Viewer roles. Control who can propose, sign, or simply observe transactions.',
-    icon: Users,
-    docsUrl: `${DOCS_BASE}/inviting-members`,
-  },
-  {
-    title: 'Two-Device Signing',
-    description:
-      'Every signer uses both a browser extension and a mobile app. Two keys per person, M-of-N across your team.',
-    icon: Smartphone,
-    docsUrl: `${DOCS_BASE}/getting-started`,
-  },
-  {
-    title: 'Multi-Chain Support',
-    description:
-      'Bitcoin, Ethereum, Litecoin, Dogecoin, Flux, Polygon, BSC, Base, Avalanche, and more. One platform for all chains.',
-    icon: Globe,
-    docsUrl: `${DOCS_BASE}/creating-vaults`,
-  },
-  {
-    title: 'Transaction Proposals',
-    description:
-      'Propose transactions with full details. Team members review, approve, or reject. Broadcast only when threshold is met.',
-    icon: ClipboardCheck,
-    docsUrl: `${DOCS_BASE}/transactions`,
-  },
-  {
-    title: 'Complete Audit Trail',
-    description:
-      'Every action logged permanently. Member changes, vault operations, transaction approvals — full accountability.',
-    icon: Eye,
-    docsUrl: `${DOCS_BASE}/transactions`,
-  },
-]
-
 const POLICIES_DOCS = `${DOCS_BASE}/policies`
 
-const policyFeatures = [
-  {
-    title: 'Spending Limits',
-    description:
-      'Per-transaction, daily, weekly, and monthly limits. Set in USD or native token. Aggregate and per-token controls.',
-    icon: DollarSign,
-    docsUrl: `${POLICIES_DOCS}#spending-limits`,
-  },
-  {
-    title: 'Address Whitelist',
-    description:
-      'Three modes: disabled, warn, or enforce. Label addresses, restrict by chain. Block unknown destinations entirely.',
-    icon: Ban,
-    docsUrl: `${POLICIES_DOCS}#address-whitelist`,
-  },
-  {
-    title: 'Time-Lock Delays',
-    description:
-      'Configurable waiting period before broadcast. Trigger automatically above a USD threshold. Cancel before execution.',
-    icon: Clock,
-    docsUrl: `${POLICIES_DOCS}#time-lock-delays`,
-  },
-  {
-    title: 'Admin Approval',
-    description:
-      'Require admin sign-off on high-value transactions. Set a USD threshold — anything above it needs explicit approval.',
-    icon: ShieldAlert,
-    docsUrl: `${POLICIES_DOCS}#admin-approval`,
-  },
-  {
-    title: 'Per-Signer Overrides',
-    description:
-      'Set individual spending limits for each team member. Junior traders get tighter controls, senior execs get higher limits.',
-    icon: UserCog,
-    docsUrl: `${POLICIES_DOCS}#per-signer-spending-limits-vault-policies`,
-  },
-  {
-    title: 'Velocity Tracking',
-    description:
-      'Rolling 30-day spending windows per vault, per signer, and per token. Automatic enforcement with TTL-based cleanup.',
-    icon: Gauge,
-    docsUrl: `${POLICIES_DOCS}#velocity-tracking`,
-  },
-  {
-    title: 'Emergency Vault Freeze',
-    description:
-      'Instantly freeze any vault with dual-device WK signing. Blocks all proposals until unfrozen. Incident response in seconds.',
-    icon: Snowflake,
-    docsUrl: `${POLICIES_DOCS}#emergency-vault-freeze`,
-  },
-  {
-    title: '3-Tier Policy Hierarchy',
-    description:
-      'Organization defaults cascade to vaults and signers. Vault-level overrides refine the rules. Stricter policy always wins.',
-    icon: Layers,
-    docsUrl: `${POLICIES_DOCS}#policy-hierarchy-in-practice`,
-  },
+interface FeatureDescriptor {
+  icon: LucideIcon
+  docsUrl?: string
+}
+
+const features: FeatureDescriptor[] = [
+  { icon: Vault, docsUrl: `${DOCS_BASE}/creating-vaults` },
+  { icon: Users, docsUrl: `${DOCS_BASE}/inviting-members` },
+  { icon: Smartphone, docsUrl: `${DOCS_BASE}/getting-started` },
+  { icon: Globe, docsUrl: `${DOCS_BASE}/creating-vaults` },
+  { icon: ClipboardCheck, docsUrl: `${DOCS_BASE}/transactions` },
+  { icon: Eye, docsUrl: `${DOCS_BASE}/transactions` },
 ]
 
-const securityLayers = [
-  {
-    layer: 'Device Security',
-    description: 'OS-level security, biometric auth, secure enclaves on mobile',
-    icon: Smartphone,
-  },
-  {
-    layer: 'Dual-Device 2FA',
-    description: 'Browser extension + mobile app required for every signature',
-    icon: KeyRound,
-  },
-  {
-    layer: 'On-Chain Multisig',
-    description: 'Native Bitcoin multisig and EVM smart contract verification',
-    icon: Shield,
-  },
-  {
-    layer: 'Business Policies',
-    description:
-      'Spending limits, address whitelists, time-locks, admin approvals, per-signer overrides, velocity tracking — 14+ configurable controls',
-    icon: ClipboardCheck,
-  },
-  {
-    layer: 'Audit & Compliance',
-    description: 'Immutable logs, login tracking, and compliance reporting',
-    icon: Eye,
-  },
+const policyFeatures: FeatureDescriptor[] = [
+  { icon: DollarSign, docsUrl: `${POLICIES_DOCS}#spending-limits` },
+  { icon: Ban, docsUrl: `${POLICIES_DOCS}#address-whitelist` },
+  { icon: Clock, docsUrl: `${POLICIES_DOCS}#time-lock-delays` },
+  { icon: ShieldAlert, docsUrl: `${POLICIES_DOCS}#admin-approval` },
+  { icon: UserCog, docsUrl: `${POLICIES_DOCS}#per-signer-spending-limits-vault-policies` },
+  { icon: Gauge, docsUrl: `${POLICIES_DOCS}#velocity-tracking` },
+  { icon: Snowflake, docsUrl: `${POLICIES_DOCS}#emergency-vault-freeze` },
+  { icon: Layers, docsUrl: `${POLICIES_DOCS}#policy-hierarchy-in-practice` },
 ]
 
-const useCases = [
-  {
-    title: 'Corporate Treasury',
-    description: 'Multi-signature approval for company funds. CEO + CFO + Board = 2-of-3.',
-    example: '3 executives, 2 required to sign',
-    docsUrl: `${DOCS_BASE}/use-cases/corporate-treasury`,
-  },
-  {
-    title: 'DAO Treasury',
-    description: 'Decentralized decision-making with on-chain security for community funds.',
-    example: '5 council members, 3 required',
-    docsUrl: `${DOCS_BASE}/use-cases/dao-treasury`,
-  },
-  {
-    title: 'Investment Funds',
-    description: 'Institutional-grade self-custody for fund managers and limited partners.',
-    example: 'Fund manager + compliance + LP',
-    docsUrl: `${DOCS_BASE}/use-cases`,
-  },
-  {
-    title: 'Partnerships & JVs',
-    description: 'Shared control between partners with clear accountability and audit trails.',
-    example: 'Equal control, transparent ops',
-    docsUrl: `${DOCS_BASE}/use-cases`,
-  },
+const securityLayerIcons: LucideIcon[] = [Smartphone, KeyRound, Shield, ClipboardCheck, Eye]
+
+const useCaseDocsUrls = [
+  `${DOCS_BASE}/use-cases/corporate-treasury`,
+  `${DOCS_BASE}/use-cases/dao-treasury`,
+  `${DOCS_BASE}/use-cases`,
+  `${DOCS_BASE}/use-cases`,
 ]
+
+const problemIcons: LucideIcon[] = [Lock, Layers, KeyRound]
 
 type ComparisonCell = boolean | 'partial'
 
 const comparisonData: Array<{
-  feature: string
   ssp: ComparisonCell
   fireblocks: ComparisonCell
   bitgo: ComparisonCell
   safe: ComparisonCell
 }> = [
-  { feature: 'True Self-Custody', ssp: true, fireblocks: false, bitgo: 'partial', safe: true },
-  { feature: 'Multi-Chain', ssp: true, fireblocks: true, bitgo: true, safe: false },
-  { feature: 'On-Chain Multisig', ssp: true, fireblocks: false, bitgo: 'partial', safe: true },
-  {
-    feature: 'Transaction Policy Engine',
-    ssp: true,
-    fireblocks: true,
-    bitgo: 'partial',
-    safe: false,
-  },
-  { feature: 'Mobile Signing', ssp: true, fireblocks: 'partial', bitgo: 'partial', safe: false },
-  { feature: 'Open Source', ssp: true, fireblocks: false, bitgo: false, safe: true },
-  { feature: 'No Vendor Lock-in', ssp: true, fireblocks: false, bitgo: false, safe: true },
-  { feature: 'Affordable', ssp: true, fireblocks: false, bitgo: false, safe: true },
+  { ssp: true, fireblocks: false, bitgo: 'partial', safe: true },
+  { ssp: true, fireblocks: true, bitgo: true, safe: false },
+  { ssp: true, fireblocks: false, bitgo: 'partial', safe: true },
+  { ssp: true, fireblocks: true, bitgo: 'partial', safe: false },
+  { ssp: true, fireblocks: 'partial', bitgo: 'partial', safe: false },
+  { ssp: true, fireblocks: false, bitgo: false, safe: true },
+  { ssp: true, fireblocks: false, bitgo: false, safe: true },
+  { ssp: true, fireblocks: false, bitgo: false, safe: true },
 ]
 
 function ComparisonValue({ value }: { value: ComparisonCell }) {
+  const t = useTranslations('Enterprise.comparison.values')
   if (value === true) {
     return <CheckCircle className='mx-auto h-5 w-5 text-green-500' />
   }
   if (value === false) {
     return <X className='mx-auto h-5 w-5 text-red-400' />
   }
-  return <span className='text-sm font-medium text-yellow-500 dark:text-yellow-400'>Partial</span>
+  return (
+    <span className='text-sm font-medium text-yellow-500 dark:text-yellow-400'>{t('partial')}</span>
+  )
 }
 
 const supportedChains = [
@@ -257,6 +130,7 @@ interface ContactFormState {
 }
 
 function ContactForm() {
+  const t = useTranslations('Enterprise.form')
   const [formData, setFormData] = useState<ContactFormState>({
     name: '',
     email: '',
@@ -291,7 +165,7 @@ function ContactForm() {
       const result = await response.json()
 
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to send request')
+        throw new Error(result.error || t('errorGeneric'))
       }
 
       setIsSubmitted(true)
@@ -304,8 +178,7 @@ function ContactForm() {
         message: '',
       })
     } catch (err) {
-      const message =
-        err instanceof Error ? err.message : 'Failed to send request. Please try again.'
+      const message = err instanceof Error ? err.message : t('errorFallback')
       setError(message)
     } finally {
       setIsSubmitting(false)
@@ -330,17 +203,15 @@ function ContactForm() {
       >
         <CheckCircle className='mx-auto mb-4 h-16 w-16 text-green-500' />
         <h3 className='mb-2 text-xl font-semibold text-green-900 dark:text-green-100'>
-          Request Received!
+          {t('successTitle')}
         </h3>
-        <p className='mb-4 text-green-700 dark:text-green-300'>
-          Thank you for your interest in SSP Enterprise. We&apos;ll be in touch soon.
-        </p>
+        <p className='mb-4 text-green-700 dark:text-green-300'>{t('successDescription')}</p>
         <button
           type='button'
           onClick={() => setIsSubmitted(false)}
           className='text-green-600 hover:underline dark:text-green-400'
         >
-          Submit another request
+          {t('successAgain')}
         </button>
       </motion.div>
     )
@@ -354,7 +225,7 @@ function ContactForm() {
             htmlFor='name'
             className='mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300'
           >
-            Full Name *
+            {t('fullNameLabel')}
           </label>
           <input
             type='text'
@@ -364,7 +235,7 @@ function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             className='focus:ring-primary-500 dark:bg-dark-700 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
-            placeholder='Your full name'
+            placeholder={t('fullNamePlaceholder')}
           />
         </div>
 
@@ -373,7 +244,7 @@ function ContactForm() {
             htmlFor='email'
             className='mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300'
           >
-            Email Address *
+            {t('emailLabel')}
           </label>
           <input
             type='email'
@@ -383,7 +254,7 @@ function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             className='focus:ring-primary-500 dark:bg-dark-700 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
-            placeholder='your.email@company.com'
+            placeholder={t('emailPlaceholder')}
           />
         </div>
       </div>
@@ -394,7 +265,7 @@ function ContactForm() {
             htmlFor='company'
             className='mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300'
           >
-            Company / Organization
+            {t('companyLabel')}
           </label>
           <input
             type='text'
@@ -403,7 +274,7 @@ function ContactForm() {
             value={formData.company}
             onChange={handleChange}
             className='focus:ring-primary-500 dark:bg-dark-700 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
-            placeholder='Your company name'
+            placeholder={t('companyPlaceholder')}
           />
         </div>
 
@@ -412,7 +283,7 @@ function ContactForm() {
             htmlFor='teamSize'
             className='mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300'
           >
-            Team Size
+            {t('teamSizeLabel')}
           </label>
           <select
             id='teamSize'
@@ -421,11 +292,11 @@ function ContactForm() {
             onChange={handleChange}
             className='focus:ring-primary-500 dark:bg-dark-700 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
           >
-            <option value=''>Select team size</option>
-            <option value='2-5'>2-5 signers</option>
-            <option value='6-10'>6-10 signers</option>
-            <option value='11-25'>11-25 signers</option>
-            <option value='25+'>25+ signers</option>
+            <option value=''>{t('teamSizePlaceholder')}</option>
+            <option value='2-5'>{t('teamSizeOptions.2-5')}</option>
+            <option value='6-10'>{t('teamSizeOptions.6-10')}</option>
+            <option value='11-25'>{t('teamSizeOptions.11-25')}</option>
+            <option value='25+'>{t('teamSizeOptions.25+')}</option>
           </select>
         </div>
       </div>
@@ -435,7 +306,7 @@ function ContactForm() {
           htmlFor='useCase'
           className='mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300'
         >
-          Primary Use Case
+          {t('useCaseLabel')}
         </label>
         <select
           id='useCase'
@@ -444,15 +315,15 @@ function ContactForm() {
           onChange={handleChange}
           className='focus:ring-primary-500 dark:bg-dark-700 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
         >
-          <option value=''>Select use case</option>
-          <option value='corporate-treasury'>Corporate Treasury</option>
-          <option value='dao-treasury'>DAO Treasury</option>
-          <option value='investment-fund'>Investment Fund</option>
-          <option value='partnership'>Partnership / Joint Venture</option>
-          <option value='otc-desk'>OTC Desk</option>
-          <option value='mining-operation'>Mining Operation</option>
-          <option value='exchange'>Exchange</option>
-          <option value='other'>Other</option>
+          <option value=''>{t('useCasePlaceholder')}</option>
+          <option value='corporate-treasury'>{t('useCaseOptions.corporate-treasury')}</option>
+          <option value='dao-treasury'>{t('useCaseOptions.dao-treasury')}</option>
+          <option value='investment-fund'>{t('useCaseOptions.investment-fund')}</option>
+          <option value='partnership'>{t('useCaseOptions.partnership')}</option>
+          <option value='otc-desk'>{t('useCaseOptions.otc-desk')}</option>
+          <option value='mining-operation'>{t('useCaseOptions.mining-operation')}</option>
+          <option value='exchange'>{t('useCaseOptions.exchange')}</option>
+          <option value='other'>{t('useCaseOptions.other')}</option>
         </select>
       </div>
 
@@ -461,7 +332,7 @@ function ContactForm() {
           htmlFor='message'
           className='mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300'
         >
-          Tell Us About Your Needs
+          {t('messageLabel')}
         </label>
         <textarea
           id='message'
@@ -470,7 +341,7 @@ function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           className='focus:ring-primary-500 dark:bg-dark-700 w-full resize-none rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
-          placeholder='What challenges are you facing with crypto custody? What features matter most to your team?'
+          placeholder={t('messagePlaceholder')}
         />
       </div>
 
@@ -489,12 +360,12 @@ function ContactForm() {
         {isSubmitting ? (
           <>
             <div className='mr-2 h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent'></div>
-            Sending Request...
+            {t('submitting')}
           </>
         ) : (
           <>
             <Send className='mr-2 h-4 w-4' />
-            Get Started
+            {t('submit')}
           </>
         )}
       </button>
@@ -503,6 +374,7 @@ function ContactForm() {
 }
 
 export function EnterpriseContent() {
+  const t = useTranslations('Enterprise')
   const [heroRef, heroInView] = useInView({ threshold: 0.3, triggerOnce: true })
 
   const containerVariants = {
@@ -537,18 +409,17 @@ export function EnterpriseContent() {
           >
             <div className='bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300 mb-6 inline-flex items-center rounded-full px-4 py-2 text-sm font-medium'>
               <Building2 className='mr-2 h-4 w-4' />
-              SSP Enterprise
+              {t('heroBadge')}
             </div>
 
             <h1 className='heading-1 mb-6 text-gray-900 dark:text-white'>
-              Self-Custody
+              {t('heroTitlePart1')}
               <br />
-              <span className='gradient-text'>for Business</span>
+              <span className='gradient-text'>{t('heroTitlePart2')}</span>
             </h1>
 
             <p className='mx-auto mb-8 max-w-3xl text-xl text-gray-600 dark:text-gray-400'>
-              M-of-N multisig vaults for your organization. Every signer uses two devices — browser
-              extension and mobile app. No custodians. No MPC. No single point of failure.
+              {t('heroDescription')}
             </p>
 
             <div className='flex flex-col items-center justify-center gap-4 sm:flex-row'>
@@ -558,11 +429,11 @@ export function EnterpriseContent() {
                 rel='noopener noreferrer'
                 className='btn btn-primary'
               >
-                Launch Enterprise App
+                {t('heroLaunchApp')}
                 <ArrowRight className='ml-2 h-4 w-4' />
               </Link>
               <Link href='#how-it-works' className='btn btn-secondary'>
-                How It Works
+                {t('heroHowItWorks')}
                 <ChevronRight className='ml-2 h-4 w-4' />
               </Link>
             </div>
@@ -570,7 +441,7 @@ export function EnterpriseContent() {
         </div>
       </section>
 
-      {/* In production with — Flux Foundation case study link */}
+      {/* Flux Foundation banner */}
       <section className='dark:bg-dark-800 border-y border-gray-200 bg-gray-50 py-10 dark:border-gray-700'>
         <div className='container-custom'>
           <motion.div
@@ -587,7 +458,7 @@ export function EnterpriseContent() {
               <div className='dark:bg-dark-700/60 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl bg-gray-50 p-2'>
                 <Image
                   src='/flux-symbol.svg'
-                  alt='Flux Foundation'
+                  alt={t('fluxBanner.imageAlt')}
                   width={40}
                   height={40}
                   className='h-10 w-10'
@@ -595,15 +466,14 @@ export function EnterpriseContent() {
               </div>
               <div className='flex-1 text-center sm:text-left'>
                 <p className='text-primary-600 dark:text-primary-400 mb-0.5 text-xs font-semibold tracking-wider uppercase'>
-                  In production with Flux Foundation
+                  {t('fluxBanner.eyebrow')}
                 </p>
                 <p className='text-sm text-gray-700 md:text-base dark:text-gray-300'>
-                  Securing the Fusion bridge and Foundation treasury across BTC, ETH, FLUX, and EVM
-                  L2s.
+                  {t('fluxBanner.description')}
                 </p>
               </div>
               <span className='text-primary-600 group-hover:text-primary-700 dark:text-primary-400 inline-flex items-center text-sm font-medium whitespace-nowrap'>
-                Read the case study
+                {t('fluxBanner.cta')}
                 <ArrowRight className='ml-1 h-4 w-4 transition-transform group-hover:translate-x-1' />
               </span>
             </Link>
@@ -621,72 +491,42 @@ export function EnterpriseContent() {
             viewport={{ once: true }}
             className='mx-auto mb-16 max-w-3xl text-center'
           >
-            <h2 className='heading-2 mb-4'>The Problem</h2>
-            <p className='text-lg text-gray-600 dark:text-gray-400'>
-              Businesses holding crypto today face impossible trade-offs
-            </p>
+            <h2 className='heading-2 mb-4'>{t('problem.title')}</h2>
+            <p className='text-lg text-gray-600 dark:text-gray-400'>{t('problem.subtitle')}</p>
           </motion.div>
 
           <div className='grid gap-8 md:grid-cols-3'>
-            {[
-              {
-                title: 'Custodial Solutions',
-                problem: 'Trust a third party with your keys',
-                risks: [
-                  'Counterparty risk (FTX, Celsius)',
-                  'Account freezes without warning',
-                  'Vendor lock-in and high fees',
-                ],
-                icon: Lock,
-              },
-              {
-                title: 'MPC Providers',
-                problem: 'Key shards on vendor servers',
-                risks: [
-                  'Vendor shuts down, you scramble',
-                  'Cannot verify their infrastructure',
-                  'Still a trust dependency',
-                ],
-                icon: Layers,
-              },
-              {
-                title: 'Single Hardware Wallet',
-                problem: 'One person, one device',
-                risks: ['Key person risk', 'No team governance', 'Lost device = lost funds'],
-                icon: KeyRound,
-              },
-            ].map((item, index) => {
-              const ProblemIcon = item.icon
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className='dark:bg-dark-800 rounded-2xl border border-red-200/50 bg-white p-8 dark:border-red-900/30'
-                >
-                  <div className='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400'>
-                    <ProblemIcon className='h-6 w-6' />
-                  </div>
-                  <h3 className='mb-2 text-xl font-bold text-gray-900 dark:text-white'>
-                    {item.title}
-                  </h3>
-                  <p className='mb-4 font-medium text-red-600 dark:text-red-400'>{item.problem}</p>
-                  <ul className='space-y-2'>
-                    {item.risks.map((risk, i) => (
-                      <li
-                        key={i}
-                        className='flex items-start text-sm text-gray-600 dark:text-gray-400'
-                      >
-                        <X className='mt-0.5 mr-2 h-4 w-4 flex-shrink-0 text-red-400' />
-                        {risk}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              )
-            })}
+            {problemIcons.map((ProblemIcon, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='dark:bg-dark-800 rounded-2xl border border-red-200/50 bg-white p-8 dark:border-red-900/30'
+              >
+                <div className='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400'>
+                  <ProblemIcon className='h-6 w-6' />
+                </div>
+                <h3 className='mb-2 text-xl font-bold text-gray-900 dark:text-white'>
+                  {t(`problem.items.${index}.title`)}
+                </h3>
+                <p className='mb-4 font-medium text-red-600 dark:text-red-400'>
+                  {t(`problem.items.${index}.problem`)}
+                </p>
+                <ul className='space-y-2'>
+                  {[0, 1, 2].map(riskIdx => (
+                    <li
+                      key={riskIdx}
+                      className='flex items-start text-sm text-gray-600 dark:text-gray-400'
+                    >
+                      <X className='mt-0.5 mr-2 h-4 w-4 flex-shrink-0 text-red-400' />
+                      {t(`problem.items.${index}.risks.${riskIdx}`)}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -701,10 +541,8 @@ export function EnterpriseContent() {
             viewport={{ once: true }}
             className='mx-auto mb-16 max-w-3xl text-center'
           >
-            <h2 className='heading-2 mb-4'>How It Works</h2>
-            <p className='text-lg text-gray-600 dark:text-gray-400'>
-              True self-custody at enterprise scale — no compromises
-            </p>
+            <h2 className='heading-2 mb-4'>{t('howItWorks.title')}</h2>
+            <p className='text-lg text-gray-600 dark:text-gray-400'>{t('howItWorks.subtitle')}</p>
           </motion.div>
 
           <div className='grid items-center gap-12 lg:grid-cols-2'>
@@ -715,48 +553,25 @@ export function EnterpriseContent() {
               viewport={{ once: true }}
               className='space-y-8'
             >
-              {[
-                {
-                  step: '1',
-                  title: 'Create Your Organization',
-                  description:
-                    'Set up your organization using your SSP Identity — a cryptographic proof derived from your devices, not just an email.',
-                },
-                {
-                  step: '2',
-                  title: 'Invite Your Team',
-                  description:
-                    'Add team members by their SSP Identity. Assign roles: Owner, Admin, Member, or Viewer. Every member needs SSP Wallet + SSP Key.',
-                },
-                {
-                  step: '3',
-                  title: 'Create Multisig Vaults',
-                  description:
-                    'Configure M-of-N vaults for different purposes — operations, treasury, payroll. Choose which signers are required.',
-                },
-                {
-                  step: '4',
-                  title: 'Sign Together',
-                  description:
-                    'Propose transactions through the web app. Each required signer approves with both their browser extension and mobile app. Broadcast when threshold is met.',
-                },
-              ].map((item, index) => (
+              {[0, 1, 2, 3].map(stepIdx => (
                 <motion.div
-                  key={index}
+                  key={stepIdx}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  transition={{ duration: 0.3, delay: stepIdx * 0.1 }}
                   viewport={{ once: true }}
                   className='flex gap-4'
                 >
                   <div className='bg-primary-600 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold text-white'>
-                    {item.step}
+                    {stepIdx + 1}
                   </div>
                   <div>
                     <h3 className='mb-1 text-lg font-bold text-gray-900 dark:text-white'>
-                      {item.title}
+                      {t(`howItWorks.steps.${stepIdx}.title`)}
                     </h3>
-                    <p className='text-gray-600 dark:text-gray-400'>{item.description}</p>
+                    <p className='text-gray-600 dark:text-gray-400'>
+                      {t(`howItWorks.steps.${stepIdx}.description`)}
+                    </p>
                   </div>
                 </motion.div>
               ))}
@@ -771,21 +586,21 @@ export function EnterpriseContent() {
             >
               <div className='mb-6 text-center'>
                 <h3 className='mb-2 text-lg font-bold text-gray-900 dark:text-white'>
-                  Signing Architecture
+                  {t('howItWorks.diagramTitle')}
                 </h3>
                 <p className='text-sm text-gray-500 dark:text-gray-400'>
-                  Every signature requires two devices per signer
+                  {t('howItWorks.diagramSubtitle')}
                 </p>
               </div>
 
               <div className='space-y-6'>
                 {/* Signer visualization */}
-                {['Signer A', 'Signer B', 'Signer C'].map((signer, i) => (
+                {['A', 'B', 'C'].map((label, i) => (
                   <div key={i} className='flex items-center gap-3'>
                     <div
                       className={`flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold text-white ${i < 2 ? 'bg-primary-600' : 'bg-gray-400 dark:bg-gray-600'}`}
                     >
-                      {signer.split(' ')[1]}
+                      {label}
                     </div>
                     <div className='flex flex-1 items-center gap-2'>
                       <div
@@ -803,10 +618,12 @@ export function EnterpriseContent() {
                     <div className='w-16 text-right'>
                       {i < 2 ? (
                         <span className='text-xs font-medium text-green-600 dark:text-green-400'>
-                          Signed
+                          {t('howItWorks.signedLabel')}
                         </span>
                       ) : (
-                        <span className='text-xs text-gray-400'>Waiting</span>
+                        <span className='text-xs text-gray-400'>
+                          {t('howItWorks.waitingLabel')}
+                        </span>
                       )}
                     </div>
                   </div>
@@ -814,7 +631,7 @@ export function EnterpriseContent() {
 
                 <div className='dark:border-dark-600 border-t border-gray-200 pt-4 text-center'>
                   <span className='bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300 rounded-full px-3 py-1 text-sm font-medium'>
-                    2 of 3 threshold met — ready to broadcast
+                    {t('howItWorks.thresholdLabel')}
                   </span>
                 </div>
               </div>
@@ -833,10 +650,8 @@ export function EnterpriseContent() {
             viewport={{ once: true }}
             className='mx-auto mb-16 max-w-3xl text-center'
           >
-            <h2 className='heading-2 mb-4'>Enterprise Features</h2>
-            <p className='text-lg text-gray-600 dark:text-gray-400'>
-              Everything your organization needs for secure crypto management
-            </p>
+            <h2 className='heading-2 mb-4'>{t('features.title')}</h2>
+            <p className='text-lg text-gray-600 dark:text-gray-400'>{t('features.subtitle')}</p>
           </motion.div>
 
           <motion.div
@@ -855,9 +670,11 @@ export function EnterpriseContent() {
                       <FeatureIcon className='h-6 w-6' />
                     </div>
                     <h3 className='mb-2 text-xl font-bold text-gray-900 dark:text-white'>
-                      {feature.title}
+                      {t(`features.items.${index}.title`)}
                     </h3>
-                    <p className='flex-1 text-gray-600 dark:text-gray-400'>{feature.description}</p>
+                    <p className='flex-1 text-gray-600 dark:text-gray-400'>
+                      {t(`features.items.${index}.description`)}
+                    </p>
                     {feature.docsUrl && (
                       <a
                         href={feature.docsUrl}
@@ -865,7 +682,7 @@ export function EnterpriseContent() {
                         rel='noopener noreferrer'
                         className='text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 mt-4 inline-flex items-center text-sm font-medium'
                       >
-                        Read the guide
+                        {t('features.readGuide')}
                         <ArrowRight className='ml-1 h-3.5 w-3.5' />
                       </a>
                     )}
@@ -887,11 +704,8 @@ export function EnterpriseContent() {
             viewport={{ once: true }}
             className='mx-auto mb-6 max-w-3xl text-center'
           >
-            <h2 className='heading-2 mb-4'>Transaction Policy Engine</h2>
-            <p className='text-lg text-gray-600 dark:text-gray-400'>
-              Granular controls that cascade from organization to vault to individual signer.
-              Stricter policy always wins.
-            </p>
+            <h2 className='heading-2 mb-4'>{t('policy.title')}</h2>
+            <p className='text-lg text-gray-600 dark:text-gray-400'>{t('policy.subtitle')}</p>
           </motion.div>
 
           {/* 3-tier cascade visual */}
@@ -905,24 +719,32 @@ export function EnterpriseContent() {
             <div className='flex items-center justify-center gap-3 text-sm font-medium sm:gap-4'>
               <div className='dark:bg-dark-800 rounded-xl border border-gray-200 px-4 py-3 text-center sm:px-6 dark:border-gray-700'>
                 <Building2 className='text-primary-500 mx-auto mb-1 h-5 w-5' />
-                <span className='text-gray-900 dark:text-white'>Organization</span>
-                <p className='mt-0.5 text-xs text-gray-500 dark:text-gray-400'>Default policies</p>
+                <span className='text-gray-900 dark:text-white'>
+                  {t('policy.tiers.organization')}
+                </span>
+                <p className='mt-0.5 text-xs text-gray-500 dark:text-gray-400'>
+                  {t('policy.tiers.organizationSub')}
+                </p>
               </div>
               <ChevronRight className='h-5 w-5 flex-shrink-0 text-gray-400' />
               <div className='dark:bg-dark-800 rounded-xl border border-gray-200 px-4 py-3 text-center sm:px-6 dark:border-gray-700'>
                 <Vault className='text-primary-500 mx-auto mb-1 h-5 w-5' />
-                <span className='text-gray-900 dark:text-white'>Vault</span>
-                <p className='mt-0.5 text-xs text-gray-500 dark:text-gray-400'>Override & refine</p>
+                <span className='text-gray-900 dark:text-white'>{t('policy.tiers.vault')}</span>
+                <p className='mt-0.5 text-xs text-gray-500 dark:text-gray-400'>
+                  {t('policy.tiers.vaultSub')}
+                </p>
               </div>
               <ChevronRight className='h-5 w-5 flex-shrink-0 text-gray-400' />
               <div className='dark:bg-dark-800 rounded-xl border border-gray-200 px-4 py-3 text-center sm:px-6 dark:border-gray-700'>
                 <UserCog className='text-primary-500 mx-auto mb-1 h-5 w-5' />
-                <span className='text-gray-900 dark:text-white'>Signer</span>
-                <p className='mt-0.5 text-xs text-gray-500 dark:text-gray-400'>Individual limits</p>
+                <span className='text-gray-900 dark:text-white'>{t('policy.tiers.signer')}</span>
+                <p className='mt-0.5 text-xs text-gray-500 dark:text-gray-400'>
+                  {t('policy.tiers.signerSub')}
+                </p>
               </div>
             </div>
             <p className='mt-3 text-center text-xs text-gray-400 dark:text-gray-500'>
-              Policies merge top-down — the stricter limit at any tier is enforced
+              {t('policy.tierFooter')}
             </p>
           </motion.div>
 
@@ -948,13 +770,13 @@ export function EnterpriseContent() {
                       <FeatureIcon className='h-5 w-5' />
                     </div>
                     <h3 className='mb-1.5 text-lg font-bold text-gray-900 dark:text-white'>
-                      {feature.title}
+                      {t(`policy.items.${index}.title`)}
                     </h3>
                     <p className='flex-1 text-sm text-gray-600 dark:text-gray-400'>
-                      {feature.description}
+                      {t(`policy.items.${index}.description`)}
                     </p>
                     <span className='text-primary-600 group-hover:text-primary-700 dark:text-primary-400 mt-3 inline-flex items-center text-xs font-medium opacity-0 transition-opacity group-hover:opacity-100'>
-                      Read more
+                      {t('policy.readMore')}
                       <ArrowRight className='ml-1 h-3 w-3' />
                     </span>
                   </a>
@@ -972,9 +794,9 @@ export function EnterpriseContent() {
           >
             <p className='text-sm text-gray-500 dark:text-gray-400'>
               <span className='font-semibold text-gray-900 dark:text-white'>
-                3-tier policy hierarchy with 14+ configurable controls
+                {t('policy.footerStrong')}
               </span>{' '}
-              — included in every plan.
+              {t('policy.footerSuffix')}
             </p>
           </motion.div>
         </div>
@@ -990,37 +812,37 @@ export function EnterpriseContent() {
             viewport={{ once: true }}
             className='mx-auto mb-16 max-w-3xl text-center'
           >
-            <h2 className='heading-2 mb-4'>5-Layer Security</h2>
-            <p className='text-lg text-gray-600 dark:text-gray-400'>
-              Defense in depth — every layer must be compromised for a breach
-            </p>
+            <h2 className='heading-2 mb-4'>{t('security.title')}</h2>
+            <p className='text-lg text-gray-600 dark:text-gray-400'>{t('security.subtitle')}</p>
           </motion.div>
 
           <div className='mx-auto max-w-3xl space-y-4'>
-            {securityLayers.map((layer, index) => {
-              const LayerIcon = layer.icon
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.08 }}
-                  viewport={{ once: true }}
-                  className='dark:bg-dark-800 flex items-center gap-4 rounded-xl border border-gray-200 bg-gray-50 p-5 dark:border-gray-700'
-                >
-                  <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400'>
-                    <LayerIcon className='h-5 w-5' />
-                  </div>
-                  <div className='flex-1'>
-                    <h3 className='font-bold text-gray-900 dark:text-white'>
-                      Layer {index + 1}: {layer.layer}
-                    </h3>
-                    <p className='text-sm text-gray-600 dark:text-gray-400'>{layer.description}</p>
-                  </div>
-                  <ShieldCheck className='h-5 w-5 flex-shrink-0 text-green-500' />
-                </motion.div>
-              )
-            })}
+            {securityLayerIcons.map((LayerIcon, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: index * 0.08 }}
+                viewport={{ once: true }}
+                className='dark:bg-dark-800 flex items-center gap-4 rounded-xl border border-gray-200 bg-gray-50 p-5 dark:border-gray-700'
+              >
+                <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400'>
+                  <LayerIcon className='h-5 w-5' />
+                </div>
+                <div className='flex-1'>
+                  <h3 className='font-bold text-gray-900 dark:text-white'>
+                    {t('security.layerLabel', {
+                      n: index + 1,
+                      name: t(`security.layers.${index}.name`),
+                    })}
+                  </h3>
+                  <p className='text-sm text-gray-600 dark:text-gray-400'>
+                    {t(`security.layers.${index}.description`)}
+                  </p>
+                </div>
+                <ShieldCheck className='h-5 w-5 flex-shrink-0 text-green-500' />
+              </motion.div>
+            ))}
           </div>
 
           <motion.div
@@ -1031,16 +853,16 @@ export function EnterpriseContent() {
             className='mx-auto mt-8 max-w-3xl text-center'
           >
             <p className='text-sm text-gray-500 dark:text-gray-400'>
-              SSP Wallet is open source and{' '}
+              {t('security.footerBefore')}
               <a
                 href='https://www.halborn.com/audits/influx-technologies'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='text-primary-600 dark:text-primary-400 underline'
               >
-                audited by Halborn
+                {t('security.footerLink')}
               </a>
-              . Verify the code yourself.
+              {t('security.footerAfter')}
             </p>
           </motion.div>
         </div>
@@ -1056,10 +878,8 @@ export function EnterpriseContent() {
             viewport={{ once: true }}
             className='mx-auto mb-16 max-w-3xl text-center'
           >
-            <h2 className='heading-2 mb-4'>How We Compare</h2>
-            <p className='text-lg text-gray-600 dark:text-gray-400'>
-              SSP Enterprise vs. the alternatives
-            </p>
+            <h2 className='heading-2 mb-4'>{t('comparison.title')}</h2>
+            <p className='text-lg text-gray-600 dark:text-gray-400'>{t('comparison.subtitle')}</p>
           </motion.div>
 
           <motion.div
@@ -1073,10 +893,10 @@ export function EnterpriseContent() {
               <thead>
                 <tr className='border-b border-gray-200 dark:border-gray-700'>
                   <th className='px-4 py-4 text-left text-sm font-semibold text-gray-900 dark:text-white'>
-                    Feature
+                    {t('comparison.columns.feature')}
                   </th>
                   <th className='bg-primary-50 dark:bg-primary-900/20 px-4 py-4 text-center text-sm font-semibold text-gray-900 dark:text-white'>
-                    SSP Enterprise
+                    {t('comparison.columns.ssp')}
                   </th>
                   <th className='px-4 py-4 text-center text-sm font-semibold text-gray-500 dark:text-gray-400'>
                     Fireblocks
@@ -1093,7 +913,7 @@ export function EnterpriseContent() {
                 {comparisonData.map((row, index) => (
                   <tr key={index}>
                     <td className='px-4 py-3 text-sm font-medium text-gray-900 dark:text-white'>
-                      {row.feature}
+                      {t(`comparison.rows.${index}`)}
                     </td>
                     <td className='bg-primary-50/50 dark:bg-primary-900/10 px-4 py-3 text-center'>
                       <ComparisonValue value={row.ssp} />
@@ -1111,37 +931,37 @@ export function EnterpriseContent() {
                 ))}
                 <tr className='border-t-2 border-gray-300 dark:border-gray-600'>
                   <td className='px-4 py-3 text-sm font-bold text-gray-900 dark:text-white'>
-                    Annual Cost
+                    {t('comparison.annualCostLabel')}
                   </td>
                   <td className='bg-primary-50/50 dark:bg-primary-900/10 px-4 py-3 text-center text-sm font-bold text-green-600 dark:text-green-400'>
-                    Free*
+                    {t('comparison.annualCostSsp')}
                   </td>
                   <td className='px-4 py-3 text-center text-sm text-gray-500 dark:text-gray-400'>
-                    $100K+
+                    {t('comparison.annualCostFireblocks')}
                   </td>
                   <td className='px-4 py-3 text-center text-sm text-gray-500 dark:text-gray-400'>
-                    $50K+
+                    {t('comparison.annualCostBitgo')}
                   </td>
                   <td className='px-4 py-3 text-center text-sm text-gray-500 dark:text-gray-400'>
-                    Gas fees
+                    {t('comparison.annualCostSafe')}
                   </td>
                 </tr>
               </tbody>
             </table>
             <p className='mt-3 text-center text-xs text-gray-400 dark:text-gray-500'>
-              * Open-source wallet is free. Enterprise platform has a free tier to get started.{' '}
+              {t('comparison.footnoteBefore')}
               <Link
                 href='#get-started'
                 className='text-primary-500 dark:text-primary-400 underline'
               >
-                Contact sales
-              </Link>{' '}
-              for custom plans.
+                {t('comparison.footnoteLink')}
+              </Link>
+              {t('comparison.footnoteAfter')}
             </p>
 
             <div className='mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-6'>
               <span className='text-sm text-gray-600 dark:text-gray-400'>
-                Already on one of these? See the migration guide:
+                {t('comparison.migrationLabel')}
               </span>
               <div className='flex flex-wrap items-center justify-center gap-3'>
                 <a
@@ -1150,7 +970,7 @@ export function EnterpriseContent() {
                   rel='noopener noreferrer'
                   className='text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 inline-flex items-center text-sm font-medium'
                 >
-                  From Fireblocks
+                  {t('comparison.migrationFireblocks')}
                   <ArrowRight className='ml-1 h-3.5 w-3.5' />
                 </a>
                 <span className='text-gray-300 dark:text-gray-700'>·</span>
@@ -1160,7 +980,7 @@ export function EnterpriseContent() {
                   rel='noopener noreferrer'
                   className='text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 inline-flex items-center text-sm font-medium'
                 >
-                  From Safe
+                  {t('comparison.migrationSafe')}
                   <ArrowRight className='ml-1 h-3.5 w-3.5' />
                 </a>
                 <span className='text-gray-300 dark:text-gray-700'>·</span>
@@ -1170,7 +990,7 @@ export function EnterpriseContent() {
                   rel='noopener noreferrer'
                   className='text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 inline-flex items-center text-sm font-medium'
                 >
-                  From BitGo
+                  {t('comparison.migrationBitgo')}
                   <ArrowRight className='ml-1 h-3.5 w-3.5' />
                 </a>
               </div>
@@ -1189,14 +1009,12 @@ export function EnterpriseContent() {
             viewport={{ once: true }}
             className='mx-auto mb-16 max-w-3xl text-center'
           >
-            <h2 className='heading-2 mb-4'>Built For</h2>
-            <p className='text-lg text-gray-600 dark:text-gray-400'>
-              Any organization that holds crypto and needs team-based signing
-            </p>
+            <h2 className='heading-2 mb-4'>{t('useCases.title')}</h2>
+            <p className='text-lg text-gray-600 dark:text-gray-400'>{t('useCases.subtitle')}</p>
           </motion.div>
 
           <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-4'>
-            {useCases.map((useCase, index) => (
+            {useCaseDocsUrls.map((docsUrl, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -1206,22 +1024,22 @@ export function EnterpriseContent() {
                 className='dark:bg-dark-800 flex flex-col rounded-2xl border border-gray-200 bg-gray-50 p-6 dark:border-gray-700'
               >
                 <h3 className='mb-2 text-lg font-bold text-gray-900 dark:text-white'>
-                  {useCase.title}
+                  {t(`useCases.items.${index}.title`)}
                 </h3>
                 <p className='mb-4 flex-1 text-sm text-gray-600 dark:text-gray-400'>
-                  {useCase.description}
+                  {t(`useCases.items.${index}.description`)}
                 </p>
                 <div className='bg-primary-50 text-primary-700 dark:bg-primary-900/20 dark:text-primary-300 mb-3 rounded-lg px-3 py-2 text-xs font-medium'>
-                  {useCase.example}
+                  {t(`useCases.items.${index}.example`)}
                 </div>
-                {useCase.docsUrl && (
+                {docsUrl && (
                   <a
-                    href={useCase.docsUrl}
+                    href={docsUrl}
                     target='_blank'
                     rel='noopener noreferrer'
                     className='text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 inline-flex items-center text-xs font-medium'
                   >
-                    Read the playbook
+                    {t('useCases.readPlaybook')}
                     <ArrowRight className='ml-1 h-3 w-3' />
                   </a>
                 )}
@@ -1241,10 +1059,8 @@ export function EnterpriseContent() {
             viewport={{ once: true }}
             className='mx-auto max-w-3xl text-center'
           >
-            <h2 className='heading-2 mb-4'>Multi-Chain Native</h2>
-            <p className='mb-8 text-lg text-gray-600 dark:text-gray-400'>
-              One platform for all your chains — UTXO and EVM
-            </p>
+            <h2 className='heading-2 mb-4'>{t('chains.title')}</h2>
+            <p className='mb-8 text-lg text-gray-600 dark:text-gray-400'>{t('chains.subtitle')}</p>
 
             <div className='flex flex-wrap justify-center gap-3'>
               {supportedChains.map((chain, index) => (
@@ -1261,9 +1077,7 @@ export function EnterpriseContent() {
               ))}
             </div>
 
-            <p className='mt-4 text-sm text-gray-400 dark:text-gray-500'>
-              More chains added regularly. All ERC-20 tokens supported on EVM chains.
-            </p>
+            <p className='mt-4 text-sm text-gray-400 dark:text-gray-500'>{t('chains.footer')}</p>
           </motion.div>
         </div>
       </section>
@@ -1279,10 +1093,9 @@ export function EnterpriseContent() {
               viewport={{ once: true }}
               className='mb-12 text-center'
             >
-              <h2 className='heading-2 mb-4'>Contact Sales</h2>
+              <h2 className='heading-2 mb-4'>{t('contact.title')}</h2>
               <p className='mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-400'>
-                Need a custom Enterprise plan, dedicated support, or priority onboarding? Get in
-                touch with our team.
+                {t('contact.subtitle')}
               </p>
               <div className='mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row'>
                 <Link
@@ -1291,7 +1104,7 @@ export function EnterpriseContent() {
                   rel='noopener noreferrer'
                   className='btn btn-primary'
                 >
-                  Launch Enterprise App
+                  {t('contact.launchApp')}
                   <ArrowRight className='ml-2 h-4 w-4' />
                 </Link>
                 <a
@@ -1300,7 +1113,7 @@ export function EnterpriseContent() {
                   rel='noopener noreferrer'
                   className='btn btn-secondary'
                 >
-                  Schedule a Call
+                  {t('contact.scheduleCall')}
                 </a>
               </div>
             </motion.div>
@@ -1314,11 +1127,12 @@ export function EnterpriseContent() {
             >
               <div className='border-primary-200 bg-primary-50 dark:border-primary-800 dark:bg-primary-900/20 mb-6 rounded-lg border p-4'>
                 <p className='text-primary-800 dark:text-primary-200 text-sm'>
-                  <strong>Prefer direct contact?</strong> Reach out to{' '}
+                  <strong>{t('contact.directContactStrong')}</strong>
+                  {t('contact.directContactBefore')}
                   <a href='mailto:tadeas@sspwallet.com' className='underline hover:no-underline'>
                     tadeas@sspwallet.com
-                  </a>{' '}
-                  or DM{' '}
+                  </a>
+                  {t('contact.directContactBetween')}
                   <a
                     href='https://twitter.com/TadeasKmenta'
                     target='_blank'
@@ -1326,8 +1140,8 @@ export function EnterpriseContent() {
                     className='underline hover:no-underline'
                   >
                     @TadeasKmenta
-                  </a>{' '}
-                  on X.
+                  </a>
+                  {t('contact.directContactAfter')}
                 </p>
               </div>
               <ContactForm />
@@ -1347,10 +1161,9 @@ export function EnterpriseContent() {
             className='mx-auto max-w-3xl text-center'
           >
             <ShieldCheck className='text-primary-600 dark:text-primary-400 mx-auto mb-6 h-16 w-16' />
-            <h2 className='heading-2 mb-4'>Your Keys. Your Rules.</h2>
+            <h2 className='heading-2 mb-4'>{t('finalCta.title')}</h2>
             <p className='mb-8 text-lg text-gray-600 dark:text-gray-400'>
-              SSP Enterprise gives your organization the security of self-custody with the
-              governance of enterprise software. No custodians. No middlemen. No compromises.
+              {t('finalCta.description')}
             </p>
             <div className='flex flex-col items-center justify-center gap-4 sm:flex-row'>
               <Link
@@ -1359,14 +1172,14 @@ export function EnterpriseContent() {
                 rel='noopener noreferrer'
                 className='btn btn-primary'
               >
-                Launch Enterprise App
+                {t('finalCta.launchApp')}
                 <ArrowRight className='ml-2 h-4 w-4' />
               </Link>
               <Link href='/download' className='btn btn-secondary'>
-                Download SSP Wallet
+                {t('finalCta.downloadWallet')}
               </Link>
               <Link href='/features' className='btn btn-secondary'>
-                Explore All Features
+                {t('finalCta.exploreFeatures')}
               </Link>
             </div>
           </motion.div>

@@ -875,5 +875,313 @@
       "successDescription": "Gracias por contactar con nosotros. Te responderemos lo antes posible.",
       "successAgain": "Enviar otro mensaje"
     }
+  },
+  "Enterprise": {
+    "metaTitle": "SSP Enterprise | Multifirma de autocustodia para empresas",
+    "metaDescription": "Bóvedas multifirma M-de-N de autocustodia para tesorerías empresariales. Motor de políticas, límites de gasto, firma con dos dispositivos y acceso por roles. Sin custodios, sin MPC.",
+    "breadcrumbLabel": "Empresas",
+    "heroBadge": "SSP Enterprise",
+    "heroTitlePart1": "Autocustodia",
+    "heroTitlePart2": "para empresas",
+    "heroDescription": "Bóvedas multifirma M-de-N para tu organización. Cada firmante usa dos dispositivos: extensión de navegador y app móvil. Sin custodios. Sin MPC. Sin punto único de fallo.",
+    "heroLaunchApp": "Abrir la app Enterprise",
+    "heroHowItWorks": "Cómo funciona",
+    "fluxBanner": {
+      "imageAlt": "Flux Foundation",
+      "eyebrow": "En producción con Flux Foundation",
+      "description": "Asegurando el puente Fusion y la tesorería de la Fundación en BTC, ETH, FLUX y L2 EVM.",
+      "cta": "Leer el caso de estudio"
+    },
+    "problem": {
+      "title": "El problema",
+      "subtitle": "Las empresas que tienen cripto se enfrentan hoy a compromisos imposibles",
+      "items": {
+        "0": {
+          "title": "Soluciones custodiadas",
+          "problem": "Confiar tus claves a terceros",
+          "risks": {
+            "0": "Riesgo de contraparte (FTX, Celsius)",
+            "1": "Bloqueos de cuenta sin previo aviso",
+            "2": "Dependencia del proveedor y altas comisiones"
+          }
+        },
+        "1": {
+          "title": "Proveedores MPC",
+          "problem": "Fragmentos de clave en servidores del proveedor",
+          "risks": {
+            "0": "Si el proveedor cierra, te quedas sin opciones",
+            "1": "No puedes verificar su infraestructura",
+            "2": "Sigue habiendo dependencia de confianza"
+          }
+        },
+        "2": {
+          "title": "Una sola cartera hardware",
+          "problem": "Una persona, un dispositivo",
+          "risks": {
+            "0": "Riesgo de persona clave",
+            "1": "Sin gobernanza de equipo",
+            "2": "Dispositivo perdido = fondos perdidos"
+          }
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "Cómo funciona",
+      "subtitle": "Autocustodia real a escala empresarial: sin compromisos",
+      "steps": {
+        "0": {
+          "title": "Crea tu organización",
+          "description": "Configura tu organización con tu Identidad SSP: una prueba criptográfica derivada de tus dispositivos, no solo un correo electrónico."
+        },
+        "1": {
+          "title": "Invita a tu equipo",
+          "description": "Añade miembros por su Identidad SSP. Asigna roles: Owner, Admin, Member o Viewer. Cada miembro necesita SSP Wallet + SSP Key."
+        },
+        "2": {
+          "title": "Crea bóvedas multifirma",
+          "description": "Configura bóvedas M-de-N para distintos fines: operativa, tesorería, nóminas. Elige qué firmantes son obligatorios."
+        },
+        "3": {
+          "title": "Firmen juntos",
+          "description": "Propón transacciones desde la app web. Cada firmante necesario aprueba con su extensión y su app móvil. Se difunde cuando se alcanza el umbral."
+        }
+      },
+      "diagramTitle": "Arquitectura de firma",
+      "diagramSubtitle": "Cada firma requiere dos dispositivos por firmante",
+      "signerLabel": "Firmante {label}",
+      "signedLabel": "Firmado",
+      "waitingLabel": "Pendiente",
+      "thresholdLabel": "Umbral 2 de 3 alcanzado: listo para difundir"
+    },
+    "features": {
+      "title": "Características empresariales",
+      "subtitle": "Todo lo que tu organización necesita para una gestión cripto segura",
+      "readGuide": "Leer la guía",
+      "items": {
+        "0": {
+          "title": "Bóvedas multifirma M-de-N",
+          "description": "Configura cualquier umbral de firma para tu equipo. 2-de-3, 3-de-5 o cualquier combinación que encaje con tu modelo de gobernanza."
+        },
+        "1": {
+          "title": "Acceso basado en roles",
+          "description": "Roles Owner, Admin, Member y Viewer. Controla quién puede proponer, firmar o solo observar transacciones."
+        },
+        "2": {
+          "title": "Firma con dos dispositivos",
+          "description": "Cada firmante usa una extensión de navegador y una app móvil. Dos claves por persona, M-de-N en todo el equipo."
+        },
+        "3": {
+          "title": "Soporte multicadena",
+          "description": "Bitcoin, Ethereum, Litecoin, Dogecoin, Flux, Polygon, BSC, Base, Avalanche y más. Una sola plataforma para todas las cadenas."
+        },
+        "4": {
+          "title": "Propuestas de transacción",
+          "description": "Propón transacciones con todos los detalles. El equipo revisa, aprueba o rechaza. Solo se difunde cuando se alcanza el umbral."
+        },
+        "5": {
+          "title": "Trazabilidad completa",
+          "description": "Cada acción queda registrada de forma permanente. Cambios de miembros, operaciones de bóveda y aprobaciones: rendición de cuentas total."
+        }
+      }
+    },
+    "policy": {
+      "title": "Motor de políticas de transacción",
+      "subtitle": "Controles granulares que se propagan desde la organización a la bóveda y a cada firmante. La política más estricta siempre se impone.",
+      "tiers": {
+        "organization": "Organización",
+        "organizationSub": "Políticas por defecto",
+        "vault": "Bóveda",
+        "vaultSub": "Sobrescribir y refinar",
+        "signer": "Firmante",
+        "signerSub": "Límites individuales"
+      },
+      "tierFooter": "Las políticas se combinan de arriba abajo: se aplica el límite más estricto en cualquier nivel",
+      "readMore": "Leer más",
+      "items": {
+        "0": {
+          "title": "Límites de gasto",
+          "description": "Límites por transacción, diarios, semanales y mensuales. Configurables en USD o en token nativo. Controles agregados y por token."
+        },
+        "1": {
+          "title": "Lista blanca de direcciones",
+          "description": "Tres modos: desactivado, advertir o aplicar. Etiqueta direcciones, restringe por cadena. Bloquea destinos desconocidos por completo."
+        },
+        "2": {
+          "title": "Demoras con time-lock",
+          "description": "Periodo de espera configurable antes de la difusión. Se activa automáticamente por encima de un umbral en USD. Cancelable antes de ejecutarse."
+        },
+        "3": {
+          "title": "Aprobación de admin",
+          "description": "Exige firma del admin en transacciones de alto valor. Define un umbral en USD: todo lo que lo supere requiere aprobación explícita."
+        },
+        "4": {
+          "title": "Sobrescrituras por firmante",
+          "description": "Define límites de gasto individuales para cada miembro. Los traders junior tienen controles más estrictos; los ejecutivos sénior, límites más altos."
+        },
+        "5": {
+          "title": "Seguimiento de velocidad",
+          "description": "Ventanas de gasto móviles de 30 días por bóveda, firmante y token. Aplicación automática con limpieza basada en TTL."
+        },
+        "6": {
+          "title": "Congelación de emergencia",
+          "description": "Congela cualquier bóveda al instante con firma WK de dos dispositivos. Bloquea todas las propuestas hasta el deshielo. Respuesta a incidentes en segundos."
+        },
+        "7": {
+          "title": "Jerarquía de políticas en 3 niveles",
+          "description": "Los valores por defecto de la organización se propagan a bóvedas y firmantes. Las anulaciones de la bóveda refinan las reglas. La política más estricta siempre gana."
+        }
+      },
+      "footerStrong": "Jerarquía de políticas en 3 niveles con más de 14 controles configurables",
+      "footerSuffix": "— incluida en cada plan."
+    },
+    "security": {
+      "title": "Seguridad en 5 capas",
+      "subtitle": "Defensa en profundidad: hay que comprometer cada capa para sufrir una brecha",
+      "layerLabel": "Capa {n}: {name}",
+      "layers": {
+        "0": {
+          "name": "Seguridad del dispositivo",
+          "description": "Seguridad a nivel de SO, autenticación biométrica y enclaves seguros en móviles"
+        },
+        "1": {
+          "name": "2FA con dos dispositivos",
+          "description": "Extensión de navegador + app móvil obligatorias para cada firma"
+        },
+        "2": {
+          "name": "Multifirma on-chain",
+          "description": "Multifirma nativa de Bitcoin y verificación con contratos inteligentes en EVM"
+        },
+        "3": {
+          "name": "Políticas empresariales",
+          "description": "Límites de gasto, listas blancas, time-locks, aprobaciones de admin, anulaciones por firmante y seguimiento de velocidad: más de 14 controles configurables"
+        },
+        "4": {
+          "name": "Auditoría y cumplimiento",
+          "description": "Logs inmutables, seguimiento de inicios de sesión e informes de cumplimiento"
+        }
+      },
+      "footerBefore": "SSP Wallet es open source y ",
+      "footerLink": "auditada por Halborn",
+      "footerAfter": ". Verifica el código tú mismo."
+    },
+    "comparison": {
+      "title": "Cómo nos comparamos",
+      "subtitle": "SSP Enterprise frente a las alternativas",
+      "columns": {
+        "feature": "Característica",
+        "ssp": "SSP Enterprise"
+      },
+      "values": {
+        "partial": "Parcial"
+      },
+      "rows": {
+        "0": "Autocustodia real",
+        "1": "Multicadena",
+        "2": "Multifirma on-chain",
+        "3": "Motor de políticas de transacción",
+        "4": "Firma móvil",
+        "5": "Código abierto",
+        "6": "Sin dependencia del proveedor",
+        "7": "Asequible"
+      },
+      "annualCostLabel": "Coste anual",
+      "annualCostSsp": "Gratis*",
+      "annualCostFireblocks": "$100K+",
+      "annualCostBitgo": "$50K+",
+      "annualCostSafe": "Gas",
+      "footnoteBefore": "* La cartera open source es gratuita. La plataforma Enterprise tiene un nivel gratuito para empezar. ",
+      "footnoteLink": "Contactar con ventas",
+      "footnoteAfter": " para planes a medida.",
+      "migrationLabel": "¿Ya usas alguna de estas? Consulta la guía de migración:",
+      "migrationFireblocks": "Desde Fireblocks",
+      "migrationSafe": "Desde Safe",
+      "migrationBitgo": "Desde BitGo"
+    },
+    "useCases": {
+      "title": "Pensado para",
+      "subtitle": "Cualquier organización que tenga cripto y necesite firma en equipo",
+      "readPlaybook": "Ver el playbook",
+      "items": {
+        "0": {
+          "title": "Tesorería corporativa",
+          "description": "Aprobación multifirma para los fondos de la empresa. CEO + CFO + Junta = 2 de 3.",
+          "example": "3 ejecutivos, 2 firmas requeridas"
+        },
+        "1": {
+          "title": "Tesorería DAO",
+          "description": "Toma de decisiones descentralizada con seguridad on-chain para fondos comunitarios.",
+          "example": "5 miembros del consejo, 3 firmas requeridas"
+        },
+        "2": {
+          "title": "Fondos de inversión",
+          "description": "Autocustodia institucional para gestores de fondos y socios limitados.",
+          "example": "Gestor + compliance + LP"
+        },
+        "3": {
+          "title": "Partnerships y JVs",
+          "description": "Control compartido entre socios con responsabilidad clara y trazabilidad total.",
+          "example": "Control igualitario, operativa transparente"
+        }
+      }
+    },
+    "chains": {
+      "title": "Multicadena nativa",
+      "subtitle": "Una sola plataforma para todas tus cadenas: UTXO y EVM",
+      "footer": "Se añaden cadenas con regularidad. Todos los tokens ERC-20 están soportados en cadenas EVM."
+    },
+    "contact": {
+      "title": "Contactar con ventas",
+      "subtitle": "¿Necesitas un plan Enterprise a medida, soporte dedicado u onboarding prioritario? Habla con nuestro equipo.",
+      "launchApp": "Abrir la app Enterprise",
+      "scheduleCall": "Agendar una llamada",
+      "directContactStrong": "¿Prefieres contacto directo?",
+      "directContactBefore": " Escribe a ",
+      "directContactBetween": " o envía un DM a ",
+      "directContactAfter": " en X."
+    },
+    "form": {
+      "fullNameLabel": "Nombre completo *",
+      "fullNamePlaceholder": "Tu nombre completo",
+      "emailLabel": "Correo electrónico *",
+      "emailPlaceholder": "tu.correo@empresa.com",
+      "companyLabel": "Empresa / Organización",
+      "companyPlaceholder": "Nombre de tu empresa",
+      "teamSizeLabel": "Tamaño del equipo",
+      "teamSizePlaceholder": "Selecciona el tamaño",
+      "teamSizeOptions": {
+        "2-5": "2-5 firmantes",
+        "6-10": "6-10 firmantes",
+        "11-25": "11-25 firmantes",
+        "25+": "25+ firmantes"
+      },
+      "useCaseLabel": "Caso de uso principal",
+      "useCasePlaceholder": "Selecciona el caso de uso",
+      "useCaseOptions": {
+        "corporate-treasury": "Tesorería corporativa",
+        "dao-treasury": "Tesorería DAO",
+        "investment-fund": "Fondo de inversión",
+        "partnership": "Partnership / Joint Venture",
+        "otc-desk": "Mesa OTC",
+        "mining-operation": "Operación de minería",
+        "exchange": "Exchange",
+        "other": "Otro"
+      },
+      "messageLabel": "Cuéntanos qué necesitas",
+      "messagePlaceholder": "¿A qué retos te enfrentas con la custodia de cripto? ¿Qué características son más importantes para tu equipo?",
+      "submitting": "Enviando solicitud...",
+      "submit": "Empezar",
+      "errorFallback": "No se pudo enviar la solicitud. Inténtalo de nuevo.",
+      "errorGeneric": "No se pudo enviar la solicitud",
+      "successTitle": "¡Solicitud recibida!",
+      "successDescription": "Gracias por tu interés en SSP Enterprise. Nos pondremos en contacto pronto.",
+      "successAgain": "Enviar otra solicitud"
+    },
+    "finalCta": {
+      "title": "Tus claves. Tus reglas.",
+      "description": "SSP Enterprise ofrece a tu organización la seguridad de la autocustodia con la gobernanza del software empresarial. Sin custodios. Sin intermediarios. Sin compromisos.",
+      "launchApp": "Abrir la app Enterprise",
+      "downloadWallet": "Descargar SSP Wallet",
+      "exploreFeatures": "Ver todas las características"
+    }
   }
 }

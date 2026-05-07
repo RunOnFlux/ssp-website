@@ -875,5 +875,313 @@
       "successDescription": "感谢你联系我们。我们会尽快回复你。",
       "successAgain": "再发送一条消息"
     }
+  },
+  "Enterprise": {
+    "metaTitle": "SSP Enterprise | 面向企业的自托管多重签名",
+    "metaDescription": "面向企业资金的 M-of-N 自托管多重签名金库。策略引擎、支出限额、双设备签名与基于角色的访问。无托管方，无 MPC。",
+    "breadcrumbLabel": "企业",
+    "heroBadge": "SSP Enterprise",
+    "heroTitlePart1": "面向企业的",
+    "heroTitlePart2": "自托管",
+    "heroDescription": "为你的组织提供 M-of-N 多重签名金库。每位签名者均使用两台设备——浏览器扩展和移动应用。无托管方，无 MPC，无单点故障。",
+    "heroLaunchApp": "打开 Enterprise 应用",
+    "heroHowItWorks": "工作原理",
+    "fluxBanner": {
+      "imageAlt": "Flux Foundation",
+      "eyebrow": "已与 Flux Foundation 投入生产",
+      "description": "在 BTC、ETH、FLUX 与 EVM L2 上保护 Fusion 跨链桥与基金会资金。",
+      "cta": "阅读案例研究"
+    },
+    "problem": {
+      "title": "现存问题",
+      "subtitle": "当今持有加密资产的企业面临难以兼顾的取舍",
+      "items": {
+        "0": {
+          "title": "托管方案",
+          "problem": "把密钥的信任交给第三方",
+          "risks": {
+            "0": "交易对手风险（FTX、Celsius）",
+            "1": "毫无预警地冻结账户",
+            "2": "厂商锁定与高昂费用"
+          }
+        },
+        "1": {
+          "title": "MPC 提供方",
+          "problem": "密钥分片存放在厂商服务器",
+          "risks": {
+            "0": "厂商关停时你将陷入被动",
+            "1": "无法验证其基础设施",
+            "2": "仍存在信任依赖"
+          }
+        },
+        "2": {
+          "title": "单一硬件钱包",
+          "problem": "一人一台设备",
+          "risks": {
+            "0": "关键人物风险",
+            "1": "缺乏团队治理",
+            "2": "丢失设备就等于丢失资金"
+          }
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "工作原理",
+      "subtitle": "企业级规模下的真正自托管——毫不妥协",
+      "steps": {
+        "0": {
+          "title": "创建你的组织",
+          "description": "使用你的 SSP 身份创建组织——这是从你的设备派生的加密学证明，而不仅仅是邮箱。"
+        },
+        "1": {
+          "title": "邀请你的团队",
+          "description": "通过 SSP 身份添加团队成员，分配 Owner、Admin、Member 或 Viewer 角色。每位成员都需要 SSP Wallet + SSP Key。"
+        },
+        "2": {
+          "title": "创建多重签名金库",
+          "description": "为不同用途配置 M-of-N 金库——运营、库务、薪酬，自定义所需的签名者。"
+        },
+        "3": {
+          "title": "共同签名",
+          "description": "通过 Web 应用发起交易提案。每位必要签名者都需要使用浏览器扩展与移动应用进行批准。达到阈值后再进行广播。"
+        }
+      },
+      "diagramTitle": "签名架构",
+      "diagramSubtitle": "每次签名都需要每位签名者的两台设备",
+      "signerLabel": "签名者 {label}",
+      "signedLabel": "已签名",
+      "waitingLabel": "等待中",
+      "thresholdLabel": "已达到 2/3 阈值——可以广播"
+    },
+    "features": {
+      "title": "企业功能",
+      "subtitle": "你的组织安全管理加密资产所需的一切",
+      "readGuide": "阅读指南",
+      "items": {
+        "0": {
+          "title": "M-of-N 多重签名金库",
+          "description": "为你的团队配置任意签名阈值。2/3、3/5 或任何符合你治理模型的组合。"
+        },
+        "1": {
+          "title": "基于角色的访问",
+          "description": "Owner、Admin、Member 与 Viewer 等角色，控制谁可以发起、签署或仅查看交易。"
+        },
+        "2": {
+          "title": "双设备签名",
+          "description": "每位签名者同时使用浏览器扩展与移动应用。每人两把密钥，团队整体 M-of-N。"
+        },
+        "3": {
+          "title": "多链支持",
+          "description": "Bitcoin、Ethereum、Litecoin、Dogecoin、Flux、Polygon、BSC、Base、Avalanche 等。一个平台覆盖所有链。"
+        },
+        "4": {
+          "title": "交易提案",
+          "description": "用完整细节发起交易提案。团队成员可审核、批准或拒绝。仅在达到阈值后才广播。"
+        },
+        "5": {
+          "title": "完整审计轨迹",
+          "description": "每个动作都被永久记录。成员变更、金库操作、交易批准——全方位的可追责性。"
+        }
+      }
+    },
+    "policy": {
+      "title": "交易策略引擎",
+      "subtitle": "细粒度控制从组织级层层下沉到金库与签名者级别。更严格的策略始终生效。",
+      "tiers": {
+        "organization": "组织",
+        "organizationSub": "默认策略",
+        "vault": "金库",
+        "vaultSub": "覆盖与精化",
+        "signer": "签名者",
+        "signerSub": "个人限额"
+      },
+      "tierFooter": "策略自上而下合并——任意层级中更严格的限制都会生效",
+      "readMore": "了解更多",
+      "items": {
+        "0": {
+          "title": "支出限额",
+          "description": "按交易、按日、按周与按月的限额。可按 USD 或原生代币设定。支持总量与按代币控制。"
+        },
+        "1": {
+          "title": "地址白名单",
+          "description": "三种模式：禁用、警告或强制。可标记地址、按链限制，并完全屏蔽未知目的地址。"
+        },
+        "2": {
+          "title": "时间锁延迟",
+          "description": "广播前的等待期可配置。在超过 USD 阈值时自动触发，可在执行前取消。"
+        },
+        "3": {
+          "title": "管理员审批",
+          "description": "对高额交易要求管理员签字确认。设定 USD 阈值——超过阈值的交易需要明确批准。"
+        },
+        "4": {
+          "title": "按签名者覆盖",
+          "description": "为每位团队成员设定独立的支出限额。初级交易员限额更紧，高级管理者限额更高。"
+        },
+        "5": {
+          "title": "速率追踪",
+          "description": "按金库、按签名者、按代币的滚动 30 天支出窗口，依据 TTL 自动清理。"
+        },
+        "6": {
+          "title": "金库紧急冻结",
+          "description": "通过双设备 WK 签名即时冻结任意金库，禁止全部新提案直到解冻。秒级事件响应。"
+        },
+        "7": {
+          "title": "三层策略层级",
+          "description": "组织默认策略向下传递到金库与签名者。金库级覆盖可细化规则。更严格的策略始终生效。"
+        }
+      },
+      "footerStrong": "三层策略层级，14+ 项可配置控制",
+      "footerSuffix": "——所有套餐均包含。"
+    },
+    "security": {
+      "title": "5 层安全",
+      "subtitle": "纵深防御——必须攻破每一层才能造成入侵",
+      "layerLabel": "第 {n} 层：{name}",
+      "layers": {
+        "0": {
+          "name": "设备安全",
+          "description": "操作系统级安全、生物识别认证、移动端安全飞地"
+        },
+        "1": {
+          "name": "双设备 2FA",
+          "description": "每次签名都需要浏览器扩展与移动应用配合"
+        },
+        "2": {
+          "name": "链上多重签名",
+          "description": "原生 Bitcoin 多重签名与 EVM 智能合约校验"
+        },
+        "3": {
+          "name": "业务策略",
+          "description": "支出限额、地址白名单、时间锁、管理员审批、按签名者覆盖与速率追踪——14+ 项可配置控制"
+        },
+        "4": {
+          "name": "审计与合规",
+          "description": "不可篡改的日志、登录追踪与合规报告"
+        }
+      },
+      "footerBefore": "SSP Wallet 完全开源，并 ",
+      "footerLink": "经 Halborn 审计",
+      "footerAfter": "。你可以亲自核验代码。"
+    },
+    "comparison": {
+      "title": "我们如何比较",
+      "subtitle": "SSP Enterprise 与替代方案对比",
+      "columns": {
+        "feature": "功能",
+        "ssp": "SSP Enterprise"
+      },
+      "values": {
+        "partial": "部分支持"
+      },
+      "rows": {
+        "0": "真正的自托管",
+        "1": "多链",
+        "2": "链上多重签名",
+        "3": "交易策略引擎",
+        "4": "移动端签名",
+        "5": "开源",
+        "6": "无厂商锁定",
+        "7": "价格亲民"
+      },
+      "annualCostLabel": "年费",
+      "annualCostSsp": "免费*",
+      "annualCostFireblocks": "$100K+",
+      "annualCostBitgo": "$50K+",
+      "annualCostSafe": "Gas 费",
+      "footnoteBefore": "* 开源钱包免费。Enterprise 平台提供免费层供你起步。",
+      "footnoteLink": "联系销售",
+      "footnoteAfter": "了解定制方案。",
+      "migrationLabel": "已经在使用以下方案之一？参阅迁移指南：",
+      "migrationFireblocks": "从 Fireblocks 迁移",
+      "migrationSafe": "从 Safe 迁移",
+      "migrationBitgo": "从 BitGo 迁移"
+    },
+    "useCases": {
+      "title": "适用场景",
+      "subtitle": "任何持有加密资产并需要团队签名的组织",
+      "readPlaybook": "查看实施手册",
+      "items": {
+        "0": {
+          "title": "公司财务",
+          "description": "对公司资金的多重签名审批。CEO + CFO + 董事会 = 2/3。",
+          "example": "3 位高管，需 2 人签名"
+        },
+        "1": {
+          "title": "DAO 财务",
+          "description": "去中心化决策与社区资金的链上安全。",
+          "example": "5 位理事，需 3 人签名"
+        },
+        "2": {
+          "title": "投资基金",
+          "description": "面向基金管理人与有限合伙人的机构级自托管。",
+          "example": "基金经理 + 合规 + LP"
+        },
+        "3": {
+          "title": "合作与合资",
+          "description": "合伙人之间的共享控制权，伴随清晰的责任与审计轨迹。",
+          "example": "对等控制，运营透明"
+        }
+      }
+    },
+    "chains": {
+      "title": "原生多链",
+      "subtitle": "一个平台覆盖你所有的链——UTXO 与 EVM",
+      "footer": "会持续新增更多链。EVM 链上支持所有 ERC-20 代币。"
+    },
+    "contact": {
+      "title": "联系销售",
+      "subtitle": "需要定制 Enterprise 套餐、专属支持或优先上线？请联系我们的团队。",
+      "launchApp": "打开 Enterprise 应用",
+      "scheduleCall": "预约通话",
+      "directContactStrong": "希望直接联系？",
+      "directContactBefore": "请发送邮件至 ",
+      "directContactBetween": " 或在 X 上私信 ",
+      "directContactAfter": "。"
+    },
+    "form": {
+      "fullNameLabel": "全名 *",
+      "fullNamePlaceholder": "你的全名",
+      "emailLabel": "电子邮箱 *",
+      "emailPlaceholder": "your.email@company.com",
+      "companyLabel": "公司 / 组织",
+      "companyPlaceholder": "你的公司名称",
+      "teamSizeLabel": "团队规模",
+      "teamSizePlaceholder": "选择团队规模",
+      "teamSizeOptions": {
+        "2-5": "2-5 位签名者",
+        "6-10": "6-10 位签名者",
+        "11-25": "11-25 位签名者",
+        "25+": "25+ 位签名者"
+      },
+      "useCaseLabel": "主要使用场景",
+      "useCasePlaceholder": "选择使用场景",
+      "useCaseOptions": {
+        "corporate-treasury": "公司财务",
+        "dao-treasury": "DAO 财务",
+        "investment-fund": "投资基金",
+        "partnership": "合作 / 合资",
+        "otc-desk": "OTC 交易台",
+        "mining-operation": "矿业运营",
+        "exchange": "交易所",
+        "other": "其他"
+      },
+      "messageLabel": "请告诉我们你的需求",
+      "messagePlaceholder": "你在加密资产托管方面遇到了哪些挑战？哪些功能对你的团队最重要？",
+      "submitting": "正在发送请求……",
+      "submit": "开始",
+      "errorFallback": "请求发送失败。请重试。",
+      "errorGeneric": "请求发送失败",
+      "successTitle": "已收到你的请求！",
+      "successDescription": "感谢你对 SSP Enterprise 的关注。我们会尽快与你联系。",
+      "successAgain": "再次提交请求"
+    },
+    "finalCta": {
+      "title": "你的密钥，你的规则。",
+      "description": "SSP Enterprise 让你的组织既具备自托管的安全性，又拥有企业级软件的治理能力。无托管方，无中介，毫不妥协。",
+      "launchApp": "打开 Enterprise 应用",
+      "downloadWallet": "下载 SSP Wallet",
+      "exploreFeatures": "了解全部功能"
+    }
   }
 }
