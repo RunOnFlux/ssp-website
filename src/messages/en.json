@@ -65,6 +65,283 @@
     },
     "fluxAlt": "Flux"
   },
+  "Home": {
+    "metaTitle": "SSP Wallet — Secure, Simple, Powerful Crypto Wallet",
+    "metaDescription": "True 2-of-2 multisig crypto wallet. Browser extension + mobile required for every transaction. Supports Bitcoin, Ethereum, and 15+ blockchains.",
+    "hero": {
+      "auditedBadge": "Security Audited by Halborn",
+      "titleSecure": "Secure",
+      "titleSimple": "Simple",
+      "titlePowerful": "Powerful",
+      "description": "True 2-of-2 multisignature wallet using BIP48 derivation, requiring both your browser extension and mobile device for every transaction. Features WalletConnect v2, ERC-4337 Account Abstraction with Schnorr signatures, and 15+ blockchains.",
+      "featureMultisig": "True 2-of-2 Multisig",
+      "featureBlockchains": "15+ Blockchains",
+      "featureZeroStorage": "Zero Data Storage",
+      "getStarted": "Get Started Now",
+      "watchDemo": "Watch Demo",
+      "statSupportedChains": "Supported Chains",
+      "statActiveUsers": "Active Users",
+      "statSecurityAudits": "Security Audits",
+      "animationAlt": "SSP Wallet Animation",
+      "closeModal": "Close modal",
+      "videoUnsupported": "Your browser does not support the video tag."
+    },
+    "features": {
+      "titlePart1": "Why Choose",
+      "titleHighlight": "SSP Wallet",
+      "titleSuffix": "?",
+      "description": "Experience the perfect blend of security, simplicity, and power in one comprehensive crypto wallet solution.",
+      "items": {
+        "0": {
+          "title": "Secure 2-of-2 Multisignature",
+          "description": "Advanced BIP48 derivation with true two-factor authentication requiring both browser extension and mobile device signatures for every transaction. Maximum security through dual-device protection."
+        },
+        "1": {
+          "title": "Simple Yet Advanced",
+          "description": "Complex multi-asset multisignature technology made simple. Advanced BIP48 security and Account Abstraction delivered through an intuitive interface anyone can use."
+        },
+        "2": {
+          "title": "Powerful dApp Interaction",
+          "description": "Connect to thousands of dApps with WalletConnect v2 (Reown) support, EIP-712 message signing, and real-time communication across all EVM chains and DeFi protocols."
+        },
+        "3": {
+          "title": "Multi-Chain Support",
+          "description": "Support for 15+ blockchains including Bitcoin, Ethereum, Polygon, BSC, Avalanche, Base, and more. First wallet with native Schnorr multisignature Account Abstraction (ERC-4337) on Ethereum, enabling smart contract wallets without EOAs."
+        },
+        "4": {
+          "title": "Zero Data Storage",
+          "description": "Complete self-custody with zero server-side data storage. Private keys, seeds, and transactions remain exclusively on your devices using military-grade AES-GCM encryption and device fingerprinting for maximum security and privacy."
+        },
+        "5": {
+          "title": "Buy, Sell & Swap",
+          "description": "Buy cryptocurrencies directly with credit cards or bank transfers, sell crypto back to fiat currency, and swap between different cryptocurrencies seamlessly within the wallet. Powered by an aggregated engine of multiple providers for the best rates and options."
+        }
+      },
+      "futureTitlePart1": "Built for the",
+      "futureTitleHighlight": "Future of Finance",
+      "highlights": {
+        "0": {
+          "title": "Advanced Security",
+          "description": "Military-grade encryption and multi-signature technology protect your assets"
+        },
+        "1": {
+          "title": "Seamless Experience",
+          "description": "Intuitive interface makes crypto accessible to everyone"
+        },
+        "2": {
+          "title": "Open Source",
+          "description": "Transparent, audited code that you can trust and verify"
+        }
+      },
+      "demoTitle": "Try SSP Wallet Interactive Demo",
+      "demoDescription": "Experience the complete setup and transaction flow",
+      "launchDemo": "Launch Interactive Demo",
+      "demoFooter": "No installation required • 3-minute experience"
+    },
+    "security": {
+      "badge": "Security First Approach",
+      "titleHighlight": "Bank-Grade Security",
+      "titleSuffix": "You Can Trust",
+      "description": "Our security is independently verified and audited by leading security firms. Your assets are protected by military-grade encryption and cutting-edge technology.",
+      "items": {
+        "0": {
+          "title": "Security Audited",
+          "description": "Comprehensive security audits by Halborn for all critical components",
+          "highlight": "Halborn Certified"
+        },
+        "1": {
+          "title": "BIP48 Multisignature",
+          "description": "True 2-of-2 multisignature using BIP48 derivation with device fingerprinting and AES-GCM encryption",
+          "highlight": "Cryptographically Secure"
+        },
+        "2": {
+          "title": "Open Source & Deterministic",
+          "description": "Transparent code with deterministic builds - anyone can verify the distributed wallet matches the source code exactly",
+          "highlight": "Fully Verifiable"
+        },
+        "3": {
+          "title": "Zero Data Storage",
+          "description": "PBKDF2-based encryption with device fingerprinting ensures all your locally stored data is super secure. Nothing ever touches servers.",
+          "highlight": "Self-Custody Only"
+        }
+      },
+      "auditTitlePart1": "Independently",
+      "auditTitleHighlight": "Security Audited",
+      "auditDescription": "All critical components of the SSP ecosystem have undergone rigorous security audits by Halborn, a renowned blockchain security firm. Our commitment to transparency means all audit reports are publicly available.",
+      "indicators": {
+        "0": "Industry Leading Best Practices",
+        "1": "Engineered to Top Security Standards",
+        "2": "Continuous Security Monitoring"
+      },
+      "auditedByHalborn": "Audited by Halborn",
+      "recentReportsTitle": "Recent Audit Reports",
+      "viewReport": "View Report",
+      "reports": {
+        "0": {
+          "title": "SSP Wallet, Key & Relay Audit",
+          "date": "March 2025",
+          "status": "Completed"
+        },
+        "1": {
+          "title": "Smart Contracts Audit",
+          "date": "February 2025",
+          "status": "Completed"
+        },
+        "2": {
+          "title": "SDK Security Audit",
+          "date": "February 2025",
+          "status": "Completed"
+        }
+      },
+      "bugBountyPrefix": "Security Bug Bounty:",
+      "bugBountyText": "We offer rewards for responsible disclosure of security vulnerabilities. Help us keep SSP secure.",
+      "lavaMoatTitleHighlight": "LavaMoat",
+      "lavaMoatTitleSuffix": "Runtime Protection",
+      "lavaMoatDescription": "SSP Wallet integrates LavaMoat, a security framework that protects against supply chain attacks. LavaMoat wraps each dependency in compartments and only gives them access to what they need, preventing malicious code from stealing secrets or compromising your wallet.",
+      "lavaIndicators": {
+        "0": "Packages Wrapped in SES Compartments",
+        "1": "Limited Platform Access Per Package",
+        "2": "Prevents Modification of JavaScript Primordials"
+      },
+      "learnLavaMoat": "Learn About LavaMoat",
+      "protectionLayersTitle": "Protection Layers",
+      "layers": {
+        "0": {
+          "title": "Package Compartments",
+          "description": "Each package runs in its own compartment, preventing unauthorized access to sensitive resources"
+        },
+        "1": {
+          "title": "Policy Enforcement",
+          "description": "Policy files define exactly which resources each package can access"
+        },
+        "2": {
+          "title": "Supply Chain Defense",
+          "description": "Protects against compromised dependencies attempting malicious actions"
+        },
+        "3": {
+          "title": "Runtime Monitoring",
+          "description": "Continuous enforcement ensures security policies remain active at runtime"
+        }
+      },
+      "deterministicTitleHighlight": "Deterministic Builds",
+      "deterministicTitleSuffix": "for Ultimate Trust",
+      "deterministicDescription": "SSP Wallet features deterministic builds using Docker. This means identical source code produces identical binaries, allowing anyone to independently verify the wallet you download matches exactly what was built from our published source code.",
+      "detIndicators": {
+        "0": "Docker-Based Isolated Build Environment",
+        "1": "Cryptographically Signed Release Checksums",
+        "2": "Eliminates Supply Chain Attack Vectors"
+      },
+      "learnVerify": "Learn How to Verify",
+      "verificationProcessTitle": "Verification Process",
+      "verifySteps": {
+        "0": {
+          "title": "Download Release Files",
+          "description": "Get the extension files, SHA256SUMS, and GPG signature from GitHub releases"
+        },
+        "1": {
+          "title": "Verify GPG Signature",
+          "description": "Import our public key from OpenPGP keyserver and verify the signed checksums"
+        },
+        "2": {
+          "title": "Verify File Hashes",
+          "description": "Check that downloaded files match the signed checksums"
+        },
+        "3": {
+          "title": "Optional: Reproduce Build",
+          "description": "Advanced users can build from source and verify identical output"
+        }
+      }
+    },
+    "enterpriseBand": {
+      "badge": "For Teams & Businesses",
+      "fluxImageAlt": "Flux Foundation",
+      "titlePart1": "Running treasury for a team?",
+      "titleHighlight": "Meet SSP Enterprise.",
+      "description": "Your team holds the keys. Your team signs. SSP Enterprise handles the coordination — proposals, policies, and the audit trail your CFO will actually want.",
+      "highlights": {
+        "0": {
+          "title": "M-of-N Multisig Vaults",
+          "description": "Configure any signing threshold — 2-of-3, 3-of-5, whatever fits your governance."
+        },
+        "1": {
+          "title": "Transaction Policy Engine",
+          "description": "Spending limits, address whitelists, time-locks, admin approvals — 14+ controls."
+        },
+        "2": {
+          "title": "No Custodian. No MPC.",
+          "description": "Self-custody at enterprise scale. Two-device signing per signer, on-chain verified."
+        }
+      },
+      "fluxEyebrow": "Flux Foundation",
+      "fluxBefore": "Uses SSP Enterprise to secure the",
+      "fluxStrong": "Fusion bridge",
+      "fluxAfter": "and manage Foundation treasury with multi-party signing.",
+      "fluxCta": "Read the case study",
+      "explore": "Explore SSP Enterprise",
+      "launchApp": "Launch Enterprise App"
+    },
+    "supportedChains": {
+      "badge": "Multi-Chain Support",
+      "titleHighlight": "15+ Blockchains",
+      "titleSuffix": "in One Wallet",
+      "description": "Manage all your crypto assets from Bitcoin to Ethereum and beyond. SSP Wallet provides unified access to multiple blockchain networks with WalletConnect v2 support for dApps and offline QR code transaction capabilities.",
+      "chainDescriptions": {
+        "BTC": "The original cryptocurrency",
+        "ETH": "Smart contract platform",
+        "LTC": "Digital silver",
+        "ZEC": "Privacy-focused",
+        "RVN": "Asset transfer blockchain",
+        "DOGE": "The people's crypto",
+        "BCH": "Peer-to-peer electronic cash",
+        "FLUX": "Decentralized computing",
+        "MATIC": "Ethereum scaling",
+        "BSC": "Fast, low-cost transactions",
+        "AVAX": "High-performance blockchain",
+        "BASE": "Coinbase L2 solution"
+      },
+      "chainLogoAlt": "{name} logo",
+      "moreFeaturesTitle": "More Features",
+      "moreFeaturesHighlight": "Coming Soon",
+      "moreFeaturesDescription": "We're constantly expanding SSP Wallet with new blockchain networks and advanced security features based on community demand and technological advancement.",
+      "walletConnectStrong": "WalletConnect v2 (Reown)",
+      "walletConnectAfter": "Connect to thousands of dApps",
+      "accountAbstractionStrong": "Account Abstraction (ERC-4337)",
+      "accountAbstractionAfter": "Smart contract wallets",
+      "solanaStrong": "Solana Support",
+      "solanaAfter": "Coming soon with multisig",
+      "viewFullList": "View Full Asset List"
+    },
+    "cta": {
+      "badge": "Ready to Get Started?",
+      "titlePart1": "Join the",
+      "titleHighlight": "Future of Crypto",
+      "description": "Download SSP Wallet today and experience the next generation of cryptocurrency management with unmatched security and simplicity.",
+      "downloadNow": "Download Now",
+      "learnMore": "Learn More",
+      "options": {
+        "0": {
+          "title": "SSP Wallet - Browser Extension",
+          "description": "Available now - Chrome, Brave, Firefox"
+        },
+        "1": {
+          "title": "SSP Key - Mobile 2FA App",
+          "description": "Required for transactions approving and more"
+        },
+        "2": {
+          "title": "SSP Enterprise - For Teams",
+          "description": "M-of-N multisig vaults for organizations. Available now."
+        }
+      },
+      "availableNow": "Available Now",
+      "comingSoon": "Coming Soon",
+      "statActiveUsers": "Active Users",
+      "statAssetsSecured": "Assets Secured",
+      "statBlockchainsSupported": "Blockchains Supported",
+      "indicatorAudited": "Security Audited",
+      "indicatorOpenSource": "Open Source",
+      "indicatorCommunity": "Community Driven"
+    }
+  },
   "Newsroom": {
     "title": "Newsroom",
     "description": "Latest news, product updates, and announcements from SSP.",

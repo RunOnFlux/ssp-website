@@ -1,31 +1,28 @@
 'use client'
 
 import { motion, type Variants } from 'framer-motion'
-import { ArrowRight, Building2, ClipboardCheck, ShieldCheck, Vault } from 'lucide-react'
+import {
+  ArrowRight,
+  Building2,
+  ClipboardCheck,
+  type LucideIcon,
+  ShieldCheck,
+  Vault,
+} from 'lucide-react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { useInView } from 'react-intersection-observer'
 import { Link } from '@/i18n/navigation'
 
-const enterpriseHighlights = [
-  {
-    icon: Vault,
-    title: 'M-of-N Multisig Vaults',
-    description: 'Configure any signing threshold — 2-of-3, 3-of-5, whatever fits your governance.',
-  },
-  {
-    icon: ClipboardCheck,
-    title: 'Transaction Policy Engine',
-    description: 'Spending limits, address whitelists, time-locks, admin approvals — 14+ controls.',
-  },
-  {
-    icon: ShieldCheck,
-    title: 'No Custodian. No MPC.',
-    description:
-      'Self-custody at enterprise scale. Two-device signing per signer, on-chain verified.',
-  },
-]
+const highlightIcons: LucideIcon[] = [Vault, ClipboardCheck, ShieldCheck]
 
 export function EnterpriseBand() {
+  const t = useTranslations('Home.enterpriseBand')
+  const enterpriseHighlights = highlightIcons.map((icon, index) => ({
+    icon,
+    title: t(`highlights.${index}.title`),
+    description: t(`highlights.${index}.description`),
+  }))
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true })
 
   const containerVariants: Variants = {
@@ -72,18 +69,17 @@ export function EnterpriseBand() {
           <motion.div variants={itemVariants} className='mx-auto mb-12 max-w-3xl text-center'>
             <div className='border-primary-300/60 bg-primary-100/80 text-primary-800 dark:border-primary-500/30 dark:bg-primary-500/10 dark:text-primary-300 mb-6 inline-flex items-center rounded-full border px-4 py-2 text-sm font-medium backdrop-blur-sm'>
               <Building2 className='mr-2 h-4 w-4' />
-              For Teams &amp; Businesses
+              {t('badge')}
             </div>
 
             <h2 className='mb-6 text-4xl font-bold text-balance text-gray-900 md:text-5xl dark:text-white'>
-              Running treasury for a team?
+              {t('titlePart1')}
               <br />
-              <span className='gradient-text'>Meet SSP Enterprise.</span>
+              <span className='gradient-text'>{t('titleHighlight')}</span>
             </h2>
 
             <p className='mx-auto max-w-2xl text-lg text-gray-600 md:text-xl dark:text-gray-300'>
-              Your team holds the keys. Your team signs. SSP Enterprise handles the coordination —
-              proposals, policies, and the audit trail your CFO will actually want.
+              {t('description')}
             </p>
           </motion.div>
 
@@ -122,7 +118,7 @@ export function EnterpriseBand() {
                 <div className='dark:bg-dark-700/60 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-xl bg-gray-50 p-2'>
                   <Image
                     src='/flux-symbol.svg'
-                    alt='Flux Foundation'
+                    alt={t('fluxImageAlt')}
                     width={48}
                     height={48}
                     className='h-12 w-12'
@@ -130,17 +126,17 @@ export function EnterpriseBand() {
                 </div>
                 <div className='flex-1 text-center sm:text-left'>
                   <p className='text-primary-700 dark:text-primary-300 mb-1 text-xs font-semibold tracking-wider uppercase'>
-                    Flux Foundation
+                    {t('fluxEyebrow')}
                   </p>
                   <p className='mb-3 text-base text-gray-700 md:text-lg dark:text-gray-200'>
-                    Uses SSP Enterprise to secure the{' '}
+                    {t('fluxBefore')}{' '}
                     <span className='font-semibold text-gray-900 dark:text-white'>
-                      Fusion bridge
+                      {t('fluxStrong')}
                     </span>{' '}
-                    and manage Foundation treasury with multi-party signing.
+                    {t('fluxAfter')}
                   </p>
                   <span className='text-primary-600 group-hover:text-primary-700 dark:text-primary-400 inline-flex items-center text-sm font-medium'>
-                    Read the case study
+                    {t('fluxCta')}
                     <ArrowRight className='ml-1 h-4 w-4 transition-transform group-hover:translate-x-1' />
                   </span>
                 </div>
@@ -154,7 +150,7 @@ export function EnterpriseBand() {
             className='flex flex-col items-center justify-center gap-4 sm:flex-row'
           >
             <Link href='/enterprise' className='btn btn-primary group'>
-              Explore SSP Enterprise
+              {t('explore')}
               <ArrowRight className='ml-2 h-4 w-4 transition-transform group-hover:translate-x-1' />
             </Link>
             <Link
@@ -163,7 +159,7 @@ export function EnterpriseBand() {
               rel='noopener noreferrer'
               className='dark:bg-dark-800/60 inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white/80 px-6 py-3 text-sm font-medium text-gray-800 transition-colors duration-200 hover:bg-gray-50 dark:border-white/20 dark:text-white dark:hover:bg-white/10'
             >
-              Launch Enterprise App
+              {t('launchApp')}
               <ArrowRight className='ml-2 h-4 w-4' />
             </Link>
           </motion.div>

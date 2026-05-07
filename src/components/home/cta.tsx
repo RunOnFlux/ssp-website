@@ -2,6 +2,7 @@
 
 import { motion, type Variants } from 'framer-motion'
 import { ArrowRight, Building2, Chrome, Download, type LucideIcon, Smartphone } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { useInView } from 'react-intersection-observer'
 import { Logo } from '@/components/logo'
 import { Link } from '@/i18n/navigation'
@@ -15,31 +16,24 @@ interface DownloadOption {
   comingSoon?: boolean
 }
 
-const downloadOptions: DownloadOption[] = [
-  {
-    icon: Chrome,
-    title: 'SSP Wallet - Browser Extension',
-    description: 'Available now - Chrome, Brave, Firefox',
-    link: '/download',
-    primary: true,
-  },
-  {
-    icon: Smartphone,
-    title: 'SSP Key - Mobile 2FA App',
-    description: 'Required for transactions approving and more',
-    link: '/download#mobile',
-    primary: true,
-  },
-  {
-    icon: Building2,
-    title: 'SSP Enterprise - For Teams',
-    description: 'M-of-N multisig vaults for organizations. Available now.',
-    link: '/enterprise',
-    primary: true,
-  },
+const downloadOptionMeta: Array<{
+  icon: LucideIcon
+  link: string
+  primary?: boolean
+  comingSoon?: boolean
+}> = [
+  { icon: Chrome, link: '/download', primary: true },
+  { icon: Smartphone, link: '/download#mobile', primary: true },
+  { icon: Building2, link: '/enterprise', primary: true },
 ]
 
 export function CTA() {
+  const t = useTranslations('Home.cta')
+  const downloadOptions: DownloadOption[] = downloadOptionMeta.map((meta, index) => ({
+    ...meta,
+    title: t(`options.${index}.title`),
+    description: t(`options.${index}.description`),
+  }))
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true,
@@ -106,16 +100,15 @@ export function CTA() {
             <motion.div variants={itemVariants}>
               <div className='bg-primary-100 text-primary-800 dark:bg-primary-900/30 dark:text-primary-200 mb-6 inline-flex items-center rounded-full px-4 py-2 text-sm font-medium'>
                 <Download className='mr-2 h-4 w-4' />
-                Ready to Get Started?
+                {t('badge')}
               </div>
 
               <h2 className='mb-6 text-4xl font-bold text-balance md:text-5xl lg:text-6xl'>
-                Join the <span className='gradient-text'>Future of Crypto</span>
+                {t('titlePart1')} <span className='gradient-text'>{t('titleHighlight')}</span>
               </h2>
 
               <p className='mx-auto mb-8 max-w-3xl text-xl text-balance text-gray-600 md:text-2xl dark:text-gray-300'>
-                Download SSP Wallet today and experience the next generation of cryptocurrency
-                management with unmatched security and simplicity.
+                {t('description')}
               </p>
             </motion.div>
 
@@ -129,12 +122,12 @@ export function CTA() {
                 className='btn btn-primary group px-10 py-5 text-xl shadow-2xl'
               >
                 <Download className='mr-3 h-6 w-6 group-hover:animate-bounce' />
-                Download Now
+                {t('downloadNow')}
                 <ArrowRight className='ml-3 h-5 w-5 transition-transform group-hover:translate-x-1' />
               </Link>
 
               <Link href='/features' className='btn btn-secondary px-10 py-5 text-xl'>
-                Learn More
+                {t('learnMore')}
               </Link>
             </motion.div>
 
@@ -184,7 +177,7 @@ export function CTA() {
                     {option.primary && !option.comingSoon && (
                       <div className='mt-3'>
                         <span className='bg-primary-100 text-primary-800 dark:bg-primary-900/30 dark:text-primary-200 inline-block rounded-full px-3 py-1 text-xs font-medium'>
-                          Available Now
+                          {t('availableNow')}
                         </span>
                       </div>
                     )}
@@ -192,7 +185,7 @@ export function CTA() {
                     {option.comingSoon && (
                       <div className='mt-3'>
                         <span className='inline-block rounded-full bg-orange-100 px-3 py-1 text-xs font-medium text-orange-800 dark:bg-orange-900/30 dark:text-orange-200'>
-                          Coming Soon
+                          {t('comingSoon')}
                         </span>
                       </div>
                     )}
@@ -217,17 +210,19 @@ export function CTA() {
               <div className='grid items-center gap-8 md:grid-cols-3'>
                 <div className='text-center'>
                   <div className='mb-2 text-3xl font-bold text-gray-900 dark:text-white'>1000+</div>
-                  <p className='text-gray-600 dark:text-gray-400'>Active Users</p>
+                  <p className='text-gray-600 dark:text-gray-400'>{t('statActiveUsers')}</p>
                 </div>
 
                 <div className='text-center'>
                   <div className='mb-2 text-3xl font-bold text-gray-900 dark:text-white'>$50M+</div>
-                  <p className='text-gray-600 dark:text-gray-400'>Assets Secured</p>
+                  <p className='text-gray-600 dark:text-gray-400'>{t('statAssetsSecured')}</p>
                 </div>
 
                 <div className='text-center'>
                   <div className='mb-2 text-3xl font-bold text-gray-900 dark:text-white'>15+</div>
-                  <p className='text-gray-600 dark:text-gray-400'>Blockchains Supported</p>
+                  <p className='text-gray-600 dark:text-gray-400'>
+                    {t('statBlockchainsSupported')}
+                  </p>
                 </div>
               </div>
 
@@ -235,17 +230,17 @@ export function CTA() {
               <div className='dark:border-dark-600 mt-8 flex items-center justify-center space-x-8 border-t border-gray-200 pt-8'>
                 <div className='flex items-center space-x-2 text-gray-600 dark:text-gray-400'>
                   <div className='h-3 w-3 rounded-full bg-green-500'></div>
-                  <span className='text-sm font-medium'>Security Audited</span>
+                  <span className='text-sm font-medium'>{t('indicatorAudited')}</span>
                 </div>
 
                 <div className='flex items-center space-x-2 text-gray-600 dark:text-gray-400'>
                   <div className='h-3 w-3 rounded-full bg-blue-500'></div>
-                  <span className='text-sm font-medium'>Open Source</span>
+                  <span className='text-sm font-medium'>{t('indicatorOpenSource')}</span>
                 </div>
 
                 <div className='flex items-center space-x-2 text-gray-600 dark:text-gray-400'>
                   <div className='h-3 w-3 rounded-full bg-purple-500'></div>
-                  <span className='text-sm font-medium'>Community Driven</span>
+                  <span className='text-sm font-medium'>{t('indicatorCommunity')}</span>
                 </div>
               </div>
             </motion.div>
