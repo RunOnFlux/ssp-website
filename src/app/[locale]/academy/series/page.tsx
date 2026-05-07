@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
-import { setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { PageHeader } from '@/components/header/page-header'
 import { Breadcrumbs } from '@/components/shared/breadcrumbs'
 import { Link } from '@/i18n/navigation'
@@ -8,24 +8,38 @@ import { getAllSeries } from '@/lib/cms'
 import { createMetadata } from '@/lib/seo'
 import { buildAcademyBreadcrumbJsonLd } from '@/lib/seo-academy'
 
-export const metadata: Metadata = createMetadata({
-  title: 'Learning Paths | SSP Academy',
-  description:
-    'Structured multi-part series to guide you from beginner to advanced on crypto self-custody with SSP.',
-  path: '/academy/series',
-})
-
-const breadcrumbJsonLd = buildAcademyBreadcrumbJsonLd([
-  { name: 'Home', url: '/' },
-  { name: 'Academy', url: '/academy' },
-  { name: 'Learning Paths' },
-])
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const tAcademy = await getTranslations({ locale, namespace: 'Academy' })
+  return createMetadata({
+    title: `${tAcademy('learningPaths')} | ${tAcademy('title')}`,
+    description: tAcademy('seriesMetaDescription'),
+    path: '/academy/series',
+  })
+}
 
 export default async function SeriesIndexPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   setRequestLocale(locale)
-  const allSeries = await getAllSeries().catch(() => [])
+  const [allSeries, tAcademy, tCommon] = await Promise.all([
+    getAllSeries().catch(() => []),
+    getTranslations({ locale, namespace: 'Academy' }),
+    getTranslations({ locale, namespace: 'Common' }),
+  ])
   const seriesList = allSeries.filter(s => s.postCount > 0)
+  const homeLabel = tCommon('breadcrumbHome')
+  const academyTitle = tAcademy('title')
+  const learningPathsTitle = tAcademy('learningPaths')
+
+  const breadcrumbJsonLd = buildAcademyBreadcrumbJsonLd([
+    { name: homeLabel, url: '/' },
+    { name: academyTitle, url: '/academy' },
+    { name: learningPathsTitle },
+  ])
 
   return (
     <>
@@ -35,27 +49,22 @@ export default async function SeriesIndexPage({ params }: { params: Promise<{ lo
       <div className='container-custom pt-24 md:pt-32'>
         <Breadcrumbs
           items={[
-            { label: 'Home', href: '/' },
-            { label: 'Academy', href: '/academy' },
-            { label: 'Learning Paths' },
+            { label: homeLabel, href: '/' },
+            { label: academyTitle, href: '/academy' },
+            { label: learningPathsTitle },
           ]}
         />
       </div>
-      <PageHeader
-        title='Learning Paths'
-        description='Structured multi-part series to guide you from beginner to advanced.'
-      />
+      <PageHeader title={learningPathsTitle} description={tAcademy('seriesIndexDescription')} />
       <section className='container-custom py-12'>
         {seriesList.length === 0 ? (
           <div className='py-16 text-center'>
-            <p className='text-gray-600 dark:text-gray-300'>
-              Learning paths are coming soon. In the meantime, browse articles by topic:
-            </p>
+            <p className='text-gray-600 dark:text-gray-300'>{tAcademy('seriesEmpty')}</p>
             <Link
               href='/academy'
               className='text-primary-600 dark:text-primary-400 mt-4 inline-block underline'
             >
-              Back to Academy
+              {tAcademy('backToAcademy')}
             </Link>
           </div>
         ) : (
@@ -70,7 +79,7 @@ export default async function SeriesIndexPage({ params }: { params: Promise<{ lo
                 <h2 className='font-semibold text-gray-900 dark:text-white'>{s.title}</h2>
                 <p className='mt-1 text-sm text-gray-500 dark:text-gray-400'>{s.description}</p>
                 <p className='mt-3 text-xs text-gray-500 dark:text-gray-400'>
-                  {s.postCount} part{s.postCount === 1 ? '' : 's'}
+                  {tAcademy('partsCount', { count: s.postCount })}
                 </p>
               </Link>
             ))}

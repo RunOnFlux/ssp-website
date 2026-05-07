@@ -111,6 +111,12 @@
     "seriesPart": "Parte {order} de {total}",
     "previousPart": "Parte anterior",
     "nextPart": "Siguiente parte",
+    "seriesMetaDescription": "Series estructuradas en varias partes para guiarte desde principiante hasta avanzado en autocustodia cripto con SSP.",
+    "seriesIndexDescription": "Series estructuradas en varias partes para guiarte desde principiante hasta avanzado.",
+    "seriesEmpty": "Pronto habrá rutas de aprendizaje. Mientras tanto, explora artículos por tema:",
+    "backToAcademy": "Volver a la Academia",
+    "seriesPartsEmpty": "Las partes llegarán pronto.",
+    "viewAllLearningPaths": "Ver todas las rutas de aprendizaje",
     "categories": {
       "multisig": {
         "title": "Multifirma explicada",

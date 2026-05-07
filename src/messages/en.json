@@ -111,6 +111,12 @@
     "seriesPart": "Part {order} of {total}",
     "previousPart": "Previous part",
     "nextPart": "Next part",
+    "seriesMetaDescription": "Structured multi-part series to guide you from beginner to advanced on crypto self-custody with SSP.",
+    "seriesIndexDescription": "Structured multi-part series to guide you from beginner to advanced.",
+    "seriesEmpty": "Learning paths are coming soon. In the meantime, browse articles by topic:",
+    "backToAcademy": "Back to Academy",
+    "seriesPartsEmpty": "Parts are coming soon.",
+    "viewAllLearningPaths": "View all learning paths",
     "categories": {
       "multisig": {
         "title": "Multisig Explained",

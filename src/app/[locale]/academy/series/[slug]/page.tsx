@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Script from 'next/script'
-import { setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { NewsroomCard } from '@/components/newsroom/newsroom-card'
 import { Breadcrumbs } from '@/components/shared/breadcrumbs'
 import { Link } from '@/i18n/navigation'
@@ -14,17 +14,18 @@ interface PageProps {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params
+  const { locale, slug } = await params
+  const tAcademy = await getTranslations({ locale, namespace: 'Academy' })
   const series = await getSeriesBySlug(slug).catch(() => undefined)
   if (!series) {
     return createMetadata({
-      title: 'Learning Path | SSP Academy',
+      title: `${tAcademy('learningPaths')} | ${tAcademy('title')}`,
       description: siteDescription,
       path: '/academy/series',
     })
   }
   return createMetadata({
-    title: `${series.seoTitle ?? series.title} | SSP Academy`,
+    title: `${series.seoTitle ?? series.title} | ${tAcademy('title')}`,
     description: series.seoDescription ?? series.description,
     path: `/academy/series/${series.slug}`,
   })
@@ -34,15 +35,22 @@ export default async function SeriesDetailPage({ params }: PageProps) {
   const { locale, slug } = await params
   setRequestLocale(locale)
 
-  const series = await getSeriesBySlug(slug).catch(() => undefined)
+  const [series, tAcademy, tCommon] = await Promise.all([
+    getSeriesBySlug(slug).catch(() => undefined),
+    getTranslations({ locale, namespace: 'Academy' }),
+    getTranslations({ locale, namespace: 'Common' }),
+  ])
   if (!series) notFound()
 
   const orderedPosts = [...series.posts].sort((a, b) => (a.seriesOrder ?? 0) - (b.seriesOrder ?? 0))
+  const homeLabel = tCommon('breadcrumbHome')
+  const academyTitle = tAcademy('title')
+  const learningPathsTitle = tAcademy('learningPaths')
 
   const breadcrumbJsonLd = buildAcademyBreadcrumbJsonLd([
-    { name: 'Home', url: '/' },
-    { name: 'Academy', url: '/academy' },
-    { name: 'Learning Paths', url: '/academy/series' },
+    { name: homeLabel, url: '/' },
+    { name: academyTitle, url: '/academy' },
+    { name: learningPathsTitle, url: '/academy/series' },
     { name: series.title },
   ])
 
@@ -54,9 +62,9 @@ export default async function SeriesDetailPage({ params }: PageProps) {
       <div className='container-custom pt-24 md:pt-32'>
         <Breadcrumbs
           items={[
-            { label: 'Home', href: '/' },
-            { label: 'Academy', href: '/academy' },
-            { label: 'Learning Paths', href: '/academy/series' },
+            { label: homeLabel, href: '/' },
+            { label: academyTitle, href: '/academy' },
+            { label: learningPathsTitle, href: '/academy/series' },
             { label: series.title },
           ]}
         />
@@ -72,7 +80,7 @@ export default async function SeriesDetailPage({ params }: PageProps) {
               {series.description}
             </p>
             <p className='text-sm text-gray-500 dark:text-gray-400'>
-              {orderedPosts.length} part{orderedPosts.length === 1 ? '' : 's'}
+              {tAcademy('partsCount', { count: orderedPosts.length })}
             </p>
           </div>
         </div>
@@ -82,12 +90,12 @@ export default async function SeriesDetailPage({ params }: PageProps) {
         {orderedPosts.length === 0 ? (
           <div className='py-12 text-center'>
             <p className='text-gray-600 dark:text-gray-300'>
-              Parts are coming soon.{' '}
+              {tAcademy('seriesPartsEmpty')}{' '}
               <Link
                 href='/academy/series'
                 className='text-primary-600 dark:text-primary-400 underline'
               >
-                View all learning paths
+                {tAcademy('viewAllLearningPaths')}
               </Link>
             </p>
           </div>

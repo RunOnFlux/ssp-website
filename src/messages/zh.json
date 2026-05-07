@@ -111,6 +111,12 @@
     "seriesPart": "第 {order} 部分，共 {total} 部分",
     "previousPart": "上一部分",
     "nextPart": "下一部分",
+    "seriesMetaDescription": "结构化的多部分系列，引导你从入门到进阶，掌握 SSP 的加密自托管。",
+    "seriesIndexDescription": "结构化的多部分系列，引导你从入门到进阶。",
+    "seriesEmpty": "学习路径即将上线。在此期间，请按主题浏览文章：",
+    "backToAcademy": "返回学院",
+    "seriesPartsEmpty": "章节即将上线。",
+    "viewAllLearningPaths": "查看所有学习路径",
     "categories": {
       "multisig": {
         "title": "多重签名详解",
