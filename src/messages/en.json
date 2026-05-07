@@ -894,6 +894,23 @@
       "heading": "Cookie Policy"
     }
   },
+  "CheckoutSuccess": {
+    "metaTitle": "Checkout Successful | SSP Wallet",
+    "metaDescription": "Your order has been placed successfully.",
+    "heading": "Checkout Successful!",
+    "description": "Your order has been placed successfully. Thank you for your purchase!",
+    "confirmationEmail": "You will receive a confirmation email shortly.",
+    "backToHome": "Back to Home",
+    "contactSupport": "Contact Support"
+  },
+  "CheckoutFailure": {
+    "metaTitle": "Checkout Failed | SSP Wallet",
+    "metaDescription": "Your order could not be processed. Please try again.",
+    "heading": "Checkout Failed",
+    "description": "Your order could not be processed. Please try again or contact support if the problem persists.",
+    "tryAgain": "Try Again",
+    "contactSupport": "Contact Support"
+  },
   "CaseStudies": {
     "breadcrumbLabel": "Case Studies",
     "fluxFoundation": {

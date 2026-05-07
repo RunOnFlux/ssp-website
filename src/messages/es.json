@@ -894,6 +894,23 @@
       "heading": "Política de Cookies"
     }
   },
+  "CheckoutSuccess": {
+    "metaTitle": "Compra correcta | SSP Wallet",
+    "metaDescription": "Tu pedido se ha realizado correctamente.",
+    "heading": "¡Compra correcta!",
+    "description": "Tu pedido se ha realizado correctamente. ¡Gracias por tu compra!",
+    "confirmationEmail": "En breve recibirás un correo de confirmación.",
+    "backToHome": "Volver al inicio",
+    "contactSupport": "Contactar con soporte"
+  },
+  "CheckoutFailure": {
+    "metaTitle": "Pago no realizado | SSP Wallet",
+    "metaDescription": "No hemos podido procesar tu pedido. Inténtalo de nuevo.",
+    "heading": "Pago no realizado",
+    "description": "No hemos podido procesar tu pedido. Inténtalo de nuevo o contacta con soporte si el problema persiste.",
+    "tryAgain": "Volver a intentarlo",
+    "contactSupport": "Contactar con soporte"
+  },
   "CaseStudies": {
     "breadcrumbLabel": "Casos de Éxito",
     "fluxFoundation": {

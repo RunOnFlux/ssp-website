@@ -894,6 +894,23 @@
       "heading": "Cookie 政策"
     }
   },
+  "CheckoutSuccess": {
+    "metaTitle": "支付成功 | SSP 钱包",
+    "metaDescription": "你的订单已成功提交。",
+    "heading": "支付成功！",
+    "description": "你的订单已成功提交。感谢你的购买！",
+    "confirmationEmail": "你将很快收到一封确认邮件。",
+    "backToHome": "返回首页",
+    "contactSupport": "联系支持"
+  },
+  "CheckoutFailure": {
+    "metaTitle": "支付未成功 | SSP 钱包",
+    "metaDescription": "你的订单未能完成。请重试。",
+    "heading": "支付未成功",
+    "description": "你的订单未能完成。请重试，如问题持续请联系支持。",
+    "tryAgain": "重试",
+    "contactSupport": "联系支持"
+  },
   "CaseStudies": {
     "breadcrumbLabel": "案例研究",
     "fluxFoundation": {
