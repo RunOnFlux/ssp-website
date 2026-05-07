@@ -876,6 +876,24 @@
       "successAgain": "再发送一条消息"
     }
   },
+  "Legal": {
+    "lastUpdated": "最后更新：{date}",
+    "privacyPolicy": {
+      "metaTitle": "隐私政策 - SSP 钱包生态系统",
+      "metaDescription": "SSP 钱包完整生态系统的隐私政策。了解我们如何在网站、浏览器扩展、移动应用和中继服务中保护你的隐私。",
+      "heading": "隐私政策"
+    },
+    "termsOfService": {
+      "metaTitle": "服务条款 - SSP 钱包生态系统",
+      "metaDescription": "SSP 钱包完整生态系统的服务条款，包括网站、浏览器扩展、移动应用和中继服务。",
+      "heading": "服务条款"
+    },
+    "cookiePolicy": {
+      "metaTitle": "Cookie 政策 - SSP 钱包网站",
+      "metaDescription": "了解我们如何在 sspwallet.io 网站上使用 Cookie。管理你的 Cookie 偏好，了解我们符合 GDPR 的做法。",
+      "heading": "Cookie 政策"
+    }
+  },
   "Enterprise": {
     "metaTitle": "SSP Enterprise | 面向企业的自托管多重签名",
     "metaDescription": "面向企业资金的 M-of-N 自托管多重签名金库。策略引擎、支出限额、双设备签名与基于角色的访问。无托管方，无 MPC。",

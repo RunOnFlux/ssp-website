@@ -1,14 +1,21 @@
 import type { Metadata } from 'next'
-import { setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
 import { createMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = createMetadata({
-  title: 'Privacy Policy - SSP Wallet Ecosystem',
-  description:
-    'Privacy Policy for the complete SSP Wallet ecosystem. Learn how we protect your privacy across our website, browser extension, mobile app, and relay service.',
-  path: '/privacy-policy',
-})
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'Legal.privacyPolicy' })
+  return createMetadata({
+    title: t('metaTitle'),
+    description: t('metaDescription'),
+    path: '/privacy-policy',
+  })
+}
 
 export default async function PrivacyPolicyPage({
   params,
@@ -17,15 +24,19 @@ export default async function PrivacyPolicyPage({
 }) {
   const { locale } = await params
   setRequestLocale(locale)
+  const [t, tLegal] = await Promise.all([
+    getTranslations({ locale, namespace: 'Legal.privacyPolicy' }),
+    getTranslations({ locale, namespace: 'Legal' }),
+  ])
 
   return (
     <div className='section-padding'>
       <div className='container-custom mx-auto max-w-4xl'>
-        <h1 className='heading-1 mb-8'>Privacy Policy</h1>
+        <h1 className='heading-1 mb-8'>{t('heading')}</h1>
 
         <div className='prose prose-lg dark:prose-invert max-w-none'>
           <p className='mb-8 text-lg text-gray-600 dark:text-gray-400'>
-            Last updated: July 20, 2025
+            {tLegal('lastUpdated', { date: 'July 20, 2025' })}
           </p>
 
           <section className='mb-8'>

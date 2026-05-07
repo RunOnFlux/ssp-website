@@ -876,6 +876,24 @@
       "successAgain": "Enviar otro mensaje"
     }
   },
+  "Legal": {
+    "lastUpdated": "Última actualización: {date}",
+    "privacyPolicy": {
+      "metaTitle": "Política de Privacidad - Ecosistema SSP Wallet",
+      "metaDescription": "Política de privacidad del ecosistema completo de SSP Wallet. Descubre cómo protegemos tu privacidad en nuestro sitio web, extensión de navegador, aplicación móvil y servicio de relé.",
+      "heading": "Política de Privacidad"
+    },
+    "termsOfService": {
+      "metaTitle": "Términos del Servicio - Ecosistema SSP Wallet",
+      "metaDescription": "Términos del servicio para el ecosistema completo de SSP Wallet, incluyendo el sitio web, la extensión de navegador, la aplicación móvil y el servicio de relé.",
+      "heading": "Términos del Servicio"
+    },
+    "cookiePolicy": {
+      "metaTitle": "Política de Cookies - Sitio web de SSP Wallet",
+      "metaDescription": "Conoce cómo usamos las cookies en el sitio web sspwallet.io. Gestiona tus preferencias de cookies y entiende nuestras prácticas conformes con el RGPD.",
+      "heading": "Política de Cookies"
+    }
+  },
   "Enterprise": {
     "metaTitle": "SSP Enterprise | Multifirma de autocustodia para empresas",
     "metaDescription": "Bóvedas multifirma M-de-N de autocustodia para tesorerías empresariales. Motor de políticas, límites de gasto, firma con dos dispositivos y acceso por roles. Sin custodios, sin MPC.",

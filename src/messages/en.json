@@ -876,6 +876,24 @@
       "successAgain": "Send another message"
     }
   },
+  "Legal": {
+    "lastUpdated": "Last updated: {date}",
+    "privacyPolicy": {
+      "metaTitle": "Privacy Policy - SSP Wallet Ecosystem",
+      "metaDescription": "Privacy Policy for the complete SSP Wallet ecosystem. Learn how we protect your privacy across our website, browser extension, mobile app, and relay service.",
+      "heading": "Privacy Policy"
+    },
+    "termsOfService": {
+      "metaTitle": "Terms of Service - SSP Wallet Ecosystem",
+      "metaDescription": "Terms of Service for the complete SSP Wallet ecosystem including website, browser extension, mobile app, and relay service.",
+      "heading": "Terms of Service"
+    },
+    "cookiePolicy": {
+      "metaTitle": "Cookie Policy - SSP Wallet Website",
+      "metaDescription": "Learn about how we use cookies on the sspwallet.io website. Manage your cookie preferences and understand our GDPR-compliant practices.",
+      "heading": "Cookie Policy"
+    }
+  },
   "Enterprise": {
     "metaTitle": "SSP Enterprise | Self-Custody Multisig for Business",
     "metaDescription": "Self-custody M-of-N multisig vaults for business treasuries. Policy engine, spending limits, two-device signing, role-based access. No custodians, no MPC.",
