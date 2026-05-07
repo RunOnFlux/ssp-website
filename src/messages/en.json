@@ -475,5 +475,142 @@
       "ctaGuide": "Read the Setup Guide",
       "ctaEnterprise": "SSP for Business"
     }
+  },
+  "Guide": {
+    "metaTitle": "Setup Guide - SSP Wallet | Complete Installation Instructions",
+    "metaDescription": "Step-by-step guide to install and set up SSP Wallet and SSP Key. Complete setup instructions for secure crypto wallet with multi-signature protection.",
+    "breadcrumbLabel": "Setup Guide",
+    "videoJsonLdName": "How to Install SSP Wallet and SSP Key",
+    "videoJsonLdDescription": "Complete video walkthrough: install the SSP Wallet browser extension and sync the SSP Key mobile app for 2-of-2 multisignature security.",
+    "howToJsonLdName": "How to Install SSP Wallet & SSP Key",
+    "howToJsonLdDescription": "Complete installation guide for the SSP Wallet browser extension and the SSP Key mobile companion app required for 2-of-2 multisignature security.",
+    "howToSupplyDesktop": "Desktop browser (Chrome, Brave, or Firefox)",
+    "howToSupplyMobile": "Mobile device (iOS 15.1+ or Android 7+)",
+    "heroBadge": "Complete Setup Guide",
+    "heroTitle": "How to Install SSP Wallet & SSP Key",
+    "heroDescriptionPart1": "SSP requires a",
+    "heroDescriptionStrong": "2-step setup process",
+    "heroDescriptionPart2": ": install the browser extension AND the mobile app. Both devices are required for the secure 2-of-2 multisignature system that protects your crypto.",
+    "browserExtensionTitle": "Browser Extension",
+    "browserExtensionSubtitle": "Install wallet",
+    "mobileKeyTitle": "Mobile Key",
+    "mobileKeySubtitle": "Mobile auth",
+    "videoTitle": "Video Setup Guide",
+    "videoSubtitle": "Complete walkthrough",
+    "videoDescription": "Watch our comprehensive video tutorial that showcases how to set up both SSP Wallet and SSP Key with detailed step-by-step instructions.",
+    "videoUnsupported": "Your browser does not support the video tag.",
+    "videoBullet1": "Browser extension installation",
+    "videoBullet2": "Mobile app setup and sync",
+    "videoBullet3": "Security best practices",
+    "stepsTitle": "Step-by-Step Instructions",
+    "stepsSubtitle": "Follow these detailed instructions to set up your secure crypto wallet",
+    "important": "Important",
+    "openLink": "Open Link →",
+    "androidLabel": "Android",
+    "iosLabel": "iOS",
+    "phases": {
+      "0": {
+        "phase": "Part One",
+        "title": "Installing SSP Wallet",
+        "steps": {
+          "0": {
+            "title": "Visit Extension Store",
+            "description": "Open your browser and navigate to the SSP Wallet Extension page for your browser (Chrome, Firefox, Brave)",
+            "action": "Navigate to extension page"
+          },
+          "1": {
+            "title": "Install Extension",
+            "description": "Click 'Add to Chrome/Firefox' or 'Install' button. A pop-up window will appear asking if you want to add SSP Wallet. Click 'Add' or 'Install' to complete installation.",
+            "action": "Add to browser"
+          },
+          "2": {
+            "title": "Open Wallet",
+            "description": "Locate the SSP wallet logo in your browser and click on it. Follow the prompts to get started.",
+            "action": "Launch wallet"
+          },
+          "3": {
+            "title": "Create Password",
+            "description": "Create your password. Please carefully read the SSP Wallet Disclaimer and acknowledge your agreement.",
+            "action": "Set password"
+          },
+          "4": {
+            "title": "Create Wallet",
+            "description": "Click 'Create Wallet' to initialize your new wallet.",
+            "action": "Initialize wallet"
+          },
+          "5": {
+            "title": "Backup Seed Phrase",
+            "description": "Click 'Show Mnemonic Wallet Seed Phrase.' Store the seed phrase securely and confirm that you have backed it up.",
+            "action": "Secure backup"
+          },
+          "6": {
+            "title": "Finalize Setup",
+            "description": "Click 'Create Wallet' to finalize the process. Your browser wallet is now ready!",
+            "action": "Complete setup"
+          }
+        }
+      },
+      "1": {
+        "phase": "Part Two",
+        "title": "Installing SSP Key Mobile App",
+        "steps": {
+          "0": {
+            "title": "Download Mobile App",
+            "description": "Download SSP Key on your mobile device and open the application.",
+            "action": "Install mobile app"
+          },
+          "1": {
+            "title": "Start Synchronization",
+            "description": "Click on 'Synchronize Key' to begin the setup process.",
+            "action": "Begin sync"
+          },
+          "2": {
+            "title": "Set Key Password",
+            "description": "Set an SSP Key password and confirm it. Then, click 'Setup Key.'",
+            "action": "Create key password"
+          },
+          "3": {
+            "title": "Backup Key Seed",
+            "description": "Click 'Show Mnemonic Key Seed Phrase.' Store the key seed phrase securely and confirm backup.",
+            "action": "Secure key backup"
+          },
+          "4": {
+            "title": "Complete Key Setup",
+            "description": "Click 'Setup Key.' SSP Key now serves as second authentication factor for your SSP Wallet.",
+            "action": "Finalize key"
+          },
+          "5": {
+            "title": "Scan QR Code",
+            "description": "Click 'Scan Code' to synchronize your SSP Key with SSP Wallet. Scan the QR code displayed on your browser.",
+            "action": "Sync devices"
+          },
+          "6": {
+            "title": "Approve Synchronization",
+            "description": "Click 'Approve Synchronization' and confirm with your Key password. You'll be notified of successful sync.",
+            "action": "Complete sync"
+          }
+        }
+      }
+    },
+    "tipsTitle": "Security Best Practices",
+    "tipsSubtitle": "Follow these important security tips to keep your wallet safe",
+    "tips": {
+      "0": {
+        "title": "Secure Your Seed Phrases",
+        "description": "Store both wallet and key seed phrases in a secure, offline location. Never share them with anyone."
+      },
+      "1": {
+        "title": "Use Strong Passwords",
+        "description": "Create unique, strong passwords for both your wallet and mobile key app."
+      },
+      "2": {
+        "title": "Keep Mobile Secure",
+        "description": "Ensure your mobile device has screen lock and consider using biometric authentication."
+      }
+    },
+    "successTitle": "Congratulations!",
+    "successDescription": "By following these steps, you have successfully installed and set up both SSP Wallet and SSP Key, ensuring a secure and seamless user experience.",
+    "successDownload": "Download Now",
+    "successSupport": "Get Support"
   }
 }

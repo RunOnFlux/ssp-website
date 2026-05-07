@@ -475,5 +475,142 @@
       "ctaGuide": "Leer la guía de configuración",
       "ctaEnterprise": "SSP para empresas"
     }
+  },
+  "Guide": {
+    "metaTitle": "Guía de configuración - SSP Wallet | Instrucciones de instalación completas",
+    "metaDescription": "Guía paso a paso para instalar y configurar SSP Wallet y SSP Key. Instrucciones completas para una cartera cripto segura con protección multifirma.",
+    "breadcrumbLabel": "Guía de configuración",
+    "videoJsonLdName": "Cómo instalar SSP Wallet y SSP Key",
+    "videoJsonLdDescription": "Tutorial en vídeo completo: instala la extensión de navegador SSP Wallet y sincroniza la app móvil SSP Key para una seguridad multifirma 2 de 2.",
+    "howToJsonLdName": "Cómo instalar SSP Wallet y SSP Key",
+    "howToJsonLdDescription": "Guía completa de instalación de la extensión de navegador SSP Wallet y la app móvil complementaria SSP Key, ambas necesarias para la seguridad multifirma 2 de 2.",
+    "howToSupplyDesktop": "Navegador de escritorio (Chrome, Brave o Firefox)",
+    "howToSupplyMobile": "Dispositivo móvil (iOS 15.1+ o Android 7+)",
+    "heroBadge": "Guía de configuración completa",
+    "heroTitle": "Cómo instalar SSP Wallet y SSP Key",
+    "heroDescriptionPart1": "SSP requiere un",
+    "heroDescriptionStrong": "proceso de configuración en 2 pasos",
+    "heroDescriptionPart2": ": instalar la extensión del navegador Y la app móvil. Ambos dispositivos son necesarios para el sistema seguro de multifirma 2 de 2 que protege tus criptos.",
+    "browserExtensionTitle": "Extensión de navegador",
+    "browserExtensionSubtitle": "Instalar cartera",
+    "mobileKeyTitle": "Clave móvil",
+    "mobileKeySubtitle": "Autenticación móvil",
+    "videoTitle": "Guía en vídeo",
+    "videoSubtitle": "Tutorial completo",
+    "videoDescription": "Mira nuestro completo tutorial en vídeo, que muestra cómo configurar tanto SSP Wallet como SSP Key con instrucciones detalladas paso a paso.",
+    "videoUnsupported": "Tu navegador no admite la etiqueta de vídeo.",
+    "videoBullet1": "Instalación de la extensión de navegador",
+    "videoBullet2": "Configuración y sincronización de la app móvil",
+    "videoBullet3": "Mejores prácticas de seguridad",
+    "stepsTitle": "Instrucciones paso a paso",
+    "stepsSubtitle": "Sigue estas instrucciones detalladas para configurar tu cartera cripto segura",
+    "important": "Importante",
+    "openLink": "Abrir enlace →",
+    "androidLabel": "Android",
+    "iosLabel": "iOS",
+    "phases": {
+      "0": {
+        "phase": "Primera parte",
+        "title": "Instalación de SSP Wallet",
+        "steps": {
+          "0": {
+            "title": "Visita la tienda de extensiones",
+            "description": "Abre tu navegador y ve a la página de la extensión SSP Wallet para tu navegador (Chrome, Firefox, Brave)",
+            "action": "Ir a la página de la extensión"
+          },
+          "1": {
+            "title": "Instala la extensión",
+            "description": "Haz clic en 'Añadir a Chrome/Firefox' o 'Instalar'. Aparecerá una ventana emergente preguntando si deseas añadir SSP Wallet. Haz clic en 'Añadir' o 'Instalar' para completar la instalación.",
+            "action": "Añadir al navegador"
+          },
+          "2": {
+            "title": "Abrir la cartera",
+            "description": "Localiza el logo de SSP Wallet en tu navegador y haz clic en él. Sigue las indicaciones para empezar.",
+            "action": "Iniciar la cartera"
+          },
+          "3": {
+            "title": "Crear contraseña",
+            "description": "Crea tu contraseña. Lee atentamente el aviso legal de SSP Wallet y confirma tu acuerdo.",
+            "action": "Establecer contraseña"
+          },
+          "4": {
+            "title": "Crear cartera",
+            "description": "Haz clic en 'Crear cartera' para inicializar tu nueva cartera.",
+            "action": "Inicializar cartera"
+          },
+          "5": {
+            "title": "Hacer copia de la frase semilla",
+            "description": "Haz clic en 'Mostrar frase semilla mnemotécnica de la cartera'. Guarda la frase semilla de forma segura y confirma que la has respaldado.",
+            "action": "Copia de seguridad"
+          },
+          "6": {
+            "title": "Finalizar configuración",
+            "description": "Haz clic en 'Crear cartera' para finalizar el proceso. ¡Tu cartera de navegador ya está lista!",
+            "action": "Completar configuración"
+          }
+        }
+      },
+      "1": {
+        "phase": "Segunda parte",
+        "title": "Instalación de la app móvil SSP Key",
+        "steps": {
+          "0": {
+            "title": "Descargar la app móvil",
+            "description": "Descarga SSP Key en tu dispositivo móvil y abre la aplicación.",
+            "action": "Instalar app móvil"
+          },
+          "1": {
+            "title": "Iniciar la sincronización",
+            "description": "Haz clic en 'Sincronizar clave' para comenzar el proceso de configuración.",
+            "action": "Iniciar sincronización"
+          },
+          "2": {
+            "title": "Establecer contraseña de la clave",
+            "description": "Establece una contraseña para SSP Key y confírmala. Después, haz clic en 'Configurar clave'.",
+            "action": "Crear contraseña de clave"
+          },
+          "3": {
+            "title": "Hacer copia de la frase semilla de la clave",
+            "description": "Haz clic en 'Mostrar frase semilla mnemotécnica de la clave'. Guarda la frase semilla de la clave de forma segura y confirma la copia.",
+            "action": "Copia segura de la clave"
+          },
+          "4": {
+            "title": "Completar configuración de la clave",
+            "description": "Haz clic en 'Configurar clave'. SSP Key ahora actúa como segundo factor de autenticación para tu SSP Wallet.",
+            "action": "Finalizar clave"
+          },
+          "5": {
+            "title": "Escanear código QR",
+            "description": "Haz clic en 'Escanear código' para sincronizar tu SSP Key con SSP Wallet. Escanea el código QR que aparece en tu navegador.",
+            "action": "Sincronizar dispositivos"
+          },
+          "6": {
+            "title": "Aprobar la sincronización",
+            "description": "Haz clic en 'Aprobar sincronización' y confirma con la contraseña de tu Key. Recibirás una notificación de sincronización correcta.",
+            "action": "Completar sincronización"
+          }
+        }
+      }
+    },
+    "tipsTitle": "Mejores prácticas de seguridad",
+    "tipsSubtitle": "Sigue estos importantes consejos de seguridad para mantener tu cartera a salvo",
+    "tips": {
+      "0": {
+        "title": "Protege tus frases semilla",
+        "description": "Guarda las frases semilla de la cartera y de la clave en un lugar seguro y sin conexión. Nunca las compartas con nadie."
+      },
+      "1": {
+        "title": "Usa contraseñas fuertes",
+        "description": "Crea contraseñas únicas y fuertes tanto para tu cartera como para la app móvil de la clave."
+      },
+      "2": {
+        "title": "Protege tu móvil",
+        "description": "Asegúrate de que tu dispositivo móvil tiene bloqueo de pantalla y considera usar autenticación biométrica."
+      }
+    },
+    "successTitle": "¡Felicidades!",
+    "successDescription": "Siguiendo estos pasos, has instalado y configurado correctamente tanto SSP Wallet como SSP Key, garantizando una experiencia de uso segura y fluida.",
+    "successDownload": "Descargar ahora",
+    "successSupport": "Obtener soporte"
   }
 }

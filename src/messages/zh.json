@@ -475,5 +475,142 @@
       "ctaGuide": "查看设置指南",
       "ctaEnterprise": "面向企业的 SSP"
     }
+  },
+  "Guide": {
+    "metaTitle": "设置指南 - SSP Wallet | 完整安装说明",
+    "metaDescription": "分步指南，介绍如何安装并配置 SSP Wallet 与 SSP Key。具备多重签名保护的安全加密钱包完整设置说明。",
+    "breadcrumbLabel": "设置指南",
+    "videoJsonLdName": "如何安装 SSP Wallet 与 SSP Key",
+    "videoJsonLdDescription": "完整视频演示：安装 SSP Wallet 浏览器扩展，并同步 SSP Key 移动应用，实现 2-of-2 多重签名安全。",
+    "howToJsonLdName": "如何安装 SSP Wallet 与 SSP Key",
+    "howToJsonLdDescription": "SSP Wallet 浏览器扩展与配套 SSP Key 移动应用的完整安装指南，二者均为 2-of-2 多重签名安全所必需。",
+    "howToSupplyDesktop": "桌面浏览器（Chrome、Brave 或 Firefox）",
+    "howToSupplyMobile": "移动设备（iOS 15.1+ 或 Android 7+）",
+    "heroBadge": "完整设置指南",
+    "heroTitle": "如何安装 SSP Wallet 与 SSP Key",
+    "heroDescriptionPart1": "SSP 需要",
+    "heroDescriptionStrong": "两步配置流程",
+    "heroDescriptionPart2": "：同时安装浏览器扩展与移动应用。两台设备均为保护你加密资产的安全 2-of-2 多重签名系统所必需。",
+    "browserExtensionTitle": "浏览器扩展",
+    "browserExtensionSubtitle": "安装钱包",
+    "mobileKeyTitle": "Mobile Key",
+    "mobileKeySubtitle": "移动认证",
+    "videoTitle": "视频设置指南",
+    "videoSubtitle": "完整演示",
+    "videoDescription": "观看我们的完整视频教程，详细分步演示如何配置 SSP Wallet 与 SSP Key。",
+    "videoUnsupported": "你的浏览器不支持视频标签。",
+    "videoBullet1": "浏览器扩展安装",
+    "videoBullet2": "移动应用配置与同步",
+    "videoBullet3": "安全最佳实践",
+    "stepsTitle": "分步说明",
+    "stepsSubtitle": "按照以下详细说明配置你的安全加密钱包",
+    "important": "重要",
+    "openLink": "打开链接 →",
+    "androidLabel": "Android",
+    "iosLabel": "iOS",
+    "phases": {
+      "0": {
+        "phase": "第一部分",
+        "title": "安装 SSP Wallet",
+        "steps": {
+          "0": {
+            "title": "访问扩展商店",
+            "description": "打开浏览器并访问对应浏览器（Chrome、Firefox、Brave）的 SSP Wallet 扩展页面",
+            "action": "前往扩展页面"
+          },
+          "1": {
+            "title": "安装扩展",
+            "description": "点击「添加到 Chrome/Firefox」或「安装」按钮。会弹出窗口询问是否添加 SSP Wallet，点击「添加」或「安装」以完成安装。",
+            "action": "添加到浏览器"
+          },
+          "2": {
+            "title": "打开钱包",
+            "description": "在浏览器中找到 SSP Wallet 图标并点击。按照提示开始使用。",
+            "action": "启动钱包"
+          },
+          "3": {
+            "title": "创建密码",
+            "description": "创建你的密码。请仔细阅读 SSP Wallet 免责声明并确认同意。",
+            "action": "设置密码"
+          },
+          "4": {
+            "title": "创建钱包",
+            "description": "点击「创建钱包」初始化你的新钱包。",
+            "action": "初始化钱包"
+          },
+          "5": {
+            "title": "备份助记词",
+            "description": "点击「显示钱包助记词」。妥善保存助记词并确认你已完成备份。",
+            "action": "安全备份"
+          },
+          "6": {
+            "title": "完成设置",
+            "description": "点击「创建钱包」完成流程。你的浏览器钱包已就绪！",
+            "action": "完成设置"
+          }
+        }
+      },
+      "1": {
+        "phase": "第二部分",
+        "title": "安装 SSP Key 移动应用",
+        "steps": {
+          "0": {
+            "title": "下载移动应用",
+            "description": "在移动设备上下载 SSP Key 并打开应用。",
+            "action": "安装移动应用"
+          },
+          "1": {
+            "title": "开始同步",
+            "description": "点击「同步密钥」开始配置流程。",
+            "action": "开始同步"
+          },
+          "2": {
+            "title": "设置密钥密码",
+            "description": "设置 SSP Key 密码并确认。然后点击「设置密钥」。",
+            "action": "创建密钥密码"
+          },
+          "3": {
+            "title": "备份密钥助记词",
+            "description": "点击「显示密钥助记词」。妥善保存密钥助记词并确认备份。",
+            "action": "安全备份密钥"
+          },
+          "4": {
+            "title": "完成密钥设置",
+            "description": "点击「设置密钥」。SSP Key 现作为 SSP Wallet 的第二认证因子。",
+            "action": "完成密钥配置"
+          },
+          "5": {
+            "title": "扫描二维码",
+            "description": "点击「扫描代码」将 SSP Key 与 SSP Wallet 同步。扫描浏览器中显示的二维码。",
+            "action": "同步设备"
+          },
+          "6": {
+            "title": "批准同步",
+            "description": "点击「批准同步」并使用密钥密码确认。同步成功后会收到通知。",
+            "action": "完成同步"
+          }
+        }
+      }
+    },
+    "tipsTitle": "安全最佳实践",
+    "tipsSubtitle": "请遵循以下重要安全建议，确保你的钱包安全",
+    "tips": {
+      "0": {
+        "title": "妥善保管你的助记词",
+        "description": "将钱包与密钥助记词保存在安全的离线位置。切勿与任何人分享。"
+      },
+      "1": {
+        "title": "使用强密码",
+        "description": "为你的钱包与移动密钥应用分别创建独特且强健的密码。"
+      },
+      "2": {
+        "title": "保障移动设备安全",
+        "description": "确保移动设备已设置锁屏，并考虑启用生物识别认证。"
+      }
+    },
+    "successTitle": "恭喜！",
+    "successDescription": "通过这些步骤，你已成功安装并配置好 SSP Wallet 与 SSP Key，享受安全且流畅的使用体验。",
+    "successDownload": "立即下载",
+    "successSupport": "获取支持"
   }
 }
