@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, CheckCircle, Chrome, Download, QrCode, Shield, Smartphone } from 'lucide-react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { Link } from '@/i18n/navigation'
@@ -13,24 +14,15 @@ const FIREFOX_ADDON_LINK = 'https://addons.mozilla.org/en-US/firefox/addon/ssp-w
 
 const downloadOptions = [
   {
-    id: 'chrome',
+    id: 'chrome' as const,
     icon: Chrome,
-    title: 'SSP Wallet',
-    subtitle: 'Browser Extension',
-    description: 'Install on Chrome, Brave, Firefox and other Chromium-based browsers',
-    features: ['Multi-signature security', 'WalletConnect v2 support', 'Cross-chain compatibility'],
     link: '/download#extension',
     available: true,
     primary: true,
   },
   {
-    id: 'mobile',
+    id: 'mobile' as const,
     icon: Smartphone,
-    title: 'SSP Key',
-    subtitle: 'Mobile 2FA App',
-    description:
-      'Required companion app for iOS and Android devices providing secure authentication',
-    features: ['2FA authentication', 'QR code sync', 'Secure key storage'],
     link: '/download#mobile',
     available: true,
     primary: true,
@@ -44,6 +36,7 @@ const supportedBrowsers = [
 ] as const
 
 export function DownloadContent() {
+  const t = useTranslations('Download')
   const [heroRef, heroInView] = useInView({
     threshold: 0.3,
     triggerOnce: true,
@@ -72,16 +65,13 @@ export function DownloadContent() {
           >
             <div className='mb-6 inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'>
               <Download className='mr-2 h-4 w-4' />
-              Download SSP Wallet
+              {t('heroBadge')}
             </div>
 
-            <h1 className='heading-1 mb-6 text-gray-900 dark:text-white'>
-              Get Started with SSP Wallet
-            </h1>
+            <h1 className='heading-1 mb-6 text-gray-900 dark:text-white'>{t('heroTitle')}</h1>
 
             <p className='mx-auto mb-12 max-w-3xl text-xl text-gray-600 dark:text-gray-400'>
-              Download both components for complete security: the browser extension for wallet
-              management and the mobile app for transaction authentication.
+              {t('heroDescription')}
             </p>
           </motion.div>
         </div>
@@ -97,9 +87,9 @@ export function DownloadContent() {
             viewport={{ once: true }}
             className='mb-12 text-center'
           >
-            <h2 className='heading-2 mb-4'>Two-Step Setup Process</h2>
+            <h2 className='heading-2 mb-4'>{t('stepsTitle')}</h2>
             <p className='mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-400'>
-              Both components are required for the secure 2-of-2 multisignature system
+              {t('stepsSubtitle')}
             </p>
           </motion.div>
 
@@ -124,28 +114,30 @@ export function DownloadContent() {
                         </div>
                         <div>
                           <h3 className='text-xl font-bold text-gray-900 dark:text-white'>
-                            {option.title}
+                            {t(`options.${option.id}.title`)}
                           </h3>
                           <p className='text-sm text-gray-600 dark:text-gray-400'>
-                            {option.subtitle}
+                            {t(`options.${option.id}.subtitle`)}
                           </p>
                         </div>
                       </div>
                       <div className='bg-primary-100 text-primary-800 dark:bg-primary-900/30 dark:text-primary-200 rounded-full px-3 py-1 text-xs font-medium'>
-                        Step {index + 1}
+                        {t('stepLabel', { index: index + 1 })}
                       </div>
                     </div>
 
-                    <p className='mb-6 text-gray-600 dark:text-gray-400'>{option.description}</p>
+                    <p className='mb-6 text-gray-600 dark:text-gray-400'>
+                      {t(`options.${option.id}.description`)}
+                    </p>
 
                     <div className='mb-6 space-y-2'>
-                      {option.features.map((feature, featureIndex) => (
+                      {[0, 1, 2].map(featureIndex => (
                         <div
                           key={featureIndex}
                           className='flex items-center text-sm text-gray-600 dark:text-gray-400'
                         >
                           <CheckCircle className='mr-2 h-4 w-4 flex-shrink-0 text-green-500' />
-                          {feature}
+                          {t(`options.${option.id}.features.${featureIndex}`)}
                         </div>
                       ))}
                     </div>
@@ -157,14 +149,14 @@ export function DownloadContent() {
                         rel='noopener noreferrer'
                         className='bg-primary-600 hover:bg-primary-700 block w-full rounded-lg px-6 py-3 text-center font-medium text-white transition-colors'
                       >
-                        Download Extension
+                        {t(`options.${option.id}.cta`)}
                       </a>
                     ) : (
                       <Link
                         href={option.link}
                         className='bg-primary-600 hover:bg-primary-700 block w-full rounded-lg px-6 py-3 text-center font-medium text-white transition-colors'
                       >
-                        View Mobile Apps
+                        {t(`options.${option.id}.cta`)}
                       </Link>
                     )}
                   </div>
@@ -185,9 +177,9 @@ export function DownloadContent() {
             viewport={{ once: true }}
             className='text-center'
           >
-            <h2 className='heading-2 mb-4'>Supported Browsers</h2>
+            <h2 className='heading-2 mb-4'>{t('browsersTitle')}</h2>
             <p className='mx-auto mb-8 max-w-2xl text-lg text-gray-600 dark:text-gray-400'>
-              SSP Wallet works seamlessly across all major browsers
+              {t('browsersSubtitle')}
             </p>
 
             <div className='flex items-center justify-center space-x-12'>
@@ -238,23 +230,24 @@ export function DownloadContent() {
             >
               <div className='mb-6 inline-flex items-center rounded-full bg-green-100 px-4 py-2 text-sm font-medium text-green-700 dark:bg-green-900/30 dark:text-green-300'>
                 <Smartphone className='mr-2 h-4 w-4' />
-                SSP Key Mobile App
+                {t('mobileBadge')}
               </div>
 
-              <h2 className='heading-2 mb-6'>Complete Your Security Setup</h2>
+              <h2 className='heading-2 mb-6'>{t('mobileTitle')}</h2>
 
               <p className='mb-8 text-lg text-gray-600 dark:text-gray-400'>
-                SSP Key provides the second signature required for all transactions. Install it on
-                your mobile device to complete the 2-of-2 multisignature security.
+                {t('mobileDescription')}
               </p>
 
               <div className='mb-8 space-y-6'>
                 <div className='flex items-start'>
                   <QrCode className='text-primary-600 dark:text-primary-400 mt-1 mr-4 h-6 w-6 flex-shrink-0' />
                   <div>
-                    <h4 className='mb-2 font-semibold text-gray-900 dark:text-white'>Easy Setup</h4>
+                    <h4 className='mb-2 font-semibold text-gray-900 dark:text-white'>
+                      {t('mobileEasySetupTitle')}
+                    </h4>
                     <p className='text-gray-600 dark:text-gray-400'>
-                      Scan a QR code to sync your mobile device with your browser wallet instantly
+                      {t('mobileEasySetupDescription')}
                     </p>
                   </div>
                 </div>
@@ -263,10 +256,10 @@ export function DownloadContent() {
                   <Shield className='text-primary-600 dark:text-primary-400 mt-1 mr-4 h-6 w-6 flex-shrink-0' />
                   <div>
                     <h4 className='mb-2 font-semibold text-gray-900 dark:text-white'>
-                      Maximum Security
+                      {t('mobileSecurityTitle')}
                     </h4>
                     <p className='text-gray-600 dark:text-gray-400'>
-                      Your funds remain secure even if one device is compromised
+                      {t('mobileSecurityDescription')}
                     </p>
                   </div>
                 </div>
@@ -290,7 +283,7 @@ export function DownloadContent() {
                   </div>
                   <div className='text-left'>
                     <div className='text-sm font-medium text-gray-900 dark:text-white'>
-                      Get it on
+                      {t('googlePlayLabel')}
                     </div>
                     <div className='text-xs text-gray-600 dark:text-gray-400'>Google Play</div>
                   </div>
@@ -313,7 +306,7 @@ export function DownloadContent() {
                   </div>
                   <div className='text-left'>
                     <div className='text-sm font-medium text-gray-900 dark:text-white'>
-                      Download on the
+                      {t('appStoreLabel')}
                     </div>
                     <div className='text-xs text-gray-600 dark:text-gray-400'>App Store</div>
                   </div>
@@ -331,7 +324,7 @@ export function DownloadContent() {
               <div className='relative mx-auto max-w-xs'>
                 <Image
                   src='/android-screenshot-maker-of-a-samsung-galaxy-s9-plus-in-portrait-position-1319 (1) 2.svg'
-                  alt='SSP Key Mobile App'
+                  alt={t('mobileAppAlt')}
                   width={300}
                   height={600}
                   className='h-auto w-full'
@@ -352,67 +345,34 @@ export function DownloadContent() {
             viewport={{ once: true }}
             className='mb-12 text-center'
           >
-            <h2 className='heading-2 mb-4'>How It Works</h2>
+            <h2 className='heading-2 mb-4'>{t('howTitle')}</h2>
             <p className='mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-400'>
-              Understanding the 2-of-2 multisignature security model
+              {t('howSubtitle')}
             </p>
           </motion.div>
 
           <div className='mx-auto max-w-4xl'>
             <div className='grid gap-8 md:grid-cols-3'>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.1 }}
-                viewport={{ once: true }}
-                className='text-center'
-              >
-                <div className='bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl'>
-                  <span className='text-2xl font-bold'>1</span>
-                </div>
-                <h3 className='mb-2 text-lg font-semibold text-gray-900 dark:text-white'>
-                  Install Extension
-                </h3>
-                <p className='text-gray-600 dark:text-gray-400'>
-                  Add SSP Wallet to your browser and create your wallet with a secure seed phrase
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.2 }}
-                viewport={{ once: true }}
-                className='text-center'
-              >
-                <div className='bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl'>
-                  <span className='text-2xl font-bold'>2</span>
-                </div>
-                <h3 className='mb-2 text-lg font-semibold text-gray-900 dark:text-white'>
-                  Setup Mobile App
-                </h3>
-                <p className='text-gray-600 dark:text-gray-400'>
-                  Install SSP Key on your phone and sync it with your browser wallet via QR code
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.3 }}
-                viewport={{ once: true }}
-                className='text-center'
-              >
-                <div className='bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl'>
-                  <span className='text-2xl font-bold'>3</span>
-                </div>
-                <h3 className='mb-2 text-lg font-semibold text-gray-900 dark:text-white'>
-                  Secure Transactions
-                </h3>
-                <p className='text-gray-600 dark:text-gray-400'>
-                  Every transaction requires approval from both your browser and mobile device
-                </p>
-              </motion.div>
+              {[1, 2, 3].map((stepNum, idx) => (
+                <motion.div
+                  key={stepNum}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.1 * (idx + 1) }}
+                  viewport={{ once: true }}
+                  className='text-center'
+                >
+                  <div className='bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl'>
+                    <span className='text-2xl font-bold'>{stepNum}</span>
+                  </div>
+                  <h3 className='mb-2 text-lg font-semibold text-gray-900 dark:text-white'>
+                    {t(`howSteps.${stepNum}.title`)}
+                  </h3>
+                  <p className='text-gray-600 dark:text-gray-400'>
+                    {t(`howSteps.${stepNum}.description`)}
+                  </p>
+                </motion.div>
+              ))}
             </div>
           </div>
         </div>
@@ -427,23 +387,21 @@ export function DownloadContent() {
             transition={{ duration: 0.4 }}
             viewport={{ once: true }}
           >
-            <h2 className='mb-4 text-3xl font-bold text-white'>Ready to Get Started?</h2>
-            <p className='text-primary-100 mx-auto mb-8 max-w-2xl text-xl'>
-              Follow our step-by-step guide to set up your secure crypto wallet
-            </p>
+            <h2 className='mb-4 text-3xl font-bold text-white'>{t('ctaTitle')}</h2>
+            <p className='text-primary-100 mx-auto mb-8 max-w-2xl text-xl'>{t('ctaSubtitle')}</p>
             <div className='flex flex-col justify-center gap-4 sm:flex-row'>
               <Link
                 href='/guide'
                 className='text-primary-600 inline-flex items-center rounded-lg bg-white px-8 py-4 font-semibold transition-colors hover:bg-gray-50'
               >
-                View Setup Guide
+                {t('ctaSetupGuide')}
                 <ArrowRight className='ml-2 h-5 w-5' />
               </Link>
               <Link
                 href='/support'
                 className='inline-flex items-center rounded-lg border-2 border-white px-8 py-4 font-semibold text-white transition-colors hover:bg-white/10'
               >
-                Get Support
+                {t('ctaSupport')}
               </Link>
             </div>
           </motion.div>

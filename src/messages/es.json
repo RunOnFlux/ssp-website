@@ -253,5 +253,73 @@
       "discord": "Chat de la comunidad y soporte en tiempo real",
       "twitter": "Últimas actualizaciones, noticias y anuncios"
     }
+  },
+  "Download": {
+    "metaTitle": "Descargar - SSP Wallet | Obtén tu cartera cripto segura",
+    "metaDescription": "Descarga SSP Wallet para tu navegador. Cartera cripto segura, simple y potente con seguridad multifirma y autenticación móvil.",
+    "ogAlt": "Descarga SSP Wallet - Cartera cripto segura",
+    "breadcrumbLabel": "Descargar",
+    "heroBadge": "Descargar SSP Wallet",
+    "heroTitle": "Empieza con SSP Wallet",
+    "heroDescription": "Descarga ambos componentes para una seguridad completa: la extensión del navegador para gestionar tu cartera y la app móvil para autenticar transacciones.",
+    "stepsTitle": "Proceso de configuración en dos pasos",
+    "stepsSubtitle": "Ambos componentes son necesarios para el sistema seguro de multifirma 2 de 2",
+    "stepLabel": "Paso {index}",
+    "options": {
+      "chrome": {
+        "title": "SSP Wallet",
+        "subtitle": "Extensión de navegador",
+        "description": "Instálala en Chrome, Brave, Firefox y otros navegadores basados en Chromium",
+        "features": {
+          "0": "Seguridad multifirma",
+          "1": "Compatibilidad con WalletConnect v2",
+          "2": "Compatibilidad multicadena"
+        },
+        "cta": "Descargar extensión"
+      },
+      "mobile": {
+        "title": "SSP Key",
+        "subtitle": "App móvil 2FA",
+        "description": "App complementaria obligatoria para iOS y Android que aporta autenticación segura",
+        "features": {
+          "0": "Autenticación 2FA",
+          "1": "Sincronización mediante código QR",
+          "2": "Almacenamiento seguro de claves"
+        },
+        "cta": "Ver apps móviles"
+      }
+    },
+    "browsersTitle": "Navegadores compatibles",
+    "browsersSubtitle": "SSP Wallet funciona sin problemas en todos los navegadores principales",
+    "mobileBadge": "App móvil SSP Key",
+    "mobileTitle": "Completa tu configuración de seguridad",
+    "mobileDescription": "SSP Key proporciona la segunda firma necesaria para todas las transacciones. Instálala en tu dispositivo móvil para completar la seguridad multifirma 2 de 2.",
+    "mobileEasySetupTitle": "Configuración fácil",
+    "mobileEasySetupDescription": "Escanea un código QR para sincronizar tu dispositivo móvil con la cartera del navegador al instante",
+    "mobileSecurityTitle": "Máxima seguridad",
+    "mobileSecurityDescription": "Tus fondos permanecen seguros incluso si uno de los dispositivos se ve comprometido",
+    "googlePlayLabel": "Disponible en",
+    "appStoreLabel": "Descargar en",
+    "mobileAppAlt": "App móvil SSP Key",
+    "howTitle": "Cómo funciona",
+    "howSubtitle": "Entiende el modelo de seguridad multifirma 2 de 2",
+    "howSteps": {
+      "1": {
+        "title": "Instala la extensión",
+        "description": "Añade SSP Wallet a tu navegador y crea tu cartera con una frase semilla segura"
+      },
+      "2": {
+        "title": "Configura la app móvil",
+        "description": "Instala SSP Key en tu teléfono y sincronízala con la cartera del navegador mediante un código QR"
+      },
+      "3": {
+        "title": "Transacciones seguras",
+        "description": "Cada transacción requiere la aprobación tanto desde el navegador como desde el dispositivo móvil"
+      }
+    },
+    "ctaTitle": "¿Listo para empezar?",
+    "ctaSubtitle": "Sigue nuestra guía paso a paso para configurar tu cartera cripto segura",
+    "ctaSetupGuide": "Ver guía de configuración",
+    "ctaSupport": "Obtener soporte"
   }
 }

@@ -253,5 +253,73 @@
       "discord": "Community chat & real-time support",
       "twitter": "Latest updates, news & announcements"
     }
+  },
+  "Download": {
+    "metaTitle": "Download - SSP Wallet | Get Your Secure Crypto Wallet",
+    "metaDescription": "Download SSP Wallet for your browser. Secure, simple, powerful crypto wallet with multi-signature security and mobile authentication.",
+    "ogAlt": "Download SSP Wallet - Secure Crypto Wallet",
+    "breadcrumbLabel": "Download",
+    "heroBadge": "Download SSP Wallet",
+    "heroTitle": "Get Started with SSP Wallet",
+    "heroDescription": "Download both components for complete security: the browser extension for wallet management and the mobile app for transaction authentication.",
+    "stepsTitle": "Two-Step Setup Process",
+    "stepsSubtitle": "Both components are required for the secure 2-of-2 multisignature system",
+    "stepLabel": "Step {index}",
+    "options": {
+      "chrome": {
+        "title": "SSP Wallet",
+        "subtitle": "Browser Extension",
+        "description": "Install on Chrome, Brave, Firefox and other Chromium-based browsers",
+        "features": {
+          "0": "Multi-signature security",
+          "1": "WalletConnect v2 support",
+          "2": "Cross-chain compatibility"
+        },
+        "cta": "Download Extension"
+      },
+      "mobile": {
+        "title": "SSP Key",
+        "subtitle": "Mobile 2FA App",
+        "description": "Required companion app for iOS and Android devices providing secure authentication",
+        "features": {
+          "0": "2FA authentication",
+          "1": "QR code sync",
+          "2": "Secure key storage"
+        },
+        "cta": "View Mobile Apps"
+      }
+    },
+    "browsersTitle": "Supported Browsers",
+    "browsersSubtitle": "SSP Wallet works seamlessly across all major browsers",
+    "mobileBadge": "SSP Key Mobile App",
+    "mobileTitle": "Complete Your Security Setup",
+    "mobileDescription": "SSP Key provides the second signature required for all transactions. Install it on your mobile device to complete the 2-of-2 multisignature security.",
+    "mobileEasySetupTitle": "Easy Setup",
+    "mobileEasySetupDescription": "Scan a QR code to sync your mobile device with your browser wallet instantly",
+    "mobileSecurityTitle": "Maximum Security",
+    "mobileSecurityDescription": "Your funds remain secure even if one device is compromised",
+    "googlePlayLabel": "Get it on",
+    "appStoreLabel": "Download on the",
+    "mobileAppAlt": "SSP Key Mobile App",
+    "howTitle": "How It Works",
+    "howSubtitle": "Understanding the 2-of-2 multisignature security model",
+    "howSteps": {
+      "1": {
+        "title": "Install Extension",
+        "description": "Add SSP Wallet to your browser and create your wallet with a secure seed phrase"
+      },
+      "2": {
+        "title": "Setup Mobile App",
+        "description": "Install SSP Key on your phone and sync it with your browser wallet via QR code"
+      },
+      "3": {
+        "title": "Secure Transactions",
+        "description": "Every transaction requires approval from both your browser and mobile device"
+      }
+    },
+    "ctaTitle": "Ready to Get Started?",
+    "ctaSubtitle": "Follow our step-by-step guide to set up your secure crypto wallet",
+    "ctaSetupGuide": "View Setup Guide",
+    "ctaSupport": "Get Support"
   }
 }

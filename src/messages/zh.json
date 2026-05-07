@@ -253,5 +253,73 @@
       "discord": "社区交流与实时支持",
       "twitter": "最新动态、新闻与公告"
     }
+  },
+  "Download": {
+    "metaTitle": "下载 - SSP Wallet | 获取你的安全加密钱包",
+    "metaDescription": "下载浏览器版 SSP Wallet。安全、简单、强大的加密钱包，配备多重签名安全与移动端认证。",
+    "ogAlt": "下载 SSP Wallet — 安全的加密钱包",
+    "breadcrumbLabel": "下载",
+    "heroBadge": "下载 SSP Wallet",
+    "heroTitle": "开始使用 SSP Wallet",
+    "heroDescription": "请下载两个组件以获得完整的安全保障：用于钱包管理的浏览器扩展，以及用于交易认证的手机应用。",
+    "stepsTitle": "两步配置流程",
+    "stepsSubtitle": "两个组件均为安全的 2-of-2 多重签名系统所必需",
+    "stepLabel": "第 {index} 步",
+    "options": {
+      "chrome": {
+        "title": "SSP Wallet",
+        "subtitle": "浏览器扩展",
+        "description": "可安装于 Chrome、Brave、Firefox 及其他基于 Chromium 的浏览器",
+        "features": {
+          "0": "多重签名安全",
+          "1": "支持 WalletConnect v2",
+          "2": "跨链兼容"
+        },
+        "cta": "下载扩展"
+      },
+      "mobile": {
+        "title": "SSP Key",
+        "subtitle": "移动端 2FA 应用",
+        "description": "面向 iOS 与 Android 的必备配套应用，提供安全的身份认证",
+        "features": {
+          "0": "2FA 身份认证",
+          "1": "二维码同步",
+          "2": "安全密钥存储"
+        },
+        "cta": "查看移动端应用"
+      }
+    },
+    "browsersTitle": "支持的浏览器",
+    "browsersSubtitle": "SSP Wallet 在所有主流浏览器上都能流畅运行",
+    "mobileBadge": "SSP Key 移动应用",
+    "mobileTitle": "完成你的安全配置",
+    "mobileDescription": "SSP Key 提供所有交易所需的第二个签名。请将其安装到你的移动设备以完成 2-of-2 多重签名安全配置。",
+    "mobileEasySetupTitle": "轻松配置",
+    "mobileEasySetupDescription": "扫描二维码即可立即将你的移动设备与浏览器钱包同步",
+    "mobileSecurityTitle": "最高安全性",
+    "mobileSecurityDescription": "即便其中一台设备被攻破，你的资金依然安全",
+    "googlePlayLabel": "可在",
+    "appStoreLabel": "下载于",
+    "mobileAppAlt": "SSP Key 移动应用",
+    "howTitle": "工作原理",
+    "howSubtitle": "了解 2-of-2 多重签名安全模型",
+    "howSteps": {
+      "1": {
+        "title": "安装扩展",
+        "description": "将 SSP Wallet 添加到浏览器，并使用安全的助记词创建你的钱包"
+      },
+      "2": {
+        "title": "设置移动应用",
+        "description": "在手机上安装 SSP Key，并通过二维码与浏览器钱包同步"
+      },
+      "3": {
+        "title": "安全交易",
+        "description": "每一笔交易都需要浏览器和移动设备双重批准"
+      }
+    },
+    "ctaTitle": "准备好开始了吗？",
+    "ctaSubtitle": "按照我们的分步指南配置你的安全加密钱包",
+    "ctaSetupGuide": "查看设置指南",
+    "ctaSupport": "获取支持"
   }
 }
