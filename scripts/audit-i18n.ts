@@ -74,11 +74,12 @@ function scanFile(filePath: string, contents: string): Hit[] {
   const lines = contents.split('\n')
 
   // Pattern 1: JSX text node, multi-word capitalized
-  const reMultiWord = /(?:^|>)\s*([A-Z][a-zA-Z]{2,}[a-z](?:[ \-][A-Z]?[a-zA-Z]+)+)\s*</g
+  const reMultiWord = /(?:^|>)\s*([A-Z][a-zA-Z]{2,}[a-z](?:[ -][A-Z]?[a-zA-Z]+)+)\s*</g
   // Pattern 2: JSX text node, single capitalized word >=5 chars
   const reSingleWord = /(?:^|>)\s*([A-Z][a-zA-Z]{4,})\s*</g
   // Pattern 3: Prop literals
-  const reProp = /(title|description|aria-label|aria-description|placeholder|alt)=['"]([A-Z][^'"<>{}]{3,})['"]/g
+  const reProp =
+    /(title|description|aria-label|aria-description|placeholder|alt)=['"]([A-Z][^'"<>{}]{3,})['"]/g
 
   for (let i = 0; i < lines.length; i++) {
     const lineNo = i + 1
@@ -138,10 +139,7 @@ function scanFile(filePath: string, contents: string): Hit[] {
 }
 
 async function main(): Promise<void> {
-  const roots = [
-    path.join(ROOT, 'src/app/[locale]'),
-    path.join(ROOT, 'src/components'),
-  ]
+  const roots = [path.join(ROOT, 'src/app/[locale]'), path.join(ROOT, 'src/components')]
   const optionalFiles = [
     path.join(ROOT, 'src/app/not-found.tsx'),
     path.join(ROOT, 'src/app/error.tsx'),

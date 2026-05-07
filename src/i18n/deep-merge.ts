@@ -1,7 +1,12 @@
 type AnyObject = Record<string, unknown>
 
 function isPlainObject(v: unknown): v is AnyObject {
-  return typeof v === 'object' && v !== null && !Array.isArray(v) && Object.getPrototypeOf(v) === Object.prototype
+  return (
+    typeof v === 'object' &&
+    v !== null &&
+    !Array.isArray(v) &&
+    Object.getPrototypeOf(v) === Object.prototype
+  )
 }
 
 export function deepMerge<T extends AnyObject>(base: T, override: AnyObject): T {

@@ -26,12 +26,12 @@ describe('locale coverage', () => {
   ] as const) {
     it(`${name}.json contains every key from en.json`, () => {
       const localeKeys = new Set(flattenKeys(locale as AnyObj))
-      const missing = [...enKeys].filter((k) => !localeKeys.has(k))
+      const missing = [...enKeys].filter(k => !localeKeys.has(k))
       expect(missing, `Keys missing from ${name}.json:\n${missing.join('\n')}`).toEqual([])
     })
     it(`${name}.json has no orphan keys (not in en.json)`, () => {
       const localeKeys = new Set(flattenKeys(locale as AnyObj))
-      const orphans = [...localeKeys].filter((k) => !enKeys.has(k))
+      const orphans = [...localeKeys].filter(k => !enKeys.has(k))
       expect(orphans, `Orphan keys in ${name}.json:\n${orphans.join('\n')}`).toEqual([])
     })
   }
