@@ -612,5 +612,268 @@
     "successDescription": "通过这些步骤，你已成功安装并配置好 SSP Wallet 与 SSP Key，享受安全且流畅的使用体验。",
     "successDownload": "立即下载",
     "successSupport": "获取支持"
+  },
+  "Support": {
+    "metaTitle": "支持 - SSP Wallet | 获取帮助与技术支持",
+    "metaDescription": "获得 SSP Wallet 的全面支持。在常见问题中查找答案、访问文档、联系社区，或与我们的专业支持团队取得联系。",
+    "breadcrumbLabel": "支持",
+    "heroBadge": "支持中心",
+    "heroTitle": "我们能为你做什么？",
+    "heroDescription": "在常见问题中查找答案、访问我们的文档，或联系我们的支持团队。",
+    "quickLinks": {
+      "docsTitle": "文档",
+      "docsSubtitle": "指南",
+      "communityTitle": "社区",
+      "communitySubtitle": "交流",
+      "supportTitle": "支持",
+      "supportSubtitle": "帮助"
+    },
+    "channelsTitle": "获取支持",
+    "channelsSubtitle": "根据你的需求选择最合适的求助方式",
+    "channels": {
+      "documentation": {
+        "title": "文档",
+        "description": "完整的指南与文档",
+        "links": {
+          "completeDocs": "完整文档",
+          "setupGuide": "设置指南",
+          "featureDocs": "功能文档"
+        }
+      },
+      "community": {
+        "title": "社区支持",
+        "description": "从我们的社区获得帮助",
+        "links": {
+          "github": "GitHub 讨论",
+          "discord": "Discord 社区",
+          "twitter": "Twitter 支持"
+        }
+      },
+      "direct": {
+        "title": "直接支持",
+        "description": "获得个性化的技术协助",
+        "links": {
+          "ticketSystem": "支持工单系统",
+          "email": "邮件支持"
+        }
+      }
+    },
+    "faqTitle": "常见问题",
+    "faqSubtitle": "快速找到关于 SSP Wallet 最常见问题的答案",
+    "faqCategories": {
+      "gettingStarted": {
+        "title": "快速上手",
+        "items": {
+          "0": {
+            "question": "什么是 SSP Wallet？",
+            "answer": "SSP Wallet 是一个真正的 2-of-2 多重签名系统，由两个组件组成：SSP Wallet（浏览器扩展）和 SSP Key（移动端 2FA 应用）。两台设备均需对交易进行授权，从而为你的加密资产提供跨 15+ 区块链的无与伦比的安全保障。"
+          },
+          "1": {
+            "question": "如何安装 SSP Wallet？",
+            "answer": "你可以从 Chrome Web Store 安装 SSP Wallet 作为 Chrome 扩展。访问我们的下载页面，并按照完整的设置指南进行分步安装。"
+          },
+          "2": {
+            "question": "SSP Wallet 是免费的吗？",
+            "answer": "是的，SSP Wallet 完全免费下载与使用。我们对钱包本身不收取任何费用，但进行链上交易时仍需支付网络手续费。"
+          },
+          "3": {
+            "question": "SSP Wallet 支持哪些加密货币？",
+            "answer": "SSP Wallet 支持 15+ 区块链，包括 Bitcoin (BTC)、Ethereum (ETH)、Litecoin (LTC)、Zcash (ZEC)、Ravencoin (RVN)、Dogecoin (DOGE)、Bitcoin Cash (BCH)、Flux (FLUX)、Polygon (MATIC)、BSC、Avalanche (AVAX) 与 Base。对于 EVM 兼容链，我们支持所有 ERC-20 代币，并可导入你自己的自定义代币列表。Solana 即将推出。"
+          },
+          "4": {
+            "question": "在哪里可以找到完整的支持资产列表？",
+            "answerBefore": "如需获取所有原生支持的链与代币的完整最新列表，请参阅我们的官方 ",
+            "answerLink": "SSP 资产电子表格",
+            "answerAfter": "。该表格会定期更新，并包含每种支持资产的详细信息。"
+          },
+          "5": {
+            "question": "可以将 SSP Wallet 用于 dApp 与 DeFi 吗？",
+            "answer": "可以！SSP Wallet 完整集成 WalletConnect v2（Reown），可在所有受支持的 EVM 链上连接成千上万的去中心化应用。你可以在保持 2-of-2 多重签名安全的前提下使用 DeFi 协议、NFT 市场及其他 dApp。"
+          },
+          "6": {
+            "question": "什么是 FluxNodes？如何使用？",
+            "answer": "FluxNodes 是 Flux 网络中帮助保障与维护区块链的节点。借助 SSP Wallet，你可以轻松搭建并管理 FluxNodes，监控其性能并直接通过钱包界面领取奖励。Fluxnodes 需要质押一定数量的 FLUX 代币，并通过网络奖励提供被动收益。"
+          },
+          "7": {
+            "question": "SSP Wallet 是否支持法币入金与出金？",
+            "answer": "支持！SSP Wallet 通过集成合作伙伴提供法币出入金。你可以使用信用卡、银行转账或其他支付方式直接购买加密货币，也可将加密资产兑换回法币。该功能在受支持地区可用，并需要完成 KYC 验证。"
+          },
+          "8": {
+            "question": "可以在 SSP Wallet 中交换加密货币吗？",
+            "answer": "可以，SSP Wallet 内置加密交换功能。你可以通过我们集成的交换合作伙伴在受支持的区块链之间轻松兑换加密货币。交换功能提供具有竞争力的汇率，并在保护私钥的前提下安全执行。"
+          },
+          "9": {
+            "question": "可以导出我的交易历史吗？",
+            "answer": "可以！SSP Wallet 支持以 CSV 形式导出交易历史。你可以导出详细的交易记录，用于会计、税务或个人记录。CSV 导出包含每条受支持区块链的交易日期、金额、地址、手续费等相关详细信息。"
+          },
+          "10": {
+            "question": "如何申请添加新币种？",
+            "answer": "我们鼓励用户联系支持团队，或直接在我们的 GitHub 仓库提交贡献以申请新加密货币的支持。我们会根据社区需求、技术可行性与安全考虑来评估每一项申请。"
+          },
+          "11": {
+            "question": "是否有移动端钱包？",
+            "answer": "好消息！我们正在积极将 SSP Wallet 拓展到移动平台。目前，SSP Wallet 由浏览器扩展（SSP Wallet）与移动 2FA 应用（SSP Key）组成。完整的移动端钱包体验正在开发中。"
+          },
+          "12": {
+            "question": "可以在多台设备上使用 SSP Wallet 吗？",
+            "answer": "可以，你可以在多台设备上使用 SSP Wallet。在新设备上设置时，需要使用相应的助记词分别恢复你的钱包与密钥。每台设备都需要正确配置与同步。"
+          },
+          "13": {
+            "question": "SSP Wallet 有交易限额吗？",
+            "answer": "SSP Wallet 不设交易限额。但你仍受区块链网络限制及可用余额的约束。某些网络可能对最小交易金额或最大交易体量有协议级别的限制。"
+          },
+          "14": {
+            "question": "可以离线使用 SSP Wallet 吗？",
+            "answer": "SSP Wallet 的大多数操作都需要互联网连接，包括交易广播、余额更新与设备间同步。虽然你可以离线查看部分缓存信息，但没有网络连接时无法发送交易。"
+          }
+        }
+      },
+      "security": {
+        "title": "安全与隐私",
+        "items": {
+          "0": {
+            "question": "SSP Wallet 安全性如何？",
+            "answer": "SSP Wallet 采用结合移动端认证的多重签名技术，提供双密钥保护。我们使用前沿加密技术且不存储你的任何数据——一切均存储在本地并由你掌控。"
+          },
+          "1": {
+            "question": "什么是 SSP Key？为什么需要它？",
+            "answer": "SSP Key 是一个移动应用，持有 2-of-2 多重签名系统所需的第二把私钥。每笔交易都必须由浏览器扩展与移动设备同时签名，因而即便其中一台设备被攻破，资金依然安全。SSP Key 适用于 iOS 15.1+ 与 Android 7+。"
+          },
+          "2": {
+            "question": "丢失设备后还能恢复钱包吗？",
+            "answer": "可以，你可以使用助记词恢复钱包。钱包与密钥拥有各自独立的助记词，应离线安全保存。切勿向任何人透露你的助记词。"
+          },
+          "3": {
+            "question": "SSP Wallet 是否收集我的个人数据？",
+            "answer": "不会，SSP Wallet 承诺不存储任何数据信息。你的私钥、交易历史与个人数据完全由你掌控，并仅存储在你的设备本地。"
+          },
+          "4": {
+            "question": "什么是确定性构建？为什么重要？",
+            "answer": "确定性构建确保相同的源代码生成相同的二进制输出。SSP Wallet 采用基于 Docker 的确定性构建，任何人都可以独立验证发布的扩展与公开源代码构建出的结果完全一致。这消除了潜在的供应链攻击，并以加密学方式证明构建完整性。"
+          },
+          "5": {
+            "question": "如何验证 SSP Wallet 的确定性构建？",
+            "answerIntro": "要验证 SSP Wallet 构建：1) 从 ",
+            "answerLink1": "GitHub 发布页",
+            "answerMiddle1": " 下载发布文件（Chrome/Firefox 压缩包、SHA256SUMS、SHA256SUMS.asc）。2) 从 ",
+            "answerLink2": "OpenPGP 公钥服务器",
+            "answerMiddle2": " 导入我们的公钥。3) 验证 GPG 签名：",
+            "answerCode1": "gpg --verify SHA256SUMS.asc SHA256SUMS",
+            "answerMiddle3": "。4) 验证哈希值：",
+            "answerCode2": "sha256sum -c SHA256SUMS",
+            "answerMiddle4": "。5) 你也可以选择重现构建：",
+            "answerCode3": "git checkout [version] && npm run build:deterministic",
+            "answerOutro": "。"
+          },
+          "6": {
+            "question": "谁为 SSP Wallet 的发布签名？",
+            "answerBefore": "所有 SSP Wallet 发布均由 security@runonflux.io 使用 GPG 进行加密签名。我们的公钥可在 ",
+            "answerLink": "OpenPGP 公钥服务器",
+            "answerAfter": " 上验证。确定性构建流程包含基于 Docker 的隔离环境，以及同样经过 GPG 签名的完整校验和（SHA256SUMS），用于保证真实性与完整性。"
+          },
+          "7": {
+            "question": "一个 SSP Wallet 能配多个 SSP Key 吗？",
+            "answer": "不能，每个 SSP Wallet 只能与一个 SSP Key 配对。2-of-2 多重签名系统对公开 nonce 与链上数据有设备特定的同步要求。使用多个 SSP Key 会导致同步冲突。"
+          }
+        }
+      },
+      "technical": {
+        "title": "技术支持",
+        "items": {
+          "0": {
+            "question": "支持哪些浏览器？",
+            "answer": "SSP Wallet 支持 Google Chrome、Brave、Firefox 以及其他基于 Chromium 的浏览器。对于 Chromium 浏览器，可以从 Chrome Web Store 下载；Firefox 版本可直接从我们的 GitHub 发布页下载。"
+          },
+          "1": {
+            "question": "我无法同步移动密钥",
+            "answer": "请确保两台设备都已联网、二维码清晰可见，并且浏览器扩展与移动应用都为最新版本。如果同步失败，请尝试重启两端应用。"
+          },
+          "2": {
+            "question": "我的交易卡住或处于待确认状态",
+            "answer": "区块链交易可能因网络拥堵而需要时间。请在区块浏览器上查看交易状态。如果使用 Ethereum，可能需要提高 Gas 费以加快确认。"
+          },
+          "3": {
+            "question": "如何更新 SSP Wallet？",
+            "answer": "浏览器扩展通常会自动更新。你可以在浏览器的扩展管理页面手动检查更新。移动应用请通过设备的应用商店检查更新。"
+          },
+          "4": {
+            "question": "什么是 SSP Relay？它是如何工作的？",
+            "answer": "SSP Relay 是一个开源的中继服务，作为 SSP Wallet 与 SSP Key 之间的桥梁。它提供市场信息、手续费数据，实现交易同步并下发推送通知。Relay 在保持安全的同时提升了用户体验。"
+          },
+          "5": {
+            "question": "SSP Wallet 是否支持 Replace-By-Fee（RBF）？",
+            "answer": "是的，SSP Wallet 完整支持 Replace-By-Fee（RBF）。在交易广播后，你可以修改交易手续费，甚至更改收款方，从而灵活管理你在区块链上的交易。"
+          },
+          "6": {
+            "question": "SSP Wallet 收取什么费用？",
+            "answer": "SSP Wallet 不收取任何费用——使用钱包完全免费。你只需支付直接归矿工/验证者所有的标准区块链网络手续费。钱包内置自动费率选择以优化你的交易成本。"
+          },
+          "7": {
+            "question": "为什么有些交易构造失败？",
+            "answer": "某些交易可能由于区块链大小限制与 UTXO 复杂度而失败。当存在大量小额输入时，交易体量可能超出网络限制。此时你可能需要合并 UTXO 或将交易拆分为更小的部分。"
+          },
+          "8": {
+            "question": "更换设备时需要恢复钱包吗？",
+            "answer": "需要，由于设备特定的加密机制，更换设备或进行重大系统变更时，你必须同时恢复钱包与密钥。请妥善保管并随时可访问助记词以完成此过程。"
+          },
+          "9": {
+            "question": "如果丢失了 SSP Key 设备怎么办？",
+            "answer": "如果你丢失了 SSP Key 设备，可以使用 SSP Key 助记词在新设备上恢复。在新设备上安装 SSP Key 应用并使用助记词恢复访问。恢复后，你需要重新与 SSP Wallet 浏览器扩展进行同步。"
+          },
+          "10": {
+            "question": "可以将钱包备份到云端吗？",
+            "answer": "出于安全原因，SSP Wallet 不支持自动云备份。你的助记词应离线保存在安全的位置。切勿将助记词存储在云端、电子邮件或任何可能被泄露的数字媒介中。"
+          },
+          "11": {
+            "question": "SSP Wallet 助记词与 SSP Key 助记词有什么区别？",
+            "answer": "SSP Wallet 与 SSP Key 各自拥有独立的助记词。钱包助记词控制浏览器扩展组件，而密钥助记词控制移动 2FA 组件。完整恢复钱包需要两者，应分开并安全存储。"
+          },
+          "12": {
+            "question": "如何迁移到新电脑？",
+            "answer": "将 SSP Wallet 迁移到新电脑：1) 在新设备上安装 SSP Wallet 扩展，2) 使用钱包助记词恢复浏览器扩展，3) 与现有的 SSP Key 移动应用重新同步。交易历史与设置需要重新配置。"
+          },
+          "13": {
+            "question": "我在移动端收到「Synchronisation with SSP wallet needed」错误",
+            "answer": "该错误通常发生在更换手机或某条区块链尚未与 SSP Key 同步时。解决方法：1) 打开 SSP Wallet，2) 切换到要重新同步的区块链，3) 点击右上角汉堡菜单，4) 选择「SSP Wallet Details」，5) 用密码确认访问，6) 在第一行找到「Chain Sync with SSP Key」，点击眼睛图标显示二维码，7) 用 SSP Key 扫描该二维码并批准链同步。"
+          },
+          "14": {
+            "question": "我收到「SSP Key Public nonces do not match or SSP Key Public nonces are missing」错误",
+            "answer": "该错误发生在用于构造交易的公开 nonce 在 SSP Wallet 与 SSP Key 之间未同步时。解决方法：1) 打开右上角汉堡菜单，2) 进入「设置」，3) 找到「Public Nonces」一节并点击「Sync Public Nonces」，4) 用 SSP Key 扫描显示的二维码，5) 在移动设备上批准请求。公开 nonce 同步完成后即可继续交易。"
+          }
+        }
+      }
+    },
+    "stillNeedHelpTitle": "仍需帮助？",
+    "stillNeedHelpDescription": "找不到所需信息？给我们留言，支持团队会尽快回复你。",
+    "emailSupportTitle": "邮件支持",
+    "emailSupportDescription": "我们通常在 24 小时内回复",
+    "openSourceTitle": "开源",
+    "openSourceDescription": "在 GitHub 上报告 Bug 或贡献代码",
+    "communityTitle": "社区",
+    "communityDescription": "与其他用户交流并获得同行支持",
+    "contactSupportTitle": "联系支持",
+    "form": {
+      "emailLabel": "电子邮箱 *",
+      "emailPlaceholder": "your.email@example.com",
+      "typeLabel": "问题类型 *",
+      "typeOptions": {
+        "Question": "一般问题",
+        "Incident": "技术问题",
+        "Problem": "需要帮助",
+        "Feature Request": "功能请求",
+        "Bug Report": "Bug 反馈"
+      },
+      "subjectLabel": "主题 *",
+      "subjectPlaceholder": "你的问题简要描述",
+      "descriptionLabel": "详细说明 *",
+      "descriptionPlaceholder": "请提供你问题的详细信息……",
+      "submitting": "正在发送……",
+      "submit": "发送消息",
+      "errorFallback": "消息发送失败。请重试。",
+      "errorGeneric": "工单提交失败",
+      "successTitle": "消息发送成功！",
+      "successDescription": "感谢你联系我们。我们会尽快回复你。",
+      "successAgain": "再发送一条消息"
+    }
   }
 }

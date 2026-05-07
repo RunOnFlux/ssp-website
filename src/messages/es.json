@@ -612,5 +612,268 @@
     "successDescription": "Siguiendo estos pasos, has instalado y configurado correctamente tanto SSP Wallet como SSP Key, garantizando una experiencia de uso segura y fluida.",
     "successDownload": "Descargar ahora",
     "successSupport": "Obtener soporte"
+  },
+  "Support": {
+    "metaTitle": "Soporte - SSP Wallet | Ayuda y soporte técnico",
+    "metaDescription": "Obtén soporte completo para SSP Wallet. Encuentra respuestas en nuestras preguntas frecuentes, accede a la documentación, conecta con la comunidad o contacta con nuestro equipo de soporte.",
+    "breadcrumbLabel": "Soporte",
+    "heroBadge": "Centro de soporte",
+    "heroTitle": "¿En qué podemos ayudarte?",
+    "heroDescription": "Encuentra respuestas a preguntas comunes, accede a nuestra documentación o ponte en contacto con nuestro equipo de soporte.",
+    "quickLinks": {
+      "docsTitle": "Docs",
+      "docsSubtitle": "Guías",
+      "communityTitle": "Comunidad",
+      "communitySubtitle": "Chat",
+      "supportTitle": "Soporte",
+      "supportSubtitle": "Ayuda"
+    },
+    "channelsTitle": "Obtén soporte",
+    "channelsSubtitle": "Elige la mejor forma de obtener ayuda según tus necesidades",
+    "channels": {
+      "documentation": {
+        "title": "Documentación",
+        "description": "Guías y documentación completas",
+        "links": {
+          "completeDocs": "Documentación completa",
+          "setupGuide": "Guía de configuración",
+          "featureDocs": "Documentación de características"
+        }
+      },
+      "community": {
+        "title": "Soporte de la comunidad",
+        "description": "Obtén ayuda de nuestra comunidad",
+        "links": {
+          "github": "Discusiones de GitHub",
+          "discord": "Comunidad de Discord",
+          "twitter": "Soporte en Twitter"
+        }
+      },
+      "direct": {
+        "title": "Soporte directo",
+        "description": "Recibe asistencia técnica personalizada",
+        "links": {
+          "ticketSystem": "Sistema de tickets de soporte",
+          "email": "Soporte por correo"
+        }
+      }
+    },
+    "faqTitle": "Preguntas frecuentes",
+    "faqSubtitle": "Encuentra respuestas rápidas a las preguntas más comunes sobre SSP Wallet",
+    "faqCategories": {
+      "gettingStarted": {
+        "title": "Primeros pasos",
+        "items": {
+          "0": {
+            "question": "¿Qué es SSP Wallet?",
+            "answer": "SSP Wallet es un sistema multifirma 2 de 2 real compuesto por dos componentes: SSP Wallet (extensión de navegador) y SSP Key (app móvil 2FA). Ambos dispositivos son necesarios para autorizar transacciones, ofreciendo una seguridad inigualable para tus criptos en más de 15 blockchains."
+          },
+          "1": {
+            "question": "¿Cómo instalo SSP Wallet?",
+            "answer": "Puedes instalar SSP Wallet como extensión de Chrome desde la Chrome Web Store. Visita nuestra página de descarga y sigue nuestra completa guía de configuración para obtener instrucciones paso a paso."
+          },
+          "2": {
+            "question": "¿SSP Wallet es gratuita?",
+            "answer": "Sí, SSP Wallet es completamente gratuita para descargar y usar. No cobramos ninguna comisión por la cartera, aunque seguirás pagando las comisiones de red al hacer transacciones en la blockchain."
+          },
+          "3": {
+            "question": "¿Qué criptomonedas admite SSP Wallet?",
+            "answer": "SSP Wallet admite más de 15 blockchains, incluidos Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), Zcash (ZEC), Ravencoin (RVN), Dogecoin (DOGE), Bitcoin Cash (BCH), Flux (FLUX), Polygon (MATIC), BSC, Avalanche (AVAX) y Base. Para las cadenas compatibles con EVM admitimos todos los tokens ERC-20 y puedes importar tus propias listas de tokens. El soporte de Solana llegará próximamente."
+          },
+          "4": {
+            "question": "¿Dónde puedo encontrar la lista completa de activos compatibles?",
+            "answerBefore": "Para una lista completa y actualizada de todas las cadenas y tokens compatibles de forma nativa, consulta nuestra ",
+            "answerLink": "hoja de cálculo oficial de activos de SSP",
+            "answerAfter": ". Esta hoja se actualiza con frecuencia con nuevas incorporaciones e incluye información detallada sobre cada activo compatible."
+          },
+          "5": {
+            "question": "¿Puedo usar SSP Wallet con dApps y DeFi?",
+            "answer": "¡Sí! SSP Wallet incluye integración completa con WalletConnect v2 (Reown), permitiéndote conectarte a miles de aplicaciones descentralizadas en todas las cadenas EVM compatibles. Puedes usar protocolos DeFi, mercados NFT y otras dApps manteniendo la seguridad del sistema multifirma 2 de 2."
+          },
+          "6": {
+            "question": "¿Qué son los FluxNodes y cómo puedo usarlos?",
+            "answer": "Los FluxNodes son nodos de la red Flux que ayudan a asegurar y mantener la blockchain. Con SSP Wallet puedes configurar y gestionar Fluxnodes fácilmente, supervisar su rendimiento y reclamar recompensas directamente desde la interfaz de la cartera. Los Fluxnodes requieren una cantidad de tokens FLUX como colateral y proporcionan ingresos pasivos mediante recompensas de red."
+          },
+          "7": {
+            "question": "¿SSP Wallet admite onboarding y offboarding fiat?",
+            "answer": "¡Sí! SSP Wallet admite el ingreso y la retirada en moneda fiat a través de socios integrados. Puedes comprar criptomonedas directamente con tarjeta de crédito, transferencia bancaria u otros métodos de pago, y vender tus criptos de vuelta a moneda fiat. Esta función está disponible en regiones compatibles y requiere verificación KYC."
+          },
+          "8": {
+            "question": "¿Puedo intercambiar criptomonedas dentro de SSP Wallet?",
+            "answer": "Sí, SSP Wallet incluye funcionalidad de intercambio cripto integrada. Puedes intercambiar fácilmente una criptomoneda por otra entre las blockchains compatibles a través de nuestros socios de intercambio integrados. La función de intercambio ofrece tasas competitivas y ejecuta los intercambios de forma segura, manteniendo siempre el control de tus claves privadas."
+          },
+          "9": {
+            "question": "¿Puedo exportar mi historial de transacciones?",
+            "answer": "¡Sí! SSP Wallet admite la exportación CSV de tu historial de transacciones. Puedes exportar registros detallados para fines contables, fiscales o de archivo personal. La exportación CSV incluye fechas, importes, direcciones, comisiones y otros detalles relevantes para cada blockchain compatible."
+          },
+          "10": {
+            "question": "¿Cómo puedo solicitar que se añada una nueva moneda?",
+            "answer": "Animamos a los usuarios a contactar con nuestro equipo de soporte o contribuir directamente en nuestro repositorio de GitHub para solicitar el soporte de nuevas criptomonedas. Evaluamos cada solicitud según la demanda de la comunidad, la viabilidad técnica y consideraciones de seguridad."
+          },
+          "11": {
+            "question": "¿Hay una cartera móvil disponible?",
+            "answer": "¡Buenas noticias! Estamos trabajando activamente para expandir SSP Wallet a plataformas móviles. Actualmente, SSP Wallet se compone de una extensión de navegador (SSP Wallet) y una app móvil 2FA (SSP Key). Una experiencia completa de cartera móvil está en desarrollo."
+          },
+          "12": {
+            "question": "¿Puedo usar SSP Wallet en varios dispositivos?",
+            "answer": "Sí, puedes usar SSP Wallet en varios dispositivos. Para configurarla en uno nuevo, deberás restaurar tu cartera y clave usando las frases semilla correspondientes. Cada dispositivo requiere su correcta configuración y sincronización."
+          },
+          "13": {
+            "question": "¿Hay un límite de transacciones con SSP Wallet?",
+            "answer": "SSP Wallet no impone límites de transacciones. Sin embargo, estás sujeto a los límites de la red blockchain y a tu saldo disponible. Algunas redes pueden tener importes mínimos o tamaños máximos de transacción según sus protocolos."
+          },
+          "14": {
+            "question": "¿Puedo usar SSP Wallet sin conexión?",
+            "answer": "SSP Wallet requiere conexión a Internet para la mayoría de las operaciones, incluida la difusión de transacciones, la actualización de saldos y la sincronización entre dispositivos. Aunque puedes ver alguna información en caché sin conexión, no puedes enviar transacciones sin conectividad."
+          }
+        }
+      },
+      "security": {
+        "title": "Seguridad y privacidad",
+        "items": {
+          "0": {
+            "question": "¿Qué tan segura es SSP Wallet?",
+            "answer": "SSP Wallet utiliza tecnología multifirma con autenticación móvil integrada, ofreciendo protección de dos claves. Empleamos cifrado de vanguardia y no almacenamos ninguno de tus datos: todo se guarda localmente y bajo tu control."
+          },
+          "1": {
+            "question": "¿Qué es SSP Key y por qué la necesito?",
+            "answer": "SSP Key es una app móvil que contiene la segunda clave privada necesaria para el sistema multifirma 2 de 2. Cada transacción debe firmarse tanto desde la extensión del navegador COMO desde el dispositivo móvil. Esto garantiza que tus fondos permanezcan seguros incluso si uno de los dispositivos se ve comprometido. SSP Key está disponible para iOS 15.1+ y Android 7+."
+          },
+          "2": {
+            "question": "¿Puedo recuperar mi cartera si pierdo mi dispositivo?",
+            "answer": "Sí, puedes recuperar tu cartera usando tu frase semilla. Tanto la cartera como la clave tienen frases semilla independientes que deben guardarse de forma segura y sin conexión. Nunca compartas tus frases semilla con nadie."
+          },
+          "3": {
+            "question": "¿SSP Wallet recopila mis datos personales?",
+            "answer": "No, SSP Wallet se compromete a no almacenar ninguna información de datos. Tus claves privadas, historial de transacciones y datos personales permanecen totalmente bajo tu control y se almacenan localmente en tus dispositivos."
+          },
+          "4": {
+            "question": "¿Qué son las builds deterministas y por qué importan?",
+            "answer": "Las builds deterministas garantizan que un mismo código fuente produce los mismos binarios. SSP Wallet utiliza builds deterministas basadas en Docker que permiten a cualquiera verificar de forma independiente que la extensión distribuida coincide exactamente con lo construido a partir del código publicado. Esto elimina posibles ataques a la cadena de suministro y proporciona prueba criptográfica de la integridad de la build."
+          },
+          "5": {
+            "question": "¿Cómo puedo verificar la build determinista de SSP Wallet?",
+            "answerIntro": "Para verificar las builds de SSP Wallet: 1) Descarga los archivos de la versión (zips de Chrome/Firefox, SHA256SUMS, SHA256SUMS.asc) desde ",
+            "answerLink1": "los releases de GitHub",
+            "answerMiddle1": ". 2) Importa nuestra clave pública desde ",
+            "answerLink2": "el servidor de claves OpenPGP",
+            "answerMiddle2": ". 3) Verifica la firma GPG: ",
+            "answerCode1": "gpg --verify SHA256SUMS.asc SHA256SUMS",
+            "answerMiddle3": ". 4) Verifica los hashes: ",
+            "answerCode2": "sha256sum -c SHA256SUMS",
+            "answerMiddle4": ". 5) Opcionalmente reproduce la build: ",
+            "answerCode3": "git checkout [version] && npm run build:deterministic",
+            "answerOutro": "."
+          },
+          "6": {
+            "question": "¿Quién firma las versiones de SSP Wallet?",
+            "answerBefore": "Todas las versiones de SSP Wallet están firmadas criptográficamente por security@runonflux.io con firmas GPG. Nuestra clave pública está disponible en ",
+            "answerLink": "el servidor de claves OpenPGP",
+            "answerAfter": " para su verificación. El proceso de build determinista incluye entornos aislados basados en Docker y checksums completos (SHA256SUMS) que también están firmados con GPG para garantizar autenticidad e integridad."
+          },
+          "7": {
+            "question": "¿Puedo usar varias SSP Keys con una SSP Wallet?",
+            "answer": "No, cada SSP Wallet solo puede emparejarse con una SSP Key. El sistema multifirma 2 de 2 requiere sincronización específica de cada dispositivo para los nonces públicos y los datos de la cadena. Usar varias SSP Keys provocaría conflictos de sincronización."
+          }
+        }
+      },
+      "technical": {
+        "title": "Soporte técnico",
+        "items": {
+          "0": {
+            "question": "¿Qué navegadores son compatibles?",
+            "answer": "SSP Wallet es compatible con Google Chrome, Brave, Firefox y otros navegadores basados en Chromium. Puedes descargar la versión de la Chrome Web Store para navegadores Chromium o la versión de Firefox directamente desde nuestros releases de GitHub."
+          },
+          "1": {
+            "question": "Tengo problemas para sincronizar mi clave móvil",
+            "answer": "Asegúrate de que ambos dispositivos están conectados a Internet, que el código QR es claramente visible y que estás usando las últimas versiones tanto de la extensión del navegador como de la app móvil. Intenta reiniciar ambas aplicaciones si la sincronización falla."
+          },
+          "2": {
+            "question": "Mi transacción está atascada o pendiente",
+            "answer": "Las transacciones blockchain pueden tardar dependiendo de la congestión de la red. Comprueba el estado de la transacción en un explorador de bloques. Si usas Ethereum, puede que necesites aumentar las comisiones de gas para una confirmación más rápida."
+          },
+          "3": {
+            "question": "¿Cómo actualizo SSP Wallet?",
+            "answer": "Las extensiones del navegador suelen actualizarse automáticamente. Puedes comprobar las actualizaciones manualmente en la página de gestión de extensiones del navegador. Para la app móvil, busca actualizaciones en la tienda de aplicaciones de tu dispositivo."
+          },
+          "4": {
+            "question": "¿Qué es SSP Relay y cómo funciona?",
+            "answer": "SSP Relay es un servicio de relay de código abierto que actúa como puente entre tu SSP Wallet y SSP Key. Proporciona información de mercado, datos de comisiones, permite la sincronización de transacciones y entrega notificaciones push. El relay mejora la experiencia de usuario manteniendo la seguridad."
+          },
+          "5": {
+            "question": "¿SSP Wallet admite Replace-By-Fee (RBF)?",
+            "answer": "Sí, SSP Wallet admite plenamente la funcionalidad Replace-By-Fee (RBF). Puedes modificar las comisiones de transacción e incluso cambiar destinatarios después de difundir una transacción, dándote flexibilidad para gestionar tus transacciones en la blockchain."
+          },
+          "6": {
+            "question": "¿Qué comisiones cobra SSP Wallet?",
+            "answer": "SSP Wallet tiene cero comisiones: no cobramos nada por usar la cartera. Solo pagas las comisiones estándar de red blockchain, que van directamente a los mineros/validadores que procesan tus transacciones. La cartera incluye selección automática de comisiones para optimizar tus costes."
+          },
+          "7": {
+            "question": "¿Por qué fallan algunas transacciones al construirse?",
+            "answer": "Algunas transacciones pueden fallar debido a las restricciones de tamaño de la blockchain y la complejidad de los UTXO. Cuando tienes muchas entradas pequeñas, el tamaño de la transacción puede superar los límites de la red. En estos casos, puede que necesites consolidar tus UTXO o dividir la transacción en partes más pequeñas."
+          },
+          "8": {
+            "question": "¿Tengo que restaurar mi cartera al cambiar de dispositivo?",
+            "answer": "Sí, debido al cifrado específico de cada dispositivo, debes restaurar tanto tu cartera como tu clave al cambiar de dispositivo o realizar cambios significativos en el sistema. Mantén tus frases semilla seguras y accesibles para este proceso."
+          },
+          "9": {
+            "question": "¿Qué pasa si pierdo mi dispositivo SSP Key?",
+            "answer": "Si pierdes tu dispositivo SSP Key, puedes restaurarlo en uno nuevo usando tu frase semilla de SSP Key. Instala la app SSP Key en el nuevo dispositivo y usa la frase semilla para recuperar el acceso. Después tendrás que volver a sincronizar con la extensión SSP Wallet de tu navegador."
+          },
+          "10": {
+            "question": "¿Puedo respaldar mi cartera en la nube?",
+            "answer": "SSP Wallet no admite copias de seguridad automáticas en la nube por motivos de seguridad. Tus frases semilla deben guardarse sin conexión en un lugar seguro. Nunca guardes frases semilla en almacenamiento en la nube, correo electrónico ni ningún formato digital que pueda verse comprometido."
+          },
+          "11": {
+            "question": "¿Cuál es la diferencia entre la frase semilla de SSP Wallet y la de SSP Key?",
+            "answer": "SSP Wallet y SSP Key tienen cada una su propia frase semilla. La frase semilla de la cartera controla el componente de extensión del navegador, mientras que la de la clave controla el componente móvil 2FA. Ambas son necesarias para la recuperación completa de la cartera y deben almacenarse por separado y de forma segura."
+          },
+          "12": {
+            "question": "¿Cómo migro a un nuevo ordenador?",
+            "answer": "Para mover SSP Wallet a un ordenador nuevo: 1) Instala la extensión SSP Wallet en el nuevo dispositivo, 2) Usa tu frase semilla de la cartera para restaurar la extensión del navegador, 3) Vuelve a sincronizar con tu app móvil SSP Key existente. El historial de transacciones y la configuración deberán reconfigurarse."
+          },
+          "13": {
+            "question": "Recibo el error «Synchronisation with SSP wallet needed» en el móvil",
+            "answer": "Este error suele ocurrir al cambiar de teléfono o cuando una blockchain aún no está sincronizada con tu SSP Key. Para resolverlo: 1) Abre SSP Wallet, 2) Cambia a la blockchain que deseas resincronizar, 3) Haz clic en el menú de hamburguesa (esquina superior derecha), 4) Selecciona «SSP Wallet Details», 5) Confirma el acceso con tu contraseña, 6) En la primera fila, busca «Chain Sync with SSP Key» y haz clic en el icono del ojo para mostrar el código QR, 7) Escanea el código QR con tu SSP Key y aprueba la sincronización de la cadena."
+          },
+          "14": {
+            "question": "Recibo el error «SSP Key Public nonces do not match or SSP Key Public nonces are missing»",
+            "answer": "Este error ocurre cuando los nonces públicos usados para construir transacciones no están sincronizados entre tu SSP Wallet y SSP Key. Para resolverlo: 1) Abre el menú de hamburguesa (esquina superior derecha), 2) Ve a Configuración, 3) Busca la sección «Public Nonces» y haz clic en «Sync Public Nonces», 4) Escanea el código QR con tu SSP Key, 5) Aprueba la solicitud en tu dispositivo móvil. Tus nonces públicos quedan sincronizados y puedes empezar a transaccionar."
+          }
+        }
+      }
+    },
+    "stillNeedHelpTitle": "¿Aún necesitas ayuda?",
+    "stillNeedHelpDescription": "¿No encuentras lo que buscas? Envíanos un mensaje y nuestro equipo de soporte te responderá lo antes posible.",
+    "emailSupportTitle": "Soporte por correo",
+    "emailSupportDescription": "Solemos responder en 24 horas",
+    "openSourceTitle": "Open Source",
+    "openSourceDescription": "Reporta errores o contribuye en GitHub",
+    "communityTitle": "Comunidad",
+    "communityDescription": "Conecta con otros usuarios y obtén soporte entre pares",
+    "contactSupportTitle": "Contactar con soporte",
+    "form": {
+      "emailLabel": "Correo electrónico *",
+      "emailPlaceholder": "tu.correo@ejemplo.com",
+      "typeLabel": "Tipo de incidencia *",
+      "typeOptions": {
+        "Question": "Pregunta general",
+        "Incident": "Incidencia técnica",
+        "Problem": "Necesito ayuda",
+        "Feature Request": "Solicitud de función",
+        "Bug Report": "Informe de error"
+      },
+      "subjectLabel": "Asunto *",
+      "subjectPlaceholder": "Breve descripción de tu incidencia",
+      "descriptionLabel": "Descripción *",
+      "descriptionPlaceholder": "Por favor proporciona información detallada sobre tu incidencia...",
+      "submitting": "Enviando...",
+      "submit": "Enviar mensaje",
+      "errorFallback": "No se pudo enviar el mensaje. Inténtalo de nuevo.",
+      "errorGeneric": "No se pudo enviar el ticket",
+      "successTitle": "¡Mensaje enviado correctamente!",
+      "successDescription": "Gracias por contactar con nosotros. Te responderemos lo antes posible.",
+      "successAgain": "Enviar otro mensaje"
+    }
   }
 }

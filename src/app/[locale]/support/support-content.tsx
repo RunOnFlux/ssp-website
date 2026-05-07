@@ -20,360 +20,208 @@ import {
   Twitter,
   Users,
 } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 import type { ComponentType, ReactNode, SVGProps } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { Link } from '@/i18n/navigation'
 
-interface Faq {
-  question: string
-  answer: ReactNode
+type FaqCategoryKey = 'gettingStarted' | 'security' | 'technical'
+
+type FaqRichKind = 'plain' | 'beforeLinkAfter' | 'codeLink'
+
+interface FaqDescriptor {
+  index: number
+  kind: FaqRichKind
+  /** Used for `beforeLinkAfter` to wire up the link href */
+  href?: string
 }
 
-interface FaqCategory {
-  title: string
+interface FaqCategoryDescriptor {
+  key: FaqCategoryKey
   icon: ComponentType<SVGProps<SVGSVGElement>>
-  faqs: Faq[]
+  faqs: FaqDescriptor[]
 }
 
-const faqCategories: FaqCategory[] = [
+const faqCategoryDescriptors: FaqCategoryDescriptor[] = [
   {
-    title: 'Getting Started',
+    key: 'gettingStarted',
     icon: Book,
     faqs: [
+      { index: 0, kind: 'plain' },
+      { index: 1, kind: 'plain' },
+      { index: 2, kind: 'plain' },
+      { index: 3, kind: 'plain' },
       {
-        question: 'What is SSP Wallet?',
-        answer:
-          'SSP Wallet is a true 2-of-2 multisignature system consisting of two components: SSP Wallet (browser extension) and SSP Key (mobile 2FA app). Both devices are required to authorize transactions, providing unmatched security for your crypto assets across 15+ blockchains.',
+        index: 4,
+        kind: 'beforeLinkAfter',
+        href: 'https://docs.google.com/spreadsheets/d/1GUqGeV4hCwjKlxazY1vPY52owrEqXQ1UTchOKfkyS7c',
       },
-      {
-        question: 'How do I install SSP Wallet?',
-        answer:
-          'You can install SSP Wallet as a Chrome extension from the Chrome Web Store. Visit our download page and follow our comprehensive setup guide for step-by-step instructions.',
-      },
-      {
-        question: 'Is SSP Wallet free to use?',
-        answer:
-          "Yes, SSP Wallet is completely free to download and use. We don't charge any fees for the wallet itself, though you'll still pay network transaction fees when making blockchain transactions.",
-      },
-      {
-        question: 'What cryptocurrencies does SSP Wallet support?',
-        answer:
-          'SSP Wallet supports 15+ blockchains including Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), Zcash (ZEC), Ravencoin (RVN), Dogecoin (DOGE), Bitcoin Cash (BCH), Flux (FLUX), Polygon (MATIC), BSC, Avalanche (AVAX), and Base. For EVM-compatible chains, we support all ERC-20 tokens and you can import your own custom token lists. Solana support is coming soon.',
-      },
-      {
-        question: 'Where can I find the complete list of supported assets?',
-        answer: (
-          <>
-            For a comprehensive and up-to-date list of all natively supported chains and tokens,
-            please refer to our official{' '}
-            <a
-              href='https://docs.google.com/spreadsheets/d/1GUqGeV4hCwjKlxazY1vPY52owrEqXQ1UTchOKfkyS7c'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='text-blue-600 underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300'
-            >
-              SSP Asset Spreadsheet
-            </a>
-            . This spreadsheet is regularly updated with new additions and contains detailed
-            information about each supported asset.
-          </>
-        ),
-      },
-      {
-        question: 'Can I use SSP Wallet with dApps and DeFi?',
-        answer:
-          'Yes! SSP Wallet features full WalletConnect v2 (Reown) integration, allowing you to connect to thousands of decentralized applications across all supported EVM chains. You can use DeFi protocols, NFT marketplaces, and other dApps while maintaining the security of the 2-of-2 multisignature system.',
-      },
-      {
-        question: 'What are FluxNodes and how can I use them?',
-        answer:
-          'FluxNodes are nodes in the Flux network that help secure and maintain the blockchain. With SSP Wallet, you can easily set up and manage Fluxnodes, monitor their performance, and claim rewards directly through the wallet interface. Fluxnodes require a collateral amount of FLUX tokens and provide passive income through network rewards.',
-      },
-      {
-        question: 'Does SSP Wallet support fiat onboarding and offboarding?',
-        answer:
-          'Yes! SSP Wallet supports fiat onboarding and offboarding through integrated partners. You can buy cryptocurrencies directly with your credit card, bank transfer, or other payment methods, and sell your crypto back to fiat currency. This feature is available in supported regions and requires KYC verification.',
-      },
-      {
-        question: 'Can I swap cryptocurrencies within SSP Wallet?',
-        answer:
-          'Yes, SSP Wallet includes built-in crypto swap functionality. You can easily exchange one cryptocurrency for another across supported blockchains through our integrated swap partners. The swap feature provides competitive rates and executes swaps securely while maintaining your private keys.',
-      },
-      {
-        question: 'Can I export my transaction history?',
-        answer:
-          'Yes! SSP Wallet supports CSV export of your transaction history. You can export detailed transaction records for accounting, tax purposes, or personal record-keeping. The CSV export includes transaction dates, amounts, addresses, fees, and other relevant details for each supported blockchain.',
-      },
-      {
-        question: 'How can I request a new coin to be added?',
-        answer:
-          'We encourage users to reach out to our support team or contribute directly on our GitHub repository to request new cryptocurrency support. We evaluate each request based on community demand, technical feasibility, and security considerations.',
-      },
-      {
-        question: 'Is there a mobile wallet available?',
-        answer:
-          'Good news! We are actively working on expanding SSP Wallet to mobile platforms. Currently, SSP Wallet consists of a browser extension (SSP Wallet) and a mobile 2FA app (SSP Key). A full mobile wallet experience is in development.',
-      },
-      {
-        question: 'Can I use SSP Wallet on multiple devices?',
-        answer:
-          "Yes, you can use SSP Wallet on multiple devices. To set up on a new device, you'll need to restore your wallet and key using the corresponding seed phrases. Each device requires proper setup and synchronization.",
-      },
-      {
-        question: 'Is there a transaction limit with SSP Wallet?',
-        answer:
-          "SSP Wallet doesn't impose transaction limits. However, you're subject to the blockchain network limits and your available balance. Some networks may have minimum transaction amounts or maximum transaction sizes based on their protocols.",
-      },
-      {
-        question: 'Can I use SSP Wallet offline?',
-        answer:
-          'SSP Wallet requires an internet connection for most operations including transaction broadcasting, balance updates, and synchronization between devices. While you can view some cached information offline, you cannot send transactions without connectivity.',
-      },
+      { index: 5, kind: 'plain' },
+      { index: 6, kind: 'plain' },
+      { index: 7, kind: 'plain' },
+      { index: 8, kind: 'plain' },
+      { index: 9, kind: 'plain' },
+      { index: 10, kind: 'plain' },
+      { index: 11, kind: 'plain' },
+      { index: 12, kind: 'plain' },
+      { index: 13, kind: 'plain' },
+      { index: 14, kind: 'plain' },
     ],
   },
   {
-    title: 'Security & Privacy',
+    key: 'security',
     icon: Shield,
     faqs: [
+      { index: 0, kind: 'plain' },
+      { index: 1, kind: 'plain' },
+      { index: 2, kind: 'plain' },
+      { index: 3, kind: 'plain' },
+      { index: 4, kind: 'plain' },
+      { index: 5, kind: 'codeLink' },
       {
-        question: 'How secure is SSP Wallet?',
-        answer:
-          "SSP Wallet uses multi-signature technology with mobile-integrated authentication, providing two-key protection. We use cutting-edge encryption and don't store any of your data - everything is stored locally and controlled by you.",
+        index: 6,
+        kind: 'beforeLinkAfter',
+        href: 'https://keys.openpgp.org/search?q=security%40runonflux.io',
       },
-      {
-        question: 'What is SSP Key and why do I need it?',
-        answer:
-          'SSP Key is a mobile app that holds the second private key required for the 2-of-2 multisignature system. Every transaction must be signed by both your browser extension AND your mobile device. This ensures your funds remain secure even if one device is compromised. SSP Key is available for iOS 15.1+ and Android 7+.',
-      },
-      {
-        question: 'Can I recover my wallet if I lose my device?',
-        answer:
-          'Yes, you can recover your wallet using your seed phrase. Both your wallet and key have separate seed phrases that should be stored securely offline. Never share your seed phrases with anyone.',
-      },
-      {
-        question: 'Does SSP Wallet collect my personal data?',
-        answer:
-          'No, SSP Wallet is committed to not storing any data information. Your private keys, transaction history, and personal data remain entirely under your control and are stored locally on your devices.',
-      },
-      {
-        question: 'What are deterministic builds and why do they matter?',
-        answer:
-          'Deterministic builds ensure that identical source code produces identical binary outputs. SSP Wallet uses Docker-based deterministic builds that enable anyone to independently verify that the distributed extension matches exactly what was built from the published source code. This eliminates potential supply chain attacks and provides cryptographic proof of build integrity.',
-      },
-      {
-        question: 'How can I verify the deterministic build of SSP Wallet?',
-        answer: (
-          <>
-            To verify SSP Wallet builds: 1) Download the release files (Chrome/Firefox zips,
-            SHA256SUMS, SHA256SUMS.asc) from{' '}
-            <a
-              href='https://github.com/RunOnFlux/ssp-wallet/releases'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='text-blue-600 underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300'
-            >
-              GitHub releases
-            </a>
-            . 2) Import our public key from{' '}
-            <a
-              href='https://keys.openpgp.org/search?q=security%40runonflux.io'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='text-blue-600 underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300'
-            >
-              OpenPGP keyserver
-            </a>
-            . 3) Verify GPG signature:{' '}
-            <code className='rounded bg-gray-100 px-1 py-0.5 text-sm dark:bg-gray-800'>
-              gpg --verify SHA256SUMS.asc SHA256SUMS
-            </code>
-            . 4) Verify hashes:{' '}
-            <code className='rounded bg-gray-100 px-1 py-0.5 text-sm dark:bg-gray-800'>
-              sha256sum -c SHA256SUMS
-            </code>
-            . 5) Optionally reproduce the build:{' '}
-            <code className='rounded bg-gray-100 px-1 py-0.5 text-sm dark:bg-gray-800'>
-              git checkout [version] && npm run build:deterministic
-            </code>
-            .
-          </>
-        ),
-      },
-      {
-        question: 'Who signs the SSP Wallet releases?',
-        answer: (
-          <>
-            All SSP Wallet releases are cryptographically signed by security@runonflux.io using GPG
-            signatures. Our public key is available on{' '}
-            <a
-              href='https://keys.openpgp.org/search?q=security%40runonflux.io'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='text-blue-600 underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300'
-            >
-              OpenPGP keyserver
-            </a>{' '}
-            for verification. The deterministic build process includes Docker-based isolated
-            environments and comprehensive checksums (SHA256SUMS) that are also GPG-signed to ensure
-            authenticity and integrity.
-          </>
-        ),
-      },
-      {
-        question: 'Can I use multiple SSP Keys with one SSP Wallet?',
-        answer:
-          'No, each SSP Wallet can only be paired with one SSP Key. The 2-of-2 multisignature system requires device-specific synchronization for public nonces and chain data. Using multiple SSP Keys would cause synchronization conflicts.',
-      },
+      { index: 7, kind: 'plain' },
     ],
   },
   {
-    title: 'Technical Support',
+    key: 'technical',
     icon: Smartphone,
     faqs: [
-      {
-        question: 'Which browsers are supported?',
-        answer:
-          'SSP Wallet supports Google Chrome, Brave, Firefox, and other Chromium-based browsers. You can download the Chrome Web Store version for Chromium browsers or the Firefox version directly from our GitHub releases.',
-      },
-      {
-        question: "I'm having trouble syncing my mobile key",
-        answer:
-          "Make sure both devices are connected to the internet, the QR code is clearly visible, and you're using the latest versions of both the browser extension and mobile app. Try restarting both applications if sync fails.",
-      },
-      {
-        question: 'My transaction is stuck or pending',
-        answer:
-          'Blockchain transactions can sometimes take time depending on network congestion. Check the transaction status on a blockchain explorer. If using Ethereum, you may need to increase gas fees for faster confirmation.',
-      },
-      {
-        question: 'How do I update SSP Wallet?',
-        answer:
-          "Browser extensions typically update automatically. You can manually check for updates in your browser's extension management page. For the mobile app, check your device's app store for updates.",
-      },
-      {
-        question: 'What is SSP Relay and how does it work?',
-        answer:
-          'SSP Relay is an open-source relay service that acts as a bridge between your SSP Wallet and SSP Key. It provides market information, fee data, enables transaction synchronization, and delivers push notifications. The relay enhances the user experience while maintaining security.',
-      },
-      {
-        question: 'Does SSP Wallet support Replace-By-Fee (RBF)?',
-        answer:
-          'Yes, SSP Wallet fully supports Replace-By-Fee (RBF) functionality. You can modify transaction fees and even change recipients after broadcasting a transaction, giving you flexibility in managing your transactions on the blockchain.',
-      },
-      {
-        question: 'What fees does SSP Wallet charge?',
-        answer:
-          "SSP Wallet has zero fees - we don't charge anything for using the wallet. You only pay the standard blockchain network fees that go directly to miners/validators for processing your transactions. The wallet includes automatic fee selection to optimize your transaction costs.",
-      },
-      {
-        question: 'Why do some transactions fail to construct?',
-        answer:
-          'Some transactions may fail due to blockchain size restrictions and UTXO complexity. When you have many small inputs, the transaction size can exceed network limits. In such cases, you may need to consolidate your UTXOs or break the transaction into smaller parts.',
-      },
-      {
-        question: 'Do I need to restore my wallet when changing devices?',
-        answer:
-          'Yes, due to device-specific encryption, you must restore both your wallet and key when changing devices or making significant system changes. Keep your seed phrases secure and accessible for this process.',
-      },
-      {
-        question: 'What happens if I lose my SSP Key device?',
-        answer:
-          "If you lose your SSP Key device, you can restore it on a new device using your SSP Key seed phrase. Install the SSP Key app on your new device and use the seed phrase to recover access. You'll need to re-sync with your SSP Wallet browser extension after restoration.",
-      },
-      {
-        question: 'Can I backup my wallet to cloud storage?',
-        answer:
-          "SSP Wallet doesn't support automatic cloud backups for security reasons. Your seed phrases should be stored offline in a secure location. Never store seed phrases in cloud storage, email, or any digital format that could be compromised.",
-      },
-      {
-        question: "What's the difference between SSP Wallet seed phrase and SSP Key seed phrase?",
-        answer:
-          'SSP Wallet and SSP Key each have separate seed phrases. The wallet seed phrase controls the browser extension component, while the key seed phrase controls the mobile 2FA component. Both are required for full wallet recovery and should be stored separately and securely.',
-      },
-      {
-        question: 'How do I migrate to a new computer?',
-        answer:
-          'To move SSP Wallet to a new computer: 1) Install the SSP Wallet extension on the new device, 2) Use your wallet seed phrase to restore the browser extension, 3) Re-sync with your existing SSP Key mobile app. Your transaction history and settings will need to be reconfigured.',
-      },
-      {
-        question: 'I\'m getting "Synchronisation with SSP wallet needed" error on mobile',
-        answer:
-          'This error typically occurs when changing phones or when a blockchain is not yet synchronized with your SSP Key. To resolve: 1) Open SSP Wallet, 2) Switch to the blockchain you want to re-synchronize, 3) Click the burger menu (top right corner), 4) Select "SSP Wallet Details", 5) Confirm access with your password, 6) In the first row, find "Chain Sync with SSP Key" and click the eye icon to show the QR code, 7) Scan the QR code with your SSP Key and approve the chain synchronization.',
-      },
-      {
-        question:
-          'I\'m getting "SSP Key Public nonces do not match or SSP Key Public nonces are missing" error',
-        answer:
-          'This error occurs when public nonces used to construct transactions are not synchronized between your SSP Wallet and SSP Key. To resolve: 1) Open the burger menu (top right corner), 2) Navigate to Settings, 3) Find the "Public Nonces" section and click "Sync Public Nonces", 4) Scan the QR code shown with your SSP Key, 5) Approve the request on your mobile device. Your public nonces are now synchronized and you can begin transacting.',
-      },
+      { index: 0, kind: 'plain' },
+      { index: 1, kind: 'plain' },
+      { index: 2, kind: 'plain' },
+      { index: 3, kind: 'plain' },
+      { index: 4, kind: 'plain' },
+      { index: 5, kind: 'plain' },
+      { index: 6, kind: 'plain' },
+      { index: 7, kind: 'plain' },
+      { index: 8, kind: 'plain' },
+      { index: 9, kind: 'plain' },
+      { index: 10, kind: 'plain' },
+      { index: 11, kind: 'plain' },
+      { index: 12, kind: 'plain' },
+      { index: 13, kind: 'plain' },
+      { index: 14, kind: 'plain' },
     ],
   },
 ]
 
-interface SupportLink {
-  name: string
+interface SupportLinkDescriptor {
+  key: string
+  icon: ComponentType<SVGProps<SVGSVGElement>>
   url: string
   internal?: boolean
-  icon: ComponentType<SVGProps<SVGSVGElement>>
 }
 
-interface SupportChannel {
-  title: string
-  description: string
+interface SupportChannelDescriptor {
+  key: 'documentation' | 'community' | 'direct'
   icon: ComponentType<SVGProps<SVGSVGElement>>
-  links: SupportLink[]
+  links: SupportLinkDescriptor[]
 }
 
-const supportChannels: SupportChannel[] = [
+const supportChannels: SupportChannelDescriptor[] = [
   {
-    title: 'Documentation',
-    description: 'Comprehensive guides and docs',
+    key: 'documentation',
     icon: Book,
     links: [
-      {
-        name: 'Complete Documentation',
-        url: 'https://docs.sspwallet.io',
-        internal: false,
-        icon: FileText,
-      },
-      { name: 'Setup Guide', url: '/guide', internal: true, icon: Book },
-      { name: 'Feature Documentation', url: '/features', internal: true, icon: Star },
+      { key: 'completeDocs', icon: FileText, url: 'https://docs.sspwallet.io' },
+      { key: 'setupGuide', icon: Book, url: '/guide', internal: true },
+      { key: 'featureDocs', icon: Star, url: '/features', internal: true },
     ],
   },
   {
-    title: 'Community Support',
-    description: 'Get help from our community',
+    key: 'community',
     icon: Users,
     links: [
-      { name: 'GitHub Discussions', url: 'https://github.com/RunOnFlux/ssp-wallet', icon: Github },
-      { name: 'Discord Community', url: 'https://discord.gg/runonflux', icon: MessageCircle },
-      { name: 'Twitter Support', url: 'https://twitter.com/sspwallet_io', icon: Twitter },
+      { key: 'github', icon: Github, url: 'https://github.com/RunOnFlux/ssp-wallet' },
+      { key: 'discord', icon: MessageCircle, url: 'https://discord.gg/runonflux' },
+      { key: 'twitter', icon: Twitter, url: 'https://twitter.com/sspwallet_io' },
     ],
   },
   {
-    title: 'Direct Support',
-    description: 'Get personalized technical assistance',
+    key: 'direct',
     icon: Mail,
     links: [
-      {
-        name: 'Support Ticketing System',
-        url: 'https://support.runonflux.io',
-        internal: false,
-        icon: ExternalLink,
-      },
-      { name: 'Email Support', url: 'mailto:support@sspwallet.io', icon: Mail },
+      { key: 'ticketSystem', icon: ExternalLink, url: 'https://support.runonflux.io' },
+      { key: 'email', icon: Mail, url: 'mailto:support@sspwallet.io' },
     ],
   },
 ]
 
-interface FAQItemProps {
-  faq: Faq
-  index: number
-  categoryIndex: number
+interface FaqAnswerProps {
+  category: FaqCategoryKey
+  descriptor: FaqDescriptor
 }
 
-function FAQItem({ faq, index, categoryIndex }: FAQItemProps) {
+function FaqAnswer({ category, descriptor }: FaqAnswerProps) {
+  const t = useTranslations(`Support.faqCategories.${category}.items.${descriptor.index}`)
+
+  const linkClass =
+    'text-blue-600 underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300'
+  const codeClass = 'rounded bg-gray-100 px-1 py-0.5 text-sm dark:bg-gray-800'
+
+  let body: ReactNode
+  if (descriptor.kind === 'plain') {
+    body = t('answer')
+  } else if (descriptor.kind === 'beforeLinkAfter') {
+    body = (
+      <>
+        {t('answerBefore')}
+        <a href={descriptor.href} target='_blank' rel='noopener noreferrer' className={linkClass}>
+          {t('answerLink')}
+        </a>
+        {t('answerAfter')}
+      </>
+    )
+  } else {
+    // codeLink
+    body = (
+      <>
+        {t('answerIntro')}
+        <a
+          href='https://github.com/RunOnFlux/ssp-wallet/releases'
+          target='_blank'
+          rel='noopener noreferrer'
+          className={linkClass}
+        >
+          {t('answerLink1')}
+        </a>
+        {t('answerMiddle1')}
+        <a
+          href='https://keys.openpgp.org/search?q=security%40runonflux.io'
+          target='_blank'
+          rel='noopener noreferrer'
+          className={linkClass}
+        >
+          {t('answerLink2')}
+        </a>
+        {t('answerMiddle2')}
+        <code className={codeClass}>{t('answerCode1')}</code>
+        {t('answerMiddle3')}
+        <code className={codeClass}>{t('answerCode2')}</code>
+        {t('answerMiddle4')}
+        <code className={codeClass}>{t('answerCode3')}</code>
+        {t('answerOutro')}
+      </>
+    )
+  }
+
+  return <p className='leading-relaxed text-gray-600 dark:text-gray-400'>{body}</p>
+}
+
+interface FaqQuestionProps {
+  category: FaqCategoryKey
+  descriptor: FaqDescriptor
+  categoryIndex: number
+  index: number
+}
+
+function FAQItem({ category, descriptor, categoryIndex, index }: FaqQuestionProps) {
+  const t = useTranslations(`Support.faqCategories.${category}.items.${descriptor.index}`)
   const [isOpen, setIsOpen] = useState(false)
   const [ref, inView] = useInView({
     threshold: 0.3,
@@ -395,7 +243,7 @@ function FAQItem({ faq, index, categoryIndex }: FAQItemProps) {
         aria-controls={`faq-content-${categoryIndex}-${index}`}
         id={`faq-button-${categoryIndex}-${index}`}
       >
-        <span className='pr-4 font-semibold text-gray-900 dark:text-white'>{faq.question}</span>
+        <span className='pr-4 font-semibold text-gray-900 dark:text-white'>{t('question')}</span>
         {isOpen ? (
           <ChevronUp className='h-5 w-5 flex-shrink-0 text-gray-500 dark:text-gray-400' />
         ) : (
@@ -413,7 +261,7 @@ function FAQItem({ faq, index, categoryIndex }: FAQItemProps) {
         aria-labelledby={`faq-button-${categoryIndex}-${index}`}
         style={!isOpen ? { height: 0, paddingBottom: 0 } : {}}
       >
-        <p className='leading-relaxed text-gray-600 dark:text-gray-400'>{faq.answer}</p>
+        <FaqAnswer category={category} descriptor={descriptor} />
       </motion.div>
     </motion.div>
   )
@@ -427,6 +275,7 @@ interface FormData {
 }
 
 function ContactForm() {
+  const t = useTranslations('Support.form')
   const [formData, setFormData] = useState<FormData>({
     email: '',
     type: 'Question',
@@ -455,13 +304,13 @@ function ContactForm() {
       const result = await response.json()
 
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to submit ticket')
+        throw new Error(result.error || t('errorGeneric'))
       }
 
       setIsSubmitted(true)
       setFormData({ email: '', type: 'Question', subject: '', description: '' })
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to send message. Please try again.')
+      setError(err instanceof Error ? err.message : t('errorFallback'))
     } finally {
       setIsSubmitting(false)
     }
@@ -485,16 +334,14 @@ function ContactForm() {
       >
         <CheckCircle className='mx-auto mb-4 h-16 w-16 text-green-500' />
         <h3 className='mb-2 text-xl font-semibold text-green-900 dark:text-green-100'>
-          Message Sent Successfully!
+          {t('successTitle')}
         </h3>
-        <p className='mb-4 text-green-700 dark:text-green-300'>
-          Thank you for contacting us. We'll get back to you as soon as possible.
-        </p>
+        <p className='mb-4 text-green-700 dark:text-green-300'>{t('successDescription')}</p>
         <button
           onClick={() => setIsSubmitted(false)}
           className='text-green-600 hover:underline dark:text-green-400'
         >
-          Send another message
+          {t('successAgain')}
         </button>
       </motion.div>
     )
@@ -507,7 +354,7 @@ function ContactForm() {
           htmlFor='email'
           className='mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300'
         >
-          Email Address *
+          {t('emailLabel')}
         </label>
         <input
           type='email'
@@ -517,7 +364,7 @@ function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           className='focus:ring-primary-500 dark:bg-dark-700 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
-          placeholder='your.email@example.com'
+          placeholder={t('emailPlaceholder')}
         />
       </div>
 
@@ -526,7 +373,7 @@ function ContactForm() {
           htmlFor='type'
           className='mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300'
         >
-          Issue Type *
+          {t('typeLabel')}
         </label>
         <select
           id='type'
@@ -536,11 +383,11 @@ function ContactForm() {
           onChange={handleChange}
           className='focus:ring-primary-500 dark:bg-dark-700 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
         >
-          <option value='Question'>General Question</option>
-          <option value='Incident'>Technical Issue</option>
-          <option value='Problem'>Help Needed</option>
-          <option value='Feature Request'>Feature Request</option>
-          <option value='Incident'>Bug Report</option>
+          <option value='Question'>{t('typeOptions.Question')}</option>
+          <option value='Incident'>{t('typeOptions.Incident')}</option>
+          <option value='Problem'>{t('typeOptions.Problem')}</option>
+          <option value='Feature Request'>{t('typeOptions.Feature Request')}</option>
+          <option value='Incident'>{t('typeOptions.Bug Report')}</option>
         </select>
       </div>
 
@@ -549,7 +396,7 @@ function ContactForm() {
           htmlFor='subject'
           className='mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300'
         >
-          Subject *
+          {t('subjectLabel')}
         </label>
         <input
           type='text'
@@ -559,7 +406,7 @@ function ContactForm() {
           value={formData.subject}
           onChange={handleChange}
           className='focus:ring-primary-500 dark:bg-dark-700 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
-          placeholder='Brief description of your issue'
+          placeholder={t('subjectPlaceholder')}
         />
       </div>
 
@@ -568,7 +415,7 @@ function ContactForm() {
           htmlFor='description'
           className='mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300'
         >
-          Description *
+          {t('descriptionLabel')}
         </label>
         <textarea
           id='description'
@@ -578,7 +425,7 @@ function ContactForm() {
           value={formData.description}
           onChange={handleChange}
           className='focus:ring-primary-500 dark:bg-dark-700 w-full resize-none rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
-          placeholder='Please provide detailed information about your issue...'
+          placeholder={t('descriptionPlaceholder')}
         />
       </div>
 
@@ -597,12 +444,12 @@ function ContactForm() {
         {isSubmitting ? (
           <>
             <div className='mr-2 h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent'></div>
-            Sending...
+            {t('submitting')}
           </>
         ) : (
           <>
             <Send className='mr-2 h-4 w-4' />
-            Send Message
+            {t('submit')}
           </>
         )}
       </button>
@@ -610,7 +457,14 @@ function ContactForm() {
   )
 }
 
+const CATEGORY_DOM_IDS: Record<FaqCategoryKey, string> = {
+  gettingStarted: 'getting-started',
+  security: 'security--privacy',
+  technical: 'technical-support',
+}
+
 export function SupportContent() {
+  const t = useTranslations('Support')
   const [heroRef, heroInView] = useInView({
     threshold: 0.3,
     triggerOnce: true,
@@ -631,14 +485,13 @@ export function SupportContent() {
           >
             <div className='mb-6 inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'>
               <HelpCircle className='mr-2 h-4 w-4' />
-              Support Center
+              {t('heroBadge')}
             </div>
 
-            <h1 className='heading-1 mb-6 text-gray-900 dark:text-white'>How can we help you?</h1>
+            <h1 className='heading-1 mb-6 text-gray-900 dark:text-white'>{t('heroTitle')}</h1>
 
             <p className='mx-auto mb-8 max-w-3xl text-xl text-gray-600 dark:text-gray-400'>
-              Find answers to common questions, access our documentation, or get in touch with our
-              support team.
+              {t('heroDescription')}
             </p>
 
             <div className='mx-auto grid max-w-4xl gap-4 sm:gap-6 md:grid-cols-3'>
@@ -651,9 +504,11 @@ export function SupportContent() {
                 <Book className='mr-3 h-6 w-6 flex-shrink-0 text-blue-500 sm:h-8 sm:w-8' />
                 <div className='min-w-0 flex-1 text-left'>
                   <h3 className='text-sm font-semibold text-gray-900 sm:text-base dark:text-white'>
-                    Docs
+                    {t('quickLinks.docsTitle')}
                   </h3>
-                  <p className='text-xs text-gray-600 sm:text-sm dark:text-gray-400'>Guides</p>
+                  <p className='text-xs text-gray-600 sm:text-sm dark:text-gray-400'>
+                    {t('quickLinks.docsSubtitle')}
+                  </p>
                 </div>
               </a>
 
@@ -666,9 +521,11 @@ export function SupportContent() {
                 <Users className='mr-3 h-6 w-6 flex-shrink-0 text-green-500 sm:h-8 sm:w-8' />
                 <div className='min-w-0 flex-1 text-left'>
                   <h3 className='text-sm font-semibold text-gray-900 sm:text-base dark:text-white'>
-                    Community
+                    {t('quickLinks.communityTitle')}
                   </h3>
-                  <p className='text-xs text-gray-600 sm:text-sm dark:text-gray-400'>Chat</p>
+                  <p className='text-xs text-gray-600 sm:text-sm dark:text-gray-400'>
+                    {t('quickLinks.communitySubtitle')}
+                  </p>
                 </div>
               </a>
 
@@ -681,9 +538,11 @@ export function SupportContent() {
                 <MessageCircle className='mr-3 h-6 w-6 flex-shrink-0 text-purple-500 sm:h-8 sm:w-8' />
                 <div className='min-w-0 flex-1 text-left'>
                   <h3 className='text-sm font-semibold text-gray-900 sm:text-base dark:text-white'>
-                    Support
+                    {t('quickLinks.supportTitle')}
                   </h3>
-                  <p className='text-xs text-gray-600 sm:text-sm dark:text-gray-400'>Help</p>
+                  <p className='text-xs text-gray-600 sm:text-sm dark:text-gray-400'>
+                    {t('quickLinks.supportSubtitle')}
+                  </p>
                 </div>
               </a>
             </div>
@@ -701,9 +560,9 @@ export function SupportContent() {
             viewport={{ once: true }}
             className='mb-12 text-center'
           >
-            <h2 className='heading-2 mb-4'>Get Support</h2>
+            <h2 className='heading-2 mb-4'>{t('channelsTitle')}</h2>
             <p className='mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-400'>
-              Choose the best way to get help based on your needs
+              {t('channelsSubtitle')}
             </p>
           </motion.div>
 
@@ -724,9 +583,11 @@ export function SupportContent() {
                       <ChannelIcon className='h-8 w-8' />
                     </div>
                     <h3 className='mb-2 text-xl font-bold text-gray-900 dark:text-white'>
-                      {channel.title}
+                      {t(`channels.${channel.key}.title`)}
                     </h3>
-                    <p className='text-gray-600 dark:text-gray-400'>{channel.description}</p>
+                    <p className='text-gray-600 dark:text-gray-400'>
+                      {t(`channels.${channel.key}.description`)}
+                    </p>
                   </div>
 
                   <div className='space-y-3'>
@@ -741,7 +602,7 @@ export function SupportContent() {
                             <LinkIcon className='group-hover:text-primary-600 dark:group-hover:text-primary-400 mr-3 h-5 w-5 text-gray-500 dark:text-gray-400' />
                           )}
                           <span className='group-hover:text-primary-600 dark:group-hover:text-primary-400 text-gray-700 dark:text-gray-300'>
-                            {link.name}
+                            {t(`channels.${channel.key}.links.${link.key}`)}
                           </span>
                         </>
                       )
@@ -780,22 +641,19 @@ export function SupportContent() {
             viewport={{ once: true }}
             className='mb-16 text-center'
           >
-            <h2 className='heading-2 mb-4'>Frequently Asked Questions</h2>
+            <h2 className='heading-2 mb-4'>{t('faqTitle')}</h2>
             <p className='mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-400'>
-              Find quick answers to the most common questions about SSP Wallet
+              {t('faqSubtitle')}
             </p>
           </motion.div>
 
           <div className='space-y-12'>
-            {faqCategories.map((category, categoryIndex) => {
+            {faqCategoryDescriptors.map((category, categoryIndex) => {
               const CategoryIcon = category.icon
               return (
                 <div
-                  key={categoryIndex}
-                  id={category.title
-                    .toLowerCase()
-                    .replace(/\s+&\s+/g, '--')
-                    .replace(/\s+/g, '-')}
+                  key={category.key}
+                  id={CATEGORY_DOM_IDS[category.key]}
                   style={{ scrollMarginTop: '100px' }}
                 >
                   <motion.div
@@ -809,7 +667,7 @@ export function SupportContent() {
                       <CategoryIcon className='h-5 w-5' />
                     </div>
                     <h3 className='text-2xl font-bold text-gray-900 dark:text-white'>
-                      {category.title}
+                      {t(`faqCategories.${category.key}.title`)}
                     </h3>
                   </motion.div>
 
@@ -817,9 +675,10 @@ export function SupportContent() {
                     {category.faqs.map((faq, faqIndex) => (
                       <FAQItem
                         key={faqIndex}
-                        faq={faq}
-                        index={faqIndex}
+                        category={category.key}
+                        descriptor={faq}
                         categoryIndex={categoryIndex}
+                        index={faqIndex}
                       />
                     ))}
                   </div>
@@ -840,11 +699,10 @@ export function SupportContent() {
               transition={{ duration: 0.4 }}
               viewport={{ once: true }}
             >
-              <h2 className='heading-2 mb-6'>Still need help?</h2>
+              <h2 className='heading-2 mb-6'>{t('stillNeedHelpTitle')}</h2>
 
               <p className='mb-8 text-lg text-gray-600 dark:text-gray-400'>
-                Can't find what you're looking for? Send us a message and our support team will get
-                back to you as soon as possible.
+                {t('stillNeedHelpDescription')}
               </p>
 
               <div className='space-y-6'>
@@ -852,10 +710,10 @@ export function SupportContent() {
                   <Mail className='text-primary-600 dark:text-primary-400 mt-1 mr-4 h-6 w-6 flex-shrink-0' />
                   <div>
                     <h4 className='mb-1 font-semibold text-gray-900 dark:text-white'>
-                      Email Support
+                      {t('emailSupportTitle')}
                     </h4>
                     <p className='text-gray-600 dark:text-gray-400'>
-                      We typically respond within 24 hours
+                      {t('emailSupportDescription')}
                     </p>
                   </div>
                 </div>
@@ -864,21 +722,19 @@ export function SupportContent() {
                   <Github className='text-primary-600 dark:text-primary-400 mt-1 mr-4 h-6 w-6 flex-shrink-0' />
                   <div>
                     <h4 className='mb-1 font-semibold text-gray-900 dark:text-white'>
-                      Open Source
+                      {t('openSourceTitle')}
                     </h4>
-                    <p className='text-gray-600 dark:text-gray-400'>
-                      Report bugs or contribute on GitHub
-                    </p>
+                    <p className='text-gray-600 dark:text-gray-400'>{t('openSourceDescription')}</p>
                   </div>
                 </div>
 
                 <div className='flex items-start'>
                   <Users className='text-primary-600 dark:text-primary-400 mt-1 mr-4 h-6 w-6 flex-shrink-0' />
                   <div>
-                    <h4 className='mb-1 font-semibold text-gray-900 dark:text-white'>Community</h4>
-                    <p className='text-gray-600 dark:text-gray-400'>
-                      Connect with other users and get peer support
-                    </p>
+                    <h4 className='mb-1 font-semibold text-gray-900 dark:text-white'>
+                      {t('communityTitle')}
+                    </h4>
+                    <p className='text-gray-600 dark:text-gray-400'>{t('communityDescription')}</p>
                   </div>
                 </div>
               </div>
@@ -893,7 +749,7 @@ export function SupportContent() {
             >
               <div className='dark:bg-dark-800 rounded-2xl border border-gray-200 bg-white p-8 dark:border-gray-700'>
                 <h3 className='mb-6 text-xl font-bold text-gray-900 dark:text-white'>
-                  Contact Support
+                  {t('contactSupportTitle')}
                 </h3>
                 <ContactForm />
               </div>
