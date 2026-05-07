@@ -139,6 +139,15 @@
         "title": "Noticias y análisis del sector",
         "description": "Contexto y análisis sobre noticias y regulación cripto."
       }
+    },
+    "categoryIntros": {
+      "multisig": "Las carteras multifirma requieren varias firmas para autorizar una transacción. SSP aplica 2-de-2 en toda acción firmada: tanto la extensión del navegador como la aplicación móvil SSP Key deben aprobarla. Esta página reúne los análisis a fondo que explican cómo funciona el modelo, qué ataques detiene y dónde están sus límites.",
+      "getting-started": "¿Recién llegado al mundo cripto o regresando tras un largo descanso? Empieza aquí. Estas guías cubren carteras, direcciones, transacciones, gas, mempools y finalidad: el vocabulario que necesitas antes de manejar fondos reales.",
+      "security": "La autocustodia es exigente porque los ataques son creativos. Esta colección recorre las amenazas que realmente afectan a los usuarios: páginas de phishing, mensajes falsos de soporte, dApps maliciosas, semillas perdidas, y cómo el modelo 2-de-2 de SSP neutraliza la mayoría.",
+      "how-to": "Tutoriales prácticos, con capturas de pantalla, para las tareas que los usuarios de SSP realizan a diario: enviar transacciones entre cadenas, conectarse a dApps mediante WalletConnect, intercambiar tokens y recuperar el acceso tras perder un dispositivo.",
+      "coin-guides": "Cada moneda o cadena que SSP soporta tiene sus propias particularidades: UTXO frente a basadas en cuentas, multifirma nativa frente a ERC-4337, dinámica de comisiones, tiempos de finalidad. Esta colección las analiza una a una.",
+      "defi": "SSP admite DeFi mediante Account Abstraction ERC-4337 en cadenas EVM. Estos artículos explican qué es AA, qué dApps puedes utilizar de forma segura desde una cartera multifirma y cómo SSP mantiene tu control mientras participas en protocolos DeFi.",
+      "news-explained": "Más allá de los titulares: los cambios regulatorios, las quiebras de exchanges, los incidentes en protocolos y las actualizaciones de estándares que realmente afectan a los usuarios de autocustodia, explicados sin sensacionalismo."
     }
   },
   "Author": {

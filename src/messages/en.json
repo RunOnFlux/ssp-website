@@ -139,6 +139,15 @@
         "title": "News & Industry Analysis",
         "description": "Context and analysis on crypto news and regulation."
       }
+    },
+    "categoryIntros": {
+      "multisig": "Multisig wallets require multiple signatures to authorize a transaction. SSP enforces 2-of-2 on every signed action: the browser extension and the mobile SSP Key app must both approve. This page collects the deep-dives that explain how the model works, what attacks it stops, and where its limits sit.",
+      "getting-started": "Brand-new to crypto, or returning after a long break? Start here. These guides cover wallets, addresses, transactions, gas, mempools, and finality — the vocabulary you need before you touch real funds.",
+      "security": "Self-custody is hard because attacks are creative. This collection walks through the threats that actually catch users: phishing pages, fake support DMs, malicious dApps, lost seeds, and how SSP's 2-of-2 model neutralises most of them.",
+      "how-to": "Practical, screenshot-driven walkthroughs for the things SSP users do every day: sending transactions across chains, connecting to dApps via WalletConnect, swapping tokens, and recovering from a lost device.",
+      "coin-guides": "Each coin or chain SSP supports has its own quirks — UTXO vs. account-based, native multisig vs. ERC-4337, fee dynamics, finality times. This collection covers them one at a time.",
+      "defi": "SSP supports DeFi via ERC-4337 Account Abstraction on EVM chains. These articles explain what AA is, what dApps you can use safely from a multisig wallet, and how SSP keeps you in control while letting you participate in DeFi protocols.",
+      "news-explained": "Beyond the headlines: the regulatory shifts, exchange failures, protocol incidents, and standards updates that actually affect self-custody users — explained without hype."
     }
   },
   "Author": {
