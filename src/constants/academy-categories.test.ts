@@ -1,9 +1,9 @@
 import { describe, it, expect } from 'vitest'
-import { ACADEMY_CATEGORIES, ACADEMY_CATEGORY_SLUGS, isAcademyCategory } from './academy-categories'
+import { ACADEMY_CATEGORY_SLUGS, isAcademyCategory } from './academy-categories'
 
-describe('ACADEMY_CATEGORIES', () => {
-  it('includes all 7 SSP categories in plan order', () => {
-    expect(Object.keys(ACADEMY_CATEGORIES)).toEqual([
+describe('ACADEMY_CATEGORY_SLUGS', () => {
+  it('contains the 7 SSP category slugs in plan order', () => {
+    expect([...ACADEMY_CATEGORY_SLUGS]).toEqual([
       'multisig',
       'getting-started',
       'security',
@@ -13,30 +13,28 @@ describe('ACADEMY_CATEGORIES', () => {
       'news-explained',
     ])
   })
-
-  it('every entry has title and description', () => {
-    for (const [slug, meta] of Object.entries(ACADEMY_CATEGORIES)) {
-      expect(meta.title, `${slug}.title`).toBeTruthy()
-      expect(meta.description, `${slug}.description`).toBeTruthy()
-    }
-  })
 })
 
 describe('isAcademyCategory', () => {
-  it('returns true for known slugs', () => {
-    expect(isAcademyCategory('multisig')).toBe(true)
-    expect(isAcademyCategory('defi')).toBe(true)
+  it('accepts every canonical slug', () => {
+    for (const slug of ACADEMY_CATEGORY_SLUGS) {
+      expect(isAcademyCategory(slug), slug).toBe(true)
+    }
   })
 
-  it('returns false for unknown', () => {
+  it('rejects non-slug strings', () => {
+    expect(isAcademyCategory('multisig-extra')).toBe(false)
+    expect(isAcademyCategory('')).toBe(false)
     expect(isAcademyCategory('nope')).toBe(false)
-    expect(isAcademyCategory(42)).toBe(false)
+  })
+
+  it('rejects null and undefined', () => {
+    expect(isAcademyCategory(null)).toBe(false)
     expect(isAcademyCategory(undefined)).toBe(false)
   })
-})
 
-describe('ACADEMY_CATEGORY_SLUGS', () => {
-  it('matches the keys of ACADEMY_CATEGORIES', () => {
-    expect([...ACADEMY_CATEGORY_SLUGS]).toEqual(Object.keys(ACADEMY_CATEGORIES))
+  it('rejects numbers', () => {
+    expect(isAcademyCategory(0)).toBe(false)
+    expect(isAcademyCategory(42)).toBe(false)
   })
 })

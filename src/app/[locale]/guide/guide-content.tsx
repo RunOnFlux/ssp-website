@@ -8,178 +8,77 @@ import {
   Chrome,
   Download,
   Lock,
+  type LucideIcon,
   Play,
   Shield,
   Smartphone,
 } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { useInView } from 'react-intersection-observer'
 import { Link } from '@/i18n/navigation'
 
-interface GuideStep {
-  step: number
-  title: string
-  description: string
-  action: string
+interface GuideStepShape {
+  index: number
+  important?: boolean
   link?: string
   links?: { android: string; ios: string }
-  important?: boolean
 }
 
-interface GuidePhase {
-  phase: string
-  title: string
-  icon: typeof Chrome
+interface GuidePhaseShape {
+  phaseIndex: 0 | 1
+  icon: LucideIcon
   color: 'blue' | 'green'
-  steps: GuideStep[]
+  steps: GuideStepShape[]
 }
 
-const steps: GuidePhase[] = [
+const phases: GuidePhaseShape[] = [
   {
-    phase: 'Part One',
-    title: 'Installing SSP Wallet',
+    phaseIndex: 0,
     icon: Chrome,
     color: 'blue',
     steps: [
-      {
-        step: 1,
-        title: 'Visit Extension Store',
-        description:
-          'Open your browser and navigate to the SSP Wallet Extension page for your browser (Chrome, Firefox, Brave)',
-        action: 'Navigate to extension page',
-        link: '/download',
-      },
-      {
-        step: 2,
-        title: 'Install Extension',
-        description:
-          "Click 'Add to Chrome/Firefox' or 'Install' button. A pop-up window will appear asking if you want to add SSP Wallet. Click 'Add' or 'Install' to complete installation.",
-        action: 'Add to browser',
-      },
-      {
-        step: 3,
-        title: 'Open Wallet',
-        description:
-          'Locate the SSP wallet logo in your browser and click on it. Follow the prompts to get started.',
-        action: 'Launch wallet',
-      },
-      {
-        step: 4,
-        title: 'Create Password',
-        description:
-          'Create your password. Please carefully read the SSP Wallet Disclaimer and acknowledge your agreement.',
-        action: 'Set password',
-      },
-      {
-        step: 5,
-        title: 'Create Wallet',
-        description: "Click 'Create Wallet' to initialize your new wallet.",
-        action: 'Initialize wallet',
-      },
-      {
-        step: 6,
-        title: 'Backup Seed Phrase',
-        description:
-          "Click 'Show Mnemonic Wallet Seed Phrase.' Store the seed phrase securely and confirm that you have backed it up.",
-        action: 'Secure backup',
-        important: true,
-      },
-      {
-        step: 7,
-        title: 'Finalize Setup',
-        description:
-          "Click 'Create Wallet' to finalize the process. Your browser wallet is now ready!",
-        action: 'Complete setup',
-      },
+      { index: 0, link: '/download' },
+      { index: 1 },
+      { index: 2 },
+      { index: 3 },
+      { index: 4 },
+      { index: 5, important: true },
+      { index: 6 },
     ],
   },
   {
-    phase: 'Part Two',
-    title: 'Installing SSP Key Mobile App',
+    phaseIndex: 1,
     icon: Smartphone,
     color: 'green',
     steps: [
       {
-        step: 1,
-        title: 'Download Mobile App',
-        description: 'Download SSP Key on your mobile device and open the application.',
-        action: 'Install mobile app',
+        index: 0,
         links: {
           android: 'https://play.google.com/store/apps/details?id=io.runonflux.sspkey',
           ios: 'https://apps.apple.com/us/app/ssp-key/id6463717332',
         },
       },
-      {
-        step: 2,
-        title: 'Start Synchronization',
-        description: "Click on 'Synchronize Key' to begin the setup process.",
-        action: 'Begin sync',
-      },
-      {
-        step: 3,
-        title: 'Set Key Password',
-        description: "Set an SSP Key password and confirm it. Then, click 'Setup Key.'",
-        action: 'Create key password',
-      },
-      {
-        step: 4,
-        title: 'Backup Key Seed',
-        description:
-          "Click 'Show Mnemonic Key Seed Phrase.' Store the key seed phrase securely and confirm backup.",
-        action: 'Secure key backup',
-        important: true,
-      },
-      {
-        step: 5,
-        title: 'Complete Key Setup',
-        description:
-          "Click 'Setup Key.' SSP Key now serves as second authentication factor for your SSP Wallet.",
-        action: 'Finalize key',
-      },
-      {
-        step: 6,
-        title: 'Scan QR Code',
-        description:
-          "Click 'Scan Code' to synchronize your SSP Key with SSP Wallet. Scan the QR code displayed on your browser.",
-        action: 'Sync devices',
-      },
-      {
-        step: 7,
-        title: 'Approve Synchronization',
-        description:
-          "Click 'Approve Synchronization' and confirm with your Key password. You'll be notified of successful sync.",
-        action: 'Complete sync',
-      },
+      { index: 1 },
+      { index: 2 },
+      { index: 3, important: true },
+      { index: 4 },
+      { index: 5 },
+      { index: 6 },
     ],
   },
 ]
 
-const securityTips = [
-  {
-    icon: Lock,
-    title: 'Secure Your Seed Phrases',
-    description:
-      'Store both wallet and key seed phrases in a secure, offline location. Never share them with anyone.',
-  },
-  {
-    icon: Shield,
-    title: 'Use Strong Passwords',
-    description: 'Create unique, strong passwords for both your wallet and mobile key app.',
-  },
-  {
-    icon: Smartphone,
-    title: 'Keep Mobile Secure',
-    description:
-      'Ensure your mobile device has screen lock and consider using biometric authentication.',
-  },
-]
+const securityTipIcons: LucideIcon[] = [Lock, Shield, Smartphone]
 
 interface StepCardProps {
-  step: GuideStep
+  step: GuideStepShape
+  phaseIndex: 0 | 1
   phaseColor: 'blue' | 'green'
   index: number
 }
 
-function StepCard({ step, phaseColor, index }: StepCardProps) {
+function StepCard({ step, phaseIndex, phaseColor, index }: StepCardProps) {
+  const t = useTranslations('Guide')
   const [ref, inView] = useInView({
     threshold: 0.3,
     triggerOnce: true,
@@ -199,7 +98,7 @@ function StepCard({ step, phaseColor, index }: StepCardProps) {
         <div className='absolute -top-2 -right-2'>
           <div className='inline-flex items-center rounded-full bg-blue-500 px-2 py-1 text-xs font-medium text-white'>
             <AlertTriangle className='mr-1 h-3 w-3' />
-            Important
+            {t('important')}
           </div>
         </div>
       )}
@@ -208,12 +107,16 @@ function StepCard({ step, phaseColor, index }: StepCardProps) {
         <div
           className={`mr-4 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold text-white ${phaseColor === 'blue' ? 'bg-blue-500' : 'bg-green-500'} `}
         >
-          {step.step}
+          {step.index + 1}
         </div>
 
         <div className='flex-1'>
-          <h4 className='mb-2 text-lg font-semibold text-gray-900 dark:text-white'>{step.title}</h4>
-          <p className='mb-4 text-gray-600 dark:text-gray-400'>{step.description}</p>
+          <h4 className='mb-2 text-lg font-semibold text-gray-900 dark:text-white'>
+            {t(`phases.${phaseIndex}.steps.${step.index}.title`)}
+          </h4>
+          <p className='mb-4 text-gray-600 dark:text-gray-400'>
+            {t(`phases.${phaseIndex}.steps.${step.index}.description`)}
+          </p>
 
           <div className='flex items-center space-x-4'>
             <span
@@ -223,7 +126,7 @@ function StepCard({ step, phaseColor, index }: StepCardProps) {
                   : 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'
               } `}
             >
-              {step.action}
+              {t(`phases.${phaseIndex}.steps.${step.index}.action`)}
             </span>
 
             {step.link && (
@@ -232,7 +135,7 @@ function StepCard({ step, phaseColor, index }: StepCardProps) {
                 target='_blank'
                 className='text-primary-600 dark:text-primary-400 text-sm hover:underline'
               >
-                Open Link →
+                {t('openLink')}
               </Link>
             )}
 
@@ -244,7 +147,7 @@ function StepCard({ step, phaseColor, index }: StepCardProps) {
                   rel='noopener noreferrer'
                   className='text-sm text-green-600 hover:underline dark:text-green-400'
                 >
-                  Android
+                  {t('androidLabel')}
                 </a>
                 <span className='text-gray-400'>|</span>
                 <a
@@ -253,7 +156,7 @@ function StepCard({ step, phaseColor, index }: StepCardProps) {
                   rel='noopener noreferrer'
                   className='text-sm text-blue-600 hover:underline dark:text-blue-400'
                 >
-                  iOS
+                  {t('iosLabel')}
                 </a>
               </div>
             )}
@@ -265,6 +168,7 @@ function StepCard({ step, phaseColor, index }: StepCardProps) {
 }
 
 export function GuideContent() {
+  const t = useTranslations('Guide')
   const [heroRef, heroInView] = useInView({
     threshold: 0.3,
     triggerOnce: true,
@@ -285,17 +189,14 @@ export function GuideContent() {
           >
             <div className='mb-6 inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'>
               <Shield className='mr-2 h-4 w-4' />
-              Complete Setup Guide
+              {t('heroBadge')}
             </div>
 
-            <h1 className='heading-1 mb-6 text-gray-900 dark:text-white'>
-              How to Install SSP Wallet & SSP Key
-            </h1>
+            <h1 className='heading-1 mb-6 text-gray-900 dark:text-white'>{t('heroTitle')}</h1>
 
             <p className='mx-auto mb-8 max-w-3xl text-xl text-gray-600 dark:text-gray-400'>
-              SSP requires a <strong>2-step setup process</strong>: install the browser extension
-              AND the mobile app. Both devices are required for the secure 2-of-2 multisignature
-              system that protects your crypto.
+              {t('heroDescriptionPart1')} <strong>{t('heroDescriptionStrong')}</strong>
+              {t('heroDescriptionPart2')}
             </p>
 
             <div className='mx-auto grid max-w-3xl gap-4 sm:gap-6 md:grid-cols-2'>
@@ -306,10 +207,10 @@ export function GuideContent() {
                 <Chrome className='mr-3 h-6 w-6 flex-shrink-0 text-blue-500 sm:h-8 sm:w-8' />
                 <div className='min-w-0 flex-1 text-left'>
                   <h3 className='text-sm font-semibold text-gray-900 sm:text-base dark:text-white'>
-                    Browser Extension
+                    {t('browserExtensionTitle')}
                   </h3>
                   <p className='text-xs text-gray-600 sm:text-sm dark:text-gray-400'>
-                    Install wallet
+                    {t('browserExtensionSubtitle')}
                   </p>
                 </div>
               </Link>
@@ -321,9 +222,11 @@ export function GuideContent() {
                 <Smartphone className='mr-3 h-6 w-6 flex-shrink-0 text-green-500 sm:h-8 sm:w-8' />
                 <div className='min-w-0 flex-1 text-left'>
                   <h3 className='text-sm font-semibold text-gray-900 sm:text-base dark:text-white'>
-                    Mobile Key
+                    {t('mobileKeyTitle')}
                   </h3>
-                  <p className='text-xs text-gray-600 sm:text-sm dark:text-gray-400'>Mobile auth</p>
+                  <p className='text-xs text-gray-600 sm:text-sm dark:text-gray-400'>
+                    {t('mobileKeySubtitle')}
+                  </p>
                 </div>
               </Link>
             </div>
@@ -354,7 +257,7 @@ export function GuideContent() {
                   <source src='/ssp-setup-guide.webm' type='video/webm' />
                   <source src='/ssp-setup-guide.mp4' type='video/mp4' />
                   <track kind='captions' srcLang='en' label='English' />
-                  Your browser does not support the video tag.
+                  {t('videoUnsupported')}
                 </video>
               </div>
             </motion.div>
@@ -370,29 +273,26 @@ export function GuideContent() {
                   <Play className='text-primary-600 dark:text-primary-400 mr-3 h-8 w-8' />
                   <div>
                     <h3 className='text-xl font-bold text-gray-900 dark:text-white'>
-                      Video Setup Guide
+                      {t('videoTitle')}
                     </h3>
-                    <p className='text-gray-600 dark:text-gray-400'>Complete walkthrough</p>
+                    <p className='text-gray-600 dark:text-gray-400'>{t('videoSubtitle')}</p>
                   </div>
                 </div>
 
-                <p className='mb-6 text-gray-600 dark:text-gray-400'>
-                  Watch our comprehensive video tutorial that showcases how to set up both SSP
-                  Wallet and SSP Key with detailed step-by-step instructions.
-                </p>
+                <p className='mb-6 text-gray-600 dark:text-gray-400'>{t('videoDescription')}</p>
 
                 <div className='space-y-3'>
                   <div className='flex items-center text-sm text-gray-600 dark:text-gray-400'>
                     <CheckCircle className='mr-2 h-4 w-4 flex-shrink-0 text-green-500' />
-                    Browser extension installation
+                    {t('videoBullet1')}
                   </div>
                   <div className='flex items-center text-sm text-gray-600 dark:text-gray-400'>
                     <CheckCircle className='mr-2 h-4 w-4 flex-shrink-0 text-green-500' />
-                    Mobile app setup and sync
+                    {t('videoBullet2')}
                   </div>
                   <div className='flex items-center text-sm text-gray-600 dark:text-gray-400'>
                     <CheckCircle className='mr-2 h-4 w-4 flex-shrink-0 text-green-500' />
-                    Security best practices
+                    {t('videoBullet3')}
                   </div>
                 </div>
               </div>
@@ -411,17 +311,17 @@ export function GuideContent() {
             viewport={{ once: true }}
             className='mb-16 text-center'
           >
-            <h2 className='heading-2 mb-4'>Step-by-Step Instructions</h2>
+            <h2 className='heading-2 mb-4'>{t('stepsTitle')}</h2>
             <p className='mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-400'>
-              Follow these detailed instructions to set up your secure crypto wallet
+              {t('stepsSubtitle')}
             </p>
           </motion.div>
 
           <div className='space-y-16'>
-            {steps.map((phase, phaseIndex) => {
+            {phases.map((phase, phaseIdx) => {
               const PhaseIcon = phase.icon
               return (
-                <div key={phase.phase} className='relative'>
+                <div key={phase.phaseIndex} className='relative'>
                   {/* Phase Header */}
                   <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -443,10 +343,10 @@ export function GuideContent() {
                       <div
                         className={`text-sm font-semibold tracking-wider uppercase ${phase.color === 'blue' ? 'text-blue-600 dark:text-blue-400' : 'text-green-600 dark:text-green-400'} `}
                       >
-                        {phase.phase}
+                        {t(`phases.${phase.phaseIndex}.phase`)}
                       </div>
                       <h3 className='text-2xl font-bold text-gray-900 dark:text-white'>
-                        {phase.title}
+                        {t(`phases.${phase.phaseIndex}.title`)}
                       </h3>
                     </div>
                   </motion.div>
@@ -455,8 +355,9 @@ export function GuideContent() {
                   <div className='grid gap-6'>
                     {phase.steps.map((step, stepIndex) => (
                       <StepCard
-                        key={`${phaseIndex}-${stepIndex}`}
+                        key={`${phase.phaseIndex}-${stepIndex}`}
                         step={step}
+                        phaseIndex={phase.phaseIndex}
                         phaseColor={phase.color}
                         index={stepIndex}
                       />
@@ -464,7 +365,7 @@ export function GuideContent() {
                   </div>
 
                   {/* Divider */}
-                  {phaseIndex < steps.length - 1 && (
+                  {phaseIdx < phases.length - 1 && (
                     <div className='mt-16 flex items-center justify-center'>
                       <div className='h-px flex-1 bg-gray-300 dark:bg-gray-600'></div>
                       <div className='dark:bg-dark-800 mx-4 rounded-full border-2 border-gray-300 bg-white p-3 dark:border-gray-600'>
@@ -490,34 +391,31 @@ export function GuideContent() {
             viewport={{ once: true }}
             className='mb-12 text-center'
           >
-            <h2 className='heading-2 mb-4'>Security Best Practices</h2>
+            <h2 className='heading-2 mb-4'>{t('tipsTitle')}</h2>
             <p className='mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-400'>
-              Follow these important security tips to keep your wallet safe
+              {t('tipsSubtitle')}
             </p>
           </motion.div>
 
           <div className='grid gap-8 md:grid-cols-3'>
-            {securityTips.map((tip, index) => {
-              const TipIcon = tip.icon
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className='dark:bg-dark-800 rounded-2xl border border-gray-200 bg-white p-8 text-center transition-shadow hover:shadow-lg dark:border-gray-700'
-                >
-                  <div className='bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400 mb-4 inline-flex h-16 w-16 items-center justify-center rounded-2xl'>
-                    <TipIcon className='h-8 w-8' />
-                  </div>
-                  <h3 className='mb-2 text-xl font-bold text-gray-900 dark:text-white'>
-                    {tip.title}
-                  </h3>
-                  <p className='text-gray-600 dark:text-gray-400'>{tip.description}</p>
-                </motion.div>
-              )
-            })}
+            {securityTipIcons.map((TipIcon, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='dark:bg-dark-800 rounded-2xl border border-gray-200 bg-white p-8 text-center transition-shadow hover:shadow-lg dark:border-gray-700'
+              >
+                <div className='bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400 mb-4 inline-flex h-16 w-16 items-center justify-center rounded-2xl'>
+                  <TipIcon className='h-8 w-8' />
+                </div>
+                <h3 className='mb-2 text-xl font-bold text-gray-900 dark:text-white'>
+                  {t(`tips.${index}.title`)}
+                </h3>
+                <p className='text-gray-600 dark:text-gray-400'>{t(`tips.${index}.description`)}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -532,10 +430,9 @@ export function GuideContent() {
             viewport={{ once: true }}
           >
             <CheckCircle className='mx-auto mb-6 h-16 w-16 text-white' />
-            <h2 className='mb-4 text-3xl font-bold text-white'>Congratulations!</h2>
+            <h2 className='mb-4 text-3xl font-bold text-white'>{t('successTitle')}</h2>
             <p className='mx-auto mb-8 max-w-2xl text-xl text-green-100'>
-              By following these steps, you have successfully installed and set up both SSP Wallet
-              and SSP Key, ensuring a secure and seamless user experience.
+              {t('successDescription')}
             </p>
             <div className='flex flex-col justify-center gap-4 sm:flex-row'>
               <Link
@@ -543,13 +440,13 @@ export function GuideContent() {
                 className='inline-flex items-center rounded-lg bg-white px-8 py-4 font-semibold text-green-600 transition-colors hover:bg-gray-50'
               >
                 <Download className='mr-2 h-5 w-5' />
-                Download Now
+                {t('successDownload')}
               </Link>
               <Link
                 href='/support'
                 className='inline-flex items-center rounded-lg border-2 border-white px-8 py-4 font-semibold text-white transition-colors hover:bg-white/10'
               >
-                Get Support
+                {t('successSupport')}
                 <ArrowRight className='ml-2 h-5 w-5' />
               </Link>
             </div>

@@ -2,168 +2,73 @@
 
 import { motion } from 'framer-motion'
 import { ArrowRight, Check, X } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 
-type CellValue = boolean | string
+type CellToken = boolean | 'limited' | 'some' | 'varies' | 'rare' | 'na'
 
 interface ComparisonRow {
-  feature: string
-  ssp: CellValue
-  selfCustody: CellValue
-  custodial: CellValue
-  hardware: CellValue
-  exchange: CellValue
-  description: string
+  ssp: CellToken
+  selfCustody: CellToken
+  custodial: CellToken
+  hardware: CellToken
+  exchange: CellToken
 }
 
-const comparisonData: ComparisonRow[] = [
+const comparisonRows: ComparisonRow[] = [
+  // 0: True 2-of-2 Multisig
+  { ssp: true, selfCustody: false, custodial: false, hardware: false, exchange: false },
+  // 1: Built-in Crypto Swap
+  { ssp: true, selfCustody: true, custodial: true, hardware: 'limited', exchange: true },
+  // 2: Buy/Sell Crypto
+  { ssp: true, selfCustody: true, custodial: true, hardware: 'limited', exchange: true },
+  // 3: Self-Custody Control
+  { ssp: true, selfCustody: true, custodial: false, hardware: true, exchange: false },
+  // 4: Mobile 2FA Security
+  { ssp: true, selfCustody: false, custodial: false, hardware: false, exchange: 'some' },
+  // 5: DApp Integration
+  { ssp: true, selfCustody: true, custodial: 'limited', hardware: 'limited', exchange: false },
+  // 6: Multi-Chain Support
   {
-    feature: 'True 2-of-2 Multisig',
     ssp: true,
-    selfCustody: false,
-    custodial: false,
-    hardware: false,
-    exchange: false,
-    description: 'BIP48 true multisignature with dual-device requirement',
+    selfCustody: 'limited',
+    custodial: 'limited',
+    hardware: 'limited',
+    exchange: 'limited',
   },
-  {
-    feature: 'Built-in Crypto Swap',
-    ssp: true,
-    selfCustody: true,
-    custodial: true,
-    hardware: 'Limited',
-    exchange: true,
-    description: 'Native DEX integration for seamless token swapping',
-  },
-  {
-    feature: 'Buy/Sell Crypto',
-    ssp: true,
-    selfCustody: true,
-    custodial: true,
-    hardware: 'Limited',
-    exchange: true,
-    description: 'Fiat on-ramp/off-ramp with payment card support',
-  },
-  {
-    feature: 'Self-Custody Control',
-    ssp: true,
-    selfCustody: true,
-    custodial: false,
-    hardware: true,
-    exchange: false,
-    description: 'You own and control your private keys',
-  },
-  {
-    feature: 'Mobile 2FA Security',
-    ssp: true,
-    selfCustody: false,
-    custodial: false,
-    hardware: false,
-    exchange: 'Some',
-    description: 'Mobile app acts as secure second authentication factor',
-  },
-  {
-    feature: 'DApp Integration',
-    ssp: true,
-    selfCustody: true,
-    custodial: 'Limited',
-    hardware: 'Limited',
-    exchange: false,
-    description: 'WalletConnect v2 and direct dApp browser support',
-  },
-  {
-    feature: 'Multi-Chain Support (15+)',
-    ssp: true,
-    selfCustody: 'Limited',
-    custodial: 'Limited',
-    hardware: 'Limited',
-    exchange: 'Limited',
-    description: 'Bitcoin, Ethereum, Polygon, BSC, Avalanche, and more',
-  },
-  {
-    feature: 'Zero Counterparty Risk',
-    ssp: true,
-    selfCustody: true,
-    custodial: false,
-    hardware: true,
-    exchange: false,
-    description: 'No risk of platform bankruptcy or seizure',
-  },
-  {
-    feature: 'Open Source',
-    ssp: true,
-    selfCustody: 'Varies',
-    custodial: false,
-    hardware: 'Varies',
-    exchange: false,
-    description: 'Fully transparent and verifiable code',
-  },
-  {
-    feature: 'Security Audited',
-    ssp: true,
-    selfCustody: 'Rare',
-    custodial: 'Some',
-    hardware: 'Some',
-    exchange: 'Some',
-    description: 'Professional security audit by leading firms',
-  },
-  {
-    feature: 'Account Abstraction (ERC-4337)',
-    ssp: true,
-    selfCustody: false,
-    custodial: false,
-    hardware: false,
-    exchange: false,
-    description: 'Gasless transactions and smart contract wallets',
-  },
-  {
-    feature: 'No Single Seed Phrase',
-    ssp: true,
-    selfCustody: false,
-    custodial: 'N/A',
-    hardware: false,
-    exchange: 'N/A',
-    description: 'Eliminates single seed phrase vulnerability - uses dual-device backup',
-  },
-  {
-    feature: 'Ease of Use',
-    ssp: true,
-    selfCustody: 'Varies',
-    custodial: true,
-    hardware: false,
-    exchange: true,
-    description: 'Simple, intuitive interface for both beginners and experts',
-  },
-  {
-    feature: 'Transaction Speed',
-    ssp: true,
-    selfCustody: true,
-    custodial: true,
-    hardware: false,
-    exchange: true,
-    description: 'Fast transaction signing and blockchain interaction',
-  },
-  {
-    feature: 'Privacy Protection',
-    ssp: true,
-    selfCustody: true,
-    custodial: false,
-    hardware: true,
-    exchange: false,
-    description: 'No personal data collection or transaction tracking',
-  },
+  // 7: Zero Counterparty Risk
+  { ssp: true, selfCustody: true, custodial: false, hardware: true, exchange: false },
+  // 8: Open Source
+  { ssp: true, selfCustody: 'varies', custodial: false, hardware: 'varies', exchange: false },
+  // 9: Security Audited
+  { ssp: true, selfCustody: 'rare', custodial: 'some', hardware: 'some', exchange: 'some' },
+  // 10: Account Abstraction
+  { ssp: true, selfCustody: false, custodial: false, hardware: false, exchange: false },
+  // 11: No Single Seed Phrase
+  { ssp: true, selfCustody: false, custodial: 'na', hardware: false, exchange: 'na' },
+  // 12: Ease of Use
+  { ssp: true, selfCustody: 'varies', custodial: true, hardware: false, exchange: true },
+  // 13: Transaction Speed
+  { ssp: true, selfCustody: true, custodial: true, hardware: false, exchange: true },
+  // 14: Privacy Protection
+  { ssp: true, selfCustody: true, custodial: false, hardware: true, exchange: false },
 ]
 
 export function ComparisonSection() {
+  const t = useTranslations('Features.comparison')
+  const valueLabel = (value: CellToken): string =>
+    typeof value === 'boolean' ? '' : t(`values.${value}`)
+
   return (
     <section className='section-padding dark:bg-dark-900 bg-white'>
       <div className='container-custom'>
         <div className='mb-16 text-center'>
           <h2 className='mb-6 text-4xl font-bold md:text-5xl'>
-            Why Choose <span className='gradient-text'>SSP Wallet</span>?
+            {t('titlePrefix')} <span className='gradient-text'>{t('titleHighlight')}</span>
+            {t('titleSuffix')}
           </h2>
           <p className='mx-auto max-w-3xl text-xl text-gray-600 dark:text-gray-300'>
-            Compare SSP Wallet to other crypto storage methods and see the difference.
+            {t('description')}
           </p>
         </div>
 
@@ -180,34 +85,34 @@ export function ComparisonSection() {
                 <thead className='dark:bg-dark-700 bg-gray-50'>
                   <tr>
                     <th className='px-6 py-4 text-left text-sm font-semibold text-gray-900 dark:text-white'>
-                      Feature
+                      {t('columns.feature')}
                     </th>
                     <th className='text-primary-600 dark:text-primary-400 px-6 py-4 text-center text-sm font-semibold'>
-                      SSP Wallet
+                      {t('columns.ssp')}
                     </th>
                     <th className='px-6 py-4 text-center text-sm font-semibold text-gray-900 dark:text-white'>
-                      Self-Custody Wallets
+                      {t('columns.selfCustody')}
                     </th>
                     <th className='px-6 py-4 text-center text-sm font-semibold text-gray-900 dark:text-white'>
-                      Custodial Wallets
+                      {t('columns.custodial')}
                     </th>
                     <th className='px-6 py-4 text-center text-sm font-semibold text-gray-900 dark:text-white'>
-                      Hardware Wallets
+                      {t('columns.hardware')}
                     </th>
                     <th className='px-6 py-4 text-center text-sm font-semibold text-gray-900 dark:text-white'>
-                      Crypto Exchanges
+                      {t('columns.exchange')}
                     </th>
                   </tr>
                 </thead>
                 <tbody className='dark:divide-dark-600 divide-y divide-gray-200'>
-                  {comparisonData.map((row, index) => {
-                    const renderCell = (value: CellValue) => {
+                  {comparisonRows.map((row, index) => {
+                    const renderCell = (value: CellToken) => {
                       if (value === true)
                         return <Check className='mx-auto h-5 w-5 text-green-500' />
                       if (value === false) return <X className='mx-auto h-5 w-5 text-red-500' />
                       return (
                         <span className='text-xs font-medium text-amber-600 dark:text-amber-400'>
-                          {value}
+                          {valueLabel(value)}
                         </span>
                       )
                     }
@@ -221,7 +126,7 @@ export function ComparisonSection() {
                         className='dark:hover:bg-dark-700/50 hover:bg-gray-50'
                       >
                         <td className='px-6 py-4 text-sm font-medium text-gray-900 dark:text-white'>
-                          {row.feature}
+                          {t(`rows.${index}.feature`)}
                         </td>
                         <td className='px-6 py-4 text-center'>{renderCell(row.ssp)}</td>
                         <td className='px-6 py-4 text-center'>{renderCell(row.selfCustody)}</td>
@@ -239,8 +144,8 @@ export function ComparisonSection() {
 
         {/* Mobile Cards */}
         <div className='space-y-6 lg:hidden'>
-          {comparisonData.map((row, index) => {
-            const renderMobileCell = (value: CellValue, label: string) => {
+          {comparisonRows.map((row, index) => {
+            const renderMobileCell = (value: CellToken, label: string) => {
               if (value === true)
                 return (
                   <div className='flex items-center'>
@@ -258,7 +163,7 @@ export function ComparisonSection() {
               return (
                 <div className='flex items-center'>
                   <span className='mr-2 text-xs font-medium text-amber-600 dark:text-amber-400'>
-                    {value}
+                    {valueLabel(value)}
                   </span>
                   <span className='text-sm'>{label}</span>
                 </div>
@@ -274,15 +179,17 @@ export function ComparisonSection() {
                 className='dark:bg-dark-800 rounded-xl bg-white p-6 shadow-lg'
               >
                 <h3 className='mb-2 text-lg font-semibold text-gray-900 dark:text-white'>
-                  {row.feature}
+                  {t(`rows.${index}.feature`)}
                 </h3>
-                <p className='mb-4 text-sm text-gray-600 dark:text-gray-300'>{row.description}</p>
+                <p className='mb-4 text-sm text-gray-600 dark:text-gray-300'>
+                  {t(`rows.${index}.description`)}
+                </p>
                 <div className='space-y-3'>
-                  {renderMobileCell(row.ssp, 'SSP Wallet')}
-                  {renderMobileCell(row.selfCustody, 'Self-Custody Wallets')}
-                  {renderMobileCell(row.custodial, 'Custodial Wallets')}
-                  {renderMobileCell(row.hardware, 'Hardware Wallets')}
-                  {renderMobileCell(row.exchange, 'Crypto Exchanges')}
+                  {renderMobileCell(row.ssp, t('columns.ssp'))}
+                  {renderMobileCell(row.selfCustody, t('columns.selfCustody'))}
+                  {renderMobileCell(row.custodial, t('columns.custodial'))}
+                  {renderMobileCell(row.hardware, t('columns.hardware'))}
+                  {renderMobileCell(row.exchange, t('columns.exchange'))}
                 </div>
               </motion.div>
             )
@@ -298,14 +205,14 @@ export function ComparisonSection() {
           className='mt-16 flex flex-col items-center justify-center gap-4 sm:flex-row'
         >
           <Link href='/download' className='btn btn-primary'>
-            Download SSP Wallet
+            {t('ctaDownload')}
             <ArrowRight className='ml-2 h-4 w-4' />
           </Link>
           <Link href='/guide' className='btn btn-secondary'>
-            Read the Setup Guide
+            {t('ctaGuide')}
           </Link>
           <Link href='/enterprise' className='btn btn-secondary'>
-            SSP for Business
+            {t('ctaEnterprise')}
           </Link>
         </motion.div>
       </div>

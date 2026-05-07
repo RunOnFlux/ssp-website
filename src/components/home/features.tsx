@@ -15,6 +15,7 @@ import {
 } from 'lucide-react'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 
@@ -32,58 +33,22 @@ const InteractiveDemo = dynamic(
   }
 )
 
-const features = [
-  {
-    icon: Shield,
-    title: 'Secure 2-of-2 Multisignature',
-    description:
-      'Advanced BIP48 derivation with true two-factor authentication requiring both browser extension and mobile device signatures for every transaction. Maximum security through dual-device protection.',
-    image: '/security.svg',
-    color: 'from-red-500 to-pink-500',
-  },
-  {
-    icon: Zap,
-    title: 'Simple Yet Advanced',
-    description:
-      'Complex multi-asset multisignature technology made simple. Advanced BIP48 security and Account Abstraction delivered through an intuitive interface anyone can use.',
-    image: '/simplicity.svg',
-    color: 'from-blue-500 to-cyan-500',
-  },
-  {
-    icon: Users,
-    title: 'Powerful dApp Interaction',
-    description:
-      'Connect to thousands of dApps with WalletConnect v2 (Reown) support, EIP-712 message signing, and real-time communication across all EVM chains and DeFi protocols.',
-    image: '/powerful.svg',
-    color: 'from-green-500 to-emerald-500',
-  },
-  {
-    icon: Globe,
-    title: 'Multi-Chain Support',
-    description:
-      'Support for 15+ blockchains including Bitcoin, Ethereum, Polygon, BSC, Avalanche, Base, and more. First wallet with native Schnorr multisignature Account Abstraction (ERC-4337) on Ethereum, enabling smart contract wallets without EOAs.',
-    image: '/browsers.svg',
-    color: 'from-purple-500 to-violet-500',
-  },
-  {
-    icon: Lock,
-    title: 'Zero Data Storage',
-    description:
-      'Complete self-custody with zero server-side data storage. Private keys, seeds, and transactions remain exclusively on your devices using military-grade AES-GCM encryption and device fingerprinting for maximum security and privacy.',
-    image: '/icons.svg',
-    color: 'from-indigo-500 to-blue-500',
-  },
-  {
-    icon: ArrowRight,
-    title: 'Buy, Sell & Swap',
-    description:
-      'Buy cryptocurrencies directly with credit cards or bank transfers, sell crypto back to fiat currency, and swap between different cryptocurrencies seamlessly within the wallet. Powered by an aggregated engine of multiple providers for the best rates and options.',
-    image: '/card1-img.svg',
-    color: 'from-emerald-500 to-teal-500',
-  },
+const featureMeta = [
+  { icon: Shield, image: '/security.svg', color: 'from-red-500 to-pink-500' },
+  { icon: Zap, image: '/simplicity.svg', color: 'from-blue-500 to-cyan-500' },
+  { icon: Users, image: '/powerful.svg', color: 'from-green-500 to-emerald-500' },
+  { icon: Globe, image: '/browsers.svg', color: 'from-purple-500 to-violet-500' },
+  { icon: Lock, image: '/icons.svg', color: 'from-indigo-500 to-blue-500' },
+  { icon: ArrowRight, image: '/card1-img.svg', color: 'from-emerald-500 to-teal-500' },
 ]
 
 export function Features() {
+  const t = useTranslations('Home.features')
+  const features = featureMeta.map((meta, index) => ({
+    ...meta,
+    title: t(`items.${index}.title`),
+    description: t(`items.${index}.description`),
+  }))
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true,
@@ -125,11 +90,11 @@ export function Features() {
           <div className='mb-16 text-center'>
             <motion.div variants={cardVariants}>
               <h2 className='mb-6 text-4xl font-bold md:text-5xl'>
-                Why Choose <span className='gradient-text'>SSP Wallet</span>?
+                {t('titlePart1')} <span className='gradient-text'>{t('titleHighlight')}</span>
+                {t('titleSuffix')}
               </h2>
               <p className='mx-auto max-w-3xl text-xl text-gray-600 dark:text-gray-300'>
-                Experience the perfect blend of security, simplicity, and power in one comprehensive
-                crypto wallet solution.
+                {t('description')}
               </p>
             </motion.div>
           </div>
@@ -195,44 +160,25 @@ export function Features() {
           >
             <div>
               <h3 className='mb-6 text-3xl font-bold md:text-4xl'>
-                Built for the <span className='gradient-text'>Future of Finance</span>
+                {t('futureTitlePart1')}{' '}
+                <span className='gradient-text'>{t('futureTitleHighlight')}</span>
               </h3>
               <div className='space-y-6'>
-                <div className='flex items-start space-x-4'>
-                  <div className='bg-primary-500 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full'>
-                    <span className='text-sm font-bold text-white'>1</span>
+                {[0, 1, 2].map(index => (
+                  <div key={index} className='flex items-start space-x-4'>
+                    <div className='bg-primary-500 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full'>
+                      <span className='text-sm font-bold text-white'>{index + 1}</span>
+                    </div>
+                    <div>
+                      <h4 className='mb-2 text-lg font-semibold'>
+                        {t(`highlights.${index}.title`)}
+                      </h4>
+                      <p className='text-gray-600 dark:text-gray-300'>
+                        {t(`highlights.${index}.description`)}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className='mb-2 text-lg font-semibold'>Advanced Security</h4>
-                    <p className='text-gray-600 dark:text-gray-300'>
-                      Military-grade encryption and multi-signature technology protect your assets
-                    </p>
-                  </div>
-                </div>
-
-                <div className='flex items-start space-x-4'>
-                  <div className='bg-primary-500 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full'>
-                    <span className='text-sm font-bold text-white'>2</span>
-                  </div>
-                  <div>
-                    <h4 className='mb-2 text-lg font-semibold'>Seamless Experience</h4>
-                    <p className='text-gray-600 dark:text-gray-300'>
-                      Intuitive interface makes crypto accessible to everyone
-                    </p>
-                  </div>
-                </div>
-
-                <div className='flex items-start space-x-4'>
-                  <div className='bg-primary-500 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full'>
-                    <span className='text-sm font-bold text-white'>3</span>
-                  </div>
-                  <div>
-                    <h4 className='mb-2 text-lg font-semibold'>Open Source</h4>
-                    <p className='text-gray-600 dark:text-gray-300'>
-                      Transparent, audited code that you can trust and verify
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
 
@@ -264,11 +210,9 @@ export function Features() {
                     </div>
 
                     <h4 className='mb-3 text-xl font-semibold text-gray-900 dark:text-white'>
-                      Try SSP Wallet Interactive Demo
+                      {t('demoTitle')}
                     </h4>
-                    <p className='mb-6 text-gray-600 dark:text-gray-300'>
-                      Experience the complete setup and transaction flow
-                    </p>
+                    <p className='mb-6 text-gray-600 dark:text-gray-300'>{t('demoDescription')}</p>
 
                     <motion.button
                       whileHover={{ scale: 1.05 }}
@@ -277,12 +221,12 @@ export function Features() {
                       className='btn btn-primary group cursor-pointer px-6 py-3'
                     >
                       <Play className='mr-2 h-4 w-4' />
-                      Launch Interactive Demo
+                      {t('launchDemo')}
                       <ArrowRight className='ml-2 h-4 w-4 transition-transform group-hover:translate-x-1' />
                     </motion.button>
 
                     <p className='mt-3 text-sm text-gray-500 dark:text-gray-400'>
-                      No installation required • 3-minute experience
+                      {t('demoFooter')}
                     </p>
                   </div>
                 </div>

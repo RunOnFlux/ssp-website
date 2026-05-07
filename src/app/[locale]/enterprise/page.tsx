@@ -1,24 +1,35 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
-import { setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { createBreadcrumbJsonLd, createMetadata } from '@/lib/seo'
 import { EnterpriseContent } from './enterprise-content'
 
-export const metadata: Metadata = createMetadata({
-  title: 'SSP Enterprise | Self-Custody Multisig for Business',
-  description:
-    'Self-custody M-of-N multisig vaults for business treasuries. Policy engine, spending limits, two-device signing, role-based access. No custodians, no MPC.',
-  path: '/enterprise',
-})
-
-const breadcrumbJsonLd = createBreadcrumbJsonLd([
-  { name: 'Home', url: '/' },
-  { name: 'Enterprise', url: '/enterprise' },
-])
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'Enterprise' })
+  return createMetadata({
+    title: t('metaTitle'),
+    description: t('metaDescription'),
+    path: '/enterprise',
+  })
+}
 
 export default async function EnterprisePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   setRequestLocale(locale)
+  const [t, tCommon] = await Promise.all([
+    getTranslations({ locale, namespace: 'Enterprise' }),
+    getTranslations({ locale, namespace: 'Common' }),
+  ])
+
+  const breadcrumbJsonLd = createBreadcrumbJsonLd([
+    { name: tCommon('breadcrumbHome'), url: '/' },
+    { name: t('breadcrumbLabel'), url: '/enterprise' },
+  ])
 
   return (
     <>

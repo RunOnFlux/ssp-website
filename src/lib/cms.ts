@@ -1,6 +1,6 @@
 import { LRUCache } from 'lru-cache'
 import type { AcademyCategory } from '@/constants/academy-categories'
-import { ACADEMY_CATEGORIES } from '@/constants/academy-categories'
+import { ACADEMY_CATEGORY_SLUGS } from '@/constants/academy-categories'
 import type {
   NewsroomPost,
   CategoryWithCount,
@@ -140,10 +140,10 @@ export async function getCategories(): Promise<CategoryWithCount[]> {
     async () => cmsFetch<CategoryWithCount[]>('/api/v1/categories'),
     async () => {
       const academyPosts = (await loadAllSeedPosts()).filter(p => p.section === 'academy')
-      return Object.entries(ACADEMY_CATEGORIES).map(([slug, meta]) => ({
+      return ACADEMY_CATEGORY_SLUGS.map(slug => ({
         slug,
-        title: meta.title,
-        description: meta.description,
+        title: '',
+        description: '',
         postCount: academyPosts.filter(p => p.category === slug).length,
       }))
     }

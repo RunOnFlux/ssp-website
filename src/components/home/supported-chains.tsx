@@ -3,6 +3,7 @@
 import { motion, type Variants } from 'framer-motion'
 import { ExternalLink, Plus } from 'lucide-react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { useInView } from 'react-intersection-observer'
 import { SUPPORTED_CHAINS } from '@/constants/supported-chains'
 import { Link } from '@/i18n/navigation'
@@ -10,86 +11,42 @@ import { Link } from '@/i18n/navigation'
 interface ChainVisual {
   logo: string
   color: string
-  description: string
 }
 
 // Visual metadata keyed by chain symbol. Mirrors the legacy embedded list.
 const CHAIN_VISUALS: Record<string, ChainVisual> = {
-  BTC: {
-    logo: '/chains/btc.svg',
-    color: 'from-orange-400 to-orange-600',
-    description: 'The original cryptocurrency',
-  },
-  ETH: {
-    logo: '/chains/eth.svg',
-    color: 'from-blue-400 to-blue-600',
-    description: 'Smart contract platform',
-  },
-  LTC: {
-    logo: '/chains/ltc.svg',
-    color: 'from-gray-400 to-gray-600',
-    description: 'Digital silver',
-  },
-  ZEC: {
-    logo: '/chains/zec.svg',
-    color: 'from-yellow-400 to-yellow-600',
-    description: 'Privacy-focused',
-  },
-  RVN: {
-    logo: '/chains/rvn.svg',
-    color: 'from-blue-400 to-indigo-600',
-    description: 'Asset transfer blockchain',
-  },
-  DOGE: {
-    logo: '/chains/doge.svg',
-    color: 'from-yellow-400 to-orange-500',
-    description: "The people's crypto",
-  },
-  BCH: {
-    logo: '/chains/bch.svg',
-    color: 'from-green-400 to-green-600',
-    description: 'Peer-to-peer electronic cash',
-  },
-  FLUX: {
-    logo: '/chains/flux.svg',
-    color: 'from-purple-400 to-purple-600',
-    description: 'Decentralized computing',
-  },
-  MATIC: {
-    logo: '/chains/matic.svg',
-    color: 'from-purple-500 to-indigo-600',
-    description: 'Ethereum scaling',
-  },
-  BSC: {
-    logo: '/chains/bnb.svg',
-    color: 'from-yellow-400 to-yellow-600',
-    description: 'Fast, low-cost transactions',
-  },
-  AVAX: {
-    logo: '/chains/avax.svg',
-    color: 'from-red-400 to-red-600',
-    description: 'High-performance blockchain',
-  },
-  BASE: {
-    logo: '/chains/base.svg',
-    color: 'from-blue-500 to-blue-700',
-    description: 'Coinbase L2 solution',
-  },
+  BTC: { logo: '/chains/btc.svg', color: 'from-orange-400 to-orange-600' },
+  ETH: { logo: '/chains/eth.svg', color: 'from-blue-400 to-blue-600' },
+  LTC: { logo: '/chains/ltc.svg', color: 'from-gray-400 to-gray-600' },
+  ZEC: { logo: '/chains/zec.svg', color: 'from-yellow-400 to-yellow-600' },
+  RVN: { logo: '/chains/rvn.svg', color: 'from-blue-400 to-indigo-600' },
+  DOGE: { logo: '/chains/doge.svg', color: 'from-yellow-400 to-orange-500' },
+  BCH: { logo: '/chains/bch.svg', color: 'from-green-400 to-green-600' },
+  FLUX: { logo: '/chains/flux.svg', color: 'from-purple-400 to-purple-600' },
+  MATIC: { logo: '/chains/matic.svg', color: 'from-purple-500 to-indigo-600' },
+  BSC: { logo: '/chains/bnb.svg', color: 'from-yellow-400 to-yellow-600' },
+  AVAX: { logo: '/chains/avax.svg', color: 'from-red-400 to-red-600' },
+  BASE: { logo: '/chains/base.svg', color: 'from-blue-500 to-blue-700' },
 }
 
 const FALLBACK_VISUAL: ChainVisual = {
   logo: '/chains/btc.svg',
   color: 'from-gray-400 to-gray-600',
-  description: '',
 }
 
-const supportedChains = SUPPORTED_CHAINS.map(chain => ({
-  symbol: chain.symbol,
-  name: chain.name,
-  ...(CHAIN_VISUALS[chain.symbol] ?? FALLBACK_VISUAL),
-}))
-
 export function SupportedChains() {
+  const t = useTranslations('Home.supportedChains')
+  const tDescriptions = useTranslations('Home.supportedChains.chainDescriptions')
+  const supportedChains = SUPPORTED_CHAINS.map(chain => {
+    const visual = CHAIN_VISUALS[chain.symbol] ?? FALLBACK_VISUAL
+    const description = tDescriptions.has(chain.symbol) ? tDescriptions(chain.symbol) : ''
+    return {
+      symbol: chain.symbol,
+      name: chain.name,
+      ...visual,
+      description,
+    }
+  })
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true,
@@ -142,16 +99,14 @@ export function SupportedChains() {
           <motion.div variants={headerVariants} className='mb-16 text-center'>
             <div className='mb-6 inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800 dark:bg-blue-900/30 dark:text-blue-200'>
               <Plus className='mr-2 h-4 w-4' />
-              Multi-Chain Support
+              {t('badge')}
             </div>
 
             <h2 className='mb-6 text-4xl font-bold md:text-5xl'>
-              <span className='gradient-text'>15+ Blockchains</span> in One Wallet
+              <span className='gradient-text'>{t('titleHighlight')}</span> {t('titleSuffix')}
             </h2>
             <p className='mx-auto max-w-3xl text-xl text-gray-600 dark:text-gray-300'>
-              Manage all your crypto assets from Bitcoin to Ethereum and beyond. SSP Wallet provides
-              unified access to multiple blockchain networks with WalletConnect v2 support for dApps
-              and offline QR code transaction capabilities.
+              {t('description')}
             </p>
           </motion.div>
 
@@ -178,7 +133,7 @@ export function SupportedChains() {
                     <div className='dark:bg-dark-700 relative flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-white shadow-lg'>
                       <Image
                         src={chain.logo}
-                        alt={`${chain.name} logo`}
+                        alt={t('chainLogoAlt', { name: chain.name })}
                         width={36}
                         height={36}
                         className='h-9 w-9 object-contain'
@@ -215,32 +170,32 @@ export function SupportedChains() {
               {/* Left Content */}
               <div>
                 <h3 className='mb-6 text-3xl font-bold'>
-                  More Features <span className='gradient-text'>Coming Soon</span>
+                  {t('moreFeaturesTitle')}{' '}
+                  <span className='gradient-text'>{t('moreFeaturesHighlight')}</span>
                 </h3>
 
                 <p className='mb-6 leading-relaxed text-gray-600 dark:text-gray-300'>
-                  We&apos;re constantly expanding SSP Wallet with new blockchain networks and
-                  advanced security features based on community demand and technological
-                  advancement.
+                  {t('moreFeaturesDescription')}
                 </p>
 
                 <div className='mb-8 space-y-4'>
                   <div className='flex items-center space-x-3'>
                     <div className='h-2 w-2 rounded-full bg-green-500'></div>
                     <span className='text-sm'>
-                      <strong>WalletConnect v2 (Reown)</strong> - Connect to thousands of dApps
+                      <strong>{t('walletConnectStrong')}</strong> - {t('walletConnectAfter')}
                     </span>
                   </div>
                   <div className='flex items-center space-x-3'>
                     <div className='h-2 w-2 rounded-full bg-green-500'></div>
                     <span className='text-sm'>
-                      <strong>Account Abstraction (ERC-4337)</strong> - Smart contract wallets
+                      <strong>{t('accountAbstractionStrong')}</strong> -{' '}
+                      {t('accountAbstractionAfter')}
                     </span>
                   </div>
                   <div className='flex items-center space-x-3'>
                     <div className='h-2 w-2 rounded-full bg-orange-500'></div>
                     <span className='text-sm'>
-                      <strong>Solana Support</strong> - Coming soon with multisig
+                      <strong>{t('solanaStrong')}</strong> - {t('solanaAfter')}
                     </span>
                   </div>
                 </div>
@@ -251,7 +206,7 @@ export function SupportedChains() {
                   rel='noopener noreferrer'
                   className='text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 inline-flex items-center font-medium transition-colors duration-200'
                 >
-                  View Full Asset List
+                  {t('viewFullList')}
                   <ExternalLink className='ml-2 h-4 w-4' />
                 </Link>
               </div>
@@ -276,7 +231,7 @@ export function SupportedChains() {
                     >
                       <Image
                         src={chain.logo}
-                        alt={`${chain.name} logo`}
+                        alt={t('chainLogoAlt', { name: chain.name })}
                         width={40}
                         height={40}
                         className='h-10 w-10 object-contain'

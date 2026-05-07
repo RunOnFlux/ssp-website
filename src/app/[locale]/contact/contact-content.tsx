@@ -13,80 +13,69 @@ import {
   Send,
   Twitter,
 } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 import type { ComponentType, SVGProps } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { Link } from '@/i18n/navigation'
 
 interface ContactMethod {
-  title: string
-  description: string
-  icon: ComponentType<SVGProps<SVGSVGElement>>
+  key: 'supportTickets' | 'discord' | 'github'
   contact: string
-  responseTime: string
-  action: string
+  icon: ComponentType<SVGProps<SVGSVGElement>>
   href: string
   primary: boolean
 }
 
 const contactMethods: ContactMethod[] = [
   {
-    title: 'Support Tickets',
-    description: 'Get direct help with technical issues through our ticketing system',
+    key: 'supportTickets',
     icon: Mail,
     contact: 'support.runonflux.io',
-    responseTime: 'Within 24 hours',
-    action: 'Create Ticket',
     href: 'https://support.runonflux.io',
     primary: true,
   },
   {
-    title: 'Discord Community',
-    description: 'Join our active community for real-time support and discussions',
+    key: 'discord',
     icon: MessageCircle,
     contact: 'discord.gg/runonflux',
-    responseTime: 'Active community',
-    action: 'Join Discord',
     href: 'https://discord.gg/runonflux',
     primary: true,
   },
   {
-    title: 'GitHub Support',
-    description: 'Report bugs, request features, or contribute to development',
+    key: 'github',
     icon: Github,
-    contact: 'GitHub Issues & Discussions',
-    responseTime: 'Community driven',
-    action: 'Visit GitHub',
+    contact: '',
     href: 'https://github.com/RunOnFlux/ssp-wallet',
     primary: true,
   },
 ]
 
 interface SocialLink {
+  key: 'github' | 'discord' | 'twitter'
   name: string
   href: string
   icon: ComponentType<SVGProps<SVGSVGElement>>
-  description: string
 }
 
 const socialLinks: SocialLink[] = [
   {
+    key: 'github',
     name: 'GitHub',
     href: 'https://github.com/RunOnFlux/ssp-wallet',
     icon: Github,
-    description: 'Open source development & contributions',
   },
   {
+    key: 'discord',
     name: 'Discord',
     href: 'https://discord.gg/runonflux',
     icon: MessageCircle,
-    description: 'Community chat & real-time support',
   },
   {
+    key: 'twitter',
     name: 'Twitter',
     href: 'https://twitter.com/sspwallet_io',
     icon: Twitter,
-    description: 'Latest updates, news & announcements',
   },
 ]
 
@@ -100,6 +89,7 @@ interface FormData {
 }
 
 function ContactForm() {
+  const t = useTranslations('Contact.form')
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -134,13 +124,13 @@ function ContactForm() {
       const result = await response.json()
 
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to send message')
+        throw new Error(result.error || t('errorGeneric'))
       }
 
       setIsSubmitted(true)
       setFormData({ name: '', email: '', company: '', subject: '', message: '', type: 'general' })
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to send message. Please try again.')
+      setError(err instanceof Error ? err.message : t('errorFallback'))
     } finally {
       setIsSubmitting(false)
     }
@@ -164,16 +154,14 @@ function ContactForm() {
       >
         <CheckCircle className='mx-auto mb-4 h-16 w-16 text-green-500' />
         <h3 className='mb-2 text-xl font-semibold text-green-900 dark:text-green-100'>
-          Thank You!
+          {t('successTitle')}
         </h3>
-        <p className='mb-4 text-green-700 dark:text-green-300'>
-          Your message has been sent successfully. We'll get back to you soon.
-        </p>
+        <p className='mb-4 text-green-700 dark:text-green-300'>{t('successDescription')}</p>
         <button
           onClick={() => setIsSubmitted(false)}
           className='text-green-600 hover:underline dark:text-green-400'
         >
-          Send another message
+          {t('successAgain')}
         </button>
       </motion.div>
     )
@@ -187,7 +175,7 @@ function ContactForm() {
             htmlFor='name'
             className='mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300'
           >
-            Full Name *
+            {t('fullNameLabel')}
           </label>
           <input
             type='text'
@@ -197,7 +185,7 @@ function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             className='focus:ring-primary-500 dark:bg-dark-700 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
-            placeholder='Your full name'
+            placeholder={t('fullNamePlaceholder')}
           />
         </div>
 
@@ -206,7 +194,7 @@ function ContactForm() {
             htmlFor='email'
             className='mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300'
           >
-            Email Address *
+            {t('emailLabel')}
           </label>
           <input
             type='email'
@@ -216,7 +204,7 @@ function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             className='focus:ring-primary-500 dark:bg-dark-700 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
-            placeholder='your.email@example.com'
+            placeholder={t('emailPlaceholder')}
           />
         </div>
       </div>
@@ -226,7 +214,7 @@ function ContactForm() {
           htmlFor='company'
           className='mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300'
         >
-          Company (Optional)
+          {t('companyLabel')}
         </label>
         <input
           type='text'
@@ -235,7 +223,7 @@ function ContactForm() {
           value={formData.company}
           onChange={handleChange}
           className='focus:ring-primary-500 dark:bg-dark-700 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
-          placeholder='Your company name'
+          placeholder={t('companyPlaceholder')}
         />
       </div>
 
@@ -244,7 +232,7 @@ function ContactForm() {
           htmlFor='type'
           className='mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300'
         >
-          Inquiry Type *
+          {t('typeLabel')}
         </label>
         <select
           id='type'
@@ -254,12 +242,12 @@ function ContactForm() {
           onChange={handleChange}
           className='focus:ring-primary-500 dark:bg-dark-700 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
         >
-          <option value='general'>General Inquiry</option>
-          <option value='support'>Technical Support</option>
-          <option value='partnership'>Partnership</option>
-          <option value='security'>Security Issue</option>
-          <option value='media'>Media & Press</option>
-          <option value='business'>Business Development</option>
+          <option value='general'>{t('typeOptions.general')}</option>
+          <option value='support'>{t('typeOptions.support')}</option>
+          <option value='partnership'>{t('typeOptions.partnership')}</option>
+          <option value='security'>{t('typeOptions.security')}</option>
+          <option value='media'>{t('typeOptions.media')}</option>
+          <option value='business'>{t('typeOptions.business')}</option>
         </select>
       </div>
 
@@ -268,7 +256,7 @@ function ContactForm() {
           htmlFor='subject'
           className='mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300'
         >
-          Subject *
+          {t('subjectLabel')}
         </label>
         <input
           type='text'
@@ -278,7 +266,7 @@ function ContactForm() {
           value={formData.subject}
           onChange={handleChange}
           className='focus:ring-primary-500 dark:bg-dark-700 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
-          placeholder='Brief subject of your message'
+          placeholder={t('subjectPlaceholder')}
         />
       </div>
 
@@ -287,7 +275,7 @@ function ContactForm() {
           htmlFor='message'
           className='mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300'
         >
-          Message *
+          {t('messageLabel')}
         </label>
         <textarea
           id='message'
@@ -297,7 +285,7 @@ function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           className='focus:ring-primary-500 dark:bg-dark-700 w-full resize-none rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 dark:border-gray-600 dark:text-white'
-          placeholder='Please provide details about your inquiry...'
+          placeholder={t('messagePlaceholder')}
         />
       </div>
 
@@ -316,12 +304,12 @@ function ContactForm() {
         {isSubmitting ? (
           <>
             <div className='mr-2 h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent'></div>
-            Sending Message...
+            {t('submitting')}
           </>
         ) : (
           <>
             <Send className='mr-2 h-4 w-4' />
-            Send Message
+            {t('submit')}
           </>
         )}
       </button>
@@ -330,6 +318,7 @@ function ContactForm() {
 }
 
 export function ContactContent() {
+  const t = useTranslations('Contact')
   const [heroRef, heroInView] = useInView({
     threshold: 0.3,
     triggerOnce: true,
@@ -350,14 +339,13 @@ export function ContactContent() {
           >
             <div className='mb-6 inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'>
               <MessageCircle className='mr-2 h-4 w-4' />
-              Contact Us
+              {t('heroBadge')}
             </div>
 
-            <h1 className='heading-1 mb-6 text-gray-900 dark:text-white'>Get in Touch</h1>
+            <h1 className='heading-1 mb-6 text-gray-900 dark:text-white'>{t('heroTitle')}</h1>
 
             <p className='mx-auto mb-12 max-w-3xl text-xl text-gray-600 dark:text-gray-400'>
-              Have questions about SSP Wallet? Need support or want to explore partnerships? Join
-              our community or reach out directly—we're here to help.
+              {t('heroDescription')}
             </p>
           </motion.div>
         </div>
@@ -373,15 +361,17 @@ export function ContactContent() {
             viewport={{ once: true }}
             className='mb-12 text-center'
           >
-            <h2 className='heading-2 mb-4'>Ways to Reach Us</h2>
+            <h2 className='heading-2 mb-4'>{t('methodsTitle')}</h2>
             <p className='mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-400'>
-              Choose the contact method that works best for your needs
+              {t('methodsSubtitle')}
             </p>
           </motion.div>
 
           <div className='grid gap-8 lg:grid-cols-3'>
             {contactMethods.map((method, index) => {
               const MethodIcon = method.icon
+              const contactValue =
+                method.key === 'github' ? t(`methods.${method.key}.contact`) : method.contact
               return (
                 <motion.div
                   key={index}
@@ -401,18 +391,20 @@ export function ContactContent() {
                         <MethodIcon className='h-8 w-8' />
                       </div>
                       <h3 className='mb-2 text-xl font-bold text-gray-900 dark:text-white'>
-                        {method.title}
+                        {t(`methods.${method.key}.title`)}
                       </h3>
-                      <p className='mb-4 text-gray-600 dark:text-gray-400'>{method.description}</p>
+                      <p className='mb-4 text-gray-600 dark:text-gray-400'>
+                        {t(`methods.${method.key}.description`)}
+                      </p>
                     </div>
 
                     <div className='mb-6 space-y-3 text-center'>
                       <div className='font-medium text-gray-900 dark:text-white'>
-                        {method.contact}
+                        {contactValue}
                       </div>
                       <div className='flex items-center justify-center text-sm text-gray-500 dark:text-gray-400'>
                         <Clock className='mr-2 h-4 w-4' />
-                        {method.responseTime}
+                        {t(`methods.${method.key}.responseTime`)}
                       </div>
                     </div>
 
@@ -422,7 +414,7 @@ export function ContactContent() {
                       rel='noopener noreferrer'
                       className={`block w-full rounded-lg px-6 py-3 text-center font-medium transition-colors ${method.primary ? 'bg-primary-600 hover:bg-primary-700 text-white' : 'dark:hover:bg-dark-700 border border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300'}`}
                     >
-                      {method.action}
+                      {t(`methods.${method.key}.action`)}
                     </a>
                   </div>
                 </motion.div>
@@ -442,9 +434,9 @@ export function ContactContent() {
             viewport={{ once: true }}
             className='mb-12 text-center'
           >
-            <h2 className='heading-2 mb-4'>Need Help Right Away?</h2>
+            <h2 className='heading-2 mb-4'>{t('resourcesTitle')}</h2>
             <p className='mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-400'>
-              Check out our self-service resources for immediate assistance
+              {t('resourcesSubtitle')}
             </p>
           </motion.div>
 
@@ -462,9 +454,11 @@ export function ContactContent() {
                 <div className='bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400 mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl'>
                   <HelpCircle className='h-6 w-6' />
                 </div>
-                <h3 className='mb-2 font-semibold text-gray-900 dark:text-white'>Support Center</h3>
+                <h3 className='mb-2 font-semibold text-gray-900 dark:text-white'>
+                  {t('resources.supportCenter.title')}
+                </h3>
                 <p className='text-sm text-gray-600 dark:text-gray-400'>
-                  Comprehensive FAQ and troubleshooting guides
+                  {t('resources.supportCenter.description')}
                 </p>
               </Link>
             </motion.div>
@@ -482,9 +476,11 @@ export function ContactContent() {
                 <div className='bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400 mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl'>
                   <CheckCircle className='h-6 w-6' />
                 </div>
-                <h3 className='mb-2 font-semibold text-gray-900 dark:text-white'>Setup Guide</h3>
+                <h3 className='mb-2 font-semibold text-gray-900 dark:text-white'>
+                  {t('resources.setupGuide.title')}
+                </h3>
                 <p className='text-sm text-gray-600 dark:text-gray-400'>
-                  Step-by-step installation instructions
+                  {t('resources.setupGuide.description')}
                 </p>
               </Link>
             </motion.div>
@@ -504,9 +500,11 @@ export function ContactContent() {
                 <div className='bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400 mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl'>
                   <BookOpen className='h-6 w-6' />
                 </div>
-                <h3 className='mb-2 font-semibold text-gray-900 dark:text-white'>Documentation</h3>
+                <h3 className='mb-2 font-semibold text-gray-900 dark:text-white'>
+                  {t('resources.documentation.title')}
+                </h3>
                 <p className='text-sm text-gray-600 dark:text-gray-400'>
-                  Complete technical documentation
+                  {t('resources.documentation.description')}
                 </p>
               </a>
             </motion.div>
@@ -525,9 +523,9 @@ export function ContactContent() {
               viewport={{ once: true }}
               className='mb-12 text-center'
             >
-              <h2 className='heading-2 mb-4'>Send Us a Message</h2>
+              <h2 className='heading-2 mb-4'>{t('formTitle')}</h2>
               <p className='mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-400'>
-                Fill out the form below and we'll get back to you as soon as possible
+                {t('formSubtitle')}
               </p>
             </motion.div>
 
@@ -540,16 +538,16 @@ export function ContactContent() {
             >
               <div className='mb-6 rounded-lg border border-blue-200 bg-blue-50 p-4 dark:border-blue-800 dark:bg-blue-900/20'>
                 <p className='text-sm text-blue-800 dark:text-blue-200'>
-                  <strong>Tip:</strong> For faster technical support, consider using our{' '}
+                  <strong>{t('formTipPrefix')}</strong> {t('formTipBefore')}{' '}
                   <a
                     href='https://support.runonflux.io'
                     target='_blank'
                     rel='noopener noreferrer'
                     className='underline hover:no-underline'
                   >
-                    support ticket system
+                    {t('formTipLinkSupport')}
                   </a>{' '}
-                  or reaching out via{' '}
+                  {t('formTipBetween')}{' '}
                   <a href='mailto:support@sspwallet.io' className='underline hover:no-underline'>
                     support@sspwallet.io
                   </a>
@@ -571,9 +569,9 @@ export function ContactContent() {
             viewport={{ once: true }}
             className='text-center'
           >
-            <h2 className='heading-2 mb-4'>Follow Our Community</h2>
+            <h2 className='heading-2 mb-4'>{t('communityTitle')}</h2>
             <p className='mx-auto mb-12 max-w-2xl text-lg text-gray-600 dark:text-gray-400'>
-              Stay updated with the latest news, connect with other users, and get community support
+              {t('communitySubtitle')}
             </p>
 
             <div className='flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6 md:gap-8'>
@@ -600,7 +598,7 @@ export function ContactContent() {
                         {social.name}
                       </h3>
                       <p className='text-center text-sm text-gray-600 dark:text-gray-400'>
-                        {social.description}
+                        {t(`social.${social.key}`)}
                       </p>
                     </a>
                   </motion.div>

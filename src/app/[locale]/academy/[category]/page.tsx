@@ -1,20 +1,15 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Script from 'next/script'
-import { setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { PageHeader } from '@/components/header/page-header'
 import { NewsroomCard } from '@/components/newsroom/newsroom-card'
 import { Breadcrumbs } from '@/components/shared/breadcrumbs'
-import {
-  ACADEMY_CATEGORIES,
-  ACADEMY_CATEGORY_SLUGS,
-  isAcademyCategory,
-} from '@/constants/academy-categories'
+import { ACADEMY_CATEGORY_SLUGS, isAcademyCategory } from '@/constants/academy-categories'
 import { Link } from '@/i18n/navigation'
 import { getAcademyPosts } from '@/lib/cms'
 import { createMetadata, siteDescription } from '@/lib/seo'
 import { buildAcademyBreadcrumbJsonLd } from '@/lib/seo-academy'
-import { CATEGORY_HEROES } from './_content'
 
 export function generateStaticParams() {
   return ACADEMY_CATEGORY_SLUGS.map(category => ({ category }))
@@ -23,22 +18,22 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ category: string }>
+  params: Promise<{ locale: string; category: string }>
 }): Promise<Metadata> {
-  const { category } = await params
+  const { locale, category } = await params
+  const tAcademy = await getTranslations({ locale, namespace: 'Academy' })
   if (!isAcademyCategory(category)) {
     return createMetadata({
-      title: 'Academy',
+      title: tAcademy('title'),
       description: siteDescription,
       path: '/academy',
     })
   }
-  const meta = ACADEMY_CATEGORIES[category]
-  const hero = CATEGORY_HEROES[category]
+  const tCategories = await getTranslations({ locale, namespace: 'Academy.categories' })
   const posts = await getAcademyPosts({ category, limit: 100 }).catch(() => [])
   return createMetadata({
-    title: `${hero.h1} | SSP Academy`,
-    description: meta.description,
+    title: `${tCategories(`${category}.title`)} | ${tAcademy('title')}`,
+    description: tCategories(`${category}.description`),
     path: `/academy/${category}`,
     noindex: posts.length === 0,
   })
@@ -53,39 +48,46 @@ export default async function CategoryHubPage({
   setRequestLocale(locale)
   if (!isAcademyCategory(category)) notFound()
 
-  const hero = CATEGORY_HEROES[category]
-  const posts = await getAcademyPosts({ category, limit: 100 }).catch(() => [])
+  const [tAcademy, tCategories, tCategoryIntros, tCommon, posts] = await Promise.all([
+    getTranslations({ locale, namespace: 'Academy' }),
+    getTranslations({ locale, namespace: 'Academy.categories' }),
+    getTranslations({ locale, namespace: 'Academy.categoryIntros' }),
+    getTranslations({ locale, namespace: 'Common' }),
+    getAcademyPosts({ category, limit: 100 }).catch(() => []),
+  ])
+  const categoryTitle = tCategories(`${category}.title`)
+  const categoryDescription = tCategories(`${category}.description`)
+  const academyTitle = tAcademy('title')
+  const homeLabel = tCommon('breadcrumbHome')
 
   return (
     <>
       <Script id='academy-category-breadcrumb-jsonld' type='application/ld+json'>
         {JSON.stringify(
           buildAcademyBreadcrumbJsonLd([
-            { name: 'Home', url: '/' },
-            { name: 'Academy', url: '/academy' },
-            { name: ACADEMY_CATEGORIES[category].title },
+            { name: homeLabel, url: '/' },
+            { name: academyTitle, url: '/academy' },
+            { name: categoryTitle },
           ])
         )}
       </Script>
       <div className='container-custom pt-24 md:pt-32'>
         <Breadcrumbs
           items={[
-            { label: 'Home', href: '/' },
-            { label: 'Academy', href: '/academy' },
-            { label: ACADEMY_CATEGORIES[category].title },
+            { label: homeLabel, href: '/' },
+            { label: academyTitle, href: '/academy' },
+            { label: categoryTitle },
           ]}
         />
       </div>
-      <PageHeader title={hero.h1} description={hero.lede} />
+      <PageHeader title={categoryTitle} description={categoryDescription} />
       <section className='container-custom max-w-4xl space-y-4 py-12 text-base leading-relaxed text-gray-600 md:py-16 md:text-lg dark:text-gray-300'>
-        {hero.intro}
+        <p>{tCategoryIntros(category)}</p>
       </section>
       <section className='container-custom pb-16 md:pb-24'>
         {posts.length === 0 ? (
           <div className='space-y-6 py-12 text-center'>
-            <p className='text-gray-600 dark:text-gray-300'>
-              New articles coming soon. In the meantime, explore related topics:
-            </p>
+            <p className='text-gray-600 dark:text-gray-300'>{tAcademy('categoryEmpty')}</p>
             <div className='flex flex-wrap justify-center gap-4'>
               {ACADEMY_CATEGORY_SLUGS.filter(s => s !== category && s !== 'news-explained')
                 .slice(0, 3)
@@ -95,7 +97,7 @@ export default async function CategoryHubPage({
                     href={`/academy/${s}`}
                     className='text-gray-600 underline hover:text-gray-900 dark:text-gray-400 dark:hover:text-white'
                   >
-                    {ACADEMY_CATEGORIES[s].title}
+                    {tCategories(`${s}.title`)}
                   </Link>
                 ))}
             </div>

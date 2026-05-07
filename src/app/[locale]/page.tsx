@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { CTA } from '@/components/home/cta'
 import { EnterpriseBand } from '@/components/home/enterprise-band'
 import { Features } from '@/components/home/features'
@@ -8,12 +8,19 @@ import { Security } from '@/components/home/security'
 import { SupportedChains } from '@/components/home/supported-chains'
 import { createMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = createMetadata({
-  title: 'SSP Wallet — Secure, Simple, Powerful Crypto Wallet',
-  description:
-    'True 2-of-2 multisig crypto wallet. Browser extension + mobile required for every transaction. Supports Bitcoin, Ethereum, and 15+ blockchains.',
-  path: '/',
-})
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'Home' })
+  return createMetadata({
+    title: t('metaTitle'),
+    description: t('metaDescription'),
+    path: '/',
+  })
+}
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params

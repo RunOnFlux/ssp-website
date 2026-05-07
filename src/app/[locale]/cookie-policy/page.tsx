@@ -1,13 +1,20 @@
 import type { Metadata } from 'next'
-import { setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { createMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = createMetadata({
-  title: 'Cookie Policy - SSP Wallet Website',
-  description:
-    'Learn about how we use cookies on the sspwallet.io website. Manage your cookie preferences and understand our GDPR-compliant practices.',
-  path: '/cookie-policy',
-})
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'Legal.cookiePolicy' })
+  return createMetadata({
+    title: t('metaTitle'),
+    description: t('metaDescription'),
+    path: '/cookie-policy',
+  })
+}
 
 export default async function CookiePolicyPage({
   params,
@@ -16,15 +23,19 @@ export default async function CookiePolicyPage({
 }) {
   const { locale } = await params
   setRequestLocale(locale)
+  const [t, tLegal] = await Promise.all([
+    getTranslations({ locale, namespace: 'Legal.cookiePolicy' }),
+    getTranslations({ locale, namespace: 'Legal' }),
+  ])
 
   return (
     <div className='section-padding'>
       <div className='container-custom mx-auto max-w-4xl'>
-        <h1 className='heading-1 mb-8'>Cookie Policy</h1>
+        <h1 className='heading-1 mb-8'>{t('heading')}</h1>
 
         <div className='prose prose-lg dark:prose-invert max-w-none'>
           <p className='mb-8 text-lg text-gray-600 dark:text-gray-400'>
-            Last updated: July 20, 2025
+            {tLegal('lastUpdated', { date: 'July 20, 2025' })}
           </p>
 
           <section className='mb-8'>

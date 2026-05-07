@@ -1,9 +1,11 @@
 import { Github, Globe, Linkedin, Twitter } from 'lucide-react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import type { Author } from '@/types/newsroom'
 
 export function AuthorByline({ author }: { author: Author }) {
+  const t = useTranslations('Common')
   return (
     <div className='rounded-card dark:border-dark-700 dark:bg-dark-800 mt-4 flex items-start gap-4 border border-gray-200 bg-white p-4'>
       {author.avatar && (
@@ -55,7 +57,7 @@ export function AuthorByline({ author }: { author: Author }) {
             href={author.websiteUrl}
             target='_blank'
             rel='noopener noreferrer'
-            aria-label='Website'
+            aria-label={t('websiteAriaLabel')}
           >
             <Globe className='h-4 w-4' />
           </a>

@@ -3,26 +3,18 @@
 import { motion, type Variants } from 'framer-motion'
 import { ArrowRight, Download, Lock, Play, Shield, X, Zap } from 'lucide-react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { Link } from '@/i18n/navigation'
 
-const features = [
-  {
-    icon: Shield,
-    text: 'True 2-of-2 Multisig',
-  },
-  {
-    icon: Zap,
-    text: '15+ Blockchains',
-  },
-  {
-    icon: Lock,
-    text: 'Zero Data Storage',
-  },
-]
-
 export function Hero() {
+  const t = useTranslations('Home.hero')
+  const features = [
+    { icon: Shield, text: t('featureMultisig') },
+    { icon: Zap, text: t('featureBlockchains') },
+    { icon: Lock, text: t('featureZeroStorage') },
+  ]
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
   const [ref, inView] = useInView({
     threshold: 0.1,
@@ -112,13 +104,13 @@ export function Hero() {
                   className='bg-primary-100 text-primary-800 dark:bg-primary-900/30 dark:text-primary-200 mb-6 inline-flex items-center rounded-full px-4 py-2 text-sm font-medium transition-transform hover:scale-105'
                 >
                   <span className='bg-primary-500 mr-2 h-2 w-2 animate-pulse rounded-full'></span>
-                  Security Audited by Halborn
+                  {t('auditedBadge')}
                 </a>
 
                 <h1 className='mb-6 text-5xl font-bold text-balance md:text-6xl lg:text-7xl'>
-                  <span className='gradient-text'>Secure</span>,{' '}
-                  <span className='gradient-text'>Simple</span>,{' '}
-                  <span className='gradient-text'>Powerful</span>
+                  <span className='gradient-text'>{t('titleSecure')}</span>,{' '}
+                  <span className='gradient-text'>{t('titleSimple')}</span>,{' '}
+                  <span className='gradient-text'>{t('titlePowerful')}</span>
                 </h1>
               </motion.div>
 
@@ -126,9 +118,7 @@ export function Hero() {
                 variants={itemVariants}
                 className='mb-8 max-w-2xl text-xl text-balance text-gray-600 md:text-2xl dark:text-gray-300'
               >
-                True 2-of-2 multisignature wallet using BIP48 derivation, requiring both your
-                browser extension and mobile device for every transaction. Features WalletConnect
-                v2, ERC-4337 Account Abstraction with Schnorr signatures, and 15+ blockchains.
+                {t('description')}
               </motion.p>
 
               {/* Feature Highlights */}
@@ -159,7 +149,7 @@ export function Hero() {
               >
                 <Link href='/download' className='btn btn-primary group px-8 py-4 text-lg'>
                   <Download className='mr-2 h-5 w-5 group-hover:animate-bounce' />
-                  Get Started Now
+                  {t('getStarted')}
                   <ArrowRight className='ml-2 h-4 w-4 transition-transform group-hover:translate-x-1' />
                 </Link>
 
@@ -168,7 +158,7 @@ export function Hero() {
                   className='btn btn-secondary group cursor-pointer px-8 py-4 text-lg transition-all duration-200 hover:scale-105 hover:shadow-xl'
                 >
                   <Play className='mr-2 h-5 w-5' />
-                  Watch Demo
+                  {t('watchDemo')}
                 </button>
               </motion.div>
 
@@ -181,19 +171,25 @@ export function Hero() {
                   <div className='text-2xl font-bold text-gray-900 md:text-3xl dark:text-white'>
                     15+
                   </div>
-                  <div className='text-sm text-gray-600 dark:text-gray-400'>Supported Chains</div>
+                  <div className='text-sm text-gray-600 dark:text-gray-400'>
+                    {t('statSupportedChains')}
+                  </div>
                 </div>
                 <div className='text-center'>
                   <div className='text-2xl font-bold text-gray-900 md:text-3xl dark:text-white'>
                     1000+
                   </div>
-                  <div className='text-sm text-gray-600 dark:text-gray-400'>Active Users</div>
+                  <div className='text-sm text-gray-600 dark:text-gray-400'>
+                    {t('statActiveUsers')}
+                  </div>
                 </div>
                 <div className='text-center'>
                   <div className='text-2xl font-bold text-gray-900 md:text-3xl dark:text-white'>
                     3+
                   </div>
-                  <div className='text-sm text-gray-600 dark:text-gray-400'>Security Audits</div>
+                  <div className='text-sm text-gray-600 dark:text-gray-400'>
+                    {t('statSecurityAudits')}
+                  </div>
                 </div>
               </motion.div>
             </div>
@@ -213,7 +209,7 @@ export function Hero() {
                 <div className='relative mx-auto h-96 w-96'>
                   <Image
                     src='/ssp animation 3_6 1.svg'
-                    alt='SSP Wallet Animation'
+                    alt={t('animationAlt')}
                     fill
                     className='scale-150 object-contain'
                     priority
@@ -264,7 +260,7 @@ export function Hero() {
                 <div className='relative mx-auto h-96 w-96 sm:h-[450px] sm:w-[450px]'>
                   <Image
                     src='/ssp animation 3_6 1.svg'
-                    alt='SSP Wallet Animation'
+                    alt={t('animationAlt')}
                     fill
                     className='scale-125 object-contain'
                     priority
@@ -341,7 +337,7 @@ export function Hero() {
             <button
               onClick={closeModal}
               className='absolute -top-12 right-0 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white text-gray-900 transition-colors hover:bg-gray-100'
-              aria-label='Close modal'
+              aria-label={t('closeModal')}
             >
               <X className='h-6 w-6' />
             </button>
@@ -355,7 +351,7 @@ export function Hero() {
                 className='h-full w-full object-contain'
                 poster='/ssp animation 3_6 1.svg'
               >
-                Your browser does not support the video tag.
+                {t('videoUnsupported')}
               </video>
             </div>
           </motion.div>

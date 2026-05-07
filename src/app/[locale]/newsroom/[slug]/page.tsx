@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
 import Script from 'next/script'
-import { setRequestLocale } from 'next-intl/server'
+import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { PostArticle } from '@/components/shared/post-article'
 import { getAllSlugs, getPostBySlug, getRelatedPosts } from '@/lib/cms'
 import { createBlogPostingJsonLd, createBreadcrumbJsonLd, createMetadata, siteUrl } from '@/lib/seo'
@@ -69,9 +69,13 @@ export default async function NewsroomArticlePage({ params }: PageProps) {
     publishDate: post.date,
     modifiedDate: post.modifiedDate ?? undefined,
   })
+  const [tCommon, tNewsroom] = await Promise.all([
+    getTranslations({ locale, namespace: 'Common' }),
+    getTranslations({ locale, namespace: 'Newsroom' }),
+  ])
   const breadcrumbJsonLd = createBreadcrumbJsonLd([
-    { name: 'Home', url: '/' },
-    { name: 'Newsroom', url: '/newsroom' },
+    { name: tCommon('breadcrumbHome'), url: '/' },
+    { name: tNewsroom('title'), url: '/newsroom' },
     { name: post.title, url: `/newsroom/${post.slug}` },
   ])
 
