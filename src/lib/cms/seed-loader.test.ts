@@ -44,3 +44,32 @@ describe('loadSeedPostBySlug', () => {
     expect(p).toBeUndefined()
   })
 })
+
+describe('seed loader locale stamping', () => {
+  it('loadAllSeedPosts stamps locale=requested and servedLocale=en', async () => {
+    const posts = await loadAllSeedPosts({ locale: 'es', includeFixtures: true })
+    expect(posts.length).toBeGreaterThan(0)
+    for (const p of posts) {
+      expect(p.locale).toBe('es')
+      expect(p.servedLocale).toBe('en')
+    }
+  })
+
+  it('loadAllSeedPosts defaults locale to en when not specified', async () => {
+    const posts = await loadAllSeedPosts({ includeFixtures: true })
+    expect(posts.length).toBeGreaterThan(0)
+    for (const p of posts) {
+      expect(p.locale).toBe('en')
+      expect(p.servedLocale).toBe('en')
+    }
+  })
+
+  it('loadSeedPostBySlug stamps locale and servedLocale', async () => {
+    const all = await loadAllSeedPosts({ includeFixtures: true })
+    if (all.length === 0) return
+    const post = await loadSeedPostBySlug(all[0].slug, { locale: 'zh', includeFixtures: true })
+    expect(post).toBeDefined()
+    expect(post!.locale).toBe('zh')
+    expect(post!.servedLocale).toBe('en')
+  })
+})
