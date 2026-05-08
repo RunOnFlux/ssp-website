@@ -3,6 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import type { AcademyCategory } from '@/constants/academy-categories'
 import { isAcademyCategory } from '@/constants/academy-categories'
+import type { Locale } from '@/i18n/routing'
 import type { NewsroomPost } from '@/types/newsroom'
 
 const CONTENT_DIR = path.resolve(process.cwd(), 'content')
@@ -13,6 +14,7 @@ export function isTestFixture(filename: string): boolean {
 
 interface SeedOptions {
   includeFixtures?: boolean
+  locale?: Locale
 }
 
 async function readPostsFromDir(
@@ -64,6 +66,8 @@ async function readPostsFromDir(
       noindex: !!data.noindex,
       relatedSlugs: Array.isArray(data.relatedSlugs) ? (data.relatedSlugs as string[]) : [],
       slugHistory: Array.isArray(data.slugHistory) ? (data.slugHistory as string[]) : [],
+      locale: opts.locale ?? 'en',
+      servedLocale: 'en',
     })
   }
   return posts

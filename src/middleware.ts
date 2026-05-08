@@ -42,13 +42,13 @@ export default async function middleware(req: NextRequest) {
     if (dyn) {
       try {
         if (dyn.kind === 'newsroom') {
-          const post = await getPostBySlug(dyn.slug)
+          const post = await getPostBySlug(dyn.slug, 'en')
           if (post && post.section === 'newsroom') {
             return mdResponse(renderArticleAsAgentMd(post), req)
           }
         }
         if (dyn.kind === 'academy') {
-          const post = await getPostBySlug(dyn.slug)
+          const post = await getPostBySlug(dyn.slug, 'en')
           if (post && post.section === 'academy' && post.category === dyn.category) {
             return mdResponse(renderArticleAsAgentMd(post), req)
           }

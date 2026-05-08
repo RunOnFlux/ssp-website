@@ -46,11 +46,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
-  // Newsroom posts
-  try {
-    const newsroomPosts = await getAllPosts()
-    for (const post of newsroomPosts) {
-      for (const locale of routing.locales) {
+  // Newsroom posts — per locale, only emit when the post is genuinely translated
+  for (const locale of routing.locales) {
+    try {
+      const newsroomPosts = await getAllPosts(locale)
+      for (const post of newsroomPosts.filter(p => p.servedLocale === locale)) {
         entries.push({
           url: buildLocaleUrl(locale, `/newsroom/${post.slug}`),
           lastModified: new Date(post.modifiedDate ?? post.date),
@@ -58,16 +58,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           priority: 0.6,
         })
       }
+    } catch {
+      // CMS unavailable — skip dynamic newsroom entries for this locale
     }
-  } catch {
-    // CMS unavailable — skip dynamic newsroom entries
   }
 
-  // Academy articles
-  try {
-    const academySlugs = await getAcademySlugs()
-    for (const { category, slug } of academySlugs) {
-      for (const locale of routing.locales) {
+  // Academy articles — per locale, only emit when the post is genuinely translated
+  for (const locale of routing.locales) {
+    try {
+      const academySlugs = await getAcademySlugs(locale)
+      for (const { category, slug } of academySlugs) {
         entries.push({
           url: buildLocaleUrl(locale, `/academy/${category}/${slug}`),
           lastModified,
@@ -75,16 +75,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           priority: 0.7,
         })
       }
+    } catch {
+      // CMS unavailable — skip dynamic academy entries for this locale
     }
-  } catch {
-    // CMS unavailable — skip dynamic academy entries
   }
 
-  // Academy series
-  try {
-    const allSeries = await getAllSeries()
-    for (const series of allSeries) {
-      for (const locale of routing.locales) {
+  // Academy series — per locale, only emit when the series is genuinely translated
+  for (const locale of routing.locales) {
+    try {
+      const allSeries = await getAllSeries(locale)
+      for (const series of allSeries.filter(s => s.servedLocale === locale)) {
         entries.push({
           url: buildLocaleUrl(locale, `/academy/series/${series.slug}`),
           lastModified: new Date(series.updatedAt),
@@ -92,9 +92,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           priority: 0.6,
         })
       }
+    } catch {
+      // CMS unavailable — skip dynamic series entries for this locale
     }
-  } catch {
-    // CMS unavailable — skip dynamic series entries
   }
 
   // Author profiles

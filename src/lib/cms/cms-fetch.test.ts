@@ -60,4 +60,45 @@ describe('cmsFetch', () => {
     delete process.env.SSP_CMS_URL
     await expect(cmsFetch('/api/v1/posts')).rejects.toThrow(/not configured/i)
   })
+
+  it('appends ?locale= when options.locale set', async () => {
+    const fetchSpy = vi
+      .spyOn(global, 'fetch')
+      .mockResolvedValue(new Response(JSON.stringify({ ok: true }), { status: 200 }))
+    await cmsFetch('/api/v1/posts', { locale: 'es' })
+    expect(fetchSpy).toHaveBeenCalledWith(
+      'https://cms.example.com/api/v1/posts?locale=es',
+      expect.anything()
+    )
+  })
+
+  it('appends locale with & when path already has query string', async () => {
+    const fetchSpy = vi
+      .spyOn(global, 'fetch')
+      .mockResolvedValue(new Response(JSON.stringify({ ok: true }), { status: 200 }))
+    await cmsFetch('/api/v1/posts?section=newsroom', { locale: 'zh' })
+    expect(fetchSpy).toHaveBeenCalledWith(
+      'https://cms.example.com/api/v1/posts?section=newsroom&locale=zh',
+      expect.anything()
+    )
+  })
+
+  it('omits locale param when options.locale not set', async () => {
+    const fetchSpy = vi
+      .spyOn(global, 'fetch')
+      .mockResolvedValue(new Response(JSON.stringify({ ok: true }), { status: 200 }))
+    await cmsFetch('/api/v1/posts', {})
+    expect(fetchSpy).toHaveBeenCalledWith('https://cms.example.com/api/v1/posts', expect.anything())
+  })
+
+  it('backward-compat: numeric second arg sets revalidate', async () => {
+    const fetchSpy = vi
+      .spyOn(global, 'fetch')
+      .mockResolvedValue(new Response(JSON.stringify({ ok: true }), { status: 200 }))
+    await cmsFetch('/api/v1/posts', 300)
+    expect(fetchSpy).toHaveBeenCalledWith(
+      'https://cms.example.com/api/v1/posts',
+      expect.objectContaining({ next: { revalidate: 300 } })
+    )
+  })
 })

@@ -5,6 +5,7 @@ import Script from 'next/script'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { NewsroomCard } from '@/components/newsroom/newsroom-card'
 import { Breadcrumbs } from '@/components/shared/breadcrumbs'
+import type { Locale } from '@/i18n/routing'
 import { getAuthorBySlug, getPostsByAuthor } from '@/lib/cms'
 import { createBreadcrumbJsonLd, createMetadata } from '@/lib/seo'
 
@@ -29,7 +30,7 @@ export async function generateMetadata({
 export default async function AuthorPage({
   params,
 }: {
-  params: Promise<{ locale: string; slug: string }>
+  params: Promise<{ locale: Locale; slug: string }>
 }) {
   const { locale, slug } = await params
   setRequestLocale(locale)
@@ -39,7 +40,7 @@ export default async function AuthorPage({
     getTranslations({ locale, namespace: 'Common' }),
   ])
   if (!author) notFound()
-  const posts = await getPostsByAuthor(slug)
+  const posts = await getPostsByAuthor(slug, locale)
 
   const breadcrumbJsonLd = createBreadcrumbJsonLd([
     { name: tCommon('breadcrumbHome'), url: '/' },

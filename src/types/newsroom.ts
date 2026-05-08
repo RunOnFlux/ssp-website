@@ -1,4 +1,5 @@
 import type { AcademyCategory } from '@/constants/academy-categories'
+import type { Locale } from '@/i18n/routing'
 
 export type ArticleSection = 'newsroom' | 'academy'
 export type ArticleDifficulty = 'beginner' | 'intermediate' | 'advanced'
@@ -33,6 +34,8 @@ export interface NewsroomPost {
   noindex?: boolean
   relatedSlugs?: string[]
   slugHistory?: string[]
+  locale: Locale
+  servedLocale: Locale
 }
 
 export interface Author {
@@ -65,6 +68,8 @@ export interface SeriesSummary {
   seoDescription: string | null
   updatedAt: string
   postCount: number
+  locale: Locale
+  servedLocale: Locale
 }
 
 export interface SeriesDetail extends Omit<SeriesSummary, 'postCount'> {

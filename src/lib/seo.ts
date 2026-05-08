@@ -30,6 +30,7 @@ interface CreateMetadataInput {
   articleMeta?: ArticleMeta
   noindex?: boolean
   canonical?: string
+  alternates?: { languages?: Record<string, string> }
 }
 
 function absoluteUrl(url: string): string {
@@ -48,7 +49,10 @@ export function createMetadata(input: CreateMetadataInput): Metadata {
   return {
     title: input.title,
     description: input.description,
-    alternates: { canonical },
+    alternates: {
+      canonical,
+      ...(input.alternates?.languages ? { languages: input.alternates.languages } : {}),
+    },
     robots: input.noindex ? { index: false, follow: true } : undefined,
     openGraph: {
       type: input.type ?? 'website',

@@ -3,7 +3,9 @@ import Script from 'next/script'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { PageHeader } from '@/components/header/page-header'
 import { Breadcrumbs } from '@/components/shared/breadcrumbs'
+import { LocaleBadge } from '@/components/shared/locale-badge'
 import { Link } from '@/i18n/navigation'
+import type { Locale } from '@/i18n/routing'
 import { getAllSeries } from '@/lib/cms'
 import { createMetadata } from '@/lib/seo'
 import { buildAcademyBreadcrumbJsonLd } from '@/lib/seo-academy'
@@ -22,11 +24,11 @@ export async function generateMetadata({
   })
 }
 
-export default async function SeriesIndexPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function SeriesIndexPage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params
   setRequestLocale(locale)
   const [allSeries, tAcademy, tCommon] = await Promise.all([
-    getAllSeries().catch(() => []),
+    getAllSeries(locale).catch(() => []),
     getTranslations({ locale, namespace: 'Academy' }),
     getTranslations({ locale, namespace: 'Common' }),
   ])
@@ -70,18 +72,25 @@ export default async function SeriesIndexPage({ params }: { params: Promise<{ lo
         ) : (
           <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
             {seriesList.map(s => (
-              <Link key={s.slug} href={`/academy/series/${s.slug}`} className='card group'>
-                <div
-                  className='rounded-card mb-4 aspect-video bg-cover bg-center'
-                  style={{ backgroundImage: `url(${s.heroImage})` }}
-                  aria-label={s.heroImageAlt}
-                />
-                <h2 className='font-semibold text-gray-900 dark:text-white'>{s.title}</h2>
-                <p className='mt-1 text-sm text-gray-500 dark:text-gray-400'>{s.description}</p>
-                <p className='mt-3 text-xs text-gray-500 dark:text-gray-400'>
-                  {tAcademy('partsCount', { count: s.postCount })}
-                </p>
-              </Link>
+              <div key={s.slug} className='relative'>
+                <Link href={`/academy/series/${s.slug}`} className='card group'>
+                  <div
+                    className='rounded-card mb-4 aspect-video bg-cover bg-center'
+                    style={{ backgroundImage: `url(${s.heroImage})` }}
+                    aria-label={s.heroImageAlt}
+                  />
+                  <h2 className='font-semibold text-gray-900 dark:text-white'>{s.title}</h2>
+                  <p className='mt-1 text-sm text-gray-500 dark:text-gray-400'>{s.description}</p>
+                  <p className='mt-3 text-xs text-gray-500 dark:text-gray-400'>
+                    {tAcademy('partsCount', { count: s.postCount })}
+                  </p>
+                </Link>
+                {s.servedLocale !== s.locale && (
+                  <div className='absolute top-3 right-3'>
+                    <LocaleBadge locale={s.servedLocale} />
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         )}

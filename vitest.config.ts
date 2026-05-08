@@ -8,6 +8,7 @@ export default defineConfig({
     include: ['src/**/*.{test,spec}.{ts,tsx}', '__tests__/**/*.{test,spec}.{ts,tsx}'],
     exclude: ['node_modules', '.next', 'content'],
     passWithNoTests: true,
+    setupFiles: ['./vitest.setup.ts'],
   },
   resolve: {
     alias: {
