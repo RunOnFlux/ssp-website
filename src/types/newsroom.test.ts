@@ -1,6 +1,6 @@
 import { describe, it, expectTypeOf } from 'vitest'
-import type { NewsroomPost, SeriesSummary, SeriesDetail, Author, ArticleSection } from './newsroom'
 import type { Locale } from '@/i18n/routing'
+import type { NewsroomPost, SeriesSummary, SeriesDetail, Author, ArticleSection } from './newsroom'
 
 describe('NewsroomPost', () => {
   it('compiles', () => {
