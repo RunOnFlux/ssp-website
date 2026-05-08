@@ -404,36 +404,6 @@
     "backToAcademy": "返回学院",
     "seriesPartsEmpty": "章节即将上线。",
     "viewAllLearningPaths": "查看所有学习路径",
-    "categories": {
-      "multisig": {
-        "title": "多重签名详解",
-        "description": "SSP 中的 2/2 多重签名实际如何运作——以及为何重要。"
-      },
-      "getting-started": {
-        "title": "加密入门",
-        "description": "每位加密用户都应了解的基础概念。"
-      },
-      "security": {
-        "title": "安全与自托管",
-        "description": "保护你的加密资产：助记词、钓鱼、硬件钱包、威胁模型。"
-      },
-      "how-to": {
-        "title": "操作指南",
-        "description": "SSP 常见任务的分步演练。"
-      },
-      "coin-guides": {
-        "title": "币种与链指南",
-        "description": "深入了解 SSP 支持的各个币种和区块链。"
-      },
-      "defi": {
-        "title": "DeFi 与账户抽象",
-        "description": "解析质押、借贷、兑换以及 ERC-4337。"
-      },
-      "news-explained": {
-        "title": "新闻与行业分析",
-        "description": "加密新闻与监管动态的背景与解读。"
-      }
-    },
     "categoryIntros": {
       "multisig": "多重签名钱包需要多方签名才能授权交易。SSP 在每一次签名操作上都强制执行 2/2 多重签名：浏览器扩展与移动端 SSP Key 应用必须同时批准。本页汇集了深度文章，解释该模型的运作方式、能阻止哪些攻击，以及它的边界在哪里。",
       "getting-started": "刚接触加密世界，或在长时间停顿后重新回归？请从这里开始。这些指南介绍钱包、地址、交易、Gas、内存池与最终性——在你接触真实资金之前需要掌握的术语。",

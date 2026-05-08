@@ -404,36 +404,6 @@
     "backToAcademy": "Back to Academy",
     "seriesPartsEmpty": "Parts are coming soon.",
     "viewAllLearningPaths": "View all learning paths",
-    "categories": {
-      "multisig": {
-        "title": "Multisig Explained",
-        "description": "How 2-of-2 multisignature actually works in SSP — and why it matters."
-      },
-      "getting-started": {
-        "title": "Crypto Basics",
-        "description": "Foundational concepts every crypto user should know."
-      },
-      "security": {
-        "title": "Security & Self-Custody",
-        "description": "Protect your crypto: seeds, phishing, hardware, threat models."
-      },
-      "how-to": {
-        "title": "How-To Guides",
-        "description": "Step-by-step walkthroughs for common SSP tasks."
-      },
-      "coin-guides": {
-        "title": "Coin & Chain Guides",
-        "description": "Deep dives into individual coins and chains SSP supports."
-      },
-      "defi": {
-        "title": "DeFi & Account Abstraction",
-        "description": "Staking, lending, swaps, and ERC-4337 explained."
-      },
-      "news-explained": {
-        "title": "News & Industry Analysis",
-        "description": "Context and analysis on crypto news and regulation."
-      }
-    },
     "categoryIntros": {
       "multisig": "Multisig wallets require multiple signatures to authorize a transaction. SSP enforces 2-of-2 on every signed action: the browser extension and the mobile SSP Key app must both approve. This page collects the deep-dives that explain how the model works, what attacks it stops, and where its limits sit.",
       "getting-started": "Brand-new to crypto, or returning after a long break? Start here. These guides cover wallets, addresses, transactions, gas, mempools, and finality — the vocabulary you need before you touch real funds.",

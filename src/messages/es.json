@@ -404,36 +404,6 @@
     "backToAcademy": "Volver a la Academia",
     "seriesPartsEmpty": "Las partes llegarán pronto.",
     "viewAllLearningPaths": "Ver todas las rutas de aprendizaje",
-    "categories": {
-      "multisig": {
-        "title": "Multifirma explicada",
-        "description": "Cómo funciona realmente la firma múltiple 2-de-2 en SSP — y por qué importa."
-      },
-      "getting-started": {
-        "title": "Conceptos básicos de cripto",
-        "description": "Conceptos fundamentales que todo usuario de cripto debe conocer."
-      },
-      "security": {
-        "title": "Seguridad y autocustodia",
-        "description": "Protege tus criptos: semillas, phishing, hardware, modelos de amenaza."
-      },
-      "how-to": {
-        "title": "Guías paso a paso",
-        "description": "Tutoriales detallados para las tareas más comunes de SSP."
-      },
-      "coin-guides": {
-        "title": "Guías de monedas y cadenas",
-        "description": "Análisis a fondo de las monedas y cadenas que SSP soporta."
-      },
-      "defi": {
-        "title": "DeFi y Account Abstraction",
-        "description": "Staking, préstamos, swaps y ERC-4337 explicados."
-      },
-      "news-explained": {
-        "title": "Noticias y análisis del sector",
-        "description": "Contexto y análisis sobre noticias y regulación cripto."
-      }
-    },
     "categoryIntros": {
       "multisig": "Las carteras multifirma requieren varias firmas para autorizar una transacción. SSP aplica 2-de-2 en toda acción firmada: tanto la extensión del navegador como la aplicación móvil SSP Key deben aprobarla. Esta página reúne los análisis a fondo que explican cómo funciona el modelo, qué ataques detiene y dónde están sus límites.",
       "getting-started": "¿Recién llegado al mundo cripto o regresando tras un largo descanso? Empieza aquí. Estas guías cubren carteras, direcciones, transacciones, gas, mempools y finalidad: el vocabulario que necesitas antes de manejar fondos reales.",

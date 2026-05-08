@@ -77,7 +77,7 @@ export default async function AcademyArticlePage({ params }: PageProps) {
   const [author, relatedPosts, tCategories, tAcademy, tCommon] = await Promise.all([
     post.authorId ? getAuthorBySlug(post.authorId) : Promise.resolve(null),
     getRelatedPosts(post),
-    getTranslations({ locale, namespace: 'Academy.categories' }),
+    getTranslations({ locale, namespace: 'Categories' }),
     getTranslations({ locale, namespace: 'Academy' }),
     getTranslations({ locale, namespace: 'Common' }),
   ])
