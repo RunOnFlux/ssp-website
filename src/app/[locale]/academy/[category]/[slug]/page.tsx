@@ -6,7 +6,7 @@ import { AuthorByline } from '@/components/shared/author-byline'
 import { Breadcrumbs } from '@/components/shared/breadcrumbs'
 import { PostArticle } from '@/components/shared/post-article'
 import { isAcademyCategory } from '@/constants/academy-categories'
-import type { Locale } from '@/i18n/routing'
+import { routing, type Locale } from '@/i18n/routing'
 import { getTermMap } from '@/lib/academy-terms'
 import { getAcademyPostBySlug, getAcademySlugs, getAuthorBySlug, getRelatedPosts } from '@/lib/cms'
 import { autoLinkContent } from '@/lib/glossary-linker'
@@ -31,6 +31,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { locale, category, slug } = await params
   const post = await getAcademyPostBySlug(slug, locale)
   if (!post) return {}
+
+  const languages: Record<string, string> = {}
+  for (const otherLocale of routing.locales) {
+    if (otherLocale === locale) continue
+    const other = await getAcademyPostBySlug(slug, otherLocale).catch(() => null)
+    if (other && other.servedLocale === otherLocale && other.category) {
+      languages[otherLocale] = `${siteUrl}/${otherLocale}/academy/${other.category}/${other.slug}`
+    }
+  }
+  languages[locale] = `${siteUrl}/${locale}/academy/${category}/${post.slug}`
+
   return createMetadata({
     title: post.seoTitle ?? post.title,
     description: post.seoDescription ?? post.description,
@@ -48,6 +59,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       author: post.author,
       tags: post.tags,
     },
+    alternates: { languages },
     ...(post.canonicalUrl ? { canonical: post.canonicalUrl } : {}),
     ...(post.noindex ? { noindex: true } : {}),
   })

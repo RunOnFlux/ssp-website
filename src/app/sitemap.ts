@@ -46,11 +46,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
-  // Newsroom posts — per locale
+  // Newsroom posts — per locale, only emit when the post is genuinely translated
   for (const locale of routing.locales) {
     try {
       const newsroomPosts = await getAllPosts(locale)
-      for (const post of newsroomPosts) {
+      for (const post of newsroomPosts.filter(p => p.servedLocale === locale)) {
         entries.push({
           url: buildLocaleUrl(locale, `/newsroom/${post.slug}`),
           lastModified: new Date(post.modifiedDate ?? post.date),
@@ -63,11 +63,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
-  // Academy articles — slugs are locale-neutral (same category/slug structure across locales)
-  try {
-    const academySlugs = await getAcademySlugs('en')
-    for (const { category, slug } of academySlugs) {
-      for (const locale of routing.locales) {
+  // Academy articles — per locale, only emit when the post is genuinely translated
+  for (const locale of routing.locales) {
+    try {
+      const academySlugs = await getAcademySlugs(locale)
+      for (const { category, slug } of academySlugs) {
         entries.push({
           url: buildLocaleUrl(locale, `/academy/${category}/${slug}`),
           lastModified,
@@ -75,16 +75,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           priority: 0.7,
         })
       }
+    } catch {
+      // CMS unavailable — skip dynamic academy entries for this locale
     }
-  } catch {
-    // CMS unavailable — skip dynamic academy entries
   }
 
-  // Academy series — per locale
+  // Academy series — per locale, only emit when the series is genuinely translated
   for (const locale of routing.locales) {
     try {
       const allSeries = await getAllSeries(locale)
-      for (const series of allSeries) {
+      for (const series of allSeries.filter(s => s.servedLocale === locale)) {
         entries.push({
           url: buildLocaleUrl(locale, `/academy/series/${series.slug}`),
           lastModified: new Date(series.updatedAt),

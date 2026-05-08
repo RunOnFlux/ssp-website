@@ -3,7 +3,7 @@ import { notFound, permanentRedirect } from 'next/navigation'
 import Script from 'next/script'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { PostArticle } from '@/components/shared/post-article'
-import type { Locale } from '@/i18n/routing'
+import { routing, type Locale } from '@/i18n/routing'
 import { getAllSlugs, getPostBySlug, getRelatedPosts } from '@/lib/cms'
 import { createBlogPostingJsonLd, createBreadcrumbJsonLd, createMetadata, siteUrl } from '@/lib/seo'
 
@@ -25,6 +25,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { locale, slug } = await params
   const post = await getPostBySlug(slug, locale)
   if (!post) return {}
+
+  const languages: Record<string, string> = {}
+  for (const otherLocale of routing.locales) {
+    if (otherLocale === locale) continue
+    const other = await getPostBySlug(slug, otherLocale).catch(() => null)
+    if (other && other.servedLocale === otherLocale) {
+      languages[otherLocale] = `${siteUrl}/${otherLocale}/newsroom/${other.slug}`
+    }
+  }
+  languages[locale] = `${siteUrl}/${locale}/newsroom/${post.slug}`
+
   return createMetadata({
     title: post.seoTitle ?? post.title,
     description: post.seoDescription ?? post.description,
@@ -42,6 +53,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       author: post.author,
       tags: post.tags,
     },
+    alternates: { languages },
     ...(post.canonicalUrl ? { canonical: post.canonicalUrl } : {}),
     ...(post.noindex ? { noindex: true } : {}),
   })
