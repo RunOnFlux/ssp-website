@@ -2,7 +2,7 @@
 title: SSP Newsroom
 url: https://sspwallet.io/newsroom
 description: News, product updates, and announcements from SSP Wallet.
-last_reviewed: 2026-04-28
+last_reviewed: 2026-05-08
 ---
 
 # SSP Newsroom

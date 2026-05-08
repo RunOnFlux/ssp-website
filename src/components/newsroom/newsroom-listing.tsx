@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl'
 import { useMemo, useState } from 'react'
 import { NewsroomCard } from '@/components/newsroom/newsroom-card'
+import { LocaleBadge } from '@/components/shared/locale-badge'
 import type { NewsroomPost } from '@/types/newsroom'
 
 const POSTS_PER_PAGE = 6
@@ -59,7 +60,14 @@ export function NewsroomListing({ posts, tags }: { posts: NewsroomPost[]; tags: 
           <>
             <div className='grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8'>
               {visiblePosts.map(p => (
-                <NewsroomCard key={p.slug} post={p} />
+                <div key={p.slug} className='relative'>
+                  <NewsroomCard post={p} />
+                  {p.servedLocale !== p.locale && (
+                    <div className='absolute top-3 right-3'>
+                      <LocaleBadge locale={p.servedLocale} />
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
             {hasMore && (
