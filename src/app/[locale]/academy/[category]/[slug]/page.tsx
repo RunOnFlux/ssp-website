@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
+import { notFound, permanentRedirect } from 'next/navigation'
 import Script from 'next/script'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { AuthorByline } from '@/components/shared/author-byline'
@@ -73,6 +73,16 @@ export default async function AcademyArticlePage({ params }: PageProps) {
 
   const post = await getAcademyPostBySlug(slug, locale)
   if (!post) notFound()
+
+  if (post.section === 'newsroom') {
+    permanentRedirect(`/${locale}/newsroom/${post.slug}`)
+  }
+  if (post.category && post.category !== category) {
+    permanentRedirect(`/${locale}/academy/${post.category}/${post.slug}`)
+  }
+  if (post.slug !== slug) {
+    permanentRedirect(`/${locale}/academy/${category}/${post.slug}`)
+  }
 
   const [author, relatedPosts, tCategories, tAcademy, tCommon] = await Promise.all([
     post.authorId ? getAuthorBySlug(post.authorId) : Promise.resolve(null),
