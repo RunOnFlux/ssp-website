@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { PageHeader } from '@/components/header/page-header'
 import { NewsroomCard } from '@/components/newsroom/newsroom-card'
 import { Breadcrumbs } from '@/components/shared/breadcrumbs'
+import { LocaleBadge } from '@/components/shared/locale-badge'
 import { ACADEMY_CATEGORY_SLUGS, isAcademyCategory } from '@/constants/academy-categories'
 import { Link } from '@/i18n/navigation'
 import type { Locale } from '@/i18n/routing'
@@ -30,7 +31,7 @@ export async function generateMetadata({
       path: '/academy',
     })
   }
-  const tCategories = await getTranslations({ locale, namespace: 'Academy.categories' })
+  const tCategories = await getTranslations({ locale, namespace: 'Categories' })
   const posts = await getAcademyPosts({ category, limit: 100 }, locale).catch(() => [])
   return createMetadata({
     title: `${tCategories(`${category}.title`)} | ${tAcademy('title')}`,
@@ -51,7 +52,7 @@ export default async function CategoryHubPage({
 
   const [tAcademy, tCategories, tCategoryIntros, tCommon, posts] = await Promise.all([
     getTranslations({ locale, namespace: 'Academy' }),
-    getTranslations({ locale, namespace: 'Academy.categories' }),
+    getTranslations({ locale, namespace: 'Categories' }),
     getTranslations({ locale, namespace: 'Academy.categoryIntros' }),
     getTranslations({ locale, namespace: 'Common' }),
     getAcademyPosts({ category, limit: 100 }, locale).catch(() => []),
@@ -106,7 +107,14 @@ export default async function CategoryHubPage({
         ) : (
           <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
             {posts.map(p => (
-              <NewsroomCard key={p.slug} post={p} href={`/academy/${category}/${p.slug}`} />
+              <div key={p.slug} className='relative'>
+                <NewsroomCard post={p} href={`/academy/${category}/${p.slug}`} />
+                {p.servedLocale !== p.locale && (
+                  <div className='absolute top-3 right-3'>
+                    <LocaleBadge locale={p.servedLocale} />
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         )}
