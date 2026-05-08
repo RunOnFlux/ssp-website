@@ -13,7 +13,9 @@
     "goHome": "返回首页",
     "errorTitle": "出错了",
     "errorDescription": "发生了意外错误。请尝试刷新页面或返回首页。",
-    "tryAgain": "重试"
+    "tryAgain": "重试",
+    "translationPendingBanner": "__TODO_TRANSLATE__ This article isn't translated yet — showing English.",
+    "localeBadge": { "en": "EN", "es": "ES", "zh": "ZH" }
   },
   "Header": {
     "home": "主页",

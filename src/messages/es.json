@@ -13,7 +13,9 @@
     "goHome": "Volver al inicio",
     "errorTitle": "Algo salió mal",
     "errorDescription": "Ha ocurrido un error inesperado. Intenta recargar la página o volver al inicio.",
-    "tryAgain": "Reintentar"
+    "tryAgain": "Reintentar",
+    "translationPendingBanner": "__TODO_TRANSLATE__ This article isn't translated yet — showing English.",
+    "localeBadge": { "en": "EN", "es": "ES", "zh": "ZH" }
   },
   "Header": {
     "home": "Inicio",
