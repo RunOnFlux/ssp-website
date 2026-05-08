@@ -1198,6 +1198,36 @@
     "tryAgain": "Try Again",
     "contactSupport": "Contact Support"
   },
+  "Categories": {
+    "multisig": {
+      "title": "Multisig Explained",
+      "description": "How 2-of-2 multisignature actually works in SSP — and why it matters."
+    },
+    "getting-started": {
+      "title": "Crypto Basics",
+      "description": "Foundational concepts every crypto user should know."
+    },
+    "security": {
+      "title": "Security & Self-Custody",
+      "description": "Protect your crypto: seeds, phishing, hardware, threat models."
+    },
+    "how-to": {
+      "title": "How-To Guides",
+      "description": "Step-by-step walkthroughs for common SSP tasks."
+    },
+    "coin-guides": {
+      "title": "Coin & Chain Guides",
+      "description": "Deep dives into individual coins and chains SSP supports."
+    },
+    "defi": {
+      "title": "DeFi & Account Abstraction",
+      "description": "Staking, lending, swaps, and ERC-4337 explained."
+    },
+    "news-explained": {
+      "title": "News & Industry Analysis",
+      "description": "Context and analysis on crypto news and regulation."
+    }
+  },
   "CaseStudies": {
     "breadcrumbLabel": "Case Studies",
     "fluxFoundation": {
