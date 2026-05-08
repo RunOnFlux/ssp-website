@@ -14,6 +14,8 @@ const basePost: NewsroomPost = {
   readTime: 3,
   tags: ['security', 'multisig'],
   section: 'newsroom',
+  locale: 'en',
+  servedLocale: 'en',
 }
 
 const baseAuthor: Author = {

@@ -17,6 +17,8 @@ const samplePost: NewsroomPost = {
   section: 'academy',
   category: 'multisig',
   difficulty: 'beginner',
+  locale: 'en',
+  servedLocale: 'en',
 }
 
 describe('buildAcademyArticleJsonLd', () => {
