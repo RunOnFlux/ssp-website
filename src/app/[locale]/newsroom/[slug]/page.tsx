@@ -54,10 +54,10 @@ export default async function NewsroomArticlePage({ params }: PageProps) {
   if (!post) notFound()
 
   if (post.section === 'academy' && post.category) {
-    permanentRedirect(`/academy/${post.category}/${post.slug}`)
+    permanentRedirect(`/${locale}/academy/${post.category}/${post.slug}`)
   }
   if (post.slug !== slug) {
-    permanentRedirect(`/newsroom/${post.slug}`)
+    permanentRedirect(`/${locale}/newsroom/${post.slug}`)
   }
 
   const relatedPosts = await getRelatedPosts(post)
@@ -89,7 +89,12 @@ export default async function NewsroomArticlePage({ params }: PageProps) {
       <Script id='breadcrumb-jsonld' type='application/ld+json'>
         {JSON.stringify(breadcrumbJsonLd)}
       </Script>
-      <PostArticle post={post} relatedPosts={relatedPosts} backHref='/newsroom' />
+      <PostArticle
+        post={post}
+        relatedPosts={relatedPosts}
+        backHref='/newsroom'
+        showTranslationPendingBanner={post.servedLocale !== post.locale}
+      />
     </>
   )
 }

@@ -10,6 +10,7 @@ import { NewsroomCard } from '@/components/newsroom/newsroom-card'
 import { Link } from '@/i18n/navigation'
 import { extractHeadings } from '@/lib/content-utils'
 import type { NewsroomPost } from '@/types/newsroom'
+import { TranslationPendingBanner } from './translation-pending-banner'
 
 function formatDate(d: string): string {
   return new Date(d).toLocaleDateString('en-US', {
@@ -26,6 +27,7 @@ interface PostArticleProps {
   backLabel?: string
   breadcrumb?: ReactNode
   content?: string
+  showTranslationPendingBanner?: boolean
 }
 
 export function PostArticle({
@@ -35,6 +37,7 @@ export function PostArticle({
   backLabel,
   breadcrumb,
   content,
+  showTranslationPendingBanner,
 }: PostArticleProps) {
   const t = useTranslations('Newsroom')
   const [linkCopied, setLinkCopied] = useState(false)
@@ -100,7 +103,15 @@ export function PostArticle({
         </div>
       </section>
 
-      <article className='container-custom my-12 grid grid-cols-1 gap-12 md:my-16 lg:my-24 lg:grid-cols-[200px_1fr]'>
+      <article
+        lang={post.servedLocale}
+        className='container-custom my-12 grid grid-cols-1 gap-12 md:my-16 lg:my-24 lg:grid-cols-[200px_1fr]'
+      >
+        {showTranslationPendingBanner && (
+          <div className='lg:col-span-2'>
+            <TranslationPendingBanner />
+          </div>
+        )}
         {headings.length > 0 && (
           <aside className='sticky top-24 hidden h-fit lg:block'>
             <h2 className='mb-3 text-sm font-semibold tracking-wide text-gray-500 uppercase dark:text-gray-400'>
