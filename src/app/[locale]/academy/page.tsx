@@ -3,6 +3,7 @@ import Script from 'next/script'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { PageHeader } from '@/components/header/page-header'
 import { NewsroomCard } from '@/components/newsroom/newsroom-card'
+import { LocaleBadge } from '@/components/shared/locale-badge'
 import { isAcademyCategory } from '@/constants/academy-categories'
 import { Link } from '@/i18n/navigation'
 import type { Locale } from '@/i18n/routing'
@@ -36,7 +37,7 @@ export default async function AcademyLandingPage({
     getAllSeries(locale).catch(() => []),
     getAcademyPosts({ limit: 12 }, locale).catch(() => []),
     getTranslations({ locale, namespace: 'Academy' }),
-    getTranslations({ locale, namespace: 'Academy.categories' }),
+    getTranslations({ locale, namespace: 'Categories' }),
     getTranslations({ locale, namespace: 'Common' }),
   ])
   const seriesList = allSeries.filter(s => s.postCount > 0)
@@ -115,11 +116,17 @@ export default async function AcademyLandingPage({
         ) : (
           <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
             {latest.map(p => (
-              <NewsroomCard
-                key={p.slug}
-                post={p}
-                href={p.category ? `/academy/${p.category}/${p.slug}` : `/newsroom/${p.slug}`}
-              />
+              <div key={p.slug} className='relative'>
+                <NewsroomCard
+                  post={p}
+                  href={p.category ? `/academy/${p.category}/${p.slug}` : `/newsroom/${p.slug}`}
+                />
+                {p.servedLocale !== p.locale && (
+                  <div className='absolute top-3 right-3'>
+                    <LocaleBadge locale={p.servedLocale} />
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         )}

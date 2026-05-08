@@ -2,7 +2,7 @@
 title: SSP Academy
 url: https://sspwallet.io/academy
 description: Guides, deep dives, and tutorials covering self-custody and SSP-specific topics.
-last_reviewed: 2026-04-28
+last_reviewed: 2026-05-08
 ---
 
 # SSP Academy
