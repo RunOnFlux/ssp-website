@@ -27,6 +27,7 @@ export async function GET(
       <guid>${siteUrl}/${locale}/newsroom/${p.slug}</guid>
       <pubDate>${new Date(p.date).toUTCString()}</pubDate>
       <description>${escapeXml(p.description)}</description>
+      <language>${p.servedLocale}</language>
     </item>`
     )
     .join('\n')
