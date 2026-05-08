@@ -5,6 +5,7 @@ import { PageHeader } from '@/components/header/page-header'
 import { NewsroomCard } from '@/components/newsroom/newsroom-card'
 import { isAcademyCategory } from '@/constants/academy-categories'
 import { Link } from '@/i18n/navigation'
+import type { Locale } from '@/i18n/routing'
 import { getAcademyPosts, getAllSeries, getCategories } from '@/lib/cms'
 import { createMetadata } from '@/lib/seo'
 import { buildAcademyBreadcrumbJsonLd } from '@/lib/seo-academy'
@@ -26,14 +27,14 @@ export async function generateMetadata({
 export default async function AcademyLandingPage({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: Promise<{ locale: Locale }>
 }) {
   const { locale } = await params
   setRequestLocale(locale)
   const [categories, allSeries, latest, t, tCategories, tCommon] = await Promise.all([
     getCategories().catch(() => []),
-    getAllSeries().catch(() => []),
-    getAcademyPosts({ limit: 12 }).catch(() => []),
+    getAllSeries(locale).catch(() => []),
+    getAcademyPosts({ limit: 12 }, locale).catch(() => []),
     getTranslations({ locale, namespace: 'Academy' }),
     getTranslations({ locale, namespace: 'Academy.categories' }),
     getTranslations({ locale, namespace: 'Common' }),

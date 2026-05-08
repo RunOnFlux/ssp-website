@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import type { Locale } from '@/i18n/routing'
 import { getAllPosts } from '@/lib/cms'
 import { siteName, siteUrl } from '@/lib/seo'
 
@@ -11,15 +12,19 @@ function escapeXml(s: string): string {
     .replace(/'/g, '&apos;')
 }
 
-export async function GET(): Promise<NextResponse> {
-  const posts = await getAllPosts()
+export async function GET(
+  _req: Request,
+  { params }: { params: Promise<{ locale: Locale }> }
+): Promise<NextResponse> {
+  const { locale } = await params
+  const posts = await getAllPosts(locale)
   const items = posts
     .map(
       p => `
     <item>
       <title>${escapeXml(p.title)}</title>
-      <link>${siteUrl}/newsroom/${p.slug}</link>
-      <guid>${siteUrl}/newsroom/${p.slug}</guid>
+      <link>${siteUrl}/${locale}/newsroom/${p.slug}</link>
+      <guid>${siteUrl}/${locale}/newsroom/${p.slug}</guid>
       <pubDate>${new Date(p.date).toUTCString()}</pubDate>
       <description>${escapeXml(p.description)}</description>
     </item>`
@@ -30,10 +35,10 @@ export async function GET(): Promise<NextResponse> {
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>${escapeXml(siteName)} Newsroom</title>
-    <link>${siteUrl}/newsroom</link>
+    <link>${siteUrl}/${locale}/newsroom</link>
     <description>Latest news, product updates, and announcements from SSP.</description>
-    <language>en-US</language>
-    <atom:link href="${siteUrl}/newsroom/rss.xml" rel="self" type="application/rss+xml" />
+    <language>${locale}</language>
+    <atom:link href="${siteUrl}/${locale}/newsroom/rss.xml" rel="self" type="application/rss+xml" />
     ${items}
   </channel>
 </rss>`

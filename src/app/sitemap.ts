@@ -46,11 +46,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
-  // Newsroom posts
-  try {
-    const newsroomPosts = await getAllPosts()
-    for (const post of newsroomPosts) {
-      for (const locale of routing.locales) {
+  // Newsroom posts — per locale
+  for (const locale of routing.locales) {
+    try {
+      const newsroomPosts = await getAllPosts(locale)
+      for (const post of newsroomPosts) {
         entries.push({
           url: buildLocaleUrl(locale, `/newsroom/${post.slug}`),
           lastModified: new Date(post.modifiedDate ?? post.date),
@@ -58,14 +58,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           priority: 0.6,
         })
       }
+    } catch {
+      // CMS unavailable — skip dynamic newsroom entries for this locale
     }
-  } catch {
-    // CMS unavailable — skip dynamic newsroom entries
   }
 
-  // Academy articles
+  // Academy articles — slugs are locale-neutral (same category/slug structure across locales)
   try {
-    const academySlugs = await getAcademySlugs()
+    const academySlugs = await getAcademySlugs('en')
     for (const { category, slug } of academySlugs) {
       for (const locale of routing.locales) {
         entries.push({
@@ -80,11 +80,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // CMS unavailable — skip dynamic academy entries
   }
 
-  // Academy series
-  try {
-    const allSeries = await getAllSeries()
-    for (const series of allSeries) {
-      for (const locale of routing.locales) {
+  // Academy series — per locale
+  for (const locale of routing.locales) {
+    try {
+      const allSeries = await getAllSeries(locale)
+      for (const series of allSeries) {
         entries.push({
           url: buildLocaleUrl(locale, `/academy/series/${series.slug}`),
           lastModified: new Date(series.updatedAt),
@@ -92,9 +92,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           priority: 0.6,
         })
       }
+    } catch {
+      // CMS unavailable — skip dynamic series entries for this locale
     }
-  } catch {
-    // CMS unavailable — skip dynamic series entries
   }
 
   // Author profiles

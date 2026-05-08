@@ -3,6 +3,7 @@ import Script from 'next/script'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { PageHeader } from '@/components/header/page-header'
 import { NewsroomListing } from '@/components/newsroom/newsroom-listing'
+import type { Locale } from '@/i18n/routing'
 import { getAllPosts, getAllTags } from '@/lib/cms'
 import { createBreadcrumbJsonLd, createCollectionPageJsonLd, createMetadata } from '@/lib/seo'
 
@@ -20,11 +21,11 @@ export async function generateMetadata({
   })
 }
 
-export default async function NewsroomPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function NewsroomPage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params
   setRequestLocale(locale)
   const [posts, tags, t, tCommon] = await Promise.all([
-    getAllPosts(),
+    getAllPosts(locale),
     getAllTags(),
     getTranslations({ locale, namespace: 'Newsroom' }),
     getTranslations({ locale, namespace: 'Common' }),

@@ -5,18 +5,19 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { NewsroomCard } from '@/components/newsroom/newsroom-card'
 import { Breadcrumbs } from '@/components/shared/breadcrumbs'
 import { Link } from '@/i18n/navigation'
+import type { Locale } from '@/i18n/routing'
 import { getSeriesBySlug } from '@/lib/cms'
 import { createMetadata, siteDescription } from '@/lib/seo'
 import { buildAcademyBreadcrumbJsonLd } from '@/lib/seo-academy'
 
 interface PageProps {
-  params: Promise<{ locale: string; slug: string }>
+  params: Promise<{ locale: Locale; slug: string }>
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale, slug } = await params
   const tAcademy = await getTranslations({ locale, namespace: 'Academy' })
-  const series = await getSeriesBySlug(slug).catch(() => undefined)
+  const series = await getSeriesBySlug(slug, locale).catch(() => undefined)
   if (!series) {
     return createMetadata({
       title: `${tAcademy('learningPaths')} | ${tAcademy('title')}`,
@@ -36,7 +37,7 @@ export default async function SeriesDetailPage({ params }: PageProps) {
   setRequestLocale(locale)
 
   const [series, tAcademy, tCommon] = await Promise.all([
-    getSeriesBySlug(slug).catch(() => undefined),
+    getSeriesBySlug(slug, locale).catch(() => undefined),
     getTranslations({ locale, namespace: 'Academy' }),
     getTranslations({ locale, namespace: 'Common' }),
   ])

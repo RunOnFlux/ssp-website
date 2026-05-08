@@ -7,6 +7,7 @@ import { NewsroomCard } from '@/components/newsroom/newsroom-card'
 import { Breadcrumbs } from '@/components/shared/breadcrumbs'
 import { ACADEMY_CATEGORY_SLUGS, isAcademyCategory } from '@/constants/academy-categories'
 import { Link } from '@/i18n/navigation'
+import type { Locale } from '@/i18n/routing'
 import { getAcademyPosts } from '@/lib/cms'
 import { createMetadata, siteDescription } from '@/lib/seo'
 import { buildAcademyBreadcrumbJsonLd } from '@/lib/seo-academy'
@@ -18,7 +19,7 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string; category: string }>
+  params: Promise<{ locale: Locale; category: string }>
 }): Promise<Metadata> {
   const { locale, category } = await params
   const tAcademy = await getTranslations({ locale, namespace: 'Academy' })
@@ -30,7 +31,7 @@ export async function generateMetadata({
     })
   }
   const tCategories = await getTranslations({ locale, namespace: 'Academy.categories' })
-  const posts = await getAcademyPosts({ category, limit: 100 }).catch(() => [])
+  const posts = await getAcademyPosts({ category, limit: 100 }, locale).catch(() => [])
   return createMetadata({
     title: `${tCategories(`${category}.title`)} | ${tAcademy('title')}`,
     description: tCategories(`${category}.description`),
@@ -42,7 +43,7 @@ export async function generateMetadata({
 export default async function CategoryHubPage({
   params,
 }: {
-  params: Promise<{ locale: string; category: string }>
+  params: Promise<{ locale: Locale; category: string }>
 }) {
   const { locale, category } = await params
   setRequestLocale(locale)
@@ -53,7 +54,7 @@ export default async function CategoryHubPage({
     getTranslations({ locale, namespace: 'Academy.categories' }),
     getTranslations({ locale, namespace: 'Academy.categoryIntros' }),
     getTranslations({ locale, namespace: 'Common' }),
-    getAcademyPosts({ category, limit: 100 }).catch(() => []),
+    getAcademyPosts({ category, limit: 100 }, locale).catch(() => []),
   ])
   const categoryTitle = tCategories(`${category}.title`)
   const categoryDescription = tCategories(`${category}.description`)

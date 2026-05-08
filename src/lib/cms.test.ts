@@ -24,7 +24,7 @@ describe('getAllPosts', () => {
   it('returns seed posts when CMS not configured', async () => {
     delete process.env.SSP_CMS_URL
     delete process.env.SSP_CMS_API_KEY
-    const posts = await getAllPosts()
+    const posts = await getAllPosts('en')
     expect(Array.isArray(posts)).toBe(true)
   })
 
@@ -32,7 +32,7 @@ describe('getAllPosts', () => {
     process.env.SSP_CMS_URL = 'https://cms.example.com'
     process.env.SSP_CMS_API_KEY = 'k'
     vi.spyOn(global, 'fetch').mockRejectedValue(new Error('network'))
-    const posts = await getAllPosts()
+    const posts = await getAllPosts('en')
     expect(Array.isArray(posts)).toBe(true)
   })
 
@@ -61,7 +61,7 @@ describe('getAllPosts', () => {
         { status: 200 }
       )
     )
-    const posts = await getAllPosts()
+    const posts = await getAllPosts('en')
     expect(posts[0].slug).toBe('cms-only')
   })
 })
@@ -69,7 +69,7 @@ describe('getAllPosts', () => {
 describe('getPostBySlug', () => {
   it('returns undefined for unknown slug (seed mode)', async () => {
     delete process.env.SSP_CMS_URL
-    expect(await getPostBySlug('not-a-slug')).toBeUndefined()
+    expect(await getPostBySlug('not-a-slug', 'en')).toBeUndefined()
   })
 })
 
@@ -101,7 +101,7 @@ describe('getAllTags', () => {
 describe('getAcademyPosts', () => {
   it('returns only academy section', async () => {
     delete process.env.SSP_CMS_URL
-    const posts = await getAcademyPosts()
+    const posts = await getAcademyPosts({}, 'en')
     expect(posts.every(p => p.section === 'academy')).toBe(true)
   })
 })
@@ -162,9 +162,59 @@ describe('withFallback (via getAllPosts)', () => {
     process.env.SSP_CMS_API_KEY = 'k'
     const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {})
     vi.spyOn(global, 'fetch').mockRejectedValue(new Error('network'))
-    await getAllPosts()
+    await getAllPosts('en')
     expect(warnSpy).toHaveBeenCalled()
     const firstCallArgs = warnSpy.mock.calls[0]
     expect(String(firstCallArgs[0])).toMatch(/cms.*allPosts/i)
+  })
+})
+
+describe('per-locale cache isolation', () => {
+  it('getAllPosts en and es make separate fetch calls', async () => {
+    process.env.SSP_CMS_URL = 'https://cms.example.com'
+    process.env.SSP_CMS_API_KEY = 'k'
+    const fetchSpy = vi
+      .spyOn(global, 'fetch')
+      .mockResolvedValue(new Response(JSON.stringify({ posts: [] }), { status: 200 }))
+    await getAllPosts('en')
+    await getAllPosts('es')
+    expect(fetchSpy).toHaveBeenCalledTimes(2)
+    expect(fetchSpy.mock.calls[0]?.[0]).toContain('locale=en')
+    expect(fetchSpy.mock.calls[1]?.[0]).toContain('locale=es')
+  })
+
+  it('getAllPosts en is cached on second call', async () => {
+    process.env.SSP_CMS_URL = 'https://cms.example.com'
+    process.env.SSP_CMS_API_KEY = 'k'
+    const fetchSpy = vi
+      .spyOn(global, 'fetch')
+      .mockResolvedValue(new Response(JSON.stringify({ posts: [] }), { status: 200 }))
+    await getAllPosts('en')
+    await getAllPosts('en')
+    expect(fetchSpy).toHaveBeenCalledTimes(1)
+  })
+
+  it('getPostBySlug en and es with same slug make separate calls', async () => {
+    process.env.SSP_CMS_URL = 'https://cms.example.com'
+    process.env.SSP_CMS_API_KEY = 'k'
+    const fetchSpy = vi.spyOn(global, 'fetch').mockResolvedValue(
+      new Response(JSON.stringify({ slug: 'x', title: 't', locale: 'en', servedLocale: 'en' }), {
+        status: 200,
+      })
+    )
+    await getPostBySlug('x', 'en')
+    await getPostBySlug('x', 'es')
+    expect(fetchSpy).toHaveBeenCalledTimes(2)
+  })
+})
+
+describe('seed-loader fallback stamps locale', () => {
+  it('marks posts with servedLocale=en when backend down on non-EN', async () => {
+    delete process.env.SSP_CMS_URL // forces seed fallback
+    const posts = await getAllPosts('es')
+    for (const p of posts) {
+      expect(p.locale).toBe('es')
+      expect(p.servedLocale).toBe('en')
+    }
   })
 })

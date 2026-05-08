@@ -1,6 +1,7 @@
 import { LRUCache } from 'lru-cache'
 import type { AcademyCategory } from '@/constants/academy-categories'
 import { ACADEMY_CATEGORY_SLUGS } from '@/constants/academy-categories'
+import type { Locale } from '@/i18n/routing'
 import type {
   NewsroomPost,
   CategoryWithCount,
@@ -49,30 +50,37 @@ function unwrapPosts(r: NewsroomPost[] | { posts: NewsroomPost[] }): NewsroomPos
 
 // ---- Newsroom ----
 
-export async function getAllPosts(): Promise<NewsroomPost[]> {
+export async function getAllPosts(locale: Locale): Promise<NewsroomPost[]> {
   return withFallback(
-    'allPosts',
+    `allPosts:${locale}`,
     async () =>
       unwrapPosts(
         await cmsFetch<NewsroomPost[] | { posts: NewsroomPost[] }>(
-          '/api/v1/posts?section=newsroom&limit=100'
+          '/api/v1/posts?section=newsroom&limit=100',
+          { locale }
         )
       ),
-    async () => (await loadAllSeedPosts()).filter(p => p.section === 'newsroom')
+    async () => (await loadAllSeedPosts({ locale })).filter(p => p.section === 'newsroom')
   )
 }
 
-export async function getPostBySlug(slug: string): Promise<NewsroomPost | undefined> {
+export async function getPostBySlug(
+  slug: string,
+  locale: Locale
+): Promise<NewsroomPost | undefined> {
   return withFallback(
-    `post:${slug}`,
+    `post:${locale}:${slug}`,
     async () => {
       try {
-        return await cmsFetch<NewsroomPost>(`/api/v1/posts/${encodeURIComponent(slug)}`, 300)
+        return await cmsFetch<NewsroomPost>(`/api/v1/posts/${encodeURIComponent(slug)}`, {
+          revalidate: 300,
+          locale,
+        })
       } catch {
         return undefined
       }
     },
-    async () => loadSeedPostBySlug(slug)
+    async () => loadSeedPostBySlug(slug, { locale })
   )
 }
 
@@ -84,8 +92,8 @@ export async function getAllTags(): Promise<string[]> {
   )
 }
 
-export async function getAllSlugs(): Promise<string[]> {
-  return (await getAllPosts()).map(p => p.slug)
+export async function getAllSlugs(locale: Locale): Promise<string[]> {
+  return (await getAllPosts(locale)).map(p => p.slug)
 }
 
 // ---- Academy ----
@@ -98,8 +106,11 @@ export interface AcademyFilters {
   limit?: number
 }
 
-export async function getAcademyPosts(filters: AcademyFilters = {}): Promise<NewsroomPost[]> {
-  const key = `academy:${JSON.stringify(filters)}`
+export async function getAcademyPosts(
+  filters: AcademyFilters = {},
+  locale: Locale
+): Promise<NewsroomPost[]> {
+  const key = `academy:${locale}:${JSON.stringify(filters)}`
   return withFallback(
     key,
     async () => {
@@ -110,11 +121,13 @@ export async function getAcademyPosts(filters: AcademyFilters = {}): Promise<New
       if (filters.featured) qs.set('featured', 'true')
       if (filters.limit) qs.set('limit', String(filters.limit))
       return unwrapPosts(
-        await cmsFetch<NewsroomPost[] | { posts: NewsroomPost[] }>(`/api/v1/posts?${qs}`)
+        await cmsFetch<NewsroomPost[] | { posts: NewsroomPost[] }>(`/api/v1/posts?${qs}`, {
+          locale,
+        })
       )
     },
     async () => {
-      let posts = (await loadAllSeedPosts()).filter(p => p.section === 'academy')
+      let posts = (await loadAllSeedPosts({ locale })).filter(p => p.section === 'academy')
       if (filters.category) posts = posts.filter(p => p.category === filters.category)
       if (filters.difficulty) posts = posts.filter(p => p.difficulty === filters.difficulty)
       if (filters.series) posts = posts.filter(p => p.seriesSlug === filters.series)
@@ -125,12 +138,17 @@ export async function getAcademyPosts(filters: AcademyFilters = {}): Promise<New
   )
 }
 
-export async function getAcademyPostBySlug(slug: string): Promise<NewsroomPost | undefined> {
-  return getPostBySlug(slug)
+export async function getAcademyPostBySlug(
+  slug: string,
+  locale: Locale
+): Promise<NewsroomPost | undefined> {
+  return getPostBySlug(slug, locale)
 }
 
-export async function getAcademySlugs(): Promise<Array<{ category: string; slug: string }>> {
-  const posts = await getAcademyPosts({ limit: 1000 })
+export async function getAcademySlugs(
+  locale: Locale
+): Promise<Array<{ category: string; slug: string }>> {
+  const posts = await getAcademyPosts({ limit: 1000 }, locale)
   return posts.filter(p => p.category).map(p => ({ category: p.category as string, slug: p.slug }))
 }
 
@@ -150,20 +168,26 @@ export async function getCategories(): Promise<CategoryWithCount[]> {
   )
 }
 
-export async function getAllSeries(): Promise<SeriesSummary[]> {
+export async function getAllSeries(locale: Locale): Promise<SeriesSummary[]> {
   return withFallback(
-    'series',
-    async () => cmsFetch<SeriesSummary[]>('/api/v1/series'),
+    `series:${locale}`,
+    async () => cmsFetch<SeriesSummary[]>('/api/v1/series', { locale }),
     async () => []
   )
 }
 
-export async function getSeriesBySlug(slug: string): Promise<SeriesDetail | undefined> {
+export async function getSeriesBySlug(
+  slug: string,
+  locale: Locale
+): Promise<SeriesDetail | undefined> {
   return withFallback(
-    `series:${slug}`,
+    `series:${locale}:${slug}`,
     async () => {
       try {
-        return await cmsFetch<SeriesDetail>(`/api/v1/series/${encodeURIComponent(slug)}`, 300)
+        return await cmsFetch<SeriesDetail>(`/api/v1/series/${encodeURIComponent(slug)}`, {
+          revalidate: 300,
+          locale,
+        })
       } catch {
         return undefined
       }
@@ -173,18 +197,19 @@ export async function getSeriesBySlug(slug: string): Promise<SeriesDetail | unde
 }
 
 export async function getRelatedPosts(post: NewsroomPost, limit = 3): Promise<NewsroomPost[]> {
+  const locale = post.locale
   if (post.relatedSlugs && post.relatedSlugs.length > 0) {
-    const found = await Promise.all(post.relatedSlugs.map(s => getPostBySlug(s)))
+    const found = await Promise.all(post.relatedSlugs.map(s => getPostBySlug(s, locale)))
     return found.filter((p): p is NewsroomPost => !!p).slice(0, limit)
   }
   if (post.section === 'academy' && post.category) {
-    const siblings = await getAcademyPosts({
-      category: post.category as AcademyCategory,
-      limit: limit + 1,
-    })
+    const siblings = await getAcademyPosts(
+      { category: post.category as AcademyCategory, limit: limit + 1 },
+      locale
+    )
     return siblings.filter(p => p.slug !== post.slug).slice(0, limit)
   }
-  const all = await getAllPosts()
+  const all = await getAllPosts(locale)
   return all.filter(p => p.slug !== post.slug).slice(0, limit)
 }
 
@@ -212,8 +237,8 @@ export async function getAuthorBySlug(slugOrId: string): Promise<Author | null> 
   )
 }
 
-export async function getPostsByAuthor(authorId: string): Promise<NewsroomPost[]> {
-  return (await getAllPosts()).filter(p => p.authorId === authorId)
+export async function getPostsByAuthor(authorId: string, locale: Locale): Promise<NewsroomPost[]> {
+  return (await getAllPosts(locale)).filter(p => p.authorId === authorId)
 }
 
 export { extractHeadings } from './content-utils'

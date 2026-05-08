@@ -6,6 +6,7 @@ import { AuthorByline } from '@/components/shared/author-byline'
 import { Breadcrumbs } from '@/components/shared/breadcrumbs'
 import { PostArticle } from '@/components/shared/post-article'
 import { isAcademyCategory } from '@/constants/academy-categories'
+import type { Locale } from '@/i18n/routing'
 import { getTermMap } from '@/lib/academy-terms'
 import { getAcademyPostBySlug, getAcademySlugs, getAuthorBySlug, getRelatedPosts } from '@/lib/cms'
 import { autoLinkContent } from '@/lib/glossary-linker'
@@ -13,12 +14,13 @@ import { createMetadata, siteUrl } from '@/lib/seo'
 import { buildAcademyArticleJsonLd, buildAcademyBreadcrumbJsonLd } from '@/lib/seo-academy'
 
 interface PageProps {
-  params: Promise<{ locale: string; category: string; slug: string }>
+  params: Promise<{ locale: Locale; category: string; slug: string }>
 }
 
-export async function generateStaticParams() {
+export async function generateStaticParams({ params }: { params: Promise<{ locale: Locale }> }) {
+  const { locale } = await params
   try {
-    const slugs = await getAcademySlugs()
+    const slugs = await getAcademySlugs(locale)
     return slugs
   } catch {
     return []
@@ -26,8 +28,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { category, slug } = await params
-  const post = await getAcademyPostBySlug(slug)
+  const { locale, category, slug } = await params
+  const post = await getAcademyPostBySlug(slug, locale)
   if (!post) return {}
   return createMetadata({
     title: post.seoTitle ?? post.title,
@@ -57,7 +59,7 @@ export default async function AcademyArticlePage({ params }: PageProps) {
 
   if (!isAcademyCategory(category)) notFound()
 
-  const post = await getAcademyPostBySlug(slug)
+  const post = await getAcademyPostBySlug(slug, locale)
   if (!post) notFound()
 
   const [author, relatedPosts, tCategories, tAcademy, tCommon] = await Promise.all([

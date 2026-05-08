@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { PageHeader } from '@/components/header/page-header'
 import { Breadcrumbs } from '@/components/shared/breadcrumbs'
 import { Link } from '@/i18n/navigation'
+import type { Locale } from '@/i18n/routing'
 import { getAllSeries } from '@/lib/cms'
 import { createMetadata } from '@/lib/seo'
 import { buildAcademyBreadcrumbJsonLd } from '@/lib/seo-academy'
@@ -22,11 +23,11 @@ export async function generateMetadata({
   })
 }
 
-export default async function SeriesIndexPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function SeriesIndexPage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params
   setRequestLocale(locale)
   const [allSeries, tAcademy, tCommon] = await Promise.all([
-    getAllSeries().catch(() => []),
+    getAllSeries(locale).catch(() => []),
     getTranslations({ locale, namespace: 'Academy' }),
     getTranslations({ locale, namespace: 'Common' }),
   ])

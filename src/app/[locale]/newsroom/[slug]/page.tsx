@@ -3,16 +3,18 @@ import { notFound, permanentRedirect } from 'next/navigation'
 import Script from 'next/script'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { PostArticle } from '@/components/shared/post-article'
+import type { Locale } from '@/i18n/routing'
 import { getAllSlugs, getPostBySlug, getRelatedPosts } from '@/lib/cms'
 import { createBlogPostingJsonLd, createBreadcrumbJsonLd, createMetadata, siteUrl } from '@/lib/seo'
 
 interface PageProps {
-  params: Promise<{ locale: string; slug: string }>
+  params: Promise<{ locale: Locale; slug: string }>
 }
 
-export async function generateStaticParams() {
+export async function generateStaticParams({ params }: { params: Promise<{ locale: Locale }> }) {
+  const { locale } = await params
   try {
-    const slugs = await getAllSlugs()
+    const slugs = await getAllSlugs(locale)
     return slugs.map(slug => ({ slug }))
   } catch {
     return []
@@ -20,8 +22,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params
-  const post = await getPostBySlug(slug)
+  const { locale, slug } = await params
+  const post = await getPostBySlug(slug, locale)
   if (!post) return {}
   return createMetadata({
     title: post.seoTitle ?? post.title,
@@ -48,7 +50,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function NewsroomArticlePage({ params }: PageProps) {
   const { locale, slug } = await params
   setRequestLocale(locale)
-  const post = await getPostBySlug(slug)
+  const post = await getPostBySlug(slug, locale)
   if (!post) notFound()
 
   if (post.section === 'academy' && post.category) {
