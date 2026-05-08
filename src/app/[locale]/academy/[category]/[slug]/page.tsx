@@ -117,6 +117,7 @@ export default async function AcademyArticlePage({ params }: PageProps) {
         backLabel={tAcademy('backToCategory', { category: categoryTitle })}
         breadcrumb={breadcrumb}
         content={linkedContent}
+        showTranslationPendingBanner={post.servedLocale !== post.locale}
       />
     </>
   )
