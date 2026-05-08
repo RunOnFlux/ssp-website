@@ -1,6 +1,6 @@
-import { describe, it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import { NextIntlClientProvider } from 'next-intl'
+import { describe, it, expect } from 'vitest'
 import { TranslationPendingBanner } from './translation-pending-banner'
 
 const messages = {

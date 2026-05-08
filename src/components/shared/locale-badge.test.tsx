@@ -1,6 +1,6 @@
-import { describe, it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import { NextIntlClientProvider } from 'next-intl'
+import { describe, it, expect } from 'vitest'
 import { LocaleBadge } from './locale-badge'
 
 const messages = { Common: { localeBadge: { en: 'EN', es: 'ES', zh: 'ZH' } } }
