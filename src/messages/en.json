@@ -15,7 +15,22 @@
     "errorDescription": "An unexpected error occurred. Try refreshing the page or returning home.",
     "tryAgain": "Try again",
     "translationPendingBanner": "This article isn't translated yet — showing English.",
-    "localeBadge": { "en": "EN", "es": "ES", "zh": "ZH" }
+    "localeBadge": {
+      "en": "EN",
+      "es": "ES",
+      "zh": "中",
+      "pt-BR": "PT",
+      "ru": "RU",
+      "tr": "TR",
+      "ja": "日",
+      "de": "DE",
+      "fr": "FR",
+      "it": "IT",
+      "pl": "PL",
+      "ko": "한",
+      "vi": "VI",
+      "id": "ID"
+    }
   },
   "Header": {
     "home": "Home",

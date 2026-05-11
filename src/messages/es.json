@@ -15,7 +15,22 @@
     "errorDescription": "Ha ocurrido un error inesperado. Intenta recargar la página o volver al inicio.",
     "tryAgain": "Reintentar",
     "translationPendingBanner": "Este artículo aún no está traducido — mostrando en inglés.",
-    "localeBadge": { "en": "EN", "es": "ES", "zh": "ZH" }
+    "localeBadge": {
+      "en": "EN",
+      "es": "ES",
+      "zh": "中",
+      "pt-BR": "PT",
+      "ru": "RU",
+      "tr": "TR",
+      "ja": "日",
+      "de": "DE",
+      "fr": "FR",
+      "it": "IT",
+      "pl": "PL",
+      "ko": "한",
+      "vi": "VI",
+      "id": "ID"
+    }
   },
   "Header": {
     "home": "Inicio",

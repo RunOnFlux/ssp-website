@@ -18,7 +18,18 @@
     "localeBadge": {
       "en": "EN",
       "es": "ES",
-      "zh": "ZH"
+      "zh": "中",
+      "pt-BR": "PT",
+      "ru": "RU",
+      "tr": "TR",
+      "ja": "日",
+      "de": "DE",
+      "fr": "FR",
+      "it": "IT",
+      "pl": "PL",
+      "ko": "한",
+      "vi": "VI",
+      "id": "ID"
     }
   },
   "Header": {
