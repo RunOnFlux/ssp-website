@@ -1,0 +1,1839 @@
+{
+  "Common": {
+    "skipToContent": "İçeriğe geç",
+    "loading": "Yükleniyor…",
+    "error": "Bir şeyler yanlış gitti.",
+    "retry": "Tekrar dene",
+    "readMore": "Devamını oku",
+    "breadcrumbHome": "Ana Sayfa",
+    "breadcrumbAriaLabel": "Breadcrumb",
+    "websiteAriaLabel": "Web Sitesi",
+    "notFoundTitle": "Sayfa bulunamadı",
+    "notFoundDescription": "Aradığınız sayfa mevcut değil veya taşındı.",
+    "goHome": "Ana sayfaya git",
+    "errorTitle": "Bir şeyler yanlış gitti",
+    "errorDescription": "Beklenmedik bir hata oluştu. Sayfayı yenilemeyi veya ana sayfaya dönmeyi deneyin.",
+    "tryAgain": "Tekrar dene",
+    "translationPendingBanner": "Bu makale henüz çevrilmedi — İngilizce gösteriliyor.",
+    "localeBadge": {
+      "en": "EN",
+      "es": "ES",
+      "zh": "ZH"
+    }
+  },
+  "Header": {
+    "home": "Ana Sayfa",
+    "enterprise": "Enterprise",
+    "features": "Özellikler",
+    "newsroom": "Basın Odası",
+    "academy": "Academy",
+    "guide": "Kılavuz",
+    "support": "Destek",
+    "contact": "İletişim",
+    "more": "Daha fazla",
+    "download": "İndir",
+    "toggleTheme": "Temayı değiştir",
+    "toggleMenu": "Menüyü aç/kapat",
+    "selectLanguage": "Dil seçin"
+  },
+  "Footer": {
+    "navigation": "Gezinme",
+    "product": "Ürün",
+    "learn": "Öğren",
+    "community": "Topluluk",
+    "legal": "Hukuki",
+    "supportedChains": "Desteklenen Zincirler",
+    "rssFeed": "RSS Beslemesi",
+    "cookieSettings": "Çerez Ayarları",
+    "rights": "Tüm hakları saklıdır.",
+    "builtForWeb3": "Web3 için ❤️ ile yapıldı",
+    "poweredByFlux": "Flux tarafından destekleniyor",
+    "brandDescription": "Güvenli, Basit, Güçlü. SSP; birden fazla blok zinciri için Account Abstraction destekli, çığır açan, açık kaynaklı, öz saklama, BIP48 multi-signature tarayıcı cüzdanıdır.",
+    "links": {
+      "home": "Ana Sayfa",
+      "features": "Özellikler",
+      "guide": "Kılavuz",
+      "support": "Destek",
+      "contact": "İletişim",
+      "enterprise": "Enterprise",
+      "download": "İndir",
+      "mobileSspKey": "Mobil SSP Key",
+      "sspEnterprise": "SSP Enterprise",
+      "securityAudits": "Güvenlik Denetimleri",
+      "documentation": "Belgeler",
+      "github": "GitHub",
+      "discord": "Discord",
+      "twitter": "Twitter",
+      "medium": "Medium",
+      "youtube": "YouTube",
+      "helpTranslate": "Çeviriye Yardım Et",
+      "newsroom": "Basın Odası",
+      "academy": "Academy",
+      "multisigExplained": "Multisig Açıklaması",
+      "security": "Güvenlik",
+      "gettingStarted": "Başlarken",
+      "rssFeed": "RSS Beslemesi",
+      "privacyPolicy": "Gizlilik Politikası",
+      "termsOfService": "Kullanım Koşulları",
+      "cookiePolicy": "Çerez Politikası"
+    },
+    "fluxAlt": "Flux"
+  },
+  "Home": {
+    "metaTitle": "SSP Wallet — Güvenli, Basit, Güçlü Kripto Cüzdanı",
+    "metaDescription": "Gerçek 2-of-2 multisig kripto cüzdanı. Her işlem için tarayıcı uzantısı + mobil gereklidir. Bitcoin, Ethereum ve 15+ blok zincirini destekler.",
+    "hero": {
+      "auditedBadge": "Halborn Tarafından Güvenlik Denetiminden Geçirildi",
+      "titleSecure": "Güvenli",
+      "titleSimple": "Basit",
+      "titlePowerful": "Güçlü",
+      "description": "Her işlem için hem tarayıcı uzantınızı hem de mobil cihazınızı gerektiren BIP48 türetmeli gerçek 2-of-2 multisig cüzdanı. WalletConnect v2, Schnorr imzalı ERC-4337 Account Abstraction ve 15+ blok zinciri desteği.",
+      "featureMultisig": "Gerçek 2-of-2 Multisig",
+      "featureBlockchains": "15+ Blok Zinciri",
+      "featureZeroStorage": "Sıfır Veri Depolama",
+      "getStarted": "Hemen Başlayın",
+      "watchDemo": "Demoyu İzle",
+      "statSupportedChains": "Desteklenen Zincirler",
+      "statActiveUsers": "Aktif Kullanıcılar",
+      "statSecurityAudits": "Güvenlik Denetimleri",
+      "animationAlt": "SSP Wallet Animasyonu",
+      "closeModal": "Pencereyi kapat",
+      "videoUnsupported": "Tarayıcınız video etiketini desteklemiyor."
+    },
+    "features": {
+      "titlePart1": "Neden",
+      "titleHighlight": "SSP Wallet",
+      "titleSuffix": "Seçmelisiniz?",
+      "description": "Tek kapsamlı kripto cüzdanı çözümünde güvenlik, sadelik ve gücün mükemmel bileşimini deneyimleyin.",
+      "items": {
+        "0": {
+          "title": "Güvenli 2-of-2 Multisig",
+          "description": "Her işlem için hem tarayıcı uzantısı hem de mobil cihaz imzalarını gerektiren gelişmiş BIP48 türetme ile gerçek iki faktörlü kimlik doğrulama. Çift cihaz korumasıyla maksimum güvenlik."
+        },
+        "1": {
+          "title": "Basit Ama Gelişmiş",
+          "description": "Karmaşık çok varlıklı multisig teknolojisi basitleştirildi. Gelişmiş BIP48 güvenliği ve Account Abstraction, herkesin kullanabileceği sezgisel bir arayüzle sunuluyor."
+        },
+        "2": {
+          "title": "Güçlü dApp Etkileşimi",
+          "description": "WalletConnect v2 (Reown) desteği, EIP-712 mesaj imzalama ve tüm EVM zincirleri ile DeFi protokollerinde gerçek zamanlı iletişimle binlerce dApp'e bağlanın."
+        },
+        "3": {
+          "title": "Çok Zincirli Destek",
+          "description": "Bitcoin, Ethereum, Polygon, BSC, Avalanche, Base ve daha fazlası dahil 15+ blok zinciri desteği. Ethereum'da EOA olmaksızın akıllı sözleşme cüzdanlarına olanak tanıyan yerel Schnorr multisig Account Abstraction (ERC-4337) ile ilk cüzdan."
+        },
+        "4": {
+          "title": "Sıfır Veri Depolama",
+          "description": "Sıfır sunucu taraflı veri depolamalı tam öz saklama. Özel anahtarlar, tohumlar ve işlemler, maksimum güvenlik ve gizlilik için askeri düzeyde AES-GCM şifreleme ve cihaz parmak izi kullanılarak yalnızca cihazlarınızda kalır."
+        },
+        "5": {
+          "title": "Al, Sat ve Takas Et",
+          "description": "Kripto para birimlerini doğrudan kredi kartları veya banka havalesiyle satın alın, kriptoyu fiat para birimine geri satın ve cüzdan içinde farklı kripto para birimleri arasında sorunsuz takas yapın. En iyi kurlar ve seçenekler için birden fazla sağlayıcının toplu motoruyla desteklenmektedir."
+        }
+      },
+      "futureTitlePart1": "Finansın",
+      "futureTitleHighlight": "Geleceği İçin",
+      "highlights": {
+        "0": {
+          "title": "Gelişmiş Güvenlik",
+          "description": "Askeri düzeyde şifreleme ve multi-signature teknolojisi varlıklarınızı korur"
+        },
+        "1": {
+          "title": "Sorunsuz Deneyim",
+          "description": "Sezgisel arayüz kripto'yu herkese erişilebilir kılar"
+        },
+        "2": {
+          "title": "Açık Kaynak",
+          "description": "Güvenebileceğiniz ve doğrulayabileceğiniz şeffaf, denetlenmiş kod"
+        }
+      },
+      "demoTitle": "SSP Wallet İnteraktif Demosunu Deneyin",
+      "demoDescription": "Eksiksiz kurulum ve işlem akışını deneyimleyin",
+      "launchDemo": "İnteraktif Demoyu Başlat",
+      "demoFooter": "Kurulum gerekmez • 3 dakikalık deneyim"
+    },
+    "security": {
+      "badge": "Önce Güvenlik Yaklaşımı",
+      "titleHighlight": "Banka Düzeyinde Güvenlik",
+      "titleSuffix": "Güvenebileceğiniz",
+      "description": "Güvenliğimiz önde gelen güvenlik firmaları tarafından bağımsız olarak doğrulanmakta ve denetlenmektedir. Varlıklarınız askeri düzeyde şifreleme ve son teknoloji ile korunmaktadır.",
+      "items": {
+        "0": {
+          "title": "Güvenlik Denetimli",
+          "description": "Tüm kritik bileşenler için Halborn tarafından kapsamlı güvenlik denetimleri",
+          "highlight": "Halborn Sertifikalı"
+        },
+        "1": {
+          "title": "BIP48 Multisig",
+          "description": "Cihaz parmak izi ve AES-GCM şifrelemelili BIP48 türetme kullanan gerçek 2-of-2 multisig",
+          "highlight": "Kriptografik Olarak Güvenli"
+        },
+        "2": {
+          "title": "Açık Kaynak ve Deterministik",
+          "description": "Deterministik derlemelerle şeffaf kod — herkes dağıtılan cüzdanın kaynak kodla tam olarak eşleştiğini doğrulayabilir",
+          "highlight": "Tamamen Doğrulanabilir"
+        },
+        "3": {
+          "title": "Sıfır Veri Depolama",
+          "description": "Cihaz parmak izli PBKDF2 tabanlı şifreleme, yerel olarak depolanan tüm verilerinizin son derece güvenli olmasını sağlar. Hiçbir şey sunuculara dokunmaz.",
+          "highlight": "Yalnızca Öz Saklama"
+        }
+      },
+      "auditTitlePart1": "Bağımsız Olarak",
+      "auditTitleHighlight": "Güvenlik Denetiminden Geçirildi",
+      "auditDescription": "SSP ekosisteminin tüm kritik bileşenleri, tanınmış bir blok zinciri güvenlik firması olan Halborn tarafından kapsamlı güvenlik denetimlerinden geçirilmiştir. Şeffaflığa olan bağlılığımız, tüm denetim raporlarının kamuya açık olduğu anlamına gelmektedir.",
+      "indicators": {
+        "0": "Sektör Lideri En İyi Uygulamalar",
+        "1": "En Üst Güvenlik Standartlarına Göre Mühendislik",
+        "2": "Sürekli Güvenlik İzleme"
+      },
+      "auditedByHalborn": "Halborn Tarafından Denetlendi",
+      "recentReportsTitle": "Son Denetim Raporları",
+      "viewReport": "Raporu Görüntüle",
+      "reports": {
+        "0": {
+          "title": "SSP Wallet, Key ve Relay Denetimi",
+          "date": "Mart 2025",
+          "status": "Tamamlandı"
+        },
+        "1": {
+          "title": "Akıllı Sözleşmeler Denetimi",
+          "date": "Şubat 2025",
+          "status": "Tamamlandı"
+        },
+        "2": {
+          "title": "SDK Güvenlik Denetimi",
+          "date": "Şubat 2025",
+          "status": "Tamamlandı"
+        }
+      },
+      "bugBountyPrefix": "Güvenlik Hata Ödülü:",
+      "bugBountyText": "Güvenlik açıklarının sorumlu bir şekilde ifşa edilmesi için ödüller sunuyoruz. SSP'yi güvenli tutmamıza yardımcı olun.",
+      "lavaMoatTitleHighlight": "LavaMoat",
+      "lavaMoatTitleSuffix": "Çalışma Zamanı Koruması",
+      "lavaMoatDescription": "SSP Wallet, tedarik zinciri saldırılarına karşı koruyan bir güvenlik çerçevesi olan LavaMoat'ı entegre eder. LavaMoat her bağımlılığı bölmelere sarar ve yalnızca ihtiyaç duydukları şeylere erişim verir; böylece kötü amaçlı kodun sırları çalmasını veya cüzdanınızı tehlikeye atmasını önler.",
+      "lavaIndicators": {
+        "0": "SES Bölmelerine Sarılmış Paketler",
+        "1": "Paket Başına Sınırlı Platform Erişimi",
+        "2": "JavaScript İlksellerinin Değiştirilmesini Önler"
+      },
+      "learnLavaMoat": "LavaMoat Hakkında Öğren",
+      "protectionLayersTitle": "Koruma Katmanları",
+      "layers": {
+        "0": {
+          "title": "Paket Bölmeleri",
+          "description": "Her paket kendi bölmesinde çalışır; hassas kaynaklara yetkisiz erişimi önler"
+        },
+        "1": {
+          "title": "Politika Uygulaması",
+          "description": "Politika dosyaları her paketin hangi kaynaklara erişebileceğini tam olarak tanımlar"
+        },
+        "2": {
+          "title": "Tedarik Zinciri Savunması",
+          "description": "Kötü amaçlı eylemler gerçekleştirmeye çalışan ele geçirilmiş bağımlılıklara karşı korur"
+        },
+        "3": {
+          "title": "Çalışma Zamanı İzleme",
+          "description": "Sürekli uygulama, güvenlik politikalarının çalışma zamanında aktif kalmasını sağlar"
+        }
+      },
+      "deterministicTitleHighlight": "Deterministik Derlemeler",
+      "deterministicTitleSuffix": "Nihai Güven İçin",
+      "deterministicDescription": "SSP Wallet, Docker kullanan deterministik derlemeler içerir. Bu, özdeş kaynak kodunun özdeş ikili dosyalar ürettiği anlamına gelir; bu sayede herkes indirdiğiniz cüzdanın yayımlanan kaynak koddan oluşturulanla tam olarak eşleştiğini bağımsız olarak doğrulayabilir.",
+      "detIndicators": {
+        "0": "Docker Tabanlı Yalıtılmış Derleme Ortamı",
+        "1": "Kriptografik Olarak İmzalanmış Sürüm Sağlama Toplamları",
+        "2": "Tedarik Zinciri Saldırı Vektörlerini Ortadan Kaldırır"
+      },
+      "learnVerify": "Nasıl Doğrulayacağınızı Öğrenin",
+      "verificationProcessTitle": "Doğrulama Süreci",
+      "verifySteps": {
+        "0": {
+          "title": "Sürüm Dosyalarını İndir",
+          "description": "Uzantı dosyalarını, SHA256SUMS'u ve GPG imzasını GitHub sürümlerinden alın"
+        },
+        "1": {
+          "title": "GPG İmzasını Doğrula",
+          "description": "OpenPGP anahtar sunucusundan açık anahtarımızı içe aktarın ve imzalanmış sağlama toplamlarını doğrulayın"
+        },
+        "2": {
+          "title": "Dosya Hash'lerini Doğrula",
+          "description": "İndirilen dosyaların imzalanmış sağlama toplamlarıyla eşleştiğini kontrol edin"
+        },
+        "3": {
+          "title": "İsteğe Bağlı: Derlemeyi Yeniden Oluştur",
+          "description": "Gelişmiş kullanıcılar kaynaktan derleyebilir ve özdeş çıktıyı doğrulayabilir"
+        }
+      }
+    },
+    "enterpriseBand": {
+      "badge": "Ekipler ve İşletmeler İçin",
+      "fluxImageAlt": "Flux Foundation",
+      "titlePart1": "Bir ekip için hazine mi yönetiyorsunuz?",
+      "titleHighlight": "SSP Enterprise ile tanışın.",
+      "description": "Anahtarları ekibiniz tutar. Ekibiniz imzalar. SSP Enterprise koordinasyonu üstlenir — teklifler, politikalar ve Mali İşler Direktörünüzün gerçekten isteyeceği denetim izi.",
+      "highlights": {
+        "0": {
+          "title": "M-of-N Multisig Kasalar",
+          "description": "Herhangi bir imzalama eşiğini yapılandırın — 2-of-3, 3-of-5, yönetiminize ne uyuyorsa."
+        },
+        "1": {
+          "title": "İşlem Politika Motoru",
+          "description": "Harcama limitleri, adres beyaz listeleri, zaman kilitleri, yönetici onayları — 14+ kontrol."
+        },
+        "2": {
+          "title": "Emanetçi Yok. MPC Yok.",
+          "description": "Kurumsal ölçekte öz saklama. İmzacı başına iki cihazlı imzalama, zincir üzerinde doğrulandı."
+        }
+      },
+      "fluxEyebrow": "Flux Foundation",
+      "fluxBefore": "SSP Enterprise'ı kullanıyor",
+      "fluxStrong": "Fusion köprüsünü",
+      "fluxAfter": "güvence altına almak ve çok taraflı imzalamayla Vakıf hazinesini yönetmek için.",
+      "fluxCta": "Örnek olayı oku",
+      "explore": "SSP Enterprise'ı Keşfet",
+      "launchApp": "Enterprise Uygulamasını Başlat"
+    },
+    "supportedChains": {
+      "badge": "Çok Zincirli Destek",
+      "titleHighlight": "15+ Blok Zinciri",
+      "titleSuffix": "Tek Cüzdanda",
+      "description": "Bitcoin'den Ethereum'a ve ötesine kadar tüm kripto varlıklarınızı yönetin. SSP Wallet; dApp'ler için WalletConnect v2 desteği ve çevrimdışı QR kod işlem özellikleriyle birden fazla blok zinciri ağına birleşik erişim sağlar.",
+      "chainDescriptions": {
+        "BTC": "Orijinal kripto para birimi",
+        "ETH": "Akıllı sözleşme platformu",
+        "LTC": "Dijital gümüş",
+        "ZEC": "Gizlilik odaklı",
+        "RVN": "Varlık transferi blok zinciri",
+        "DOGE": "Halkın kriptosu",
+        "BCH": "Eşten eşe elektronik nakit",
+        "FLUX": "Merkezi olmayan hesaplama",
+        "MATIC": "Ethereum ölçeklendirme",
+        "BSC": "Hızlı, düşük maliyetli işlemler",
+        "AVAX": "Yüksek performanslı blok zinciri",
+        "BASE": "Coinbase L2 çözümü"
+      },
+      "chainLogoAlt": "{name} logosu",
+      "moreFeaturesTitle": "Daha Fazla Özellik",
+      "moreFeaturesHighlight": "Yakında Geliyor",
+      "moreFeaturesDescription": "Topluluk talebi ve teknolojik gelişmelere dayalı olarak SSP Wallet'ı sürekli olarak yeni blok zinciri ağları ve gelişmiş güvenlik özellikleriyle genişletiyoruz.",
+      "walletConnectStrong": "WalletConnect v2 (Reown)",
+      "walletConnectAfter": "Binlerce dApp'e bağlanın",
+      "accountAbstractionStrong": "Account Abstraction (ERC-4337)",
+      "accountAbstractionAfter": "Akıllı sözleşme cüzdanları",
+      "solanaStrong": "Solana Desteği",
+      "solanaAfter": "Multisig ile yakında geliyor",
+      "viewFullList": "Tam Varlık Listesini Görüntüle"
+    },
+    "cta": {
+      "badge": "Başlamaya Hazır Mısınız?",
+      "titlePart1": "Kriptografinin",
+      "titleHighlight": "Geleceğine",
+      "description": "SSP Wallet'ı bugün indirin ve eşsiz güvenlik ve sadelikle kripto para yönetiminin yeni nesil deneyimini yaşayın.",
+      "downloadNow": "Şimdi İndir",
+      "learnMore": "Daha Fazla Bilgi",
+      "options": {
+        "0": {
+          "title": "SSP Wallet - Tarayıcı Uzantısı",
+          "description": "Şimdi mevcut - Chrome, Brave, Firefox"
+        },
+        "1": {
+          "title": "SSP Key - Mobil 2FA Uygulaması",
+          "description": "İşlem onayı ve daha fazlası için gerekli"
+        },
+        "2": {
+          "title": "SSP Enterprise - Ekipler İçin",
+          "description": "Kuruluşlar için M-of-N multisig kasalar. Şimdi mevcut."
+        }
+      },
+      "availableNow": "Şimdi Mevcut",
+      "comingSoon": "Yakında Geliyor",
+      "statActiveUsers": "Aktif Kullanıcılar",
+      "statAssetsSecured": "Güvence Altındaki Varlıklar",
+      "statBlockchainsSupported": "Desteklenen Blok Zincirleri",
+      "indicatorAudited": "Güvenlik Denetimli",
+      "indicatorOpenSource": "Açık Kaynak",
+      "indicatorCommunity": "Topluluk Tarafından Yönlendirilen"
+    }
+  },
+  "Newsroom": {
+    "title": "Basın Odası",
+    "description": "SSP'den en son haberler, ürün güncellemeleri ve duyurular.",
+    "metaTitle": "Basın Odası — Son Haberler ve Güncellemeler",
+    "metaDescription": "SSP'den en son haberler, ürün güncellemeleri ve duyurulardan haberdar olun.",
+    "filterAll": "Tümü",
+    "loadMore": "Daha fazla yükle",
+    "noArticles": "Bu filtreyle eşleşen makale yok.",
+    "backToNewsroom": "Basın Odasına geri dön",
+    "shareTitle": "Bu makaleyi paylaş",
+    "shareTwitter": "Twitter'da paylaş",
+    "shareFacebook": "Facebook'ta paylaş",
+    "shareTelegram": "Telegram'da paylaş",
+    "shareReddit": "Reddit'te paylaş",
+    "shareCopy": "Bağlantıyı kopyala",
+    "shareCopied": "Bağlantı kopyalandı!",
+    "tableOfContents": "Bu sayfada",
+    "relatedArticles": "İlgili makaleler",
+    "minRead": "{minutes} dk okuma",
+    "byAuthor": "Yazar: {author}",
+    "publishedOn": "Yayımlanma: {date}",
+    "updatedOn": "Güncelleme: {date}"
+  },
+  "Academy": {
+    "title": "SSP Academy",
+    "description": "SSP ile öz saklamada uzmanlaşmanıza yardımcı olacak kılavuzlar, eğitimler ve derinlemesine incelemeler.",
+    "metaTitle": "SSP Academy — Kripto Öz Saklama Öğrenin",
+    "metaDescription": "SSP, multisig, güvenlik, DeFi ve daha fazlasına ilişkin kılavuzlar, eğitimler ve derinlemesine incelemeler.",
+    "browseByTopic": "Konuya göre gözat",
+    "learningPaths": "Öğrenme yolları",
+    "viewAllSeries": "Tümünü görüntüle",
+    "latestArticles": "En son makaleler",
+    "comingSoon": "Yeni makaleler yakında — kısa süre sonra tekrar kontrol edin.",
+    "categoryEmpty": "Yeni makaleler yakında. Bu arada ilgili konuları keşfedin:",
+    "backToCategory": "{category} sayfasına geri dön",
+    "articleCount": "{count, plural, =0 {Makale yok} =1 {1 makale} other {# makale}}",
+    "partsCount": "{count, plural, =0 {Bölüm yok} =1 {1 bölüm} other {# bölüm}}",
+    "difficulty": {
+      "beginner": "Başlangıç",
+      "intermediate": "Orta",
+      "advanced": "İleri"
+    },
+    "atAGlance": "Kısa özet",
+    "seriesPart": "{total} içinden {order}. bölüm",
+    "previousPart": "Önceki bölüm",
+    "nextPart": "Sonraki bölüm",
+    "seriesMetaDescription": "SSP ile kripto öz saklamada başlangıçtan ileri düzeye kadar rehberlik eden yapılandırılmış çok bölümlü seri.",
+    "seriesIndexDescription": "Başlangıçtan ileri düzeye kadar rehberlik eden yapılandırılmış çok bölümlü seri.",
+    "seriesEmpty": "Öğrenme yolları yakında geliyor. Bu arada makalelere konuya göre göz atın:",
+    "backToAcademy": "Academy'ye geri dön",
+    "seriesPartsEmpty": "Bölümler yakında geliyor.",
+    "viewAllLearningPaths": "Tüm öğrenme yollarını görüntüle",
+    "categoryIntros": {
+      "multisig": "Multisig cüzdanlar, bir işlemi yetkilendirmek için birden fazla imza gerektirir. SSP her imzalı eylemde 2-of-2 uygular: tarayıcı uzantısı ve mobil SSP Key uygulaması her ikisi de onaylamalıdır. Bu sayfa modelin nasıl çalıştığını, hangi saldırıları önlediğini ve sınırlarının nerede olduğunu açıklayan derinlemesine incelemeleri toplar.",
+      "getting-started": "Kripto dünyasına yeni mi girdiniz, yoksa uzun bir aranın ardından mı döndünüz? Buradan başlayın. Bu kılavuzlar; gerçek fon işlemlerine geçmeden önce bilmeniz gereken cüzdanlar, adresler, işlemler, gas ücreti, bellek havuzları ve kesinleşme kavramlarını ele alır.",
+      "security": "Öz saklama zordur çünkü saldırılar yaratıcıdır. Bu koleksiyon, kullanıcıları gerçekten yakalayan tehditlerden geçer: kimlik avı sayfaları, sahte destek DM'leri, kötü amaçlı dApp'ler, kayıp tohumlar ve SSP'nin 2-of-2 modelinin bunların çoğunu nasıl etkisiz kıldığı.",
+      "how-to": "SSP kullanıcılarının her gün yaptığı işlemler için ekran görüntüleri destekli pratik kılavuzlar: zincirler arası işlem gönderme, WalletConnect aracılığıyla dApp'lere bağlanma, token değiştirme ve kayıp cihazdan kurtarma.",
+      "coin-guides": "SSP'nin desteklediği her coin veya zincirin kendine özgü özellikleri vardır — UTXO'ya karşı hesap tabanlı, yerel multisig'e karşı ERC-4337, ücret dinamikleri, kesinleşme süreleri. Bu koleksiyon bunları birer birer ele alır.",
+      "defi": "SSP, EVM zincirlerinde ERC-4337 Account Abstraction aracılığıyla DeFi'yi destekler. Bu makaleler AA'nın ne olduğunu, multisig cüzdandan hangi dApp'leri güvenle kullanabileceğinizi ve SSP'nin DeFi protokollerine katılırken sizi nasıl kontrol sahibi tuttuğunu açıklar.",
+      "news-explained": "Manşetlerin ötesinde: öz saklama kullanıcılarını gerçekten etkileyen düzenleyici değişiklikler, borsa iflasları, protokol olayları ve standart güncellemeleri — abartısız açıklamalarla."
+    }
+  },
+  "Author": {
+    "title": "{name}",
+    "postsBy": "{name} tarafından yazılanlar",
+    "noPosts": "Henüz yazı yok.",
+    "metaTitle": "{name} — SSP Yazarı",
+    "metaDescriptionFallback": "{name} tarafından makaleler",
+    "notFoundTitle": "Yazar bulunamadı",
+    "breadcrumbLabel": "Yazarlar"
+  },
+  "Contact": {
+    "metaTitle": "İletişim - SSP Wallet | Bize Ulaşın",
+    "metaDescription": "SSP Wallet ekibiyle iletişime geçin. Destek alın, sorular sorun veya ortaklıkları tartışın. Discord topluluğumuza katılın veya doğrudan ulaşın.",
+    "breadcrumbLabel": "İletişim",
+    "heroBadge": "Bize Ulaşın",
+    "heroTitle": "İletişime Geçin",
+    "heroDescription": "SSP Wallet hakkında sorularınız mı var? Desteğe mi ihtiyacınız var veya ortaklıkları keşfetmek mi istiyorsunuz? Topluluğumuza katılın veya doğrudan ulaşın — yardım etmek için buradayız.",
+    "methodsTitle": "Bize Ulaşma Yolları",
+    "methodsSubtitle": "İhtiyaçlarınıza en uygun iletişim yöntemini seçin",
+    "methods": {
+      "supportTickets": {
+        "title": "Destek Talepleri",
+        "description": "Bilet sistemimiz aracılığıyla teknik sorunlarla ilgili doğrudan yardım alın",
+        "responseTime": "24 saat içinde",
+        "action": "Bilet Oluştur"
+      },
+      "discord": {
+        "title": "Discord Topluluğu",
+        "description": "Gerçek zamanlı destek ve tartışmalar için aktif topluluğumuza katılın",
+        "responseTime": "Aktif topluluk",
+        "action": "Discord'a Katıl"
+      },
+      "github": {
+        "title": "GitHub Desteği",
+        "description": "Hata bildirin, özellik isteyin veya geliştirmeye katkıda bulunun",
+        "contact": "GitHub Sorunları ve Tartışmaları",
+        "responseTime": "Topluluk tarafından yürütülür",
+        "action": "GitHub'ı Ziyaret Et"
+      }
+    },
+    "resourcesTitle": "Hemen Yardıma mı İhtiyacınız Var?",
+    "resourcesSubtitle": "Anında yardım için self-servis kaynaklarımıza göz atın",
+    "resources": {
+      "supportCenter": {
+        "title": "Destek Merkezi",
+        "description": "Kapsamlı SSS ve sorun giderme kılavuzları"
+      },
+      "setupGuide": {
+        "title": "Kurulum Kılavuzu",
+        "description": "Adım adım kurulum talimatları"
+      },
+      "documentation": {
+        "title": "Belgeler",
+        "description": "Eksiksiz teknik belgeler"
+      }
+    },
+    "formTitle": "Bize Mesaj Gönderin",
+    "formSubtitle": "Aşağıdaki formu doldurun, en kısa sürede size geri döneceğiz",
+    "formTipPrefix": "İpucu:",
+    "formTipBefore": "Daha hızlı teknik destek için",
+    "formTipLinkSupport": "destek talep sistemimizi",
+    "formTipBetween": "kullanmayı veya şu yolla ulaşmayı değerlendirin:",
+    "form": {
+      "fullNameLabel": "Ad Soyad *",
+      "fullNamePlaceholder": "Adınız ve soyadınız",
+      "emailLabel": "E-posta Adresi *",
+      "emailPlaceholder": "e-posta@ornek.com",
+      "companyLabel": "Şirket (İsteğe Bağlı)",
+      "companyPlaceholder": "Şirketinizin adı",
+      "typeLabel": "Sorgu Türü *",
+      "typeOptions": {
+        "general": "Genel Sorgu",
+        "support": "Teknik Destek",
+        "partnership": "Ortaklık",
+        "security": "Güvenlik Sorunu",
+        "media": "Medya ve Basın",
+        "business": "İş Geliştirme"
+      },
+      "subjectLabel": "Konu *",
+      "subjectPlaceholder": "Mesajınızın kısa konusu",
+      "messageLabel": "Mesaj *",
+      "messagePlaceholder": "Lütfen sorgunuzla ilgili ayrıntıları girin...",
+      "submitting": "Mesaj Gönderiliyor...",
+      "submit": "Mesaj Gönder",
+      "errorFallback": "Mesaj gönderilemedi. Lütfen tekrar deneyin.",
+      "errorGeneric": "Mesaj gönderilemedi",
+      "successTitle": "Teşekkürler!",
+      "successDescription": "Mesajınız başarıyla gönderildi. En kısa sürede size geri döneceğiz.",
+      "successAgain": "Başka bir mesaj gönder"
+    },
+    "communityTitle": "Topluluğumuzu Takip Edin",
+    "communitySubtitle": "En son haberlerden haberdar olun, diğer kullanıcılarla bağlantı kurun ve topluluk desteği alın",
+    "social": {
+      "github": "Açık kaynak geliştirme ve katkılar",
+      "discord": "Topluluk sohbeti ve gerçek zamanlı destek",
+      "twitter": "En son güncellemeler, haberler ve duyurular"
+    }
+  },
+  "Download": {
+    "metaTitle": "İndir - SSP Wallet | Güvenli Kripto Cüzdanınızı Edinin",
+    "metaDescription": "Tarayıcınız için SSP Wallet'ı indirin. Multi-signature güvenlik ve mobil kimlik doğrulama ile güvenli, basit, güçlü kripto cüzdanı.",
+    "ogAlt": "SSP Wallet'ı İndir - Güvenli Kripto Cüzdanı",
+    "breadcrumbLabel": "İndir",
+    "heroBadge": "SSP Wallet'ı İndir",
+    "heroTitle": "SSP Wallet ile Başlayın",
+    "heroDescription": "Tam güvenlik için her iki bileşeni de indirin: cüzdan yönetimi için tarayıcı uzantısı ve işlem kimlik doğrulaması için mobil uygulama.",
+    "stepsTitle": "İki Adımlı Kurulum Süreci",
+    "stepsSubtitle": "Güvenli 2-of-2 multisig sistemi için her iki bileşen de gereklidir",
+    "stepLabel": "Adım {index}",
+    "options": {
+      "chrome": {
+        "title": "SSP Wallet",
+        "subtitle": "Tarayıcı Uzantısı",
+        "description": "Chrome, Brave, Firefox ve diğer Chromium tabanlı tarayıcılara yükleyin",
+        "features": {
+          "0": "Multi-signature güvenlik",
+          "1": "WalletConnect v2 desteği",
+          "2": "Zincirler arası uyumluluk"
+        },
+        "cta": "Uzantıyı İndir"
+      },
+      "mobile": {
+        "title": "SSP Key",
+        "subtitle": "Mobil 2FA Uygulaması",
+        "description": "iOS ve Android cihazlar için güvenli kimlik doğrulama sağlayan gerekli eşlik uygulaması",
+        "features": {
+          "0": "2FA kimlik doğrulama",
+          "1": "QR kod senkronizasyonu",
+          "2": "Güvenli anahtar depolama"
+        },
+        "cta": "Mobil Uygulamalara Bak"
+      }
+    },
+    "browsersTitle": "Desteklenen Tarayıcılar",
+    "browsersSubtitle": "SSP Wallet tüm büyük tarayıcılarda sorunsuz çalışır",
+    "mobileBadge": "SSP Key Mobil Uygulaması",
+    "mobileTitle": "Güvenlik Kurulumunuzu Tamamlayın",
+    "mobileDescription": "SSP Key, tüm işlemler için gereken ikinci imzayı sağlar. 2-of-2 multisig güvenliğini tamamlamak için mobil cihazınıza yükleyin.",
+    "mobileEasySetupTitle": "Kolay Kurulum",
+    "mobileEasySetupDescription": "Mobil cihazınızı tarayıcı cüzdanınızla anında senkronize etmek için bir QR kodu tarayın",
+    "mobileSecurityTitle": "Maksimum Güvenlik",
+    "mobileSecurityDescription": "Bir cihaz ele geçirilse bile fonlarınız güvende kalır",
+    "googlePlayLabel": "Şuradan edinin:",
+    "appStoreLabel": "Şuradan indirin:",
+    "mobileAppAlt": "SSP Key Mobil Uygulaması",
+    "howTitle": "Nasıl Çalışır",
+    "howSubtitle": "2-of-2 multisig güvenlik modelini anlama",
+    "howSteps": {
+      "1": {
+        "title": "Uzantıyı Yükle",
+        "description": "SSP Wallet'ı tarayıcınıza ekleyin ve güvenli bir kurtarma kelimeleri ile cüzdanınızı oluşturun"
+      },
+      "2": {
+        "title": "Mobil Uygulamayı Kur",
+        "description": "SSP Key'i telefonunuza yükleyin ve QR kod aracılığıyla tarayıcı cüzdanınızla senkronize edin"
+      },
+      "3": {
+        "title": "İşlemleri Güvence Altına Al",
+        "description": "Her işlem hem tarayıcınızdan hem de mobil cihazınızdan onay gerektirir"
+      }
+    },
+    "ctaTitle": "Başlamaya Hazır Mısınız?",
+    "ctaSubtitle": "Güvenli kripto cüzdanınızı kurmak için adım adım kılavuzumuzu takip edin",
+    "ctaSetupGuide": "Kurulum Kılavuzunu Görüntüle",
+    "ctaSupport": "Destek Alın"
+  },
+  "Features": {
+    "metaTitle": "Özellikler - SSP Wallet | Gelişmiş Kripto Güvenliği ve Çok Zincirli Destek",
+    "metaDescription": "Gerçek 2-of-2 multisig, WalletConnect v2, 15+ blok zinciri, fiat giriş/çıkış, kripto takas, CSV dışa aktarma ve Account Abstraction. Tüm SSP Wallet özelliklerini görün.",
+    "breadcrumbLabel": "Özellikler",
+    "hero": {
+      "badge": "Gelişmiş Özellikler",
+      "titleHighlight": "Güçlü Özellikler",
+      "titleSuffix": "Modern Kripto İçin",
+      "description": "SSP Wallet'ı mevcut en gelişmiş kripto cüzdanı yapan son teknoloji ve güvenlik özelliklerini keşfedin.",
+      "securityFirst": "Önce Güvenlik",
+      "lightningFast": "Yıldırım Hızında",
+      "selfCustody": "Öz Saklama"
+    },
+    "security": {
+      "titleHighlight": "Güvenlik",
+      "titleSuffix": "Özellikleri",
+      "description": "Kripto güvenliğiniz birinci önceliğimizdir. Her özellik, güvenlik öncelikli ilkelerle tasarlanmıştır.",
+      "items": {
+        "0": {
+          "title": "Gerçek 2-of-2 Multisig Koruması",
+          "description": "Hem tarayıcı hem de mobil cihaz imzalarını gerektiren devrimci BIP48 multisig. Tek başarısızlık noktası yok — yalnızca bir cihazla ele geçirmek imkânsız."
+        },
+        "1": {
+          "title": "Halborn Güvenlik Denetimi",
+          "description": "Büyük protokoller tarafından güvenilen önde gelen blok zinciri güvenlik firması Halborn tarafından profesyonelce denetlendi. Kapsamlı sızma testi ve kod incelemesi tamamlandı."
+        },
+        "2": {
+          "title": "Sıfır Veri Depolama Politikası",
+          "description": "Katı sunucu-depolama-yok politikası merkezi saldırı vektörlerini ortadan kaldırır. Özel anahtarlarınız, işlemleriniz ve kişisel verileriniz hiçbir zaman cihazlarınızı terk etmez."
+        },
+        "3": {
+          "title": "Tamamen Açık Kaynak ve Şeffaf",
+          "description": "Deterministik derlemeyle tam kod tabanı şeffaflığı, güvenlik araştırmacılarının ve geliştiricilerin derleme bütünlüğünü bağımsız olarak doğrulamasına olanak tanır. Gizli arka kapı veya tescilli kara kutu yok."
+        }
+      }
+    },
+    "technical": {
+      "titleHighlight": "Teknik",
+      "titleSuffix": "Yenilik",
+      "description": "Merkezi olmayan finans geleceği için son teknoloji ile inşa edildi.",
+      "items": {
+        "0": {
+          "title": "Çok Zincirli Destek (15+)",
+          "description": "Birleşik portföy yönetimiyle Bitcoin, Ethereum, Polygon, BSC, Avalanche, Base, Arbitrum, Optimism ve daha fazlası için yerel destek."
+        },
+        "1": {
+          "title": "Yerleşik Kripto Ticareti",
+          "description": "Entegre DEX toplayıcıları aracılığıyla sorunsuz kripto takas, artı ödeme kartlarıyla kripto alım satımı için fiat giriş/çıkış."
+        },
+        "2": {
+          "title": "Account Abstraction (ERC-4337)",
+          "description": "Ethereum'da yerel Schnorr multisig Account Abstraction'a sahip ilk cüzdan; gas ücretsiz işlemlere ve akıllı sözleşme cüzdanlarına olanak tanır."
+        },
+        "3": {
+          "title": "Gerçek 2-of-2 Multisig Güvenliği",
+          "description": "Tarayıcı uzantısı ve mobil uygulama ile devrimci BIP48 çift cihaz güvenliği. Her işlem için her iki cihaz da gereklidir — nihai koruma."
+        },
+        "4": {
+          "title": "Güvenlik Denetimli ve Açık Kaynak",
+          "description": "Halborn güvenlik uzmanları tarafından profesyonelce denetlenmiş tamamen şeffaf, doğrulanabilir kod. Kurumsal düzeyde güvenlik standartlarıyla açık kaynak."
+        },
+        "5": {
+          "title": "Gelişmiş dApp Entegrasyonu",
+          "description": "WalletConnect v2 desteği, EIP-712 mesaj imzalama ve sorunsuz dApp bağlantısı için kapsamlı tarayıcı entegrasyonu."
+        }
+      }
+    },
+    "comparison": {
+      "titlePrefix": "Neden",
+      "titleHighlight": "SSP Wallet",
+      "titleSuffix": "Seçmelisiniz?",
+      "description": "SSP Wallet'ı diğer kripto depolama yöntemleriyle karşılaştırın ve farkı görün.",
+      "columns": {
+        "feature": "Özellik",
+        "ssp": "SSP Wallet",
+        "selfCustody": "Öz Saklama Cüzdanları",
+        "custodial": "Emanetçi Cüzdanlar",
+        "hardware": "Donanım Cüzdanları",
+        "exchange": "Kripto Borsaları"
+      },
+      "values": {
+        "limited": "Sınırlı",
+        "some": "Bir kısım",
+        "varies": "Değişir",
+        "rare": "Nadir",
+        "na": "Yok"
+      },
+      "rows": {
+        "0": {
+          "feature": "Gerçek 2-of-2 Multisig",
+          "description": "Çift cihaz gereksinimiyle BIP48 gerçek multisig"
+        },
+        "1": {
+          "feature": "Yerleşik Kripto Takas",
+          "description": "Sorunsuz token takası için yerel DEX entegrasyonu"
+        },
+        "2": {
+          "feature": "Kripto Al/Sat",
+          "description": "Ödeme kartı desteğiyle fiat giriş/çıkış"
+        },
+        "3": {
+          "feature": "Öz Saklama Kontrolü",
+          "description": "Özel anahtarlarınızın sahibi ve kontrolcüsü sizsiniz"
+        },
+        "4": {
+          "feature": "Mobil 2FA Güvenliği",
+          "description": "Mobil uygulama güvenli ikinci kimlik doğrulama faktörü olarak görev yapar"
+        },
+        "5": {
+          "feature": "dApp Entegrasyonu",
+          "description": "WalletConnect v2 ve doğrudan dApp tarayıcı desteği"
+        },
+        "6": {
+          "feature": "Çok Zincirli Destek (15+)",
+          "description": "Bitcoin, Ethereum, Polygon, BSC, Avalanche ve daha fazlası"
+        },
+        "7": {
+          "feature": "Sıfır Karşı Taraf Riski",
+          "description": "Platform iflası veya el koyma riski yok"
+        },
+        "8": {
+          "feature": "Açık Kaynak",
+          "description": "Tamamen şeffaf ve doğrulanabilir kod"
+        },
+        "9": {
+          "feature": "Güvenlik Denetimli",
+          "description": "Önde gelen firmalar tarafından profesyonel güvenlik denetimi"
+        },
+        "10": {
+          "feature": "Account Abstraction (ERC-4337)",
+          "description": "Gas ücretsiz işlemler ve akıllı sözleşme cüzdanları"
+        },
+        "11": {
+          "feature": "Tek Kurtarma Kelimeleri Yok",
+          "description": "Tek kurtarma kelimeleri güvenlik açığını ortadan kaldırır — çift cihaz yedeklemesi kullanır"
+        },
+        "12": {
+          "feature": "Kullanım Kolaylığı",
+          "description": "Hem yeni başlayanlar hem de uzmanlar için basit, sezgisel arayüz"
+        },
+        "13": {
+          "feature": "İşlem Hızı",
+          "description": "Hızlı işlem imzalama ve blok zinciri etkileşimi"
+        },
+        "14": {
+          "feature": "Gizlilik Koruması",
+          "description": "Kişisel veri toplama veya işlem takibi yok"
+        }
+      },
+      "ctaDownload": "SSP Wallet'ı İndir",
+      "ctaGuide": "Kurulum Kılavuzunu Oku",
+      "ctaEnterprise": "İşletmeler için SSP"
+    }
+  },
+  "Guide": {
+    "metaTitle": "Kurulum Kılavuzu - SSP Wallet | Eksiksiz Kurulum Talimatları",
+    "metaDescription": "SSP Wallet ve SSP Key'i kurmak için adım adım kılavuz. Multi-signature korumalı güvenli kripto cüzdanı için eksiksiz kurulum talimatları.",
+    "breadcrumbLabel": "Kurulum Kılavuzu",
+    "videoJsonLdName": "SSP Wallet ve SSP Key Nasıl Kurulur",
+    "videoJsonLdDescription": "Eksiksiz video kılavuzu: SSP Wallet tarayıcı uzantısını kurun ve 2-of-2 multisig güvenliği için SSP Key mobil uygulamasını senkronize edin.",
+    "howToJsonLdName": "SSP Wallet ve SSP Key Nasıl Kurulur",
+    "howToJsonLdDescription": "2-of-2 multisig güvenliği için gereken SSP Wallet tarayıcı uzantısı ve SSP Key mobil eşlik uygulaması için eksiksiz kurulum kılavuzu.",
+    "howToSupplyDesktop": "Masaüstü tarayıcı (Chrome, Brave veya Firefox)",
+    "howToSupplyMobile": "Mobil cihaz (iOS 15.1+ veya Android 7+)",
+    "heroBadge": "Eksiksiz Kurulum Kılavuzu",
+    "heroTitle": "SSP Wallet ve SSP Key Nasıl Kurulur",
+    "heroDescriptionPart1": "SSP,",
+    "heroDescriptionStrong": "2 adımlı kurulum süreci",
+    "heroDescriptionPart2": "gerektirir: tarayıcı uzantısını VE mobil uygulamayı yükleyin. Kriptolarınızı koruyan güvenli 2-of-2 multisig sistemi için her iki cihaz da gereklidir.",
+    "browserExtensionTitle": "Tarayıcı Uzantısı",
+    "browserExtensionSubtitle": "Cüzdanı kur",
+    "mobileKeyTitle": "Mobil Anahtar",
+    "mobileKeySubtitle": "Mobil kimlik doğrulama",
+    "videoTitle": "Video Kurulum Kılavuzu",
+    "videoSubtitle": "Eksiksiz kılavuz",
+    "videoDescription": "Hem SSP Wallet'ı hem de SSP Key'i ayrıntılı adım adım talimatlarla nasıl kuracağınızı gösteren kapsamlı video eğitimimizi izleyin.",
+    "videoUnsupported": "Tarayıcınız video etiketini desteklemiyor.",
+    "videoBullet1": "Tarayıcı uzantısı kurulumu",
+    "videoBullet2": "Mobil uygulama kurulumu ve senkronizasyonu",
+    "videoBullet3": "En iyi güvenlik uygulamaları",
+    "stepsTitle": "Adım Adım Talimatlar",
+    "stepsSubtitle": "Güvenli kripto cüzdanınızı kurmak için bu ayrıntılı talimatları izleyin",
+    "important": "Önemli",
+    "openLink": "Bağlantıyı Aç →",
+    "androidLabel": "Android",
+    "iosLabel": "iOS",
+    "phases": {
+      "0": {
+        "phase": "Birinci Bölüm",
+        "title": "SSP Wallet'ı Kurma",
+        "steps": {
+          "0": {
+            "title": "Uzantı Mağazasını Ziyaret Et",
+            "description": "Tarayıcınızı açın ve tarayıcınız için SSP Wallet Uzantısı sayfasına gidin (Chrome, Firefox, Brave)",
+            "action": "Uzantı sayfasına git"
+          },
+          "1": {
+            "title": "Uzantıyı Kur",
+            "description": "'Chrome/Firefox'a Ekle' veya 'Kur' düğmesine tıklayın. SSP Wallet'ı eklemek isteyip istemediğinizi soran bir açılır pencere görünecektir. Kurulumu tamamlamak için 'Ekle' veya 'Kur'a tıklayın.",
+            "action": "Tarayıcıya ekle"
+          },
+          "2": {
+            "title": "Cüzdanı Aç",
+            "description": "Tarayıcınızda SSP cüzdan logosunu bulun ve üzerine tıklayın. Başlamak için istemleri izleyin.",
+            "action": "Cüzdanı başlat"
+          },
+          "3": {
+            "title": "Şifre Oluştur",
+            "description": "Şifrenizi oluşturun. Lütfen SSP Wallet Feragat Beyanını dikkatlice okuyun ve onayınızı bildirin.",
+            "action": "Şifre belirle"
+          },
+          "4": {
+            "title": "Cüzdan Oluştur",
+            "description": "Yeni cüzdanınızı başlatmak için 'Cüzdan Oluştur'a tıklayın.",
+            "action": "Cüzdanı başlat"
+          },
+          "5": {
+            "title": "Kurtarma Kelimelerini Yedekle",
+            "description": "'Anımsatıcı Cüzdan Kurtarma Kelimelerini Göster'e tıklayın. Kurtarma kelimelerini güvenli bir şekilde saklayın ve yedeklediğinizi onaylayın.",
+            "action": "Güvenli yedekleme"
+          },
+          "6": {
+            "title": "Kurulumu Tamamla",
+            "description": "İşlemi tamamlamak için 'Cüzdan Oluştur'a tıklayın. Tarayıcı cüzdanınız artık hazır!",
+            "action": "Kurulumu tamamla"
+          }
+        }
+      },
+      "1": {
+        "phase": "İkinci Bölüm",
+        "title": "SSP Key Mobil Uygulamasını Kurma",
+        "steps": {
+          "0": {
+            "title": "Mobil Uygulamayı İndir",
+            "description": "SSP Key'i mobil cihazınıza indirin ve uygulamayı açın.",
+            "action": "Mobil uygulamayı kur"
+          },
+          "1": {
+            "title": "Senkronizasyonu Başlat",
+            "description": "Kurulum sürecini başlatmak için 'Anahtarı Senkronize Et'e tıklayın.",
+            "action": "Senkronizasyonu başlat"
+          },
+          "2": {
+            "title": "Anahtar Şifresini Belirle",
+            "description": "Bir SSP Key şifresi belirleyin ve onaylayın. Ardından 'Anahtarı Kur'a tıklayın.",
+            "action": "Anahtar şifresi oluştur"
+          },
+          "3": {
+            "title": "Anahtar Tohumunu Yedekle",
+            "description": "'Anımsatıcı Anahtar Kurtarma Kelimelerini Göster'e tıklayın. Anahtar kurtarma kelimelerini güvenli bir şekilde saklayın ve yedeklemeyi onaylayın.",
+            "action": "Güvenli anahtar yedekleme"
+          },
+          "4": {
+            "title": "Anahtar Kurulumunu Tamamla",
+            "description": "'Anahtarı Kur'a tıklayın. SSP Key artık SSP Wallet için ikinci kimlik doğrulama faktörü olarak görev yapar.",
+            "action": "Anahtarı sonlandır"
+          },
+          "5": {
+            "title": "QR Kodunu Tara",
+            "description": "SSP Key'i SSP Wallet ile senkronize etmek için 'Kodu Tara'ya tıklayın. Tarayıcınızda gösterilen QR kodunu tarayın.",
+            "action": "Cihazları senkronize et"
+          },
+          "6": {
+            "title": "Senkronizasyonu Onayla",
+            "description": "'Senkronizasyonu Onayla'ya tıklayın ve Anahtar şifrenizle onaylayın. Başarılı senkronizasyon bildirilecektir.",
+            "action": "Senkronizasyonu tamamla"
+          }
+        }
+      }
+    },
+    "tipsTitle": "En İyi Güvenlik Uygulamaları",
+    "tipsSubtitle": "Cüzdanınızı güvende tutmak için bu önemli güvenlik ipuçlarını izleyin",
+    "tips": {
+      "0": {
+        "title": "Kurtarma Kelimelerinizi Güvenceye Alın",
+        "description": "Hem cüzdan hem de anahtar kurtarma kelimelerini güvenli, çevrimdışı bir konumda saklayın. Bunları asla kimseyle paylaşmayın."
+      },
+      "1": {
+        "title": "Güçlü Şifreler Kullanın",
+        "description": "Hem cüzdanınız hem de mobil anahtar uygulamanız için benzersiz, güçlü şifreler oluşturun."
+      },
+      "2": {
+        "title": "Mobili Güvende Tutun",
+        "description": "Mobil cihazınızın ekran kilidinin açık olduğundan emin olun ve biyometrik kimlik doğrulamayı kullanmayı düşünün."
+      }
+    },
+    "successTitle": "Tebrikler!",
+    "successDescription": "Bu adımları izleyerek hem SSP Wallet'ı hem de SSP Key'i başarıyla kurdunuz ve güvenli, sorunsuz bir kullanıcı deneyimi sağladınız.",
+    "successDownload": "Şimdi İndir",
+    "successSupport": "Destek Alın"
+  },
+  "Support": {
+    "metaTitle": "Destek - SSP Wallet | Yardım ve Teknik Destek Alın",
+    "metaDescription": "SSP Wallet için kapsamlı destek alın. SSS yanıtları bulun, belgelere erişin, toplulukla bağlantı kurun veya uzman destek ekibimizle iletişime geçin.",
+    "breadcrumbLabel": "Destek",
+    "heroBadge": "Destek Merkezi",
+    "heroTitle": "Size nasıl yardımcı olabiliriz?",
+    "heroDescription": "Sık sorulan sorulara yanıt bulun, belgelerimize erişin veya destek ekibimizle iletişime geçin.",
+    "quickLinks": {
+      "docsTitle": "Belgeler",
+      "docsSubtitle": "Kılavuzlar",
+      "communityTitle": "Topluluk",
+      "communitySubtitle": "Sohbet",
+      "supportTitle": "Destek",
+      "supportSubtitle": "Yardım"
+    },
+    "channelsTitle": "Destek Alın",
+    "channelsSubtitle": "İhtiyaçlarınıza göre yardım almanın en iyi yolunu seçin",
+    "channels": {
+      "documentation": {
+        "title": "Belgeler",
+        "description": "Kapsamlı kılavuzlar ve belgeler",
+        "links": {
+          "completeDocs": "Eksiksiz Belgeler",
+          "setupGuide": "Kurulum Kılavuzu",
+          "featureDocs": "Özellik Belgeleri"
+        }
+      },
+      "community": {
+        "title": "Topluluk Desteği",
+        "description": "Topluluğumuzdan yardım alın",
+        "links": {
+          "github": "GitHub Tartışmaları",
+          "discord": "Discord Topluluğu",
+          "twitter": "Twitter Desteği"
+        }
+      },
+      "direct": {
+        "title": "Doğrudan Destek",
+        "description": "Kişiselleştirilmiş teknik yardım alın",
+        "links": {
+          "ticketSystem": "Destek Bilet Sistemi",
+          "email": "E-posta Desteği"
+        }
+      }
+    },
+    "faqTitle": "Sık Sorulan Sorular",
+    "faqSubtitle": "SSP Wallet hakkında en sık sorulan sorulara hızlı yanıtlar bulun",
+    "faqCategories": {
+      "gettingStarted": {
+        "title": "Başlarken",
+        "items": {
+          "0": {
+            "question": "SSP Wallet nedir?",
+            "answer": "SSP Wallet, iki bileşenden oluşan gerçek bir 2-of-2 multisig sistemidir: SSP Wallet (tarayıcı uzantısı) ve SSP Key (mobil 2FA uygulaması). İşlemleri yetkilendirmek için her iki cihaz da gereklidir; bu durum 15+ blok zincirindeki kripto varlıklarınız için eşsiz güvenlik sağlar."
+          },
+          "1": {
+            "question": "SSP Wallet'ı nasıl kurarım?",
+            "answer": "SSP Wallet'ı Chrome Web Store'dan Chrome uzantısı olarak kurabilirsiniz. İndirme sayfamızı ziyaret edin ve adım adım talimatlar için kapsamlı kurulum kılavuzumuzu izleyin."
+          },
+          "2": {
+            "question": "SSP Wallet kullanımı ücretsiz mi?",
+            "answer": "Evet, SSP Wallet tamamen ücretsiz indirilebilir ve kullanılabilir. Cüzdanın kendisi için herhangi bir ücret almıyoruz; ancak blok zinciri işlemleri yaparken ağ işlem ücretlerini ödemeye devam edersiniz."
+          },
+          "3": {
+            "question": "SSP Wallet hangi kripto paraları destekliyor?",
+            "answer": "SSP Wallet; Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), Zcash (ZEC), Ravencoin (RVN), Dogecoin (DOGE), Bitcoin Cash (BCH), Flux (FLUX), Polygon (MATIC), BSC, Avalanche (AVAX) ve Base dahil 15+ blok zincirini destekler. EVM uyumlu zincirler için tüm ERC-20 tokenlerini destekliyor ve kendi özel token listelerinizi içe aktarabilirsiniz. Solana desteği yakında geliyor."
+          },
+          "4": {
+            "question": "Desteklenen varlıkların tam listesini nerede bulabilirim?",
+            "answerBefore": "Yerel olarak desteklenen tüm zincir ve tokenlerin kapsamlı ve güncel listesi için lütfen resmi ",
+            "answerLink": "SSP Varlık Tablosu",
+            "answerAfter": "'na başvurun. Bu tablo düzenli olarak yeni eklemelerle güncellenmekte ve desteklenen her varlık hakkında ayrıntılı bilgi içermektedir."
+          },
+          "5": {
+            "question": "SSP Wallet'ı dApp'ler ve DeFi ile kullanabilir miyim?",
+            "answer": "Evet! SSP Wallet, desteklenen tüm EVM zincirlerinde binlerce merkezi olmayan uygulamaya bağlanmanıza olanak tanıyan tam WalletConnect v2 (Reown) entegrasyonuna sahiptir. 2-of-2 multisig sisteminin güvenliğini korurken DeFi protokollerini, NFT pazar yerlerini ve diğer dApp'leri kullanabilirsiniz."
+          },
+          "6": {
+            "question": "FluxNodes nedir ve nasıl kullanabilirim?",
+            "answer": "FluxNodes, blok zincirinin güvenliğini ve bakımını sağlamaya yardımcı olan Flux ağındaki düğümlerdir. SSP Wallet ile Fluxnodes'ları kolayca kurabilir ve yönetebilir, performanslarını izleyebilir ve ödülleri doğrudan cüzdan arayüzü üzerinden talep edebilirsiniz. Fluxnodes, bir miktar FLUX tokeni teminat gerektirir ve ağ ödülleri aracılığıyla pasif gelir sağlar."
+          },
+          "7": {
+            "question": "SSP Wallet fiat para girişi ve çıkışını destekliyor mu?",
+            "answer": "Evet! SSP Wallet, entegre iş ortakları aracılığıyla fiat para girişi ve çıkışını destekler. Kripto para birimlerini doğrudan kredi kartınız, banka havalesi veya diğer ödeme yöntemleriyle satın alabilir ve kriptolarınızı fiat para birimine geri satabilirsiniz. Bu özellik desteklenen bölgelerde mevcuttur ve KYC doğrulaması gerektirir."
+          },
+          "8": {
+            "question": "SSP Wallet içinde kripto para takası yapabilir miyim?",
+            "answer": "Evet, SSP Wallet yerleşik kripto takas işlevselliği içerir. Entegre takas iş ortaklarımız aracılığıyla desteklenen blok zincirlerinde bir kripto para birimini diğeriyle kolayca değiştirebilirsiniz. Takas özelliği rekabetçi kurlar sunar ve özel anahtarlarınızı korurken takasları güvenli bir şekilde gerçekleştirir."
+          },
+          "9": {
+            "question": "İşlem geçmişimi dışa aktarabilir miyim?",
+            "answer": "Evet! SSP Wallet, işlem geçmişinizin CSV olarak dışa aktarılmasını destekler. Muhasebe, vergi amaçları veya kişisel kayıt tutma için ayrıntılı işlem kayıtlarını dışa aktarabilirsiniz. CSV dışa aktarma; desteklenen her blok zinciri için işlem tarihlerini, tutarlarını, adreslerini, ücretlerini ve diğer ilgili ayrıntıları içerir."
+          },
+          "10": {
+            "question": "Yeni bir coin eklenmesini nasıl isteyebilirim?",
+            "answer": "Yeni kripto para desteği talep etmek için kullanıcıları destek ekibimizle iletişime geçmeye veya doğrudan GitHub depomuzda katkıda bulunmaya teşvik ediyoruz. Her talebi topluluk talebi, teknik uygulanabilirlik ve güvenlik değerlendirmeleri temelinde değerlendiriyoruz."
+          },
+          "11": {
+            "question": "Mobil cüzdan mevcut mu?",
+            "answer": "İyi haber! SSP Wallet'ı mobil platformlara genişletmek için aktif olarak çalışıyoruz. Şu anda SSP Wallet, bir tarayıcı uzantısından (SSP Wallet) ve bir mobil 2FA uygulamasından (SSP Key) oluşmaktadır. Tam mobil cüzdan deneyimi geliştirilmektedir."
+          },
+          "12": {
+            "question": "SSP Wallet'ı birden fazla cihazda kullanabilir miyim?",
+            "answer": "Evet, SSP Wallet'ı birden fazla cihazda kullanabilirsiniz. Yeni bir cihazda kurmak için karşılık gelen kurtarma kelimelerini kullanarak cüzdanınızı ve anahtarınızı geri yüklemeniz gerekir. Her cihaz uygun kurulum ve senkronizasyon gerektirir."
+          },
+          "13": {
+            "question": "SSP Wallet'ta işlem limiti var mı?",
+            "answer": "SSP Wallet işlem limiti uygulamaz. Ancak blok zinciri ağ limitlerine ve kullanılabilir bakiyenize tabi olursunuz. Bazı ağların protokollerine bağlı olarak minimum işlem tutarları veya maksimum işlem boyutları olabilir."
+          },
+          "14": {
+            "question": "SSP Wallet'ı çevrimdışı kullanabilir miyim?",
+            "answer": "SSP Wallet, işlem yayını, bakiye güncellemeleri ve cihazlar arası senkronizasyon dahil çoğu işlem için internet bağlantısı gerektirir. Bazı önbelleğe alınmış bilgileri çevrimdışı görüntüleyebilirsiniz; ancak bağlantı olmadan işlem gönderemezsiniz."
+          }
+        }
+      },
+      "security": {
+        "title": "Güvenlik ve Gizlilik",
+        "items": {
+          "0": {
+            "question": "SSP Wallet ne kadar güvenli?",
+            "answer": "SSP Wallet, iki anahtarlı koruma sağlayan mobil entegre kimlik doğrulamalı multi-signature teknolojisi kullanır. Son teknoloji şifreleme kullanıyoruz ve verilerinizin hiçbirini depolamıyoruz — her şey yerel olarak saklanıyor ve sizin tarafınızdan kontrol ediliyor."
+          },
+          "1": {
+            "question": "SSP Key nedir ve neden ihtiyacım var?",
+            "answer": "SSP Key, 2-of-2 multisig sistemi için gereken ikinci özel anahtarı tutan bir mobil uygulamadır. Her işlemin hem tarayıcı uzantınız HEM DE mobil cihazınız tarafından imzalanması gerekir. Bu, bir cihaz ele geçirilse bile fonlarınızın güvende kalmasını sağlar. SSP Key; iOS 15.1+ ve Android 7+ için kullanılabilir."
+          },
+          "2": {
+            "question": "Cihazımı kaybedersem cüzdanımı kurtarabilir miyim?",
+            "answer": "Evet, kurtarma kelimelerinizi kullanarak cüzdanınızı kurtarabilirsiniz. Hem cüzdanınızın hem de anahtarınızın ayrı kurtarma kelimeleri vardır ve bunların güvenli çevrimdışı bir konumda saklanması gerekir. Kurtarma kelimelerinizi asla kimseyle paylaşmayın."
+          },
+          "3": {
+            "question": "SSP Wallet kişisel verilerimi topluyor mu?",
+            "answer": "Hayır, SSP Wallet herhangi bir veri bilgisi saklamamayı taahhüt eder. Özel anahtarlarınız, işlem geçmişiniz ve kişisel verileriniz tamamen sizin kontrolünüzde kalır ve cihazlarınızda yerel olarak saklanır."
+          },
+          "4": {
+            "question": "Deterministik derlemeler nedir ve neden önemlidir?",
+            "answer": "Deterministik derlemeler, özdeş kaynak kodunun özdeş ikili çıktılar üretmesini sağlar. SSP Wallet, dağıtılan uzantının yayımlanan kaynak koddan oluşturulanla tam olarak eşleştiğini herkesin bağımsız olarak doğrulamasına olanak tanıyan Docker tabanlı deterministik derlemeler kullanır. Bu, olası tedarik zinciri saldırılarını ortadan kaldırır ve derleme bütünlüğünün kriptografik kanıtını sağlar."
+          },
+          "5": {
+            "question": "SSP Wallet'ın deterministik derlemesini nasıl doğrulayabilirim?",
+            "answerIntro": "SSP Wallet derlemelerini doğrulamak için: 1) Sürüm dosyalarını (Chrome/Firefox zip'leri, SHA256SUMS, SHA256SUMS.asc) şuradan indirin: ",
+            "answerLink1": "GitHub sürümleri",
+            "answerMiddle1": ". 2) Açık anahtarımızı şuradan içe aktarın: ",
+            "answerLink2": "OpenPGP anahtar sunucusu",
+            "answerMiddle2": ". 3) GPG imzasını doğrulayın: ",
+            "answerCode1": "gpg --verify SHA256SUMS.asc SHA256SUMS",
+            "answerMiddle3": ". 4) Hash'leri doğrulayın: ",
+            "answerCode2": "sha256sum -c SHA256SUMS",
+            "answerMiddle4": ". 5) İsteğe bağlı olarak derlemeyi yeniden oluşturun: ",
+            "answerCode3": "git checkout [version] && npm run build:deterministic",
+            "answerOutro": "."
+          },
+          "6": {
+            "question": "SSP Wallet sürümlerini kim imzalıyor?",
+            "answerBefore": "Tüm SSP Wallet sürümleri, GPG imzaları kullanılarak security@runonflux.io tarafından kriptografik olarak imzalanır. Açık anahtarımız doğrulama için ",
+            "answerLink": "OpenPGP anahtar sunucusunda",
+            "answerAfter": " mevcuttur. Deterministik derleme süreci; Docker tabanlı yalıtılmış ortamları ve özgünlük ve bütünlüğü sağlamak için GPG imzalı kapsamlı sağlama toplamlarını (SHA256SUMS) içerir."
+          },
+          "7": {
+            "question": "Bir SSP Wallet ile birden fazla SSP Key kullanabilir miyim?",
+            "answer": "Hayır, her SSP Wallet yalnızca bir SSP Key ile eşleştirilebilir. 2-of-2 multisig sistemi, genel nonce'lar ve zincir verileri için cihaza özgü senkronizasyon gerektirir. Birden fazla SSP Key kullanmak senkronizasyon çakışmalarına neden olur."
+          }
+        }
+      },
+      "technical": {
+        "title": "Teknik Destek",
+        "items": {
+          "0": {
+            "question": "Hangi tarayıcılar destekleniyor?",
+            "answer": "SSP Wallet; Google Chrome, Brave, Firefox ve diğer Chromium tabanlı tarayıcıları destekler. Chromium tarayıcıları için Chrome Web Store sürümünü veya Firefox sürümünü doğrudan GitHub sürümlerimizden indirebilirsiniz."
+          },
+          "1": {
+            "question": "Mobil anahtarımı senkronize etmekte sorun yaşıyorum",
+            "answer": "Her iki cihazın da internete bağlı olduğundan, QR kodunun açıkça görülebildiğinden ve hem tarayıcı uzantısının hem de mobil uygulamanın en son sürümlerini kullandığınızdan emin olun. Senkronizasyon başarısız olursa her iki uygulamayı da yeniden başlatmayı deneyin."
+          },
+          "2": {
+            "question": "İşlemim takılı veya beklemede",
+            "answer": "Blok zinciri işlemleri, ağ tıkanıklığına bağlı olarak zaman zaman zaman alabilir. İşlem durumunu bir blok zinciri gezgininde kontrol edin. Ethereum kullanıyorsanız daha hızlı onay için gas ücretini artırmanız gerekebilir."
+          },
+          "3": {
+            "question": "SSP Wallet'ı nasıl güncellerim?",
+            "answer": "Tarayıcı uzantıları genellikle otomatik olarak güncellenir. Tarayıcınızın uzantı yönetim sayfasında güncellemeleri manuel olarak kontrol edebilirsiniz. Mobil uygulama için cihazınızın uygulama mağazasında güncellemeleri kontrol edin."
+          },
+          "4": {
+            "question": "SSP Relay nedir ve nasıl çalışır?",
+            "answer": "SSP Relay, SSP Wallet ve SSP Key arasında köprü görevi gören açık kaynaklı bir röle hizmetidir. Piyasa bilgisi, ücret verileri sağlar, işlem senkronizasyonunu etkinleştirir ve anlık bildirimler sunar. Röle, güvenliği korurken kullanıcı deneyimini geliştirir."
+          },
+          "5": {
+            "question": "SSP Wallet Replace-By-Fee (RBF) destekliyor mu?",
+            "answer": "Evet, SSP Wallet Replace-By-Fee (RBF) işlevselliğini tam olarak destekler. İşlem yayınladıktan sonra işlem ücretlerini değiştirebilir, hatta alıcıları bile değiştirebilirsiniz; bu da blok zincirindeki işlemlerinizi yönetmede esneklik sağlar."
+          },
+          "6": {
+            "question": "SSP Wallet ne kadar ücret alıyor?",
+            "answer": "SSP Wallet sıfır ücrete sahiptir — cüzdanı kullanmak için hiçbir şey almıyoruz. Yalnızca işlemlerinizi işlemek için doğrudan madencilere/doğrulayıcılara giden standart blok zinciri ağ ücretlerini ödersiniz. Cüzdan, işlem maliyetlerinizi optimize etmek için otomatik ücret seçimi içerir."
+          },
+          "7": {
+            "question": "Bazı işlemler neden oluşturulamıyor?",
+            "answer": "Bazı işlemler, blok zinciri boyut kısıtlamaları ve UTXO karmaşıklığı nedeniyle başarısız olabilir. Çok sayıda küçük girdiniz olduğunda işlem boyutu ağ limitlerini aşabilir. Bu durumda UTXO'larınızı birleştirmeniz veya işlemi daha küçük parçalara bölmeniz gerekebilir."
+          },
+          "8": {
+            "question": "Cihaz değiştirirken cüzdanımı geri yüklemem gerekiyor mu?",
+            "answer": "Evet, cihaza özgü şifreleme nedeniyle cihaz değiştirirken veya önemli sistem değişiklikleri yaparken hem cüzdanınızı hem de anahtarınızı geri yüklemeniz gerekir. Bu süreç için kurtarma kelimelerinizi güvenli ve erişilebilir tutun."
+          },
+          "9": {
+            "question": "SSP Key cihazımı kaybedersem ne olur?",
+            "answer": "SSP Key cihazınızı kaybederseniz, SSP Key kurtarma kelimelerinizi kullanarak yeni bir cihazda geri yükleyebilirsiniz. SSP Key uygulamasını yeni cihazınıza kurun ve erişimi kurtarmak için kurtarma kelimelerini kullanın. Geri yüklemeden sonra SSP Wallet tarayıcı uzantınızla yeniden senkronize etmeniz gerekecek."
+          },
+          "10": {
+            "question": "Cüzdanımı bulut depolamaya yedekleyebilir miyim?",
+            "answer": "SSP Wallet, güvenlik nedenleriyle otomatik bulut yedeklemelerini desteklemez. Kurtarma kelimeleriniz güvenli bir konumda çevrimdışı olarak saklanmalıdır. Kurtarma kelimelerini asla bulut depolamada, e-postada veya ele geçirilebilecek herhangi bir dijital biçimde saklamayın."
+          },
+          "11": {
+            "question": "SSP Wallet kurtarma kelimeleri ile SSP Key kurtarma kelimeleri arasındaki fark nedir?",
+            "answer": "SSP Wallet ve SSP Key'in her birinin ayrı kurtarma kelimeleri vardır. Cüzdan kurtarma kelimeleri tarayıcı uzantısı bileşenini kontrol ederken, anahtar kurtarma kelimeleri mobil 2FA bileşenini kontrol eder. Her ikisi de tam cüzdan kurtarması için gereklidir ve ayrı ayrı güvenli bir şekilde saklanmalıdır."
+          },
+          "12": {
+            "question": "Yeni bir bilgisayara nasıl geçiş yaparım?",
+            "answer": "SSP Wallet'ı yeni bir bilgisayara taşımak için: 1) SSP Wallet uzantısını yeni cihaza kurun, 2) Tarayıcı uzantısını geri yüklemek için cüzdan kurtarma kelimelerinizi kullanın, 3) Mevcut SSP Key mobil uygulamanızla yeniden senkronize edin. İşlem geçmişinizin ve ayarlarınızın yeniden yapılandırılması gerekecek."
+          },
+          "13": {
+            "question": "Mobilde \"SSP cüzdanıyla senkronizasyon gerekiyor\" hatası alıyorum",
+            "answer": "Bu hata genellikle telefon değiştirirken veya bir blok zinciri henüz SSP Key ile senkronize edilmemişken oluşur. Çözüm için: 1) SSP Wallet'ı açın, 2) Yeniden senkronize etmek istediğiniz blok zincirine geçin, 3) Hamburger menüsüne (sağ üst köşe) tıklayın, 4) \"SSP Wallet Ayrıntıları\"nı seçin, 5) Şifrenizle erişimi onaylayın, 6) İlk satırda \"SSP Key ile Zincir Senkronizasyonu\"nu bulun ve QR kodunu göstermek için göz simgesine tıklayın, 7) QR kodunu SSP Key'inizle tarayın ve zincir senkronizasyonunu onaylayın."
+          },
+          "14": {
+            "question": "\"SSP Key Genel nonce'ları eşleşmiyor veya SSP Key Genel nonce'ları eksik\" hatası alıyorum",
+            "answer": "Bu hata, işlemleri oluşturmak için kullanılan genel nonce'lar SSP Wallet ve SSP Key arasında senkronize edilmediğinde oluşur. Çözüm için: 1) Hamburger menüsünü açın (sağ üst köşe), 2) Ayarlara gidin, 3) \"Genel Nonce'lar\" bölümünü bulun ve \"Genel Nonce'ları Senkronize Et\"e tıklayın, 4) SSP Key'inizle gösterilen QR kodunu tarayın, 5) Mobil cihazınızdaki isteği onaylayın. Genel nonce'larınız artık senkronize edildi ve işlem yapmaya başlayabilirsiniz."
+          }
+        }
+      }
+    },
+    "stillNeedHelpTitle": "Hâlâ yardıma mı ihtiyacınız var?",
+    "stillNeedHelpDescription": "Aradığınızı bulamıyor musunuz? Bize mesaj gönderin; destek ekibimiz en kısa sürede size geri dönecektir.",
+    "emailSupportTitle": "E-posta Desteği",
+    "emailSupportDescription": "Genellikle 24 saat içinde yanıt veririz",
+    "openSourceTitle": "Açık Kaynak",
+    "openSourceDescription": "GitHub'da hata bildirin veya katkıda bulunun",
+    "communityTitle": "Topluluk",
+    "communityDescription": "Diğer kullanıcılarla bağlantı kurun ve topluluk desteği alın",
+    "contactSupportTitle": "Destekle İletişime Geç",
+    "form": {
+      "emailLabel": "E-posta Adresi *",
+      "emailPlaceholder": "e-posta@ornek.com",
+      "typeLabel": "Sorun Türü *",
+      "typeOptions": {
+        "Question": "Genel Soru",
+        "Incident": "Teknik Sorun",
+        "Problem": "Yardım Gerekiyor",
+        "Feature Request": "Özellik Talebi",
+        "Bug Report": "Hata Bildirimi"
+      },
+      "subjectLabel": "Konu *",
+      "subjectPlaceholder": "Sorununuzun kısa açıklaması",
+      "descriptionLabel": "Açıklama *",
+      "descriptionPlaceholder": "Lütfen sorununuz hakkında ayrıntılı bilgi verin...",
+      "submitting": "Gönderiliyor...",
+      "submit": "Mesaj Gönder",
+      "errorFallback": "Mesaj gönderilemedi. Lütfen tekrar deneyin.",
+      "errorGeneric": "Bilet gönderilemedi",
+      "successTitle": "Mesaj Başarıyla Gönderildi!",
+      "successDescription": "Bizimle iletişime geçtiğiniz için teşekkür ederiz. En kısa sürede size geri döneceğiz.",
+      "successAgain": "Başka bir mesaj gönder"
+    }
+  },
+  "Legal": {
+    "lastUpdated": "Son güncelleme: {date}",
+    "privacyPolicy": {
+      "metaTitle": "Gizlilik Politikası - SSP Wallet Ekosistemi",
+      "metaDescription": "Tam SSP Wallet ekosistemi için Gizlilik Politikası. Web sitemiz, tarayıcı uzantımız, mobil uygulamamız ve röle hizmetimiz genelinde gizliliğinizi nasıl koruduğumuzu öğrenin.",
+      "heading": "Gizlilik Politikası"
+    },
+    "termsOfService": {
+      "metaTitle": "Kullanım Koşulları - SSP Wallet Ekosistemi",
+      "metaDescription": "Web sitesi, tarayıcı uzantısı, mobil uygulama ve röle hizmetini içeren tam SSP Wallet ekosistemi için Kullanım Koşulları.",
+      "heading": "Kullanım Koşulları"
+    },
+    "cookiePolicy": {
+      "metaTitle": "Çerez Politikası - SSP Wallet Web Sitesi",
+      "metaDescription": "sspwallet.io web sitesinde çerezleri nasıl kullandığımızı öğrenin. Çerez tercihlerinizi yönetin ve GDPR uyumlu uygulamalarımızı anlayın.",
+      "heading": "Çerez Politikası"
+    }
+  },
+  "CheckoutSuccess": {
+    "metaTitle": "Ödeme Başarılı | SSP Wallet",
+    "metaDescription": "Siparişiniz başarıyla verildi.",
+    "heading": "Ödeme Başarılı!",
+    "description": "Siparişiniz başarıyla verildi. Satın alımınız için teşekkür ederiz!",
+    "confirmationEmail": "Kısa süre içinde bir onay e-postası alacaksınız.",
+    "backToHome": "Ana Sayfaya Dön",
+    "contactSupport": "Destekle İletişime Geç"
+  },
+  "CheckoutFailure": {
+    "metaTitle": "Ödeme Başarısız | SSP Wallet",
+    "metaDescription": "Siparişiniz işlenemedi. Lütfen tekrar deneyin.",
+    "heading": "Ödeme Başarısız",
+    "description": "Siparişiniz işlenemedi. Lütfen tekrar deneyin veya sorun devam ederse destekle iletişime geçin.",
+    "tryAgain": "Tekrar Dene",
+    "contactSupport": "Destekle İletişime Geç"
+  },
+  "Categories": {
+    "multisig": {
+      "title": "Multisig Açıklaması",
+      "description": "SSP'de 2-of-2 multisig'in gerçekte nasıl çalıştığı — ve neden önemli olduğu."
+    },
+    "getting-started": {
+      "title": "Kripto Temelleri",
+      "description": "Her kripto kullanıcısının bilmesi gereken temel kavramlar."
+    },
+    "security": {
+      "title": "Güvenlik ve Öz Saklama",
+      "description": "Kriptolarınızı koruyun: tohumlar, kimlik avı, donanım, tehdit modelleri."
+    },
+    "how-to": {
+      "title": "Nasıl Yapılır Kılavuzları",
+      "description": "Yaygın SSP görevleri için adım adım kılavuzlar."
+    },
+    "coin-guides": {
+      "title": "Coin ve Zincir Kılavuzları",
+      "description": "SSP'nin desteklediği bireysel coin ve zincirlere derinlemesine bakış."
+    },
+    "defi": {
+      "title": "DeFi ve Account Abstraction",
+      "description": "Staking, borç verme, takas ve ERC-4337 açıklandı."
+    },
+    "news-explained": {
+      "title": "Haberler ve Sektör Analizi",
+      "description": "Kripto haberleri ve düzenlemelere ilişkin bağlam ve analiz."
+    }
+  },
+  "CaseStudies": {
+    "breadcrumbLabel": "Örnek Olaylar",
+    "fluxFoundation": {
+      "metaTitle": "Örnek Olay: Flux Foundation — SSP Enterprise ile Öz Saklama Hazinesi",
+      "metaDescription": "Flux Foundation'ın dağınık multisig ve özel betiklerden SSP Enterprise'a nasıl geçtiği — kullandıkları her zincirde Fusion köprüsünü ve Vakıf hazinesini M-of-N kasalarıyla güvence altına alarak.",
+      "breadcrumbLabel": "Flux Foundation",
+      "logoAlt": "Flux Foundation",
+      "eyebrow": "Örnek Olay",
+      "titlePart1": "Flux Foundation ×",
+      "titlePart2": "SSP Enterprise",
+      "subtitle": "Flux Foundation'ın dağınık multisig ve özel betiklerden tek bir öz saklama platformuna nasıl geçtiği — Fusion köprüsünü ve Vakıf hazinesini anahtarları kimseye devretmeden güvence altına alarak.",
+      "heroQuote": "Fonlarımız üzerinde tam kontrole, topluluk için şeffaflığa ve kendi hazinemizdeki ile kendi aramızdaki kara kutu MPC'ye ihtiyaç duyduk. SSP Enterprise, gerçekten kullandığımız her zincirde bu üç koşulun tamamını karşılayan ilk platformdur.",
+      "heroQuoteAttribution": "— Tadeas Kmenta, Flux Foundation",
+      "factSheet": {
+        "organizationLabel": "Kuruluş",
+        "organizationValue": "Flux Foundation",
+        "industryLabel": "Sektör",
+        "industryValue": "Merkezi olmayan altyapı",
+        "useCaseLabel": "Kullanım alanı",
+        "useCaseValue": "Vakıf hazinesi + Fusion köprüsü multisig",
+        "chainsLabel": "Zincirler",
+        "chainsValue": "BTC, ETH, FLUX, EVM L2'ler",
+        "vaultModelLabel": "Kasa modeli",
+        "vaultModelValue": "M-of-N multisig, imzacı başına iki cihaz",
+        "statusLabel": "Durum",
+        "statusValue": "Üretimde"
+      },
+      "before": {
+        "title": "Önce: dağınık multisig ve özel betikler",
+        "intro": "Flux Foundation yıllardır çok taraflı imzalamayı yönetiyordu. Sorun multisig eksikliği değildi — sorun, hiçbir şeyin zincirler arasında bir araya getirilememesiydi ve ticari alternatifler, ekibin kabul etmeye razı olmadığı bir ödün gerektiriyordu.",
+        "items": {
+          "0": {
+            "title": "Dağınık multisig kurulumları",
+            "description": "Farklı zincirlerde, her biri kendi özelliklerine, imzacılarına ve kurtarma prosedürlerine sahip farklı multisig cüzdanlar."
+          },
+          "1": {
+            "title": "Hepsini bir arada tutan özel betikler",
+            "description": "İşlem oluşturma, imzalama koordinasyonu ve yayın için dahili araçlar — elle bakımı yapılıyor."
+          },
+          "2": {
+            "title": "Birleşik denetim izi yok",
+            "description": "Onaylar sohbet dizilerinde ve paylaşılan belgelerde yaşıyordu. Kimin neyi imzaladığını yeniden oluşturmak araştırma gerektiriyordu."
+          },
+          "3": {
+            "title": "Piyasada orta yol yok",
+            "description": "Emanetçiler ve MPC satıcıları kara bir kutuya güvenmek anlamına geliyordu. Hazır multisig araçları yalnızca Ethereum'a özgüydü."
+          }
+        }
+      },
+      "decision": {
+        "title": "Karar",
+        "intro": "Ekip alternatifleri değerlendirdi ve bunları üç gruba ayırdı. Her grubun bir vazgeçilmez koşulu vardı.",
+        "bucket1Eyebrow": "Grup 1",
+        "bucket1Title": "MPC emanetçiler",
+        "bucket1Description": "Fireblocks, BitGo ve benzerleri. Satıcı her anahtarın bir bölümünü tutar.",
+        "bucket1Verdict": "Gerçek öz saklama değil.",
+        "bucket2Eyebrow": "Grup 2",
+        "bucket2Title": "Tek zincirli multisig",
+        "bucket2Description": "Safe ve benzerleri. Yalnızca Ethereum, yerel UTXO desteği yok.",
+        "bucket2Verdict": "Bitcoin ve Flux da tutuyoruz.",
+        "bucket3Eyebrow": "Grup 3",
+        "bucket3Title": "Temel düzeyde multisig",
+        "bucket3Description": "Politika motoru, analitik veya uygun denetim izi olmayan cüzdanlar.",
+        "bucket3Verdict": "Araçları yeniden kendimiz oluşturuyor olurduk.",
+        "conclusion": "SSP Enterprise, üç koşulun tamamını aynı anda karşılayan tek platformdu: yerel çok zincirli destek (UTXO ve EVM), satıcı anahtar paylaşımı olmayan gerçek öz saklama ve yerleşik politika motoru, analitik ve denetim izi."
+      },
+      "whatChanged": {
+        "title": "Ne değişti",
+        "intro": "Tek platform, Foundation'ın etkileşim kurduğu her zincir, tutarlı bir imzalama modeli. Özel betikler emekliye ayrıldı. Sohbet dizisi denetim izi, platforma atfedilebilir kayıtlarla değiştirildi. Hazine ve köprü multisig aynı yönetim altında yan yana yer alıyor.",
+        "items": {
+          "0": {
+            "title": "Dokunduğumuz her zincirde M-of-N kasalar",
+            "description": "Bitcoin, Ethereum, Flux ve EVM L2'leri — aynı platform, aynı zihinsel model, aynı güvenlik garantileri."
+          },
+          "1": {
+            "title": "İmzacı başına iki cihaz, istisnasız",
+            "description": "Her imza için tarayıcı uzantısı ve mobil uygulama gereklidir. Ele geçirilmiş tek bir cihaz imza atamaz."
+          },
+          "2": {
+            "title": "Dayanıklı denetim izi",
+            "description": "Her teklif, onay ve ret; imzacı ve zaman damgasıyla birlikte kaydedilir. Sohbet dizisi yeniden oluşturmanın yerini alır."
+          },
+          "3": {
+            "title": "Uçtan uca öz saklama",
+            "description": "Satıcı anahtar paylaşımı yok. Güvenilecek MPC altyapısı yok. SSP yarın ortadan kalksaydı, fonlarımız imzacı tohumlarından kurtarılabilir kalırdı."
+          }
+        }
+      },
+      "fusionBridge": {
+        "title": "Fusion köprüsü",
+        "intro": "Fusion köprüsü, Foundation'ın işlettiği en güvenlik açısından hassas yüzeylerden biridir — Flux ve diğer zincirler arasındaki değer aktarımını koordine eder ve tek bir imzalama başarısızlığı felaket olabilir. Aynı zamanda SSP Enterprise'ın modelinin en net şekilde karşılık verdiği iş yüküdür.",
+        "items": {
+          "0": {
+            "title": "Zincir üzerinde multisig",
+            "description": "Köprünün dokunduğu her zincirde yerel multisig — akıllı sözleşme emanetçisi yok, durdurabilen veya öne geçebilen aracı yok."
+          },
+          "1": {
+            "title": "İmzacı başına iki cihazlı imzalama",
+            "description": "Bir imzacının dizüstü bilgisayarını veya telefonunu ele geçirmek bir köprü işlemi göndermek için yeterli değil. Her seferinde her iki cihaz da gereklidir."
+          },
+          "2": {
+            "title": "İmzacı başına politika kontrolleri",
+            "description": "Org ve kasa düzeyinde yapılandırılmış limitler ve beyaz listeler, herhangi bir imza toplanmadan önce uygulanır."
+          },
+          "3": {
+            "title": "Uçtan uca denetlenebilir",
+            "description": "Her onay ve ret, atfedilmiş ve zaman damgalı olarak kaydedilir. Öz saklamadan vazgeçmeden topluluk hesap verebilirliği."
+          }
+        },
+        "quote": "Fusion köprüsü artık uçtan uca kontrol ettiğimiz altyapı üzerinde çalışıyor. Kendi hazinemizdeki güvenlik garantilerinin aynısı, işlettiğimiz en yüksek riskli iş akışlarından birine uygulandı.",
+        "quoteAttribution": "— Tadeas Kmenta, Flux Foundation"
+      },
+      "cta": {
+        "title": "Aynı model. Ekibiniz için mevcut.",
+        "description": "Flux Foundation'ın Fusion köprüsünü çalıştırdığı platform, ödün vermeksizin öz saklama multisig isteyen her ekip için mevcut olan platformla aynıdır. Başlamak için ücretsiz katman. Talep üzerine özel planlar.",
+        "exploreEnterprise": "SSP Enterprise'ı Keşfet",
+        "launchEnterpriseApp": "Enterprise Uygulamasını Başlat"
+      }
+    }
+  },
+  "Enterprise": {
+    "metaTitle": "SSP Enterprise | İşletmeler için Öz Saklama Multisig",
+    "metaDescription": "İşletme hazineleri için öz saklama M-of-N multisig kasalar. Politika motoru, harcama limitleri, iki cihazlı imzalama, rol tabanlı erişim. Emanetçi yok, MPC yok.",
+    "breadcrumbLabel": "Enterprise",
+    "heroBadge": "SSP Enterprise",
+    "heroTitlePart1": "İşletmeler İçin",
+    "heroTitlePart2": "Öz Saklama",
+    "heroDescription": "Kuruluşunuz için M-of-N multisig kasalar. Her imzacı iki cihaz kullanır — tarayıcı uzantısı ve mobil uygulama. Emanetçi yok. MPC yok. Tek başarısızlık noktası yok.",
+    "heroLaunchApp": "Enterprise Uygulamasını Başlat",
+    "heroHowItWorks": "Nasıl Çalışır",
+    "fluxBanner": {
+      "imageAlt": "Flux Foundation",
+      "eyebrow": "Flux Foundation ile üretimde",
+      "description": "BTC, ETH, FLUX ve EVM L2'lerinde Fusion köprüsünü ve Vakıf hazinesini güvence altına alıyor.",
+      "cta": "Örnek olayı oku"
+    },
+    "problem": {
+      "title": "Sorun",
+      "subtitle": "Bugün kripto tutan işletmeler imkânsız ödünlerle karşılaşıyor",
+      "items": {
+        "0": {
+          "title": "Emanetçi Çözümler",
+          "problem": "Anahtarlarınız için üçüncü bir tarafa güvenin",
+          "risks": {
+            "0": "Karşı taraf riski (FTX, Celsius)",
+            "1": "Uyarısız hesap dondurmaları",
+            "2": "Satıcıya bağımlılık ve yüksek ücretler"
+          }
+        },
+        "1": {
+          "title": "MPC Sağlayıcıları",
+          "problem": "Satıcı sunucularındaki anahtar parçaları",
+          "risks": {
+            "0": "Satıcı kapanır, siz çabalamaya başlarsınız",
+            "1": "Altyapılarını doğrulayamazsınız",
+            "2": "Hâlâ bir güven bağımlılığı"
+          }
+        },
+        "2": {
+          "title": "Tek Donanım Cüzdanı",
+          "problem": "Bir kişi, bir cihaz",
+          "risks": {
+            "0": "Kilit kişi riski",
+            "1": "Ekip yönetimi yok",
+            "2": "Kayıp cihaz = kayıp fonlar"
+          }
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "Nasıl Çalışır",
+      "subtitle": "Kurumsal ölçekte gerçek öz saklama — ödünsüz",
+      "steps": {
+        "0": {
+          "title": "Kuruluşunuzu Oluşturun",
+          "description": "Yalnızca bir e-posta değil, cihazlarınızdan türetilen kriptografik bir kanıt olan SSP Kimliğinizi kullanarak kuruluşunuzu kurun."
+        },
+        "1": {
+          "title": "Ekibinizi Davet Edin",
+          "description": "Ekip üyelerini SSP Kimlikleriyle ekleyin. Rol atayın: Sahip, Yönetici, Üye veya İzleyici. Her üyenin SSP Wallet + SSP Key'e ihtiyacı var."
+        },
+        "2": {
+          "title": "Multisig Kasalar Oluşturun",
+          "description": "Farklı amaçlar için M-of-N kasalar yapılandırın — operasyonlar, hazine, bordro. Hangi imzacıların gerekli olduğunu seçin."
+        },
+        "3": {
+          "title": "Birlikte İmzalayın",
+          "description": "Web uygulaması üzerinden işlemler önerin. Gerekli her imzacı hem tarayıcı uzantısı hem de mobil uygulamayla onaylar. Eşik karşılandığında yayınlayın."
+        }
+      },
+      "diagramTitle": "İmzalama Mimarisi",
+      "diagramSubtitle": "Her imza, imzacı başına iki cihaz gerektirir",
+      "signerLabel": "İmzacı {label}",
+      "signedLabel": "İmzalandı",
+      "waitingLabel": "Bekleniyor",
+      "thresholdLabel": "3'ten 2'si eşiği karşılandı — yayınlamaya hazır"
+    },
+    "features": {
+      "title": "Enterprise Özellikleri",
+      "subtitle": "Kuruluşunuzun güvenli kripto yönetimi için ihtiyaç duyduğu her şey",
+      "readGuide": "Kılavuzu oku",
+      "items": {
+        "0": {
+          "title": "M-of-N Multisig Kasalar",
+          "description": "Ekibiniz için herhangi bir imzalama eşiği yapılandırın. 2-of-3, 3-of-5 veya yönetim modelinize uyan herhangi bir kombinasyon."
+        },
+        "1": {
+          "title": "Rol Tabanlı Erişim",
+          "description": "Sahip, Yönetici, Üye ve İzleyici rolleri. İşlemleri kimin önerebileceğini, imzalayabileceğini veya yalnızca gözlemleyebileceğini kontrol edin."
+        },
+        "2": {
+          "title": "İki Cihazlı İmzalama",
+          "description": "Her imzacı hem tarayıcı uzantısı hem de mobil uygulama kullanır. Kişi başına iki anahtar, ekibiniz genelinde M-of-N."
+        },
+        "3": {
+          "title": "Çok Zincirli Destek",
+          "description": "Bitcoin, Ethereum, Litecoin, Dogecoin, Flux, Polygon, BSC, Base, Avalanche ve daha fazlası. Tüm zincirler için tek platform."
+        },
+        "4": {
+          "title": "İşlem Teklifleri",
+          "description": "Tam ayrıntılarla işlemler önerin. Ekip üyeleri inceler, onaylar veya reddeder. Yalnızca eşik karşılandığında yayınlayın."
+        },
+        "5": {
+          "title": "Eksiksiz Denetim İzi",
+          "description": "Her eylem kalıcı olarak kaydedilir. Üye değişiklikleri, kasa işlemleri, işlem onayları — tam hesap verebilirlik."
+        }
+      }
+    },
+    "policy": {
+      "title": "İşlem Politika Motoru",
+      "subtitle": "Kuruluştan kasaya ve bireysel imzacıya kadar dağılan ayrıntılı kontroller. Daha katı politika her zaman kazanır.",
+      "tiers": {
+        "organization": "Kuruluş",
+        "organizationSub": "Varsayılan politikalar",
+        "vault": "Kasa",
+        "vaultSub": "Geçersiz kıl ve iyileştir",
+        "signer": "İmzacı",
+        "signerSub": "Bireysel limitler"
+      },
+      "tierFooter": "Politikalar yukarıdan aşağıya birleşir — herhangi bir katmandaki daha katı limit uygulanır",
+      "readMore": "Devamını oku",
+      "items": {
+        "0": {
+          "title": "Harcama Limitleri",
+          "description": "İşlem başına, günlük, haftalık ve aylık limitler. USD veya yerel token olarak ayarlayın. Toplam ve token başına kontroller."
+        },
+        "1": {
+          "title": "Adres Beyaz Listesi",
+          "description": "Üç mod: devre dışı, uyar veya uygula. Adresleri etiketleyin, zincire göre kısıtlayın. Bilinmeyen hedefleri tamamen engelleyin."
+        },
+        "2": {
+          "title": "Zaman Kilidi Gecikmeleri",
+          "description": "Yayından önce yapılandırılabilir bekleme süresi. Bir USD eşiğinin üzerinde otomatik olarak tetiklenir. Yürütmeden önce iptal edin."
+        },
+        "3": {
+          "title": "Yönetici Onayı",
+          "description": "Yüksek değerli işlemler için yönetici onayı gerektirin. Bir USD eşiği belirleyin — bunun üzerindeki her şey açık onay gerektirir."
+        },
+        "4": {
+          "title": "İmzacı Başına Geçersiz Kılmalar",
+          "description": "Her ekip üyesi için bireysel harcama limitleri belirleyin. Genç yatırımcılar daha sıkı kontroller alır, kıdemli yöneticiler daha yüksek limitler alır."
+        },
+        "5": {
+          "title": "Hız Takibi",
+          "description": "Kasa başına, imzacı başına ve token başına 30 günlük yuvarlanan harcama pencereleri. TTL tabanlı temizleme ile otomatik uygulama."
+        },
+        "6": {
+          "title": "Acil Kasa Dondurma",
+          "description": "Çift cihaz WK imzalamasıyla herhangi bir kasayı anında dondurun. Çözülene kadar tüm teklifleri engeller. Saniyeler içinde olay müdahalesi."
+        },
+        "7": {
+          "title": "3 Katmanlı Politika Hiyerarşisi",
+          "description": "Kuruluş varsayılanları kasalara ve imzacılara dağılır. Kasa düzeyindeki geçersiz kılmalar kuralları iyileştirir. Daha katı politika her zaman kazanır."
+        }
+      },
+      "footerStrong": "14+ yapılandırılabilir kontrole sahip 3 katmanlı politika hiyerarşisi",
+      "footerSuffix": "— her plana dahildir."
+    },
+    "security": {
+      "title": "5 Katmanlı Güvenlik",
+      "subtitle": "Derinlemesine savunma — ihlal için her katmanın tehlikeye girmesi gerekir",
+      "layerLabel": "Katman {n}: {name}",
+      "layers": {
+        "0": {
+          "name": "Cihaz Güvenliği",
+          "description": "İşletim sistemi düzeyinde güvenlik, biyometrik kimlik doğrulama, mobilde güvenli yerleşik bölgeler"
+        },
+        "1": {
+          "name": "Çift Cihaz 2FA",
+          "description": "Her imza için tarayıcı uzantısı + mobil uygulama gereklidir"
+        },
+        "2": {
+          "name": "Zincir Üzerinde Multisig",
+          "description": "Yerel Bitcoin multisig ve EVM akıllı sözleşme doğrulaması"
+        },
+        "3": {
+          "name": "İş Politikaları",
+          "description": "Harcama limitleri, adres beyaz listeleri, zaman kilitleri, yönetici onayları, imzacı başına geçersiz kılmalar, hız takibi — 14+ yapılandırılabilir kontrol"
+        },
+        "4": {
+          "name": "Denetim ve Uyumluluk",
+          "description": "Değiştirilemez günlükler, giriş takibi ve uyumluluk raporlaması"
+        }
+      },
+      "footerBefore": "SSP Wallet açık kaynaklıdır ve ",
+      "footerLink": "Halborn tarafından denetlenmiştir",
+      "footerAfter": ". Kodu kendiniz doğrulayın."
+    },
+    "comparison": {
+      "title": "Nasıl Karşılaştırılıyoruz",
+      "subtitle": "SSP Enterprise ile alternatifler",
+      "columns": {
+        "feature": "Özellik",
+        "ssp": "SSP Enterprise"
+      },
+      "values": {
+        "partial": "Kısmi"
+      },
+      "rows": {
+        "0": "Gerçek Öz Saklama",
+        "1": "Çok Zincirli",
+        "2": "Zincir Üzerinde Multisig",
+        "3": "İşlem Politika Motoru",
+        "4": "Mobil İmzalama",
+        "5": "Açık Kaynak",
+        "6": "Satıcıya Bağımlılık Yok",
+        "7": "Uygun Fiyatlı"
+      },
+      "annualCostLabel": "Yıllık Maliyet",
+      "annualCostSsp": "Ücretsiz*",
+      "annualCostFireblocks": "$100K+",
+      "annualCostBitgo": "$50K+",
+      "annualCostSafe": "Gas ücretleri",
+      "footnoteBefore": "* Açık kaynaklı cüzdan ücretsizdir. Enterprise platformunun başlamak için ücretsiz bir katmanı vardır. ",
+      "footnoteLink": "Satışla iletişime geçin",
+      "footnoteAfter": " özel planlar için.",
+      "migrationLabel": "Bunlardan birindeyseniz, geçiş kılavuzuna bakın:",
+      "migrationFireblocks": "Fireblocks'tan",
+      "migrationSafe": "Safe'ten",
+      "migrationBitgo": "BitGo'dan"
+    },
+    "useCases": {
+      "title": "İçin Tasarlandı",
+      "subtitle": "Kripto tutan ve ekip tabanlı imzalamaya ihtiyaç duyan her kuruluş",
+      "readPlaybook": "Oyun kitabını oku",
+      "items": {
+        "0": {
+          "title": "Kurumsal Hazine",
+          "description": "Şirket fonları için çok imzalı onay. CEO + CFO + Yönetim Kurulu = 2-of-3.",
+          "example": "3 yönetici, 2'si imzalamak zorunda"
+        },
+        "1": {
+          "title": "DAO Hazinesi",
+          "description": "Topluluk fonları için zincir üzerinde güvenlikle merkezi olmayan karar alma.",
+          "example": "5 konsey üyesi, 3'ü gerekli"
+        },
+        "2": {
+          "title": "Yatırım Fonları",
+          "description": "Fon yöneticileri ve sınırlı ortaklar için kurumsal düzeyde öz saklama.",
+          "example": "Fon yöneticisi + uyumluluk + LP"
+        },
+        "3": {
+          "title": "Ortaklıklar ve Ortak Girişimler",
+          "description": "Net hesap verebilirlik ve denetim izleriyle ortaklar arasında paylaşılan kontrol.",
+          "example": "Eşit kontrol, şeffaf operasyonlar"
+        }
+      }
+    },
+    "chains": {
+      "title": "Çok Zincirli Yerel",
+      "subtitle": "Tüm zincirleriniz için tek platform — UTXO ve EVM",
+      "footer": "Düzenli olarak daha fazla zincir ekleniyor. EVM zincirlerinde tüm ERC-20 tokenler destekleniyor."
+    },
+    "contact": {
+      "title": "Satışla İletişime Geçin",
+      "subtitle": "Özel bir Enterprise planına, özel desteğe veya öncelikli yerleşime mi ihtiyacınız var? Ekibimizle iletişime geçin.",
+      "launchApp": "Enterprise Uygulamasını Başlat",
+      "scheduleCall": "Arama Planla",
+      "directContactStrong": "Doğrudan iletişimi tercih ediyor musunuz?",
+      "directContactBefore": " Şuraya ulaşın: ",
+      "directContactBetween": " veya X'te DM gönderin: ",
+      "directContactAfter": "."
+    },
+    "form": {
+      "fullNameLabel": "Ad Soyad *",
+      "fullNamePlaceholder": "Adınız ve soyadınız",
+      "emailLabel": "E-posta Adresi *",
+      "emailPlaceholder": "e-posta@sirket.com",
+      "companyLabel": "Şirket / Kuruluş",
+      "companyPlaceholder": "Şirketinizin adı",
+      "teamSizeLabel": "Ekip Büyüklüğü",
+      "teamSizePlaceholder": "Ekip büyüklüğü seçin",
+      "teamSizeOptions": {
+        "2-5": "2-5 imzacı",
+        "6-10": "6-10 imzacı",
+        "11-25": "11-25 imzacı",
+        "25+": "25+ imzacı"
+      },
+      "useCaseLabel": "Birincil Kullanım Alanı",
+      "useCasePlaceholder": "Kullanım alanı seçin",
+      "useCaseOptions": {
+        "corporate-treasury": "Kurumsal Hazine",
+        "dao-treasury": "DAO Hazinesi",
+        "investment-fund": "Yatırım Fonu",
+        "partnership": "Ortaklık / Ortak Girişim",
+        "otc-desk": "OTC Masası",
+        "mining-operation": "Madencilik Operasyonu",
+        "exchange": "Borsa",
+        "other": "Diğer"
+      },
+      "messageLabel": "İhtiyaçlarınızı Bize Anlatın",
+      "messagePlaceholder": "Kripto saklama konusunda ne gibi zorluklarla karşılaşıyorsunuz? Ekibiniz için en önemli özellikler neler?",
+      "submitting": "İstek Gönderiliyor...",
+      "submit": "Başlayın",
+      "errorFallback": "İstek gönderilemedi. Lütfen tekrar deneyin.",
+      "errorGeneric": "İstek gönderilemedi",
+      "successTitle": "İstek Alındı!",
+      "successDescription": "SSP Enterprise'a olan ilginiz için teşekkür ederiz. Yakında sizinle iletişime geçeceğiz.",
+      "successAgain": "Başka bir istek gönder"
+    },
+    "finalCta": {
+      "title": "Anahtarlarınız. Kurallarınız.",
+      "description": "SSP Enterprise, kuruluşunuza öz saklamanın güvenliğini kurumsal yazılımın yönetimiyle sağlar. Emanetçi yok. Aracı yok. Ödün yok.",
+      "launchApp": "Enterprise Uygulamasını Başlat",
+      "downloadWallet": "SSP Wallet'ı İndir",
+      "exploreFeatures": "Tüm Özellikleri Keşfet"
+    }
+  },
+  "InteractiveDemo": {
+    "modalTitle": "Eksiksiz SSP Wallet Deneyimi",
+    "modalSubtitle": "Gerçek 2-of-2 multisig güvenliğiyle tam kurulum ve işlem akışı",
+    "closeDemo": "Demoyu kapat",
+    "previous": "Önceki",
+    "next": "Sonraki",
+    "restartDemo": "Demoyu Yeniden Başlat",
+    "downloadSspWallet": "SSP Wallet'ı İndir",
+    "stepCounter": "{phase} - Adım {current} / {total}",
+    "walletSetupTitle": "SSP Wallet Kurulumu",
+    "walletSetupSubtitle": "Güvenli kurtarma kelimeleriyle tarayıcı cüzdanınızı oluşturun",
+    "keySetupTitle": "SSP Key Kurulumu",
+    "keySetupSubtitle": "Ayrı kurtarma kelimeleriyle mobil uygulamayı kurun",
+    "deviceSyncTitle": "Cihaz Senkronizasyonu",
+    "deviceSyncSubtitle": "Tarayıcınızı ve mobilinizi güvenli şekilde bağlayın",
+    "transactionTitle": "İşlem Gönder",
+    "transactionSubtitle": "Çift cihaz güvenlik akışını deneyimleyin",
+    "feedbackCopied": "Kopyalandı!",
+    "feedbackCopiedCheck": "✓ Kopyalandı!",
+    "feedbackConfirmedCheck": "✓ Onaylandı!",
+    "chromeWebStore": "Chrome Web Store",
+    "sspWalletName": "SSP Wallet",
+    "byInfluxTech": "by InFlux Technologies",
+    "walletStoreTagline": "2-of-2 multisig ile güvenli, basit, güçlü kripto cüzdanı",
+    "getToBrowser": "Tarayıcıya Git",
+    "walletRating": "⭐ 4.8",
+    "walletUserCount": "1B+ kullanıcı",
+    "walletAudited": "🛡️ Denetlendi",
+    "installExtensionTitle": "SSP Wallet Uzantısını Kur",
+    "installExtensionDescription": "Tarayıcı uzantısını Chrome Web Store'dan indirin. Chrome, Brave ve Firefox için mevcut.",
+    "sspWalletSetup": "SSP Wallet Kurulumu",
+    "sspLogoAlt": "SSP Logosu",
+    "createYourWallet": "Cüzdanınızı Oluşturun",
+    "newPasswordLabel": "Yeni Şifre",
+    "enterSecurePasswordPlaceholder": "Güvenli şifre girin",
+    "confirmPasswordLabel": "Şifreyi Onayla",
+    "confirmPasswordPlaceholder": "Şifreyi onaylayın",
+    "agreeToTerms": "Kullanım Koşullarını okudum ve kabul ediyorum",
+    "createSecurePasswordTitle": "Güvenli Şifre Oluştur",
+    "createSecurePasswordDescription": "Bu şifre cüzdanınızı yerel olarak şifreler. Tarayıcınızı asla terk etmez ve kurtarma kelimelerinizi korur.",
+    "backupRequired": "Yedekleme Gerekli",
+    "walletSeedPhraseHeading": "Cüzdan Kurtarma Kelimeleriniz",
+    "writeDownWarning": "⚠️ Bunu not edin ve güvenli bir yerde saklayın!",
+    "clickToRevealSeed": "24 kelimelik kurtarma kelimelerinizi görüntülemek için tıklayın",
+    "showSeedPhrase": "Kurtarma Kelimelerini Göster",
+    "copy": "Kopyala",
+    "writtenItDown": "✓ Not Ettim",
+    "seedConfirmedToast": "✓ Kurtarma kelimeleri onaylandı ve devam etmeye hazır",
+    "backupSeedTitle": "Kurtarma Kelimelerinizi Yedekleyin",
+    "backupSeedDescription": "Bu 24 kelimelik ifade ana anahtarınızdır. Not edin ve çevrimdışı olarak güvenli bir şekilde saklayın. Bu, 2'nin 1. kurtarma kelime öbeğidir.",
+    "walletCreated": "Cüzdan Oluşturuldu",
+    "sspWalletReady": "SSP Wallet Hazır!",
+    "walletSetUpWith": "Tarayıcı cüzdanınız şunlarla kuruldu:",
+    "securePasswordProtection": "Güvenli şifre koruması",
+    "twentyFourWordSeedBackedUp": "24 kelimelik kurtarma kelimeleri yedeklendi",
+    "readyForMobileSetup": "Mobil uygulama kurulumuna hazır",
+    "nextStep": "Sonraki Adım",
+    "setUpKeyMobile": "SSP Key mobil uygulamasını kur",
+    "walletSetupCompleteTitle": "Cüzdan Kurulumu Tamamlandı",
+    "walletSetupCompleteDescription": "Tarayıcı cüzdanınız hazır! Şimdi ikinci imza için mobil uygulamayı kurmanız gerekiyor.",
+    "sspKeyName": "SSP Key",
+    "twoFaMultisigSecurity": "2FA Multisig Güvenliği",
+    "ratingLabel": "Puan:",
+    "ratingValue": "⭐⭐⭐⭐⭐ 5.0",
+    "developerLabel": "Geliştirici:",
+    "developerValue": "Influx Technologies",
+    "downloadsLabel": "İndirme:",
+    "downloadsValue": "1.000+",
+    "sizeLabel": "Boyut:",
+    "iosSizeValue": "35 MB",
+    "androidSizeValue": "46 MB",
+    "requiresLabel": "Gerektirir:",
+    "iosRequiresValue": "iOS 15.1+",
+    "androidRequiresValue": "Android 7.0+",
+    "downloadForIos": "iOS için İndir",
+    "downloadForAndroid": "Android için İndir",
+    "securityAudited": "Güvenlik denetimli",
+    "touchFaceId": "Touch ID / Face ID",
+    "biometricUnlock": "Biyometrik kilit açma",
+    "qrCodePairing": "QR kod eşleştirme",
+    "zeroDataStorage": "Sıfır veri depolama",
+    "downloadKeyMobileTitle": "SSP Key Mobil Uygulamasını İndir",
+    "downloadKeyMobileDescription": "Mobil eşlik uygulamasını App Store veya Google Play'den kurun. Bu, işlemleriniz için ikinci imzayı sağlar.",
+    "sspKeyAlt": "SSP Key",
+    "sspKeySetup": "SSP Key Kurulumu",
+    "appPasswordLabel": "Uygulama Şifresi",
+    "createPasswordPlaceholder": "Şifre oluştur",
+    "enableBiometrics": "Biyometrikleri Etkinleştir",
+    "continueSetup": "Kuruluma Devam Et",
+    "touchFaceIdEnabled": "✓ Touch ID / Face ID Etkinleştirildi",
+    "secureMobileKeyTitle": "Mobil Anahtarınızı Güvenceye Alın",
+    "secureMobileKeyDescription": "Mobil uygulamanız için bir şifre oluşturun ve gelişmiş güvenlik için biyometrik kimlik doğrulamayı etkinleştirin.",
+    "keySeedPhrase": "Anahtar Kurtarma Kelimeleri",
+    "generateKeySeed": "Ayrı mobil anahtar kurtarma kelimelerinizi oluşturun",
+    "showKeySeed": "Anahtar Tohumunu Göster",
+    "saved": "✓ Kaydedildi",
+    "keySeedConfirmedToast": "✓ Anahtar tohumu onaylandı",
+    "storeSeparatelyWarning": "⚠️ Cüzdan tohumundan ayrı saklayın!",
+    "backupKeySeedTitle": "Mobil Anahtar Tohumunu Yedekle",
+    "backupKeySeedDescription": "Bu, mobil anahtarınız için ayrı bir 24 kelimelik kurtarma kelime öbeğidir. Tam SSP kurtarması için her iki tohum da gereklidir.",
+    "sspKeyReady": "SSP Key Hazır!",
+    "passwordProtection": "Şifre koruması",
+    "biometricSecurity": "Biyometrik güvenlik",
+    "keySeedBackedUp": "Anahtar tohumu yedeklendi",
+    "readyToPair": "Eşleştirmeye hazır",
+    "nextScanQrToConnect": "Sonraki: Cihazları bağlamak için QR kodu tarayın",
+    "mobileKeyCompleteTitle": "Mobil Anahtar Kurulumu Tamamlandı",
+    "mobileKeyCompleteDescription": "Mobil uygulamanız hazır! Şimdi 2-of-2 güvenliği için tarayıcı cüzdanınıza bağlayalım.",
+    "sspWalletSyncDevice": "SSP Wallet - Cihaz Senkronizasyonu",
+    "connectMobileDevice": "Mobil Cihaz Bağla",
+    "scanQrWithKeyApp": "Bu QR kodu SSP Key uygulamasıyla tarayın",
+    "connectionIdLabel": "Bağlantı Kimliği:",
+    "learnMoreLink": "sspwallet.io'da daha fazla bilgi edinin",
+    "scanQrCode": "QR Kodunu Tara",
+    "positionQrInFrame": "QR kodunu çerçeveye konumlandırın",
+    "readyToScan": "Taramaya Hazır",
+    "generatePairingQrTitle": "Eşleştirme QR Kodu Oluştur",
+    "generatePairingQrDescription": "Tarayıcı cüzdanınız SSP logosuyla bir QR kodu gösterir. SSP Key uygulamasını açın ve güvenli şekilde bağlanmak için tarayın.",
+    "synchronising": "Senkronize ediliyor...",
+    "pairingInProgress": "Eşleştirme Devam Ediyor",
+    "establishingSecureConnection": "Mobil cihazla güvenli bağlantı kuruluyor...",
+    "exchangingKeys": "Şifreleme anahtarları ve açık anahtarlar değiş tokuş ediliyor...",
+    "connectionDetailsHeading": "Bağlantı Ayrıntıları",
+    "establishingSspRelay": "Güvenli SSP röle bağlantısı kuruluyor...",
+    "synchronisationComplete": "Senkronizasyon Tamamlandı!",
+    "qrCodeScanned": "QR Kodu Tarandı!",
+    "browserWalletLabel": "Tarayıcı Cüzdanı:",
+    "chromeExtensionValue": "Chrome Uzantısı",
+    "encryptionLabel": "Şifreleme:",
+    "confirmPairing": "Eşleştirmeyi Onayla",
+    "scanningQrCodeTitle": "QR Kodu Taranıyor",
+    "scanningQrCodeDescription": "Mobil uygulama QR kodunu okur ve tarayıcı cüzdanınızla şifreli bir bağlantı kurar.",
+    "deviceConnected": "Cihaz Bağlandı",
+    "successfullyPaired": "Başarıyla Eşleştirildi!",
+    "devicesSecurelyConnected": "Cihazlarınız artık güvenli şekilde bağlandı",
+    "encryptionRow": "🔐 Şifreleme:",
+    "active": "Aktif",
+    "mobileDeviceRow": "📱 Mobil Cihaz:",
+    "connected": "Bağlandı",
+    "twoOfTwoMultisigRow": "🔑 2-of-2 Multisig:",
+    "ready": "Hazır",
+    "secureConnection": "Güvenli Bağlantı",
+    "readyForTransactions": "İşlemlere Hazır",
+    "online": "Çevrimiçi",
+    "connectionTypeLabel": "Bağlantı Türü:",
+    "sspRelaySecured": "SSP Röle Güvende",
+    "multisigStatusLabel": "Multisig Durumu:",
+    "twoOfTwoActive": "2-of-2 Aktif",
+    "walletProtectedByMultisig": "Cüzdan gerçek 2-of-2 multisig ile korunuyor!",
+    "devicesPairedTitle": "Cihazlar Başarıyla Eşleştirildi",
+    "devicesPairedDescription": "Mükemmel! Tarayıcınız ve mobiliniz artık uçtan uca şifrelemeyle bağlandı. Artık güvenli işlemler gönderebilirsiniz.",
+    "sendTransaction": "İşlem Gönder",
+    "sendEthereum": "Ethereum Gönder",
+    "recipientAddressLabel": "Alıcı Adresi",
+    "amountEthLabel": "Tutar (ETH)",
+    "transactionSummary": "İşlem Özeti",
+    "amountLabel": "Tutar:",
+    "gasFeeLabel": "Gas Ücreti:",
+    "totalLabel": "Toplam:",
+    "sendTransactionButton": "İşlem Gönder",
+    "createTransactionTitle": "İşlem Oluştur",
+    "createTransactionDescription": "Alıcı adresini ve tutarı doldurun. İşlem, mobil cihazınızdan ek onay gerektirecektir.",
+    "waitingForMobileApproval": "Mobil onay bekleniyor...",
+    "pendingMobileApproval": "Bekleyen Mobil Onay",
+    "signatureOneCompleteCheckMobile": "İmza 1/2 tamamlandı. İşlemi onaylamak için mobil cihazınızı kontrol edin.",
+    "transactionDetails": "İşlem Ayrıntıları",
+    "sendAmount": "{amount} ETH Gönder",
+    "toAddress": "Alıcı: {address}",
+    "notificationSentToMobile": "Mobil cihaza bildirim gönderildi",
+    "transactionApprovalRequired": "İşlem Onayı Gerekli",
+    "transactionApproval": "İşlem Onayı",
+    "amount": "Tutar",
+    "toAddressLabel": "Alıcı Adresi",
+    "gasFee": "Gas Ücreti",
+    "status": "Durum",
+    "awaitingApproval": "Onay Bekleniyor (2/2)",
+    "approveWithTouchId": "Touch ID ile Onayla",
+    "approveTwoOfTwo": "Onayla (2/2)",
+    "reject": "Reddet",
+    "mobileConfirmationTitle": "Mobil Onay Gerekli",
+    "mobileConfirmationDescriptionBiometric": "Mobil cihazınızda bir bildirim göründü. İşlem ayrıntılarını inceleyin ve biyometrik kimlik doğrulamayla onaylayın.",
+    "mobileConfirmationDescriptionPassword": "Mobil cihazınızda bir bildirim göründü. İşlem ayrıntılarını inceleyin ve şifrenizle onaylayın.",
+    "transactionBroadcasted": "İşlem Yayınlandı!",
+    "signaturesCollected": "İmzalar Toplandı",
+    "browserWalletOneOfTwo": "Tarayıcı Cüzdanı (1/2)",
+    "mobileKeyTwoOfTwo": "Mobil Anahtar (2/2)",
+    "networkStatus": "Ağ Durumu",
+    "confirmingOnEthereum": "Ethereum ağında onaylanıyor",
+    "usuallyTakesMinutes": "Genellikle 1-3 dakika sürer",
+    "transactionHash": "İşlem Hash'i",
+    "viewOnEtherscan": "Etherscan'de Görüntüle",
+    "transactionSubmittedTitle": "İşlem Gönderildi",
+    "transactionSubmittedDescription": "Mükemmel! Her iki imza toplandı ve işlem Ethereum'a yayınlandı. Ağ şu anda güvenli 2-of-2 multisig işleminizi madenciliğini yapıyor ve onaylıyor.",
+    "transactionConfirmed": "İşlem Onaylandı",
+    "transactionSuccessful": "İşlem Başarılı!",
+    "confirmedOnEthereum": "Ethereum ağında onaylandı.",
+    "hashLabel": "Hash:",
+    "sendAnotherTransaction": "Başka Bir İşlem Gönder",
+    "transactionCompleteCelebration": "🎉 İşlem Tamamlandı!",
+    "fundsTransferredSummary": "Fonlarınız gerçek 2-of-2 multisig teknolojisi kullanılarak güvenli bir şekilde transfer edildi. Bu işlemi yetkilendirmek ve imzalamak için her iki cihaz da gerekli oldu.",
+    "whyUltraSecure": "Bu Neden Ultra Güvenli",
+    "twoSeparateDevices": "2 ayrı cihaz gerekli",
+    "twoSeparateSeeds": "2 ayrı kurtarma kelimeleri",
+    "trueMultisigBip48": "Gerçek multisig (BIP48)",
+    "zeroServerStorage": "Sıfır sunucu depolama"
+  }
+}

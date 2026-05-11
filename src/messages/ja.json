@@ -1,0 +1,1839 @@
+{
+  "Common": {
+    "skipToContent": "コンテンツへスキップ",
+    "loading": "読み込み中…",
+    "error": "エラーが発生しました。",
+    "retry": "再試行",
+    "readMore": "続きを読む",
+    "breadcrumbHome": "ホーム",
+    "breadcrumbAriaLabel": "パンくずリスト",
+    "websiteAriaLabel": "ウェブサイト",
+    "notFoundTitle": "ページが見つかりません",
+    "notFoundDescription": "お探しのページは存在しないか、移動した可能性があります。",
+    "goHome": "ホームへ戻る",
+    "errorTitle": "エラーが発生しました",
+    "errorDescription": "予期しないエラーが発生しました。ページを更新するか、ホームに戻ってみてください。",
+    "tryAgain": "もう一度試す",
+    "translationPendingBanner": "この記事はまだ翻訳されていません — 英語で表示しています。",
+    "localeBadge": {
+      "en": "EN",
+      "es": "ES",
+      "zh": "ZH"
+    }
+  },
+  "Header": {
+    "home": "ホーム",
+    "enterprise": "Enterprise",
+    "features": "機能",
+    "newsroom": "ニュースルーム",
+    "academy": "Academy",
+    "guide": "ガイド",
+    "support": "サポート",
+    "contact": "お問い合わせ",
+    "more": "もっと見る",
+    "download": "ダウンロード",
+    "toggleTheme": "テーマを切り替える",
+    "toggleMenu": "メニューを切り替える",
+    "selectLanguage": "言語を選択"
+  },
+  "Footer": {
+    "navigation": "ナビゲーション",
+    "product": "プロダクト",
+    "learn": "学ぶ",
+    "community": "コミュニティ",
+    "legal": "法的情報",
+    "supportedChains": "対応チェーン",
+    "rssFeed": "RSS フィード",
+    "cookieSettings": "Cookie 設定",
+    "rights": "All rights reserved.",
+    "builtForWeb3": "Web3 のために ❤️ を込めて開発",
+    "poweredByFlux": "Powered by Flux",
+    "brandDescription": "安全・シンプル・強力。SSP は複数ブロックチェーンに対応したオープンソースのセルフカストディ BIP48 マルチシグネチャブラウザウォレットです。アカウント抽象化もサポートしています。",
+    "links": {
+      "home": "ホーム",
+      "features": "機能",
+      "guide": "ガイド",
+      "support": "サポート",
+      "contact": "お問い合わせ",
+      "enterprise": "Enterprise",
+      "download": "ダウンロード",
+      "mobileSspKey": "モバイル SSP Key",
+      "sspEnterprise": "SSP Enterprise",
+      "securityAudits": "セキュリティ監査",
+      "documentation": "ドキュメント",
+      "github": "GitHub",
+      "discord": "Discord",
+      "twitter": "Twitter",
+      "medium": "Medium",
+      "youtube": "YouTube",
+      "helpTranslate": "翻訳に協力する",
+      "newsroom": "ニュースルーム",
+      "academy": "Academy",
+      "multisigExplained": "Multisig 解説",
+      "security": "セキュリティ",
+      "gettingStarted": "はじめに",
+      "rssFeed": "RSS フィード",
+      "privacyPolicy": "プライバシーポリシー",
+      "termsOfService": "利用規約",
+      "cookiePolicy": "Cookie ポリシー"
+    },
+    "fluxAlt": "Flux"
+  },
+  "Home": {
+    "metaTitle": "SSP Wallet — 安全・シンプル・強力な暗号資産ウォレット",
+    "metaDescription": "真の 2-of-2 multisig 暗号資産ウォレット。すべてのトランザクションにブラウザ拡張機能 + モバイルが必要。Bitcoin、Ethereum、15 以上のブロックチェーンをサポート。",
+    "hero": {
+      "auditedBadge": "Halborn によるセキュリティ監査済み",
+      "titleSecure": "安全",
+      "titleSimple": "シンプル",
+      "titlePowerful": "強力",
+      "description": "BIP48 導出を使用した真の 2-of-2 マルチシグネチャウォレット。すべてのトランザクションにブラウザ拡張機能とモバイルデバイスの両方が必要です。WalletConnect v2、Schnorr 署名による ERC-4337 アカウント抽象化、15 以上のブロックチェーンに対応。",
+      "featureMultisig": "真の 2-of-2 Multisig",
+      "featureBlockchains": "15 以上のブロックチェーン",
+      "featureZeroStorage": "ゼロデータストレージ",
+      "getStarted": "今すぐ始める",
+      "watchDemo": "デモを見る",
+      "statSupportedChains": "対応チェーン",
+      "statActiveUsers": "アクティブユーザー",
+      "statSecurityAudits": "セキュリティ監査",
+      "animationAlt": "SSP Wallet アニメーション",
+      "closeModal": "モーダルを閉じる",
+      "videoUnsupported": "お使いのブラウザはビデオタグをサポートしていません。"
+    },
+    "features": {
+      "titlePart1": "なぜ選ぶ",
+      "titleHighlight": "SSP Wallet",
+      "titleSuffix": "？",
+      "description": "一つの包括的な暗号資産ウォレットソリューションで、セキュリティ、シンプルさ、パワーの完璧な融合を体験してください。",
+      "items": {
+        "0": {
+          "title": "安全な 2-of-2 マルチシグネチャ",
+          "description": "すべてのトランザクションにブラウザ拡張機能とモバイルデバイスの両方の署名を必要とする高度な BIP48 導出と真の 2 要素認証。デュアルデバイス保護による最高のセキュリティ。"
+        },
+        "1": {
+          "title": "シンプルかつ高度",
+          "description": "複雑なマルチアセットマルチシグネチャ技術をシンプルに。誰でも使える直感的なインターフェースで高度な BIP48 セキュリティとアカウント抽象化を提供。"
+        },
+        "2": {
+          "title": "強力な dApp インタラクション",
+          "description": "WalletConnect v2 (Reown) サポート、EIP-712 メッセージ署名、すべての EVM チェーンと DeFi プロトコルにわたるリアルタイム通信で何千もの dApp に接続。"
+        },
+        "3": {
+          "title": "マルチチェーンサポート",
+          "description": "Bitcoin、Ethereum、Polygon、BSC、Avalanche、Base などを含む 15 以上のブロックチェーンをサポート。Ethereum 上でネイティブ Schnorr マルチシグネチャアカウント抽象化 (ERC-4337) を備えた初のウォレット。EOA なしでスマートコントラクトウォレットを実現。"
+        },
+        "4": {
+          "title": "ゼロデータストレージ",
+          "description": "サーバー側のデータストレージがゼロの完全なセルフカストディ。プライベートキー、シード、トランザクションは軍用グレードの AES-GCM 暗号化とデバイスフィンガープリンティングを使用してデバイス上にのみ保存されます。"
+        },
+        "5": {
+          "title": "購入・売却・スワップ",
+          "description": "クレジットカードや銀行振込で直接暗号資産を購入し、暗号資産を法定通貨に売却し、ウォレット内でシームレスに異なる暗号資産間でスワップ。最良のレートとオプションのために複数プロバイダーの集約エンジンを搭載。"
+        }
+      },
+      "futureTitlePart1": "金融の",
+      "futureTitleHighlight": "未来のために構築",
+      "highlights": {
+        "0": {
+          "title": "高度なセキュリティ",
+          "description": "軍用グレードの暗号化とマルチシグネチャ技術が資産を守ります"
+        },
+        "1": {
+          "title": "シームレスな体験",
+          "description": "直感的なインターフェースで暗号資産を誰でも利用可能に"
+        },
+        "2": {
+          "title": "オープンソース",
+          "description": "信頼して検証できる透明で監査済みのコード"
+        }
+      },
+      "demoTitle": "SSP Wallet インタラクティブデモを試す",
+      "demoDescription": "完全なセットアップとトランザクションフローを体験",
+      "launchDemo": "インタラクティブデモを起動",
+      "demoFooter": "インストール不要 • 3 分間の体験"
+    },
+    "security": {
+      "badge": "セキュリティ最優先のアプローチ",
+      "titleHighlight": "銀行レベルのセキュリティ",
+      "titleSuffix": "を信頼して",
+      "description": "セキュリティは大手セキュリティ企業によって独自に検証・監査されています。資産は軍用グレードの暗号化と最先端技術によって保護されています。",
+      "items": {
+        "0": {
+          "title": "セキュリティ監査済み",
+          "description": "すべての重要コンポーネントに対する Halborn による包括的なセキュリティ監査",
+          "highlight": "Halborn 認定"
+        },
+        "1": {
+          "title": "BIP48 マルチシグネチャ",
+          "description": "デバイスフィンガープリンティングと AES-GCM 暗号化を使用した BIP48 導出による真の 2-of-2 マルチシグネチャ",
+          "highlight": "暗号学的に安全"
+        },
+        "2": {
+          "title": "オープンソース & 決定論的",
+          "description": "決定論的ビルドによる透明なコード — 配布されたウォレットがソースコードと完全に一致することを誰でも検証できます",
+          "highlight": "完全に検証可能"
+        },
+        "3": {
+          "title": "ゼロデータストレージ",
+          "description": "デバイスフィンガープリンティングによる PBKDF2 ベースの暗号化により、ローカルに保存されたすべてのデータが超安全です。サーバーに触れることは一切ありません。",
+          "highlight": "セルフカストディのみ"
+        }
+      },
+      "auditTitlePart1": "独自に",
+      "auditTitleHighlight": "セキュリティ監査済み",
+      "auditDescription": "SSP エコシステムのすべての重要コンポーネントは、著名なブロックチェーンセキュリティ企業である Halborn による厳格なセキュリティ監査を受けています。透明性へのコミットメントにより、すべての監査レポートが公開されています。",
+      "indicators": {
+        "0": "業界トップのベストプラクティス",
+        "1": "最高のセキュリティ基準に基づく設計",
+        "2": "継続的なセキュリティ監視"
+      },
+      "auditedByHalborn": "Halborn による監査済み",
+      "recentReportsTitle": "最新の監査レポート",
+      "viewReport": "レポートを見る",
+      "reports": {
+        "0": {
+          "title": "SSP Wallet、Key & Relay 監査",
+          "date": "2025 年 3 月",
+          "status": "完了"
+        },
+        "1": {
+          "title": "スマートコントラクト監査",
+          "date": "2025 年 2 月",
+          "status": "完了"
+        },
+        "2": {
+          "title": "SDK セキュリティ監査",
+          "date": "2025 年 2 月",
+          "status": "完了"
+        }
+      },
+      "bugBountyPrefix": "セキュリティバグバウンティ:",
+      "bugBountyText": "セキュリティ脆弱性の責任ある開示に対して報酬を提供しています。SSP のセキュリティ維持にご協力ください。",
+      "lavaMoatTitleHighlight": "LavaMoat",
+      "lavaMoatTitleSuffix": "ランタイム保護",
+      "lavaMoatDescription": "SSP Wallet はサプライチェーン攻撃から保護するセキュリティフレームワーク LavaMoat を統合しています。LavaMoat は各依存関係をコンパートメントでラップし、必要なものにのみアクセスを許可することで、悪意あるコードが秘密を盗んだりウォレットを侵害するのを防ぎます。",
+      "lavaIndicators": {
+        "0": "SES コンパートメントでラップされたパッケージ",
+        "1": "パッケージごとの限定的なプラットフォームアクセス",
+        "2": "JavaScript プリモーディアルの変更を防止"
+      },
+      "learnLavaMoat": "LavaMoat について学ぶ",
+      "protectionLayersTitle": "保護レイヤー",
+      "layers": {
+        "0": {
+          "title": "パッケージコンパートメント",
+          "description": "各パッケージが独自のコンパートメントで実行され、機密リソースへの不正アクセスを防止"
+        },
+        "1": {
+          "title": "ポリシーの適用",
+          "description": "ポリシーファイルが各パッケージがアクセスできるリソースを正確に定義"
+        },
+        "2": {
+          "title": "サプライチェーン防御",
+          "description": "悪意ある操作を試みる侵害された依存関係から保護"
+        },
+        "3": {
+          "title": "ランタイム監視",
+          "description": "継続的な適用によりセキュリティポリシーがランタイムでアクティブに保たれる"
+        }
+      },
+      "deterministicTitleHighlight": "決定論的ビルド",
+      "deterministicTitleSuffix": "で究極の信頼を",
+      "deterministicDescription": "SSP Wallet は Docker を使用した決定論的ビルドを特徴としています。これは同一のソースコードが同一のバイナリを生成することを意味し、誰でもダウンロードしたウォレットが公開されたソースコードから構築されたものと完全に一致することを独自に検証できます。",
+      "detIndicators": {
+        "0": "Docker ベースの隔離されたビルド環境",
+        "1": "暗号学的に署名されたリリースチェックサム",
+        "2": "サプライチェーン攻撃ベクトルを排除"
+      },
+      "learnVerify": "検証方法を学ぶ",
+      "verificationProcessTitle": "検証プロセス",
+      "verifySteps": {
+        "0": {
+          "title": "リリースファイルをダウンロード",
+          "description": "GitHub リリースから拡張機能ファイル、SHA256SUMS、GPG 署名を取得"
+        },
+        "1": {
+          "title": "GPG 署名を検証",
+          "description": "OpenPGP キーサーバーから公開鍵をインポートし、署名済みチェックサムを検証"
+        },
+        "2": {
+          "title": "ファイルハッシュを検証",
+          "description": "ダウンロードしたファイルが署名済みチェックサムと一致することを確認"
+        },
+        "3": {
+          "title": "任意: ビルドを再現",
+          "description": "上級ユーザーはソースからビルドして同一の出力を検証できます"
+        }
+      }
+    },
+    "enterpriseBand": {
+      "badge": "チームとビジネス向け",
+      "fluxImageAlt": "Flux Foundation",
+      "titlePart1": "チームのトレジャリーを管理していますか？",
+      "titleHighlight": "SSP Enterprise をご覧ください。",
+      "description": "チームが鍵を保持します。チームが署名します。SSP Enterprise が調整を担当 — 提案、ポリシー、CFO が本当に必要とする監査証跡。",
+      "highlights": {
+        "0": {
+          "title": "M-of-N Multisig ボールト",
+          "description": "任意の署名しきい値を設定 — 2-of-3、3-of-5、ガバナンスに合わせて。"
+        },
+        "1": {
+          "title": "トランザクションポリシーエンジン",
+          "description": "支出制限、アドレスホワイトリスト、タイムロック、管理者承認 — 14 以上のコントロール。"
+        },
+        "2": {
+          "title": "カストディアンなし。MPC なし。",
+          "description": "エンタープライズスケールのセルフカストディ。署名者ごとに 2 デバイスで署名、オンチェーンで検証済み。"
+        }
+      },
+      "fluxEyebrow": "Flux Foundation",
+      "fluxBefore": "SSP Enterprise を使用して",
+      "fluxStrong": "Fusion ブリッジ",
+      "fluxAfter": "を保護し、マルチパーティ署名でファウンデーションのトレジャリーを管理。",
+      "fluxCta": "ケーススタディを読む",
+      "explore": "SSP Enterprise を見る",
+      "launchApp": "Enterprise アプリを起動"
+    },
+    "supportedChains": {
+      "badge": "マルチチェーンサポート",
+      "titleHighlight": "15 以上のブロックチェーン",
+      "titleSuffix": "を 1 つのウォレットで",
+      "description": "Bitcoin から Ethereum まで、すべての暗号資産を管理します。SSP Wallet は dApp への WalletConnect v2 サポートとオフライン QR コードトランザクション機能を備えた複数のブロックチェーンネットワークへの統合アクセスを提供します。",
+      "chainDescriptions": {
+        "BTC": "最初の暗号資産",
+        "ETH": "スマートコントラクトプラットフォーム",
+        "LTC": "デジタルシルバー",
+        "ZEC": "プライバシー重視",
+        "RVN": "アセット転送ブロックチェーン",
+        "DOGE": "みんなの暗号資産",
+        "BCH": "ピアツーピア電子キャッシュ",
+        "FLUX": "分散型コンピューティング",
+        "MATIC": "Ethereum スケーリング",
+        "BSC": "高速・低コストのトランザクション",
+        "AVAX": "高性能ブロックチェーン",
+        "BASE": "Coinbase L2 ソリューション"
+      },
+      "chainLogoAlt": "{name} ロゴ",
+      "moreFeaturesTitle": "さらなる機能",
+      "moreFeaturesHighlight": "近日公開",
+      "moreFeaturesDescription": "コミュニティの要望と技術の進歩に基づいて、新しいブロックチェーンネットワークと高度なセキュリティ機能で SSP Wallet を継続的に拡大しています。",
+      "walletConnectStrong": "WalletConnect v2 (Reown)",
+      "walletConnectAfter": "何千もの dApp に接続",
+      "accountAbstractionStrong": "アカウント抽象化 (ERC-4337)",
+      "accountAbstractionAfter": "スマートコントラクトウォレット",
+      "solanaStrong": "Solana サポート",
+      "solanaAfter": "multisig 付きで近日公開",
+      "viewFullList": "アセットの完全なリストを見る"
+    },
+    "cta": {
+      "badge": "始める準備はできていますか？",
+      "titlePart1": "参加しよう",
+      "titleHighlight": "暗号資産の未来へ",
+      "description": "今すぐ SSP Wallet をダウンロードして、比類なきセキュリティとシンプルさを持つ次世代の暗号資産管理を体験してください。",
+      "downloadNow": "今すぐダウンロード",
+      "learnMore": "詳しく見る",
+      "options": {
+        "0": {
+          "title": "SSP Wallet - ブラウザ拡張機能",
+          "description": "利用可能 - Chrome、Brave、Firefox"
+        },
+        "1": {
+          "title": "SSP Key - モバイル 2FA アプリ",
+          "description": "トランザクション承認などに必須"
+        },
+        "2": {
+          "title": "SSP Enterprise - チーム向け",
+          "description": "組織向けの M-of-N multisig ボールト。現在利用可能。"
+        }
+      },
+      "availableNow": "現在利用可能",
+      "comingSoon": "近日公開",
+      "statActiveUsers": "アクティブユーザー",
+      "statAssetsSecured": "保護されたアセット",
+      "statBlockchainsSupported": "対応ブロックチェーン",
+      "indicatorAudited": "セキュリティ監査済み",
+      "indicatorOpenSource": "オープンソース",
+      "indicatorCommunity": "コミュニティ主導"
+    }
+  },
+  "Newsroom": {
+    "title": "ニュースルーム",
+    "description": "SSP の最新ニュース、プロダクトアップデート、お知らせ。",
+    "metaTitle": "ニュースルーム — 最新ニュース & アップデート",
+    "metaDescription": "SSP の最新ニュース、プロダクトアップデート、お知らせを随時お届けします。",
+    "filterAll": "すべて",
+    "loadMore": "もっと読む",
+    "noArticles": "このフィルターに一致する記事はまだありません。",
+    "backToNewsroom": "ニュースルームに戻る",
+    "shareTitle": "この記事をシェアする",
+    "shareTwitter": "Twitter でシェア",
+    "shareFacebook": "Facebook でシェア",
+    "shareTelegram": "Telegram でシェア",
+    "shareReddit": "Reddit でシェア",
+    "shareCopy": "リンクをコピー",
+    "shareCopied": "リンクをコピーしました！",
+    "tableOfContents": "このページの内容",
+    "relatedArticles": "関連記事",
+    "minRead": "{minutes} 分で読める",
+    "byAuthor": "{author} 著",
+    "publishedOn": "{date} 公開",
+    "updatedOn": "{date} 更新"
+  },
+  "Academy": {
+    "title": "SSP Academy",
+    "description": "SSP でセルフカストディをマスターするためのガイド、チュートリアル、詳細解説。",
+    "metaTitle": "SSP Academy — 暗号資産セルフカストディを学ぶ",
+    "metaDescription": "SSP、multisig、セキュリティ、DeFi などに関するガイド、チュートリアル、詳細解説。",
+    "browseByTopic": "トピック別に探す",
+    "learningPaths": "ラーニングパス",
+    "viewAllSeries": "すべて見る",
+    "latestArticles": "最新記事",
+    "comingSoon": "新しい記事を近日公開予定 — もうしばらくお待ちください。",
+    "categoryEmpty": "新しい記事を近日公開予定です。それまでの間、関連トピックをご覧ください：",
+    "backToCategory": "{category} に戻る",
+    "articleCount": "{count, plural, =0 {記事なし} =1 {記事 1 件} other {記事 # 件}}",
+    "partsCount": "{count, plural, =0 {パートなし} =1 {パート 1 件} other {パート # 件}}",
+    "difficulty": {
+      "beginner": "初級",
+      "intermediate": "中級",
+      "advanced": "上級"
+    },
+    "atAGlance": "概要",
+    "seriesPart": "{total} 中 第 {order} パート",
+    "previousPart": "前のパート",
+    "nextPart": "次のパート",
+    "seriesMetaDescription": "SSP を使った暗号資産セルフカストディを初級から上級まで体系的に学ぶマルチパートシリーズ。",
+    "seriesIndexDescription": "初級から上級まで体系的に学べるマルチパートシリーズ。",
+    "seriesEmpty": "ラーニングパスは近日公開予定です。それまでの間、トピック別に記事をご覧ください：",
+    "backToAcademy": "Academy に戻る",
+    "seriesPartsEmpty": "パートは近日公開予定です。",
+    "viewAllLearningPaths": "ラーニングパスをすべて見る",
+    "categoryIntros": {
+      "multisig": "Multisig ウォレットはトランザクションを承認するために複数の署名が必要です。SSP はすべての署名アクションに 2-of-2 を適用しており、ブラウザ拡張機能とモバイル SSP Key アプリの両方が承認する必要があります。このページでは、そのモデルの仕組み、防げる攻撃、限界について解説する記事を集めています。",
+      "getting-started": "暗号資産が初めての方、または久しぶりに戻ってきた方はここから始めてください。ウォレット、アドレス、トランザクション、ガス代、メンプール、ファイナリティなど、実際の資金を扱う前に必要な基本用語を解説します。",
+      "security": "攻撃は巧妙なため、セルフカストディは難しいものです。このコレクションでは、ユーザーが実際に被害に遭う脅威 — フィッシングページ、偽サポート DM、悪意ある dApp、シードフレーズの紛失 — と、SSP の 2-of-2 モデルがそのほとんどを無力化する方法を解説します。",
+      "how-to": "SSP ユーザーが毎日行うこと — チェーン間でのトランザクション送信、WalletConnect を使った dApp 接続、トークンのスワップ、デバイス紛失からの復旧 — を実際のスクリーンショットとともにステップごとに解説します。",
+      "coin-guides": "SSP がサポートする各コイン・チェーンにはそれぞれ特徴があります — UTXO かアカウントベースか、ネイティブ multisig か ERC-4337 か、手数料の仕組み、ファイナリティ時間など。このコレクションでは 1 つずつ詳しく解説します。",
+      "defi": "SSP は EVM チェーン上の ERC-4337 アカウント抽象化を通じて DeFi をサポートしています。これらの記事では、AA とは何か、multisig ウォレットから安全に使える dApp、SSP が DeFi プロトコルへの参加を可能にしながらもあなたのコントロールを維持する方法を解説します。",
+      "news-explained": "ヘッドラインの裏側：セルフカストディユーザーに実際に影響を与える規制の変化、取引所の破綻、プロトコルインシデント、規格の更新を誇張なく解説します。"
+    }
+  },
+  "Author": {
+    "title": "{name}",
+    "postsBy": "{name} の投稿",
+    "noPosts": "まだ投稿がありません。",
+    "metaTitle": "{name} — SSP 著者",
+    "metaDescriptionFallback": "{name} の記事",
+    "notFoundTitle": "著者が見つかりません",
+    "breadcrumbLabel": "著者"
+  },
+  "Contact": {
+    "metaTitle": "お問い合わせ - SSP Wallet | ご連絡",
+    "metaDescription": "SSP Wallet チームへのお問い合わせ。サポートを受けたり、質問したり、パートナーシップについて話し合いましょう。Discord コミュニティに参加するか、直接ご連絡ください。",
+    "breadcrumbLabel": "お問い合わせ",
+    "heroBadge": "お問い合わせ",
+    "heroTitle": "ご連絡ください",
+    "heroDescription": "SSP Wallet についてご質問はありますか？サポートが必要ですか？パートナーシップについて検討していますか？コミュニティにご参加いただくか、直接ご連絡ください — お手伝いします。",
+    "methodsTitle": "ご連絡方法",
+    "methodsSubtitle": "ご要望に合った連絡方法をお選びください",
+    "methods": {
+      "supportTickets": {
+        "title": "サポートチケット",
+        "description": "チケットシステムを通じて技術的な問題について直接サポートを受けられます",
+        "responseTime": "24 時間以内",
+        "action": "チケットを作成"
+      },
+      "discord": {
+        "title": "Discord コミュニティ",
+        "description": "リアルタイムサポートとディスカッションのためにアクティブなコミュニティに参加してください",
+        "responseTime": "アクティブなコミュニティ",
+        "action": "Discord に参加"
+      },
+      "github": {
+        "title": "GitHub サポート",
+        "description": "バグの報告、機能のリクエスト、開発への貢献",
+        "contact": "GitHub Issues & Discussions",
+        "responseTime": "コミュニティ主導",
+        "action": "GitHub を訪問"
+      }
+    },
+    "resourcesTitle": "すぐにサポートが必要ですか？",
+    "resourcesSubtitle": "即時サポートのためのセルフサービスリソースをご利用ください",
+    "resources": {
+      "supportCenter": {
+        "title": "サポートセンター",
+        "description": "包括的な FAQ とトラブルシューティングガイド"
+      },
+      "setupGuide": {
+        "title": "セットアップガイド",
+        "description": "ステップごとのインストール手順"
+      },
+      "documentation": {
+        "title": "ドキュメント",
+        "description": "完全な技術ドキュメント"
+      }
+    },
+    "formTitle": "メッセージを送る",
+    "formSubtitle": "以下のフォームにご記入いただければ、できる限り早くご回答いたします",
+    "formTipPrefix": "ヒント:",
+    "formTipBefore": "より迅速な技術サポートのために、当社の",
+    "formTipLinkSupport": "サポートチケットシステム",
+    "formTipBetween": "または",
+    "form": {
+      "fullNameLabel": "氏名 *",
+      "fullNamePlaceholder": "お名前",
+      "emailLabel": "メールアドレス *",
+      "emailPlaceholder": "your.email@example.com",
+      "companyLabel": "会社名 (任意)",
+      "companyPlaceholder": "会社名",
+      "typeLabel": "お問い合わせ種別 *",
+      "typeOptions": {
+        "general": "一般的なお問い合わせ",
+        "support": "技術サポート",
+        "partnership": "パートナーシップ",
+        "security": "セキュリティに関する問題",
+        "media": "メディア・プレス",
+        "business": "ビジネス開発"
+      },
+      "subjectLabel": "件名 *",
+      "subjectPlaceholder": "メッセージの件名を簡潔に",
+      "messageLabel": "メッセージ *",
+      "messagePlaceholder": "お問い合わせの詳細をご記入ください...",
+      "submitting": "送信中...",
+      "submit": "メッセージを送信",
+      "errorFallback": "メッセージの送信に失敗しました。もう一度お試しください。",
+      "errorGeneric": "メッセージの送信に失敗しました",
+      "successTitle": "ありがとうございます！",
+      "successDescription": "メッセージが正常に送信されました。まもなくご返信いたします。",
+      "successAgain": "別のメッセージを送信"
+    },
+    "communityTitle": "コミュニティをフォロー",
+    "communitySubtitle": "最新情報を入手し、他のユーザーとつながり、コミュニティサポートを受けましょう",
+    "social": {
+      "github": "オープンソース開発への貢献",
+      "discord": "コミュニティチャット & リアルタイムサポート",
+      "twitter": "最新アップデート、ニュース & お知らせ"
+    }
+  },
+  "Download": {
+    "metaTitle": "ダウンロード - SSP Wallet | 安全な暗号資産ウォレットを入手",
+    "metaDescription": "ブラウザ向け SSP Wallet をダウンロード。マルチシグネチャセキュリティとモバイル認証を備えた安全・シンプル・強力な暗号資産ウォレット。",
+    "ogAlt": "SSP Wallet をダウンロード - 安全な暗号資産ウォレット",
+    "breadcrumbLabel": "ダウンロード",
+    "heroBadge": "SSP Wallet をダウンロード",
+    "heroTitle": "SSP Wallet を始める",
+    "heroDescription": "完全なセキュリティのために両コンポーネントをダウンロードしてください：ウォレット管理用のブラウザ拡張機能と、トランザクション認証用のモバイルアプリ。",
+    "stepsTitle": "2 ステップのセットアッププロセス",
+    "stepsSubtitle": "セキュアな 2-of-2 マルチシグネチャシステムには両コンポーネントが必要です",
+    "stepLabel": "ステップ {index}",
+    "options": {
+      "chrome": {
+        "title": "SSP Wallet",
+        "subtitle": "ブラウザ拡張機能",
+        "description": "Chrome、Brave、Firefox およびその他の Chromium ベースのブラウザにインストール",
+        "features": {
+          "0": "マルチシグネチャセキュリティ",
+          "1": "WalletConnect v2 対応",
+          "2": "クロスチェーン互換性"
+        },
+        "cta": "拡張機能をダウンロード"
+      },
+      "mobile": {
+        "title": "SSP Key",
+        "subtitle": "モバイル 2FA アプリ",
+        "description": "iOS および Android デバイス向けの必須コンパニオンアプリ。安全な認証を提供します",
+        "features": {
+          "0": "2FA 認証",
+          "1": "QR コード同期",
+          "2": "安全な鍵の保管"
+        },
+        "cta": "モバイルアプリを見る"
+      }
+    },
+    "browsersTitle": "対応ブラウザ",
+    "browsersSubtitle": "SSP Wallet はすべての主要ブラウザでシームレスに動作します",
+    "mobileBadge": "SSP Key モバイルアプリ",
+    "mobileTitle": "セキュリティセットアップを完了する",
+    "mobileDescription": "SSP Key はすべてのトランザクションに必要な 2 番目の署名を提供します。モバイルデバイスにインストールして 2-of-2 マルチシグネチャセキュリティを完成させてください。",
+    "mobileEasySetupTitle": "簡単セットアップ",
+    "mobileEasySetupDescription": "QR コードをスキャンして、モバイルデバイスをブラウザウォレットと即座に同期",
+    "mobileSecurityTitle": "最高のセキュリティ",
+    "mobileSecurityDescription": "一方のデバイスが侵害されても資金は安全です",
+    "googlePlayLabel": "入手する",
+    "appStoreLabel": "ダウンロード",
+    "mobileAppAlt": "SSP Key モバイルアプリ",
+    "howTitle": "仕組み",
+    "howSubtitle": "2-of-2 マルチシグネチャセキュリティモデルについて",
+    "howSteps": {
+      "1": {
+        "title": "拡張機能をインストール",
+        "description": "ブラウザに SSP Wallet を追加し、安全なシードフレーズでウォレットを作成します"
+      },
+      "2": {
+        "title": "モバイルアプリをセットアップ",
+        "description": "スマートフォンに SSP Key をインストールし、QR コードでブラウザウォレットと同期します"
+      },
+      "3": {
+        "title": "安全なトランザクション",
+        "description": "すべてのトランザクションにブラウザとモバイルデバイス両方の承認が必要です"
+      }
+    },
+    "ctaTitle": "始める準備はできていますか？",
+    "ctaSubtitle": "ステップごとのガイドに従って安全な暗号資産ウォレットをセットアップしてください",
+    "ctaSetupGuide": "セットアップガイドを見る",
+    "ctaSupport": "サポートを受ける"
+  },
+  "Features": {
+    "metaTitle": "機能 - SSP Wallet | 高度な暗号資産セキュリティとマルチチェーンサポート",
+    "metaDescription": "真の 2-of-2 multisig、WalletConnect v2、15 以上のブロックチェーン、法定通貨オン/オフランプ、暗号資産スワップ、CSV エクスポート、アカウント抽象化。SSP Wallet のすべての機能を見る。",
+    "breadcrumbLabel": "機能",
+    "hero": {
+      "badge": "高度な機能",
+      "titleHighlight": "強力な機能",
+      "titleSuffix": "で現代の暗号資産を",
+      "description": "SSP Wallet を最も先進的な暗号資産ウォレットにする最先端技術とセキュリティ機能をご覧ください。",
+      "securityFirst": "セキュリティ最優先",
+      "lightningFast": "超高速",
+      "selfCustody": "セルフカストディ"
+    },
+    "security": {
+      "titleHighlight": "セキュリティ",
+      "titleSuffix": "機能",
+      "description": "暗号資産のセキュリティが私たちの最優先事項です。すべての機能はセキュリティファーストの原則で設計されています。",
+      "items": {
+        "0": {
+          "title": "真の 2-of-2 Multisig 保護",
+          "description": "ブラウザとモバイルデバイスの両方の署名を必要とする革新的な BIP48 マルチシグネチャ。単一障害点なし — 1 台のデバイスだけでは侵害不可能。"
+        },
+        "1": {
+          "title": "Halborn セキュリティ監査",
+          "description": "主要プロトコルに信頼される大手ブロックチェーンセキュリティ企業 Halborn によるプロの監査。包括的なペネトレーションテストとコードレビューが完了しています。"
+        },
+        "2": {
+          "title": "ゼロデータストレージポリシー",
+          "description": "厳格なサーバー保存なしポリシーにより、中央集権的な攻撃ベクトルを排除。プライベートキー、トランザクション、個人データがデバイスを離れることはありません。"
+        },
+        "3": {
+          "title": "完全オープンソース & 透明性",
+          "description": "決定論的ビルドによる完全なコードベースの透明性により、セキュリティ研究者や開発者がビルドの整合性を独自に検証できます。隠されたバックドアや独自のブラックボックスなし。"
+        }
+      }
+    },
+    "technical": {
+      "titleHighlight": "技術的",
+      "titleSuffix": "イノベーション",
+      "description": "分散型金融の未来のために最先端技術で構築されています。",
+      "items": {
+        "0": {
+          "title": "マルチチェーンサポート (15 以上)",
+          "description": "Bitcoin、Ethereum、Polygon、BSC、Avalanche、Base、Arbitrum、Optimism などのネイティブサポートと統合ポートフォリオ管理。"
+        },
+        "1": {
+          "title": "組み込みの暗号資産取引",
+          "description": "統合 DEX アグリゲーターによるシームレスな暗号資産スワップ、さらに決済カードによる暗号資産の売買のための法定通貨オン/オフランプ。"
+        },
+        "2": {
+          "title": "アカウント抽象化 (ERC-4337)",
+          "description": "Ethereum 上でネイティブ Schnorr マルチシグネチャアカウント抽象化を備えた初のウォレット。ガスレストランザクションとスマートコントラクトウォレットを実現。"
+        },
+        "3": {
+          "title": "真の 2-of-2 Multisig セキュリティ",
+          "description": "ブラウザ拡張機能とモバイルアプリによる革新的な BIP48 デュアルデバイスセキュリティ。すべてのトランザクションに両デバイスが必要 — 究極の保護。"
+        },
+        "4": {
+          "title": "セキュリティ監査済み & オープンソース",
+          "description": "Halborn セキュリティの専門家によりプロが監査した完全に透明で検証可能なコード。エンタープライズグレードのセキュリティ基準のオープンソース。"
+        },
+        "5": {
+          "title": "高度な dApp 統合",
+          "description": "WalletConnect v2 サポート、EIP-712 メッセージ署名、シームレスな dApp 接続のための包括的なブラウザ統合。"
+        }
+      }
+    },
+    "comparison": {
+      "titlePrefix": "なぜ選ぶ",
+      "titleHighlight": "SSP Wallet",
+      "titleSuffix": "？",
+      "description": "SSP Wallet と他の暗号資産保管方法を比較して違いを確認してください。",
+      "columns": {
+        "feature": "機能",
+        "ssp": "SSP Wallet",
+        "selfCustody": "セルフカストディウォレット",
+        "custodial": "カストディアルウォレット",
+        "hardware": "ハードウェアウォレット",
+        "exchange": "暗号資産取引所"
+      },
+      "values": {
+        "limited": "限定的",
+        "some": "一部",
+        "varies": "様々",
+        "rare": "まれ",
+        "na": "N/A"
+      },
+      "rows": {
+        "0": {
+          "feature": "真の 2-of-2 Multisig",
+          "description": "デュアルデバイス要件を持つ BIP48 真のマルチシグネチャ"
+        },
+        "1": {
+          "feature": "組み込みの暗号資産スワップ",
+          "description": "シームレスなトークンスワップのためのネイティブ DEX 統合"
+        },
+        "2": {
+          "feature": "暗号資産の売買",
+          "description": "決済カードサポート付きの法定通貨オン/オフランプ"
+        },
+        "3": {
+          "feature": "セルフカストディコントロール",
+          "description": "プライベートキーを所有・管理できます"
+        },
+        "4": {
+          "feature": "モバイル 2FA セキュリティ",
+          "description": "モバイルアプリが安全な 2 番目の認証要素として機能"
+        },
+        "5": {
+          "feature": "dApp 統合",
+          "description": "WalletConnect v2 とダイレクト dApp ブラウザサポート"
+        },
+        "6": {
+          "feature": "マルチチェーンサポート (15 以上)",
+          "description": "Bitcoin、Ethereum、Polygon、BSC、Avalanche など"
+        },
+        "7": {
+          "feature": "カウンターパーティリスクゼロ",
+          "description": "プラットフォームの破綻や差し押さえのリスクなし"
+        },
+        "8": {
+          "feature": "オープンソース",
+          "description": "完全に透明で検証可能なコード"
+        },
+        "9": {
+          "feature": "セキュリティ監査済み",
+          "description": "大手企業によるプロのセキュリティ監査"
+        },
+        "10": {
+          "feature": "アカウント抽象化 (ERC-4337)",
+          "description": "ガスレストランザクションとスマートコントラクトウォレット"
+        },
+        "11": {
+          "feature": "単一のシードフレーズなし",
+          "description": "単一シードフレーズの脆弱性を排除 — デュアルデバイスバックアップを使用"
+        },
+        "12": {
+          "feature": "使いやすさ",
+          "description": "初心者から専門家まで対応したシンプルで直感的なインターフェース"
+        },
+        "13": {
+          "feature": "トランザクション速度",
+          "description": "高速なトランザクション署名とブロックチェーンとのやり取り"
+        },
+        "14": {
+          "feature": "プライバシー保護",
+          "description": "個人データの収集やトランザクション追跡なし"
+        }
+      },
+      "ctaDownload": "SSP Wallet をダウンロード",
+      "ctaGuide": "セットアップガイドを読む",
+      "ctaEnterprise": "ビジネス向け SSP"
+    }
+  },
+  "Guide": {
+    "metaTitle": "セットアップガイド - SSP Wallet | 完全なインストール手順",
+    "metaDescription": "SSP Wallet と SSP Key のインストール・セットアップのステップごとのガイド。マルチシグネチャ保護付きの安全な暗号資産ウォレットの完全なセットアップ手順。",
+    "breadcrumbLabel": "セットアップガイド",
+    "videoJsonLdName": "SSP Wallet と SSP Key のインストール方法",
+    "videoJsonLdDescription": "完全なビデオウォークスルー：SSP Wallet ブラウザ拡張機能のインストールと 2-of-2 マルチシグネチャセキュリティのための SSP Key モバイルアプリの同期。",
+    "howToJsonLdName": "SSP Wallet & SSP Key のインストール方法",
+    "howToJsonLdDescription": "2-of-2 マルチシグネチャセキュリティに必要な SSP Wallet ブラウザ拡張機能と SSP Key モバイルコンパニオンアプリの完全なインストールガイド。",
+    "howToSupplyDesktop": "デスクトップブラウザ (Chrome、Brave、または Firefox)",
+    "howToSupplyMobile": "モバイルデバイス (iOS 15.1 以上または Android 7 以上)",
+    "heroBadge": "完全セットアップガイド",
+    "heroTitle": "SSP Wallet & SSP Key のインストール方法",
+    "heroDescriptionPart1": "SSP には",
+    "heroDescriptionStrong": "2 ステップのセットアッププロセス",
+    "heroDescriptionPart2": "が必要です：ブラウザ拡張機能とモバイルアプリの両方をインストールしてください。暗号資産を守る安全な 2-of-2 マルチシグネチャシステムには両デバイスが必要です。",
+    "browserExtensionTitle": "ブラウザ拡張機能",
+    "browserExtensionSubtitle": "ウォレットをインストール",
+    "mobileKeyTitle": "モバイルキー",
+    "mobileKeySubtitle": "モバイル認証",
+    "videoTitle": "ビデオセットアップガイド",
+    "videoSubtitle": "完全なウォークスルー",
+    "videoDescription": "SSP Wallet と SSP Key の両方のセットアップ方法を詳細なステップごとの手順とともに紹介する包括的なビデオチュートリアルをご覧ください。",
+    "videoUnsupported": "お使いのブラウザはビデオタグをサポートしていません。",
+    "videoBullet1": "ブラウザ拡張機能のインストール",
+    "videoBullet2": "モバイルアプリのセットアップと同期",
+    "videoBullet3": "セキュリティのベストプラクティス",
+    "stepsTitle": "ステップごとの手順",
+    "stepsSubtitle": "安全な暗号資産ウォレットをセットアップするための詳細な手順に従ってください",
+    "important": "重要",
+    "openLink": "リンクを開く →",
+    "androidLabel": "Android",
+    "iosLabel": "iOS",
+    "phases": {
+      "0": {
+        "phase": "パート 1",
+        "title": "SSP Wallet のインストール",
+        "steps": {
+          "0": {
+            "title": "拡張機能ストアにアクセス",
+            "description": "ブラウザを開き、使用しているブラウザ (Chrome、Firefox、Brave) の SSP Wallet 拡張機能ページに移動します",
+            "action": "拡張機能ページへ移動"
+          },
+          "1": {
+            "title": "拡張機能をインストール",
+            "description": "「Chrome/Firefox に追加」または「インストール」ボタンをクリックします。SSP Wallet を追加するか確認するポップアップが表示されます。「追加」または「インストール」をクリックしてインストールを完了します。",
+            "action": "ブラウザに追加"
+          },
+          "2": {
+            "title": "ウォレットを開く",
+            "description": "ブラウザで SSP ウォレットのロゴを見つけてクリックします。プロンプトに従って開始します。",
+            "action": "ウォレットを起動"
+          },
+          "3": {
+            "title": "パスワードを作成",
+            "description": "パスワードを作成してください。SSP Wallet の免責事項をよく読み、同意を確認してください。",
+            "action": "パスワードを設定"
+          },
+          "4": {
+            "title": "ウォレットを作成",
+            "description": "「ウォレットを作成」をクリックして新しいウォレットを初期化します。",
+            "action": "ウォレットを初期化"
+          },
+          "5": {
+            "title": "シードフレーズをバックアップ",
+            "description": "「ウォレットのニーモニックシードフレーズを表示」をクリックします。シードフレーズを安全に保管し、バックアップしたことを確認します。",
+            "action": "安全なバックアップ"
+          },
+          "6": {
+            "title": "セットアップを完了",
+            "description": "「ウォレットを作成」をクリックしてプロセスを完了します。ブラウザウォレットの準備が整いました！",
+            "action": "セットアップを完了"
+          }
+        }
+      },
+      "1": {
+        "phase": "パート 2",
+        "title": "SSP Key モバイルアプリのインストール",
+        "steps": {
+          "0": {
+            "title": "モバイルアプリをダウンロード",
+            "description": "モバイルデバイスに SSP Key をダウンロードしてアプリを開きます。",
+            "action": "モバイルアプリをインストール"
+          },
+          "1": {
+            "title": "同期を開始",
+            "description": "「キーを同期」をクリックしてセットアッププロセスを開始します。",
+            "action": "同期を開始"
+          },
+          "2": {
+            "title": "キーパスワードを設定",
+            "description": "SSP Key のパスワードを設定して確認します。次に「キーをセットアップ」をクリックします。",
+            "action": "キーパスワードを作成"
+          },
+          "3": {
+            "title": "キーシードをバックアップ",
+            "description": "「キーのニーモニックシードフレーズを表示」をクリックします。キーシードフレーズを安全に保管し、バックアップを確認します。",
+            "action": "キーバックアップを安全に保管"
+          },
+          "4": {
+            "title": "キーセットアップを完了",
+            "description": "「キーをセットアップ」をクリックします。SSP Key は SSP Wallet の 2 番目の認証要素として機能するようになりました。",
+            "action": "キーを完了"
+          },
+          "5": {
+            "title": "QR コードをスキャン",
+            "description": "「コードをスキャン」をクリックして SSP Key を SSP Wallet と同期します。ブラウザに表示された QR コードをスキャンします。",
+            "action": "デバイスを同期"
+          },
+          "6": {
+            "title": "同期を承認",
+            "description": "「同期を承認」をクリックし、キーパスワードで確認します。同期が成功したことが通知されます。",
+            "action": "同期を完了"
+          }
+        }
+      }
+    },
+    "tipsTitle": "セキュリティのベストプラクティス",
+    "tipsSubtitle": "ウォレットを安全に保つためにこれらの重要なセキュリティのヒントに従ってください",
+    "tips": {
+      "0": {
+        "title": "シードフレーズを安全に保管",
+        "description": "ウォレットとキーの両方のシードフレーズを安全なオフラインの場所に保管してください。誰とも共有しないでください。"
+      },
+      "1": {
+        "title": "強力なパスワードを使用",
+        "description": "ウォレットとモバイルキーアプリの両方に固有の強力なパスワードを作成してください。"
+      },
+      "2": {
+        "title": "モバイルを安全に保つ",
+        "description": "モバイルデバイスにスクリーンロックが設定されていることを確認し、生体認証の使用を検討してください。"
+      }
+    },
+    "successTitle": "おめでとうございます！",
+    "successDescription": "これらの手順に従って、SSP Wallet と SSP Key の両方を正常にインストール・セットアップしました。安全でシームレスなユーザー体験をお楽しみください。",
+    "successDownload": "今すぐダウンロード",
+    "successSupport": "サポートを受ける"
+  },
+  "Support": {
+    "metaTitle": "サポート - SSP Wallet | ヘルプと技術サポート",
+    "metaDescription": "SSP Wallet の包括的なサポート。FAQ の回答を見つけ、ドキュメントにアクセスし、コミュニティとつながるか、専門のサポートチームにお問い合わせください。",
+    "breadcrumbLabel": "サポート",
+    "heroBadge": "サポートセンター",
+    "heroTitle": "どのようなことでお手伝いできますか？",
+    "heroDescription": "よくある質問の回答を見つけたり、ドキュメントにアクセスしたり、サポートチームにお問い合わせください。",
+    "quickLinks": {
+      "docsTitle": "ドキュメント",
+      "docsSubtitle": "ガイド",
+      "communityTitle": "コミュニティ",
+      "communitySubtitle": "チャット",
+      "supportTitle": "サポート",
+      "supportSubtitle": "ヘルプ"
+    },
+    "channelsTitle": "サポートを受ける",
+    "channelsSubtitle": "ご要望に合った最善のサポート方法をお選びください",
+    "channels": {
+      "documentation": {
+        "title": "ドキュメント",
+        "description": "包括的なガイドとドキュメント",
+        "links": {
+          "completeDocs": "完全なドキュメント",
+          "setupGuide": "セットアップガイド",
+          "featureDocs": "機能ドキュメント"
+        }
+      },
+      "community": {
+        "title": "コミュニティサポート",
+        "description": "コミュニティからサポートを受ける",
+        "links": {
+          "github": "GitHub ディスカッション",
+          "discord": "Discord コミュニティ",
+          "twitter": "Twitter サポート"
+        }
+      },
+      "direct": {
+        "title": "ダイレクトサポート",
+        "description": "パーソナライズされた技術サポートを受ける",
+        "links": {
+          "ticketSystem": "サポートチケットシステム",
+          "email": "メールサポート"
+        }
+      }
+    },
+    "faqTitle": "よくある質問",
+    "faqSubtitle": "SSP Wallet に関するよくある質問への簡単な回答を見つけてください",
+    "faqCategories": {
+      "gettingStarted": {
+        "title": "はじめに",
+        "items": {
+          "0": {
+            "question": "SSP Wallet とは何ですか？",
+            "answer": "SSP Wallet は、2 つのコンポーネントで構成される真の 2-of-2 マルチシグネチャシステムです：SSP Wallet（ブラウザ拡張機能）と SSP Key（モバイル 2FA アプリ）。トランザクションを承認するには両デバイスが必要であり、15 以上のブロックチェーンにわたる暗号資産に比類なきセキュリティを提供します。"
+          },
+          "1": {
+            "question": "SSP Wallet をインストールするにはどうすればよいですか？",
+            "answer": "Chrome Web Store から SSP Wallet を Chrome 拡張機能としてインストールできます。ダウンロードページをご覧いただき、包括的なセットアップガイドのステップごとの手順に従ってください。"
+          },
+          "2": {
+            "question": "SSP Wallet は無料で使用できますか？",
+            "answer": "はい、SSP Wallet は完全に無料でダウンロードして使用できます。ウォレット自体には料金はかかりませんが、ブロックチェーントランザクションを行う際には引き続きネットワークトランザクション手数料をお支払いいただきます。"
+          },
+          "3": {
+            "question": "SSP Wallet はどの暗号資産をサポートしていますか？",
+            "answer": "SSP Wallet は Bitcoin (BTC)、Ethereum (ETH)、Litecoin (LTC)、Zcash (ZEC)、Ravencoin (RVN)、Dogecoin (DOGE)、Bitcoin Cash (BCH)、Flux (FLUX)、Polygon (MATIC)、BSC、Avalanche (AVAX)、Base を含む 15 以上のブロックチェーンをサポートしています。EVM 互換チェーンでは、すべての ERC-20 トークンをサポートしており、カスタムトークンリストもインポートできます。Solana サポートも近日公開予定です。"
+          },
+          "4": {
+            "question": "サポートされているアセットの完全なリストはどこで確認できますか？",
+            "answerBefore": "ネイティブにサポートされているすべてのチェーンとトークンの包括的かつ最新のリストについては、公式の ",
+            "answerLink": "SSP アセットスプレッドシート",
+            "answerAfter": " をご参照ください。このスプレッドシートは新しい追加とともに定期的に更新され、各サポートアセットに関する詳細情報が含まれています。"
+          },
+          "5": {
+            "question": "SSP Wallet で dApp や DeFi を使用できますか？",
+            "answer": "はい！SSP Wallet は完全な WalletConnect v2 (Reown) 統合を備えており、サポートされているすべての EVM チェーンで何千もの分散型アプリケーションに接続できます。2-of-2 マルチシグネチャシステムのセキュリティを維持しながら、DeFi プロトコル、NFT マーケットプレイス、その他の dApp を使用できます。"
+          },
+          "6": {
+            "question": "FluxNodes とは何ですか？どのように使用できますか？",
+            "answer": "FluxNodes は、ブロックチェーンのセキュリティと維持を助ける Flux ネットワークのノードです。SSP Wallet を使用すると、Fluxnodes を簡単にセットアップして管理し、パフォーマンスを監視し、ウォレットインターフェースから直接報酬を受け取ることができます。Fluxnodes は担保として FLUX トークンが必要で、ネットワーク報酬によって受動的な収入を提供します。"
+          },
+          "7": {
+            "question": "SSP Wallet は法定通貨のオンボーディングとオフボーディングをサポートしていますか？",
+            "answer": "はい！SSP Wallet は統合パートナーを通じて法定通貨のオンボーディングとオフボーディングをサポートしています。クレジットカード、銀行振込、またはその他の支払い方法で直接暗号資産を購入し、暗号資産を法定通貨に売却することができます。この機能はサポートされている地域で利用可能で、KYC 確認が必要です。"
+          },
+          "8": {
+            "question": "SSP Wallet 内で暗号資産をスワップできますか？",
+            "answer": "はい、SSP Wallet には組み込みの暗号資産スワップ機能が含まれています。統合されたスワップパートナーを通じて、サポートされているブロックチェーン間で一方の暗号資産を別のものと簡単に交換できます。スワップ機能は競争力のあるレートを提供し、プライベートキーを維持しながら安全にスワップを実行します。"
+          },
+          "9": {
+            "question": "取引履歴をエクスポートできますか？",
+            "answer": "はい！SSP Wallet は取引履歴の CSV エクスポートをサポートしています。会計、税務目的、または個人記録のために詳細なトランザクション記録をエクスポートできます。CSV エクスポートには、サポートされている各ブロックチェーンのトランザクション日付、金額、アドレス、手数料、その他の関連詳細が含まれています。"
+          },
+          "10": {
+            "question": "新しいコインの追加をリクエストするにはどうすればよいですか？",
+            "answer": "サポートチームへのご連絡や、GitHub リポジトリへの直接投稿を通じて新しい暗号資産サポートをリクエストすることをお勧めします。各リクエストはコミュニティの需要、技術的な実現可能性、セキュリティ上の考慮事項に基づいて評価します。"
+          },
+          "11": {
+            "question": "モバイルウォレットはありますか？",
+            "answer": "朗報です！私たちは SSP Wallet をモバイルプラットフォームに拡大する作業を積極的に進めています。現在、SSP Wallet はブラウザ拡張機能 (SSP Wallet) とモバイル 2FA アプリ (SSP Key) で構成されています。完全なモバイルウォレット体験は開発中です。"
+          },
+          "12": {
+            "question": "SSP Wallet を複数のデバイスで使用できますか？",
+            "answer": "はい、SSP Wallet は複数のデバイスで使用できます。新しいデバイスにセットアップするには、対応するシードフレーズを使用してウォレットとキーを復元する必要があります。各デバイスには適切なセットアップと同期が必要です。"
+          },
+          "13": {
+            "question": "SSP Wallet にはトランザクション制限がありますか？",
+            "answer": "SSP Wallet はトランザクション制限を設けていません。ただし、ブロックチェーンネットワークの制限と利用可能な残高の影響を受けます。一部のネットワークでは、プロトコルに基づいて最小トランザクション額または最大トランザクションサイズがある場合があります。"
+          },
+          "14": {
+            "question": "SSP Wallet をオフラインで使用できますか？",
+            "answer": "SSP Wallet は、トランザクションのブロードキャスト、残高の更新、デバイス間の同期など、ほとんどの操作にインターネット接続が必要です。一部のキャッシュ情報はオフラインで閲覧できますが、接続なしにトランザクションを送信することはできません。"
+          }
+        }
+      },
+      "security": {
+        "title": "セキュリティとプライバシー",
+        "items": {
+          "0": {
+            "question": "SSP Wallet はどれほど安全ですか？",
+            "answer": "SSP Wallet はモバイル統合認証を備えたマルチシグネチャ技術を使用し、2 つの鍵による保護を提供します。最先端の暗号化を使用し、データを一切保存しません — すべてはローカルに保存され、あなたが管理します。"
+          },
+          "1": {
+            "question": "SSP Key とは何ですか？なぜ必要ですか？",
+            "answer": "SSP Key は、2-of-2 マルチシグネチャシステムに必要な 2 番目のプライベートキーを保持するモバイルアプリです。すべてのトランザクションはブラウザ拡張機能とモバイルデバイスの両方で署名される必要があります。これにより、1 台のデバイスが侵害されても資金は安全に保たれます。SSP Key は iOS 15.1 以上および Android 7 以上で利用可能です。"
+          },
+          "2": {
+            "question": "デバイスを紛失した場合にウォレットを復旧できますか？",
+            "answer": "はい、シードフレーズを使用してウォレットを復旧できます。ウォレットとキーにはそれぞれ別々のシードフレーズがあり、オフラインの安全な場所に保管する必要があります。シードフレーズは誰とも共有しないでください。"
+          },
+          "3": {
+            "question": "SSP Wallet は個人データを収集しますか？",
+            "answer": "いいえ、SSP Wallet はデータ情報を一切保存しないことを約束しています。プライベートキー、取引履歴、個人データはすべてあなたのコントロール下にあり、デバイスにローカルで保存されます。"
+          },
+          "4": {
+            "question": "決定論的ビルドとは何ですか？なぜ重要ですか？",
+            "answer": "決定論的ビルドは、同一のソースコードが同一のバイナリ出力を生成することを保証します。SSP Wallet は Docker ベースの決定論的ビルドを使用しており、誰でも配布されている拡張機能が公開されたソースコードから構築されたものと完全に一致することを独自に検証できます。これにより潜在的なサプライチェーン攻撃が排除され、ビルドの整合性の暗号学的証明が提供されます。"
+          },
+          "5": {
+            "question": "SSP Wallet の決定論的ビルドを検証するにはどうすればよいですか？",
+            "answerIntro": "SSP Wallet のビルドを検証するには：1) リリースファイル (Chrome/Firefox の zip、SHA256SUMS、SHA256SUMS.asc) を ",
+            "answerLink1": "GitHub リリース",
+            "answerMiddle1": " からダウンロードします。2) 公開鍵を ",
+            "answerLink2": "OpenPGP キーサーバー",
+            "answerMiddle2": " からインポートします。3) GPG 署名を検証します: ",
+            "answerCode1": "gpg --verify SHA256SUMS.asc SHA256SUMS",
+            "answerMiddle3": "。4) ハッシュを検証します: ",
+            "answerCode2": "sha256sum -c SHA256SUMS",
+            "answerMiddle4": "。5) 任意でビルドを再現します: ",
+            "answerCode3": "git checkout [version] && npm run build:deterministic",
+            "answerOutro": "。"
+          },
+          "6": {
+            "question": "SSP Wallet のリリースに署名するのは誰ですか？",
+            "answerBefore": "すべての SSP Wallet リリースは GPG 署名を使用して security@runonflux.io によって暗号学的に署名されています。公開鍵は検証のために ",
+            "answerLink": "OpenPGP キーサーバー",
+            "answerAfter": " で公開されています。決定論的ビルドプロセスには Docker ベースの隔離された環境と、真正性と整合性を確保するために GPG 署名された包括的なチェックサム (SHA256SUMS) が含まれます。"
+          },
+          "7": {
+            "question": "1 つの SSP Wallet に複数の SSP Key を使用できますか？",
+            "answer": "いいえ、各 SSP Wallet はペアリングできる SSP Key は 1 つだけです。2-of-2 マルチシグネチャシステムは、公開ノンスとチェーンデータのデバイス固有の同期を必要とします。複数の SSP Key を使用すると同期の競合が発生します。"
+          }
+        }
+      },
+      "technical": {
+        "title": "技術サポート",
+        "items": {
+          "0": {
+            "question": "どのブラウザがサポートされていますか？",
+            "answer": "SSP Wallet は Google Chrome、Brave、Firefox、およびその他の Chromium ベースのブラウザをサポートしています。Chromium ブラウザ向けの Chrome Web Store バージョン、または Firefox バージョンを GitHub リリースから直接ダウンロードできます。"
+          },
+          "1": {
+            "question": "モバイルキーの同期に問題があります",
+            "answer": "両方のデバイスがインターネットに接続されていること、QR コードが明確に見えること、ブラウザ拡張機能とモバイルアプリの両方の最新バージョンを使用していることを確認してください。同期が失敗した場合は、両方のアプリを再起動してみてください。"
+          },
+          "2": {
+            "question": "トランザクションがスタックしている、または保留中です",
+            "answer": "ブロックチェーントランザクションは、ネットワークの混雑によって時間がかかる場合があります。ブロックチェーンエクスプローラーでトランザクションのステータスを確認してください。Ethereum を使用している場合は、より迅速な確認のためにガス代を増やす必要があるかもしれません。"
+          },
+          "3": {
+            "question": "SSP Wallet を更新するにはどうすればよいですか？",
+            "answer": "ブラウザ拡張機能は通常自動的に更新されます。ブラウザの拡張機能管理ページで手動で更新を確認することもできます。モバイルアプリについては、デバイスのアプリストアで更新を確認してください。"
+          },
+          "4": {
+            "question": "SSP Relay とは何ですか？どのように機能しますか？",
+            "answer": "SSP Relay は SSP Wallet と SSP Key の間のブリッジとして機能するオープンソースのリレーサービスです。市場情報、手数料データを提供し、トランザクションの同期を可能にし、プッシュ通知を配信します。リレーはセキュリティを維持しながらユーザー体験を向上させます。"
+          },
+          "5": {
+            "question": "SSP Wallet は Replace-By-Fee (RBF) をサポートしていますか？",
+            "answer": "はい、SSP Wallet は Replace-By-Fee (RBF) 機能を完全にサポートしています。トランザクションをブロードキャストした後にトランザクション手数料を変更したり、受取人を変更したりすることができ、ブロックチェーン上のトランザクション管理に柔軟性を持たせます。"
+          },
+          "6": {
+            "question": "SSP Wallet はどのような手数料を請求しますか？",
+            "answer": "SSP Wallet はゼロ手数料です — ウォレットの使用に対して何も請求しません。トランザクション処理のためにマイナー/バリデーターに直接送られる標準的なブロックチェーンネットワーク手数料のみをお支払いいただきます。ウォレットにはトランザクションコストを最適化するための自動手数料選択が含まれています。"
+          },
+          "7": {
+            "question": "なぜ一部のトランザクションの構築に失敗するのですか？",
+            "answer": "一部のトランザクションは、ブロックチェーンのサイズ制限と UTXO の複雑さのために失敗する場合があります。多くの小さなインプットがある場合、トランザクションサイズがネットワーク制限を超える可能性があります。そのような場合は、UTXO を統合するか、トランザクションを小さな部分に分割する必要があるかもしれません。"
+          },
+          "8": {
+            "question": "デバイスを変更するときにウォレットを復元する必要がありますか？",
+            "answer": "はい、デバイス固有の暗号化のため、デバイスを変更したり重大なシステム変更を行う場合は、ウォレットとキーの両方を復元する必要があります。このプロセスのためにシードフレーズを安全かつアクセス可能な状態に保ってください。"
+          },
+          "9": {
+            "question": "SSP Key デバイスを紛失した場合はどうなりますか？",
+            "answer": "SSP Key デバイスを紛失した場合は、SSP Key のシードフレーズを使用して新しいデバイスに復元できます。新しいデバイスに SSP Key アプリをインストールし、シードフレーズを使用してアクセスを復旧してください。復元後に SSP Wallet ブラウザ拡張機能と再同期する必要があります。"
+          },
+          "10": {
+            "question": "ウォレットをクラウドストレージにバックアップできますか？",
+            "answer": "SSP Wallet はセキュリティ上の理由から自動クラウドバックアップをサポートしていません。シードフレーズは安全な場所にオフラインで保管する必要があります。クラウドストレージ、メール、またはセキュリティが侵害される可能性のあるデジタル形式でシードフレーズを保存しないでください。"
+          },
+          "11": {
+            "question": "SSP Wallet のシードフレーズと SSP Key のシードフレーズの違いは何ですか？",
+            "answer": "SSP Wallet と SSP Key にはそれぞれ別々のシードフレーズがあります。ウォレットのシードフレーズはブラウザ拡張機能コンポーネントを制御し、キーのシードフレーズはモバイル 2FA コンポーネントを制御します。完全なウォレット復旧には両方が必要で、それぞれ別々に安全に保管する必要があります。"
+          },
+          "12": {
+            "question": "新しいコンピューターに移行するにはどうすればよいですか？",
+            "answer": "SSP Wallet を新しいコンピューターに移動するには：1) 新しいデバイスに SSP Wallet 拡張機能をインストールします。2) ウォレットのシードフレーズを使用してブラウザ拡張機能を復元します。3) 既存の SSP Key モバイルアプリと再同期します。取引履歴と設定は再設定が必要になります。"
+          },
+          "13": {
+            "question": "モバイルで「Synchronisation with SSP wallet needed」エラーが表示されます",
+            "answer": "このエラーは通常、電話を変更したとき、またはブロックチェーンがまだ SSP Key と同期されていないときに発生します。解決するには：1) SSP Wallet を開きます。2) 再同期したいブロックチェーンに切り替えます。3) バーガーメニュー（右上隅）をクリックします。4) 「SSP Wallet Details」を選択します。5) パスワードでアクセスを確認します。6) 最初の行で「Chain Sync with SSP Key」を見つけ、目のアイコンをクリックして QR コードを表示します。7) SSP Key で QR コードをスキャンし、チェーンの同期を承認します。"
+          },
+          "14": {
+            "question": "「SSP Key Public nonces do not match or SSP Key Public nonces are missing」エラーが表示されます",
+            "answer": "このエラーは、トランザクションの構築に使用される公開ノンスが SSP Wallet と SSP Key 間で同期されていない場合に発生します。解決するには：1) バーガーメニュー（右上隅）を開きます。2) 設定に移動します。3) 「Public Nonces」セクションを見つけて「Sync Public Nonces」をクリックします。4) SSP Key で表示された QR コードをスキャンします。5) モバイルデバイスでリクエストを承認します。公開ノンスが同期され、トランザクションを開始できます。"
+          }
+        }
+      }
+    },
+    "stillNeedHelpTitle": "それでもサポートが必要ですか？",
+    "stillNeedHelpDescription": "お探しの情報が見つかりませんか？メッセージをお送りいただければ、サポートチームができる限り早くご回答いたします。",
+    "emailSupportTitle": "メールサポート",
+    "emailSupportDescription": "通常 24 時間以内にご回答します",
+    "openSourceTitle": "オープンソース",
+    "openSourceDescription": "GitHub でバグを報告するか、貢献する",
+    "communityTitle": "コミュニティ",
+    "communityDescription": "他のユーザーとつながり、ピアサポートを受ける",
+    "contactSupportTitle": "サポートに連絡",
+    "form": {
+      "emailLabel": "メールアドレス *",
+      "emailPlaceholder": "your.email@example.com",
+      "typeLabel": "問題の種類 *",
+      "typeOptions": {
+        "Question": "一般的な質問",
+        "Incident": "技術的な問題",
+        "Problem": "サポートが必要",
+        "Feature Request": "機能リクエスト",
+        "Bug Report": "バグ報告"
+      },
+      "subjectLabel": "件名 *",
+      "subjectPlaceholder": "問題の簡単な説明",
+      "descriptionLabel": "説明 *",
+      "descriptionPlaceholder": "問題に関する詳細な情報をご記入ください...",
+      "submitting": "送信中...",
+      "submit": "メッセージを送信",
+      "errorFallback": "メッセージの送信に失敗しました。もう一度お試しください。",
+      "errorGeneric": "チケットの送信に失敗しました",
+      "successTitle": "メッセージを送信しました！",
+      "successDescription": "お問い合わせいただきありがとうございます。できる限り早くご回答いたします。",
+      "successAgain": "別のメッセージを送信"
+    }
+  },
+  "Legal": {
+    "lastUpdated": "最終更新: {date}",
+    "privacyPolicy": {
+      "metaTitle": "プライバシーポリシー - SSP Wallet エコシステム",
+      "metaDescription": "SSP Wallet エコシステム全体のプライバシーポリシー。ウェブサイト、ブラウザ拡張機能、モバイルアプリ、リレーサービスにわたるプライバシー保護の方法をご確認ください。",
+      "heading": "プライバシーポリシー"
+    },
+    "termsOfService": {
+      "metaTitle": "利用規約 - SSP Wallet エコシステム",
+      "metaDescription": "ウェブサイト、ブラウザ拡張機能、モバイルアプリ、リレーサービスを含む SSP Wallet エコシステム全体の利用規約。",
+      "heading": "利用規約"
+    },
+    "cookiePolicy": {
+      "metaTitle": "Cookie ポリシー - SSP Wallet ウェブサイト",
+      "metaDescription": "sspwallet.io ウェブサイトでの Cookie の使用方法についてご確認ください。Cookie の設定を管理し、GDPR 準拠のポリシーを理解してください。",
+      "heading": "Cookie ポリシー"
+    }
+  },
+  "CheckoutSuccess": {
+    "metaTitle": "チェックアウト完了 | SSP Wallet",
+    "metaDescription": "ご注文が正常に完了しました。",
+    "heading": "チェックアウト完了！",
+    "description": "ご注文が正常に完了しました。ご購入ありがとうございます！",
+    "confirmationEmail": "まもなく確認メールをお送りします。",
+    "backToHome": "ホームに戻る",
+    "contactSupport": "サポートに連絡"
+  },
+  "CheckoutFailure": {
+    "metaTitle": "チェックアウト失敗 | SSP Wallet",
+    "metaDescription": "ご注文を処理できませんでした。もう一度お試しください。",
+    "heading": "チェックアウト失敗",
+    "description": "ご注文を処理できませんでした。もう一度お試しいただくか、問題が続く場合はサポートにお問い合わせください。",
+    "tryAgain": "もう一度試す",
+    "contactSupport": "サポートに連絡"
+  },
+  "Categories": {
+    "multisig": {
+      "title": "Multisig 解説",
+      "description": "SSP における 2-of-2 マルチシグネチャの仕組みと、その重要性。"
+    },
+    "getting-started": {
+      "title": "暗号資産の基礎",
+      "description": "すべての暗号資産ユーザーが知っておくべき基本的な概念。"
+    },
+    "security": {
+      "title": "セキュリティとセルフカストディ",
+      "description": "暗号資産を守る: シードフレーズ、フィッシング、ハードウェアウォレット、脅威モデル。"
+    },
+    "how-to": {
+      "title": "ハウツーガイド",
+      "description": "SSP の一般的なタスクをステップごとに解説。"
+    },
+    "coin-guides": {
+      "title": "コイン・チェーンガイド",
+      "description": "SSP がサポートする各コイン・チェーンの詳細解説。"
+    },
+    "defi": {
+      "title": "DeFi とアカウント抽象化",
+      "description": "ステーキング、レンディング、スワップ、ERC-4337 の解説。"
+    },
+    "news-explained": {
+      "title": "ニュースと業界分析",
+      "description": "暗号資産ニュースと規制に関するコンテキストと分析。"
+    }
+  },
+  "CaseStudies": {
+    "breadcrumbLabel": "ケーススタディ",
+    "fluxFoundation": {
+      "metaTitle": "ケーススタディ: Flux Foundation — SSP Enterprise によるセルフカストディトレジャリー",
+      "metaDescription": "Flux Foundation がバラバラな multisig とカスタムスクリプトから SSP Enterprise に移行した方法 — Fusion ブリッジとファウンデーショントレジャリーを M-of-N ボールトで保護。",
+      "breadcrumbLabel": "Flux Foundation",
+      "logoAlt": "Flux Foundation",
+      "eyebrow": "ケーススタディ",
+      "titlePart1": "Flux Foundation ×",
+      "titlePart2": "SSP Enterprise",
+      "subtitle": "Flux Foundation がバラバラな multisig とカスタムスクリプトから単一のセルフカストディプラットフォームへ移行した方法 — 誰にも鍵を渡すことなく Fusion ブリッジとファウンデーショントレジャリーを保護。",
+      "heroQuote": "私たちには資金の完全なコントロール、コミュニティへの透明性、そして自分たちのトレジャリーとの間にブラックボックスの MPC が入らないことが必要でした。SSP Enterprise は私たちが実際に使うすべてのチェーンで、この 3 つすべてを満たした初めてのプラットフォームでした。",
+      "heroQuoteAttribution": "— Tadeas Kmenta, Flux Foundation",
+      "factSheet": {
+        "organizationLabel": "組織",
+        "organizationValue": "Flux Foundation",
+        "industryLabel": "業種",
+        "industryValue": "分散型インフラストラクチャ",
+        "useCaseLabel": "ユースケース",
+        "useCaseValue": "ファウンデーショントレジャリー + Fusion ブリッジ multisig",
+        "chainsLabel": "チェーン",
+        "chainsValue": "BTC, ETH, FLUX, EVM L2s",
+        "vaultModelLabel": "ボールトモデル",
+        "vaultModelValue": "M-of-N multisig、署名者 1 人につき 2 デバイス",
+        "statusLabel": "ステータス",
+        "statusValue": "本番稼働中"
+      },
+      "before": {
+        "title": "移行前: バラバラな multisig とカスタムスクリプト",
+        "intro": "Flux Foundation は数年間、マルチパーティ署名を管理してきました。問題は multisig の欠如ではなく、チェーン間でそれをつなぐものが何もなく、商業的な代替手段はすべてチームが受け入れられないトレードオフを求めていたことでした。",
+        "items": {
+          "0": {
+            "title": "バラバラな multisig セットアップ",
+            "description": "異なるチェーンに異なる multisig ウォレットが存在し、それぞれ独自の特性、署名者、復旧手順を持っていました。"
+          },
+          "1": {
+            "title": "つなぎ合わせるカスタムスクリプト",
+            "description": "トランザクション構築、署名の調整、ブロードキャストのための社内ツール — 手作業でメンテナンス。"
+          },
+          "2": {
+            "title": "統一された監査証跡がない",
+            "description": "承認はチャットスレッドと共有ドキュメントに散在していました。誰が何に署名したかを追跡するには掘り起こしが必要でした。"
+          },
+          "3": {
+            "title": "市場に中間的な選択肢がない",
+            "description": "カストディアンと MPC ベンダーはブラックボックスを信頼することを意味していました。既製の multisig ツールは Ethereum 専用でした。"
+          }
+        }
+      },
+      "decision": {
+        "title": "決断",
+        "intro": "チームは代替案を評価し、3 つのグループに分類しました。どのグループにも決定的な欠点がありました。",
+        "bucket1Eyebrow": "グループ 1",
+        "bucket1Title": "MPC カストディアン",
+        "bucket1Description": "Fireblocks、BitGo など。ベンダーがすべての鍵の一部を保持。",
+        "bucket1Verdict": "真のセルフカストディではない。",
+        "bucket2Eyebrow": "グループ 2",
+        "bucket2Title": "シングルチェーン multisig",
+        "bucket2Description": "Safe など。Ethereum 専用で、ネイティブ UTXO サポートなし。",
+        "bucket2Verdict": "私たちは Bitcoin と Flux も保有している。",
+        "bucket3Eyebrow": "グループ 3",
+        "bucket3Title": "最小限の multisig",
+        "bucket3Description": "ポリシーエンジン、分析、適切な監査証跡のないウォレット。",
+        "bucket3Verdict": "また自分たちでツールを構築することになる。",
+        "conclusion": "SSP Enterprise は 3 つすべてを同時に解決した唯一のプラットフォームでした：ネイティブマルチチェーン (UTXO と EVM)、ベンダーへの鍵共有なしの真のセルフカストディ、そして組み込みのポリシーエンジン、分析、監査証跡。"
+      },
+      "whatChanged": {
+        "title": "変わったこと",
+        "intro": "1 つのプラットフォーム、ファウンデーションが使用するすべてのチェーン、一貫した署名モデル。カスタムスクリプトは廃止されました。チャットスレッドの監査証跡は、帰属可能なプラットフォーム上の記録に置き換えられました。トレジャリーとブリッジの multisig が同じガバナンスのもとに並存しています。",
+        "items": {
+          "0": {
+            "title": "触れるすべてのチェーンにまたがる M-of-N ボールト",
+            "description": "Bitcoin、Ethereum、Flux、EVM L2s — 同じプラットフォーム、同じメンタルモデル、同じセキュリティ保証。"
+          },
+          "1": {
+            "title": "署名者 1 人につき 2 デバイス、例外なし",
+            "description": "すべての署名にブラウザ拡張機能とモバイルアプリが必要です。1 台のデバイスが侵害されても署名できません。"
+          },
+          "2": {
+            "title": "信頼できる監査証跡",
+            "description": "すべての提案、承認、拒否が署名者とタイムスタンプとともに記録されます。チャットスレッドの復元が不要になりました。"
+          },
+          "3": {
+            "title": "エンドツーエンドのセルフカストディ",
+            "description": "ベンダーへの鍵共有なし。信頼すべき MPC インフラなし。SSP がなくなっても、資金は署名者のシードフレーズから復旧可能です。"
+          }
+        }
+      },
+      "fusionBridge": {
+        "title": "Fusion ブリッジ",
+        "intro": "Fusion ブリッジはファウンデーションが運営する中で最もセキュリティが重要な場面の 1 つです — Flux と他のチェーン間の価値移転を調整しており、1 回の署名失敗が壊滅的な結果をもたらす可能性があります。また、SSP Enterprise のモデルが最も明確に成果を発揮するワークロードでもあります。",
+        "items": {
+          "0": {
+            "title": "オンチェーン multisig",
+            "description": "ブリッジが触れるすべてのチェーンにネイティブ multisig — スマートコントラクトのカストディアンなし、停滞やフロントランが可能なリレーヤーなし。"
+          },
+          "1": {
+            "title": "署名者 1 人につき 2 デバイス署名",
+            "description": "署名者のラップトップや携帯電話を 1 台侵害するだけでは、ブリッジトランザクションを送ることはできません。毎回、両デバイスが必要です。"
+          },
+          "2": {
+            "title": "署名者ごとのポリシーコントロール",
+            "description": "組織とボールトレベルで設定されたリミットとホワイトリストが、署名が収集される前に適用されます。"
+          },
+          "3": {
+            "title": "エンドツーエンドの監査可能性",
+            "description": "すべての承認と拒否が帰属情報とタイムスタンプとともに記録されます。セルフカストディを手放すことなくコミュニティへの説明責任を果たせます。"
+          }
+        },
+        "quote": "Fusion ブリッジは今やエンドツーエンドで私たちがコントロールするインフラ上で稼働しています。自社のトレジャリーと同じセキュリティ保証が、私たちが運営する最もリスクの高いワークフローの 1 つに適用されています。",
+        "quoteAttribution": "— Tadeas Kmenta, Flux Foundation"
+      },
+      "cta": {
+        "title": "同じモデルが、あなたのチームでも使えます。",
+        "description": "Flux Foundation が Fusion ブリッジを運用しているプラットフォームは、妥協なくセルフカストディ multisig を求めるすべてのチームが利用できる同じプラットフォームです。無料枠から開始できます。カスタムプランはご要望に応じて対応します。",
+        "exploreEnterprise": "SSP Enterprise を見る",
+        "launchEnterpriseApp": "Enterprise アプリを起動"
+      }
+    }
+  },
+  "Enterprise": {
+    "metaTitle": "SSP Enterprise | ビジネス向けセルフカストディ Multisig",
+    "metaDescription": "ビジネストレジャリー向けのセルフカストディ M-of-N multisig ボールト。ポリシーエンジン、支出制限、2 デバイス署名、ロールベースアクセス。カストディアンなし、MPC なし。",
+    "breadcrumbLabel": "Enterprise",
+    "heroBadge": "SSP Enterprise",
+    "heroTitlePart1": "セルフカストディ",
+    "heroTitlePart2": "ビジネス向け",
+    "heroDescription": "組織向けの M-of-N multisig ボールト。すべての署名者はブラウザ拡張機能とモバイルアプリの 2 デバイスを使用します。カストディアンなし。MPC なし。単一障害点なし。",
+    "heroLaunchApp": "Enterprise アプリを起動",
+    "heroHowItWorks": "仕組み",
+    "fluxBanner": {
+      "imageAlt": "Flux Foundation",
+      "eyebrow": "Flux Foundation で本番稼働中",
+      "description": "BTC、ETH、FLUX、EVM L2s にわたる Fusion ブリッジとファウンデーションのトレジャリーを保護。",
+      "cta": "ケーススタディを読む"
+    },
+    "problem": {
+      "title": "課題",
+      "subtitle": "今日暗号資産を保有するビジネスは不可能なトレードオフに直面しています",
+      "items": {
+        "0": {
+          "title": "カストディアルソリューション",
+          "problem": "鍵をサードパーティに信頼して預ける",
+          "risks": {
+            "0": "カウンターパーティリスク (FTX、Celsius)",
+            "1": "予告なしのアカウント凍結",
+            "2": "ベンダーロックインと高い手数料"
+          }
+        },
+        "1": {
+          "title": "MPC プロバイダー",
+          "problem": "ベンダーサーバー上の鍵シャード",
+          "risks": {
+            "0": "ベンダーが廃業すれば対応に追われる",
+            "1": "インフラを検証できない",
+            "2": "依然として信頼への依存がある"
+          }
+        },
+        "2": {
+          "title": "シングルハードウェアウォレット",
+          "problem": "1 人、1 デバイス",
+          "risks": {
+            "0": "キーパーソンリスク",
+            "1": "チームガバナンスなし",
+            "2": "デバイス紛失 = 資金紛失"
+          }
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "仕組み",
+      "subtitle": "エンタープライズスケールでの真のセルフカストディ — 妥協なし",
+      "steps": {
+        "0": {
+          "title": "組織を作成",
+          "description": "メールだけでなく、デバイスから派生した暗号学的証明である SSP Identity を使用して組織をセットアップします。"
+        },
+        "1": {
+          "title": "チームを招待",
+          "description": "SSP Identity でチームメンバーを追加します。役割を割り当てます：Owner、Admin、Member、または Viewer。すべてのメンバーに SSP Wallet + SSP Key が必要です。"
+        },
+        "2": {
+          "title": "Multisig ボールトを作成",
+          "description": "さまざまな目的のために M-of-N ボールトを設定します — 運営、トレジャリー、給与。どの署名者が必要かを選択します。"
+        },
+        "3": {
+          "title": "一緒に署名",
+          "description": "ウェブアプリでトランザクションを提案します。必要な各署名者がブラウザ拡張機能とモバイルアプリの両方で承認します。しきい値に達したらブロードキャスト。"
+        }
+      },
+      "diagramTitle": "署名アーキテクチャ",
+      "diagramSubtitle": "すべての署名に署名者ごとに 2 デバイスが必要",
+      "signerLabel": "署名者 {label}",
+      "signedLabel": "署名済み",
+      "waitingLabel": "待機中",
+      "thresholdLabel": "3 のうち 2 のしきい値を達成 — ブロードキャスト準備完了"
+    },
+    "features": {
+      "title": "Enterprise 機能",
+      "subtitle": "組織が安全な暗号資産管理に必要なすべて",
+      "readGuide": "ガイドを読む",
+      "items": {
+        "0": {
+          "title": "M-of-N Multisig ボールト",
+          "description": "チームの任意の署名しきい値を設定。2-of-3、3-of-5、またはガバナンスモデルに合わせた任意の組み合わせ。"
+        },
+        "1": {
+          "title": "ロールベースアクセス",
+          "description": "Owner、Admin、Member、Viewer の役割。トランザクションを提案、署名、または閲覧するだけの権限をコントロール。"
+        },
+        "2": {
+          "title": "2 デバイス署名",
+          "description": "すべての署名者がブラウザ拡張機能とモバイルアプリの両方を使用。1 人 2 つの鍵、チーム全体で M-of-N。"
+        },
+        "3": {
+          "title": "マルチチェーンサポート",
+          "description": "Bitcoin、Ethereum、Litecoin、Dogecoin、Flux、Polygon、BSC、Base、Avalanche など。すべてのチェーンに対応する 1 つのプラットフォーム。"
+        },
+        "4": {
+          "title": "トランザクション提案",
+          "description": "完全な詳細でトランザクションを提案。チームメンバーがレビュー、承認、または拒否。しきい値に達したときのみブロードキャスト。"
+        },
+        "5": {
+          "title": "完全な監査証跡",
+          "description": "すべてのアクションが永続的に記録されます。メンバー変更、ボールト操作、トランザクション承認 — 完全な説明責任。"
+        }
+      }
+    },
+    "policy": {
+      "title": "トランザクションポリシーエンジン",
+      "subtitle": "組織からボールト、個別の署名者まで連鎖するきめ細かなコントロール。より厳格なポリシーが常に優先されます。",
+      "tiers": {
+        "organization": "組織",
+        "organizationSub": "デフォルトポリシー",
+        "vault": "ボールト",
+        "vaultSub": "オーバーライドと改良",
+        "signer": "署名者",
+        "signerSub": "個別制限"
+      },
+      "tierFooter": "ポリシーはトップダウンで統合 — どのティアでも厳格な制限が適用される",
+      "readMore": "続きを読む",
+      "items": {
+        "0": {
+          "title": "支出制限",
+          "description": "トランザクションごと、日次、週次、月次の制限。USD またはネイティブトークンで設定。集計およびトークンごとのコントロール。"
+        },
+        "1": {
+          "title": "アドレスホワイトリスト",
+          "description": "3 つのモード：無効、警告、または強制。アドレスにラベルを付け、チェーンで制限。未知の宛先を完全にブロック。"
+        },
+        "2": {
+          "title": "タイムロック遅延",
+          "description": "ブロードキャスト前の設定可能な待機期間。USD しきい値を超えると自動的にトリガー。実行前にキャンセル可能。"
+        },
+        "3": {
+          "title": "管理者承認",
+          "description": "高額トランザクションに管理者の承認を要求。USD しきい値を設定 — それ以上はすべて明示的な承認が必要。"
+        },
+        "4": {
+          "title": "署名者ごとのオーバーライド",
+          "description": "各チームメンバーに個別の支出制限を設定。ジュニアトレーダーは厳格なコントロール、シニアエグゼクティブはより高い制限。"
+        },
+        "5": {
+          "title": "速度追跡",
+          "description": "ボールト、署名者、トークンごとのローリング 30 日間支出ウィンドウ。TTL ベースのクリーンアップによる自動適用。"
+        },
+        "6": {
+          "title": "緊急ボールトフリーズ",
+          "description": "デュアルデバイス WK 署名で任意のボールトを即時フリーズ。解除されるまですべての提案をブロック。インシデント対応は数秒で。"
+        },
+        "7": {
+          "title": "3 階層ポリシー階層",
+          "description": "組織のデフォルトがボールトと署名者に連鎖。ボールトレベルのオーバーライドがルールを改良。より厳格なポリシーが常に優先。"
+        }
+      },
+      "footerStrong": "14 以上の設定可能なコントロールを持つ 3 階層ポリシー階層",
+      "footerSuffix": "— すべてのプランに含まれています。"
+    },
+    "security": {
+      "title": "5 層セキュリティ",
+      "subtitle": "多層防御 — 侵害のためにはすべての層を突破する必要があります",
+      "layerLabel": "レイヤー {n}: {name}",
+      "layers": {
+        "0": {
+          "name": "デバイスセキュリティ",
+          "description": "OS レベルのセキュリティ、生体認証、モバイルのセキュアエンクレーブ"
+        },
+        "1": {
+          "name": "デュアルデバイス 2FA",
+          "description": "すべての署名にブラウザ拡張機能 + モバイルアプリが必要"
+        },
+        "2": {
+          "name": "オンチェーン Multisig",
+          "description": "ネイティブ Bitcoin multisig と EVM スマートコントラクト検証"
+        },
+        "3": {
+          "name": "ビジネスポリシー",
+          "description": "支出制限、アドレスホワイトリスト、タイムロック、管理者承認、署名者ごとのオーバーライド、速度追跡 — 14 以上の設定可能なコントロール"
+        },
+        "4": {
+          "name": "監査とコンプライアンス",
+          "description": "変更不可能なログ、ログイン追跡、コンプライアンスレポート"
+        }
+      },
+      "footerBefore": "SSP Wallet はオープンソースで ",
+      "footerLink": "Halborn による監査済み",
+      "footerAfter": "。コードを自分で検証してください。"
+    },
+    "comparison": {
+      "title": "比較",
+      "subtitle": "SSP Enterprise vs. 代替手段",
+      "columns": {
+        "feature": "機能",
+        "ssp": "SSP Enterprise"
+      },
+      "values": {
+        "partial": "一部"
+      },
+      "rows": {
+        "0": "真のセルフカストディ",
+        "1": "マルチチェーン",
+        "2": "オンチェーン Multisig",
+        "3": "トランザクションポリシーエンジン",
+        "4": "モバイル署名",
+        "5": "オープンソース",
+        "6": "ベンダーロックインなし",
+        "7": "手頃な価格"
+      },
+      "annualCostLabel": "年間費用",
+      "annualCostSsp": "無料*",
+      "annualCostFireblocks": "$100K+",
+      "annualCostBitgo": "$50K+",
+      "annualCostSafe": "ガス代",
+      "footnoteBefore": "* オープンソースウォレットは無料。Enterprise プラットフォームには開始のための無料枠があります。 ",
+      "footnoteLink": "セールスに連絡",
+      "footnoteAfter": " カスタムプランについて。",
+      "migrationLabel": "これらのいずれかを使用中ですか？移行ガイドをご覧ください：",
+      "migrationFireblocks": "Fireblocks から",
+      "migrationSafe": "Safe から",
+      "migrationBitgo": "BitGo から"
+    },
+    "useCases": {
+      "title": "対象",
+      "subtitle": "暗号資産を保有しチームベースの署名が必要なあらゆる組織",
+      "readPlaybook": "プレイブックを読む",
+      "items": {
+        "0": {
+          "title": "法人トレジャリー",
+          "description": "会社資金のマルチシグネチャ承認。CEO + CFO + 取締役会 = 2-of-3。",
+          "example": "役員 3 名、署名は 2 名が必要"
+        },
+        "1": {
+          "title": "DAO トレジャリー",
+          "description": "コミュニティ資金のオンチェーンセキュリティによる分散型意思決定。",
+          "example": "評議員 5 名、3 名が必要"
+        },
+        "2": {
+          "title": "投資ファンド",
+          "description": "ファンドマネージャーと限定パートナー向けの機関グレードのセルフカストディ。",
+          "example": "ファンドマネージャー + コンプライアンス + LP"
+        },
+        "3": {
+          "title": "パートナーシップ & JV",
+          "description": "明確な説明責任と監査証跡を持つパートナー間の共有コントロール。",
+          "example": "均等なコントロール、透明な運営"
+        }
+      }
+    },
+    "chains": {
+      "title": "マルチチェーンネイティブ",
+      "subtitle": "すべてのチェーンに対応する 1 つのプラットフォーム — UTXO と EVM",
+      "footer": "チェーンを定期的に追加中。EVM チェーンですべての ERC-20 トークンをサポート。"
+    },
+    "contact": {
+      "title": "セールスに連絡",
+      "subtitle": "カスタム Enterprise プラン、専用サポート、または優先オンボーディングが必要ですか？チームにご連絡ください。",
+      "launchApp": "Enterprise アプリを起動",
+      "scheduleCall": "通話をスケジュール",
+      "directContactStrong": "ダイレクトコンタクトを希望ですか？",
+      "directContactBefore": " こちらにご連絡ください ",
+      "directContactBetween": " または DM で ",
+      "directContactAfter": " X にて。"
+    },
+    "form": {
+      "fullNameLabel": "氏名 *",
+      "fullNamePlaceholder": "お名前",
+      "emailLabel": "メールアドレス *",
+      "emailPlaceholder": "your.email@company.com",
+      "companyLabel": "会社 / 組織",
+      "companyPlaceholder": "会社名",
+      "teamSizeLabel": "チームサイズ",
+      "teamSizePlaceholder": "チームサイズを選択",
+      "teamSizeOptions": {
+        "2-5": "2-5 名の署名者",
+        "6-10": "6-10 名の署名者",
+        "11-25": "11-25 名の署名者",
+        "25+": "25 名以上の署名者"
+      },
+      "useCaseLabel": "主なユースケース",
+      "useCasePlaceholder": "ユースケースを選択",
+      "useCaseOptions": {
+        "corporate-treasury": "法人トレジャリー",
+        "dao-treasury": "DAO トレジャリー",
+        "investment-fund": "投資ファンド",
+        "partnership": "パートナーシップ / ジョイントベンチャー",
+        "otc-desk": "OTC デスク",
+        "mining-operation": "マイニング事業",
+        "exchange": "取引所",
+        "other": "その他"
+      },
+      "messageLabel": "ニーズについてお聞かせください",
+      "messagePlaceholder": "暗号資産のカストディでどのような課題に直面していますか？チームにとって最も重要な機能は何ですか？",
+      "submitting": "リクエスト送信中...",
+      "submit": "始める",
+      "errorFallback": "リクエストの送信に失敗しました。もう一度お試しください。",
+      "errorGeneric": "リクエストの送信に失敗しました",
+      "successTitle": "リクエストを受信しました！",
+      "successDescription": "SSP Enterprise へのご興味をいただきありがとうございます。まもなくご連絡いたします。",
+      "successAgain": "別のリクエストを送信"
+    },
+    "finalCta": {
+      "title": "あなたの鍵。あなたのルール。",
+      "description": "SSP Enterprise は、エンタープライズソフトウェアのガバナンスとセルフカストディのセキュリティを組織に提供します。カストディアンなし。仲介者なし。妥協なし。",
+      "launchApp": "Enterprise アプリを起動",
+      "downloadWallet": "SSP Wallet をダウンロード",
+      "exploreFeatures": "すべての機能を見る"
+    }
+  },
+  "InteractiveDemo": {
+    "modalTitle": "SSP Wallet の完全な体験",
+    "modalSubtitle": "真の 2-of-2 multisig セキュリティによる完全なセットアップとトランザクションフロー",
+    "closeDemo": "デモを閉じる",
+    "previous": "前へ",
+    "next": "次へ",
+    "restartDemo": "デモを再起動",
+    "downloadSspWallet": "SSP Wallet をダウンロード",
+    "stepCounter": "{phase} - ステップ {current} / {total}",
+    "walletSetupTitle": "SSP Wallet セットアップ",
+    "walletSetupSubtitle": "安全なシードフレーズでブラウザウォレットを作成",
+    "keySetupTitle": "SSP Key セットアップ",
+    "keySetupSubtitle": "別のシードフレーズでモバイルアプリをセットアップ",
+    "deviceSyncTitle": "デバイスの同期",
+    "deviceSyncSubtitle": "ブラウザとモバイルを安全に接続",
+    "transactionTitle": "トランザクションを送信",
+    "transactionSubtitle": "デュアルデバイスセキュリティフローを体験",
+    "feedbackCopied": "コピーしました！",
+    "feedbackCopiedCheck": "✓ コピーしました！",
+    "feedbackConfirmedCheck": "✓ 確認しました！",
+    "chromeWebStore": "Chrome Web Store",
+    "sspWalletName": "SSP Wallet",
+    "byInfluxTech": "by InFlux Technologies",
+    "walletStoreTagline": "2-of-2 multisig 付きの安全・シンプル・強力な暗号資産ウォレット",
+    "getToBrowser": "ブラウザへ",
+    "walletRating": "⭐ 4.8",
+    "walletUserCount": "1K 以上のユーザー",
+    "walletAudited": "🛡️ 監査済み",
+    "installExtensionTitle": "SSP Wallet 拡張機能をインストール",
+    "installExtensionDescription": "Chrome Web Store からブラウザ拡張機能をダウンロード。Chrome、Brave、Firefox で利用可能。",
+    "sspWalletSetup": "SSP Wallet セットアップ",
+    "sspLogoAlt": "SSP ロゴ",
+    "createYourWallet": "ウォレットを作成",
+    "newPasswordLabel": "新しいパスワード",
+    "enterSecurePasswordPlaceholder": "安全なパスワードを入力",
+    "confirmPasswordLabel": "パスワードを確認",
+    "confirmPasswordPlaceholder": "パスワードを確認",
+    "agreeToTerms": "利用規約を読み、同意します",
+    "createSecurePasswordTitle": "安全なパスワードを作成",
+    "createSecurePasswordDescription": "このパスワードはウォレットをローカルで暗号化します。ブラウザから出ることなく、シードフレーズを保護します。",
+    "backupRequired": "バックアップが必要",
+    "walletSeedPhraseHeading": "ウォレットのシードフレーズ",
+    "writeDownWarning": "⚠️ 書き留めて安全に保管してください！",
+    "clickToRevealSeed": "クリックして 24 ワードのシードフレーズを表示",
+    "showSeedPhrase": "シードフレーズを表示",
+    "copy": "コピー",
+    "writtenItDown": "✓ 書き留めました",
+    "seedConfirmedToast": "✓ シードフレーズが確認され、続行できます",
+    "backupSeedTitle": "シードフレーズをバックアップ",
+    "backupSeedDescription": "この 24 ワードのフレーズはマスターキーです。書き留めてオフラインで安全に保管してください。これは 2 つのシードフレーズのうちの 1 番目です。",
+    "walletCreated": "ウォレットを作成しました",
+    "sspWalletReady": "SSP Wallet の準備完了！",
+    "walletSetUpWith": "ブラウザウォレットのセットアップ内容：",
+    "securePasswordProtection": "安全なパスワード保護",
+    "twentyFourWordSeedBackedUp": "24 ワードのシードフレーズをバックアップ済み",
+    "readyForMobileSetup": "モバイルアプリのセットアップ準備完了",
+    "nextStep": "次のステップ",
+    "setUpKeyMobile": "SSP Key モバイルアプリをセットアップ",
+    "walletSetupCompleteTitle": "ウォレットのセットアップ完了",
+    "walletSetupCompleteDescription": "ブラウザウォレットの準備ができました！次に、2 番目の署名のためにモバイルアプリをセットアップする必要があります。",
+    "sspKeyName": "SSP Key",
+    "twoFaMultisigSecurity": "2FA Multisig セキュリティ",
+    "ratingLabel": "評価:",
+    "ratingValue": "⭐⭐⭐⭐⭐ 5.0",
+    "developerLabel": "開発者:",
+    "developerValue": "Influx Technologies",
+    "downloadsLabel": "ダウンロード数:",
+    "downloadsValue": "1,000 以上",
+    "sizeLabel": "サイズ:",
+    "iosSizeValue": "35 MB",
+    "androidSizeValue": "46 MB",
+    "requiresLabel": "必要条件:",
+    "iosRequiresValue": "iOS 15.1 以上",
+    "androidRequiresValue": "Android 7.0 以上",
+    "downloadForIos": "iOS 向けダウンロード",
+    "downloadForAndroid": "Android 向けダウンロード",
+    "securityAudited": "セキュリティ監査済み",
+    "touchFaceId": "Touch ID / Face ID",
+    "biometricUnlock": "生体認証ロック解除",
+    "qrCodePairing": "QR コードペアリング",
+    "zeroDataStorage": "ゼロデータストレージ",
+    "downloadKeyMobileTitle": "SSP Key モバイルアプリをダウンロード",
+    "downloadKeyMobileDescription": "App Store または Google Play からモバイルコンパニオンアプリをインストール。トランザクションの 2 番目の署名を提供します。",
+    "sspKeyAlt": "SSP Key",
+    "sspKeySetup": "SSP Key セットアップ",
+    "appPasswordLabel": "アプリのパスワード",
+    "createPasswordPlaceholder": "パスワードを作成",
+    "enableBiometrics": "生体認証を有効にする",
+    "continueSetup": "セットアップを続ける",
+    "touchFaceIdEnabled": "✓ Touch ID / Face ID 有効",
+    "secureMobileKeyTitle": "モバイルキーを安全に",
+    "secureMobileKeyDescription": "モバイルアプリのパスワードを作成し、セキュリティ強化のために生体認証を有効にします。",
+    "keySeedPhrase": "キーシードフレーズ",
+    "generateKeySeed": "モバイルキー専用のシードフレーズを生成",
+    "showKeySeed": "キーシードを表示",
+    "saved": "✓ 保存しました",
+    "keySeedConfirmedToast": "✓ キーシードを確認しました",
+    "storeSeparatelyWarning": "⚠️ ウォレットシードとは別に保管してください！",
+    "backupKeySeedTitle": "モバイルキーシードをバックアップ",
+    "backupKeySeedDescription": "これはモバイルキー専用の別の 24 ワードのシードフレーズです。完全な SSP 復旧には両方のシードが必要です。",
+    "sspKeyReady": "SSP Key の準備完了！",
+    "passwordProtection": "パスワード保護",
+    "biometricSecurity": "生体認証セキュリティ",
+    "keySeedBackedUp": "キーシードをバックアップ済み",
+    "readyToPair": "ペアリング準備完了",
+    "nextScanQrToConnect": "次：QR コードをスキャンしてデバイスを接続",
+    "mobileKeyCompleteTitle": "モバイルキーのセットアップ完了",
+    "mobileKeyCompleteDescription": "モバイルアプリの準備ができました！2-of-2 セキュリティのためにブラウザウォレットに接続しましょう。",
+    "sspWalletSyncDevice": "SSP Wallet - デバイスを同期",
+    "connectMobileDevice": "モバイルデバイスを接続",
+    "scanQrWithKeyApp": "SSP Key アプリでこの QR コードをスキャン",
+    "connectionIdLabel": "接続 ID:",
+    "learnMoreLink": "詳しくは sspwallet.io で",
+    "scanQrCode": "QR コードをスキャン",
+    "positionQrInFrame": "フレーム内に QR コードを配置",
+    "readyToScan": "スキャン準備完了",
+    "generatePairingQrTitle": "ペアリング QR コードを生成",
+    "generatePairingQrDescription": "ブラウザウォレットに SSP ロゴ付きの QR コードが表示されます。SSP Key アプリを開いてスキャンして安全に接続します。",
+    "synchronising": "同期中...",
+    "pairingInProgress": "ペアリング中",
+    "establishingSecureConnection": "モバイルデバイスとの安全な接続を確立中...",
+    "exchangingKeys": "暗号化キーと公開鍵を交換中...",
+    "connectionDetailsHeading": "接続の詳細",
+    "establishingSspRelay": "安全な SSP リレー接続を確立中...",
+    "synchronisationComplete": "同期完了！",
+    "qrCodeScanned": "QR コードをスキャンしました！",
+    "browserWalletLabel": "ブラウザウォレット:",
+    "chromeExtensionValue": "Chrome 拡張機能",
+    "encryptionLabel": "暗号化:",
+    "confirmPairing": "ペアリングを確認",
+    "scanningQrCodeTitle": "QR コードをスキャン中",
+    "scanningQrCodeDescription": "モバイルアプリが QR コードを読み取り、ブラウザウォレットとの暗号化接続を確立します。",
+    "deviceConnected": "デバイスが接続されました",
+    "successfullyPaired": "ペアリング成功！",
+    "devicesSecurelyConnected": "デバイスが安全に接続されました",
+    "encryptionRow": "🔐 暗号化:",
+    "active": "アクティブ",
+    "mobileDeviceRow": "📱 モバイルデバイス:",
+    "connected": "接続済み",
+    "twoOfTwoMultisigRow": "🔑 2-of-2 Multisig:",
+    "ready": "準備完了",
+    "secureConnection": "安全な接続",
+    "readyForTransactions": "トランザクション準備完了",
+    "online": "オンライン",
+    "connectionTypeLabel": "接続タイプ:",
+    "sspRelaySecured": "SSP リレーで保護",
+    "multisigStatusLabel": "Multisig ステータス:",
+    "twoOfTwoActive": "2-of-2 アクティブ",
+    "walletProtectedByMultisig": "ウォレットが真の 2-of-2 multisig で保護されています！",
+    "devicesPairedTitle": "デバイスのペアリングに成功しました",
+    "devicesPairedDescription": "完璧！ブラウザとモバイルがエンドツーエンド暗号化で接続されました。これで安全なトランザクションを送信できます。",
+    "sendTransaction": "トランザクションを送信",
+    "sendEthereum": "Ethereum を送信",
+    "recipientAddressLabel": "受取人アドレス",
+    "amountEthLabel": "金額 (ETH)",
+    "transactionSummary": "トランザクションの概要",
+    "amountLabel": "金額:",
+    "gasFeeLabel": "ガス代:",
+    "totalLabel": "合計:",
+    "sendTransactionButton": "トランザクションを送信",
+    "createTransactionTitle": "トランザクションを作成",
+    "createTransactionDescription": "受取人アドレスと金額を入力してください。トランザクションはモバイルデバイスからのさらなる承認が必要です。",
+    "waitingForMobileApproval": "モバイルの承認を待っています...",
+    "pendingMobileApproval": "モバイル承認待ち",
+    "signatureOneCompleteCheckMobile": "署名 1/2 完了。モバイルデバイスでトランザクションを承認してください。",
+    "transactionDetails": "トランザクションの詳細",
+    "sendAmount": "{amount} ETH を送信",
+    "toAddress": "宛先: {address}",
+    "notificationSentToMobile": "モバイルデバイスに通知を送信しました",
+    "transactionApprovalRequired": "トランザクションの承認が必要",
+    "transactionApproval": "トランザクションの承認",
+    "amount": "金額",
+    "toAddressLabel": "宛先アドレス",
+    "gasFee": "ガス代",
+    "status": "ステータス",
+    "awaitingApproval": "承認待ち (2/2)",
+    "approveWithTouchId": "Touch ID で承認",
+    "approveTwoOfTwo": "承認 (2/2)",
+    "reject": "拒否",
+    "mobileConfirmationTitle": "モバイルでの確認が必要",
+    "mobileConfirmationDescriptionBiometric": "モバイルデバイスに通知が表示されました。トランザクションの詳細を確認し、生体認証で承認してください。",
+    "mobileConfirmationDescriptionPassword": "モバイルデバイスに通知が表示されました。トランザクションの詳細を確認し、パスワードで承認してください。",
+    "transactionBroadcasted": "トランザクションをブロードキャストしました！",
+    "signaturesCollected": "署名を収集しました",
+    "browserWalletOneOfTwo": "ブラウザウォレット (1/2)",
+    "mobileKeyTwoOfTwo": "モバイルキー (2/2)",
+    "networkStatus": "ネットワークステータス",
+    "confirmingOnEthereum": "Ethereum ネットワークで確認中",
+    "usuallyTakesMinutes": "通常 1〜3 分かかります",
+    "transactionHash": "トランザクションハッシュ",
+    "viewOnEtherscan": "Etherscan で見る",
+    "transactionSubmittedTitle": "トランザクションを送信しました",
+    "transactionSubmittedDescription": "完璧！両方の署名が収集され、トランザクションが Ethereum にブロードキャストされました。ネットワークは今あなたの安全な 2-of-2 multisig トランザクションをマイニング・確認しています。",
+    "transactionConfirmed": "トランザクションが確認されました",
+    "transactionSuccessful": "トランザクション成功！",
+    "confirmedOnEthereum": "Ethereum ネットワークで確認されました。",
+    "hashLabel": "ハッシュ:",
+    "sendAnotherTransaction": "別のトランザクションを送信",
+    "transactionCompleteCelebration": "🎉 トランザクション完了！",
+    "fundsTransferredSummary": "真の 2-of-2 マルチシグネチャ技術を使用して資金が安全に送金されました。このトランザクションの承認と署名には両デバイスが必要でした。",
+    "whyUltraSecure": "なぜ超安全なのか",
+    "twoSeparateDevices": "2 台の別々のデバイスが必要",
+    "twoSeparateSeeds": "2 つの別々のシードフレーズ",
+    "trueMultisigBip48": "真のマルチシグネチャ (BIP48)",
+    "zeroServerStorage": "サーバーストレージゼロ"
+  }
+}

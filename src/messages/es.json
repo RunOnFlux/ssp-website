@@ -14,7 +14,7 @@
     "errorTitle": "Algo salió mal",
     "errorDescription": "Ha ocurrido un error inesperado. Intenta recargar la página o volver al inicio.",
     "tryAgain": "Reintentar",
-    "translationPendingBanner": "__TODO_TRANSLATE__ This article isn't translated yet — showing English.",
+    "translationPendingBanner": "Este artículo aún no está traducido — mostrando en inglés.",
     "localeBadge": { "en": "EN", "es": "ES", "zh": "ZH" }
   },
   "Header": {
@@ -1170,32 +1170,32 @@
   },
   "Categories": {
     "multisig": {
-      "title": "__TODO_TRANSLATE__ Multisig Explained",
-      "description": "__TODO_TRANSLATE__ How 2-of-2 multisignature actually works in SSP — and why it matters."
+      "title": "Multisig Explicado",
+      "description": "Cómo funciona realmente la multifirma 2-de-2 en SSP — y por qué es importante."
     },
     "getting-started": {
-      "title": "__TODO_TRANSLATE__ Crypto Basics",
-      "description": "__TODO_TRANSLATE__ Foundational concepts every crypto user should know."
+      "title": "Conceptos Básicos de Crypto",
+      "description": "Conceptos fundamentales que todo usuario de cripto debería conocer."
     },
     "security": {
-      "title": "__TODO_TRANSLATE__ Security & Self-Custody",
-      "description": "__TODO_TRANSLATE__ Protect your crypto: seeds, phishing, hardware, threat models."
+      "title": "Seguridad y Autocustodia",
+      "description": "Protege tu cripto: frases semilla, phishing, hardware y modelos de amenaza."
     },
     "how-to": {
-      "title": "__TODO_TRANSLATE__ How-To Guides",
-      "description": "__TODO_TRANSLATE__ Step-by-step walkthroughs for common SSP tasks."
+      "title": "Guías Paso a Paso",
+      "description": "Tutoriales detallados para las tareas más habituales en SSP."
     },
     "coin-guides": {
-      "title": "__TODO_TRANSLATE__ Coin & Chain Guides",
-      "description": "__TODO_TRANSLATE__ Deep dives into individual coins and chains SSP supports."
+      "title": "Guías de Monedas y Redes",
+      "description": "Análisis en profundidad de las monedas y redes compatibles con SSP."
     },
     "defi": {
-      "title": "__TODO_TRANSLATE__ DeFi & Account Abstraction",
-      "description": "__TODO_TRANSLATE__ Staking, lending, swaps, and ERC-4337 explained."
+      "title": "DeFi y Abstracción de Cuentas",
+      "description": "Staking, préstamos, swaps y ERC-4337 explicados."
     },
     "news-explained": {
-      "title": "__TODO_TRANSLATE__ News & Industry Analysis",
-      "description": "__TODO_TRANSLATE__ Context and analysis on crypto news and regulation."
+      "title": "Noticias y Análisis del Sector",
+      "description": "Contexto y análisis sobre noticias de cripto y regulación."
     }
   },
   "CaseStudies": {

@@ -10,6 +10,17 @@ const LABELS: Record<Locale, string> = {
   en: 'English',
   es: 'Español',
   zh: '中文',
+  'pt-BR': 'Português (Brasil)',
+  ru: 'Русский',
+  tr: 'Türkçe',
+  ja: '日本語',
+  de: 'Deutsch',
+  fr: 'Français',
+  it: 'Italiano',
+  pl: 'Polski',
+  ko: '한국어',
+  vi: 'Tiếng Việt',
+  id: 'Bahasa Indonesia',
 }
 
 export function LocaleSwitcher() {

@@ -1,0 +1,1839 @@
+{
+  "Common": {
+    "skipToContent": "Lewati ke konten",
+    "loading": "Memuat…",
+    "error": "Terjadi kesalahan.",
+    "retry": "Coba lagi",
+    "readMore": "Baca selengkapnya",
+    "breadcrumbHome": "Beranda",
+    "breadcrumbAriaLabel": "Breadcrumb",
+    "websiteAriaLabel": "Situs web",
+    "notFoundTitle": "Halaman tidak ditemukan",
+    "notFoundDescription": "Halaman yang Anda cari tidak ada atau telah dipindahkan.",
+    "goHome": "Kembali ke beranda",
+    "errorTitle": "Terjadi kesalahan",
+    "errorDescription": "Terjadi kesalahan tak terduga. Coba muat ulang halaman atau kembali ke beranda.",
+    "tryAgain": "Coba lagi",
+    "translationPendingBanner": "Artikel ini belum diterjemahkan — menampilkan versi bahasa Inggris.",
+    "localeBadge": {
+      "en": "EN",
+      "es": "ES",
+      "zh": "ZH"
+    }
+  },
+  "Header": {
+    "home": "Beranda",
+    "enterprise": "Enterprise",
+    "features": "Fitur",
+    "newsroom": "Berita",
+    "academy": "Academy",
+    "guide": "Panduan",
+    "support": "Dukungan",
+    "contact": "Kontak",
+    "more": "Lainnya",
+    "download": "Unduh",
+    "toggleTheme": "Ganti tema",
+    "toggleMenu": "Buka menu",
+    "selectLanguage": "Pilih bahasa"
+  },
+  "Footer": {
+    "navigation": "Navigasi",
+    "product": "Produk",
+    "learn": "Pelajari",
+    "community": "Komunitas",
+    "legal": "Hukum",
+    "supportedChains": "Chain yang Didukung",
+    "rssFeed": "RSS Feed",
+    "cookieSettings": "Pengaturan Cookie",
+    "rights": "Semua hak dilindungi.",
+    "builtForWeb3": "Dibuat dengan ❤️ untuk Web3",
+    "poweredByFlux": "Didukung oleh Flux",
+    "brandDescription": "Aman, Sederhana, Powerful. SSP adalah dompet browser multi-signature BIP48 kustodi mandiri open-source yang revolusioner untuk berbagai blockchain dengan Account Abstraction.",
+    "links": {
+      "home": "Beranda",
+      "features": "Fitur",
+      "guide": "Panduan",
+      "support": "Dukungan",
+      "contact": "Kontak",
+      "enterprise": "Enterprise",
+      "download": "Unduh",
+      "mobileSspKey": "SSP Key Mobile",
+      "sspEnterprise": "SSP Enterprise",
+      "securityAudits": "Audit Keamanan",
+      "documentation": "Dokumentasi",
+      "github": "GitHub",
+      "discord": "Discord",
+      "twitter": "Twitter",
+      "medium": "Medium",
+      "youtube": "YouTube",
+      "helpTranslate": "Bantu Terjemahkan",
+      "newsroom": "Berita",
+      "academy": "Academy",
+      "multisigExplained": "Multisig Dijelaskan",
+      "security": "Keamanan",
+      "gettingStarted": "Memulai",
+      "rssFeed": "RSS Feed",
+      "privacyPolicy": "Kebijakan Privasi",
+      "termsOfService": "Ketentuan Layanan",
+      "cookiePolicy": "Kebijakan Cookie"
+    },
+    "fluxAlt": "Flux"
+  },
+  "Home": {
+    "metaTitle": "SSP Wallet — Dompet Kripto Aman, Sederhana, Powerful",
+    "metaDescription": "Dompet kripto multisig 2-of-2 sejati. Ekstensi browser + mobile diperlukan untuk setiap transaksi. Mendukung Bitcoin, Ethereum, dan 15+ blockchain.",
+    "hero": {
+      "auditedBadge": "Diaudit Keamanan oleh Halborn",
+      "titleSecure": "Aman",
+      "titleSimple": "Sederhana",
+      "titlePowerful": "Powerful",
+      "description": "Dompet multisignature 2-of-2 sejati menggunakan derivasi BIP48, memerlukan ekstensi browser dan perangkat mobile Anda untuk setiap transaksi. Dilengkapi WalletConnect v2, Account Abstraction ERC-4337 dengan tanda tangan Schnorr, dan 15+ blockchain.",
+      "featureMultisig": "Multisig 2-of-2 Sejati",
+      "featureBlockchains": "15+ Blockchain",
+      "featureZeroStorage": "Nol Penyimpanan Data",
+      "getStarted": "Mulai Sekarang",
+      "watchDemo": "Tonton Demo",
+      "statSupportedChains": "Chain yang Didukung",
+      "statActiveUsers": "Pengguna Aktif",
+      "statSecurityAudits": "Audit Keamanan",
+      "animationAlt": "Animasi SSP Wallet",
+      "closeModal": "Tutup modal",
+      "videoUnsupported": "Browser Anda tidak mendukung tag video."
+    },
+    "features": {
+      "titlePart1": "Mengapa Memilih",
+      "titleHighlight": "SSP Wallet",
+      "titleSuffix": "?",
+      "description": "Rasakan perpaduan sempurna antara keamanan, kesederhanaan, dan kekuatan dalam satu solusi dompet kripto komprehensif.",
+      "items": {
+        "0": {
+          "title": "Multisignature 2-of-2 Aman",
+          "description": "Derivasi BIP48 lanjutan dengan autentikasi dua faktor sejati yang memerlukan tanda tangan ekstensi browser dan perangkat mobile untuk setiap transaksi. Keamanan maksimum melalui perlindungan dual-device."
+        },
+        "1": {
+          "title": "Sederhana Namun Canggih",
+          "description": "Teknologi multisignature multi-aset yang kompleks dibuat sederhana. Keamanan BIP48 lanjutan dan Account Abstraction disampaikan melalui antarmuka intuitif yang dapat digunakan siapa saja."
+        },
+        "2": {
+          "title": "Interaksi dApp yang Powerful",
+          "description": "Terhubung ke ribuan dApp dengan dukungan WalletConnect v2 (Reown), penandatanganan pesan EIP-712, dan komunikasi real-time di semua chain EVM dan protokol DeFi."
+        },
+        "3": {
+          "title": "Dukungan Multi-Chain",
+          "description": "Dukungan untuk 15+ blockchain termasuk Bitcoin, Ethereum, Polygon, BSC, Avalanche, Base, dan lainnya. Dompet pertama dengan Account Abstraction multisignature Schnorr native (ERC-4337) di Ethereum, memungkinkan smart contract wallets tanpa EOA."
+        },
+        "4": {
+          "title": "Nol Penyimpanan Data",
+          "description": "Kustodi mandiri lengkap dengan nol penyimpanan data di sisi server. Kunci privat, seed, dan transaksi tetap berada secara eksklusif di perangkat Anda menggunakan enkripsi AES-GCM tingkat militer dan device fingerprinting untuk keamanan dan privasi maksimum."
+        },
+        "5": {
+          "title": "Beli, Jual & Tukar",
+          "description": "Beli mata uang kripto langsung dengan kartu kredit atau transfer bank, jual kripto kembali ke mata uang fiat, dan tukar antar mata uang kripto berbeda dengan mulus dalam dompet. Didukung oleh mesin agregat dari berbagai penyedia untuk tarif dan opsi terbaik."
+        }
+      },
+      "futureTitlePart1": "Dibangun untuk",
+      "futureTitleHighlight": "Masa Depan Keuangan",
+      "highlights": {
+        "0": {
+          "title": "Keamanan Lanjutan",
+          "description": "Enkripsi tingkat militer dan teknologi multi-signature melindungi aset Anda"
+        },
+        "1": {
+          "title": "Pengalaman Mulus",
+          "description": "Antarmuka intuitif membuat kripto dapat diakses oleh semua orang"
+        },
+        "2": {
+          "title": "Open Source",
+          "description": "Kode transparan dan teraudit yang dapat Anda percaya dan verifikasi"
+        }
+      },
+      "demoTitle": "Coba Demo Interaktif SSP Wallet",
+      "demoDescription": "Rasakan alur penyiapan dan transaksi lengkap",
+      "launchDemo": "Luncurkan Demo Interaktif",
+      "demoFooter": "Tidak perlu instalasi • Pengalaman 3 menit"
+    },
+    "security": {
+      "badge": "Pendekatan Keamanan Utama",
+      "titleHighlight": "Keamanan Tingkat Bank",
+      "titleSuffix": "yang Dapat Anda Percaya",
+      "description": "Keamanan kami diverifikasi dan diaudit secara independen oleh perusahaan keamanan terkemuka. Aset Anda dilindungi oleh enkripsi tingkat militer dan teknologi mutakhir.",
+      "items": {
+        "0": {
+          "title": "Diaudit Keamanan",
+          "description": "Audit keamanan komprehensif oleh Halborn untuk semua komponen kritis",
+          "highlight": "Bersertifikat Halborn"
+        },
+        "1": {
+          "title": "Multisignature BIP48",
+          "description": "Multisignature 2-of-2 sejati menggunakan derivasi BIP48 dengan device fingerprinting dan enkripsi AES-GCM",
+          "highlight": "Aman Secara Kriptografi"
+        },
+        "2": {
+          "title": "Open Source & Deterministik",
+          "description": "Kode transparan dengan build deterministik — siapa pun dapat memverifikasi dompet yang didistribusikan cocok persis dengan kode sumber",
+          "highlight": "Sepenuhnya Dapat Diverifikasi"
+        },
+        "3": {
+          "title": "Nol Penyimpanan Data",
+          "description": "Enkripsi berbasis PBKDF2 dengan device fingerprinting memastikan semua data yang tersimpan secara lokal sangat aman. Tidak ada yang pernah menyentuh server.",
+          "highlight": "Kustodi Mandiri Saja"
+        }
+      },
+      "auditTitlePart1": "Secara Independen",
+      "auditTitleHighlight": "Diaudit Keamanan",
+      "auditDescription": "Semua komponen kritis ekosistem SSP telah menjalani audit keamanan ketat oleh Halborn, perusahaan keamanan blockchain ternama. Komitmen kami terhadap transparansi berarti semua laporan audit tersedia untuk umum.",
+      "indicators": {
+        "0": "Praktik Terbaik Terdepan di Industri",
+        "1": "Direkayasa dengan Standar Keamanan Tertinggi",
+        "2": "Pemantauan Keamanan Berkelanjutan"
+      },
+      "auditedByHalborn": "Diaudit oleh Halborn",
+      "recentReportsTitle": "Laporan Audit Terbaru",
+      "viewReport": "Lihat Laporan",
+      "reports": {
+        "0": {
+          "title": "Audit SSP Wallet, Key & Relay",
+          "date": "Maret 2025",
+          "status": "Selesai"
+        },
+        "1": {
+          "title": "Audit Smart Contracts",
+          "date": "Februari 2025",
+          "status": "Selesai"
+        },
+        "2": {
+          "title": "Audit Keamanan SDK",
+          "date": "Februari 2025",
+          "status": "Selesai"
+        }
+      },
+      "bugBountyPrefix": "Bug Bounty Keamanan:",
+      "bugBountyText": "Kami menawarkan hadiah untuk pengungkapan bertanggung jawab atas kerentanan keamanan. Bantu kami menjaga SSP tetap aman.",
+      "lavaMoatTitleHighlight": "LavaMoat",
+      "lavaMoatTitleSuffix": "Perlindungan Runtime",
+      "lavaMoatDescription": "SSP Wallet mengintegrasikan LavaMoat, framework keamanan yang melindungi dari serangan supply chain. LavaMoat membungkus setiap dependensi dalam kompartemen dan hanya memberi akses ke apa yang mereka butuhkan, mencegah kode berbahaya mencuri rahasia atau mengkompromikan dompet Anda.",
+      "lavaIndicators": {
+        "0": "Paket Dibungkus dalam Kompartemen SES",
+        "1": "Akses Platform Terbatas Per Paket",
+        "2": "Mencegah Modifikasi JavaScript Primordials"
+      },
+      "learnLavaMoat": "Pelajari Tentang LavaMoat",
+      "protectionLayersTitle": "Lapisan Perlindungan",
+      "layers": {
+        "0": {
+          "title": "Kompartemen Paket",
+          "description": "Setiap paket berjalan di kompartemennya sendiri, mencegah akses tidak sah ke sumber daya sensitif"
+        },
+        "1": {
+          "title": "Penegakan Kebijakan",
+          "description": "File kebijakan mendefinisikan dengan tepat sumber daya mana yang dapat diakses setiap paket"
+        },
+        "2": {
+          "title": "Pertahanan Supply Chain",
+          "description": "Melindungi dari dependensi yang dikompromikan yang mencoba tindakan berbahaya"
+        },
+        "3": {
+          "title": "Pemantauan Runtime",
+          "description": "Penegakan berkelanjutan memastikan kebijakan keamanan tetap aktif saat runtime"
+        }
+      },
+      "deterministicTitleHighlight": "Build Deterministik",
+      "deterministicTitleSuffix": "untuk Kepercayaan Tertinggi",
+      "deterministicDescription": "SSP Wallet menampilkan build deterministik menggunakan Docker. Ini berarti kode sumber yang identik menghasilkan biner yang identik, memungkinkan siapa pun memverifikasi secara independen bahwa dompet yang Anda unduh cocok persis dengan apa yang dibangun dari kode sumber yang dipublikasikan.",
+      "detIndicators": {
+        "0": "Lingkungan Build Terisolasi Berbasis Docker",
+        "1": "Checksum Rilis yang Ditandatangani Secara Kriptografi",
+        "2": "Menghilangkan Vektor Serangan Supply Chain"
+      },
+      "learnVerify": "Pelajari Cara Memverifikasi",
+      "verificationProcessTitle": "Proses Verifikasi",
+      "verifySteps": {
+        "0": {
+          "title": "Unduh File Rilis",
+          "description": "Dapatkan file ekstensi, SHA256SUMS, dan tanda tangan GPG dari rilis GitHub"
+        },
+        "1": {
+          "title": "Verifikasi Tanda Tangan GPG",
+          "description": "Impor kunci publik kami dari keyserver OpenPGP dan verifikasi checksum yang ditandatangani"
+        },
+        "2": {
+          "title": "Verifikasi Hash File",
+          "description": "Periksa bahwa file yang diunduh cocok dengan checksum yang ditandatangani"
+        },
+        "3": {
+          "title": "Opsional: Reproduksi Build",
+          "description": "Pengguna mahir dapat membangun dari sumber dan memverifikasi output yang identik"
+        }
+      }
+    },
+    "enterpriseBand": {
+      "badge": "Untuk Tim & Bisnis",
+      "fluxImageAlt": "Flux Foundation",
+      "titlePart1": "Mengelola treasury untuk tim?",
+      "titleHighlight": "Kenalkan SSP Enterprise.",
+      "description": "Tim Anda memegang kuncinya. Tim Anda menandatangani. SSP Enterprise menangani koordinasi — proposal, kebijakan, dan jejak audit yang benar-benar diinginkan CFO Anda.",
+      "highlights": {
+        "0": {
+          "title": "Vault Multisig M-of-N",
+          "description": "Konfigurasikan ambang penandatanganan apa pun — 2-of-3, 3-of-5, apa pun yang sesuai dengan tata kelola Anda."
+        },
+        "1": {
+          "title": "Mesin Kebijakan Transaksi",
+          "description": "Batas pengeluaran, whitelist alamat, time-lock, persetujuan admin — 14+ kontrol."
+        },
+        "2": {
+          "title": "Tidak Ada Kustodian. Tidak Ada MPC.",
+          "description": "Kustodi mandiri pada skala enterprise. Penandatanganan dua perangkat per penandatangan, diverifikasi on-chain."
+        }
+      },
+      "fluxEyebrow": "Flux Foundation",
+      "fluxBefore": "Menggunakan SSP Enterprise untuk mengamankan",
+      "fluxStrong": "jembatan Fusion",
+      "fluxAfter": "dan mengelola treasury Foundation dengan penandatanganan multi-pihak.",
+      "fluxCta": "Baca studi kasus",
+      "explore": "Jelajahi SSP Enterprise",
+      "launchApp": "Luncurkan Aplikasi Enterprise"
+    },
+    "supportedChains": {
+      "badge": "Dukungan Multi-Chain",
+      "titleHighlight": "15+ Blockchain",
+      "titleSuffix": "dalam Satu Dompet",
+      "description": "Kelola semua aset kripto Anda dari Bitcoin hingga Ethereum dan seterusnya. SSP Wallet menyediakan akses terpadu ke berbagai jaringan blockchain dengan dukungan WalletConnect v2 untuk dApp dan kemampuan transaksi kode QR offline.",
+      "chainDescriptions": {
+        "BTC": "Mata uang kripto asli",
+        "ETH": "Platform smart contract",
+        "LTC": "Perak digital",
+        "ZEC": "Berfokus pada privasi",
+        "RVN": "Blockchain transfer aset",
+        "DOGE": "Kripto milik rakyat",
+        "BCH": "Uang elektronik peer-to-peer",
+        "FLUX": "Komputasi terdesentralisasi",
+        "MATIC": "Scaling Ethereum",
+        "BSC": "Transaksi cepat dan murah",
+        "AVAX": "Blockchain berkinerja tinggi",
+        "BASE": "Solusi L2 Coinbase"
+      },
+      "chainLogoAlt": "Logo {name}",
+      "moreFeaturesTitle": "Fitur Lainnya",
+      "moreFeaturesHighlight": "Segera Hadir",
+      "moreFeaturesDescription": "Kami terus memperluas SSP Wallet dengan jaringan blockchain baru dan fitur keamanan lanjutan berdasarkan permintaan komunitas dan kemajuan teknologi.",
+      "walletConnectStrong": "WalletConnect v2 (Reown)",
+      "walletConnectAfter": "Terhubung ke ribuan dApp",
+      "accountAbstractionStrong": "Account Abstraction (ERC-4337)",
+      "accountAbstractionAfter": "Smart contract wallets",
+      "solanaStrong": "Dukungan Solana",
+      "solanaAfter": "Segera hadir dengan multisig",
+      "viewFullList": "Lihat Daftar Aset Lengkap"
+    },
+    "cta": {
+      "badge": "Siap untuk Memulai?",
+      "titlePart1": "Bergabunglah dengan",
+      "titleHighlight": "Masa Depan Kripto",
+      "description": "Unduh SSP Wallet hari ini dan rasakan generasi berikutnya dari manajemen mata uang kripto dengan keamanan dan kesederhanaan yang tak tertandingi.",
+      "downloadNow": "Unduh Sekarang",
+      "learnMore": "Pelajari Lebih Lanjut",
+      "options": {
+        "0": {
+          "title": "SSP Wallet - Ekstensi Browser",
+          "description": "Tersedia sekarang - Chrome, Brave, Firefox"
+        },
+        "1": {
+          "title": "SSP Key - Aplikasi 2FA Mobile",
+          "description": "Diperlukan untuk persetujuan transaksi dan lainnya"
+        },
+        "2": {
+          "title": "SSP Enterprise - Untuk Tim",
+          "description": "Vault multisig M-of-N untuk organisasi. Tersedia sekarang."
+        }
+      },
+      "availableNow": "Tersedia Sekarang",
+      "comingSoon": "Segera Hadir",
+      "statActiveUsers": "Pengguna Aktif",
+      "statAssetsSecured": "Aset Diamankan",
+      "statBlockchainsSupported": "Blockchain Didukung",
+      "indicatorAudited": "Diaudit Keamanan",
+      "indicatorOpenSource": "Open Source",
+      "indicatorCommunity": "Didorong Komunitas"
+    }
+  },
+  "Newsroom": {
+    "title": "Berita",
+    "description": "Berita terbaru, pembaruan produk, dan pengumuman dari SSP.",
+    "metaTitle": "Berita — Berita & Pembaruan Terbaru",
+    "metaDescription": "Tetap up to date dengan berita terbaru, pembaruan produk, dan pengumuman dari SSP.",
+    "filterAll": "Semua",
+    "loadMore": "Muat lebih banyak",
+    "noArticles": "Belum ada artikel yang cocok dengan filter ini.",
+    "backToNewsroom": "Kembali ke Berita",
+    "shareTitle": "Bagikan artikel ini",
+    "shareTwitter": "Bagikan di Twitter",
+    "shareFacebook": "Bagikan di Facebook",
+    "shareTelegram": "Bagikan di Telegram",
+    "shareReddit": "Bagikan di Reddit",
+    "shareCopy": "Salin tautan",
+    "shareCopied": "Tautan disalin!",
+    "tableOfContents": "Di halaman ini",
+    "relatedArticles": "Artikel terkait",
+    "minRead": "{minutes} mnt baca",
+    "byAuthor": "Oleh {author}",
+    "publishedOn": "Diterbitkan {date}",
+    "updatedOn": "Diperbarui {date}"
+  },
+  "Academy": {
+    "title": "SSP Academy",
+    "description": "Panduan, tutorial, dan pembahasan mendalam untuk membantu Anda menguasai kustodi mandiri dengan SSP.",
+    "metaTitle": "SSP Academy — Pelajari Kustodi Mandiri Kripto",
+    "metaDescription": "Panduan, tutorial, dan pembahasan mendalam tentang SSP, multisig, keamanan, DeFi, dan banyak lagi.",
+    "browseByTopic": "Telusuri berdasarkan topik",
+    "learningPaths": "Jalur pembelajaran",
+    "viewAllSeries": "Lihat semua",
+    "latestArticles": "Artikel terbaru",
+    "comingSoon": "Artikel baru akan segera hadir — kunjungi kembali sebentar lagi.",
+    "categoryEmpty": "Artikel baru akan segera hadir. Sementara itu, jelajahi topik terkait:",
+    "backToCategory": "Kembali ke {category}",
+    "articleCount": "{count, plural, =0 {Tidak ada artikel} =1 {1 artikel} other {# artikel}}",
+    "partsCount": "{count, plural, =0 {Tidak ada bagian} =1 {1 bagian} other {# bagian}}",
+    "difficulty": {
+      "beginner": "Pemula",
+      "intermediate": "Menengah",
+      "advanced": "Lanjutan"
+    },
+    "atAGlance": "Sekilas",
+    "seriesPart": "Bagian {order} dari {total}",
+    "previousPart": "Bagian sebelumnya",
+    "nextPart": "Bagian berikutnya",
+    "seriesMetaDescription": "Seri multi-bagian terstruktur untuk membimbing Anda dari pemula hingga mahir dalam kustodi mandiri kripto dengan SSP.",
+    "seriesIndexDescription": "Seri multi-bagian terstruktur untuk membimbing Anda dari pemula hingga mahir.",
+    "seriesEmpty": "Jalur pembelajaran akan segera hadir. Sementara itu, telusuri artikel berdasarkan topik:",
+    "backToAcademy": "Kembali ke Academy",
+    "seriesPartsEmpty": "Bagian akan segera hadir.",
+    "viewAllLearningPaths": "Lihat semua jalur pembelajaran",
+    "categoryIntros": {
+      "multisig": "Dompet multisig memerlukan beberapa tanda tangan untuk mengotorisasi transaksi. SSP menerapkan 2-of-2 pada setiap tindakan yang ditandatangani: ekstensi browser dan aplikasi mobile SSP Key keduanya harus menyetujui. Halaman ini mengumpulkan pembahasan mendalam yang menjelaskan cara kerja model ini, serangan apa yang dihentikannya, dan di mana batasannya.",
+      "getting-started": "Baru di kripto, atau kembali setelah lama tidak aktif? Mulai dari sini. Panduan ini mencakup dompet, alamat, transaksi, gas, mempool, dan finalitas — kosa kata yang Anda butuhkan sebelum menyentuh dana nyata.",
+      "security": "Kustodi mandiri sulit karena serangan bersifat kreatif. Koleksi ini membahas ancaman yang benar-benar menjebak pengguna: halaman phishing, DM dukungan palsu, dApp berbahaya, seed yang hilang, dan bagaimana model 2-of-2 SSP menetralisir sebagian besar dari mereka.",
+      "how-to": "Panduan praktis berbasis tangkapan layar untuk hal-hal yang dilakukan pengguna SSP setiap hari: mengirim transaksi lintas chain, menghubungkan ke dApp melalui WalletConnect, menukar token, dan memulihkan dari perangkat yang hilang.",
+      "coin-guides": "Setiap koin atau chain yang didukung SSP memiliki keunikannya masing-masing — UTXO vs. berbasis akun, multisig native vs. ERC-4337, dinamika biaya, waktu finalitas. Koleksi ini membahas satu per satu.",
+      "defi": "SSP mendukung DeFi melalui ERC-4337 Account Abstraction di chain EVM. Artikel-artikel ini menjelaskan apa itu AA, dApp apa yang dapat Anda gunakan dengan aman dari dompet multisig, dan bagaimana SSP membuat Anda tetap dalam kendali sambil memungkinkan Anda berpartisipasi dalam protokol DeFi.",
+      "news-explained": "Di balik berita utama: pergeseran regulasi, kegagalan bursa, insiden protokol, dan pembaruan standar yang benar-benar memengaruhi pengguna kustodi mandiri — dijelaskan tanpa hype."
+    }
+  },
+  "Author": {
+    "title": "{name}",
+    "postsBy": "Artikel oleh {name}",
+    "noPosts": "Belum ada artikel.",
+    "metaTitle": "{name} — Penulis SSP",
+    "metaDescriptionFallback": "Artikel oleh {name}",
+    "notFoundTitle": "Penulis tidak ditemukan",
+    "breadcrumbLabel": "Penulis"
+  },
+  "Contact": {
+    "metaTitle": "Kontak - SSP Wallet | Hubungi Kami",
+    "metaDescription": "Hubungi tim SSP Wallet. Dapatkan dukungan, ajukan pertanyaan, atau diskusikan kemitraan. Bergabunglah dengan komunitas Discord kami atau hubungi langsung.",
+    "breadcrumbLabel": "Kontak",
+    "heroBadge": "Hubungi Kami",
+    "heroTitle": "Kami Siap Membantu",
+    "heroDescription": "Punya pertanyaan tentang SSP Wallet? Butuh dukungan atau ingin menjajaki kemitraan? Bergabunglah dengan komunitas kami atau hubungi langsung — kami siap membantu.",
+    "methodsTitle": "Cara Menghubungi Kami",
+    "methodsSubtitle": "Pilih metode kontak yang paling sesuai dengan kebutuhan Anda",
+    "methods": {
+      "supportTickets": {
+        "title": "Tiket Dukungan",
+        "description": "Dapatkan bantuan langsung untuk masalah teknis melalui sistem tiket kami",
+        "responseTime": "Dalam 24 jam",
+        "action": "Buat Tiket"
+      },
+      "discord": {
+        "title": "Komunitas Discord",
+        "description": "Bergabunglah dengan komunitas aktif kami untuk dukungan real-time dan diskusi",
+        "responseTime": "Komunitas aktif",
+        "action": "Bergabung di Discord"
+      },
+      "github": {
+        "title": "Dukungan GitHub",
+        "description": "Laporkan bug, minta fitur, atau berkontribusi pada pengembangan",
+        "contact": "GitHub Issues & Discussions",
+        "responseTime": "Didorong komunitas",
+        "action": "Kunjungi GitHub"
+      }
+    },
+    "resourcesTitle": "Butuh Bantuan Segera?",
+    "resourcesSubtitle": "Lihat sumber daya layanan mandiri kami untuk bantuan segera",
+    "resources": {
+      "supportCenter": {
+        "title": "Pusat Dukungan",
+        "description": "FAQ komprehensif dan panduan pemecahan masalah"
+      },
+      "setupGuide": {
+        "title": "Panduan Penyiapan",
+        "description": "Instruksi instalasi langkah demi langkah"
+      },
+      "documentation": {
+        "title": "Dokumentasi",
+        "description": "Dokumentasi teknis lengkap"
+      }
+    },
+    "formTitle": "Kirim Pesan kepada Kami",
+    "formSubtitle": "Isi formulir di bawah ini dan kami akan menghubungi Anda sesegera mungkin",
+    "formTipPrefix": "Tips:",
+    "formTipBefore": "Untuk dukungan teknis lebih cepat, pertimbangkan menggunakan",
+    "formTipLinkSupport": "sistem tiket dukungan",
+    "formTipBetween": "atau menghubungi melalui",
+    "form": {
+      "fullNameLabel": "Nama Lengkap *",
+      "fullNamePlaceholder": "Nama lengkap Anda",
+      "emailLabel": "Alamat Email *",
+      "emailPlaceholder": "email.anda@contoh.com",
+      "companyLabel": "Perusahaan (Opsional)",
+      "companyPlaceholder": "Nama perusahaan Anda",
+      "typeLabel": "Jenis Pertanyaan *",
+      "typeOptions": {
+        "general": "Pertanyaan Umum",
+        "support": "Dukungan Teknis",
+        "partnership": "Kemitraan",
+        "security": "Masalah Keamanan",
+        "media": "Media & Pers",
+        "business": "Pengembangan Bisnis"
+      },
+      "subjectLabel": "Subjek *",
+      "subjectPlaceholder": "Subjek singkat pesan Anda",
+      "messageLabel": "Pesan *",
+      "messagePlaceholder": "Mohon berikan detail tentang pertanyaan Anda...",
+      "submitting": "Mengirim Pesan...",
+      "submit": "Kirim Pesan",
+      "errorFallback": "Gagal mengirim pesan. Silakan coba lagi.",
+      "errorGeneric": "Gagal mengirim pesan",
+      "successTitle": "Terima Kasih!",
+      "successDescription": "Pesan Anda telah berhasil dikirim. Kami akan menghubungi Anda segera.",
+      "successAgain": "Kirim pesan lain"
+    },
+    "communityTitle": "Ikuti Komunitas Kami",
+    "communitySubtitle": "Tetap update dengan berita terbaru, terhubung dengan pengguna lain, dan dapatkan dukungan komunitas",
+    "social": {
+      "github": "Pengembangan open source & kontribusi",
+      "discord": "Obrolan komunitas & dukungan real-time",
+      "twitter": "Pembaruan terbaru, berita & pengumuman"
+    }
+  },
+  "Download": {
+    "metaTitle": "Unduh - SSP Wallet | Dapatkan Dompet Kripto Aman Anda",
+    "metaDescription": "Unduh SSP Wallet untuk browser Anda. Dompet kripto aman, sederhana, powerful dengan keamanan multi-signature dan autentikasi mobile.",
+    "ogAlt": "Unduh SSP Wallet - Dompet Kripto Aman",
+    "breadcrumbLabel": "Unduh",
+    "heroBadge": "Unduh SSP Wallet",
+    "heroTitle": "Mulai dengan SSP Wallet",
+    "heroDescription": "Unduh kedua komponen untuk keamanan lengkap: ekstensi browser untuk manajemen dompet dan aplikasi mobile untuk autentikasi transaksi.",
+    "stepsTitle": "Proses Penyiapan Dua Langkah",
+    "stepsSubtitle": "Kedua komponen diperlukan untuk sistem multisignature 2-of-2 yang aman",
+    "stepLabel": "Langkah {index}",
+    "options": {
+      "chrome": {
+        "title": "SSP Wallet",
+        "subtitle": "Ekstensi Browser",
+        "description": "Instal di Chrome, Brave, Firefox, dan browser berbasis Chromium lainnya",
+        "features": {
+          "0": "Keamanan multi-signature",
+          "1": "Dukungan WalletConnect v2",
+          "2": "Kompatibilitas lintas chain"
+        },
+        "cta": "Unduh Ekstensi"
+      },
+      "mobile": {
+        "title": "SSP Key",
+        "subtitle": "Aplikasi 2FA Mobile",
+        "description": "Aplikasi pendamping wajib untuk perangkat iOS dan Android yang menyediakan autentikasi aman",
+        "features": {
+          "0": "Autentikasi 2FA",
+          "1": "Sinkronisasi kode QR",
+          "2": "Penyimpanan kunci yang aman"
+        },
+        "cta": "Lihat Aplikasi Mobile"
+      }
+    },
+    "browsersTitle": "Browser yang Didukung",
+    "browsersSubtitle": "SSP Wallet bekerja mulus di semua browser utama",
+    "mobileBadge": "Aplikasi Mobile SSP Key",
+    "mobileTitle": "Lengkapi Penyiapan Keamanan Anda",
+    "mobileDescription": "SSP Key menyediakan tanda tangan kedua yang diperlukan untuk semua transaksi. Instal di perangkat mobile Anda untuk melengkapi keamanan multisignature 2-of-2.",
+    "mobileEasySetupTitle": "Penyiapan Mudah",
+    "mobileEasySetupDescription": "Pindai kode QR untuk menyinkronkan perangkat mobile Anda dengan dompet browser secara instan",
+    "mobileSecurityTitle": "Keamanan Maksimum",
+    "mobileSecurityDescription": "Dana Anda tetap aman meskipun satu perangkat dikompromikan",
+    "googlePlayLabel": "Dapatkan di",
+    "appStoreLabel": "Unduh di",
+    "mobileAppAlt": "Aplikasi Mobile SSP Key",
+    "howTitle": "Cara Kerjanya",
+    "howSubtitle": "Memahami model keamanan multisignature 2-of-2",
+    "howSteps": {
+      "1": {
+        "title": "Instal Ekstensi",
+        "description": "Tambahkan SSP Wallet ke browser Anda dan buat dompet dengan frasa pemulihan yang aman"
+      },
+      "2": {
+        "title": "Siapkan Aplikasi Mobile",
+        "description": "Instal SSP Key di ponsel Anda dan sinkronkan dengan dompet browser melalui kode QR"
+      },
+      "3": {
+        "title": "Transaksi Aman",
+        "description": "Setiap transaksi memerlukan persetujuan dari browser dan perangkat mobile Anda"
+      }
+    },
+    "ctaTitle": "Siap untuk Memulai?",
+    "ctaSubtitle": "Ikuti panduan langkah demi langkah kami untuk menyiapkan dompet kripto aman Anda",
+    "ctaSetupGuide": "Lihat Panduan Penyiapan",
+    "ctaSupport": "Dapatkan Dukungan"
+  },
+  "Features": {
+    "metaTitle": "Fitur - SSP Wallet | Keamanan Kripto Lanjutan & Dukungan Multi-Chain",
+    "metaDescription": "Multisig 2-of-2 sejati, WalletConnect v2, 15+ blockchain, fiat on/off-ramp, crypto swap, ekspor CSV, dan Account Abstraction. Lihat semua fitur SSP Wallet.",
+    "breadcrumbLabel": "Fitur",
+    "hero": {
+      "badge": "Fitur Lanjutan",
+      "titleHighlight": "Fitur Powerful",
+      "titleSuffix": "untuk Kripto Modern",
+      "description": "Temukan teknologi mutakhir dan fitur keamanan yang menjadikan SSP Wallet dompet kripto paling canggih yang tersedia.",
+      "securityFirst": "Keamanan Utama",
+      "lightningFast": "Sangat Cepat",
+      "selfCustody": "Kustodi Mandiri"
+    },
+    "security": {
+      "titleHighlight": "Keamanan",
+      "titleSuffix": "Fitur",
+      "description": "Keamanan kripto Anda adalah prioritas utama kami. Setiap fitur dirancang dengan prinsip keamanan-utama.",
+      "items": {
+        "0": {
+          "title": "Perlindungan Multisig 2-of-2 Sejati",
+          "description": "Multisignature BIP48 revolusioner yang memerlukan tanda tangan browser dan perangkat mobile. Tidak ada titik kegagalan tunggal — mustahil dikompromikan hanya dengan satu perangkat."
+        },
+        "1": {
+          "title": "Audit Keamanan Halborn",
+          "description": "Diaudit secara profesional oleh Halborn, perusahaan keamanan blockchain terkemuka yang dipercaya oleh protokol-protokol utama. Pengujian penetrasi komprehensif dan tinjauan kode selesai dilakukan."
+        },
+        "2": {
+          "title": "Kebijakan Nol Penyimpanan Data",
+          "description": "Kebijakan ketat tanpa penyimpanan server menghilangkan vektor serangan terpusat. Kunci privat, transaksi, dan data pribadi Anda tidak pernah meninggalkan perangkat Anda."
+        },
+        "3": {
+          "title": "Sepenuhnya Open Source & Transparan",
+          "description": "Transparansi kode lengkap dengan build deterministik memungkinkan peneliti keamanan dan pengembang memverifikasi integritas build secara independen. Tidak ada pintu belakang tersembunyi atau kotak hitam proprietary."
+        }
+      }
+    },
+    "technical": {
+      "titleHighlight": "Teknis",
+      "titleSuffix": "Inovasi",
+      "description": "Dibangun dengan teknologi mutakhir untuk masa depan keuangan terdesentralisasi.",
+      "items": {
+        "0": {
+          "title": "Dukungan Multi-Chain (15+)",
+          "description": "Dukungan native untuk Bitcoin, Ethereum, Polygon, BSC, Avalanche, Base, Arbitrum, Optimism, dan lainnya dengan manajemen portofolio terpadu."
+        },
+        "1": {
+          "title": "Trading Kripto Bawaan",
+          "description": "Crypto swapping yang mulus melalui DEX aggregator terintegrasi, ditambah fiat on-ramp/off-ramp untuk membeli dan menjual kripto dengan kartu pembayaran."
+        },
+        "2": {
+          "title": "Account Abstraction (ERC-4337)",
+          "description": "Dompet pertama dengan Account Abstraction multisignature Schnorr native di Ethereum, memungkinkan transaksi gasless dan smart contract wallets."
+        },
+        "3": {
+          "title": "Keamanan Multisig 2-of-2 Sejati",
+          "description": "Keamanan dual-device BIP48 revolusioner dengan ekstensi browser dan aplikasi mobile. Kedua perangkat diperlukan untuk setiap transaksi — perlindungan tertinggi."
+        },
+        "4": {
+          "title": "Diaudit Keamanan & Open Source",
+          "description": "Kode yang sepenuhnya transparan dan dapat diverifikasi, diaudit secara profesional oleh pakar keamanan Halborn. Open source dengan standar keamanan tingkat enterprise."
+        },
+        "5": {
+          "title": "Integrasi dApp Lanjutan",
+          "description": "Dukungan WalletConnect v2, penandatanganan pesan EIP-712, dan integrasi browser komprehensif untuk konektivitas dApp yang mulus."
+        }
+      }
+    },
+    "comparison": {
+      "titlePrefix": "Mengapa Memilih",
+      "titleHighlight": "SSP Wallet",
+      "titleSuffix": "?",
+      "description": "Bandingkan SSP Wallet dengan metode penyimpanan kripto lainnya dan lihat perbedaannya.",
+      "columns": {
+        "feature": "Fitur",
+        "ssp": "SSP Wallet",
+        "selfCustody": "Dompet Kustodi Mandiri",
+        "custodial": "Dompet Custodial",
+        "hardware": "Dompet Hardware",
+        "exchange": "Bursa Kripto"
+      },
+      "values": {
+        "limited": "Terbatas",
+        "some": "Sebagian",
+        "varies": "Bervariasi",
+        "rare": "Jarang",
+        "na": "T/A"
+      },
+      "rows": {
+        "0": {
+          "feature": "Multisig 2-of-2 Sejati",
+          "description": "Multisignature BIP48 sejati dengan persyaratan dual-device"
+        },
+        "1": {
+          "feature": "Crypto Swap Bawaan",
+          "description": "Integrasi DEX native untuk token swapping yang mulus"
+        },
+        "2": {
+          "feature": "Beli/Jual Kripto",
+          "description": "Fiat on-ramp/off-ramp dengan dukungan kartu pembayaran"
+        },
+        "3": {
+          "feature": "Kontrol Kustodi Mandiri",
+          "description": "Anda memiliki dan mengontrol kunci privat Anda"
+        },
+        "4": {
+          "feature": "Keamanan 2FA Mobile",
+          "description": "Aplikasi mobile bertindak sebagai faktor autentikasi kedua yang aman"
+        },
+        "5": {
+          "feature": "Integrasi dApp",
+          "description": "WalletConnect v2 dan dukungan browser dApp langsung"
+        },
+        "6": {
+          "feature": "Dukungan Multi-Chain (15+)",
+          "description": "Bitcoin, Ethereum, Polygon, BSC, Avalanche, dan lainnya"
+        },
+        "7": {
+          "feature": "Nol Risiko Counterparty",
+          "description": "Tidak ada risiko kebangkrutan atau penyitaan platform"
+        },
+        "8": {
+          "feature": "Open Source",
+          "description": "Kode yang sepenuhnya transparan dan dapat diverifikasi"
+        },
+        "9": {
+          "feature": "Diaudit Keamanan",
+          "description": "Audit keamanan profesional oleh perusahaan terkemuka"
+        },
+        "10": {
+          "feature": "Account Abstraction (ERC-4337)",
+          "description": "Transaksi gasless dan smart contract wallets"
+        },
+        "11": {
+          "feature": "Tidak Ada Seed Phrase Tunggal",
+          "description": "Menghilangkan kerentanan seed phrase tunggal — menggunakan cadangan dual-device"
+        },
+        "12": {
+          "feature": "Kemudahan Penggunaan",
+          "description": "Antarmuka sederhana dan intuitif untuk pemula maupun ahli"
+        },
+        "13": {
+          "feature": "Kecepatan Transaksi",
+          "description": "Penandatanganan transaksi cepat dan interaksi blockchain"
+        },
+        "14": {
+          "feature": "Perlindungan Privasi",
+          "description": "Tidak ada pengumpulan data pribadi atau pelacakan transaksi"
+        }
+      },
+      "ctaDownload": "Unduh SSP Wallet",
+      "ctaGuide": "Baca Panduan Penyiapan",
+      "ctaEnterprise": "SSP untuk Bisnis"
+    }
+  },
+  "Guide": {
+    "metaTitle": "Panduan Penyiapan - SSP Wallet | Instruksi Instalasi Lengkap",
+    "metaDescription": "Panduan langkah demi langkah untuk menginstal dan menyiapkan SSP Wallet dan SSP Key. Instruksi penyiapan lengkap untuk dompet kripto aman dengan perlindungan multi-signature.",
+    "breadcrumbLabel": "Panduan Penyiapan",
+    "videoJsonLdName": "Cara Menginstal SSP Wallet dan SSP Key",
+    "videoJsonLdDescription": "Panduan video lengkap: instal ekstensi browser SSP Wallet dan sinkronkan aplikasi mobile SSP Key untuk keamanan multisignature 2-of-2.",
+    "howToJsonLdName": "Cara Menginstal SSP Wallet & SSP Key",
+    "howToJsonLdDescription": "Panduan instalasi lengkap untuk ekstensi browser SSP Wallet dan aplikasi mobile pendamping SSP Key yang diperlukan untuk keamanan multisignature 2-of-2.",
+    "howToSupplyDesktop": "Browser desktop (Chrome, Brave, atau Firefox)",
+    "howToSupplyMobile": "Perangkat mobile (iOS 15.1+ atau Android 7+)",
+    "heroBadge": "Panduan Penyiapan Lengkap",
+    "heroTitle": "Cara Menginstal SSP Wallet & SSP Key",
+    "heroDescriptionPart1": "SSP memerlukan",
+    "heroDescriptionStrong": "proses penyiapan 2 langkah",
+    "heroDescriptionPart2": ": instal ekstensi browser DAN aplikasi mobile. Kedua perangkat diperlukan untuk sistem multisignature 2-of-2 yang aman yang melindungi kripto Anda.",
+    "browserExtensionTitle": "Ekstensi Browser",
+    "browserExtensionSubtitle": "Instal dompet",
+    "mobileKeyTitle": "Mobile Key",
+    "mobileKeySubtitle": "Autentikasi mobile",
+    "videoTitle": "Panduan Video Penyiapan",
+    "videoSubtitle": "Panduan lengkap",
+    "videoDescription": "Tonton tutorial video komprehensif kami yang menampilkan cara menyiapkan SSP Wallet dan SSP Key dengan instruksi langkah demi langkah yang terperinci.",
+    "videoUnsupported": "Browser Anda tidak mendukung tag video.",
+    "videoBullet1": "Instalasi ekstensi browser",
+    "videoBullet2": "Penyiapan dan sinkronisasi aplikasi mobile",
+    "videoBullet3": "Praktik terbaik keamanan",
+    "stepsTitle": "Instruksi Langkah demi Langkah",
+    "stepsSubtitle": "Ikuti instruksi terperinci ini untuk menyiapkan dompet kripto aman Anda",
+    "important": "Penting",
+    "openLink": "Buka Tautan →",
+    "androidLabel": "Android",
+    "iosLabel": "iOS",
+    "phases": {
+      "0": {
+        "phase": "Bagian Pertama",
+        "title": "Menginstal SSP Wallet",
+        "steps": {
+          "0": {
+            "title": "Kunjungi Toko Ekstensi",
+            "description": "Buka browser Anda dan navigasikan ke halaman Ekstensi SSP Wallet untuk browser Anda (Chrome, Firefox, Brave)",
+            "action": "Navigasikan ke halaman ekstensi"
+          },
+          "1": {
+            "title": "Instal Ekstensi",
+            "description": "Klik tombol 'Tambahkan ke Chrome/Firefox' atau 'Instal'. Jendela pop-up akan muncul menanyakan apakah Anda ingin menambahkan SSP Wallet. Klik 'Tambah' atau 'Instal' untuk menyelesaikan instalasi.",
+            "action": "Tambahkan ke browser"
+          },
+          "2": {
+            "title": "Buka Dompet",
+            "description": "Temukan logo SSP wallet di browser Anda dan klik. Ikuti petunjuk untuk memulai.",
+            "action": "Luncurkan dompet"
+          },
+          "3": {
+            "title": "Buat Kata Sandi",
+            "description": "Buat kata sandi Anda. Mohon baca dengan seksama Penafian SSP Wallet dan akui persetujuan Anda.",
+            "action": "Atur kata sandi"
+          },
+          "4": {
+            "title": "Buat Dompet",
+            "description": "Klik 'Buat Dompet' untuk menginisialisasi dompet baru Anda.",
+            "action": "Inisialisasi dompet"
+          },
+          "5": {
+            "title": "Cadangkan Frasa Pemulihan",
+            "description": "Klik 'Tampilkan Frasa Pemulihan Mnemonic Dompet.' Simpan frasa pemulihan dengan aman dan konfirmasikan bahwa Anda telah mencadangkannya.",
+            "action": "Cadangan aman"
+          },
+          "6": {
+            "title": "Selesaikan Penyiapan",
+            "description": "Klik 'Buat Dompet' untuk menyelesaikan proses. Dompet browser Anda kini siap!",
+            "action": "Selesaikan penyiapan"
+          }
+        }
+      },
+      "1": {
+        "phase": "Bagian Kedua",
+        "title": "Menginstal Aplikasi Mobile SSP Key",
+        "steps": {
+          "0": {
+            "title": "Unduh Aplikasi Mobile",
+            "description": "Unduh SSP Key di perangkat mobile Anda dan buka aplikasinya.",
+            "action": "Instal aplikasi mobile"
+          },
+          "1": {
+            "title": "Mulai Sinkronisasi",
+            "description": "Klik 'Sinkronkan Key' untuk memulai proses penyiapan.",
+            "action": "Mulai sinkronisasi"
+          },
+          "2": {
+            "title": "Atur Kata Sandi Key",
+            "description": "Atur kata sandi SSP Key dan konfirmasikan. Kemudian, klik 'Setup Key.'",
+            "action": "Buat kata sandi key"
+          },
+          "3": {
+            "title": "Cadangkan Seed Key",
+            "description": "Klik 'Tampilkan Frasa Pemulihan Mnemonic Key.' Simpan frasa pemulihan key dengan aman dan konfirmasikan cadangan.",
+            "action": "Cadangan key aman"
+          },
+          "4": {
+            "title": "Selesaikan Penyiapan Key",
+            "description": "Klik 'Setup Key.' SSP Key kini berfungsi sebagai faktor autentikasi kedua untuk SSP Wallet Anda.",
+            "action": "Finalisasi key"
+          },
+          "5": {
+            "title": "Pindai Kode QR",
+            "description": "Klik 'Pindai Kode' untuk menyinkronkan SSP Key dengan SSP Wallet. Pindai kode QR yang ditampilkan di browser Anda.",
+            "action": "Sinkronkan perangkat"
+          },
+          "6": {
+            "title": "Setujui Sinkronisasi",
+            "description": "Klik 'Setujui Sinkronisasi' dan konfirmasikan dengan kata sandi Key Anda. Anda akan diberitahu sinkronisasi berhasil.",
+            "action": "Selesaikan sinkronisasi"
+          }
+        }
+      }
+    },
+    "tipsTitle": "Praktik Terbaik Keamanan",
+    "tipsSubtitle": "Ikuti tips keamanan penting ini untuk menjaga dompet Anda tetap aman",
+    "tips": {
+      "0": {
+        "title": "Amankan Frasa Pemulihan Anda",
+        "description": "Simpan frasa pemulihan dompet dan key di lokasi offline yang aman. Jangan pernah bagikan kepada siapa pun."
+      },
+      "1": {
+        "title": "Gunakan Kata Sandi Kuat",
+        "description": "Buat kata sandi unik dan kuat untuk dompet dan aplikasi mobile key Anda."
+      },
+      "2": {
+        "title": "Jaga Keamanan Mobile",
+        "description": "Pastikan perangkat mobile Anda memiliki kunci layar dan pertimbangkan menggunakan autentikasi biometrik."
+      }
+    },
+    "successTitle": "Selamat!",
+    "successDescription": "Dengan mengikuti langkah-langkah ini, Anda telah berhasil menginstal dan menyiapkan SSP Wallet dan SSP Key, memastikan pengalaman pengguna yang aman dan lancar.",
+    "successDownload": "Unduh Sekarang",
+    "successSupport": "Dapatkan Dukungan"
+  },
+  "Support": {
+    "metaTitle": "Dukungan - SSP Wallet | Dapatkan Bantuan & Dukungan Teknis",
+    "metaDescription": "Dapatkan dukungan komprehensif untuk SSP Wallet. Temukan jawaban FAQ, akses dokumentasi, terhubung dengan komunitas, atau hubungi tim dukungan ahli kami.",
+    "breadcrumbLabel": "Dukungan",
+    "heroBadge": "Pusat Dukungan",
+    "heroTitle": "Bagaimana kami dapat membantu Anda?",
+    "heroDescription": "Temukan jawaban atas pertanyaan umum, akses dokumentasi kami, atau hubungi tim dukungan kami.",
+    "quickLinks": {
+      "docsTitle": "Dokumen",
+      "docsSubtitle": "Panduan",
+      "communityTitle": "Komunitas",
+      "communitySubtitle": "Obrolan",
+      "supportTitle": "Dukungan",
+      "supportSubtitle": "Bantuan"
+    },
+    "channelsTitle": "Dapatkan Dukungan",
+    "channelsSubtitle": "Pilih cara terbaik untuk mendapatkan bantuan berdasarkan kebutuhan Anda",
+    "channels": {
+      "documentation": {
+        "title": "Dokumentasi",
+        "description": "Panduan dan dokumen komprehensif",
+        "links": {
+          "completeDocs": "Dokumentasi Lengkap",
+          "setupGuide": "Panduan Penyiapan",
+          "featureDocs": "Dokumentasi Fitur"
+        }
+      },
+      "community": {
+        "title": "Dukungan Komunitas",
+        "description": "Dapatkan bantuan dari komunitas kami",
+        "links": {
+          "github": "GitHub Discussions",
+          "discord": "Komunitas Discord",
+          "twitter": "Dukungan Twitter"
+        }
+      },
+      "direct": {
+        "title": "Dukungan Langsung",
+        "description": "Dapatkan bantuan teknis yang dipersonalisasi",
+        "links": {
+          "ticketSystem": "Sistem Tiket Dukungan",
+          "email": "Dukungan Email"
+        }
+      }
+    },
+    "faqTitle": "Pertanyaan yang Sering Diajukan",
+    "faqSubtitle": "Temukan jawaban cepat atas pertanyaan paling umum tentang SSP Wallet",
+    "faqCategories": {
+      "gettingStarted": {
+        "title": "Memulai",
+        "items": {
+          "0": {
+            "question": "Apa itu SSP Wallet?",
+            "answer": "SSP Wallet adalah sistem multisignature 2-of-2 sejati yang terdiri dari dua komponen: SSP Wallet (ekstensi browser) dan SSP Key (aplikasi 2FA mobile). Kedua perangkat diperlukan untuk mengotorisasi transaksi, memberikan keamanan tak tertandingi untuk aset kripto Anda di 15+ blockchain."
+          },
+          "1": {
+            "question": "Bagaimana cara menginstal SSP Wallet?",
+            "answer": "Anda dapat menginstal SSP Wallet sebagai ekstensi Chrome dari Chrome Web Store. Kunjungi halaman unduhan kami dan ikuti panduan penyiapan komprehensif kami untuk instruksi langkah demi langkah."
+          },
+          "2": {
+            "question": "Apakah SSP Wallet gratis digunakan?",
+            "answer": "Ya, SSP Wallet sepenuhnya gratis untuk diunduh dan digunakan. Kami tidak membebankan biaya apa pun untuk dompet itu sendiri, meskipun Anda masih akan membayar biaya transaksi jaringan saat melakukan transaksi blockchain."
+          },
+          "3": {
+            "question": "Mata uang kripto apa yang didukung SSP Wallet?",
+            "answer": "SSP Wallet mendukung 15+ blockchain termasuk Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), Zcash (ZEC), Ravencoin (RVN), Dogecoin (DOGE), Bitcoin Cash (BCH), Flux (FLUX), Polygon (MATIC), BSC, Avalanche (AVAX), dan Base. Untuk chain yang kompatibel dengan EVM, kami mendukung semua token ERC-20 dan Anda dapat mengimpor daftar token kustom sendiri. Dukungan Solana akan segera hadir."
+          },
+          "4": {
+            "question": "Di mana saya dapat menemukan daftar aset yang didukung secara lengkap?",
+            "answerBefore": "Untuk daftar lengkap dan terkini dari semua chain dan token yang didukung secara native, silakan lihat ",
+            "answerLink": "Spreadsheet Aset SSP",
+            "answerAfter": " resmi kami. Spreadsheet ini diperbarui secara berkala dengan tambahan baru dan berisi informasi terperinci tentang setiap aset yang didukung."
+          },
+          "5": {
+            "question": "Bisakah saya menggunakan SSP Wallet dengan dApp dan DeFi?",
+            "answer": "Ya! SSP Wallet menampilkan integrasi WalletConnect v2 (Reown) penuh, memungkinkan Anda terhubung ke ribuan aplikasi terdesentralisasi di semua chain EVM yang didukung. Anda dapat menggunakan protokol DeFi, marketplace NFT, dan dApp lainnya sambil mempertahankan keamanan sistem multisignature 2-of-2."
+          },
+          "6": {
+            "question": "Apa itu FluxNodes dan bagaimana cara menggunakannya?",
+            "answer": "FluxNodes adalah node dalam jaringan Flux yang membantu mengamankan dan memelihara blockchain. Dengan SSP Wallet, Anda dapat dengan mudah menyiapkan dan mengelola Fluxnodes, memantau kinerjanya, dan mengklaim hadiah langsung melalui antarmuka dompet. Fluxnodes memerlukan jumlah jaminan token FLUX dan memberikan pendapatan pasif melalui hadiah jaringan."
+          },
+          "7": {
+            "question": "Apakah SSP Wallet mendukung onboarding dan offboarding fiat?",
+            "answer": "Ya! SSP Wallet mendukung onboarding dan offboarding fiat melalui mitra terintegrasi. Anda dapat membeli mata uang kripto langsung dengan kartu kredit, transfer bank, atau metode pembayaran lainnya, dan menjual kripto kembali ke mata uang fiat. Fitur ini tersedia di wilayah yang didukung dan memerlukan verifikasi KYC."
+          },
+          "8": {
+            "question": "Bisakah saya menukar mata uang kripto dalam SSP Wallet?",
+            "answer": "Ya, SSP Wallet mencakup fungsionalitas crypto swap bawaan. Anda dapat dengan mudah menukar satu mata uang kripto dengan yang lain di blockchain yang didukung melalui mitra swap terintegrasi kami. Fitur swap memberikan tarif kompetitif dan mengeksekusi swap dengan aman sambil mempertahankan kunci privat Anda."
+          },
+          "9": {
+            "question": "Bisakah saya mengekspor riwayat transaksi saya?",
+            "answer": "Ya! SSP Wallet mendukung ekspor CSV riwayat transaksi Anda. Anda dapat mengekspor catatan transaksi terperinci untuk keperluan akuntansi, pajak, atau pencatatan pribadi. Ekspor CSV mencakup tanggal transaksi, jumlah, alamat, biaya, dan detail relevan lainnya untuk setiap blockchain yang didukung."
+          },
+          "10": {
+            "question": "Bagaimana cara meminta koin baru ditambahkan?",
+            "answer": "Kami mendorong pengguna untuk menghubungi tim dukungan kami atau berkontribusi langsung di repositori GitHub kami untuk meminta dukungan mata uang kripto baru. Kami mengevaluasi setiap permintaan berdasarkan permintaan komunitas, kelayakan teknis, dan pertimbangan keamanan."
+          },
+          "11": {
+            "question": "Apakah ada dompet mobile yang tersedia?",
+            "answer": "Kabar baik! Kami secara aktif bekerja untuk memperluas SSP Wallet ke platform mobile. Saat ini, SSP Wallet terdiri dari ekstensi browser (SSP Wallet) dan aplikasi 2FA mobile (SSP Key). Pengalaman dompet mobile penuh sedang dalam pengembangan."
+          },
+          "12": {
+            "question": "Bisakah saya menggunakan SSP Wallet di beberapa perangkat?",
+            "answer": "Ya, Anda dapat menggunakan SSP Wallet di beberapa perangkat. Untuk menyiapkan di perangkat baru, Anda perlu memulihkan dompet dan key menggunakan frasa pemulihan yang sesuai. Setiap perangkat memerlukan penyiapan dan sinkronisasi yang tepat."
+          },
+          "13": {
+            "question": "Apakah ada batas transaksi dengan SSP Wallet?",
+            "answer": "SSP Wallet tidak memberlakukan batas transaksi. Namun, Anda tunduk pada batas jaringan blockchain dan saldo yang tersedia. Beberapa jaringan mungkin memiliki jumlah transaksi minimum atau ukuran transaksi maksimum berdasarkan protokol mereka."
+          },
+          "14": {
+            "question": "Bisakah saya menggunakan SSP Wallet secara offline?",
+            "answer": "SSP Wallet memerlukan koneksi internet untuk sebagian besar operasi termasuk penyiaran transaksi, pembaruan saldo, dan sinkronisasi antara perangkat. Meskipun Anda dapat melihat beberapa informasi yang di-cache secara offline, Anda tidak dapat mengirim transaksi tanpa konektivitas."
+          }
+        }
+      },
+      "security": {
+        "title": "Keamanan & Privasi",
+        "items": {
+          "0": {
+            "question": "Seberapa aman SSP Wallet?",
+            "answer": "SSP Wallet menggunakan teknologi multi-signature dengan autentikasi terintegrasi mobile, memberikan perlindungan dua kunci. Kami menggunakan enkripsi mutakhir dan tidak menyimpan data Anda — semuanya disimpan secara lokal dan dikendalikan oleh Anda."
+          },
+          "1": {
+            "question": "Apa itu SSP Key dan mengapa saya membutuhkannya?",
+            "answer": "SSP Key adalah aplikasi mobile yang menyimpan kunci privat kedua yang diperlukan untuk sistem multisignature 2-of-2. Setiap transaksi harus ditandatangani oleh ekstensi browser DAN perangkat mobile Anda. Ini memastikan dana Anda tetap aman meskipun satu perangkat dikompromikan. SSP Key tersedia untuk iOS 15.1+ dan Android 7+."
+          },
+          "2": {
+            "question": "Bisakah saya memulihkan dompet jika kehilangan perangkat?",
+            "answer": "Ya, Anda dapat memulihkan dompet menggunakan frasa pemulihan. Dompet dan key Anda masing-masing memiliki frasa pemulihan terpisah yang harus disimpan dengan aman secara offline. Jangan pernah bagikan frasa pemulihan Anda kepada siapa pun."
+          },
+          "3": {
+            "question": "Apakah SSP Wallet mengumpulkan data pribadi saya?",
+            "answer": "Tidak, SSP Wallet berkomitmen untuk tidak menyimpan informasi data apa pun. Kunci privat, riwayat transaksi, dan data pribadi Anda sepenuhnya berada di bawah kendali Anda dan disimpan secara lokal di perangkat Anda."
+          },
+          "4": {
+            "question": "Apa itu build deterministik dan mengapa penting?",
+            "answer": "Build deterministik memastikan bahwa kode sumber yang identik menghasilkan output biner yang identik. SSP Wallet menggunakan build deterministik berbasis Docker yang memungkinkan siapa pun memverifikasi secara independen bahwa ekstensi yang didistribusikan cocok persis dengan apa yang dibangun dari kode sumber yang dipublikasikan. Ini menghilangkan potensi serangan supply chain dan memberikan bukti kriptografi integritas build."
+          },
+          "5": {
+            "question": "Bagaimana cara memverifikasi build deterministik SSP Wallet?",
+            "answerIntro": "Untuk memverifikasi build SSP Wallet: 1) Unduh file rilis (zip Chrome/Firefox, SHA256SUMS, SHA256SUMS.asc) dari ",
+            "answerLink1": "rilis GitHub",
+            "answerMiddle1": ". 2) Impor kunci publik kami dari ",
+            "answerLink2": "keyserver OpenPGP",
+            "answerMiddle2": ". 3) Verifikasi tanda tangan GPG: ",
+            "answerCode1": "gpg --verify SHA256SUMS.asc SHA256SUMS",
+            "answerMiddle3": ". 4) Verifikasi hash: ",
+            "answerCode2": "sha256sum -c SHA256SUMS",
+            "answerMiddle4": ". 5) Opsional reproduksi build: ",
+            "answerCode3": "git checkout [version] && npm run build:deterministic",
+            "answerOutro": "."
+          },
+          "6": {
+            "question": "Siapa yang menandatangani rilis SSP Wallet?",
+            "answerBefore": "Semua rilis SSP Wallet ditandatangani secara kriptografi oleh security@runonflux.io menggunakan tanda tangan GPG. Kunci publik kami tersedia di ",
+            "answerLink": "keyserver OpenPGP",
+            "answerAfter": " untuk verifikasi. Proses build deterministik mencakup lingkungan terisolasi berbasis Docker dan checksum komprehensif (SHA256SUMS) yang juga ditandatangani GPG untuk memastikan keaslian dan integritas."
+          },
+          "7": {
+            "question": "Bisakah saya menggunakan beberapa SSP Key dengan satu SSP Wallet?",
+            "answer": "Tidak, setiap SSP Wallet hanya dapat dipasangkan dengan satu SSP Key. Sistem multisignature 2-of-2 memerlukan sinkronisasi khusus perangkat untuk nonce publik dan data chain. Menggunakan beberapa SSP Key akan menyebabkan konflik sinkronisasi."
+          }
+        }
+      },
+      "technical": {
+        "title": "Dukungan Teknis",
+        "items": {
+          "0": {
+            "question": "Browser apa yang didukung?",
+            "answer": "SSP Wallet mendukung Google Chrome, Brave, Firefox, dan browser berbasis Chromium lainnya. Anda dapat mengunduh versi Chrome Web Store untuk browser Chromium atau versi Firefox langsung dari rilis GitHub kami."
+          },
+          "1": {
+            "question": "Saya mengalami masalah menyinkronkan mobile key",
+            "answer": "Pastikan kedua perangkat terhubung ke internet, kode QR terlihat jelas, dan Anda menggunakan versi terbaru dari ekstensi browser dan aplikasi mobile. Coba mulai ulang kedua aplikasi jika sinkronisasi gagal."
+          },
+          "2": {
+            "question": "Transaksi saya macet atau tertunda",
+            "answer": "Transaksi blockchain terkadang membutuhkan waktu tergantung pada kemacetan jaringan. Periksa status transaksi di blockchain explorer. Jika menggunakan Ethereum, Anda mungkin perlu meningkatkan biaya gas untuk konfirmasi lebih cepat."
+          },
+          "3": {
+            "question": "Bagaimana cara memperbarui SSP Wallet?",
+            "answer": "Ekstensi browser biasanya diperbarui secara otomatis. Anda dapat memeriksa pembaruan secara manual di halaman manajemen ekstensi browser. Untuk aplikasi mobile, periksa pembaruan di app store perangkat Anda."
+          },
+          "4": {
+            "question": "Apa itu SSP Relay dan bagaimana cara kerjanya?",
+            "answer": "SSP Relay adalah layanan relay open-source yang bertindak sebagai jembatan antara SSP Wallet dan SSP Key Anda. Layanan ini menyediakan informasi pasar, data biaya, memungkinkan sinkronisasi transaksi, dan mengirimkan notifikasi push. Relay meningkatkan pengalaman pengguna sambil mempertahankan keamanan."
+          },
+          "5": {
+            "question": "Apakah SSP Wallet mendukung Replace-By-Fee (RBF)?",
+            "answer": "Ya, SSP Wallet sepenuhnya mendukung fungsionalitas Replace-By-Fee (RBF). Anda dapat memodifikasi biaya transaksi dan bahkan mengubah penerima setelah menyiarkan transaksi, memberikan fleksibilitas dalam mengelola transaksi Anda di blockchain."
+          },
+          "6": {
+            "question": "Biaya apa yang dibebankan SSP Wallet?",
+            "answer": "SSP Wallet memiliki nol biaya — kami tidak membebankan apa pun untuk menggunakan dompet. Anda hanya membayar biaya jaringan blockchain standar yang langsung masuk ke miner/validator untuk memproses transaksi Anda. Dompet mencakup pemilihan biaya otomatis untuk mengoptimalkan biaya transaksi Anda."
+          },
+          "7": {
+            "question": "Mengapa beberapa transaksi gagal dikonstruksi?",
+            "answer": "Beberapa transaksi mungkin gagal karena pembatasan ukuran blockchain dan kompleksitas UTXO. Ketika Anda memiliki banyak input kecil, ukuran transaksi dapat melebihi batas jaringan. Dalam kasus seperti itu, Anda mungkin perlu mengkonsolidasikan UTXO atau memecah transaksi menjadi bagian yang lebih kecil."
+          },
+          "8": {
+            "question": "Apakah saya perlu memulihkan dompet saat mengganti perangkat?",
+            "answer": "Ya, karena enkripsi khusus perangkat, Anda harus memulihkan dompet dan key saat mengganti perangkat atau membuat perubahan sistem yang signifikan. Simpan frasa pemulihan dengan aman dan mudah diakses untuk proses ini."
+          },
+          "9": {
+            "question": "Apa yang terjadi jika saya kehilangan perangkat SSP Key?",
+            "answer": "Jika Anda kehilangan perangkat SSP Key, Anda dapat memulihkannya di perangkat baru menggunakan frasa pemulihan SSP Key. Instal aplikasi SSP Key di perangkat baru dan gunakan frasa pemulihan untuk memulihkan akses. Anda perlu menyinkronkan ulang dengan ekstensi browser SSP Wallet setelah pemulihan."
+          },
+          "10": {
+            "question": "Bisakah saya mencadangkan dompet ke penyimpanan cloud?",
+            "answer": "SSP Wallet tidak mendukung pencadangan cloud otomatis karena alasan keamanan. Frasa pemulihan Anda harus disimpan offline di lokasi yang aman. Jangan pernah simpan frasa pemulihan di penyimpanan cloud, email, atau format digital apa pun yang bisa dikompromikan."
+          },
+          "11": {
+            "question": "Apa perbedaan antara frasa pemulihan SSP Wallet dan frasa pemulihan SSP Key?",
+            "answer": "SSP Wallet dan SSP Key masing-masing memiliki frasa pemulihan terpisah. Frasa pemulihan dompet mengontrol komponen ekstensi browser, sementara frasa pemulihan key mengontrol komponen 2FA mobile. Keduanya diperlukan untuk pemulihan dompet penuh dan harus disimpan secara terpisah dan aman."
+          },
+          "12": {
+            "question": "Bagaimana cara migrasi ke komputer baru?",
+            "answer": "Untuk memindahkan SSP Wallet ke komputer baru: 1) Instal ekstensi SSP Wallet di perangkat baru, 2) Gunakan frasa pemulihan dompet untuk memulihkan ekstensi browser, 3) Sinkronkan ulang dengan aplikasi mobile SSP Key yang ada. Riwayat transaksi dan pengaturan Anda perlu dikonfigurasi ulang."
+          },
+          "13": {
+            "question": "Saya mendapatkan error \"Synchronisation with SSP wallet needed\" di mobile",
+            "answer": "Error ini biasanya terjadi saat mengganti ponsel atau ketika blockchain belum disinkronkan dengan SSP Key Anda. Untuk mengatasi: 1) Buka SSP Wallet, 2) Beralih ke blockchain yang ingin Anda sinkronkan ulang, 3) Klik menu burger (sudut kanan atas), 4) Pilih \"SSP Wallet Details\", 5) Konfirmasikan akses dengan kata sandi Anda, 6) Di baris pertama, temukan \"Chain Sync with SSP Key\" dan klik ikon mata untuk menampilkan kode QR, 7) Pindai kode QR dengan SSP Key Anda dan setujui sinkronisasi chain."
+          },
+          "14": {
+            "question": "Saya mendapatkan error \"SSP Key Public nonces do not match or SSP Key Public nonces are missing\"",
+            "answer": "Error ini terjadi ketika nonce publik yang digunakan untuk mengkonstruksi transaksi tidak tersinkronkan antara SSP Wallet dan SSP Key Anda. Untuk mengatasi: 1) Buka menu burger (sudut kanan atas), 2) Navigasikan ke Pengaturan, 3) Temukan bagian \"Public Nonces\" dan klik \"Sync Public Nonces\", 4) Pindai kode QR yang ditampilkan dengan SSP Key Anda, 5) Setujui permintaan di perangkat mobile Anda. Nonce publik Anda kini tersinkronkan dan Anda dapat mulai bertransaksi."
+          }
+        }
+      }
+    },
+    "stillNeedHelpTitle": "Masih butuh bantuan?",
+    "stillNeedHelpDescription": "Tidak menemukan yang Anda cari? Kirim pesan kepada kami dan tim dukungan kami akan menghubungi Anda sesegera mungkin.",
+    "emailSupportTitle": "Dukungan Email",
+    "emailSupportDescription": "Kami biasanya merespons dalam 24 jam",
+    "openSourceTitle": "Open Source",
+    "openSourceDescription": "Laporkan bug atau berkontribusi di GitHub",
+    "communityTitle": "Komunitas",
+    "communityDescription": "Terhubung dengan pengguna lain dan dapatkan dukungan sesama",
+    "contactSupportTitle": "Hubungi Dukungan",
+    "form": {
+      "emailLabel": "Alamat Email *",
+      "emailPlaceholder": "email.anda@contoh.com",
+      "typeLabel": "Jenis Masalah *",
+      "typeOptions": {
+        "Question": "Pertanyaan Umum",
+        "Incident": "Masalah Teknis",
+        "Problem": "Butuh Bantuan",
+        "Feature Request": "Permintaan Fitur",
+        "Bug Report": "Laporan Bug"
+      },
+      "subjectLabel": "Subjek *",
+      "subjectPlaceholder": "Deskripsi singkat masalah Anda",
+      "descriptionLabel": "Deskripsi *",
+      "descriptionPlaceholder": "Mohon berikan informasi terperinci tentang masalah Anda...",
+      "submitting": "Mengirim...",
+      "submit": "Kirim Pesan",
+      "errorFallback": "Gagal mengirim pesan. Silakan coba lagi.",
+      "errorGeneric": "Gagal mengirimkan tiket",
+      "successTitle": "Pesan Berhasil Dikirim!",
+      "successDescription": "Terima kasih telah menghubungi kami. Kami akan menghubungi Anda sesegera mungkin.",
+      "successAgain": "Kirim pesan lain"
+    }
+  },
+  "Legal": {
+    "lastUpdated": "Terakhir diperbarui: {date}",
+    "privacyPolicy": {
+      "metaTitle": "Kebijakan Privasi - Ekosistem SSP Wallet",
+      "metaDescription": "Kebijakan Privasi untuk ekosistem SSP Wallet lengkap. Pelajari cara kami melindungi privasi Anda di seluruh situs web, ekstensi browser, aplikasi mobile, dan layanan relay kami.",
+      "heading": "Kebijakan Privasi"
+    },
+    "termsOfService": {
+      "metaTitle": "Ketentuan Layanan - Ekosistem SSP Wallet",
+      "metaDescription": "Ketentuan Layanan untuk ekosistem SSP Wallet lengkap termasuk situs web, ekstensi browser, aplikasi mobile, dan layanan relay.",
+      "heading": "Ketentuan Layanan"
+    },
+    "cookiePolicy": {
+      "metaTitle": "Kebijakan Cookie - Situs Web SSP Wallet",
+      "metaDescription": "Pelajari cara kami menggunakan cookie di situs web sspwallet.io. Kelola preferensi cookie Anda dan pahami praktik yang sesuai GDPR kami.",
+      "heading": "Kebijakan Cookie"
+    }
+  },
+  "CheckoutSuccess": {
+    "metaTitle": "Checkout Berhasil | SSP Wallet",
+    "metaDescription": "Pesanan Anda telah berhasil dilakukan.",
+    "heading": "Checkout Berhasil!",
+    "description": "Pesanan Anda telah berhasil dilakukan. Terima kasih atas pembelian Anda!",
+    "confirmationEmail": "Anda akan segera menerima email konfirmasi.",
+    "backToHome": "Kembali ke Beranda",
+    "contactSupport": "Hubungi Dukungan"
+  },
+  "CheckoutFailure": {
+    "metaTitle": "Checkout Gagal | SSP Wallet",
+    "metaDescription": "Pesanan Anda tidak dapat diproses. Silakan coba lagi.",
+    "heading": "Checkout Gagal",
+    "description": "Pesanan Anda tidak dapat diproses. Silakan coba lagi atau hubungi dukungan jika masalah berlanjut.",
+    "tryAgain": "Coba Lagi",
+    "contactSupport": "Hubungi Dukungan"
+  },
+  "Categories": {
+    "multisig": {
+      "title": "Multisig Dijelaskan",
+      "description": "Bagaimana multisignature 2-of-2 sebenarnya bekerja di SSP — dan mengapa itu penting."
+    },
+    "getting-started": {
+      "title": "Dasar-Dasar Kripto",
+      "description": "Konsep dasar yang perlu diketahui setiap pengguna kripto."
+    },
+    "security": {
+      "title": "Keamanan & Kustodi Mandiri",
+      "description": "Lindungi kripto Anda: seed phrase, phishing, hardware, model ancaman."
+    },
+    "how-to": {
+      "title": "Panduan How-To",
+      "description": "Panduan langkah demi langkah untuk tugas-tugas umum SSP."
+    },
+    "coin-guides": {
+      "title": "Panduan Koin & Chain",
+      "description": "Pembahasan mendalam tentang koin dan chain yang didukung SSP."
+    },
+    "defi": {
+      "title": "DeFi & Account Abstraction",
+      "description": "Staking, lending, swap, dan ERC-4337 dijelaskan."
+    },
+    "news-explained": {
+      "title": "Berita & Analisis Industri",
+      "description": "Konteks dan analisis berita kripto dan regulasi."
+    }
+  },
+  "CaseStudies": {
+    "breadcrumbLabel": "Studi Kasus",
+    "fluxFoundation": {
+      "metaTitle": "Studi Kasus: Flux Foundation — Treasury Kustodi Mandiri dengan SSP Enterprise",
+      "metaDescription": "Bagaimana Flux Foundation beralih dari multisig yang tersebar dan skrip kustom ke SSP Enterprise — mengamankan jembatan Fusion dan treasury Foundation dengan vault M-of-N di setiap chain yang mereka gunakan.",
+      "breadcrumbLabel": "Flux Foundation",
+      "logoAlt": "Flux Foundation",
+      "eyebrow": "Studi Kasus",
+      "titlePart1": "Flux Foundation ×",
+      "titlePart2": "SSP Enterprise",
+      "subtitle": "Bagaimana Flux Foundation beralih dari multisig yang tersebar dan skrip kustom ke satu platform kustodi mandiri — mengamankan jembatan Fusion dan treasury Foundation tanpa menyerahkan kunci kepada siapa pun.",
+      "heroQuote": "Kami membutuhkan kendali penuh atas dana kami, transparansi untuk komunitas, dan tidak ada MPC kotak hitam yang berdiri di antara kami dan treasury kami sendiri. SSP Enterprise adalah platform pertama yang kami temukan yang memenuhi ketiganya — di setiap chain yang benar-benar kami gunakan.",
+      "heroQuoteAttribution": "— Tadeas Kmenta, Flux Foundation",
+      "factSheet": {
+        "organizationLabel": "Organisasi",
+        "organizationValue": "Flux Foundation",
+        "industryLabel": "Industri",
+        "industryValue": "Infrastruktur terdesentralisasi",
+        "useCaseLabel": "Kasus penggunaan",
+        "useCaseValue": "Treasury Foundation + multisig jembatan Fusion",
+        "chainsLabel": "Chain",
+        "chainsValue": "BTC, ETH, FLUX, EVM L2s",
+        "vaultModelLabel": "Model vault",
+        "vaultModelValue": "Multisig M-of-N, dua perangkat per penandatangan",
+        "statusLabel": "Status",
+        "statusValue": "Dalam produksi"
+      },
+      "before": {
+        "title": "Sebelum: multisig tersebar dan skrip kustom",
+        "intro": "Flux Foundation telah mengelola penandatanganan multi-pihak selama bertahun-tahun. Masalahnya bukan kurangnya multisig — melainkan tidak ada yang mengikatnya bersama lintas chain, dan alternatif komersial semua memerlukan tradeoff yang tidak mau dilakukan tim.",
+        "items": {
+          "0": {
+            "title": "Penyiapan multisig yang tersebar",
+            "description": "Dompet multisig yang berbeda di chain yang berbeda, masing-masing dengan keunikan, penandatangan, dan prosedur pemulihan sendiri."
+          },
+          "1": {
+            "title": "Skrip kustom untuk menyatukannya",
+            "description": "Tooling internal untuk konstruksi transaksi, koordinasi penandatanganan, dan penyiaran — dipelihara secara manual."
+          },
+          "2": {
+            "title": "Tidak ada jejak audit terpadu",
+            "description": "Persetujuan hidup di thread obrolan dan dokumen bersama. Merekonstruksi siapa yang menandatangani apa memerlukan penggalian."
+          },
+          "3": {
+            "title": "Tidak ada jalan tengah di pasar",
+            "description": "Kustodian dan vendor MPC berarti mempercayai kotak hitam. Alat multisig off-the-shelf hanya untuk Ethereum."
+          }
+        }
+      },
+      "decision": {
+        "title": "Keputusan",
+        "intro": "Tim mengevaluasi alternatif dan mengelompokkannya ke dalam tiga bucket. Setiap bucket memiliki dealbreaker.",
+        "bucket1Eyebrow": "Bucket 1",
+        "bucket1Title": "Kustodian MPC",
+        "bucket1Description": "Fireblocks, BitGo, dan sejenisnya. Vendor memegang sebagian dari setiap kunci.",
+        "bucket1Verdict": "Bukan kustodi mandiri sejati.",
+        "bucket2Eyebrow": "Bucket 2",
+        "bucket2Title": "Multisig single-chain",
+        "bucket2Description": "Safe dan sejenisnya. Hanya Ethereum, tidak ada dukungan UTXO native.",
+        "bucket2Verdict": "Kami juga memegang Bitcoin dan Flux.",
+        "bucket3Eyebrow": "Bucket 3",
+        "bucket3Title": "Multisig sederhana",
+        "bucket3Description": "Dompet tanpa mesin kebijakan, analitik, atau jejak audit yang tepat.",
+        "bucket3Verdict": "Kami akan kembali membangun tooling sendiri.",
+        "conclusion": "SSP Enterprise adalah satu-satunya platform yang mengatasi ketiganya sekaligus: multi-chain native (UTXO dan EVM), kustodi mandiri sejati tanpa berbagi kunci vendor, dan mesin kebijakan, analitik, dan jejak audit bawaan."
+      },
+      "whatChanged": {
+        "title": "Apa yang berubah",
+        "intro": "Satu platform, setiap chain yang berinteraksi dengan Foundation, satu model penandatanganan yang konsisten. Skrip kustom sudah pensiun. Jejak audit thread obrolan digantikan oleh catatan on-platform yang dapat diatribusikan. Treasury dan multisig jembatan hidup berdampingan di bawah tata kelola yang sama.",
+        "items": {
+          "0": {
+            "title": "Vault M-of-N di setiap chain yang kami sentuh",
+            "description": "Bitcoin, Ethereum, Flux, dan EVM L2 — platform yang sama, model mental yang sama, jaminan keamanan yang sama."
+          },
+          "1": {
+            "title": "Dua perangkat per penandatangan, tanpa pengecualian",
+            "description": "Ekstensi browser dan aplikasi mobile diperlukan untuk setiap tanda tangan. Satu perangkat yang dikompromikan tidak dapat menandatangani."
+          },
+          "2": {
+            "title": "Jejak audit yang dapat diandalkan",
+            "description": "Setiap proposal, persetujuan, dan penolakan dicatat dengan penandatangan dan timestamp. Menggantikan rekonstruksi thread obrolan."
+          },
+          "3": {
+            "title": "Kustodi mandiri, ujung ke ujung",
+            "description": "Tidak ada berbagi kunci vendor. Tidak ada infrastruktur MPC untuk dipercaya. Jika SSP pergi besok, dana kami tetap dapat dipulihkan dari seed penandatangan."
+          }
+        }
+      },
+      "fusionBridge": {
+        "title": "Jembatan Fusion",
+        "intro": "Jembatan Fusion adalah salah satu permukaan paling sensitif keamanan yang dioperasikan Foundation — ini mengkoordinasikan transfer nilai antara Flux dan chain lain, dan satu kegagalan penandatanganan bisa menjadi bencana. Ini juga beban kerja di mana model SSP Enterprise terbayar paling jelas.",
+        "items": {
+          "0": {
+            "title": "Multisig on-chain",
+            "description": "Multisig native di setiap chain yang disentuh jembatan — tidak ada kustodian smart contract, tidak ada relayer yang dapat menghentikan atau front-run."
+          },
+          "1": {
+            "title": "Penandatanganan dua perangkat per penandatangan",
+            "description": "Mengkompromikan laptop atau ponsel satu penandatangan tidak cukup untuk mendorong transaksi jembatan. Kedua perangkat, setiap saat."
+          },
+          "2": {
+            "title": "Kontrol kebijakan per-penandatangan",
+            "description": "Batas dan whitelist dikonfigurasi di tingkat org dan vault, diterapkan sebelum tanda tangan dikumpulkan."
+          },
+          "3": {
+            "title": "Dapat diaudit ujung ke ujung",
+            "description": "Setiap persetujuan dan penolakan diatribusikan dan diberi timestamp. Akuntabilitas komunitas tanpa menyerahkan kustodi mandiri."
+          }
+        },
+        "quote": "Jembatan Fusion berjalan pada infrastruktur yang kami kendalikan ujung ke ujung sekarang. Jaminan keamanan yang sama yang kami miliki untuk treasury kami sendiri, diterapkan pada salah satu alur kerja berisiko tinggi yang kami operasikan.",
+        "quoteAttribution": "— Tadeas Kmenta, Flux Foundation"
+      },
+      "cta": {
+        "title": "Model yang sama. Tersedia untuk tim Anda.",
+        "description": "Platform yang digunakan Flux Foundation untuk menjalankan jembatan Fusion adalah platform yang sama yang tersedia untuk tim mana pun yang menginginkan multisig kustodi mandiri tanpa kompromi. Tier gratis untuk memulai. Paket kustom atas permintaan.",
+        "exploreEnterprise": "Jelajahi SSP Enterprise",
+        "launchEnterpriseApp": "Luncurkan Aplikasi Enterprise"
+      }
+    }
+  },
+  "Enterprise": {
+    "metaTitle": "SSP Enterprise | Multisig Kustodi Mandiri untuk Bisnis",
+    "metaDescription": "Vault multisig M-of-N kustodi mandiri untuk treasury bisnis. Mesin kebijakan, batas pengeluaran, penandatanganan dua perangkat, akses berbasis peran. Tidak ada kustodian, tidak ada MPC.",
+    "breadcrumbLabel": "Enterprise",
+    "heroBadge": "SSP Enterprise",
+    "heroTitlePart1": "Kustodi Mandiri",
+    "heroTitlePart2": "untuk Bisnis",
+    "heroDescription": "Vault multisig M-of-N untuk organisasi Anda. Setiap penandatangan menggunakan dua perangkat — ekstensi browser dan aplikasi mobile. Tidak ada kustodian. Tidak ada MPC. Tidak ada titik kegagalan tunggal.",
+    "heroLaunchApp": "Luncurkan Aplikasi Enterprise",
+    "heroHowItWorks": "Cara Kerjanya",
+    "fluxBanner": {
+      "imageAlt": "Flux Foundation",
+      "eyebrow": "Dalam produksi dengan Flux Foundation",
+      "description": "Mengamankan jembatan Fusion dan treasury Foundation di BTC, ETH, FLUX, dan EVM L2.",
+      "cta": "Baca studi kasus"
+    },
+    "problem": {
+      "title": "Masalahnya",
+      "subtitle": "Bisnis yang memegang kripto saat ini menghadapi trade-off yang mustahil",
+      "items": {
+        "0": {
+          "title": "Solusi Custodial",
+          "problem": "Percayakan kunci kepada pihak ketiga",
+          "risks": {
+            "0": "Risiko counterparty (FTX, Celsius)",
+            "1": "Pembekuan akun tanpa peringatan",
+            "2": "Vendor lock-in dan biaya tinggi"
+          }
+        },
+        "1": {
+          "title": "Penyedia MPC",
+          "problem": "Shard kunci di server vendor",
+          "risks": {
+            "0": "Vendor tutup, Anda kewalahan",
+            "1": "Tidak dapat memverifikasi infrastruktur mereka",
+            "2": "Masih memiliki ketergantungan kepercayaan"
+          }
+        },
+        "2": {
+          "title": "Dompet Hardware Tunggal",
+          "problem": "Satu orang, satu perangkat",
+          "risks": {
+            "0": "Risiko orang kunci",
+            "1": "Tidak ada tata kelola tim",
+            "2": "Perangkat hilang = dana hilang"
+          }
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "Cara Kerjanya",
+      "subtitle": "Kustodi mandiri sejati pada skala enterprise — tanpa kompromi",
+      "steps": {
+        "0": {
+          "title": "Buat Organisasi Anda",
+          "description": "Siapkan organisasi Anda menggunakan SSP Identity — bukti kriptografi yang berasal dari perangkat Anda, bukan hanya email."
+        },
+        "1": {
+          "title": "Undang Tim Anda",
+          "description": "Tambahkan anggota tim berdasarkan SSP Identity mereka. Tetapkan peran: Owner, Admin, Member, atau Viewer. Setiap anggota membutuhkan SSP Wallet + SSP Key."
+        },
+        "2": {
+          "title": "Buat Vault Multisig",
+          "description": "Konfigurasikan vault M-of-N untuk tujuan berbeda — operasi, treasury, penggajian. Pilih penandatangan mana yang diperlukan."
+        },
+        "3": {
+          "title": "Tandatangani Bersama",
+          "description": "Usulkan transaksi melalui aplikasi web. Setiap penandatangan yang diperlukan menyetujui dengan ekstensi browser dan aplikasi mobile mereka. Siarkan ketika threshold terpenuhi."
+        }
+      },
+      "diagramTitle": "Arsitektur Penandatanganan",
+      "diagramSubtitle": "Setiap tanda tangan memerlukan dua perangkat per penandatangan",
+      "signerLabel": "Penandatangan {label}",
+      "signedLabel": "Ditandatangani",
+      "waitingLabel": "Menunggu",
+      "thresholdLabel": "Threshold 2 dari 3 terpenuhi — siap disiarkan"
+    },
+    "features": {
+      "title": "Fitur Enterprise",
+      "subtitle": "Semua yang dibutuhkan organisasi Anda untuk manajemen kripto yang aman",
+      "readGuide": "Baca panduan",
+      "items": {
+        "0": {
+          "title": "Vault Multisig M-of-N",
+          "description": "Konfigurasikan ambang penandatanganan apa pun untuk tim Anda. 2-of-3, 3-of-5, atau kombinasi apa pun yang sesuai dengan model tata kelola Anda."
+        },
+        "1": {
+          "title": "Akses Berbasis Peran",
+          "description": "Peran Owner, Admin, Member, dan Viewer. Kendalikan siapa yang dapat mengusulkan, menandatangani, atau sekadar mengamati transaksi."
+        },
+        "2": {
+          "title": "Penandatanganan Dua Perangkat",
+          "description": "Setiap penandatangan menggunakan ekstensi browser dan aplikasi mobile. Dua kunci per orang, M-of-N di seluruh tim."
+        },
+        "3": {
+          "title": "Dukungan Multi-Chain",
+          "description": "Bitcoin, Ethereum, Litecoin, Dogecoin, Flux, Polygon, BSC, Base, Avalanche, dan lainnya. Satu platform untuk semua chain."
+        },
+        "4": {
+          "title": "Proposal Transaksi",
+          "description": "Usulkan transaksi dengan detail lengkap. Anggota tim meninjau, menyetujui, atau menolak. Siarkan hanya ketika threshold terpenuhi."
+        },
+        "5": {
+          "title": "Jejak Audit Lengkap",
+          "description": "Setiap tindakan dicatat secara permanen. Perubahan anggota, operasi vault, persetujuan transaksi — akuntabilitas penuh."
+        }
+      }
+    },
+    "policy": {
+      "title": "Mesin Kebijakan Transaksi",
+      "subtitle": "Kontrol granular yang mengalir dari organisasi ke vault ke penandatangan individu. Kebijakan yang lebih ketat selalu menang.",
+      "tiers": {
+        "organization": "Organisasi",
+        "organizationSub": "Kebijakan default",
+        "vault": "Vault",
+        "vaultSub": "Override & perbaiki",
+        "signer": "Penandatangan",
+        "signerSub": "Batas individu"
+      },
+      "tierFooter": "Kebijakan digabung dari atas ke bawah — batas yang lebih ketat di tier mana pun yang diterapkan",
+      "readMore": "Baca selengkapnya",
+      "items": {
+        "0": {
+          "title": "Batas Pengeluaran",
+          "description": "Batas per transaksi, harian, mingguan, dan bulanan. Ditetapkan dalam USD atau token native. Kontrol agregat dan per token."
+        },
+        "1": {
+          "title": "Whitelist Alamat",
+          "description": "Tiga mode: dinonaktifkan, peringatan, atau diterapkan. Beri label alamat, batasi berdasarkan chain. Blokir tujuan yang tidak dikenal sepenuhnya."
+        },
+        "2": {
+          "title": "Penundaan Time-Lock",
+          "description": "Periode tunggu yang dapat dikonfigurasi sebelum penyiaran. Dipicu otomatis di atas threshold USD. Batalkan sebelum eksekusi."
+        },
+        "3": {
+          "title": "Persetujuan Admin",
+          "description": "Memerlukan persetujuan admin untuk transaksi bernilai tinggi. Atur threshold USD — apa pun di atasnya memerlukan persetujuan eksplisit."
+        },
+        "4": {
+          "title": "Override Per-Penandatangan",
+          "description": "Atur batas pengeluaran individu untuk setiap anggota tim. Trader junior mendapat kontrol lebih ketat, eksekutif senior mendapat batas lebih tinggi."
+        },
+        "5": {
+          "title": "Pelacakan Kecepatan",
+          "description": "Jendela pengeluaran 30 hari bergulir per vault, per penandatangan, dan per token. Penegakan otomatis dengan pembersihan berbasis TTL."
+        },
+        "6": {
+          "title": "Pembekuan Vault Darurat",
+          "description": "Bekukan vault mana pun secara instan dengan penandatanganan WK dual-device. Memblokir semua proposal hingga dibekukan. Respons insiden dalam hitungan detik."
+        },
+        "7": {
+          "title": "Hierarki Kebijakan 3-Tier",
+          "description": "Default organisasi mengalir ke vault dan penandatangan. Override di tingkat vault menyempurnakan aturan. Kebijakan yang lebih ketat selalu menang."
+        }
+      },
+      "footerStrong": "Hierarki kebijakan 3-tier dengan 14+ kontrol yang dapat dikonfigurasi",
+      "footerSuffix": "— termasuk dalam setiap paket."
+    },
+    "security": {
+      "title": "Keamanan 5 Lapisan",
+      "subtitle": "Pertahanan mendalam — setiap lapisan harus dikompromikan untuk terjadinya pelanggaran",
+      "layerLabel": "Lapisan {n}: {name}",
+      "layers": {
+        "0": {
+          "name": "Keamanan Perangkat",
+          "description": "Keamanan tingkat OS, autentikasi biometrik, enklave aman di mobile"
+        },
+        "1": {
+          "name": "2FA Dual-Device",
+          "description": "Ekstensi browser + aplikasi mobile diperlukan untuk setiap tanda tangan"
+        },
+        "2": {
+          "name": "Multisig On-Chain",
+          "description": "Multisig Bitcoin native dan verifikasi smart contract EVM"
+        },
+        "3": {
+          "name": "Kebijakan Bisnis",
+          "description": "Batas pengeluaran, whitelist alamat, time-lock, persetujuan admin, override per-penandatangan, pelacakan kecepatan — 14+ kontrol yang dapat dikonfigurasi"
+        },
+        "4": {
+          "name": "Audit & Kepatuhan",
+          "description": "Log yang tidak dapat diubah, pelacakan login, dan pelaporan kepatuhan"
+        }
+      },
+      "footerBefore": "SSP Wallet adalah open source dan ",
+      "footerLink": "diaudit oleh Halborn",
+      "footerAfter": ". Verifikasi kodenya sendiri."
+    },
+    "comparison": {
+      "title": "Perbandingan Kami",
+      "subtitle": "SSP Enterprise vs. alternatif",
+      "columns": {
+        "feature": "Fitur",
+        "ssp": "SSP Enterprise"
+      },
+      "values": {
+        "partial": "Sebagian"
+      },
+      "rows": {
+        "0": "Kustodi Mandiri Sejati",
+        "1": "Multi-Chain",
+        "2": "Multisig On-Chain",
+        "3": "Mesin Kebijakan Transaksi",
+        "4": "Penandatanganan Mobile",
+        "5": "Open Source",
+        "6": "Tidak Ada Vendor Lock-in",
+        "7": "Terjangkau"
+      },
+      "annualCostLabel": "Biaya Tahunan",
+      "annualCostSsp": "Gratis*",
+      "annualCostFireblocks": "$100K+",
+      "annualCostBitgo": "$50K+",
+      "annualCostSafe": "Biaya gas",
+      "footnoteBefore": "* Dompet open source gratis. Platform Enterprise memiliki tier gratis untuk memulai. ",
+      "footnoteLink": "Hubungi penjualan",
+      "footnoteAfter": " untuk paket kustom.",
+      "migrationLabel": "Sudah menggunakan salah satunya? Lihat panduan migrasi:",
+      "migrationFireblocks": "Dari Fireblocks",
+      "migrationSafe": "Dari Safe",
+      "migrationBitgo": "Dari BitGo"
+    },
+    "useCases": {
+      "title": "Dibangun Untuk",
+      "subtitle": "Organisasi mana pun yang memegang kripto dan membutuhkan penandatanganan berbasis tim",
+      "readPlaybook": "Baca playbook",
+      "items": {
+        "0": {
+          "title": "Treasury Korporat",
+          "description": "Persetujuan multi-signature untuk dana perusahaan. CEO + CFO + Dewan = 2-of-3.",
+          "example": "3 eksekutif, 2 diperlukan untuk menandatangani"
+        },
+        "1": {
+          "title": "Treasury DAO",
+          "description": "Pengambilan keputusan terdesentralisasi dengan keamanan on-chain untuk dana komunitas.",
+          "example": "5 anggota dewan, 3 diperlukan"
+        },
+        "2": {
+          "title": "Dana Investasi",
+          "description": "Kustodi mandiri tingkat institusional untuk manajer dana dan mitra terbatas.",
+          "example": "Manajer dana + kepatuhan + LP"
+        },
+        "3": {
+          "title": "Kemitraan & JV",
+          "description": "Kendali bersama antara mitra dengan akuntabilitas yang jelas dan jejak audit.",
+          "example": "Kendali setara, operasi transparan"
+        }
+      }
+    },
+    "chains": {
+      "title": "Multi-Chain Native",
+      "subtitle": "Satu platform untuk semua chain Anda — UTXO dan EVM",
+      "footer": "Chain lebih banyak ditambahkan secara berkala. Semua token ERC-20 didukung di chain EVM."
+    },
+    "contact": {
+      "title": "Hubungi Penjualan",
+      "subtitle": "Butuh paket Enterprise kustom, dukungan dedicated, atau onboarding prioritas? Hubungi tim kami.",
+      "launchApp": "Luncurkan Aplikasi Enterprise",
+      "scheduleCall": "Jadwalkan Panggilan",
+      "directContactStrong": "Lebih suka kontak langsung?",
+      "directContactBefore": " Hubungi ",
+      "directContactBetween": " atau DM ",
+      "directContactAfter": " di X."
+    },
+    "form": {
+      "fullNameLabel": "Nama Lengkap *",
+      "fullNamePlaceholder": "Nama lengkap Anda",
+      "emailLabel": "Alamat Email *",
+      "emailPlaceholder": "email.anda@perusahaan.com",
+      "companyLabel": "Perusahaan / Organisasi",
+      "companyPlaceholder": "Nama perusahaan Anda",
+      "teamSizeLabel": "Ukuran Tim",
+      "teamSizePlaceholder": "Pilih ukuran tim",
+      "teamSizeOptions": {
+        "2-5": "2-5 penandatangan",
+        "6-10": "6-10 penandatangan",
+        "11-25": "11-25 penandatangan",
+        "25+": "25+ penandatangan"
+      },
+      "useCaseLabel": "Kasus Penggunaan Utama",
+      "useCasePlaceholder": "Pilih kasus penggunaan",
+      "useCaseOptions": {
+        "corporate-treasury": "Treasury Korporat",
+        "dao-treasury": "Treasury DAO",
+        "investment-fund": "Dana Investasi",
+        "partnership": "Kemitraan / Joint Venture",
+        "otc-desk": "OTC Desk",
+        "mining-operation": "Operasi Mining",
+        "exchange": "Bursa",
+        "other": "Lainnya"
+      },
+      "messageLabel": "Ceritakan Kebutuhan Anda",
+      "messagePlaceholder": "Tantangan apa yang Anda hadapi dengan custodi kripto? Fitur apa yang paling penting bagi tim Anda?",
+      "submitting": "Mengirim Permintaan...",
+      "submit": "Mulai",
+      "errorFallback": "Gagal mengirim permintaan. Silakan coba lagi.",
+      "errorGeneric": "Gagal mengirim permintaan",
+      "successTitle": "Permintaan Diterima!",
+      "successDescription": "Terima kasih atas minat Anda pada SSP Enterprise. Kami akan segera menghubungi Anda.",
+      "successAgain": "Kirim permintaan lain"
+    },
+    "finalCta": {
+      "title": "Kunci Anda. Aturan Anda.",
+      "description": "SSP Enterprise memberikan organisasi Anda keamanan kustodi mandiri dengan tata kelola perangkat lunak enterprise. Tidak ada kustodian. Tidak ada perantara. Tidak ada kompromi.",
+      "launchApp": "Luncurkan Aplikasi Enterprise",
+      "downloadWallet": "Unduh SSP Wallet",
+      "exploreFeatures": "Jelajahi Semua Fitur"
+    }
+  },
+  "InteractiveDemo": {
+    "modalTitle": "Pengalaman SSP Wallet Lengkap",
+    "modalSubtitle": "Alur penyiapan dan transaksi penuh dengan keamanan multisig 2-of-2 sejati",
+    "closeDemo": "Tutup demo",
+    "previous": "Sebelumnya",
+    "next": "Berikutnya",
+    "restartDemo": "Mulai Ulang Demo",
+    "downloadSspWallet": "Unduh SSP Wallet",
+    "stepCounter": "{phase} - Langkah {current} dari {total}",
+    "walletSetupTitle": "Penyiapan SSP Wallet",
+    "walletSetupSubtitle": "Buat dompet browser Anda dengan frasa pemulihan yang aman",
+    "keySetupTitle": "Penyiapan SSP Key",
+    "keySetupSubtitle": "Siapkan aplikasi mobile dengan frasa pemulihan terpisah",
+    "deviceSyncTitle": "Sinkronisasi Perangkat",
+    "deviceSyncSubtitle": "Hubungkan browser dan mobile Anda dengan aman",
+    "transactionTitle": "Kirim Transaksi",
+    "transactionSubtitle": "Rasakan alur keamanan dual-device",
+    "feedbackCopied": "Disalin!",
+    "feedbackCopiedCheck": "✓ Disalin!",
+    "feedbackConfirmedCheck": "✓ Dikonfirmasi!",
+    "chromeWebStore": "Chrome Web Store",
+    "sspWalletName": "SSP Wallet",
+    "byInfluxTech": "oleh InFlux Technologies",
+    "walletStoreTagline": "Dompet kripto Aman, Sederhana, Powerful dengan multisig 2-of-2",
+    "getToBrowser": "Buka di Browser",
+    "walletRating": "⭐ 4.8",
+    "walletUserCount": "1K+ pengguna",
+    "walletAudited": "🛡️ Diaudit",
+    "installExtensionTitle": "Instal Ekstensi SSP Wallet",
+    "installExtensionDescription": "Unduh ekstensi browser dari Chrome Web Store. Tersedia untuk Chrome, Brave, dan Firefox.",
+    "sspWalletSetup": "Penyiapan SSP Wallet",
+    "sspLogoAlt": "Logo SSP",
+    "createYourWallet": "Buat Dompet Anda",
+    "newPasswordLabel": "Kata Sandi Baru",
+    "enterSecurePasswordPlaceholder": "Masukkan kata sandi aman",
+    "confirmPasswordLabel": "Konfirmasi Kata Sandi",
+    "confirmPasswordPlaceholder": "Konfirmasi kata sandi",
+    "agreeToTerms": "Saya telah membaca dan menyetujui Ketentuan Layanan",
+    "createSecurePasswordTitle": "Buat Kata Sandi Aman",
+    "createSecurePasswordDescription": "Kata sandi ini mengenkripsi dompet Anda secara lokal. Kata sandi tidak pernah meninggalkan browser Anda dan melindungi frasa pemulihan Anda.",
+    "backupRequired": "Cadangan Diperlukan",
+    "walletSeedPhraseHeading": "Frasa Pemulihan Dompet Anda",
+    "writeDownWarning": "⚠️ Tulis ini dan simpan dengan aman!",
+    "clickToRevealSeed": "Klik untuk mengungkapkan frasa pemulihan 24 kata Anda",
+    "showSeedPhrase": "Tampilkan Frasa Pemulihan",
+    "copy": "Salin",
+    "writtenItDown": "✓ Sudah Saya Catat",
+    "seedConfirmedToast": "✓ Frasa pemulihan dikonfirmasi dan siap untuk melanjutkan",
+    "backupSeedTitle": "Cadangkan Frasa Pemulihan Anda",
+    "backupSeedDescription": "Frasa 24 kata ini adalah kunci utama Anda. Tulis dan simpan dengan aman secara offline. Ini adalah frasa pemulihan #1 dari 2.",
+    "walletCreated": "Dompet Dibuat",
+    "sspWalletReady": "SSP Wallet Siap!",
+    "walletSetUpWith": "Dompet browser Anda disiapkan dengan:",
+    "securePasswordProtection": "Perlindungan kata sandi yang aman",
+    "twentyFourWordSeedBackedUp": "Frasa pemulihan 24 kata dicadangkan",
+    "readyForMobileSetup": "Siap untuk penyiapan aplikasi mobile",
+    "nextStep": "Langkah Berikutnya",
+    "setUpKeyMobile": "Siapkan aplikasi mobile SSP Key",
+    "walletSetupCompleteTitle": "Penyiapan Dompet Selesai",
+    "walletSetupCompleteDescription": "Dompet browser Anda siap! Sekarang Anda perlu menyiapkan aplikasi mobile untuk tanda tangan kedua.",
+    "sspKeyName": "SSP Key",
+    "twoFaMultisigSecurity": "Keamanan Multisig 2FA",
+    "ratingLabel": "Rating:",
+    "ratingValue": "⭐⭐⭐⭐⭐ 5.0",
+    "developerLabel": "Pengembang:",
+    "developerValue": "Influx Technologies",
+    "downloadsLabel": "Unduhan:",
+    "downloadsValue": "1.000+",
+    "sizeLabel": "Ukuran:",
+    "iosSizeValue": "35 MB",
+    "androidSizeValue": "46 MB",
+    "requiresLabel": "Memerlukan:",
+    "iosRequiresValue": "iOS 15.1+",
+    "androidRequiresValue": "Android 7.0+",
+    "downloadForIos": "Unduh untuk iOS",
+    "downloadForAndroid": "Unduh untuk Android",
+    "securityAudited": "Diaudit keamanan",
+    "touchFaceId": "Touch ID / Face ID",
+    "biometricUnlock": "Buka kunci biometrik",
+    "qrCodePairing": "Pemasangan kode QR",
+    "zeroDataStorage": "Nol penyimpanan data",
+    "downloadKeyMobileTitle": "Unduh Aplikasi Mobile SSP Key",
+    "downloadKeyMobileDescription": "Instal aplikasi mobile pendamping dari App Store atau Google Play. Ini menyediakan tanda tangan kedua untuk transaksi Anda.",
+    "sspKeyAlt": "SSP Key",
+    "sspKeySetup": "Penyiapan SSP Key",
+    "appPasswordLabel": "Kata Sandi Aplikasi",
+    "createPasswordPlaceholder": "Buat kata sandi",
+    "enableBiometrics": "Aktifkan Biometrik",
+    "continueSetup": "Lanjutkan Penyiapan",
+    "touchFaceIdEnabled": "✓ Touch ID / Face ID Diaktifkan",
+    "secureMobileKeyTitle": "Amankan Mobile Key Anda",
+    "secureMobileKeyDescription": "Buat kata sandi untuk aplikasi mobile Anda dan aktifkan autentikasi biometrik untuk keamanan yang ditingkatkan.",
+    "keySeedPhrase": "Frasa Pemulihan Key",
+    "generateKeySeed": "Buat frasa pemulihan mobile key terpisah Anda",
+    "showKeySeed": "Tampilkan Seed Key",
+    "saved": "✓ Disimpan",
+    "keySeedConfirmedToast": "✓ Seed key dikonfirmasi",
+    "storeSeparatelyWarning": "⚠️ Simpan terpisah dari seed dompet!",
+    "backupKeySeedTitle": "Cadangkan Seed Mobile Key",
+    "backupKeySeedDescription": "Ini adalah frasa pemulihan 24 kata terpisah untuk mobile key Anda. Kedua seed diperlukan untuk pemulihan SSP penuh.",
+    "sspKeyReady": "SSP Key Siap!",
+    "passwordProtection": "Perlindungan kata sandi",
+    "biometricSecurity": "Keamanan biometrik",
+    "keySeedBackedUp": "Seed key dicadangkan",
+    "readyToPair": "Siap untuk dipasangkan",
+    "nextScanQrToConnect": "Berikutnya: Pindai kode QR untuk menghubungkan perangkat",
+    "mobileKeyCompleteTitle": "Penyiapan Mobile Key Selesai",
+    "mobileKeyCompleteDescription": "Aplikasi mobile Anda siap! Sekarang mari hubungkan ke dompet browser Anda untuk keamanan 2-of-2.",
+    "sspWalletSyncDevice": "SSP Wallet - Sinkronkan Perangkat",
+    "connectMobileDevice": "Hubungkan Perangkat Mobile",
+    "scanQrWithKeyApp": "Pindai kode QR ini dengan aplikasi SSP Key",
+    "connectionIdLabel": "ID Koneksi:",
+    "learnMoreLink": "Pelajari lebih lanjut di sspwallet.io",
+    "scanQrCode": "Pindai Kode QR",
+    "positionQrInFrame": "Posisikan kode QR dalam bingkai",
+    "readyToScan": "Siap untuk Memindai",
+    "generatePairingQrTitle": "Buat Kode QR Pemasangan",
+    "generatePairingQrDescription": "Dompet browser Anda menampilkan kode QR dengan logo SSP. Buka aplikasi SSP Key dan pindai untuk terhubung dengan aman.",
+    "synchronising": "Menyinkronkan...",
+    "pairingInProgress": "Pemasangan Sedang Berlangsung",
+    "establishingSecureConnection": "Membangun koneksi aman dengan perangkat mobile...",
+    "exchangingKeys": "Menukar kunci enkripsi dan kunci publik...",
+    "connectionDetailsHeading": "Detail Koneksi",
+    "establishingSspRelay": "Membangun koneksi relay SSP yang aman...",
+    "synchronisationComplete": "Sinkronisasi Selesai!",
+    "qrCodeScanned": "Kode QR Dipindai!",
+    "browserWalletLabel": "Dompet Browser:",
+    "chromeExtensionValue": "Ekstensi Chrome",
+    "encryptionLabel": "Enkripsi:",
+    "confirmPairing": "Konfirmasi Pemasangan",
+    "scanningQrCodeTitle": "Memindai Kode QR",
+    "scanningQrCodeDescription": "Aplikasi mobile membaca kode QR dan membangun koneksi terenkripsi dengan dompet browser Anda.",
+    "deviceConnected": "Perangkat Terhubung",
+    "successfullyPaired": "Berhasil Dipasangkan!",
+    "devicesSecurelyConnected": "Perangkat Anda kini terhubung dengan aman",
+    "encryptionRow": "🔐 Enkripsi:",
+    "active": "Aktif",
+    "mobileDeviceRow": "📱 Perangkat Mobile:",
+    "connected": "Terhubung",
+    "twoOfTwoMultisigRow": "🔑 Multisig 2-of-2:",
+    "ready": "Siap",
+    "secureConnection": "Koneksi Aman",
+    "readyForTransactions": "Siap untuk Transaksi",
+    "online": "Online",
+    "connectionTypeLabel": "Jenis Koneksi:",
+    "sspRelaySecured": "SSP Relay Diamankan",
+    "multisigStatusLabel": "Status Multisig:",
+    "twoOfTwoActive": "2-of-2 Aktif",
+    "walletProtectedByMultisig": "Dompet dilindungi oleh multisig 2-of-2 sejati!",
+    "devicesPairedTitle": "Perangkat Berhasil Dipasangkan",
+    "devicesPairedDescription": "Sempurna! Browser dan mobile Anda kini terhubung dengan enkripsi end-to-end. Anda sekarang dapat mengirim transaksi yang aman.",
+    "sendTransaction": "Kirim Transaksi",
+    "sendEthereum": "Kirim Ethereum",
+    "recipientAddressLabel": "Alamat Penerima",
+    "amountEthLabel": "Jumlah (ETH)",
+    "transactionSummary": "Ringkasan Transaksi",
+    "amountLabel": "Jumlah:",
+    "gasFeeLabel": "Biaya Gas:",
+    "totalLabel": "Total:",
+    "sendTransactionButton": "Kirim Transaksi",
+    "createTransactionTitle": "Buat Transaksi",
+    "createTransactionDescription": "Isi alamat penerima dan jumlah. Transaksi akan memerlukan persetujuan lebih lanjut dari perangkat mobile Anda.",
+    "waitingForMobileApproval": "Menunggu persetujuan mobile...",
+    "pendingMobileApproval": "Persetujuan Mobile Tertunda",
+    "signatureOneCompleteCheckMobile": "Tanda tangan 1/2 selesai. Periksa perangkat mobile Anda untuk menyetujui transaksi.",
+    "transactionDetails": "Detail Transaksi",
+    "sendAmount": "Kirim {amount} ETH",
+    "toAddress": "Ke: {address}",
+    "notificationSentToMobile": "Notifikasi dikirim ke perangkat mobile",
+    "transactionApprovalRequired": "Persetujuan Transaksi Diperlukan",
+    "transactionApproval": "Persetujuan Transaksi",
+    "amount": "Jumlah",
+    "toAddressLabel": "Alamat Tujuan",
+    "gasFee": "Biaya Gas",
+    "status": "Status",
+    "awaitingApproval": "Menunggu Persetujuan (2/2)",
+    "approveWithTouchId": "Setujui dengan Touch ID",
+    "approveTwoOfTwo": "Setujui (2/2)",
+    "reject": "Tolak",
+    "mobileConfirmationTitle": "Konfirmasi Mobile Diperlukan",
+    "mobileConfirmationDescriptionBiometric": "Notifikasi muncul di perangkat mobile Anda. Tinjau detail transaksi dan setujui dengan autentikasi biometrik.",
+    "mobileConfirmationDescriptionPassword": "Notifikasi muncul di perangkat mobile Anda. Tinjau detail transaksi dan setujui dengan kata sandi Anda.",
+    "transactionBroadcasted": "Transaksi Disiarkan!",
+    "signaturesCollected": "Tanda Tangan Dikumpulkan",
+    "browserWalletOneOfTwo": "Dompet Browser (1/2)",
+    "mobileKeyTwoOfTwo": "Mobile Key (2/2)",
+    "networkStatus": "Status Jaringan",
+    "confirmingOnEthereum": "Mengkonfirmasi di jaringan Ethereum",
+    "usuallyTakesMinutes": "Biasanya membutuhkan 1-3 menit",
+    "transactionHash": "Hash Transaksi",
+    "viewOnEtherscan": "Lihat di Etherscan",
+    "transactionSubmittedTitle": "Transaksi Dikirimkan",
+    "transactionSubmittedDescription": "Sempurna! Kedua tanda tangan dikumpulkan dan transaksi disiarkan ke Ethereum. Jaringan kini sedang menambang dan mengkonfirmasi transaksi multisig 2-of-2 Anda yang aman.",
+    "transactionConfirmed": "Transaksi Dikonfirmasi",
+    "transactionSuccessful": "Transaksi Berhasil!",
+    "confirmedOnEthereum": "Dikonfirmasi di jaringan Ethereum.",
+    "hashLabel": "Hash:",
+    "sendAnotherTransaction": "Kirim Transaksi Lain",
+    "transactionCompleteCelebration": "🎉 Transaksi Selesai!",
+    "fundsTransferredSummary": "Dana Anda telah dipindahkan dengan aman menggunakan teknologi multisignature 2-of-2 sejati. Kedua perangkat diperlukan untuk mengotorisasi dan menandatangani transaksi ini.",
+    "whyUltraSecure": "Mengapa Ini Ultra-Aman",
+    "twoSeparateDevices": "2 perangkat terpisah diperlukan",
+    "twoSeparateSeeds": "2 frasa pemulihan terpisah",
+    "trueMultisigBip48": "Multisignature sejati (BIP48)",
+    "zeroServerStorage": "Nol penyimpanan server"
+  }
+}

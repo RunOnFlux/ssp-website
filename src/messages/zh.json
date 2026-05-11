@@ -14,7 +14,7 @@
     "errorTitle": "出错了",
     "errorDescription": "发生了意外错误。请尝试刷新页面或返回首页。",
     "tryAgain": "重试",
-    "translationPendingBanner": "__TODO_TRANSLATE__ This article isn't translated yet — showing English.",
+    "translationPendingBanner": "本文暂无翻译 — 显示英文版本。",
     "localeBadge": { "en": "EN", "es": "ES", "zh": "ZH" }
   },
   "Header": {
@@ -77,7 +77,7 @@
   },
   "Home": {
     "metaTitle": "SSP Wallet — 安全、简单、强大的加密钱包",
-    "metaDescription": "真正的 2-of-2 多重签名加密钱包。每笔交易都需要浏览器扩展和移动设备。支持比特币、以太坊及 15+ 条区块链。",
+    "metaDescription": "真正的 2-of-2 多重签名加密钱包。每笔交易都需要浏览器扩展和移动设备。支持 Bitcoin、Ethereum 及 15+ 条区块链。",
     "hero": {
       "auditedBadge": "已通过 Halborn 安全审计",
       "titleSecure": "安全",
@@ -116,7 +116,7 @@
         },
         "3": {
           "title": "多链支持",
-          "description": "支持 15+ 条区块链,包括比特币、以太坊、Polygon、BSC、Avalanche、Base 等。首款在以太坊上原生支持 Schnorr 多重签名账户抽象 (ERC-4337) 的钱包,无需 EOA 即可启用智能合约钱包。"
+          "description": "支持 15+ 条区块链,包括 Bitcoin、Ethereum、Polygon、BSC、Avalanche、Base 等。首款在 Ethereum 上原生支持 Schnorr 多重签名账户抽象 (ERC-4337) 的钱包,无需 EOA 即可启用智能合约钱包。"
         },
         "4": {
           "title": "零数据存储",
@@ -294,7 +294,7 @@
       "badge": "多链支持",
       "titleHighlight": "15+ 条区块链",
       "titleSuffix": "尽在一个钱包",
-      "description": "管理从比特币到以太坊及更多的所有加密资产。SSP Wallet 提供对多个区块链网络的统一访问,支持 WalletConnect v2 用于 dApp,并支持离线 QR 码交易功能。",
+      "description": "管理从 Bitcoin 到 Ethereum 及更多的所有加密资产。SSP Wallet 提供对多个区块链网络的统一访问,支持 WalletConnect v2 用于 dApp,并支持离线 QR 码交易功能。",
       "chainDescriptions": {
         "BTC": "最早的加密货币",
         "ETH": "智能合约平台",
@@ -304,7 +304,7 @@
         "DOGE": "属于人民的加密货币",
         "BCH": "点对点电子现金",
         "FLUX": "去中心化计算",
-        "MATIC": "以太坊扩容",
+        "MATIC": "Ethereum 扩容",
         "BSC": "快速、低费用的交易",
         "AVAX": "高性能区块链",
         "BASE": "Coinbase L2 解决方案"
@@ -630,7 +630,7 @@
         },
         "2": {
           "title": "账户抽象（ERC-4337）",
-          "description": "首个在以太坊上原生采用 Schnorr 多重签名账户抽象的钱包，支持无 Gas 交易与智能合约钱包。"
+          "description": "首个在 Ethereum 上原生采用 Schnorr 多重签名账户抽象的钱包，支持无 Gas 交易与智能合约钱包。"
         },
         "3": {
           "title": "真正的 2-of-2 多重签名安全",
@@ -1170,32 +1170,32 @@
   },
   "Categories": {
     "multisig": {
-      "title": "__TODO_TRANSLATE__ Multisig Explained",
-      "description": "__TODO_TRANSLATE__ How 2-of-2 multisignature actually works in SSP — and why it matters."
+      "title": "Multisig 详解",
+      "description": "SSP 中 2-of-2 multisig 的实际工作原理 — 以及为何至关重要。"
     },
     "getting-started": {
-      "title": "__TODO_TRANSLATE__ Crypto Basics",
-      "description": "__TODO_TRANSLATE__ Foundational concepts every crypto user should know."
+      "title": "加密基础知识",
+      "description": "每位加密用户都应掌握的基础概念。"
     },
     "security": {
-      "title": "__TODO_TRANSLATE__ Security & Self-Custody",
-      "description": "__TODO_TRANSLATE__ Protect your crypto: seeds, phishing, hardware, threat models."
+      "title": "安全与自托管",
+      "description": "保护你的加密资产：助记词、钓鱼攻击、硬件钱包与威胁模型。"
     },
     "how-to": {
-      "title": "__TODO_TRANSLATE__ How-To Guides",
-      "description": "__TODO_TRANSLATE__ Step-by-step walkthroughs for common SSP tasks."
+      "title": "操作指南",
+      "description": "SSP 常见操作的分步教程。"
     },
     "coin-guides": {
-      "title": "__TODO_TRANSLATE__ Coin & Chain Guides",
-      "description": "__TODO_TRANSLATE__ Deep dives into individual coins and chains SSP supports."
+      "title": "币种与链指南",
+      "description": "深入介绍 SSP 支持的各类币种与区块链。"
     },
     "defi": {
-      "title": "__TODO_TRANSLATE__ DeFi & Account Abstraction",
-      "description": "__TODO_TRANSLATE__ Staking, lending, swaps, and ERC-4337 explained."
+      "title": "DeFi 与账户抽象",
+      "description": "质押、借贷、兑换及 ERC-4337 详解。"
     },
     "news-explained": {
-      "title": "__TODO_TRANSLATE__ News & Industry Analysis",
-      "description": "__TODO_TRANSLATE__ Context and analysis on crypto news and regulation."
+      "title": "新闻与行业分析",
+      "description": "对加密行业新闻与监管动态的解读与分析。"
     }
   },
   "CaseStudies": {
@@ -1243,7 +1243,7 @@
           },
           "3": {
             "title": "市场上没有折中方案",
-            "description": "托管方与 MPC 厂商意味着信任一个黑盒。现成的多重签名工具又只支持以太坊。"
+            "description": "托管方与 MPC 厂商意味着信任一个黑盒。现成的多重签名工具又只支持 Ethereum。"
           }
         }
       },
@@ -1256,7 +1256,7 @@
         "bucket1Verdict": "并非真正的自托管。",
         "bucket2Eyebrow": "第 2 类",
         "bucket2Title": "单链多重签名",
-        "bucket2Description": "Safe 之类。仅支持以太坊，没有原生 UTXO 支持。",
+        "bucket2Description": "Safe 之类。仅支持 Ethereum，没有原生 UTXO 支持。",
         "bucket2Verdict": "我们也持有 Bitcoin 和 Flux。",
         "bucket3Eyebrow": "第 3 类",
         "bucket3Title": "极简多重签名",
@@ -1778,7 +1778,7 @@
     "devicesPairedTitle": "设备成功配对",
     "devicesPairedDescription": "完美！你的浏览器和移动端现已通过端到端加密相连。你现在可以发送安全的交易了。",
     "sendTransaction": "发送交易",
-    "sendEthereum": "发送以太币",
+    "sendEthereum": "发送 Ethereum",
     "recipientAddressLabel": "收款地址",
     "amountEthLabel": "金额（ETH）",
     "transactionSummary": "交易摘要",
@@ -1813,15 +1813,15 @@
     "browserWalletOneOfTwo": "浏览器钱包（1/2）",
     "mobileKeyTwoOfTwo": "移动密钥（2/2）",
     "networkStatus": "网络状态",
-    "confirmingOnEthereum": "正在以太坊网络上确认",
+    "confirmingOnEthereum": "正在 Ethereum 网络上确认",
     "usuallyTakesMinutes": "通常需要 1-3 分钟",
     "transactionHash": "交易哈希",
     "viewOnEtherscan": "在 Etherscan 上查看",
     "transactionSubmittedTitle": "交易已提交",
-    "transactionSubmittedDescription": "完美！两个签名均已收集，交易已广播至以太坊。网络正在挖矿并确认你的安全 2-of-2 多重签名交易。",
+    "transactionSubmittedDescription": "完美！两个签名均已收集，交易已广播至 Ethereum。网络正在挖矿并确认你的安全 2-of-2 多重签名交易。",
     "transactionConfirmed": "交易已确认",
     "transactionSuccessful": "交易成功！",
-    "confirmedOnEthereum": "已在以太坊网络上确认。",
+    "confirmedOnEthereum": "已在 Ethereum 网络上确认。",
     "hashLabel": "哈希：",
     "sendAnotherTransaction": "再发起一笔交易",
     "transactionCompleteCelebration": "🎉 交易完成！",
