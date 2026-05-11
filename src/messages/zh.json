@@ -14,7 +14,7 @@
     "errorTitle": "出错了",
     "errorDescription": "发生了意外错误。请尝试刷新页面或返回首页。",
     "tryAgain": "重试",
-    "translationPendingBanner": "__TODO_TRANSLATE__ This article isn't translated yet — showing English.",
+    "translationPendingBanner": "本文暂无翻译 — 显示英文版本。",
     "localeBadge": { "en": "EN", "es": "ES", "zh": "ZH" }
   },
   "Header": {
@@ -1170,32 +1170,32 @@
   },
   "Categories": {
     "multisig": {
-      "title": "__TODO_TRANSLATE__ Multisig Explained",
-      "description": "__TODO_TRANSLATE__ How 2-of-2 multisignature actually works in SSP — and why it matters."
+      "title": "Multisig 详解",
+      "description": "SSP 中 2-of-2 multisig 的实际工作原理 — 以及为何至关重要。"
     },
     "getting-started": {
-      "title": "__TODO_TRANSLATE__ Crypto Basics",
-      "description": "__TODO_TRANSLATE__ Foundational concepts every crypto user should know."
+      "title": "加密基础知识",
+      "description": "每位加密用户都应掌握的基础概念。"
     },
     "security": {
-      "title": "__TODO_TRANSLATE__ Security & Self-Custody",
-      "description": "__TODO_TRANSLATE__ Protect your crypto: seeds, phishing, hardware, threat models."
+      "title": "安全与自托管",
+      "description": "保护你的加密资产：助记词、钓鱼攻击、硬件钱包与威胁模型。"
     },
     "how-to": {
-      "title": "__TODO_TRANSLATE__ How-To Guides",
-      "description": "__TODO_TRANSLATE__ Step-by-step walkthroughs for common SSP tasks."
+      "title": "操作指南",
+      "description": "SSP 常见操作的分步教程。"
     },
     "coin-guides": {
-      "title": "__TODO_TRANSLATE__ Coin & Chain Guides",
-      "description": "__TODO_TRANSLATE__ Deep dives into individual coins and chains SSP supports."
+      "title": "币种与链指南",
+      "description": "深入介绍 SSP 支持的各类币种与区块链。"
     },
     "defi": {
-      "title": "__TODO_TRANSLATE__ DeFi & Account Abstraction",
-      "description": "__TODO_TRANSLATE__ Staking, lending, swaps, and ERC-4337 explained."
+      "title": "DeFi 与账户抽象",
+      "description": "质押、借贷、兑换及 ERC-4337 详解。"
     },
     "news-explained": {
-      "title": "__TODO_TRANSLATE__ News & Industry Analysis",
-      "description": "__TODO_TRANSLATE__ Context and analysis on crypto news and regulation."
+      "title": "新闻与行业分析",
+      "description": "对加密行业新闻与监管动态的解读与分析。"
     }
   },
   "CaseStudies": {
