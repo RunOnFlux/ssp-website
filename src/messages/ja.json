@@ -1,1839 +1,1839 @@
 {
   "Common": {
-    "skipToContent": "__TODO_TRANSLATE__ Skip to content",
-    "loading": "__TODO_TRANSLATE__ Loading…",
-    "error": "__TODO_TRANSLATE__ Something went wrong.",
-    "retry": "__TODO_TRANSLATE__ Retry",
-    "readMore": "__TODO_TRANSLATE__ Read more",
-    "breadcrumbHome": "__TODO_TRANSLATE__ Home",
-    "breadcrumbAriaLabel": "__TODO_TRANSLATE__ Breadcrumb",
-    "websiteAriaLabel": "__TODO_TRANSLATE__ Website",
-    "notFoundTitle": "__TODO_TRANSLATE__ Page not found",
-    "notFoundDescription": "__TODO_TRANSLATE__ The page you were looking for doesn't exist or has moved.",
-    "goHome": "__TODO_TRANSLATE__ Go home",
-    "errorTitle": "__TODO_TRANSLATE__ Something went wrong",
-    "errorDescription": "__TODO_TRANSLATE__ An unexpected error occurred. Try refreshing the page or returning home.",
-    "tryAgain": "__TODO_TRANSLATE__ Try again",
-    "translationPendingBanner": "__TODO_TRANSLATE__ This article isn't translated yet — showing English.",
+    "skipToContent": "コンテンツへスキップ",
+    "loading": "読み込み中…",
+    "error": "エラーが発生しました。",
+    "retry": "再試行",
+    "readMore": "続きを読む",
+    "breadcrumbHome": "ホーム",
+    "breadcrumbAriaLabel": "パンくずリスト",
+    "websiteAriaLabel": "ウェブサイト",
+    "notFoundTitle": "ページが見つかりません",
+    "notFoundDescription": "お探しのページは存在しないか、移動した可能性があります。",
+    "goHome": "ホームへ戻る",
+    "errorTitle": "エラーが発生しました",
+    "errorDescription": "予期しないエラーが発生しました。ページを更新するか、ホームに戻ってみてください。",
+    "tryAgain": "もう一度試す",
+    "translationPendingBanner": "この記事はまだ翻訳されていません — 英語で表示しています。",
     "localeBadge": {
-      "en": "__TODO_TRANSLATE__ EN",
-      "es": "__TODO_TRANSLATE__ ES",
-      "zh": "__TODO_TRANSLATE__ ZH"
+      "en": "EN",
+      "es": "ES",
+      "zh": "ZH"
     }
   },
   "Header": {
-    "home": "__TODO_TRANSLATE__ Home",
-    "enterprise": "__TODO_TRANSLATE__ Enterprise",
-    "features": "__TODO_TRANSLATE__ Features",
-    "newsroom": "__TODO_TRANSLATE__ Newsroom",
-    "academy": "__TODO_TRANSLATE__ Academy",
-    "guide": "__TODO_TRANSLATE__ Guide",
-    "support": "__TODO_TRANSLATE__ Support",
-    "contact": "__TODO_TRANSLATE__ Contact",
-    "more": "__TODO_TRANSLATE__ More",
-    "download": "__TODO_TRANSLATE__ Download",
-    "toggleTheme": "__TODO_TRANSLATE__ Toggle theme",
-    "toggleMenu": "__TODO_TRANSLATE__ Toggle menu",
-    "selectLanguage": "__TODO_TRANSLATE__ Select language"
+    "home": "ホーム",
+    "enterprise": "Enterprise",
+    "features": "機能",
+    "newsroom": "ニュースルーム",
+    "academy": "Academy",
+    "guide": "ガイド",
+    "support": "サポート",
+    "contact": "お問い合わせ",
+    "more": "もっと見る",
+    "download": "ダウンロード",
+    "toggleTheme": "テーマを切り替える",
+    "toggleMenu": "メニューを切り替える",
+    "selectLanguage": "言語を選択"
   },
   "Footer": {
-    "navigation": "__TODO_TRANSLATE__ Navigation",
-    "product": "__TODO_TRANSLATE__ Product",
-    "learn": "__TODO_TRANSLATE__ Learn",
-    "community": "__TODO_TRANSLATE__ Community",
-    "legal": "__TODO_TRANSLATE__ Legal",
-    "supportedChains": "__TODO_TRANSLATE__ Supported Chains",
-    "rssFeed": "__TODO_TRANSLATE__ RSS Feed",
-    "cookieSettings": "__TODO_TRANSLATE__ Cookie Settings",
-    "rights": "__TODO_TRANSLATE__ All rights reserved.",
-    "builtForWeb3": "__TODO_TRANSLATE__ Built with ❤️ for Web3",
-    "poweredByFlux": "__TODO_TRANSLATE__ Powered by Flux",
-    "brandDescription": "__TODO_TRANSLATE__ Secure, Simple, Powerful. SSP is a groundbreaking, open-source, self-custody, BIP48 multi-signature browser wallet for multiple blockchains with Account Abstraction.",
+    "navigation": "ナビゲーション",
+    "product": "プロダクト",
+    "learn": "学ぶ",
+    "community": "コミュニティ",
+    "legal": "法的情報",
+    "supportedChains": "対応チェーン",
+    "rssFeed": "RSS フィード",
+    "cookieSettings": "Cookie 設定",
+    "rights": "All rights reserved.",
+    "builtForWeb3": "Web3 のために ❤️ を込めて開発",
+    "poweredByFlux": "Powered by Flux",
+    "brandDescription": "安全・シンプル・強力。SSP は複数ブロックチェーンに対応したオープンソースのセルフカストディ BIP48 マルチシグネチャブラウザウォレットです。アカウント抽象化もサポートしています。",
     "links": {
-      "home": "__TODO_TRANSLATE__ Home",
-      "features": "__TODO_TRANSLATE__ Features",
-      "guide": "__TODO_TRANSLATE__ Guide",
-      "support": "__TODO_TRANSLATE__ Support",
-      "contact": "__TODO_TRANSLATE__ Contact",
-      "enterprise": "__TODO_TRANSLATE__ Enterprise",
-      "download": "__TODO_TRANSLATE__ Download",
-      "mobileSspKey": "__TODO_TRANSLATE__ Mobile SSP Key",
-      "sspEnterprise": "__TODO_TRANSLATE__ SSP Enterprise",
-      "securityAudits": "__TODO_TRANSLATE__ Security Audits",
-      "documentation": "__TODO_TRANSLATE__ Documentation",
-      "github": "__TODO_TRANSLATE__ GitHub",
-      "discord": "__TODO_TRANSLATE__ Discord",
-      "twitter": "__TODO_TRANSLATE__ Twitter",
-      "medium": "__TODO_TRANSLATE__ Medium",
-      "youtube": "__TODO_TRANSLATE__ YouTube",
-      "helpTranslate": "__TODO_TRANSLATE__ Help Translate",
-      "newsroom": "__TODO_TRANSLATE__ Newsroom",
-      "academy": "__TODO_TRANSLATE__ Academy",
-      "multisigExplained": "__TODO_TRANSLATE__ Multisig Explained",
-      "security": "__TODO_TRANSLATE__ Security",
-      "gettingStarted": "__TODO_TRANSLATE__ Getting Started",
-      "rssFeed": "__TODO_TRANSLATE__ RSS Feed",
-      "privacyPolicy": "__TODO_TRANSLATE__ Privacy Policy",
-      "termsOfService": "__TODO_TRANSLATE__ Terms of Service",
-      "cookiePolicy": "__TODO_TRANSLATE__ Cookie Policy"
+      "home": "ホーム",
+      "features": "機能",
+      "guide": "ガイド",
+      "support": "サポート",
+      "contact": "お問い合わせ",
+      "enterprise": "Enterprise",
+      "download": "ダウンロード",
+      "mobileSspKey": "モバイル SSP Key",
+      "sspEnterprise": "SSP Enterprise",
+      "securityAudits": "セキュリティ監査",
+      "documentation": "ドキュメント",
+      "github": "GitHub",
+      "discord": "Discord",
+      "twitter": "Twitter",
+      "medium": "Medium",
+      "youtube": "YouTube",
+      "helpTranslate": "翻訳に協力する",
+      "newsroom": "ニュースルーム",
+      "academy": "Academy",
+      "multisigExplained": "Multisig 解説",
+      "security": "セキュリティ",
+      "gettingStarted": "はじめに",
+      "rssFeed": "RSS フィード",
+      "privacyPolicy": "プライバシーポリシー",
+      "termsOfService": "利用規約",
+      "cookiePolicy": "Cookie ポリシー"
     },
-    "fluxAlt": "__TODO_TRANSLATE__ Flux"
+    "fluxAlt": "Flux"
   },
   "Home": {
-    "metaTitle": "__TODO_TRANSLATE__ SSP Wallet — Secure, Simple, Powerful Crypto Wallet",
-    "metaDescription": "__TODO_TRANSLATE__ True 2-of-2 multisig crypto wallet. Browser extension + mobile required for every transaction. Supports Bitcoin, Ethereum, and 15+ blockchains.",
+    "metaTitle": "SSP Wallet — 安全・シンプル・強力な暗号資産ウォレット",
+    "metaDescription": "真の 2-of-2 multisig 暗号資産ウォレット。すべてのトランザクションにブラウザ拡張機能 + モバイルが必要。Bitcoin、Ethereum、15 以上のブロックチェーンをサポート。",
     "hero": {
-      "auditedBadge": "__TODO_TRANSLATE__ Security Audited by Halborn",
-      "titleSecure": "__TODO_TRANSLATE__ Secure",
-      "titleSimple": "__TODO_TRANSLATE__ Simple",
-      "titlePowerful": "__TODO_TRANSLATE__ Powerful",
-      "description": "__TODO_TRANSLATE__ True 2-of-2 multisignature wallet using BIP48 derivation, requiring both your browser extension and mobile device for every transaction. Features WalletConnect v2, ERC-4337 Account Abstraction with Schnorr signatures, and 15+ blockchains.",
-      "featureMultisig": "__TODO_TRANSLATE__ True 2-of-2 Multisig",
-      "featureBlockchains": "__TODO_TRANSLATE__ 15+ Blockchains",
-      "featureZeroStorage": "__TODO_TRANSLATE__ Zero Data Storage",
-      "getStarted": "__TODO_TRANSLATE__ Get Started Now",
-      "watchDemo": "__TODO_TRANSLATE__ Watch Demo",
-      "statSupportedChains": "__TODO_TRANSLATE__ Supported Chains",
-      "statActiveUsers": "__TODO_TRANSLATE__ Active Users",
-      "statSecurityAudits": "__TODO_TRANSLATE__ Security Audits",
-      "animationAlt": "__TODO_TRANSLATE__ SSP Wallet Animation",
-      "closeModal": "__TODO_TRANSLATE__ Close modal",
-      "videoUnsupported": "__TODO_TRANSLATE__ Your browser does not support the video tag."
+      "auditedBadge": "Halborn によるセキュリティ監査済み",
+      "titleSecure": "安全",
+      "titleSimple": "シンプル",
+      "titlePowerful": "強力",
+      "description": "BIP48 導出を使用した真の 2-of-2 マルチシグネチャウォレット。すべてのトランザクションにブラウザ拡張機能とモバイルデバイスの両方が必要です。WalletConnect v2、Schnorr 署名による ERC-4337 アカウント抽象化、15 以上のブロックチェーンに対応。",
+      "featureMultisig": "真の 2-of-2 Multisig",
+      "featureBlockchains": "15 以上のブロックチェーン",
+      "featureZeroStorage": "ゼロデータストレージ",
+      "getStarted": "今すぐ始める",
+      "watchDemo": "デモを見る",
+      "statSupportedChains": "対応チェーン",
+      "statActiveUsers": "アクティブユーザー",
+      "statSecurityAudits": "セキュリティ監査",
+      "animationAlt": "SSP Wallet アニメーション",
+      "closeModal": "モーダルを閉じる",
+      "videoUnsupported": "お使いのブラウザはビデオタグをサポートしていません。"
     },
     "features": {
-      "titlePart1": "__TODO_TRANSLATE__ Why Choose",
-      "titleHighlight": "__TODO_TRANSLATE__ SSP Wallet",
-      "titleSuffix": "__TODO_TRANSLATE__ ?",
-      "description": "__TODO_TRANSLATE__ Experience the perfect blend of security, simplicity, and power in one comprehensive crypto wallet solution.",
+      "titlePart1": "なぜ選ぶ",
+      "titleHighlight": "SSP Wallet",
+      "titleSuffix": "？",
+      "description": "一つの包括的な暗号資産ウォレットソリューションで、セキュリティ、シンプルさ、パワーの完璧な融合を体験してください。",
       "items": {
         "0": {
-          "title": "__TODO_TRANSLATE__ Secure 2-of-2 Multisignature",
-          "description": "__TODO_TRANSLATE__ Advanced BIP48 derivation with true two-factor authentication requiring both browser extension and mobile device signatures for every transaction. Maximum security through dual-device protection."
+          "title": "安全な 2-of-2 マルチシグネチャ",
+          "description": "すべてのトランザクションにブラウザ拡張機能とモバイルデバイスの両方の署名を必要とする高度な BIP48 導出と真の 2 要素認証。デュアルデバイス保護による最高のセキュリティ。"
         },
         "1": {
-          "title": "__TODO_TRANSLATE__ Simple Yet Advanced",
-          "description": "__TODO_TRANSLATE__ Complex multi-asset multisignature technology made simple. Advanced BIP48 security and Account Abstraction delivered through an intuitive interface anyone can use."
+          "title": "シンプルかつ高度",
+          "description": "複雑なマルチアセットマルチシグネチャ技術をシンプルに。誰でも使える直感的なインターフェースで高度な BIP48 セキュリティとアカウント抽象化を提供。"
         },
         "2": {
-          "title": "__TODO_TRANSLATE__ Powerful dApp Interaction",
-          "description": "__TODO_TRANSLATE__ Connect to thousands of dApps with WalletConnect v2 (Reown) support, EIP-712 message signing, and real-time communication across all EVM chains and DeFi protocols."
+          "title": "強力な dApp インタラクション",
+          "description": "WalletConnect v2 (Reown) サポート、EIP-712 メッセージ署名、すべての EVM チェーンと DeFi プロトコルにわたるリアルタイム通信で何千もの dApp に接続。"
         },
         "3": {
-          "title": "__TODO_TRANSLATE__ Multi-Chain Support",
-          "description": "__TODO_TRANSLATE__ Support for 15+ blockchains including Bitcoin, Ethereum, Polygon, BSC, Avalanche, Base, and more. First wallet with native Schnorr multisignature Account Abstraction (ERC-4337) on Ethereum, enabling smart contract wallets without EOAs."
+          "title": "マルチチェーンサポート",
+          "description": "Bitcoin、Ethereum、Polygon、BSC、Avalanche、Base などを含む 15 以上のブロックチェーンをサポート。Ethereum 上でネイティブ Schnorr マルチシグネチャアカウント抽象化 (ERC-4337) を備えた初のウォレット。EOA なしでスマートコントラクトウォレットを実現。"
         },
         "4": {
-          "title": "__TODO_TRANSLATE__ Zero Data Storage",
-          "description": "__TODO_TRANSLATE__ Complete self-custody with zero server-side data storage. Private keys, seeds, and transactions remain exclusively on your devices using military-grade AES-GCM encryption and device fingerprinting for maximum security and privacy."
+          "title": "ゼロデータストレージ",
+          "description": "サーバー側のデータストレージがゼロの完全なセルフカストディ。プライベートキー、シード、トランザクションは軍用グレードの AES-GCM 暗号化とデバイスフィンガープリンティングを使用してデバイス上にのみ保存されます。"
         },
         "5": {
-          "title": "__TODO_TRANSLATE__ Buy, Sell & Swap",
-          "description": "__TODO_TRANSLATE__ Buy cryptocurrencies directly with credit cards or bank transfers, sell crypto back to fiat currency, and swap between different cryptocurrencies seamlessly within the wallet. Powered by an aggregated engine of multiple providers for the best rates and options."
+          "title": "購入・売却・スワップ",
+          "description": "クレジットカードや銀行振込で直接暗号資産を購入し、暗号資産を法定通貨に売却し、ウォレット内でシームレスに異なる暗号資産間でスワップ。最良のレートとオプションのために複数プロバイダーの集約エンジンを搭載。"
         }
       },
-      "futureTitlePart1": "__TODO_TRANSLATE__ Built for the",
-      "futureTitleHighlight": "__TODO_TRANSLATE__ Future of Finance",
+      "futureTitlePart1": "金融の",
+      "futureTitleHighlight": "未来のために構築",
       "highlights": {
         "0": {
-          "title": "__TODO_TRANSLATE__ Advanced Security",
-          "description": "__TODO_TRANSLATE__ Military-grade encryption and multi-signature technology protect your assets"
+          "title": "高度なセキュリティ",
+          "description": "軍用グレードの暗号化とマルチシグネチャ技術が資産を守ります"
         },
         "1": {
-          "title": "__TODO_TRANSLATE__ Seamless Experience",
-          "description": "__TODO_TRANSLATE__ Intuitive interface makes crypto accessible to everyone"
+          "title": "シームレスな体験",
+          "description": "直感的なインターフェースで暗号資産を誰でも利用可能に"
         },
         "2": {
-          "title": "__TODO_TRANSLATE__ Open Source",
-          "description": "__TODO_TRANSLATE__ Transparent, audited code that you can trust and verify"
+          "title": "オープンソース",
+          "description": "信頼して検証できる透明で監査済みのコード"
         }
       },
-      "demoTitle": "__TODO_TRANSLATE__ Try SSP Wallet Interactive Demo",
-      "demoDescription": "__TODO_TRANSLATE__ Experience the complete setup and transaction flow",
-      "launchDemo": "__TODO_TRANSLATE__ Launch Interactive Demo",
-      "demoFooter": "__TODO_TRANSLATE__ No installation required • 3-minute experience"
+      "demoTitle": "SSP Wallet インタラクティブデモを試す",
+      "demoDescription": "完全なセットアップとトランザクションフローを体験",
+      "launchDemo": "インタラクティブデモを起動",
+      "demoFooter": "インストール不要 • 3 分間の体験"
     },
     "security": {
-      "badge": "__TODO_TRANSLATE__ Security First Approach",
-      "titleHighlight": "__TODO_TRANSLATE__ Bank-Grade Security",
-      "titleSuffix": "__TODO_TRANSLATE__ You Can Trust",
-      "description": "__TODO_TRANSLATE__ Our security is independently verified and audited by leading security firms. Your assets are protected by military-grade encryption and cutting-edge technology.",
+      "badge": "セキュリティ最優先のアプローチ",
+      "titleHighlight": "銀行レベルのセキュリティ",
+      "titleSuffix": "を信頼して",
+      "description": "セキュリティは大手セキュリティ企業によって独自に検証・監査されています。資産は軍用グレードの暗号化と最先端技術によって保護されています。",
       "items": {
         "0": {
-          "title": "__TODO_TRANSLATE__ Security Audited",
-          "description": "__TODO_TRANSLATE__ Comprehensive security audits by Halborn for all critical components",
-          "highlight": "__TODO_TRANSLATE__ Halborn Certified"
+          "title": "セキュリティ監査済み",
+          "description": "すべての重要コンポーネントに対する Halborn による包括的なセキュリティ監査",
+          "highlight": "Halborn 認定"
         },
         "1": {
-          "title": "__TODO_TRANSLATE__ BIP48 Multisignature",
-          "description": "__TODO_TRANSLATE__ True 2-of-2 multisignature using BIP48 derivation with device fingerprinting and AES-GCM encryption",
-          "highlight": "__TODO_TRANSLATE__ Cryptographically Secure"
+          "title": "BIP48 マルチシグネチャ",
+          "description": "デバイスフィンガープリンティングと AES-GCM 暗号化を使用した BIP48 導出による真の 2-of-2 マルチシグネチャ",
+          "highlight": "暗号学的に安全"
         },
         "2": {
-          "title": "__TODO_TRANSLATE__ Open Source & Deterministic",
-          "description": "__TODO_TRANSLATE__ Transparent code with deterministic builds - anyone can verify the distributed wallet matches the source code exactly",
-          "highlight": "__TODO_TRANSLATE__ Fully Verifiable"
+          "title": "オープンソース & 決定論的",
+          "description": "決定論的ビルドによる透明なコード — 配布されたウォレットがソースコードと完全に一致することを誰でも検証できます",
+          "highlight": "完全に検証可能"
         },
         "3": {
-          "title": "__TODO_TRANSLATE__ Zero Data Storage",
-          "description": "__TODO_TRANSLATE__ PBKDF2-based encryption with device fingerprinting ensures all your locally stored data is super secure. Nothing ever touches servers.",
-          "highlight": "__TODO_TRANSLATE__ Self-Custody Only"
+          "title": "ゼロデータストレージ",
+          "description": "デバイスフィンガープリンティングによる PBKDF2 ベースの暗号化により、ローカルに保存されたすべてのデータが超安全です。サーバーに触れることは一切ありません。",
+          "highlight": "セルフカストディのみ"
         }
       },
-      "auditTitlePart1": "__TODO_TRANSLATE__ Independently",
-      "auditTitleHighlight": "__TODO_TRANSLATE__ Security Audited",
-      "auditDescription": "__TODO_TRANSLATE__ All critical components of the SSP ecosystem have undergone rigorous security audits by Halborn, a renowned blockchain security firm. Our commitment to transparency means all audit reports are publicly available.",
+      "auditTitlePart1": "独自に",
+      "auditTitleHighlight": "セキュリティ監査済み",
+      "auditDescription": "SSP エコシステムのすべての重要コンポーネントは、著名なブロックチェーンセキュリティ企業である Halborn による厳格なセキュリティ監査を受けています。透明性へのコミットメントにより、すべての監査レポートが公開されています。",
       "indicators": {
-        "0": "__TODO_TRANSLATE__ Industry Leading Best Practices",
-        "1": "__TODO_TRANSLATE__ Engineered to Top Security Standards",
-        "2": "__TODO_TRANSLATE__ Continuous Security Monitoring"
+        "0": "業界トップのベストプラクティス",
+        "1": "最高のセキュリティ基準に基づく設計",
+        "2": "継続的なセキュリティ監視"
       },
-      "auditedByHalborn": "__TODO_TRANSLATE__ Audited by Halborn",
-      "recentReportsTitle": "__TODO_TRANSLATE__ Recent Audit Reports",
-      "viewReport": "__TODO_TRANSLATE__ View Report",
+      "auditedByHalborn": "Halborn による監査済み",
+      "recentReportsTitle": "最新の監査レポート",
+      "viewReport": "レポートを見る",
       "reports": {
         "0": {
-          "title": "__TODO_TRANSLATE__ SSP Wallet, Key & Relay Audit",
-          "date": "__TODO_TRANSLATE__ March 2025",
-          "status": "__TODO_TRANSLATE__ Completed"
+          "title": "SSP Wallet、Key & Relay 監査",
+          "date": "2025 年 3 月",
+          "status": "完了"
         },
         "1": {
-          "title": "__TODO_TRANSLATE__ Smart Contracts Audit",
-          "date": "__TODO_TRANSLATE__ February 2025",
-          "status": "__TODO_TRANSLATE__ Completed"
+          "title": "スマートコントラクト監査",
+          "date": "2025 年 2 月",
+          "status": "完了"
         },
         "2": {
-          "title": "__TODO_TRANSLATE__ SDK Security Audit",
-          "date": "__TODO_TRANSLATE__ February 2025",
-          "status": "__TODO_TRANSLATE__ Completed"
+          "title": "SDK セキュリティ監査",
+          "date": "2025 年 2 月",
+          "status": "完了"
         }
       },
-      "bugBountyPrefix": "__TODO_TRANSLATE__ Security Bug Bounty:",
-      "bugBountyText": "__TODO_TRANSLATE__ We offer rewards for responsible disclosure of security vulnerabilities. Help us keep SSP secure.",
-      "lavaMoatTitleHighlight": "__TODO_TRANSLATE__ LavaMoat",
-      "lavaMoatTitleSuffix": "__TODO_TRANSLATE__ Runtime Protection",
-      "lavaMoatDescription": "__TODO_TRANSLATE__ SSP Wallet integrates LavaMoat, a security framework that protects against supply chain attacks. LavaMoat wraps each dependency in compartments and only gives them access to what they need, preventing malicious code from stealing secrets or compromising your wallet.",
+      "bugBountyPrefix": "セキュリティバグバウンティ:",
+      "bugBountyText": "セキュリティ脆弱性の責任ある開示に対して報酬を提供しています。SSP のセキュリティ維持にご協力ください。",
+      "lavaMoatTitleHighlight": "LavaMoat",
+      "lavaMoatTitleSuffix": "ランタイム保護",
+      "lavaMoatDescription": "SSP Wallet はサプライチェーン攻撃から保護するセキュリティフレームワーク LavaMoat を統合しています。LavaMoat は各依存関係をコンパートメントでラップし、必要なものにのみアクセスを許可することで、悪意あるコードが秘密を盗んだりウォレットを侵害するのを防ぎます。",
       "lavaIndicators": {
-        "0": "__TODO_TRANSLATE__ Packages Wrapped in SES Compartments",
-        "1": "__TODO_TRANSLATE__ Limited Platform Access Per Package",
-        "2": "__TODO_TRANSLATE__ Prevents Modification of JavaScript Primordials"
+        "0": "SES コンパートメントでラップされたパッケージ",
+        "1": "パッケージごとの限定的なプラットフォームアクセス",
+        "2": "JavaScript プリモーディアルの変更を防止"
       },
-      "learnLavaMoat": "__TODO_TRANSLATE__ Learn About LavaMoat",
-      "protectionLayersTitle": "__TODO_TRANSLATE__ Protection Layers",
+      "learnLavaMoat": "LavaMoat について学ぶ",
+      "protectionLayersTitle": "保護レイヤー",
       "layers": {
         "0": {
-          "title": "__TODO_TRANSLATE__ Package Compartments",
-          "description": "__TODO_TRANSLATE__ Each package runs in its own compartment, preventing unauthorized access to sensitive resources"
+          "title": "パッケージコンパートメント",
+          "description": "各パッケージが独自のコンパートメントで実行され、機密リソースへの不正アクセスを防止"
         },
         "1": {
-          "title": "__TODO_TRANSLATE__ Policy Enforcement",
-          "description": "__TODO_TRANSLATE__ Policy files define exactly which resources each package can access"
+          "title": "ポリシーの適用",
+          "description": "ポリシーファイルが各パッケージがアクセスできるリソースを正確に定義"
         },
         "2": {
-          "title": "__TODO_TRANSLATE__ Supply Chain Defense",
-          "description": "__TODO_TRANSLATE__ Protects against compromised dependencies attempting malicious actions"
+          "title": "サプライチェーン防御",
+          "description": "悪意ある操作を試みる侵害された依存関係から保護"
         },
         "3": {
-          "title": "__TODO_TRANSLATE__ Runtime Monitoring",
-          "description": "__TODO_TRANSLATE__ Continuous enforcement ensures security policies remain active at runtime"
+          "title": "ランタイム監視",
+          "description": "継続的な適用によりセキュリティポリシーがランタイムでアクティブに保たれる"
         }
       },
-      "deterministicTitleHighlight": "__TODO_TRANSLATE__ Deterministic Builds",
-      "deterministicTitleSuffix": "__TODO_TRANSLATE__ for Ultimate Trust",
-      "deterministicDescription": "__TODO_TRANSLATE__ SSP Wallet features deterministic builds using Docker. This means identical source code produces identical binaries, allowing anyone to independently verify the wallet you download matches exactly what was built from our published source code.",
+      "deterministicTitleHighlight": "決定論的ビルド",
+      "deterministicTitleSuffix": "で究極の信頼を",
+      "deterministicDescription": "SSP Wallet は Docker を使用した決定論的ビルドを特徴としています。これは同一のソースコードが同一のバイナリを生成することを意味し、誰でもダウンロードしたウォレットが公開されたソースコードから構築されたものと完全に一致することを独自に検証できます。",
       "detIndicators": {
-        "0": "__TODO_TRANSLATE__ Docker-Based Isolated Build Environment",
-        "1": "__TODO_TRANSLATE__ Cryptographically Signed Release Checksums",
-        "2": "__TODO_TRANSLATE__ Eliminates Supply Chain Attack Vectors"
+        "0": "Docker ベースの隔離されたビルド環境",
+        "1": "暗号学的に署名されたリリースチェックサム",
+        "2": "サプライチェーン攻撃ベクトルを排除"
       },
-      "learnVerify": "__TODO_TRANSLATE__ Learn How to Verify",
-      "verificationProcessTitle": "__TODO_TRANSLATE__ Verification Process",
+      "learnVerify": "検証方法を学ぶ",
+      "verificationProcessTitle": "検証プロセス",
       "verifySteps": {
         "0": {
-          "title": "__TODO_TRANSLATE__ Download Release Files",
-          "description": "__TODO_TRANSLATE__ Get the extension files, SHA256SUMS, and GPG signature from GitHub releases"
+          "title": "リリースファイルをダウンロード",
+          "description": "GitHub リリースから拡張機能ファイル、SHA256SUMS、GPG 署名を取得"
         },
         "1": {
-          "title": "__TODO_TRANSLATE__ Verify GPG Signature",
-          "description": "__TODO_TRANSLATE__ Import our public key from OpenPGP keyserver and verify the signed checksums"
+          "title": "GPG 署名を検証",
+          "description": "OpenPGP キーサーバーから公開鍵をインポートし、署名済みチェックサムを検証"
         },
         "2": {
-          "title": "__TODO_TRANSLATE__ Verify File Hashes",
-          "description": "__TODO_TRANSLATE__ Check that downloaded files match the signed checksums"
+          "title": "ファイルハッシュを検証",
+          "description": "ダウンロードしたファイルが署名済みチェックサムと一致することを確認"
         },
         "3": {
-          "title": "__TODO_TRANSLATE__ Optional: Reproduce Build",
-          "description": "__TODO_TRANSLATE__ Advanced users can build from source and verify identical output"
+          "title": "任意: ビルドを再現",
+          "description": "上級ユーザーはソースからビルドして同一の出力を検証できます"
         }
       }
     },
     "enterpriseBand": {
-      "badge": "__TODO_TRANSLATE__ For Teams & Businesses",
-      "fluxImageAlt": "__TODO_TRANSLATE__ Flux Foundation",
-      "titlePart1": "__TODO_TRANSLATE__ Running treasury for a team?",
-      "titleHighlight": "__TODO_TRANSLATE__ Meet SSP Enterprise.",
-      "description": "__TODO_TRANSLATE__ Your team holds the keys. Your team signs. SSP Enterprise handles the coordination — proposals, policies, and the audit trail your CFO will actually want.",
+      "badge": "チームとビジネス向け",
+      "fluxImageAlt": "Flux Foundation",
+      "titlePart1": "チームのトレジャリーを管理していますか？",
+      "titleHighlight": "SSP Enterprise をご覧ください。",
+      "description": "チームが鍵を保持します。チームが署名します。SSP Enterprise が調整を担当 — 提案、ポリシー、CFO が本当に必要とする監査証跡。",
       "highlights": {
         "0": {
-          "title": "__TODO_TRANSLATE__ M-of-N Multisig Vaults",
-          "description": "__TODO_TRANSLATE__ Configure any signing threshold — 2-of-3, 3-of-5, whatever fits your governance."
+          "title": "M-of-N Multisig ボールト",
+          "description": "任意の署名しきい値を設定 — 2-of-3、3-of-5、ガバナンスに合わせて。"
         },
         "1": {
-          "title": "__TODO_TRANSLATE__ Transaction Policy Engine",
-          "description": "__TODO_TRANSLATE__ Spending limits, address whitelists, time-locks, admin approvals — 14+ controls."
+          "title": "トランザクションポリシーエンジン",
+          "description": "支出制限、アドレスホワイトリスト、タイムロック、管理者承認 — 14 以上のコントロール。"
         },
         "2": {
-          "title": "__TODO_TRANSLATE__ No Custodian. No MPC.",
-          "description": "__TODO_TRANSLATE__ Self-custody at enterprise scale. Two-device signing per signer, on-chain verified."
+          "title": "カストディアンなし。MPC なし。",
+          "description": "エンタープライズスケールのセルフカストディ。署名者ごとに 2 デバイスで署名、オンチェーンで検証済み。"
         }
       },
-      "fluxEyebrow": "__TODO_TRANSLATE__ Flux Foundation",
-      "fluxBefore": "__TODO_TRANSLATE__ Uses SSP Enterprise to secure the",
-      "fluxStrong": "__TODO_TRANSLATE__ Fusion bridge",
-      "fluxAfter": "__TODO_TRANSLATE__ and manage Foundation treasury with multi-party signing.",
-      "fluxCta": "__TODO_TRANSLATE__ Read the case study",
-      "explore": "__TODO_TRANSLATE__ Explore SSP Enterprise",
-      "launchApp": "__TODO_TRANSLATE__ Launch Enterprise App"
+      "fluxEyebrow": "Flux Foundation",
+      "fluxBefore": "SSP Enterprise を使用して",
+      "fluxStrong": "Fusion ブリッジ",
+      "fluxAfter": "を保護し、マルチパーティ署名でファウンデーションのトレジャリーを管理。",
+      "fluxCta": "ケーススタディを読む",
+      "explore": "SSP Enterprise を見る",
+      "launchApp": "Enterprise アプリを起動"
     },
     "supportedChains": {
-      "badge": "__TODO_TRANSLATE__ Multi-Chain Support",
-      "titleHighlight": "__TODO_TRANSLATE__ 15+ Blockchains",
-      "titleSuffix": "__TODO_TRANSLATE__ in One Wallet",
-      "description": "__TODO_TRANSLATE__ Manage all your crypto assets from Bitcoin to Ethereum and beyond. SSP Wallet provides unified access to multiple blockchain networks with WalletConnect v2 support for dApps and offline QR code transaction capabilities.",
+      "badge": "マルチチェーンサポート",
+      "titleHighlight": "15 以上のブロックチェーン",
+      "titleSuffix": "を 1 つのウォレットで",
+      "description": "Bitcoin から Ethereum まで、すべての暗号資産を管理します。SSP Wallet は dApp への WalletConnect v2 サポートとオフライン QR コードトランザクション機能を備えた複数のブロックチェーンネットワークへの統合アクセスを提供します。",
       "chainDescriptions": {
-        "BTC": "__TODO_TRANSLATE__ The original cryptocurrency",
-        "ETH": "__TODO_TRANSLATE__ Smart contract platform",
-        "LTC": "__TODO_TRANSLATE__ Digital silver",
-        "ZEC": "__TODO_TRANSLATE__ Privacy-focused",
-        "RVN": "__TODO_TRANSLATE__ Asset transfer blockchain",
-        "DOGE": "__TODO_TRANSLATE__ The people's crypto",
-        "BCH": "__TODO_TRANSLATE__ Peer-to-peer electronic cash",
-        "FLUX": "__TODO_TRANSLATE__ Decentralized computing",
-        "MATIC": "__TODO_TRANSLATE__ Ethereum scaling",
-        "BSC": "__TODO_TRANSLATE__ Fast, low-cost transactions",
-        "AVAX": "__TODO_TRANSLATE__ High-performance blockchain",
-        "BASE": "__TODO_TRANSLATE__ Coinbase L2 solution"
+        "BTC": "最初の暗号資産",
+        "ETH": "スマートコントラクトプラットフォーム",
+        "LTC": "デジタルシルバー",
+        "ZEC": "プライバシー重視",
+        "RVN": "アセット転送ブロックチェーン",
+        "DOGE": "みんなの暗号資産",
+        "BCH": "ピアツーピア電子キャッシュ",
+        "FLUX": "分散型コンピューティング",
+        "MATIC": "Ethereum スケーリング",
+        "BSC": "高速・低コストのトランザクション",
+        "AVAX": "高性能ブロックチェーン",
+        "BASE": "Coinbase L2 ソリューション"
       },
-      "chainLogoAlt": "__TODO_TRANSLATE__ {name} logo",
-      "moreFeaturesTitle": "__TODO_TRANSLATE__ More Features",
-      "moreFeaturesHighlight": "__TODO_TRANSLATE__ Coming Soon",
-      "moreFeaturesDescription": "__TODO_TRANSLATE__ We're constantly expanding SSP Wallet with new blockchain networks and advanced security features based on community demand and technological advancement.",
-      "walletConnectStrong": "__TODO_TRANSLATE__ WalletConnect v2 (Reown)",
-      "walletConnectAfter": "__TODO_TRANSLATE__ Connect to thousands of dApps",
-      "accountAbstractionStrong": "__TODO_TRANSLATE__ Account Abstraction (ERC-4337)",
-      "accountAbstractionAfter": "__TODO_TRANSLATE__ Smart contract wallets",
-      "solanaStrong": "__TODO_TRANSLATE__ Solana Support",
-      "solanaAfter": "__TODO_TRANSLATE__ Coming soon with multisig",
-      "viewFullList": "__TODO_TRANSLATE__ View Full Asset List"
+      "chainLogoAlt": "{name} ロゴ",
+      "moreFeaturesTitle": "さらなる機能",
+      "moreFeaturesHighlight": "近日公開",
+      "moreFeaturesDescription": "コミュニティの要望と技術の進歩に基づいて、新しいブロックチェーンネットワークと高度なセキュリティ機能で SSP Wallet を継続的に拡大しています。",
+      "walletConnectStrong": "WalletConnect v2 (Reown)",
+      "walletConnectAfter": "何千もの dApp に接続",
+      "accountAbstractionStrong": "アカウント抽象化 (ERC-4337)",
+      "accountAbstractionAfter": "スマートコントラクトウォレット",
+      "solanaStrong": "Solana サポート",
+      "solanaAfter": "multisig 付きで近日公開",
+      "viewFullList": "アセットの完全なリストを見る"
     },
     "cta": {
-      "badge": "__TODO_TRANSLATE__ Ready to Get Started?",
-      "titlePart1": "__TODO_TRANSLATE__ Join the",
-      "titleHighlight": "__TODO_TRANSLATE__ Future of Crypto",
-      "description": "__TODO_TRANSLATE__ Download SSP Wallet today and experience the next generation of cryptocurrency management with unmatched security and simplicity.",
-      "downloadNow": "__TODO_TRANSLATE__ Download Now",
-      "learnMore": "__TODO_TRANSLATE__ Learn More",
+      "badge": "始める準備はできていますか？",
+      "titlePart1": "参加しよう",
+      "titleHighlight": "暗号資産の未来へ",
+      "description": "今すぐ SSP Wallet をダウンロードして、比類なきセキュリティとシンプルさを持つ次世代の暗号資産管理を体験してください。",
+      "downloadNow": "今すぐダウンロード",
+      "learnMore": "詳しく見る",
       "options": {
         "0": {
-          "title": "__TODO_TRANSLATE__ SSP Wallet - Browser Extension",
-          "description": "__TODO_TRANSLATE__ Available now - Chrome, Brave, Firefox"
+          "title": "SSP Wallet - ブラウザ拡張機能",
+          "description": "利用可能 - Chrome、Brave、Firefox"
         },
         "1": {
-          "title": "__TODO_TRANSLATE__ SSP Key - Mobile 2FA App",
-          "description": "__TODO_TRANSLATE__ Required for transactions approving and more"
+          "title": "SSP Key - モバイル 2FA アプリ",
+          "description": "トランザクション承認などに必須"
         },
         "2": {
-          "title": "__TODO_TRANSLATE__ SSP Enterprise - For Teams",
-          "description": "__TODO_TRANSLATE__ M-of-N multisig vaults for organizations. Available now."
+          "title": "SSP Enterprise - チーム向け",
+          "description": "組織向けの M-of-N multisig ボールト。現在利用可能。"
         }
       },
-      "availableNow": "__TODO_TRANSLATE__ Available Now",
-      "comingSoon": "__TODO_TRANSLATE__ Coming Soon",
-      "statActiveUsers": "__TODO_TRANSLATE__ Active Users",
-      "statAssetsSecured": "__TODO_TRANSLATE__ Assets Secured",
-      "statBlockchainsSupported": "__TODO_TRANSLATE__ Blockchains Supported",
-      "indicatorAudited": "__TODO_TRANSLATE__ Security Audited",
-      "indicatorOpenSource": "__TODO_TRANSLATE__ Open Source",
-      "indicatorCommunity": "__TODO_TRANSLATE__ Community Driven"
+      "availableNow": "現在利用可能",
+      "comingSoon": "近日公開",
+      "statActiveUsers": "アクティブユーザー",
+      "statAssetsSecured": "保護されたアセット",
+      "statBlockchainsSupported": "対応ブロックチェーン",
+      "indicatorAudited": "セキュリティ監査済み",
+      "indicatorOpenSource": "オープンソース",
+      "indicatorCommunity": "コミュニティ主導"
     }
   },
   "Newsroom": {
-    "title": "__TODO_TRANSLATE__ Newsroom",
-    "description": "__TODO_TRANSLATE__ Latest news, product updates, and announcements from SSP.",
-    "metaTitle": "__TODO_TRANSLATE__ Newsroom — Latest News & Updates",
-    "metaDescription": "__TODO_TRANSLATE__ Stay up to date with the latest news, product updates, and announcements from SSP.",
-    "filterAll": "__TODO_TRANSLATE__ All",
-    "loadMore": "__TODO_TRANSLATE__ Load more",
-    "noArticles": "__TODO_TRANSLATE__ No articles match this filter yet.",
-    "backToNewsroom": "__TODO_TRANSLATE__ Back to Newsroom",
-    "shareTitle": "__TODO_TRANSLATE__ Share this article",
-    "shareTwitter": "__TODO_TRANSLATE__ Share on Twitter",
-    "shareFacebook": "__TODO_TRANSLATE__ Share on Facebook",
-    "shareTelegram": "__TODO_TRANSLATE__ Share on Telegram",
-    "shareReddit": "__TODO_TRANSLATE__ Share on Reddit",
-    "shareCopy": "__TODO_TRANSLATE__ Copy link",
-    "shareCopied": "__TODO_TRANSLATE__ Link copied!",
-    "tableOfContents": "__TODO_TRANSLATE__ On this page",
-    "relatedArticles": "__TODO_TRANSLATE__ Related articles",
-    "minRead": "__TODO_TRANSLATE__ {minutes} min read",
-    "byAuthor": "__TODO_TRANSLATE__ By {author}",
-    "publishedOn": "__TODO_TRANSLATE__ Published {date}",
-    "updatedOn": "__TODO_TRANSLATE__ Updated {date}"
+    "title": "ニュースルーム",
+    "description": "SSP の最新ニュース、プロダクトアップデート、お知らせ。",
+    "metaTitle": "ニュースルーム — 最新ニュース & アップデート",
+    "metaDescription": "SSP の最新ニュース、プロダクトアップデート、お知らせを随時お届けします。",
+    "filterAll": "すべて",
+    "loadMore": "もっと読む",
+    "noArticles": "このフィルターに一致する記事はまだありません。",
+    "backToNewsroom": "ニュースルームに戻る",
+    "shareTitle": "この記事をシェアする",
+    "shareTwitter": "Twitter でシェア",
+    "shareFacebook": "Facebook でシェア",
+    "shareTelegram": "Telegram でシェア",
+    "shareReddit": "Reddit でシェア",
+    "shareCopy": "リンクをコピー",
+    "shareCopied": "リンクをコピーしました！",
+    "tableOfContents": "このページの内容",
+    "relatedArticles": "関連記事",
+    "minRead": "{minutes} 分で読める",
+    "byAuthor": "{author} 著",
+    "publishedOn": "{date} 公開",
+    "updatedOn": "{date} 更新"
   },
   "Academy": {
-    "title": "__TODO_TRANSLATE__ SSP Academy",
-    "description": "__TODO_TRANSLATE__ Guides, tutorials, and deep dives to help you master self-custody with SSP.",
-    "metaTitle": "__TODO_TRANSLATE__ SSP Academy — Learn Crypto Self-Custody",
-    "metaDescription": "__TODO_TRANSLATE__ Guides, tutorials, and deep dives on SSP, multisig, security, DeFi, and more.",
-    "browseByTopic": "__TODO_TRANSLATE__ Browse by topic",
-    "learningPaths": "__TODO_TRANSLATE__ Learning paths",
-    "viewAllSeries": "__TODO_TRANSLATE__ View all",
-    "latestArticles": "__TODO_TRANSLATE__ Latest articles",
-    "comingSoon": "__TODO_TRANSLATE__ New articles coming soon — check back shortly.",
-    "categoryEmpty": "__TODO_TRANSLATE__ New articles coming soon. In the meantime, explore related topics:",
-    "backToCategory": "__TODO_TRANSLATE__ Back to {category}",
-    "articleCount": "__TODO_TRANSLATE__ {count, plural, =0 {No articles} =1 {1 article} other {# articles}}",
-    "partsCount": "__TODO_TRANSLATE__ {count, plural, =0 {No parts} =1 {1 part} other {# parts}}",
+    "title": "SSP Academy",
+    "description": "SSP でセルフカストディをマスターするためのガイド、チュートリアル、詳細解説。",
+    "metaTitle": "SSP Academy — 暗号資産セルフカストディを学ぶ",
+    "metaDescription": "SSP、multisig、セキュリティ、DeFi などに関するガイド、チュートリアル、詳細解説。",
+    "browseByTopic": "トピック別に探す",
+    "learningPaths": "ラーニングパス",
+    "viewAllSeries": "すべて見る",
+    "latestArticles": "最新記事",
+    "comingSoon": "新しい記事を近日公開予定 — もうしばらくお待ちください。",
+    "categoryEmpty": "新しい記事を近日公開予定です。それまでの間、関連トピックをご覧ください：",
+    "backToCategory": "{category} に戻る",
+    "articleCount": "{count, plural, =0 {記事なし} =1 {記事 1 件} other {記事 # 件}}",
+    "partsCount": "{count, plural, =0 {パートなし} =1 {パート 1 件} other {パート # 件}}",
     "difficulty": {
-      "beginner": "__TODO_TRANSLATE__ Beginner",
-      "intermediate": "__TODO_TRANSLATE__ Intermediate",
-      "advanced": "__TODO_TRANSLATE__ Advanced"
+      "beginner": "初級",
+      "intermediate": "中級",
+      "advanced": "上級"
     },
-    "atAGlance": "__TODO_TRANSLATE__ At a glance",
-    "seriesPart": "__TODO_TRANSLATE__ Part {order} of {total}",
-    "previousPart": "__TODO_TRANSLATE__ Previous part",
-    "nextPart": "__TODO_TRANSLATE__ Next part",
-    "seriesMetaDescription": "__TODO_TRANSLATE__ Structured multi-part series to guide you from beginner to advanced on crypto self-custody with SSP.",
-    "seriesIndexDescription": "__TODO_TRANSLATE__ Structured multi-part series to guide you from beginner to advanced.",
-    "seriesEmpty": "__TODO_TRANSLATE__ Learning paths are coming soon. In the meantime, browse articles by topic:",
-    "backToAcademy": "__TODO_TRANSLATE__ Back to Academy",
-    "seriesPartsEmpty": "__TODO_TRANSLATE__ Parts are coming soon.",
-    "viewAllLearningPaths": "__TODO_TRANSLATE__ View all learning paths",
+    "atAGlance": "概要",
+    "seriesPart": "{total} 中 第 {order} パート",
+    "previousPart": "前のパート",
+    "nextPart": "次のパート",
+    "seriesMetaDescription": "SSP を使った暗号資産セルフカストディを初級から上級まで体系的に学ぶマルチパートシリーズ。",
+    "seriesIndexDescription": "初級から上級まで体系的に学べるマルチパートシリーズ。",
+    "seriesEmpty": "ラーニングパスは近日公開予定です。それまでの間、トピック別に記事をご覧ください：",
+    "backToAcademy": "Academy に戻る",
+    "seriesPartsEmpty": "パートは近日公開予定です。",
+    "viewAllLearningPaths": "ラーニングパスをすべて見る",
     "categoryIntros": {
-      "multisig": "__TODO_TRANSLATE__ Multisig wallets require multiple signatures to authorize a transaction. SSP enforces 2-of-2 on every signed action: the browser extension and the mobile SSP Key app must both approve. This page collects the deep-dives that explain how the model works, what attacks it stops, and where its limits sit.",
-      "getting-started": "__TODO_TRANSLATE__ Brand-new to crypto, or returning after a long break? Start here. These guides cover wallets, addresses, transactions, gas, mempools, and finality — the vocabulary you need before you touch real funds.",
-      "security": "__TODO_TRANSLATE__ Self-custody is hard because attacks are creative. This collection walks through the threats that actually catch users: phishing pages, fake support DMs, malicious dApps, lost seeds, and how SSP's 2-of-2 model neutralises most of them.",
-      "how-to": "__TODO_TRANSLATE__ Practical, screenshot-driven walkthroughs for the things SSP users do every day: sending transactions across chains, connecting to dApps via WalletConnect, swapping tokens, and recovering from a lost device.",
-      "coin-guides": "__TODO_TRANSLATE__ Each coin or chain SSP supports has its own quirks — UTXO vs. account-based, native multisig vs. ERC-4337, fee dynamics, finality times. This collection covers them one at a time.",
-      "defi": "__TODO_TRANSLATE__ SSP supports DeFi via ERC-4337 Account Abstraction on EVM chains. These articles explain what AA is, what dApps you can use safely from a multisig wallet, and how SSP keeps you in control while letting you participate in DeFi protocols.",
-      "news-explained": "__TODO_TRANSLATE__ Beyond the headlines: the regulatory shifts, exchange failures, protocol incidents, and standards updates that actually affect self-custody users — explained without hype."
+      "multisig": "Multisig ウォレットはトランザクションを承認するために複数の署名が必要です。SSP はすべての署名アクションに 2-of-2 を適用しており、ブラウザ拡張機能とモバイル SSP Key アプリの両方が承認する必要があります。このページでは、そのモデルの仕組み、防げる攻撃、限界について解説する記事を集めています。",
+      "getting-started": "暗号資産が初めての方、または久しぶりに戻ってきた方はここから始めてください。ウォレット、アドレス、トランザクション、ガス代、メンプール、ファイナリティなど、実際の資金を扱う前に必要な基本用語を解説します。",
+      "security": "攻撃は巧妙なため、セルフカストディは難しいものです。このコレクションでは、ユーザーが実際に被害に遭う脅威 — フィッシングページ、偽サポート DM、悪意ある dApp、シードフレーズの紛失 — と、SSP の 2-of-2 モデルがそのほとんどを無力化する方法を解説します。",
+      "how-to": "SSP ユーザーが毎日行うこと — チェーン間でのトランザクション送信、WalletConnect を使った dApp 接続、トークンのスワップ、デバイス紛失からの復旧 — を実際のスクリーンショットとともにステップごとに解説します。",
+      "coin-guides": "SSP がサポートする各コイン・チェーンにはそれぞれ特徴があります — UTXO かアカウントベースか、ネイティブ multisig か ERC-4337 か、手数料の仕組み、ファイナリティ時間など。このコレクションでは 1 つずつ詳しく解説します。",
+      "defi": "SSP は EVM チェーン上の ERC-4337 アカウント抽象化を通じて DeFi をサポートしています。これらの記事では、AA とは何か、multisig ウォレットから安全に使える dApp、SSP が DeFi プロトコルへの参加を可能にしながらもあなたのコントロールを維持する方法を解説します。",
+      "news-explained": "ヘッドラインの裏側：セルフカストディユーザーに実際に影響を与える規制の変化、取引所の破綻、プロトコルインシデント、規格の更新を誇張なく解説します。"
     }
   },
   "Author": {
-    "title": "__TODO_TRANSLATE__ {name}",
-    "postsBy": "__TODO_TRANSLATE__ Posts by {name}",
-    "noPosts": "__TODO_TRANSLATE__ No posts yet.",
-    "metaTitle": "__TODO_TRANSLATE__ {name} — SSP Author",
-    "metaDescriptionFallback": "__TODO_TRANSLATE__ Articles by {name}",
-    "notFoundTitle": "__TODO_TRANSLATE__ Author not found",
-    "breadcrumbLabel": "__TODO_TRANSLATE__ Authors"
+    "title": "{name}",
+    "postsBy": "{name} の投稿",
+    "noPosts": "まだ投稿がありません。",
+    "metaTitle": "{name} — SSP 著者",
+    "metaDescriptionFallback": "{name} の記事",
+    "notFoundTitle": "著者が見つかりません",
+    "breadcrumbLabel": "著者"
   },
   "Contact": {
-    "metaTitle": "__TODO_TRANSLATE__ Contact - SSP Wallet | Get in Touch",
-    "metaDescription": "__TODO_TRANSLATE__ Contact SSP Wallet team. Get support, ask questions, or discuss partnerships. Join our Discord community or reach out directly.",
-    "breadcrumbLabel": "__TODO_TRANSLATE__ Contact",
-    "heroBadge": "__TODO_TRANSLATE__ Contact Us",
-    "heroTitle": "__TODO_TRANSLATE__ Get in Touch",
-    "heroDescription": "__TODO_TRANSLATE__ Have questions about SSP Wallet? Need support or want to explore partnerships? Join our community or reach out directly—we're here to help.",
-    "methodsTitle": "__TODO_TRANSLATE__ Ways to Reach Us",
-    "methodsSubtitle": "__TODO_TRANSLATE__ Choose the contact method that works best for your needs",
+    "metaTitle": "お問い合わせ - SSP Wallet | ご連絡",
+    "metaDescription": "SSP Wallet チームへのお問い合わせ。サポートを受けたり、質問したり、パートナーシップについて話し合いましょう。Discord コミュニティに参加するか、直接ご連絡ください。",
+    "breadcrumbLabel": "お問い合わせ",
+    "heroBadge": "お問い合わせ",
+    "heroTitle": "ご連絡ください",
+    "heroDescription": "SSP Wallet についてご質問はありますか？サポートが必要ですか？パートナーシップについて検討していますか？コミュニティにご参加いただくか、直接ご連絡ください — お手伝いします。",
+    "methodsTitle": "ご連絡方法",
+    "methodsSubtitle": "ご要望に合った連絡方法をお選びください",
     "methods": {
       "supportTickets": {
-        "title": "__TODO_TRANSLATE__ Support Tickets",
-        "description": "__TODO_TRANSLATE__ Get direct help with technical issues through our ticketing system",
-        "responseTime": "__TODO_TRANSLATE__ Within 24 hours",
-        "action": "__TODO_TRANSLATE__ Create Ticket"
+        "title": "サポートチケット",
+        "description": "チケットシステムを通じて技術的な問題について直接サポートを受けられます",
+        "responseTime": "24 時間以内",
+        "action": "チケットを作成"
       },
       "discord": {
-        "title": "__TODO_TRANSLATE__ Discord Community",
-        "description": "__TODO_TRANSLATE__ Join our active community for real-time support and discussions",
-        "responseTime": "__TODO_TRANSLATE__ Active community",
-        "action": "__TODO_TRANSLATE__ Join Discord"
+        "title": "Discord コミュニティ",
+        "description": "リアルタイムサポートとディスカッションのためにアクティブなコミュニティに参加してください",
+        "responseTime": "アクティブなコミュニティ",
+        "action": "Discord に参加"
       },
       "github": {
-        "title": "__TODO_TRANSLATE__ GitHub Support",
-        "description": "__TODO_TRANSLATE__ Report bugs, request features, or contribute to development",
-        "contact": "__TODO_TRANSLATE__ GitHub Issues & Discussions",
-        "responseTime": "__TODO_TRANSLATE__ Community driven",
-        "action": "__TODO_TRANSLATE__ Visit GitHub"
+        "title": "GitHub サポート",
+        "description": "バグの報告、機能のリクエスト、開発への貢献",
+        "contact": "GitHub Issues & Discussions",
+        "responseTime": "コミュニティ主導",
+        "action": "GitHub を訪問"
       }
     },
-    "resourcesTitle": "__TODO_TRANSLATE__ Need Help Right Away?",
-    "resourcesSubtitle": "__TODO_TRANSLATE__ Check out our self-service resources for immediate assistance",
+    "resourcesTitle": "すぐにサポートが必要ですか？",
+    "resourcesSubtitle": "即時サポートのためのセルフサービスリソースをご利用ください",
     "resources": {
       "supportCenter": {
-        "title": "__TODO_TRANSLATE__ Support Center",
-        "description": "__TODO_TRANSLATE__ Comprehensive FAQ and troubleshooting guides"
+        "title": "サポートセンター",
+        "description": "包括的な FAQ とトラブルシューティングガイド"
       },
       "setupGuide": {
-        "title": "__TODO_TRANSLATE__ Setup Guide",
-        "description": "__TODO_TRANSLATE__ Step-by-step installation instructions"
+        "title": "セットアップガイド",
+        "description": "ステップごとのインストール手順"
       },
       "documentation": {
-        "title": "__TODO_TRANSLATE__ Documentation",
-        "description": "__TODO_TRANSLATE__ Complete technical documentation"
+        "title": "ドキュメント",
+        "description": "完全な技術ドキュメント"
       }
     },
-    "formTitle": "__TODO_TRANSLATE__ Send Us a Message",
-    "formSubtitle": "__TODO_TRANSLATE__ Fill out the form below and we'll get back to you as soon as possible",
-    "formTipPrefix": "__TODO_TRANSLATE__ Tip:",
-    "formTipBefore": "__TODO_TRANSLATE__ For faster technical support, consider using our",
-    "formTipLinkSupport": "__TODO_TRANSLATE__ support ticket system",
-    "formTipBetween": "__TODO_TRANSLATE__ or reaching out via",
+    "formTitle": "メッセージを送る",
+    "formSubtitle": "以下のフォームにご記入いただければ、できる限り早くご回答いたします",
+    "formTipPrefix": "ヒント:",
+    "formTipBefore": "より迅速な技術サポートのために、当社の",
+    "formTipLinkSupport": "サポートチケットシステム",
+    "formTipBetween": "または",
     "form": {
-      "fullNameLabel": "__TODO_TRANSLATE__ Full Name *",
-      "fullNamePlaceholder": "__TODO_TRANSLATE__ Your full name",
-      "emailLabel": "__TODO_TRANSLATE__ Email Address *",
-      "emailPlaceholder": "__TODO_TRANSLATE__ your.email@example.com",
-      "companyLabel": "__TODO_TRANSLATE__ Company (Optional)",
-      "companyPlaceholder": "__TODO_TRANSLATE__ Your company name",
-      "typeLabel": "__TODO_TRANSLATE__ Inquiry Type *",
+      "fullNameLabel": "氏名 *",
+      "fullNamePlaceholder": "お名前",
+      "emailLabel": "メールアドレス *",
+      "emailPlaceholder": "your.email@example.com",
+      "companyLabel": "会社名 (任意)",
+      "companyPlaceholder": "会社名",
+      "typeLabel": "お問い合わせ種別 *",
       "typeOptions": {
-        "general": "__TODO_TRANSLATE__ General Inquiry",
-        "support": "__TODO_TRANSLATE__ Technical Support",
-        "partnership": "__TODO_TRANSLATE__ Partnership",
-        "security": "__TODO_TRANSLATE__ Security Issue",
-        "media": "__TODO_TRANSLATE__ Media & Press",
-        "business": "__TODO_TRANSLATE__ Business Development"
+        "general": "一般的なお問い合わせ",
+        "support": "技術サポート",
+        "partnership": "パートナーシップ",
+        "security": "セキュリティに関する問題",
+        "media": "メディア・プレス",
+        "business": "ビジネス開発"
       },
-      "subjectLabel": "__TODO_TRANSLATE__ Subject *",
-      "subjectPlaceholder": "__TODO_TRANSLATE__ Brief subject of your message",
-      "messageLabel": "__TODO_TRANSLATE__ Message *",
-      "messagePlaceholder": "__TODO_TRANSLATE__ Please provide details about your inquiry...",
-      "submitting": "__TODO_TRANSLATE__ Sending Message...",
-      "submit": "__TODO_TRANSLATE__ Send Message",
-      "errorFallback": "__TODO_TRANSLATE__ Failed to send message. Please try again.",
-      "errorGeneric": "__TODO_TRANSLATE__ Failed to send message",
-      "successTitle": "__TODO_TRANSLATE__ Thank You!",
-      "successDescription": "__TODO_TRANSLATE__ Your message has been sent successfully. We'll get back to you soon.",
-      "successAgain": "__TODO_TRANSLATE__ Send another message"
+      "subjectLabel": "件名 *",
+      "subjectPlaceholder": "メッセージの件名を簡潔に",
+      "messageLabel": "メッセージ *",
+      "messagePlaceholder": "お問い合わせの詳細をご記入ください...",
+      "submitting": "送信中...",
+      "submit": "メッセージを送信",
+      "errorFallback": "メッセージの送信に失敗しました。もう一度お試しください。",
+      "errorGeneric": "メッセージの送信に失敗しました",
+      "successTitle": "ありがとうございます！",
+      "successDescription": "メッセージが正常に送信されました。まもなくご返信いたします。",
+      "successAgain": "別のメッセージを送信"
     },
-    "communityTitle": "__TODO_TRANSLATE__ Follow Our Community",
-    "communitySubtitle": "__TODO_TRANSLATE__ Stay updated with the latest news, connect with other users, and get community support",
+    "communityTitle": "コミュニティをフォロー",
+    "communitySubtitle": "最新情報を入手し、他のユーザーとつながり、コミュニティサポートを受けましょう",
     "social": {
-      "github": "__TODO_TRANSLATE__ Open source development & contributions",
-      "discord": "__TODO_TRANSLATE__ Community chat & real-time support",
-      "twitter": "__TODO_TRANSLATE__ Latest updates, news & announcements"
+      "github": "オープンソース開発への貢献",
+      "discord": "コミュニティチャット & リアルタイムサポート",
+      "twitter": "最新アップデート、ニュース & お知らせ"
     }
   },
   "Download": {
-    "metaTitle": "__TODO_TRANSLATE__ Download - SSP Wallet | Get Your Secure Crypto Wallet",
-    "metaDescription": "__TODO_TRANSLATE__ Download SSP Wallet for your browser. Secure, simple, powerful crypto wallet with multi-signature security and mobile authentication.",
-    "ogAlt": "__TODO_TRANSLATE__ Download SSP Wallet - Secure Crypto Wallet",
-    "breadcrumbLabel": "__TODO_TRANSLATE__ Download",
-    "heroBadge": "__TODO_TRANSLATE__ Download SSP Wallet",
-    "heroTitle": "__TODO_TRANSLATE__ Get Started with SSP Wallet",
-    "heroDescription": "__TODO_TRANSLATE__ Download both components for complete security: the browser extension for wallet management and the mobile app for transaction authentication.",
-    "stepsTitle": "__TODO_TRANSLATE__ Two-Step Setup Process",
-    "stepsSubtitle": "__TODO_TRANSLATE__ Both components are required for the secure 2-of-2 multisignature system",
-    "stepLabel": "__TODO_TRANSLATE__ Step {index}",
+    "metaTitle": "ダウンロード - SSP Wallet | 安全な暗号資産ウォレットを入手",
+    "metaDescription": "ブラウザ向け SSP Wallet をダウンロード。マルチシグネチャセキュリティとモバイル認証を備えた安全・シンプル・強力な暗号資産ウォレット。",
+    "ogAlt": "SSP Wallet をダウンロード - 安全な暗号資産ウォレット",
+    "breadcrumbLabel": "ダウンロード",
+    "heroBadge": "SSP Wallet をダウンロード",
+    "heroTitle": "SSP Wallet を始める",
+    "heroDescription": "完全なセキュリティのために両コンポーネントをダウンロードしてください：ウォレット管理用のブラウザ拡張機能と、トランザクション認証用のモバイルアプリ。",
+    "stepsTitle": "2 ステップのセットアッププロセス",
+    "stepsSubtitle": "セキュアな 2-of-2 マルチシグネチャシステムには両コンポーネントが必要です",
+    "stepLabel": "ステップ {index}",
     "options": {
       "chrome": {
-        "title": "__TODO_TRANSLATE__ SSP Wallet",
-        "subtitle": "__TODO_TRANSLATE__ Browser Extension",
-        "description": "__TODO_TRANSLATE__ Install on Chrome, Brave, Firefox and other Chromium-based browsers",
+        "title": "SSP Wallet",
+        "subtitle": "ブラウザ拡張機能",
+        "description": "Chrome、Brave、Firefox およびその他の Chromium ベースのブラウザにインストール",
         "features": {
-          "0": "__TODO_TRANSLATE__ Multi-signature security",
-          "1": "__TODO_TRANSLATE__ WalletConnect v2 support",
-          "2": "__TODO_TRANSLATE__ Cross-chain compatibility"
+          "0": "マルチシグネチャセキュリティ",
+          "1": "WalletConnect v2 対応",
+          "2": "クロスチェーン互換性"
         },
-        "cta": "__TODO_TRANSLATE__ Download Extension"
+        "cta": "拡張機能をダウンロード"
       },
       "mobile": {
-        "title": "__TODO_TRANSLATE__ SSP Key",
-        "subtitle": "__TODO_TRANSLATE__ Mobile 2FA App",
-        "description": "__TODO_TRANSLATE__ Required companion app for iOS and Android devices providing secure authentication",
+        "title": "SSP Key",
+        "subtitle": "モバイル 2FA アプリ",
+        "description": "iOS および Android デバイス向けの必須コンパニオンアプリ。安全な認証を提供します",
         "features": {
-          "0": "__TODO_TRANSLATE__ 2FA authentication",
-          "1": "__TODO_TRANSLATE__ QR code sync",
-          "2": "__TODO_TRANSLATE__ Secure key storage"
+          "0": "2FA 認証",
+          "1": "QR コード同期",
+          "2": "安全な鍵の保管"
         },
-        "cta": "__TODO_TRANSLATE__ View Mobile Apps"
+        "cta": "モバイルアプリを見る"
       }
     },
-    "browsersTitle": "__TODO_TRANSLATE__ Supported Browsers",
-    "browsersSubtitle": "__TODO_TRANSLATE__ SSP Wallet works seamlessly across all major browsers",
-    "mobileBadge": "__TODO_TRANSLATE__ SSP Key Mobile App",
-    "mobileTitle": "__TODO_TRANSLATE__ Complete Your Security Setup",
-    "mobileDescription": "__TODO_TRANSLATE__ SSP Key provides the second signature required for all transactions. Install it on your mobile device to complete the 2-of-2 multisignature security.",
-    "mobileEasySetupTitle": "__TODO_TRANSLATE__ Easy Setup",
-    "mobileEasySetupDescription": "__TODO_TRANSLATE__ Scan a QR code to sync your mobile device with your browser wallet instantly",
-    "mobileSecurityTitle": "__TODO_TRANSLATE__ Maximum Security",
-    "mobileSecurityDescription": "__TODO_TRANSLATE__ Your funds remain secure even if one device is compromised",
-    "googlePlayLabel": "__TODO_TRANSLATE__ Get it on",
-    "appStoreLabel": "__TODO_TRANSLATE__ Download on the",
-    "mobileAppAlt": "__TODO_TRANSLATE__ SSP Key Mobile App",
-    "howTitle": "__TODO_TRANSLATE__ How It Works",
-    "howSubtitle": "__TODO_TRANSLATE__ Understanding the 2-of-2 multisignature security model",
+    "browsersTitle": "対応ブラウザ",
+    "browsersSubtitle": "SSP Wallet はすべての主要ブラウザでシームレスに動作します",
+    "mobileBadge": "SSP Key モバイルアプリ",
+    "mobileTitle": "セキュリティセットアップを完了する",
+    "mobileDescription": "SSP Key はすべてのトランザクションに必要な 2 番目の署名を提供します。モバイルデバイスにインストールして 2-of-2 マルチシグネチャセキュリティを完成させてください。",
+    "mobileEasySetupTitle": "簡単セットアップ",
+    "mobileEasySetupDescription": "QR コードをスキャンして、モバイルデバイスをブラウザウォレットと即座に同期",
+    "mobileSecurityTitle": "最高のセキュリティ",
+    "mobileSecurityDescription": "一方のデバイスが侵害されても資金は安全です",
+    "googlePlayLabel": "入手する",
+    "appStoreLabel": "ダウンロード",
+    "mobileAppAlt": "SSP Key モバイルアプリ",
+    "howTitle": "仕組み",
+    "howSubtitle": "2-of-2 マルチシグネチャセキュリティモデルについて",
     "howSteps": {
       "1": {
-        "title": "__TODO_TRANSLATE__ Install Extension",
-        "description": "__TODO_TRANSLATE__ Add SSP Wallet to your browser and create your wallet with a secure seed phrase"
+        "title": "拡張機能をインストール",
+        "description": "ブラウザに SSP Wallet を追加し、安全なシードフレーズでウォレットを作成します"
       },
       "2": {
-        "title": "__TODO_TRANSLATE__ Setup Mobile App",
-        "description": "__TODO_TRANSLATE__ Install SSP Key on your phone and sync it with your browser wallet via QR code"
+        "title": "モバイルアプリをセットアップ",
+        "description": "スマートフォンに SSP Key をインストールし、QR コードでブラウザウォレットと同期します"
       },
       "3": {
-        "title": "__TODO_TRANSLATE__ Secure Transactions",
-        "description": "__TODO_TRANSLATE__ Every transaction requires approval from both your browser and mobile device"
+        "title": "安全なトランザクション",
+        "description": "すべてのトランザクションにブラウザとモバイルデバイス両方の承認が必要です"
       }
     },
-    "ctaTitle": "__TODO_TRANSLATE__ Ready to Get Started?",
-    "ctaSubtitle": "__TODO_TRANSLATE__ Follow our step-by-step guide to set up your secure crypto wallet",
-    "ctaSetupGuide": "__TODO_TRANSLATE__ View Setup Guide",
-    "ctaSupport": "__TODO_TRANSLATE__ Get Support"
+    "ctaTitle": "始める準備はできていますか？",
+    "ctaSubtitle": "ステップごとのガイドに従って安全な暗号資産ウォレットをセットアップしてください",
+    "ctaSetupGuide": "セットアップガイドを見る",
+    "ctaSupport": "サポートを受ける"
   },
   "Features": {
-    "metaTitle": "__TODO_TRANSLATE__ Features - SSP Wallet | Advanced Crypto Security & Multi-Chain Support",
-    "metaDescription": "__TODO_TRANSLATE__ True 2-of-2 multisig, WalletConnect v2, 15+ blockchains, fiat on/off-ramp, crypto swap, CSV export, and Account Abstraction. See all SSP Wallet features.",
-    "breadcrumbLabel": "__TODO_TRANSLATE__ Features",
+    "metaTitle": "機能 - SSP Wallet | 高度な暗号資産セキュリティとマルチチェーンサポート",
+    "metaDescription": "真の 2-of-2 multisig、WalletConnect v2、15 以上のブロックチェーン、法定通貨オン/オフランプ、暗号資産スワップ、CSV エクスポート、アカウント抽象化。SSP Wallet のすべての機能を見る。",
+    "breadcrumbLabel": "機能",
     "hero": {
-      "badge": "__TODO_TRANSLATE__ Advanced Features",
-      "titleHighlight": "__TODO_TRANSLATE__ Powerful Features",
-      "titleSuffix": "__TODO_TRANSLATE__ for Modern Crypto",
-      "description": "__TODO_TRANSLATE__ Discover the cutting-edge technology and security features that make SSP Wallet the most advanced crypto wallet available.",
-      "securityFirst": "__TODO_TRANSLATE__ Security First",
-      "lightningFast": "__TODO_TRANSLATE__ Lightning Fast",
-      "selfCustody": "__TODO_TRANSLATE__ Self-Custody"
+      "badge": "高度な機能",
+      "titleHighlight": "強力な機能",
+      "titleSuffix": "で現代の暗号資産を",
+      "description": "SSP Wallet を最も先進的な暗号資産ウォレットにする最先端技術とセキュリティ機能をご覧ください。",
+      "securityFirst": "セキュリティ最優先",
+      "lightningFast": "超高速",
+      "selfCustody": "セルフカストディ"
     },
     "security": {
-      "titleHighlight": "__TODO_TRANSLATE__ Security",
-      "titleSuffix": "__TODO_TRANSLATE__ Features",
-      "description": "__TODO_TRANSLATE__ Your crypto security is our top priority. Every feature is designed with security-first principles.",
+      "titleHighlight": "セキュリティ",
+      "titleSuffix": "機能",
+      "description": "暗号資産のセキュリティが私たちの最優先事項です。すべての機能はセキュリティファーストの原則で設計されています。",
       "items": {
         "0": {
-          "title": "__TODO_TRANSLATE__ True 2-of-2 Multisig Protection",
-          "description": "__TODO_TRANSLATE__ Revolutionary BIP48 multisignature requiring both browser and mobile device signatures. No single point of failure - impossible to compromise with just one device."
+          "title": "真の 2-of-2 Multisig 保護",
+          "description": "ブラウザとモバイルデバイスの両方の署名を必要とする革新的な BIP48 マルチシグネチャ。単一障害点なし — 1 台のデバイスだけでは侵害不可能。"
         },
         "1": {
-          "title": "__TODO_TRANSLATE__ Halborn Security Audit",
-          "description": "__TODO_TRANSLATE__ Professionally audited by Halborn, the leading blockchain security firm trusted by major protocols. Comprehensive penetration testing and code review completed."
+          "title": "Halborn セキュリティ監査",
+          "description": "主要プロトコルに信頼される大手ブロックチェーンセキュリティ企業 Halborn によるプロの監査。包括的なペネトレーションテストとコードレビューが完了しています。"
         },
         "2": {
-          "title": "__TODO_TRANSLATE__ Zero Data Storage Policy",
-          "description": "__TODO_TRANSLATE__ Strict no-server-storage policy eliminates centralized attack vectors. Your private keys, transactions, and personal data never leave your devices."
+          "title": "ゼロデータストレージポリシー",
+          "description": "厳格なサーバー保存なしポリシーにより、中央集権的な攻撃ベクトルを排除。プライベートキー、トランザクション、個人データがデバイスを離れることはありません。"
         },
         "3": {
-          "title": "__TODO_TRANSLATE__ Fully Open Source & Transparent",
-          "description": "__TODO_TRANSLATE__ Complete codebase transparency with deterministic builds allows security researchers and developers to independently verify build integrity. No hidden backdoors or proprietary black boxes."
+          "title": "完全オープンソース & 透明性",
+          "description": "決定論的ビルドによる完全なコードベースの透明性により、セキュリティ研究者や開発者がビルドの整合性を独自に検証できます。隠されたバックドアや独自のブラックボックスなし。"
         }
       }
     },
     "technical": {
-      "titleHighlight": "__TODO_TRANSLATE__ Technical",
-      "titleSuffix": "__TODO_TRANSLATE__ Innovation",
-      "description": "__TODO_TRANSLATE__ Built with cutting-edge technology for the future of decentralized finance.",
+      "titleHighlight": "技術的",
+      "titleSuffix": "イノベーション",
+      "description": "分散型金融の未来のために最先端技術で構築されています。",
       "items": {
         "0": {
-          "title": "__TODO_TRANSLATE__ Multi-Chain Support (15+)",
-          "description": "__TODO_TRANSLATE__ Native support for Bitcoin, Ethereum, Polygon, BSC, Avalanche, Base, Arbitrum, Optimism, and more with unified portfolio management."
+          "title": "マルチチェーンサポート (15 以上)",
+          "description": "Bitcoin、Ethereum、Polygon、BSC、Avalanche、Base、Arbitrum、Optimism などのネイティブサポートと統合ポートフォリオ管理。"
         },
         "1": {
-          "title": "__TODO_TRANSLATE__ Built-in Crypto Trading",
-          "description": "__TODO_TRANSLATE__ Seamless crypto swapping via integrated DEX aggregators, plus fiat on-ramp/off-ramp for buying and selling crypto with payment cards."
+          "title": "組み込みの暗号資産取引",
+          "description": "統合 DEX アグリゲーターによるシームレスな暗号資産スワップ、さらに決済カードによる暗号資産の売買のための法定通貨オン/オフランプ。"
         },
         "2": {
-          "title": "__TODO_TRANSLATE__ Account Abstraction (ERC-4337)",
-          "description": "__TODO_TRANSLATE__ First wallet with native Schnorr multisignature Account Abstraction on Ethereum, enabling gasless transactions and smart contract wallets."
+          "title": "アカウント抽象化 (ERC-4337)",
+          "description": "Ethereum 上でネイティブ Schnorr マルチシグネチャアカウント抽象化を備えた初のウォレット。ガスレストランザクションとスマートコントラクトウォレットを実現。"
         },
         "3": {
-          "title": "__TODO_TRANSLATE__ True 2-of-2 Multisig Security",
-          "description": "__TODO_TRANSLATE__ Revolutionary BIP48 dual-device security with browser extension and mobile app. Both devices required for every transaction - ultimate protection."
+          "title": "真の 2-of-2 Multisig セキュリティ",
+          "description": "ブラウザ拡張機能とモバイルアプリによる革新的な BIP48 デュアルデバイスセキュリティ。すべてのトランザクションに両デバイスが必要 — 究極の保護。"
         },
         "4": {
-          "title": "__TODO_TRANSLATE__ Security Audited & Open Source",
-          "description": "__TODO_TRANSLATE__ Fully transparent, verifiable code professionally audited by Halborn security experts. Open source with enterprise-grade security standards."
+          "title": "セキュリティ監査済み & オープンソース",
+          "description": "Halborn セキュリティの専門家によりプロが監査した完全に透明で検証可能なコード。エンタープライズグレードのセキュリティ基準のオープンソース。"
         },
         "5": {
-          "title": "__TODO_TRANSLATE__ Advanced dApp Integration",
-          "description": "__TODO_TRANSLATE__ WalletConnect v2 support, EIP-712 message signing, and comprehensive browser integration for seamless dApp connectivity."
+          "title": "高度な dApp 統合",
+          "description": "WalletConnect v2 サポート、EIP-712 メッセージ署名、シームレスな dApp 接続のための包括的なブラウザ統合。"
         }
       }
     },
     "comparison": {
-      "titlePrefix": "__TODO_TRANSLATE__ Why Choose",
-      "titleHighlight": "__TODO_TRANSLATE__ SSP Wallet",
-      "titleSuffix": "__TODO_TRANSLATE__ ?",
-      "description": "__TODO_TRANSLATE__ Compare SSP Wallet to other crypto storage methods and see the difference.",
+      "titlePrefix": "なぜ選ぶ",
+      "titleHighlight": "SSP Wallet",
+      "titleSuffix": "？",
+      "description": "SSP Wallet と他の暗号資産保管方法を比較して違いを確認してください。",
       "columns": {
-        "feature": "__TODO_TRANSLATE__ Feature",
-        "ssp": "__TODO_TRANSLATE__ SSP Wallet",
-        "selfCustody": "__TODO_TRANSLATE__ Self-Custody Wallets",
-        "custodial": "__TODO_TRANSLATE__ Custodial Wallets",
-        "hardware": "__TODO_TRANSLATE__ Hardware Wallets",
-        "exchange": "__TODO_TRANSLATE__ Crypto Exchanges"
+        "feature": "機能",
+        "ssp": "SSP Wallet",
+        "selfCustody": "セルフカストディウォレット",
+        "custodial": "カストディアルウォレット",
+        "hardware": "ハードウェアウォレット",
+        "exchange": "暗号資産取引所"
       },
       "values": {
-        "limited": "__TODO_TRANSLATE__ Limited",
-        "some": "__TODO_TRANSLATE__ Some",
-        "varies": "__TODO_TRANSLATE__ Varies",
-        "rare": "__TODO_TRANSLATE__ Rare",
-        "na": "__TODO_TRANSLATE__ N/A"
+        "limited": "限定的",
+        "some": "一部",
+        "varies": "様々",
+        "rare": "まれ",
+        "na": "N/A"
       },
       "rows": {
         "0": {
-          "feature": "__TODO_TRANSLATE__ True 2-of-2 Multisig",
-          "description": "__TODO_TRANSLATE__ BIP48 true multisignature with dual-device requirement"
+          "feature": "真の 2-of-2 Multisig",
+          "description": "デュアルデバイス要件を持つ BIP48 真のマルチシグネチャ"
         },
         "1": {
-          "feature": "__TODO_TRANSLATE__ Built-in Crypto Swap",
-          "description": "__TODO_TRANSLATE__ Native DEX integration for seamless token swapping"
+          "feature": "組み込みの暗号資産スワップ",
+          "description": "シームレスなトークンスワップのためのネイティブ DEX 統合"
         },
         "2": {
-          "feature": "__TODO_TRANSLATE__ Buy/Sell Crypto",
-          "description": "__TODO_TRANSLATE__ Fiat on-ramp/off-ramp with payment card support"
+          "feature": "暗号資産の売買",
+          "description": "決済カードサポート付きの法定通貨オン/オフランプ"
         },
         "3": {
-          "feature": "__TODO_TRANSLATE__ Self-Custody Control",
-          "description": "__TODO_TRANSLATE__ You own and control your private keys"
+          "feature": "セルフカストディコントロール",
+          "description": "プライベートキーを所有・管理できます"
         },
         "4": {
-          "feature": "__TODO_TRANSLATE__ Mobile 2FA Security",
-          "description": "__TODO_TRANSLATE__ Mobile app acts as secure second authentication factor"
+          "feature": "モバイル 2FA セキュリティ",
+          "description": "モバイルアプリが安全な 2 番目の認証要素として機能"
         },
         "5": {
-          "feature": "__TODO_TRANSLATE__ DApp Integration",
-          "description": "__TODO_TRANSLATE__ WalletConnect v2 and direct dApp browser support"
+          "feature": "dApp 統合",
+          "description": "WalletConnect v2 とダイレクト dApp ブラウザサポート"
         },
         "6": {
-          "feature": "__TODO_TRANSLATE__ Multi-Chain Support (15+)",
-          "description": "__TODO_TRANSLATE__ Bitcoin, Ethereum, Polygon, BSC, Avalanche, and more"
+          "feature": "マルチチェーンサポート (15 以上)",
+          "description": "Bitcoin、Ethereum、Polygon、BSC、Avalanche など"
         },
         "7": {
-          "feature": "__TODO_TRANSLATE__ Zero Counterparty Risk",
-          "description": "__TODO_TRANSLATE__ No risk of platform bankruptcy or seizure"
+          "feature": "カウンターパーティリスクゼロ",
+          "description": "プラットフォームの破綻や差し押さえのリスクなし"
         },
         "8": {
-          "feature": "__TODO_TRANSLATE__ Open Source",
-          "description": "__TODO_TRANSLATE__ Fully transparent and verifiable code"
+          "feature": "オープンソース",
+          "description": "完全に透明で検証可能なコード"
         },
         "9": {
-          "feature": "__TODO_TRANSLATE__ Security Audited",
-          "description": "__TODO_TRANSLATE__ Professional security audit by leading firms"
+          "feature": "セキュリティ監査済み",
+          "description": "大手企業によるプロのセキュリティ監査"
         },
         "10": {
-          "feature": "__TODO_TRANSLATE__ Account Abstraction (ERC-4337)",
-          "description": "__TODO_TRANSLATE__ Gasless transactions and smart contract wallets"
+          "feature": "アカウント抽象化 (ERC-4337)",
+          "description": "ガスレストランザクションとスマートコントラクトウォレット"
         },
         "11": {
-          "feature": "__TODO_TRANSLATE__ No Single Seed Phrase",
-          "description": "__TODO_TRANSLATE__ Eliminates single seed phrase vulnerability - uses dual-device backup"
+          "feature": "単一のシードフレーズなし",
+          "description": "単一シードフレーズの脆弱性を排除 — デュアルデバイスバックアップを使用"
         },
         "12": {
-          "feature": "__TODO_TRANSLATE__ Ease of Use",
-          "description": "__TODO_TRANSLATE__ Simple, intuitive interface for both beginners and experts"
+          "feature": "使いやすさ",
+          "description": "初心者から専門家まで対応したシンプルで直感的なインターフェース"
         },
         "13": {
-          "feature": "__TODO_TRANSLATE__ Transaction Speed",
-          "description": "__TODO_TRANSLATE__ Fast transaction signing and blockchain interaction"
+          "feature": "トランザクション速度",
+          "description": "高速なトランザクション署名とブロックチェーンとのやり取り"
         },
         "14": {
-          "feature": "__TODO_TRANSLATE__ Privacy Protection",
-          "description": "__TODO_TRANSLATE__ No personal data collection or transaction tracking"
+          "feature": "プライバシー保護",
+          "description": "個人データの収集やトランザクション追跡なし"
         }
       },
-      "ctaDownload": "__TODO_TRANSLATE__ Download SSP Wallet",
-      "ctaGuide": "__TODO_TRANSLATE__ Read the Setup Guide",
-      "ctaEnterprise": "__TODO_TRANSLATE__ SSP for Business"
+      "ctaDownload": "SSP Wallet をダウンロード",
+      "ctaGuide": "セットアップガイドを読む",
+      "ctaEnterprise": "ビジネス向け SSP"
     }
   },
   "Guide": {
-    "metaTitle": "__TODO_TRANSLATE__ Setup Guide - SSP Wallet | Complete Installation Instructions",
-    "metaDescription": "__TODO_TRANSLATE__ Step-by-step guide to install and set up SSP Wallet and SSP Key. Complete setup instructions for secure crypto wallet with multi-signature protection.",
-    "breadcrumbLabel": "__TODO_TRANSLATE__ Setup Guide",
-    "videoJsonLdName": "__TODO_TRANSLATE__ How to Install SSP Wallet and SSP Key",
-    "videoJsonLdDescription": "__TODO_TRANSLATE__ Complete video walkthrough: install the SSP Wallet browser extension and sync the SSP Key mobile app for 2-of-2 multisignature security.",
-    "howToJsonLdName": "__TODO_TRANSLATE__ How to Install SSP Wallet & SSP Key",
-    "howToJsonLdDescription": "__TODO_TRANSLATE__ Complete installation guide for the SSP Wallet browser extension and the SSP Key mobile companion app required for 2-of-2 multisignature security.",
-    "howToSupplyDesktop": "__TODO_TRANSLATE__ Desktop browser (Chrome, Brave, or Firefox)",
-    "howToSupplyMobile": "__TODO_TRANSLATE__ Mobile device (iOS 15.1+ or Android 7+)",
-    "heroBadge": "__TODO_TRANSLATE__ Complete Setup Guide",
-    "heroTitle": "__TODO_TRANSLATE__ How to Install SSP Wallet & SSP Key",
-    "heroDescriptionPart1": "__TODO_TRANSLATE__ SSP requires a",
-    "heroDescriptionStrong": "__TODO_TRANSLATE__ 2-step setup process",
-    "heroDescriptionPart2": "__TODO_TRANSLATE__ : install the browser extension AND the mobile app. Both devices are required for the secure 2-of-2 multisignature system that protects your crypto.",
-    "browserExtensionTitle": "__TODO_TRANSLATE__ Browser Extension",
-    "browserExtensionSubtitle": "__TODO_TRANSLATE__ Install wallet",
-    "mobileKeyTitle": "__TODO_TRANSLATE__ Mobile Key",
-    "mobileKeySubtitle": "__TODO_TRANSLATE__ Mobile auth",
-    "videoTitle": "__TODO_TRANSLATE__ Video Setup Guide",
-    "videoSubtitle": "__TODO_TRANSLATE__ Complete walkthrough",
-    "videoDescription": "__TODO_TRANSLATE__ Watch our comprehensive video tutorial that showcases how to set up both SSP Wallet and SSP Key with detailed step-by-step instructions.",
-    "videoUnsupported": "__TODO_TRANSLATE__ Your browser does not support the video tag.",
-    "videoBullet1": "__TODO_TRANSLATE__ Browser extension installation",
-    "videoBullet2": "__TODO_TRANSLATE__ Mobile app setup and sync",
-    "videoBullet3": "__TODO_TRANSLATE__ Security best practices",
-    "stepsTitle": "__TODO_TRANSLATE__ Step-by-Step Instructions",
-    "stepsSubtitle": "__TODO_TRANSLATE__ Follow these detailed instructions to set up your secure crypto wallet",
-    "important": "__TODO_TRANSLATE__ Important",
-    "openLink": "__TODO_TRANSLATE__ Open Link →",
-    "androidLabel": "__TODO_TRANSLATE__ Android",
-    "iosLabel": "__TODO_TRANSLATE__ iOS",
+    "metaTitle": "セットアップガイド - SSP Wallet | 完全なインストール手順",
+    "metaDescription": "SSP Wallet と SSP Key のインストール・セットアップのステップごとのガイド。マルチシグネチャ保護付きの安全な暗号資産ウォレットの完全なセットアップ手順。",
+    "breadcrumbLabel": "セットアップガイド",
+    "videoJsonLdName": "SSP Wallet と SSP Key のインストール方法",
+    "videoJsonLdDescription": "完全なビデオウォークスルー：SSP Wallet ブラウザ拡張機能のインストールと 2-of-2 マルチシグネチャセキュリティのための SSP Key モバイルアプリの同期。",
+    "howToJsonLdName": "SSP Wallet & SSP Key のインストール方法",
+    "howToJsonLdDescription": "2-of-2 マルチシグネチャセキュリティに必要な SSP Wallet ブラウザ拡張機能と SSP Key モバイルコンパニオンアプリの完全なインストールガイド。",
+    "howToSupplyDesktop": "デスクトップブラウザ (Chrome、Brave、または Firefox)",
+    "howToSupplyMobile": "モバイルデバイス (iOS 15.1 以上または Android 7 以上)",
+    "heroBadge": "完全セットアップガイド",
+    "heroTitle": "SSP Wallet & SSP Key のインストール方法",
+    "heroDescriptionPart1": "SSP には",
+    "heroDescriptionStrong": "2 ステップのセットアッププロセス",
+    "heroDescriptionPart2": "が必要です：ブラウザ拡張機能とモバイルアプリの両方をインストールしてください。暗号資産を守る安全な 2-of-2 マルチシグネチャシステムには両デバイスが必要です。",
+    "browserExtensionTitle": "ブラウザ拡張機能",
+    "browserExtensionSubtitle": "ウォレットをインストール",
+    "mobileKeyTitle": "モバイルキー",
+    "mobileKeySubtitle": "モバイル認証",
+    "videoTitle": "ビデオセットアップガイド",
+    "videoSubtitle": "完全なウォークスルー",
+    "videoDescription": "SSP Wallet と SSP Key の両方のセットアップ方法を詳細なステップごとの手順とともに紹介する包括的なビデオチュートリアルをご覧ください。",
+    "videoUnsupported": "お使いのブラウザはビデオタグをサポートしていません。",
+    "videoBullet1": "ブラウザ拡張機能のインストール",
+    "videoBullet2": "モバイルアプリのセットアップと同期",
+    "videoBullet3": "セキュリティのベストプラクティス",
+    "stepsTitle": "ステップごとの手順",
+    "stepsSubtitle": "安全な暗号資産ウォレットをセットアップするための詳細な手順に従ってください",
+    "important": "重要",
+    "openLink": "リンクを開く →",
+    "androidLabel": "Android",
+    "iosLabel": "iOS",
     "phases": {
       "0": {
-        "phase": "__TODO_TRANSLATE__ Part One",
-        "title": "__TODO_TRANSLATE__ Installing SSP Wallet",
+        "phase": "パート 1",
+        "title": "SSP Wallet のインストール",
         "steps": {
           "0": {
-            "title": "__TODO_TRANSLATE__ Visit Extension Store",
-            "description": "__TODO_TRANSLATE__ Open your browser and navigate to the SSP Wallet Extension page for your browser (Chrome, Firefox, Brave)",
-            "action": "__TODO_TRANSLATE__ Navigate to extension page"
+            "title": "拡張機能ストアにアクセス",
+            "description": "ブラウザを開き、使用しているブラウザ (Chrome、Firefox、Brave) の SSP Wallet 拡張機能ページに移動します",
+            "action": "拡張機能ページへ移動"
           },
           "1": {
-            "title": "__TODO_TRANSLATE__ Install Extension",
-            "description": "__TODO_TRANSLATE__ Click 'Add to Chrome/Firefox' or 'Install' button. A pop-up window will appear asking if you want to add SSP Wallet. Click 'Add' or 'Install' to complete installation.",
-            "action": "__TODO_TRANSLATE__ Add to browser"
+            "title": "拡張機能をインストール",
+            "description": "「Chrome/Firefox に追加」または「インストール」ボタンをクリックします。SSP Wallet を追加するか確認するポップアップが表示されます。「追加」または「インストール」をクリックしてインストールを完了します。",
+            "action": "ブラウザに追加"
           },
           "2": {
-            "title": "__TODO_TRANSLATE__ Open Wallet",
-            "description": "__TODO_TRANSLATE__ Locate the SSP wallet logo in your browser and click on it. Follow the prompts to get started.",
-            "action": "__TODO_TRANSLATE__ Launch wallet"
+            "title": "ウォレットを開く",
+            "description": "ブラウザで SSP ウォレットのロゴを見つけてクリックします。プロンプトに従って開始します。",
+            "action": "ウォレットを起動"
           },
           "3": {
-            "title": "__TODO_TRANSLATE__ Create Password",
-            "description": "__TODO_TRANSLATE__ Create your password. Please carefully read the SSP Wallet Disclaimer and acknowledge your agreement.",
-            "action": "__TODO_TRANSLATE__ Set password"
+            "title": "パスワードを作成",
+            "description": "パスワードを作成してください。SSP Wallet の免責事項をよく読み、同意を確認してください。",
+            "action": "パスワードを設定"
           },
           "4": {
-            "title": "__TODO_TRANSLATE__ Create Wallet",
-            "description": "__TODO_TRANSLATE__ Click 'Create Wallet' to initialize your new wallet.",
-            "action": "__TODO_TRANSLATE__ Initialize wallet"
+            "title": "ウォレットを作成",
+            "description": "「ウォレットを作成」をクリックして新しいウォレットを初期化します。",
+            "action": "ウォレットを初期化"
           },
           "5": {
-            "title": "__TODO_TRANSLATE__ Backup Seed Phrase",
-            "description": "__TODO_TRANSLATE__ Click 'Show Mnemonic Wallet Seed Phrase.' Store the seed phrase securely and confirm that you have backed it up.",
-            "action": "__TODO_TRANSLATE__ Secure backup"
+            "title": "シードフレーズをバックアップ",
+            "description": "「ウォレットのニーモニックシードフレーズを表示」をクリックします。シードフレーズを安全に保管し、バックアップしたことを確認します。",
+            "action": "安全なバックアップ"
           },
           "6": {
-            "title": "__TODO_TRANSLATE__ Finalize Setup",
-            "description": "__TODO_TRANSLATE__ Click 'Create Wallet' to finalize the process. Your browser wallet is now ready!",
-            "action": "__TODO_TRANSLATE__ Complete setup"
+            "title": "セットアップを完了",
+            "description": "「ウォレットを作成」をクリックしてプロセスを完了します。ブラウザウォレットの準備が整いました！",
+            "action": "セットアップを完了"
           }
         }
       },
       "1": {
-        "phase": "__TODO_TRANSLATE__ Part Two",
-        "title": "__TODO_TRANSLATE__ Installing SSP Key Mobile App",
+        "phase": "パート 2",
+        "title": "SSP Key モバイルアプリのインストール",
         "steps": {
           "0": {
-            "title": "__TODO_TRANSLATE__ Download Mobile App",
-            "description": "__TODO_TRANSLATE__ Download SSP Key on your mobile device and open the application.",
-            "action": "__TODO_TRANSLATE__ Install mobile app"
+            "title": "モバイルアプリをダウンロード",
+            "description": "モバイルデバイスに SSP Key をダウンロードしてアプリを開きます。",
+            "action": "モバイルアプリをインストール"
           },
           "1": {
-            "title": "__TODO_TRANSLATE__ Start Synchronization",
-            "description": "__TODO_TRANSLATE__ Click on 'Synchronize Key' to begin the setup process.",
-            "action": "__TODO_TRANSLATE__ Begin sync"
+            "title": "同期を開始",
+            "description": "「キーを同期」をクリックしてセットアッププロセスを開始します。",
+            "action": "同期を開始"
           },
           "2": {
-            "title": "__TODO_TRANSLATE__ Set Key Password",
-            "description": "__TODO_TRANSLATE__ Set an SSP Key password and confirm it. Then, click 'Setup Key.'",
-            "action": "__TODO_TRANSLATE__ Create key password"
+            "title": "キーパスワードを設定",
+            "description": "SSP Key のパスワードを設定して確認します。次に「キーをセットアップ」をクリックします。",
+            "action": "キーパスワードを作成"
           },
           "3": {
-            "title": "__TODO_TRANSLATE__ Backup Key Seed",
-            "description": "__TODO_TRANSLATE__ Click 'Show Mnemonic Key Seed Phrase.' Store the key seed phrase securely and confirm backup.",
-            "action": "__TODO_TRANSLATE__ Secure key backup"
+            "title": "キーシードをバックアップ",
+            "description": "「キーのニーモニックシードフレーズを表示」をクリックします。キーシードフレーズを安全に保管し、バックアップを確認します。",
+            "action": "キーバックアップを安全に保管"
           },
           "4": {
-            "title": "__TODO_TRANSLATE__ Complete Key Setup",
-            "description": "__TODO_TRANSLATE__ Click 'Setup Key.' SSP Key now serves as second authentication factor for your SSP Wallet.",
-            "action": "__TODO_TRANSLATE__ Finalize key"
+            "title": "キーセットアップを完了",
+            "description": "「キーをセットアップ」をクリックします。SSP Key は SSP Wallet の 2 番目の認証要素として機能するようになりました。",
+            "action": "キーを完了"
           },
           "5": {
-            "title": "__TODO_TRANSLATE__ Scan QR Code",
-            "description": "__TODO_TRANSLATE__ Click 'Scan Code' to synchronize your SSP Key with SSP Wallet. Scan the QR code displayed on your browser.",
-            "action": "__TODO_TRANSLATE__ Sync devices"
+            "title": "QR コードをスキャン",
+            "description": "「コードをスキャン」をクリックして SSP Key を SSP Wallet と同期します。ブラウザに表示された QR コードをスキャンします。",
+            "action": "デバイスを同期"
           },
           "6": {
-            "title": "__TODO_TRANSLATE__ Approve Synchronization",
-            "description": "__TODO_TRANSLATE__ Click 'Approve Synchronization' and confirm with your Key password. You'll be notified of successful sync.",
-            "action": "__TODO_TRANSLATE__ Complete sync"
+            "title": "同期を承認",
+            "description": "「同期を承認」をクリックし、キーパスワードで確認します。同期が成功したことが通知されます。",
+            "action": "同期を完了"
           }
         }
       }
     },
-    "tipsTitle": "__TODO_TRANSLATE__ Security Best Practices",
-    "tipsSubtitle": "__TODO_TRANSLATE__ Follow these important security tips to keep your wallet safe",
+    "tipsTitle": "セキュリティのベストプラクティス",
+    "tipsSubtitle": "ウォレットを安全に保つためにこれらの重要なセキュリティのヒントに従ってください",
     "tips": {
       "0": {
-        "title": "__TODO_TRANSLATE__ Secure Your Seed Phrases",
-        "description": "__TODO_TRANSLATE__ Store both wallet and key seed phrases in a secure, offline location. Never share them with anyone."
+        "title": "シードフレーズを安全に保管",
+        "description": "ウォレットとキーの両方のシードフレーズを安全なオフラインの場所に保管してください。誰とも共有しないでください。"
       },
       "1": {
-        "title": "__TODO_TRANSLATE__ Use Strong Passwords",
-        "description": "__TODO_TRANSLATE__ Create unique, strong passwords for both your wallet and mobile key app."
+        "title": "強力なパスワードを使用",
+        "description": "ウォレットとモバイルキーアプリの両方に固有の強力なパスワードを作成してください。"
       },
       "2": {
-        "title": "__TODO_TRANSLATE__ Keep Mobile Secure",
-        "description": "__TODO_TRANSLATE__ Ensure your mobile device has screen lock and consider using biometric authentication."
+        "title": "モバイルを安全に保つ",
+        "description": "モバイルデバイスにスクリーンロックが設定されていることを確認し、生体認証の使用を検討してください。"
       }
     },
-    "successTitle": "__TODO_TRANSLATE__ Congratulations!",
-    "successDescription": "__TODO_TRANSLATE__ By following these steps, you have successfully installed and set up both SSP Wallet and SSP Key, ensuring a secure and seamless user experience.",
-    "successDownload": "__TODO_TRANSLATE__ Download Now",
-    "successSupport": "__TODO_TRANSLATE__ Get Support"
+    "successTitle": "おめでとうございます！",
+    "successDescription": "これらの手順に従って、SSP Wallet と SSP Key の両方を正常にインストール・セットアップしました。安全でシームレスなユーザー体験をお楽しみください。",
+    "successDownload": "今すぐダウンロード",
+    "successSupport": "サポートを受ける"
   },
   "Support": {
-    "metaTitle": "__TODO_TRANSLATE__ Support - SSP Wallet | Get Help & Technical Support",
-    "metaDescription": "__TODO_TRANSLATE__ Get comprehensive support for SSP Wallet. Find answers to FAQs, access documentation, connect with community, or contact our expert support team.",
-    "breadcrumbLabel": "__TODO_TRANSLATE__ Support",
-    "heroBadge": "__TODO_TRANSLATE__ Support Center",
-    "heroTitle": "__TODO_TRANSLATE__ How can we help you?",
-    "heroDescription": "__TODO_TRANSLATE__ Find answers to common questions, access our documentation, or get in touch with our support team.",
+    "metaTitle": "サポート - SSP Wallet | ヘルプと技術サポート",
+    "metaDescription": "SSP Wallet の包括的なサポート。FAQ の回答を見つけ、ドキュメントにアクセスし、コミュニティとつながるか、専門のサポートチームにお問い合わせください。",
+    "breadcrumbLabel": "サポート",
+    "heroBadge": "サポートセンター",
+    "heroTitle": "どのようなことでお手伝いできますか？",
+    "heroDescription": "よくある質問の回答を見つけたり、ドキュメントにアクセスしたり、サポートチームにお問い合わせください。",
     "quickLinks": {
-      "docsTitle": "__TODO_TRANSLATE__ Docs",
-      "docsSubtitle": "__TODO_TRANSLATE__ Guides",
-      "communityTitle": "__TODO_TRANSLATE__ Community",
-      "communitySubtitle": "__TODO_TRANSLATE__ Chat",
-      "supportTitle": "__TODO_TRANSLATE__ Support",
-      "supportSubtitle": "__TODO_TRANSLATE__ Help"
+      "docsTitle": "ドキュメント",
+      "docsSubtitle": "ガイド",
+      "communityTitle": "コミュニティ",
+      "communitySubtitle": "チャット",
+      "supportTitle": "サポート",
+      "supportSubtitle": "ヘルプ"
     },
-    "channelsTitle": "__TODO_TRANSLATE__ Get Support",
-    "channelsSubtitle": "__TODO_TRANSLATE__ Choose the best way to get help based on your needs",
+    "channelsTitle": "サポートを受ける",
+    "channelsSubtitle": "ご要望に合った最善のサポート方法をお選びください",
     "channels": {
       "documentation": {
-        "title": "__TODO_TRANSLATE__ Documentation",
-        "description": "__TODO_TRANSLATE__ Comprehensive guides and docs",
+        "title": "ドキュメント",
+        "description": "包括的なガイドとドキュメント",
         "links": {
-          "completeDocs": "__TODO_TRANSLATE__ Complete Documentation",
-          "setupGuide": "__TODO_TRANSLATE__ Setup Guide",
-          "featureDocs": "__TODO_TRANSLATE__ Feature Documentation"
+          "completeDocs": "完全なドキュメント",
+          "setupGuide": "セットアップガイド",
+          "featureDocs": "機能ドキュメント"
         }
       },
       "community": {
-        "title": "__TODO_TRANSLATE__ Community Support",
-        "description": "__TODO_TRANSLATE__ Get help from our community",
+        "title": "コミュニティサポート",
+        "description": "コミュニティからサポートを受ける",
         "links": {
-          "github": "__TODO_TRANSLATE__ GitHub Discussions",
-          "discord": "__TODO_TRANSLATE__ Discord Community",
-          "twitter": "__TODO_TRANSLATE__ Twitter Support"
+          "github": "GitHub ディスカッション",
+          "discord": "Discord コミュニティ",
+          "twitter": "Twitter サポート"
         }
       },
       "direct": {
-        "title": "__TODO_TRANSLATE__ Direct Support",
-        "description": "__TODO_TRANSLATE__ Get personalized technical assistance",
+        "title": "ダイレクトサポート",
+        "description": "パーソナライズされた技術サポートを受ける",
         "links": {
-          "ticketSystem": "__TODO_TRANSLATE__ Support Ticketing System",
-          "email": "__TODO_TRANSLATE__ Email Support"
+          "ticketSystem": "サポートチケットシステム",
+          "email": "メールサポート"
         }
       }
     },
-    "faqTitle": "__TODO_TRANSLATE__ Frequently Asked Questions",
-    "faqSubtitle": "__TODO_TRANSLATE__ Find quick answers to the most common questions about SSP Wallet",
+    "faqTitle": "よくある質問",
+    "faqSubtitle": "SSP Wallet に関するよくある質問への簡単な回答を見つけてください",
     "faqCategories": {
       "gettingStarted": {
-        "title": "__TODO_TRANSLATE__ Getting Started",
+        "title": "はじめに",
         "items": {
           "0": {
-            "question": "__TODO_TRANSLATE__ What is SSP Wallet?",
-            "answer": "__TODO_TRANSLATE__ SSP Wallet is a true 2-of-2 multisignature system consisting of two components: SSP Wallet (browser extension) and SSP Key (mobile 2FA app). Both devices are required to authorize transactions, providing unmatched security for your crypto assets across 15+ blockchains."
+            "question": "SSP Wallet とは何ですか？",
+            "answer": "SSP Wallet は、2 つのコンポーネントで構成される真の 2-of-2 マルチシグネチャシステムです：SSP Wallet（ブラウザ拡張機能）と SSP Key（モバイル 2FA アプリ）。トランザクションを承認するには両デバイスが必要であり、15 以上のブロックチェーンにわたる暗号資産に比類なきセキュリティを提供します。"
           },
           "1": {
-            "question": "__TODO_TRANSLATE__ How do I install SSP Wallet?",
-            "answer": "__TODO_TRANSLATE__ You can install SSP Wallet as a Chrome extension from the Chrome Web Store. Visit our download page and follow our comprehensive setup guide for step-by-step instructions."
+            "question": "SSP Wallet をインストールするにはどうすればよいですか？",
+            "answer": "Chrome Web Store から SSP Wallet を Chrome 拡張機能としてインストールできます。ダウンロードページをご覧いただき、包括的なセットアップガイドのステップごとの手順に従ってください。"
           },
           "2": {
-            "question": "__TODO_TRANSLATE__ Is SSP Wallet free to use?",
-            "answer": "__TODO_TRANSLATE__ Yes, SSP Wallet is completely free to download and use. We don't charge any fees for the wallet itself, though you'll still pay network transaction fees when making blockchain transactions."
+            "question": "SSP Wallet は無料で使用できますか？",
+            "answer": "はい、SSP Wallet は完全に無料でダウンロードして使用できます。ウォレット自体には料金はかかりませんが、ブロックチェーントランザクションを行う際には引き続きネットワークトランザクション手数料をお支払いいただきます。"
           },
           "3": {
-            "question": "__TODO_TRANSLATE__ What cryptocurrencies does SSP Wallet support?",
-            "answer": "__TODO_TRANSLATE__ SSP Wallet supports 15+ blockchains including Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), Zcash (ZEC), Ravencoin (RVN), Dogecoin (DOGE), Bitcoin Cash (BCH), Flux (FLUX), Polygon (MATIC), BSC, Avalanche (AVAX), and Base. For EVM-compatible chains, we support all ERC-20 tokens and you can import your own custom token lists. Solana support is coming soon."
+            "question": "SSP Wallet はどの暗号資産をサポートしていますか？",
+            "answer": "SSP Wallet は Bitcoin (BTC)、Ethereum (ETH)、Litecoin (LTC)、Zcash (ZEC)、Ravencoin (RVN)、Dogecoin (DOGE)、Bitcoin Cash (BCH)、Flux (FLUX)、Polygon (MATIC)、BSC、Avalanche (AVAX)、Base を含む 15 以上のブロックチェーンをサポートしています。EVM 互換チェーンでは、すべての ERC-20 トークンをサポートしており、カスタムトークンリストもインポートできます。Solana サポートも近日公開予定です。"
           },
           "4": {
-            "question": "__TODO_TRANSLATE__ Where can I find the complete list of supported assets?",
-            "answerBefore": "__TODO_TRANSLATE__ For a comprehensive and up-to-date list of all natively supported chains and tokens, please refer to our official ",
-            "answerLink": "__TODO_TRANSLATE__ SSP Asset Spreadsheet",
-            "answerAfter": "__TODO_TRANSLATE__ . This spreadsheet is regularly updated with new additions and contains detailed information about each supported asset."
+            "question": "サポートされているアセットの完全なリストはどこで確認できますか？",
+            "answerBefore": "ネイティブにサポートされているすべてのチェーンとトークンの包括的かつ最新のリストについては、公式の ",
+            "answerLink": "SSP アセットスプレッドシート",
+            "answerAfter": " をご参照ください。このスプレッドシートは新しい追加とともに定期的に更新され、各サポートアセットに関する詳細情報が含まれています。"
           },
           "5": {
-            "question": "__TODO_TRANSLATE__ Can I use SSP Wallet with dApps and DeFi?",
-            "answer": "__TODO_TRANSLATE__ Yes! SSP Wallet features full WalletConnect v2 (Reown) integration, allowing you to connect to thousands of decentralized applications across all supported EVM chains. You can use DeFi protocols, NFT marketplaces, and other dApps while maintaining the security of the 2-of-2 multisignature system."
+            "question": "SSP Wallet で dApp や DeFi を使用できますか？",
+            "answer": "はい！SSP Wallet は完全な WalletConnect v2 (Reown) 統合を備えており、サポートされているすべての EVM チェーンで何千もの分散型アプリケーションに接続できます。2-of-2 マルチシグネチャシステムのセキュリティを維持しながら、DeFi プロトコル、NFT マーケットプレイス、その他の dApp を使用できます。"
           },
           "6": {
-            "question": "__TODO_TRANSLATE__ What are FluxNodes and how can I use them?",
-            "answer": "__TODO_TRANSLATE__ FluxNodes are nodes in the Flux network that help secure and maintain the blockchain. With SSP Wallet, you can easily set up and manage Fluxnodes, monitor their performance, and claim rewards directly through the wallet interface. Fluxnodes require a collateral amount of FLUX tokens and provide passive income through network rewards."
+            "question": "FluxNodes とは何ですか？どのように使用できますか？",
+            "answer": "FluxNodes は、ブロックチェーンのセキュリティと維持を助ける Flux ネットワークのノードです。SSP Wallet を使用すると、Fluxnodes を簡単にセットアップして管理し、パフォーマンスを監視し、ウォレットインターフェースから直接報酬を受け取ることができます。Fluxnodes は担保として FLUX トークンが必要で、ネットワーク報酬によって受動的な収入を提供します。"
           },
           "7": {
-            "question": "__TODO_TRANSLATE__ Does SSP Wallet support fiat onboarding and offboarding?",
-            "answer": "__TODO_TRANSLATE__ Yes! SSP Wallet supports fiat onboarding and offboarding through integrated partners. You can buy cryptocurrencies directly with your credit card, bank transfer, or other payment methods, and sell your crypto back to fiat currency. This feature is available in supported regions and requires KYC verification."
+            "question": "SSP Wallet は法定通貨のオンボーディングとオフボーディングをサポートしていますか？",
+            "answer": "はい！SSP Wallet は統合パートナーを通じて法定通貨のオンボーディングとオフボーディングをサポートしています。クレジットカード、銀行振込、またはその他の支払い方法で直接暗号資産を購入し、暗号資産を法定通貨に売却することができます。この機能はサポートされている地域で利用可能で、KYC 確認が必要です。"
           },
           "8": {
-            "question": "__TODO_TRANSLATE__ Can I swap cryptocurrencies within SSP Wallet?",
-            "answer": "__TODO_TRANSLATE__ Yes, SSP Wallet includes built-in crypto swap functionality. You can easily exchange one cryptocurrency for another across supported blockchains through our integrated swap partners. The swap feature provides competitive rates and executes swaps securely while maintaining your private keys."
+            "question": "SSP Wallet 内で暗号資産をスワップできますか？",
+            "answer": "はい、SSP Wallet には組み込みの暗号資産スワップ機能が含まれています。統合されたスワップパートナーを通じて、サポートされているブロックチェーン間で一方の暗号資産を別のものと簡単に交換できます。スワップ機能は競争力のあるレートを提供し、プライベートキーを維持しながら安全にスワップを実行します。"
           },
           "9": {
-            "question": "__TODO_TRANSLATE__ Can I export my transaction history?",
-            "answer": "__TODO_TRANSLATE__ Yes! SSP Wallet supports CSV export of your transaction history. You can export detailed transaction records for accounting, tax purposes, or personal record-keeping. The CSV export includes transaction dates, amounts, addresses, fees, and other relevant details for each supported blockchain."
+            "question": "取引履歴をエクスポートできますか？",
+            "answer": "はい！SSP Wallet は取引履歴の CSV エクスポートをサポートしています。会計、税務目的、または個人記録のために詳細なトランザクション記録をエクスポートできます。CSV エクスポートには、サポートされている各ブロックチェーンのトランザクション日付、金額、アドレス、手数料、その他の関連詳細が含まれています。"
           },
           "10": {
-            "question": "__TODO_TRANSLATE__ How can I request a new coin to be added?",
-            "answer": "__TODO_TRANSLATE__ We encourage users to reach out to our support team or contribute directly on our GitHub repository to request new cryptocurrency support. We evaluate each request based on community demand, technical feasibility, and security considerations."
+            "question": "新しいコインの追加をリクエストするにはどうすればよいですか？",
+            "answer": "サポートチームへのご連絡や、GitHub リポジトリへの直接投稿を通じて新しい暗号資産サポートをリクエストすることをお勧めします。各リクエストはコミュニティの需要、技術的な実現可能性、セキュリティ上の考慮事項に基づいて評価します。"
           },
           "11": {
-            "question": "__TODO_TRANSLATE__ Is there a mobile wallet available?",
-            "answer": "__TODO_TRANSLATE__ Good news! We are actively working on expanding SSP Wallet to mobile platforms. Currently, SSP Wallet consists of a browser extension (SSP Wallet) and a mobile 2FA app (SSP Key). A full mobile wallet experience is in development."
+            "question": "モバイルウォレットはありますか？",
+            "answer": "朗報です！私たちは SSP Wallet をモバイルプラットフォームに拡大する作業を積極的に進めています。現在、SSP Wallet はブラウザ拡張機能 (SSP Wallet) とモバイル 2FA アプリ (SSP Key) で構成されています。完全なモバイルウォレット体験は開発中です。"
           },
           "12": {
-            "question": "__TODO_TRANSLATE__ Can I use SSP Wallet on multiple devices?",
-            "answer": "__TODO_TRANSLATE__ Yes, you can use SSP Wallet on multiple devices. To set up on a new device, you'll need to restore your wallet and key using the corresponding seed phrases. Each device requires proper setup and synchronization."
+            "question": "SSP Wallet を複数のデバイスで使用できますか？",
+            "answer": "はい、SSP Wallet は複数のデバイスで使用できます。新しいデバイスにセットアップするには、対応するシードフレーズを使用してウォレットとキーを復元する必要があります。各デバイスには適切なセットアップと同期が必要です。"
           },
           "13": {
-            "question": "__TODO_TRANSLATE__ Is there a transaction limit with SSP Wallet?",
-            "answer": "__TODO_TRANSLATE__ SSP Wallet doesn't impose transaction limits. However, you're subject to the blockchain network limits and your available balance. Some networks may have minimum transaction amounts or maximum transaction sizes based on their protocols."
+            "question": "SSP Wallet にはトランザクション制限がありますか？",
+            "answer": "SSP Wallet はトランザクション制限を設けていません。ただし、ブロックチェーンネットワークの制限と利用可能な残高の影響を受けます。一部のネットワークでは、プロトコルに基づいて最小トランザクション額または最大トランザクションサイズがある場合があります。"
           },
           "14": {
-            "question": "__TODO_TRANSLATE__ Can I use SSP Wallet offline?",
-            "answer": "__TODO_TRANSLATE__ SSP Wallet requires an internet connection for most operations including transaction broadcasting, balance updates, and synchronization between devices. While you can view some cached information offline, you cannot send transactions without connectivity."
+            "question": "SSP Wallet をオフラインで使用できますか？",
+            "answer": "SSP Wallet は、トランザクションのブロードキャスト、残高の更新、デバイス間の同期など、ほとんどの操作にインターネット接続が必要です。一部のキャッシュ情報はオフラインで閲覧できますが、接続なしにトランザクションを送信することはできません。"
           }
         }
       },
       "security": {
-        "title": "__TODO_TRANSLATE__ Security & Privacy",
+        "title": "セキュリティとプライバシー",
         "items": {
           "0": {
-            "question": "__TODO_TRANSLATE__ How secure is SSP Wallet?",
-            "answer": "__TODO_TRANSLATE__ SSP Wallet uses multi-signature technology with mobile-integrated authentication, providing two-key protection. We use cutting-edge encryption and don't store any of your data - everything is stored locally and controlled by you."
+            "question": "SSP Wallet はどれほど安全ですか？",
+            "answer": "SSP Wallet はモバイル統合認証を備えたマルチシグネチャ技術を使用し、2 つの鍵による保護を提供します。最先端の暗号化を使用し、データを一切保存しません — すべてはローカルに保存され、あなたが管理します。"
           },
           "1": {
-            "question": "__TODO_TRANSLATE__ What is SSP Key and why do I need it?",
-            "answer": "__TODO_TRANSLATE__ SSP Key is a mobile app that holds the second private key required for the 2-of-2 multisignature system. Every transaction must be signed by both your browser extension AND your mobile device. This ensures your funds remain secure even if one device is compromised. SSP Key is available for iOS 15.1+ and Android 7+."
+            "question": "SSP Key とは何ですか？なぜ必要ですか？",
+            "answer": "SSP Key は、2-of-2 マルチシグネチャシステムに必要な 2 番目のプライベートキーを保持するモバイルアプリです。すべてのトランザクションはブラウザ拡張機能とモバイルデバイスの両方で署名される必要があります。これにより、1 台のデバイスが侵害されても資金は安全に保たれます。SSP Key は iOS 15.1 以上および Android 7 以上で利用可能です。"
           },
           "2": {
-            "question": "__TODO_TRANSLATE__ Can I recover my wallet if I lose my device?",
-            "answer": "__TODO_TRANSLATE__ Yes, you can recover your wallet using your seed phrase. Both your wallet and key have separate seed phrases that should be stored securely offline. Never share your seed phrases with anyone."
+            "question": "デバイスを紛失した場合にウォレットを復旧できますか？",
+            "answer": "はい、シードフレーズを使用してウォレットを復旧できます。ウォレットとキーにはそれぞれ別々のシードフレーズがあり、オフラインの安全な場所に保管する必要があります。シードフレーズは誰とも共有しないでください。"
           },
           "3": {
-            "question": "__TODO_TRANSLATE__ Does SSP Wallet collect my personal data?",
-            "answer": "__TODO_TRANSLATE__ No, SSP Wallet is committed to not storing any data information. Your private keys, transaction history, and personal data remain entirely under your control and are stored locally on your devices."
+            "question": "SSP Wallet は個人データを収集しますか？",
+            "answer": "いいえ、SSP Wallet はデータ情報を一切保存しないことを約束しています。プライベートキー、取引履歴、個人データはすべてあなたのコントロール下にあり、デバイスにローカルで保存されます。"
           },
           "4": {
-            "question": "__TODO_TRANSLATE__ What are deterministic builds and why do they matter?",
-            "answer": "__TODO_TRANSLATE__ Deterministic builds ensure that identical source code produces identical binary outputs. SSP Wallet uses Docker-based deterministic builds that enable anyone to independently verify that the distributed extension matches exactly what was built from the published source code. This eliminates potential supply chain attacks and provides cryptographic proof of build integrity."
+            "question": "決定論的ビルドとは何ですか？なぜ重要ですか？",
+            "answer": "決定論的ビルドは、同一のソースコードが同一のバイナリ出力を生成することを保証します。SSP Wallet は Docker ベースの決定論的ビルドを使用しており、誰でも配布されている拡張機能が公開されたソースコードから構築されたものと完全に一致することを独自に検証できます。これにより潜在的なサプライチェーン攻撃が排除され、ビルドの整合性の暗号学的証明が提供されます。"
           },
           "5": {
-            "question": "__TODO_TRANSLATE__ How can I verify the deterministic build of SSP Wallet?",
-            "answerIntro": "__TODO_TRANSLATE__ To verify SSP Wallet builds: 1) Download the release files (Chrome/Firefox zips, SHA256SUMS, SHA256SUMS.asc) from ",
-            "answerLink1": "__TODO_TRANSLATE__ GitHub releases",
-            "answerMiddle1": "__TODO_TRANSLATE__ . 2) Import our public key from ",
-            "answerLink2": "__TODO_TRANSLATE__ OpenPGP keyserver",
-            "answerMiddle2": "__TODO_TRANSLATE__ . 3) Verify GPG signature: ",
-            "answerCode1": "__TODO_TRANSLATE__ gpg --verify SHA256SUMS.asc SHA256SUMS",
-            "answerMiddle3": "__TODO_TRANSLATE__ . 4) Verify hashes: ",
-            "answerCode2": "__TODO_TRANSLATE__ sha256sum -c SHA256SUMS",
-            "answerMiddle4": "__TODO_TRANSLATE__ . 5) Optionally reproduce the build: ",
-            "answerCode3": "__TODO_TRANSLATE__ git checkout [version] && npm run build:deterministic",
-            "answerOutro": "__TODO_TRANSLATE__ ."
+            "question": "SSP Wallet の決定論的ビルドを検証するにはどうすればよいですか？",
+            "answerIntro": "SSP Wallet のビルドを検証するには：1) リリースファイル (Chrome/Firefox の zip、SHA256SUMS、SHA256SUMS.asc) を ",
+            "answerLink1": "GitHub リリース",
+            "answerMiddle1": " からダウンロードします。2) 公開鍵を ",
+            "answerLink2": "OpenPGP キーサーバー",
+            "answerMiddle2": " からインポートします。3) GPG 署名を検証します: ",
+            "answerCode1": "gpg --verify SHA256SUMS.asc SHA256SUMS",
+            "answerMiddle3": "。4) ハッシュを検証します: ",
+            "answerCode2": "sha256sum -c SHA256SUMS",
+            "answerMiddle4": "。5) 任意でビルドを再現します: ",
+            "answerCode3": "git checkout [version] && npm run build:deterministic",
+            "answerOutro": "。"
           },
           "6": {
-            "question": "__TODO_TRANSLATE__ Who signs the SSP Wallet releases?",
-            "answerBefore": "__TODO_TRANSLATE__ All SSP Wallet releases are cryptographically signed by security@runonflux.io using GPG signatures. Our public key is available on ",
-            "answerLink": "__TODO_TRANSLATE__ OpenPGP keyserver",
-            "answerAfter": "__TODO_TRANSLATE__  for verification. The deterministic build process includes Docker-based isolated environments and comprehensive checksums (SHA256SUMS) that are also GPG-signed to ensure authenticity and integrity."
+            "question": "SSP Wallet のリリースに署名するのは誰ですか？",
+            "answerBefore": "すべての SSP Wallet リリースは GPG 署名を使用して security@runonflux.io によって暗号学的に署名されています。公開鍵は検証のために ",
+            "answerLink": "OpenPGP キーサーバー",
+            "answerAfter": " で公開されています。決定論的ビルドプロセスには Docker ベースの隔離された環境と、真正性と整合性を確保するために GPG 署名された包括的なチェックサム (SHA256SUMS) が含まれます。"
           },
           "7": {
-            "question": "__TODO_TRANSLATE__ Can I use multiple SSP Keys with one SSP Wallet?",
-            "answer": "__TODO_TRANSLATE__ No, each SSP Wallet can only be paired with one SSP Key. The 2-of-2 multisignature system requires device-specific synchronization for public nonces and chain data. Using multiple SSP Keys would cause synchronization conflicts."
+            "question": "1 つの SSP Wallet に複数の SSP Key を使用できますか？",
+            "answer": "いいえ、各 SSP Wallet はペアリングできる SSP Key は 1 つだけです。2-of-2 マルチシグネチャシステムは、公開ノンスとチェーンデータのデバイス固有の同期を必要とします。複数の SSP Key を使用すると同期の競合が発生します。"
           }
         }
       },
       "technical": {
-        "title": "__TODO_TRANSLATE__ Technical Support",
+        "title": "技術サポート",
         "items": {
           "0": {
-            "question": "__TODO_TRANSLATE__ Which browsers are supported?",
-            "answer": "__TODO_TRANSLATE__ SSP Wallet supports Google Chrome, Brave, Firefox, and other Chromium-based browsers. You can download the Chrome Web Store version for Chromium browsers or the Firefox version directly from our GitHub releases."
+            "question": "どのブラウザがサポートされていますか？",
+            "answer": "SSP Wallet は Google Chrome、Brave、Firefox、およびその他の Chromium ベースのブラウザをサポートしています。Chromium ブラウザ向けの Chrome Web Store バージョン、または Firefox バージョンを GitHub リリースから直接ダウンロードできます。"
           },
           "1": {
-            "question": "__TODO_TRANSLATE__ I'm having trouble syncing my mobile key",
-            "answer": "__TODO_TRANSLATE__ Make sure both devices are connected to the internet, the QR code is clearly visible, and you're using the latest versions of both the browser extension and mobile app. Try restarting both applications if sync fails."
+            "question": "モバイルキーの同期に問題があります",
+            "answer": "両方のデバイスがインターネットに接続されていること、QR コードが明確に見えること、ブラウザ拡張機能とモバイルアプリの両方の最新バージョンを使用していることを確認してください。同期が失敗した場合は、両方のアプリを再起動してみてください。"
           },
           "2": {
-            "question": "__TODO_TRANSLATE__ My transaction is stuck or pending",
-            "answer": "__TODO_TRANSLATE__ Blockchain transactions can sometimes take time depending on network congestion. Check the transaction status on a blockchain explorer. If using Ethereum, you may need to increase gas fees for faster confirmation."
+            "question": "トランザクションがスタックしている、または保留中です",
+            "answer": "ブロックチェーントランザクションは、ネットワークの混雑によって時間がかかる場合があります。ブロックチェーンエクスプローラーでトランザクションのステータスを確認してください。Ethereum を使用している場合は、より迅速な確認のためにガス代を増やす必要があるかもしれません。"
           },
           "3": {
-            "question": "__TODO_TRANSLATE__ How do I update SSP Wallet?",
-            "answer": "__TODO_TRANSLATE__ Browser extensions typically update automatically. You can manually check for updates in your browser's extension management page. For the mobile app, check your device's app store for updates."
+            "question": "SSP Wallet を更新するにはどうすればよいですか？",
+            "answer": "ブラウザ拡張機能は通常自動的に更新されます。ブラウザの拡張機能管理ページで手動で更新を確認することもできます。モバイルアプリについては、デバイスのアプリストアで更新を確認してください。"
           },
           "4": {
-            "question": "__TODO_TRANSLATE__ What is SSP Relay and how does it work?",
-            "answer": "__TODO_TRANSLATE__ SSP Relay is an open-source relay service that acts as a bridge between your SSP Wallet and SSP Key. It provides market information, fee data, enables transaction synchronization, and delivers push notifications. The relay enhances the user experience while maintaining security."
+            "question": "SSP Relay とは何ですか？どのように機能しますか？",
+            "answer": "SSP Relay は SSP Wallet と SSP Key の間のブリッジとして機能するオープンソースのリレーサービスです。市場情報、手数料データを提供し、トランザクションの同期を可能にし、プッシュ通知を配信します。リレーはセキュリティを維持しながらユーザー体験を向上させます。"
           },
           "5": {
-            "question": "__TODO_TRANSLATE__ Does SSP Wallet support Replace-By-Fee (RBF)?",
-            "answer": "__TODO_TRANSLATE__ Yes, SSP Wallet fully supports Replace-By-Fee (RBF) functionality. You can modify transaction fees and even change recipients after broadcasting a transaction, giving you flexibility in managing your transactions on the blockchain."
+            "question": "SSP Wallet は Replace-By-Fee (RBF) をサポートしていますか？",
+            "answer": "はい、SSP Wallet は Replace-By-Fee (RBF) 機能を完全にサポートしています。トランザクションをブロードキャストした後にトランザクション手数料を変更したり、受取人を変更したりすることができ、ブロックチェーン上のトランザクション管理に柔軟性を持たせます。"
           },
           "6": {
-            "question": "__TODO_TRANSLATE__ What fees does SSP Wallet charge?",
-            "answer": "__TODO_TRANSLATE__ SSP Wallet has zero fees - we don't charge anything for using the wallet. You only pay the standard blockchain network fees that go directly to miners/validators for processing your transactions. The wallet includes automatic fee selection to optimize your transaction costs."
+            "question": "SSP Wallet はどのような手数料を請求しますか？",
+            "answer": "SSP Wallet はゼロ手数料です — ウォレットの使用に対して何も請求しません。トランザクション処理のためにマイナー/バリデーターに直接送られる標準的なブロックチェーンネットワーク手数料のみをお支払いいただきます。ウォレットにはトランザクションコストを最適化するための自動手数料選択が含まれています。"
           },
           "7": {
-            "question": "__TODO_TRANSLATE__ Why do some transactions fail to construct?",
-            "answer": "__TODO_TRANSLATE__ Some transactions may fail due to blockchain size restrictions and UTXO complexity. When you have many small inputs, the transaction size can exceed network limits. In such cases, you may need to consolidate your UTXOs or break the transaction into smaller parts."
+            "question": "なぜ一部のトランザクションの構築に失敗するのですか？",
+            "answer": "一部のトランザクションは、ブロックチェーンのサイズ制限と UTXO の複雑さのために失敗する場合があります。多くの小さなインプットがある場合、トランザクションサイズがネットワーク制限を超える可能性があります。そのような場合は、UTXO を統合するか、トランザクションを小さな部分に分割する必要があるかもしれません。"
           },
           "8": {
-            "question": "__TODO_TRANSLATE__ Do I need to restore my wallet when changing devices?",
-            "answer": "__TODO_TRANSLATE__ Yes, due to device-specific encryption, you must restore both your wallet and key when changing devices or making significant system changes. Keep your seed phrases secure and accessible for this process."
+            "question": "デバイスを変更するときにウォレットを復元する必要がありますか？",
+            "answer": "はい、デバイス固有の暗号化のため、デバイスを変更したり重大なシステム変更を行う場合は、ウォレットとキーの両方を復元する必要があります。このプロセスのためにシードフレーズを安全かつアクセス可能な状態に保ってください。"
           },
           "9": {
-            "question": "__TODO_TRANSLATE__ What happens if I lose my SSP Key device?",
-            "answer": "__TODO_TRANSLATE__ If you lose your SSP Key device, you can restore it on a new device using your SSP Key seed phrase. Install the SSP Key app on your new device and use the seed phrase to recover access. You'll need to re-sync with your SSP Wallet browser extension after restoration."
+            "question": "SSP Key デバイスを紛失した場合はどうなりますか？",
+            "answer": "SSP Key デバイスを紛失した場合は、SSP Key のシードフレーズを使用して新しいデバイスに復元できます。新しいデバイスに SSP Key アプリをインストールし、シードフレーズを使用してアクセスを復旧してください。復元後に SSP Wallet ブラウザ拡張機能と再同期する必要があります。"
           },
           "10": {
-            "question": "__TODO_TRANSLATE__ Can I backup my wallet to cloud storage?",
-            "answer": "__TODO_TRANSLATE__ SSP Wallet doesn't support automatic cloud backups for security reasons. Your seed phrases should be stored offline in a secure location. Never store seed phrases in cloud storage, email, or any digital format that could be compromised."
+            "question": "ウォレットをクラウドストレージにバックアップできますか？",
+            "answer": "SSP Wallet はセキュリティ上の理由から自動クラウドバックアップをサポートしていません。シードフレーズは安全な場所にオフラインで保管する必要があります。クラウドストレージ、メール、またはセキュリティが侵害される可能性のあるデジタル形式でシードフレーズを保存しないでください。"
           },
           "11": {
-            "question": "__TODO_TRANSLATE__ What's the difference between SSP Wallet seed phrase and SSP Key seed phrase?",
-            "answer": "__TODO_TRANSLATE__ SSP Wallet and SSP Key each have separate seed phrases. The wallet seed phrase controls the browser extension component, while the key seed phrase controls the mobile 2FA component. Both are required for full wallet recovery and should be stored separately and securely."
+            "question": "SSP Wallet のシードフレーズと SSP Key のシードフレーズの違いは何ですか？",
+            "answer": "SSP Wallet と SSP Key にはそれぞれ別々のシードフレーズがあります。ウォレットのシードフレーズはブラウザ拡張機能コンポーネントを制御し、キーのシードフレーズはモバイル 2FA コンポーネントを制御します。完全なウォレット復旧には両方が必要で、それぞれ別々に安全に保管する必要があります。"
           },
           "12": {
-            "question": "__TODO_TRANSLATE__ How do I migrate to a new computer?",
-            "answer": "__TODO_TRANSLATE__ To move SSP Wallet to a new computer: 1) Install the SSP Wallet extension on the new device, 2) Use your wallet seed phrase to restore the browser extension, 3) Re-sync with your existing SSP Key mobile app. Your transaction history and settings will need to be reconfigured."
+            "question": "新しいコンピューターに移行するにはどうすればよいですか？",
+            "answer": "SSP Wallet を新しいコンピューターに移動するには：1) 新しいデバイスに SSP Wallet 拡張機能をインストールします。2) ウォレットのシードフレーズを使用してブラウザ拡張機能を復元します。3) 既存の SSP Key モバイルアプリと再同期します。取引履歴と設定は再設定が必要になります。"
           },
           "13": {
-            "question": "__TODO_TRANSLATE__ I'm getting \"Synchronisation with SSP wallet needed\" error on mobile",
-            "answer": "__TODO_TRANSLATE__ This error typically occurs when changing phones or when a blockchain is not yet synchronized with your SSP Key. To resolve: 1) Open SSP Wallet, 2) Switch to the blockchain you want to re-synchronize, 3) Click the burger menu (top right corner), 4) Select \"SSP Wallet Details\", 5) Confirm access with your password, 6) In the first row, find \"Chain Sync with SSP Key\" and click the eye icon to show the QR code, 7) Scan the QR code with your SSP Key and approve the chain synchronization."
+            "question": "モバイルで「Synchronisation with SSP wallet needed」エラーが表示されます",
+            "answer": "このエラーは通常、電話を変更したとき、またはブロックチェーンがまだ SSP Key と同期されていないときに発生します。解決するには：1) SSP Wallet を開きます。2) 再同期したいブロックチェーンに切り替えます。3) バーガーメニュー（右上隅）をクリックします。4) 「SSP Wallet Details」を選択します。5) パスワードでアクセスを確認します。6) 最初の行で「Chain Sync with SSP Key」を見つけ、目のアイコンをクリックして QR コードを表示します。7) SSP Key で QR コードをスキャンし、チェーンの同期を承認します。"
           },
           "14": {
-            "question": "__TODO_TRANSLATE__ I'm getting \"SSP Key Public nonces do not match or SSP Key Public nonces are missing\" error",
-            "answer": "__TODO_TRANSLATE__ This error occurs when public nonces used to construct transactions are not synchronized between your SSP Wallet and SSP Key. To resolve: 1) Open the burger menu (top right corner), 2) Navigate to Settings, 3) Find the \"Public Nonces\" section and click \"Sync Public Nonces\", 4) Scan the QR code shown with your SSP Key, 5) Approve the request on your mobile device. Your public nonces are now synchronized and you can begin transacting."
+            "question": "「SSP Key Public nonces do not match or SSP Key Public nonces are missing」エラーが表示されます",
+            "answer": "このエラーは、トランザクションの構築に使用される公開ノンスが SSP Wallet と SSP Key 間で同期されていない場合に発生します。解決するには：1) バーガーメニュー（右上隅）を開きます。2) 設定に移動します。3) 「Public Nonces」セクションを見つけて「Sync Public Nonces」をクリックします。4) SSP Key で表示された QR コードをスキャンします。5) モバイルデバイスでリクエストを承認します。公開ノンスが同期され、トランザクションを開始できます。"
           }
         }
       }
     },
-    "stillNeedHelpTitle": "__TODO_TRANSLATE__ Still need help?",
-    "stillNeedHelpDescription": "__TODO_TRANSLATE__ Can't find what you're looking for? Send us a message and our support team will get back to you as soon as possible.",
-    "emailSupportTitle": "__TODO_TRANSLATE__ Email Support",
-    "emailSupportDescription": "__TODO_TRANSLATE__ We typically respond within 24 hours",
-    "openSourceTitle": "__TODO_TRANSLATE__ Open Source",
-    "openSourceDescription": "__TODO_TRANSLATE__ Report bugs or contribute on GitHub",
-    "communityTitle": "__TODO_TRANSLATE__ Community",
-    "communityDescription": "__TODO_TRANSLATE__ Connect with other users and get peer support",
-    "contactSupportTitle": "__TODO_TRANSLATE__ Contact Support",
+    "stillNeedHelpTitle": "それでもサポートが必要ですか？",
+    "stillNeedHelpDescription": "お探しの情報が見つかりませんか？メッセージをお送りいただければ、サポートチームができる限り早くご回答いたします。",
+    "emailSupportTitle": "メールサポート",
+    "emailSupportDescription": "通常 24 時間以内にご回答します",
+    "openSourceTitle": "オープンソース",
+    "openSourceDescription": "GitHub でバグを報告するか、貢献する",
+    "communityTitle": "コミュニティ",
+    "communityDescription": "他のユーザーとつながり、ピアサポートを受ける",
+    "contactSupportTitle": "サポートに連絡",
     "form": {
-      "emailLabel": "__TODO_TRANSLATE__ Email Address *",
-      "emailPlaceholder": "__TODO_TRANSLATE__ your.email@example.com",
-      "typeLabel": "__TODO_TRANSLATE__ Issue Type *",
+      "emailLabel": "メールアドレス *",
+      "emailPlaceholder": "your.email@example.com",
+      "typeLabel": "問題の種類 *",
       "typeOptions": {
-        "Question": "__TODO_TRANSLATE__ General Question",
-        "Incident": "__TODO_TRANSLATE__ Technical Issue",
-        "Problem": "__TODO_TRANSLATE__ Help Needed",
-        "Feature Request": "__TODO_TRANSLATE__ Feature Request",
-        "Bug Report": "__TODO_TRANSLATE__ Bug Report"
+        "Question": "一般的な質問",
+        "Incident": "技術的な問題",
+        "Problem": "サポートが必要",
+        "Feature Request": "機能リクエスト",
+        "Bug Report": "バグ報告"
       },
-      "subjectLabel": "__TODO_TRANSLATE__ Subject *",
-      "subjectPlaceholder": "__TODO_TRANSLATE__ Brief description of your issue",
-      "descriptionLabel": "__TODO_TRANSLATE__ Description *",
-      "descriptionPlaceholder": "__TODO_TRANSLATE__ Please provide detailed information about your issue...",
-      "submitting": "__TODO_TRANSLATE__ Sending...",
-      "submit": "__TODO_TRANSLATE__ Send Message",
-      "errorFallback": "__TODO_TRANSLATE__ Failed to send message. Please try again.",
-      "errorGeneric": "__TODO_TRANSLATE__ Failed to submit ticket",
-      "successTitle": "__TODO_TRANSLATE__ Message Sent Successfully!",
-      "successDescription": "__TODO_TRANSLATE__ Thank you for contacting us. We'll get back to you as soon as possible.",
-      "successAgain": "__TODO_TRANSLATE__ Send another message"
+      "subjectLabel": "件名 *",
+      "subjectPlaceholder": "問題の簡単な説明",
+      "descriptionLabel": "説明 *",
+      "descriptionPlaceholder": "問題に関する詳細な情報をご記入ください...",
+      "submitting": "送信中...",
+      "submit": "メッセージを送信",
+      "errorFallback": "メッセージの送信に失敗しました。もう一度お試しください。",
+      "errorGeneric": "チケットの送信に失敗しました",
+      "successTitle": "メッセージを送信しました！",
+      "successDescription": "お問い合わせいただきありがとうございます。できる限り早くご回答いたします。",
+      "successAgain": "別のメッセージを送信"
     }
   },
   "Legal": {
-    "lastUpdated": "__TODO_TRANSLATE__ Last updated: {date}",
+    "lastUpdated": "最終更新: {date}",
     "privacyPolicy": {
-      "metaTitle": "__TODO_TRANSLATE__ Privacy Policy - SSP Wallet Ecosystem",
-      "metaDescription": "__TODO_TRANSLATE__ Privacy Policy for the complete SSP Wallet ecosystem. Learn how we protect your privacy across our website, browser extension, mobile app, and relay service.",
-      "heading": "__TODO_TRANSLATE__ Privacy Policy"
+      "metaTitle": "プライバシーポリシー - SSP Wallet エコシステム",
+      "metaDescription": "SSP Wallet エコシステム全体のプライバシーポリシー。ウェブサイト、ブラウザ拡張機能、モバイルアプリ、リレーサービスにわたるプライバシー保護の方法をご確認ください。",
+      "heading": "プライバシーポリシー"
     },
     "termsOfService": {
-      "metaTitle": "__TODO_TRANSLATE__ Terms of Service - SSP Wallet Ecosystem",
-      "metaDescription": "__TODO_TRANSLATE__ Terms of Service for the complete SSP Wallet ecosystem including website, browser extension, mobile app, and relay service.",
-      "heading": "__TODO_TRANSLATE__ Terms of Service"
+      "metaTitle": "利用規約 - SSP Wallet エコシステム",
+      "metaDescription": "ウェブサイト、ブラウザ拡張機能、モバイルアプリ、リレーサービスを含む SSP Wallet エコシステム全体の利用規約。",
+      "heading": "利用規約"
     },
     "cookiePolicy": {
-      "metaTitle": "__TODO_TRANSLATE__ Cookie Policy - SSP Wallet Website",
-      "metaDescription": "__TODO_TRANSLATE__ Learn about how we use cookies on the sspwallet.io website. Manage your cookie preferences and understand our GDPR-compliant practices.",
-      "heading": "__TODO_TRANSLATE__ Cookie Policy"
+      "metaTitle": "Cookie ポリシー - SSP Wallet ウェブサイト",
+      "metaDescription": "sspwallet.io ウェブサイトでの Cookie の使用方法についてご確認ください。Cookie の設定を管理し、GDPR 準拠のポリシーを理解してください。",
+      "heading": "Cookie ポリシー"
     }
   },
   "CheckoutSuccess": {
-    "metaTitle": "__TODO_TRANSLATE__ Checkout Successful | SSP Wallet",
-    "metaDescription": "__TODO_TRANSLATE__ Your order has been placed successfully.",
-    "heading": "__TODO_TRANSLATE__ Checkout Successful!",
-    "description": "__TODO_TRANSLATE__ Your order has been placed successfully. Thank you for your purchase!",
-    "confirmationEmail": "__TODO_TRANSLATE__ You will receive a confirmation email shortly.",
-    "backToHome": "__TODO_TRANSLATE__ Back to Home",
-    "contactSupport": "__TODO_TRANSLATE__ Contact Support"
+    "metaTitle": "チェックアウト完了 | SSP Wallet",
+    "metaDescription": "ご注文が正常に完了しました。",
+    "heading": "チェックアウト完了！",
+    "description": "ご注文が正常に完了しました。ご購入ありがとうございます！",
+    "confirmationEmail": "まもなく確認メールをお送りします。",
+    "backToHome": "ホームに戻る",
+    "contactSupport": "サポートに連絡"
   },
   "CheckoutFailure": {
-    "metaTitle": "__TODO_TRANSLATE__ Checkout Failed | SSP Wallet",
-    "metaDescription": "__TODO_TRANSLATE__ Your order could not be processed. Please try again.",
-    "heading": "__TODO_TRANSLATE__ Checkout Failed",
-    "description": "__TODO_TRANSLATE__ Your order could not be processed. Please try again or contact support if the problem persists.",
-    "tryAgain": "__TODO_TRANSLATE__ Try Again",
-    "contactSupport": "__TODO_TRANSLATE__ Contact Support"
+    "metaTitle": "チェックアウト失敗 | SSP Wallet",
+    "metaDescription": "ご注文を処理できませんでした。もう一度お試しください。",
+    "heading": "チェックアウト失敗",
+    "description": "ご注文を処理できませんでした。もう一度お試しいただくか、問題が続く場合はサポートにお問い合わせください。",
+    "tryAgain": "もう一度試す",
+    "contactSupport": "サポートに連絡"
   },
   "Categories": {
     "multisig": {
-      "title": "__TODO_TRANSLATE__ Multisig Explained",
-      "description": "__TODO_TRANSLATE__ How 2-of-2 multisignature actually works in SSP — and why it matters."
+      "title": "Multisig 解説",
+      "description": "SSP における 2-of-2 マルチシグネチャの仕組みと、その重要性。"
     },
     "getting-started": {
-      "title": "__TODO_TRANSLATE__ Crypto Basics",
-      "description": "__TODO_TRANSLATE__ Foundational concepts every crypto user should know."
+      "title": "暗号資産の基礎",
+      "description": "すべての暗号資産ユーザーが知っておくべき基本的な概念。"
     },
     "security": {
-      "title": "__TODO_TRANSLATE__ Security & Self-Custody",
-      "description": "__TODO_TRANSLATE__ Protect your crypto: seeds, phishing, hardware, threat models."
+      "title": "セキュリティとセルフカストディ",
+      "description": "暗号資産を守る: シードフレーズ、フィッシング、ハードウェアウォレット、脅威モデル。"
     },
     "how-to": {
-      "title": "__TODO_TRANSLATE__ How-To Guides",
-      "description": "__TODO_TRANSLATE__ Step-by-step walkthroughs for common SSP tasks."
+      "title": "ハウツーガイド",
+      "description": "SSP の一般的なタスクをステップごとに解説。"
     },
     "coin-guides": {
-      "title": "__TODO_TRANSLATE__ Coin & Chain Guides",
-      "description": "__TODO_TRANSLATE__ Deep dives into individual coins and chains SSP supports."
+      "title": "コイン・チェーンガイド",
+      "description": "SSP がサポートする各コイン・チェーンの詳細解説。"
     },
     "defi": {
-      "title": "__TODO_TRANSLATE__ DeFi & Account Abstraction",
-      "description": "__TODO_TRANSLATE__ Staking, lending, swaps, and ERC-4337 explained."
+      "title": "DeFi とアカウント抽象化",
+      "description": "ステーキング、レンディング、スワップ、ERC-4337 の解説。"
     },
     "news-explained": {
-      "title": "__TODO_TRANSLATE__ News & Industry Analysis",
-      "description": "__TODO_TRANSLATE__ Context and analysis on crypto news and regulation."
+      "title": "ニュースと業界分析",
+      "description": "暗号資産ニュースと規制に関するコンテキストと分析。"
     }
   },
   "CaseStudies": {
-    "breadcrumbLabel": "__TODO_TRANSLATE__ Case Studies",
+    "breadcrumbLabel": "ケーススタディ",
     "fluxFoundation": {
-      "metaTitle": "__TODO_TRANSLATE__ Case Study: Flux Foundation — Self-Custody Treasury with SSP Enterprise",
-      "metaDescription": "__TODO_TRANSLATE__ How the Flux Foundation moved from scattered multisig and custom scripts to SSP Enterprise — securing the Fusion bridge and Foundation treasury with M-of-N vaults across every chain they use.",
-      "breadcrumbLabel": "__TODO_TRANSLATE__ Flux Foundation",
-      "logoAlt": "__TODO_TRANSLATE__ Flux Foundation",
-      "eyebrow": "__TODO_TRANSLATE__ Case Study",
-      "titlePart1": "__TODO_TRANSLATE__ Flux Foundation ×",
-      "titlePart2": "__TODO_TRANSLATE__ SSP Enterprise",
-      "subtitle": "__TODO_TRANSLATE__ How the Flux Foundation moved from scattered multisig and custom scripts to a single self-custody platform — securing the Fusion bridge and Foundation treasury without giving up keys to anyone.",
-      "heroQuote": "__TODO_TRANSLATE__ We needed full control of our funds, transparency for the community, and no black box MPC sitting between us and our own treasury. SSP Enterprise was the first platform we found that matches all three — across every chain we actually use.",
-      "heroQuoteAttribution": "__TODO_TRANSLATE__ — Tadeas Kmenta, Flux Foundation",
+      "metaTitle": "ケーススタディ: Flux Foundation — SSP Enterprise によるセルフカストディトレジャリー",
+      "metaDescription": "Flux Foundation がバラバラな multisig とカスタムスクリプトから SSP Enterprise に移行した方法 — Fusion ブリッジとファウンデーショントレジャリーを M-of-N ボールトで保護。",
+      "breadcrumbLabel": "Flux Foundation",
+      "logoAlt": "Flux Foundation",
+      "eyebrow": "ケーススタディ",
+      "titlePart1": "Flux Foundation ×",
+      "titlePart2": "SSP Enterprise",
+      "subtitle": "Flux Foundation がバラバラな multisig とカスタムスクリプトから単一のセルフカストディプラットフォームへ移行した方法 — 誰にも鍵を渡すことなく Fusion ブリッジとファウンデーショントレジャリーを保護。",
+      "heroQuote": "私たちには資金の完全なコントロール、コミュニティへの透明性、そして自分たちのトレジャリーとの間にブラックボックスの MPC が入らないことが必要でした。SSP Enterprise は私たちが実際に使うすべてのチェーンで、この 3 つすべてを満たした初めてのプラットフォームでした。",
+      "heroQuoteAttribution": "— Tadeas Kmenta, Flux Foundation",
       "factSheet": {
-        "organizationLabel": "__TODO_TRANSLATE__ Organization",
-        "organizationValue": "__TODO_TRANSLATE__ Flux Foundation",
-        "industryLabel": "__TODO_TRANSLATE__ Industry",
-        "industryValue": "__TODO_TRANSLATE__ Decentralized infrastructure",
-        "useCaseLabel": "__TODO_TRANSLATE__ Use case",
-        "useCaseValue": "__TODO_TRANSLATE__ Foundation treasury + Fusion bridge multisig",
-        "chainsLabel": "__TODO_TRANSLATE__ Chains",
-        "chainsValue": "__TODO_TRANSLATE__ BTC, ETH, FLUX, EVM L2s",
-        "vaultModelLabel": "__TODO_TRANSLATE__ Vault model",
-        "vaultModelValue": "__TODO_TRANSLATE__ M-of-N multisig, two-device per signer",
-        "statusLabel": "__TODO_TRANSLATE__ Status",
-        "statusValue": "__TODO_TRANSLATE__ In production"
+        "organizationLabel": "組織",
+        "organizationValue": "Flux Foundation",
+        "industryLabel": "業種",
+        "industryValue": "分散型インフラストラクチャ",
+        "useCaseLabel": "ユースケース",
+        "useCaseValue": "ファウンデーショントレジャリー + Fusion ブリッジ multisig",
+        "chainsLabel": "チェーン",
+        "chainsValue": "BTC, ETH, FLUX, EVM L2s",
+        "vaultModelLabel": "ボールトモデル",
+        "vaultModelValue": "M-of-N multisig、署名者 1 人につき 2 デバイス",
+        "statusLabel": "ステータス",
+        "statusValue": "本番稼働中"
       },
       "before": {
-        "title": "__TODO_TRANSLATE__ Before: scattered multisig and custom scripts",
-        "intro": "__TODO_TRANSLATE__ The Flux Foundation had been managing multi-party signing for years. The problem wasn't a lack of multisig — it was that nothing tied it together across chains, and the commercial alternatives all required a tradeoff the team wasn't willing to make.",
+        "title": "移行前: バラバラな multisig とカスタムスクリプト",
+        "intro": "Flux Foundation は数年間、マルチパーティ署名を管理してきました。問題は multisig の欠如ではなく、チェーン間でそれをつなぐものが何もなく、商業的な代替手段はすべてチームが受け入れられないトレードオフを求めていたことでした。",
         "items": {
           "0": {
-            "title": "__TODO_TRANSLATE__ Scattered multisig setups",
-            "description": "__TODO_TRANSLATE__ Different multisig wallets across different chains, each with its own quirks, signers, and recovery procedures."
+            "title": "バラバラな multisig セットアップ",
+            "description": "異なるチェーンに異なる multisig ウォレットが存在し、それぞれ独自の特性、署名者、復旧手順を持っていました。"
           },
           "1": {
-            "title": "__TODO_TRANSLATE__ Custom scripts to glue it together",
-            "description": "__TODO_TRANSLATE__ Internal tooling for transaction construction, signing coordination, and broadcast — maintained by hand."
+            "title": "つなぎ合わせるカスタムスクリプト",
+            "description": "トランザクション構築、署名の調整、ブロードキャストのための社内ツール — 手作業でメンテナンス。"
           },
           "2": {
-            "title": "__TODO_TRANSLATE__ No unified audit trail",
-            "description": "__TODO_TRANSLATE__ Approvals lived in chat threads and shared docs. Reconstructing who signed what required digging."
+            "title": "統一された監査証跡がない",
+            "description": "承認はチャットスレッドと共有ドキュメントに散在していました。誰が何に署名したかを追跡するには掘り起こしが必要でした。"
           },
           "3": {
-            "title": "__TODO_TRANSLATE__ No middle ground in the market",
-            "description": "__TODO_TRANSLATE__ Custodians and MPC vendors meant trusting a black box. Off-the-shelf multisig tools were Ethereum-only."
+            "title": "市場に中間的な選択肢がない",
+            "description": "カストディアンと MPC ベンダーはブラックボックスを信頼することを意味していました。既製の multisig ツールは Ethereum 専用でした。"
           }
         }
       },
       "decision": {
-        "title": "__TODO_TRANSLATE__ The decision",
-        "intro": "__TODO_TRANSLATE__ The team evaluated the alternatives and grouped them into three buckets. Every bucket had a dealbreaker.",
-        "bucket1Eyebrow": "__TODO_TRANSLATE__ Bucket 1",
-        "bucket1Title": "__TODO_TRANSLATE__ MPC custodians",
-        "bucket1Description": "__TODO_TRANSLATE__ Fireblocks, BitGo, and similar. Vendor holds part of every key.",
-        "bucket1Verdict": "__TODO_TRANSLATE__ Not true self-custody.",
-        "bucket2Eyebrow": "__TODO_TRANSLATE__ Bucket 2",
-        "bucket2Title": "__TODO_TRANSLATE__ Single-chain multisig",
-        "bucket2Description": "__TODO_TRANSLATE__ Safe and the like. Ethereum-only, no native UTXO support.",
-        "bucket2Verdict": "__TODO_TRANSLATE__ We hold Bitcoin and Flux too.",
-        "bucket3Eyebrow": "__TODO_TRANSLATE__ Bucket 3",
-        "bucket3Title": "__TODO_TRANSLATE__ Bare-bones multisig",
-        "bucket3Description": "__TODO_TRANSLATE__ Wallets without policy engine, analytics, or proper audit trail.",
-        "bucket3Verdict": "__TODO_TRANSLATE__ We'd be back to building tooling ourselves.",
-        "conclusion": "__TODO_TRANSLATE__ SSP Enterprise was the only platform that addressed all three at once: native multi-chain (UTXO and EVM), true self-custody with no vendor key share, and a built-in policy engine, analytics, and audit trail."
+        "title": "決断",
+        "intro": "チームは代替案を評価し、3 つのグループに分類しました。どのグループにも決定的な欠点がありました。",
+        "bucket1Eyebrow": "グループ 1",
+        "bucket1Title": "MPC カストディアン",
+        "bucket1Description": "Fireblocks、BitGo など。ベンダーがすべての鍵の一部を保持。",
+        "bucket1Verdict": "真のセルフカストディではない。",
+        "bucket2Eyebrow": "グループ 2",
+        "bucket2Title": "シングルチェーン multisig",
+        "bucket2Description": "Safe など。Ethereum 専用で、ネイティブ UTXO サポートなし。",
+        "bucket2Verdict": "私たちは Bitcoin と Flux も保有している。",
+        "bucket3Eyebrow": "グループ 3",
+        "bucket3Title": "最小限の multisig",
+        "bucket3Description": "ポリシーエンジン、分析、適切な監査証跡のないウォレット。",
+        "bucket3Verdict": "また自分たちでツールを構築することになる。",
+        "conclusion": "SSP Enterprise は 3 つすべてを同時に解決した唯一のプラットフォームでした：ネイティブマルチチェーン (UTXO と EVM)、ベンダーへの鍵共有なしの真のセルフカストディ、そして組み込みのポリシーエンジン、分析、監査証跡。"
       },
       "whatChanged": {
-        "title": "__TODO_TRANSLATE__ What changed",
-        "intro": "__TODO_TRANSLATE__ One platform, every chain the Foundation interacts with, one consistent signing model. The custom scripts are retired. The chat-thread audit trail is replaced by attributable on-platform records. Treasury and bridge multisig live side by side under the same governance.",
+        "title": "変わったこと",
+        "intro": "1 つのプラットフォーム、ファウンデーションが使用するすべてのチェーン、一貫した署名モデル。カスタムスクリプトは廃止されました。チャットスレッドの監査証跡は、帰属可能なプラットフォーム上の記録に置き換えられました。トレジャリーとブリッジの multisig が同じガバナンスのもとに並存しています。",
         "items": {
           "0": {
-            "title": "__TODO_TRANSLATE__ M-of-N vaults across every chain we touch",
-            "description": "__TODO_TRANSLATE__ Bitcoin, Ethereum, Flux, and the EVM L2s — same platform, same mental model, same security guarantees."
+            "title": "触れるすべてのチェーンにまたがる M-of-N ボールト",
+            "description": "Bitcoin、Ethereum、Flux、EVM L2s — 同じプラットフォーム、同じメンタルモデル、同じセキュリティ保証。"
           },
           "1": {
-            "title": "__TODO_TRANSLATE__ Two devices per signer, no exceptions",
-            "description": "__TODO_TRANSLATE__ Browser extension and mobile app required for every signature. A single compromised device cannot sign."
+            "title": "署名者 1 人につき 2 デバイス、例外なし",
+            "description": "すべての署名にブラウザ拡張機能とモバイルアプリが必要です。1 台のデバイスが侵害されても署名できません。"
           },
           "2": {
-            "title": "__TODO_TRANSLATE__ Audit trail that holds up",
-            "description": "__TODO_TRANSLATE__ Every proposal, approval, and rejection logged with the signer and timestamp. Replaces the chat-thread reconstruction."
+            "title": "信頼できる監査証跡",
+            "description": "すべての提案、承認、拒否が署名者とタイムスタンプとともに記録されます。チャットスレッドの復元が不要になりました。"
           },
           "3": {
-            "title": "__TODO_TRANSLATE__ Self-custody, end to end",
-            "description": "__TODO_TRANSLATE__ No vendor key share. No MPC infrastructure to trust. If SSP went away tomorrow, our funds remain recoverable from signer seeds."
+            "title": "エンドツーエンドのセルフカストディ",
+            "description": "ベンダーへの鍵共有なし。信頼すべき MPC インフラなし。SSP がなくなっても、資金は署名者のシードフレーズから復旧可能です。"
           }
         }
       },
       "fusionBridge": {
-        "title": "__TODO_TRANSLATE__ The Fusion bridge",
-        "intro": "__TODO_TRANSLATE__ The Fusion bridge is one of the most security-sensitive surfaces the Foundation operates — it coordinates value transfer between Flux and other chains, and a single signing failure could be catastrophic. It's also the workload where SSP Enterprise's model pays off most clearly.",
+        "title": "Fusion ブリッジ",
+        "intro": "Fusion ブリッジはファウンデーションが運営する中で最もセキュリティが重要な場面の 1 つです — Flux と他のチェーン間の価値移転を調整しており、1 回の署名失敗が壊滅的な結果をもたらす可能性があります。また、SSP Enterprise のモデルが最も明確に成果を発揮するワークロードでもあります。",
         "items": {
           "0": {
-            "title": "__TODO_TRANSLATE__ On-chain multisig",
-            "description": "__TODO_TRANSLATE__ Native multisig on every chain the bridge touches — no smart-contract custodian, no relayer that can stall or front-run."
+            "title": "オンチェーン multisig",
+            "description": "ブリッジが触れるすべてのチェーンにネイティブ multisig — スマートコントラクトのカストディアンなし、停滞やフロントランが可能なリレーヤーなし。"
           },
           "1": {
-            "title": "__TODO_TRANSLATE__ Two-device signing per signer",
-            "description": "__TODO_TRANSLATE__ Compromising one signer's laptop or phone is not enough to push a bridge transaction. Both devices, every time."
+            "title": "署名者 1 人につき 2 デバイス署名",
+            "description": "署名者のラップトップや携帯電話を 1 台侵害するだけでは、ブリッジトランザクションを送ることはできません。毎回、両デバイスが必要です。"
           },
           "2": {
-            "title": "__TODO_TRANSLATE__ Per-signer policy controls",
-            "description": "__TODO_TRANSLATE__ Limits and whitelists configured at the org and vault level, enforced before any signature is collected."
+            "title": "署名者ごとのポリシーコントロール",
+            "description": "組織とボールトレベルで設定されたリミットとホワイトリストが、署名が収集される前に適用されます。"
           },
           "3": {
-            "title": "__TODO_TRANSLATE__ Auditable end to end",
-            "description": "__TODO_TRANSLATE__ Every approval and rejection attributed and timestamped. Community accountability without giving up self-custody."
+            "title": "エンドツーエンドの監査可能性",
+            "description": "すべての承認と拒否が帰属情報とタイムスタンプとともに記録されます。セルフカストディを手放すことなくコミュニティへの説明責任を果たせます。"
           }
         },
-        "quote": "__TODO_TRANSLATE__ The Fusion bridge runs on infrastructure we control end to end now. Same security guarantees we have for our own treasury, applied to one of the highest-stakes workflows we operate.",
-        "quoteAttribution": "__TODO_TRANSLATE__ — Tadeas Kmenta, Flux Foundation"
+        "quote": "Fusion ブリッジは今やエンドツーエンドで私たちがコントロールするインフラ上で稼働しています。自社のトレジャリーと同じセキュリティ保証が、私たちが運営する最もリスクの高いワークフローの 1 つに適用されています。",
+        "quoteAttribution": "— Tadeas Kmenta, Flux Foundation"
       },
       "cta": {
-        "title": "__TODO_TRANSLATE__ Same model. Available for your team.",
-        "description": "__TODO_TRANSLATE__ The platform the Flux Foundation runs the Fusion bridge on is the same platform available to any team that wants self-custody multisig without compromise. Free tier to start. Custom plans on request.",
-        "exploreEnterprise": "__TODO_TRANSLATE__ Explore SSP Enterprise",
-        "launchEnterpriseApp": "__TODO_TRANSLATE__ Launch Enterprise App"
+        "title": "同じモデルが、あなたのチームでも使えます。",
+        "description": "Flux Foundation が Fusion ブリッジを運用しているプラットフォームは、妥協なくセルフカストディ multisig を求めるすべてのチームが利用できる同じプラットフォームです。無料枠から開始できます。カスタムプランはご要望に応じて対応します。",
+        "exploreEnterprise": "SSP Enterprise を見る",
+        "launchEnterpriseApp": "Enterprise アプリを起動"
       }
     }
   },
   "Enterprise": {
-    "metaTitle": "__TODO_TRANSLATE__ SSP Enterprise | Self-Custody Multisig for Business",
-    "metaDescription": "__TODO_TRANSLATE__ Self-custody M-of-N multisig vaults for business treasuries. Policy engine, spending limits, two-device signing, role-based access. No custodians, no MPC.",
-    "breadcrumbLabel": "__TODO_TRANSLATE__ Enterprise",
-    "heroBadge": "__TODO_TRANSLATE__ SSP Enterprise",
-    "heroTitlePart1": "__TODO_TRANSLATE__ Self-Custody",
-    "heroTitlePart2": "__TODO_TRANSLATE__ for Business",
-    "heroDescription": "__TODO_TRANSLATE__ M-of-N multisig vaults for your organization. Every signer uses two devices — browser extension and mobile app. No custodians. No MPC. No single point of failure.",
-    "heroLaunchApp": "__TODO_TRANSLATE__ Launch Enterprise App",
-    "heroHowItWorks": "__TODO_TRANSLATE__ How It Works",
+    "metaTitle": "SSP Enterprise | ビジネス向けセルフカストディ Multisig",
+    "metaDescription": "ビジネストレジャリー向けのセルフカストディ M-of-N multisig ボールト。ポリシーエンジン、支出制限、2 デバイス署名、ロールベースアクセス。カストディアンなし、MPC なし。",
+    "breadcrumbLabel": "Enterprise",
+    "heroBadge": "SSP Enterprise",
+    "heroTitlePart1": "セルフカストディ",
+    "heroTitlePart2": "ビジネス向け",
+    "heroDescription": "組織向けの M-of-N multisig ボールト。すべての署名者はブラウザ拡張機能とモバイルアプリの 2 デバイスを使用します。カストディアンなし。MPC なし。単一障害点なし。",
+    "heroLaunchApp": "Enterprise アプリを起動",
+    "heroHowItWorks": "仕組み",
     "fluxBanner": {
-      "imageAlt": "__TODO_TRANSLATE__ Flux Foundation",
-      "eyebrow": "__TODO_TRANSLATE__ In production with Flux Foundation",
-      "description": "__TODO_TRANSLATE__ Securing the Fusion bridge and Foundation treasury across BTC, ETH, FLUX, and EVM L2s.",
-      "cta": "__TODO_TRANSLATE__ Read the case study"
+      "imageAlt": "Flux Foundation",
+      "eyebrow": "Flux Foundation で本番稼働中",
+      "description": "BTC、ETH、FLUX、EVM L2s にわたる Fusion ブリッジとファウンデーションのトレジャリーを保護。",
+      "cta": "ケーススタディを読む"
     },
     "problem": {
-      "title": "__TODO_TRANSLATE__ The Problem",
-      "subtitle": "__TODO_TRANSLATE__ Businesses holding crypto today face impossible trade-offs",
+      "title": "課題",
+      "subtitle": "今日暗号資産を保有するビジネスは不可能なトレードオフに直面しています",
       "items": {
         "0": {
-          "title": "__TODO_TRANSLATE__ Custodial Solutions",
-          "problem": "__TODO_TRANSLATE__ Trust a third party with your keys",
+          "title": "カストディアルソリューション",
+          "problem": "鍵をサードパーティに信頼して預ける",
           "risks": {
-            "0": "__TODO_TRANSLATE__ Counterparty risk (FTX, Celsius)",
-            "1": "__TODO_TRANSLATE__ Account freezes without warning",
-            "2": "__TODO_TRANSLATE__ Vendor lock-in and high fees"
+            "0": "カウンターパーティリスク (FTX、Celsius)",
+            "1": "予告なしのアカウント凍結",
+            "2": "ベンダーロックインと高い手数料"
           }
         },
         "1": {
-          "title": "__TODO_TRANSLATE__ MPC Providers",
-          "problem": "__TODO_TRANSLATE__ Key shards on vendor servers",
+          "title": "MPC プロバイダー",
+          "problem": "ベンダーサーバー上の鍵シャード",
           "risks": {
-            "0": "__TODO_TRANSLATE__ Vendor shuts down, you scramble",
-            "1": "__TODO_TRANSLATE__ Cannot verify their infrastructure",
-            "2": "__TODO_TRANSLATE__ Still a trust dependency"
+            "0": "ベンダーが廃業すれば対応に追われる",
+            "1": "インフラを検証できない",
+            "2": "依然として信頼への依存がある"
           }
         },
         "2": {
-          "title": "__TODO_TRANSLATE__ Single Hardware Wallet",
-          "problem": "__TODO_TRANSLATE__ One person, one device",
+          "title": "シングルハードウェアウォレット",
+          "problem": "1 人、1 デバイス",
           "risks": {
-            "0": "__TODO_TRANSLATE__ Key person risk",
-            "1": "__TODO_TRANSLATE__ No team governance",
-            "2": "__TODO_TRANSLATE__ Lost device = lost funds"
+            "0": "キーパーソンリスク",
+            "1": "チームガバナンスなし",
+            "2": "デバイス紛失 = 資金紛失"
           }
         }
       }
     },
     "howItWorks": {
-      "title": "__TODO_TRANSLATE__ How It Works",
-      "subtitle": "__TODO_TRANSLATE__ True self-custody at enterprise scale — no compromises",
+      "title": "仕組み",
+      "subtitle": "エンタープライズスケールでの真のセルフカストディ — 妥協なし",
       "steps": {
         "0": {
-          "title": "__TODO_TRANSLATE__ Create Your Organization",
-          "description": "__TODO_TRANSLATE__ Set up your organization using your SSP Identity — a cryptographic proof derived from your devices, not just an email."
+          "title": "組織を作成",
+          "description": "メールだけでなく、デバイスから派生した暗号学的証明である SSP Identity を使用して組織をセットアップします。"
         },
         "1": {
-          "title": "__TODO_TRANSLATE__ Invite Your Team",
-          "description": "__TODO_TRANSLATE__ Add team members by their SSP Identity. Assign roles: Owner, Admin, Member, or Viewer. Every member needs SSP Wallet + SSP Key."
+          "title": "チームを招待",
+          "description": "SSP Identity でチームメンバーを追加します。役割を割り当てます：Owner、Admin、Member、または Viewer。すべてのメンバーに SSP Wallet + SSP Key が必要です。"
         },
         "2": {
-          "title": "__TODO_TRANSLATE__ Create Multisig Vaults",
-          "description": "__TODO_TRANSLATE__ Configure M-of-N vaults for different purposes — operations, treasury, payroll. Choose which signers are required."
+          "title": "Multisig ボールトを作成",
+          "description": "さまざまな目的のために M-of-N ボールトを設定します — 運営、トレジャリー、給与。どの署名者が必要かを選択します。"
         },
         "3": {
-          "title": "__TODO_TRANSLATE__ Sign Together",
-          "description": "__TODO_TRANSLATE__ Propose transactions through the web app. Each required signer approves with both their browser extension and mobile app. Broadcast when threshold is met."
+          "title": "一緒に署名",
+          "description": "ウェブアプリでトランザクションを提案します。必要な各署名者がブラウザ拡張機能とモバイルアプリの両方で承認します。しきい値に達したらブロードキャスト。"
         }
       },
-      "diagramTitle": "__TODO_TRANSLATE__ Signing Architecture",
-      "diagramSubtitle": "__TODO_TRANSLATE__ Every signature requires two devices per signer",
-      "signerLabel": "__TODO_TRANSLATE__ Signer {label}",
-      "signedLabel": "__TODO_TRANSLATE__ Signed",
-      "waitingLabel": "__TODO_TRANSLATE__ Waiting",
-      "thresholdLabel": "__TODO_TRANSLATE__ 2 of 3 threshold met — ready to broadcast"
+      "diagramTitle": "署名アーキテクチャ",
+      "diagramSubtitle": "すべての署名に署名者ごとに 2 デバイスが必要",
+      "signerLabel": "署名者 {label}",
+      "signedLabel": "署名済み",
+      "waitingLabel": "待機中",
+      "thresholdLabel": "3 のうち 2 のしきい値を達成 — ブロードキャスト準備完了"
     },
     "features": {
-      "title": "__TODO_TRANSLATE__ Enterprise Features",
-      "subtitle": "__TODO_TRANSLATE__ Everything your organization needs for secure crypto management",
-      "readGuide": "__TODO_TRANSLATE__ Read the guide",
+      "title": "Enterprise 機能",
+      "subtitle": "組織が安全な暗号資産管理に必要なすべて",
+      "readGuide": "ガイドを読む",
       "items": {
         "0": {
-          "title": "__TODO_TRANSLATE__ M-of-N Multisig Vaults",
-          "description": "__TODO_TRANSLATE__ Configure any signing threshold for your team. 2-of-3, 3-of-5, or any combination that fits your governance model."
+          "title": "M-of-N Multisig ボールト",
+          "description": "チームの任意の署名しきい値を設定。2-of-3、3-of-5、またはガバナンスモデルに合わせた任意の組み合わせ。"
         },
         "1": {
-          "title": "__TODO_TRANSLATE__ Role-Based Access",
-          "description": "__TODO_TRANSLATE__ Owner, Admin, Member, and Viewer roles. Control who can propose, sign, or simply observe transactions."
+          "title": "ロールベースアクセス",
+          "description": "Owner、Admin、Member、Viewer の役割。トランザクションを提案、署名、または閲覧するだけの権限をコントロール。"
         },
         "2": {
-          "title": "__TODO_TRANSLATE__ Two-Device Signing",
-          "description": "__TODO_TRANSLATE__ Every signer uses both a browser extension and a mobile app. Two keys per person, M-of-N across your team."
+          "title": "2 デバイス署名",
+          "description": "すべての署名者がブラウザ拡張機能とモバイルアプリの両方を使用。1 人 2 つの鍵、チーム全体で M-of-N。"
         },
         "3": {
-          "title": "__TODO_TRANSLATE__ Multi-Chain Support",
-          "description": "__TODO_TRANSLATE__ Bitcoin, Ethereum, Litecoin, Dogecoin, Flux, Polygon, BSC, Base, Avalanche, and more. One platform for all chains."
+          "title": "マルチチェーンサポート",
+          "description": "Bitcoin、Ethereum、Litecoin、Dogecoin、Flux、Polygon、BSC、Base、Avalanche など。すべてのチェーンに対応する 1 つのプラットフォーム。"
         },
         "4": {
-          "title": "__TODO_TRANSLATE__ Transaction Proposals",
-          "description": "__TODO_TRANSLATE__ Propose transactions with full details. Team members review, approve, or reject. Broadcast only when threshold is met."
+          "title": "トランザクション提案",
+          "description": "完全な詳細でトランザクションを提案。チームメンバーがレビュー、承認、または拒否。しきい値に達したときのみブロードキャスト。"
         },
         "5": {
-          "title": "__TODO_TRANSLATE__ Complete Audit Trail",
-          "description": "__TODO_TRANSLATE__ Every action logged permanently. Member changes, vault operations, transaction approvals — full accountability."
+          "title": "完全な監査証跡",
+          "description": "すべてのアクションが永続的に記録されます。メンバー変更、ボールト操作、トランザクション承認 — 完全な説明責任。"
         }
       }
     },
     "policy": {
-      "title": "__TODO_TRANSLATE__ Transaction Policy Engine",
-      "subtitle": "__TODO_TRANSLATE__ Granular controls that cascade from organization to vault to individual signer. Stricter policy always wins.",
+      "title": "トランザクションポリシーエンジン",
+      "subtitle": "組織からボールト、個別の署名者まで連鎖するきめ細かなコントロール。より厳格なポリシーが常に優先されます。",
       "tiers": {
-        "organization": "__TODO_TRANSLATE__ Organization",
-        "organizationSub": "__TODO_TRANSLATE__ Default policies",
-        "vault": "__TODO_TRANSLATE__ Vault",
-        "vaultSub": "__TODO_TRANSLATE__ Override & refine",
-        "signer": "__TODO_TRANSLATE__ Signer",
-        "signerSub": "__TODO_TRANSLATE__ Individual limits"
+        "organization": "組織",
+        "organizationSub": "デフォルトポリシー",
+        "vault": "ボールト",
+        "vaultSub": "オーバーライドと改良",
+        "signer": "署名者",
+        "signerSub": "個別制限"
       },
-      "tierFooter": "__TODO_TRANSLATE__ Policies merge top-down — the stricter limit at any tier is enforced",
-      "readMore": "__TODO_TRANSLATE__ Read more",
+      "tierFooter": "ポリシーはトップダウンで統合 — どのティアでも厳格な制限が適用される",
+      "readMore": "続きを読む",
       "items": {
         "0": {
-          "title": "__TODO_TRANSLATE__ Spending Limits",
-          "description": "__TODO_TRANSLATE__ Per-transaction, daily, weekly, and monthly limits. Set in USD or native token. Aggregate and per-token controls."
+          "title": "支出制限",
+          "description": "トランザクションごと、日次、週次、月次の制限。USD またはネイティブトークンで設定。集計およびトークンごとのコントロール。"
         },
         "1": {
-          "title": "__TODO_TRANSLATE__ Address Whitelist",
-          "description": "__TODO_TRANSLATE__ Three modes: disabled, warn, or enforce. Label addresses, restrict by chain. Block unknown destinations entirely."
+          "title": "アドレスホワイトリスト",
+          "description": "3 つのモード：無効、警告、または強制。アドレスにラベルを付け、チェーンで制限。未知の宛先を完全にブロック。"
         },
         "2": {
-          "title": "__TODO_TRANSLATE__ Time-Lock Delays",
-          "description": "__TODO_TRANSLATE__ Configurable waiting period before broadcast. Trigger automatically above a USD threshold. Cancel before execution."
+          "title": "タイムロック遅延",
+          "description": "ブロードキャスト前の設定可能な待機期間。USD しきい値を超えると自動的にトリガー。実行前にキャンセル可能。"
         },
         "3": {
-          "title": "__TODO_TRANSLATE__ Admin Approval",
-          "description": "__TODO_TRANSLATE__ Require admin sign-off on high-value transactions. Set a USD threshold — anything above it needs explicit approval."
+          "title": "管理者承認",
+          "description": "高額トランザクションに管理者の承認を要求。USD しきい値を設定 — それ以上はすべて明示的な承認が必要。"
         },
         "4": {
-          "title": "__TODO_TRANSLATE__ Per-Signer Overrides",
-          "description": "__TODO_TRANSLATE__ Set individual spending limits for each team member. Junior traders get tighter controls, senior execs get higher limits."
+          "title": "署名者ごとのオーバーライド",
+          "description": "各チームメンバーに個別の支出制限を設定。ジュニアトレーダーは厳格なコントロール、シニアエグゼクティブはより高い制限。"
         },
         "5": {
-          "title": "__TODO_TRANSLATE__ Velocity Tracking",
-          "description": "__TODO_TRANSLATE__ Rolling 30-day spending windows per vault, per signer, and per token. Automatic enforcement with TTL-based cleanup."
+          "title": "速度追跡",
+          "description": "ボールト、署名者、トークンごとのローリング 30 日間支出ウィンドウ。TTL ベースのクリーンアップによる自動適用。"
         },
         "6": {
-          "title": "__TODO_TRANSLATE__ Emergency Vault Freeze",
-          "description": "__TODO_TRANSLATE__ Instantly freeze any vault with dual-device WK signing. Blocks all proposals until unfrozen. Incident response in seconds."
+          "title": "緊急ボールトフリーズ",
+          "description": "デュアルデバイス WK 署名で任意のボールトを即時フリーズ。解除されるまですべての提案をブロック。インシデント対応は数秒で。"
         },
         "7": {
-          "title": "__TODO_TRANSLATE__ 3-Tier Policy Hierarchy",
-          "description": "__TODO_TRANSLATE__ Organization defaults cascade to vaults and signers. Vault-level overrides refine the rules. Stricter policy always wins."
+          "title": "3 階層ポリシー階層",
+          "description": "組織のデフォルトがボールトと署名者に連鎖。ボールトレベルのオーバーライドがルールを改良。より厳格なポリシーが常に優先。"
         }
       },
-      "footerStrong": "__TODO_TRANSLATE__ 3-tier policy hierarchy with 14+ configurable controls",
-      "footerSuffix": "__TODO_TRANSLATE__ — included in every plan."
+      "footerStrong": "14 以上の設定可能なコントロールを持つ 3 階層ポリシー階層",
+      "footerSuffix": "— すべてのプランに含まれています。"
     },
     "security": {
-      "title": "__TODO_TRANSLATE__ 5-Layer Security",
-      "subtitle": "__TODO_TRANSLATE__ Defense in depth — every layer must be compromised for a breach",
-      "layerLabel": "__TODO_TRANSLATE__ Layer {n}: {name}",
+      "title": "5 層セキュリティ",
+      "subtitle": "多層防御 — 侵害のためにはすべての層を突破する必要があります",
+      "layerLabel": "レイヤー {n}: {name}",
       "layers": {
         "0": {
-          "name": "__TODO_TRANSLATE__ Device Security",
-          "description": "__TODO_TRANSLATE__ OS-level security, biometric auth, secure enclaves on mobile"
+          "name": "デバイスセキュリティ",
+          "description": "OS レベルのセキュリティ、生体認証、モバイルのセキュアエンクレーブ"
         },
         "1": {
-          "name": "__TODO_TRANSLATE__ Dual-Device 2FA",
-          "description": "__TODO_TRANSLATE__ Browser extension + mobile app required for every signature"
+          "name": "デュアルデバイス 2FA",
+          "description": "すべての署名にブラウザ拡張機能 + モバイルアプリが必要"
         },
         "2": {
-          "name": "__TODO_TRANSLATE__ On-Chain Multisig",
-          "description": "__TODO_TRANSLATE__ Native Bitcoin multisig and EVM smart contract verification"
+          "name": "オンチェーン Multisig",
+          "description": "ネイティブ Bitcoin multisig と EVM スマートコントラクト検証"
         },
         "3": {
-          "name": "__TODO_TRANSLATE__ Business Policies",
-          "description": "__TODO_TRANSLATE__ Spending limits, address whitelists, time-locks, admin approvals, per-signer overrides, velocity tracking — 14+ configurable controls"
+          "name": "ビジネスポリシー",
+          "description": "支出制限、アドレスホワイトリスト、タイムロック、管理者承認、署名者ごとのオーバーライド、速度追跡 — 14 以上の設定可能なコントロール"
         },
         "4": {
-          "name": "__TODO_TRANSLATE__ Audit & Compliance",
-          "description": "__TODO_TRANSLATE__ Immutable logs, login tracking, and compliance reporting"
+          "name": "監査とコンプライアンス",
+          "description": "変更不可能なログ、ログイン追跡、コンプライアンスレポート"
         }
       },
-      "footerBefore": "__TODO_TRANSLATE__ SSP Wallet is open source and ",
-      "footerLink": "__TODO_TRANSLATE__ audited by Halborn",
-      "footerAfter": "__TODO_TRANSLATE__ . Verify the code yourself."
+      "footerBefore": "SSP Wallet はオープンソースで ",
+      "footerLink": "Halborn による監査済み",
+      "footerAfter": "。コードを自分で検証してください。"
     },
     "comparison": {
-      "title": "__TODO_TRANSLATE__ How We Compare",
-      "subtitle": "__TODO_TRANSLATE__ SSP Enterprise vs. the alternatives",
+      "title": "比較",
+      "subtitle": "SSP Enterprise vs. 代替手段",
       "columns": {
-        "feature": "__TODO_TRANSLATE__ Feature",
-        "ssp": "__TODO_TRANSLATE__ SSP Enterprise"
+        "feature": "機能",
+        "ssp": "SSP Enterprise"
       },
       "values": {
-        "partial": "__TODO_TRANSLATE__ Partial"
+        "partial": "一部"
       },
       "rows": {
-        "0": "__TODO_TRANSLATE__ True Self-Custody",
-        "1": "__TODO_TRANSLATE__ Multi-Chain",
-        "2": "__TODO_TRANSLATE__ On-Chain Multisig",
-        "3": "__TODO_TRANSLATE__ Transaction Policy Engine",
-        "4": "__TODO_TRANSLATE__ Mobile Signing",
-        "5": "__TODO_TRANSLATE__ Open Source",
-        "6": "__TODO_TRANSLATE__ No Vendor Lock-in",
-        "7": "__TODO_TRANSLATE__ Affordable"
+        "0": "真のセルフカストディ",
+        "1": "マルチチェーン",
+        "2": "オンチェーン Multisig",
+        "3": "トランザクションポリシーエンジン",
+        "4": "モバイル署名",
+        "5": "オープンソース",
+        "6": "ベンダーロックインなし",
+        "7": "手頃な価格"
       },
-      "annualCostLabel": "__TODO_TRANSLATE__ Annual Cost",
-      "annualCostSsp": "__TODO_TRANSLATE__ Free*",
-      "annualCostFireblocks": "__TODO_TRANSLATE__ $100K+",
-      "annualCostBitgo": "__TODO_TRANSLATE__ $50K+",
-      "annualCostSafe": "__TODO_TRANSLATE__ Gas fees",
-      "footnoteBefore": "__TODO_TRANSLATE__ * Open-source wallet is free. Enterprise platform has a free tier to get started. ",
-      "footnoteLink": "__TODO_TRANSLATE__ Contact sales",
-      "footnoteAfter": "__TODO_TRANSLATE__  for custom plans.",
-      "migrationLabel": "__TODO_TRANSLATE__ Already on one of these? See the migration guide:",
-      "migrationFireblocks": "__TODO_TRANSLATE__ From Fireblocks",
-      "migrationSafe": "__TODO_TRANSLATE__ From Safe",
-      "migrationBitgo": "__TODO_TRANSLATE__ From BitGo"
+      "annualCostLabel": "年間費用",
+      "annualCostSsp": "無料*",
+      "annualCostFireblocks": "$100K+",
+      "annualCostBitgo": "$50K+",
+      "annualCostSafe": "ガス代",
+      "footnoteBefore": "* オープンソースウォレットは無料。Enterprise プラットフォームには開始のための無料枠があります。 ",
+      "footnoteLink": "セールスに連絡",
+      "footnoteAfter": " カスタムプランについて。",
+      "migrationLabel": "これらのいずれかを使用中ですか？移行ガイドをご覧ください：",
+      "migrationFireblocks": "Fireblocks から",
+      "migrationSafe": "Safe から",
+      "migrationBitgo": "BitGo から"
     },
     "useCases": {
-      "title": "__TODO_TRANSLATE__ Built For",
-      "subtitle": "__TODO_TRANSLATE__ Any organization that holds crypto and needs team-based signing",
-      "readPlaybook": "__TODO_TRANSLATE__ Read the playbook",
+      "title": "対象",
+      "subtitle": "暗号資産を保有しチームベースの署名が必要なあらゆる組織",
+      "readPlaybook": "プレイブックを読む",
       "items": {
         "0": {
-          "title": "__TODO_TRANSLATE__ Corporate Treasury",
-          "description": "__TODO_TRANSLATE__ Multi-signature approval for company funds. CEO + CFO + Board = 2-of-3.",
-          "example": "__TODO_TRANSLATE__ 3 executives, 2 required to sign"
+          "title": "法人トレジャリー",
+          "description": "会社資金のマルチシグネチャ承認。CEO + CFO + 取締役会 = 2-of-3。",
+          "example": "役員 3 名、署名は 2 名が必要"
         },
         "1": {
-          "title": "__TODO_TRANSLATE__ DAO Treasury",
-          "description": "__TODO_TRANSLATE__ Decentralized decision-making with on-chain security for community funds.",
-          "example": "__TODO_TRANSLATE__ 5 council members, 3 required"
+          "title": "DAO トレジャリー",
+          "description": "コミュニティ資金のオンチェーンセキュリティによる分散型意思決定。",
+          "example": "評議員 5 名、3 名が必要"
         },
         "2": {
-          "title": "__TODO_TRANSLATE__ Investment Funds",
-          "description": "__TODO_TRANSLATE__ Institutional-grade self-custody for fund managers and limited partners.",
-          "example": "__TODO_TRANSLATE__ Fund manager + compliance + LP"
+          "title": "投資ファンド",
+          "description": "ファンドマネージャーと限定パートナー向けの機関グレードのセルフカストディ。",
+          "example": "ファンドマネージャー + コンプライアンス + LP"
         },
         "3": {
-          "title": "__TODO_TRANSLATE__ Partnerships & JVs",
-          "description": "__TODO_TRANSLATE__ Shared control between partners with clear accountability and audit trails.",
-          "example": "__TODO_TRANSLATE__ Equal control, transparent ops"
+          "title": "パートナーシップ & JV",
+          "description": "明確な説明責任と監査証跡を持つパートナー間の共有コントロール。",
+          "example": "均等なコントロール、透明な運営"
         }
       }
     },
     "chains": {
-      "title": "__TODO_TRANSLATE__ Multi-Chain Native",
-      "subtitle": "__TODO_TRANSLATE__ One platform for all your chains — UTXO and EVM",
-      "footer": "__TODO_TRANSLATE__ More chains added regularly. All ERC-20 tokens supported on EVM chains."
+      "title": "マルチチェーンネイティブ",
+      "subtitle": "すべてのチェーンに対応する 1 つのプラットフォーム — UTXO と EVM",
+      "footer": "チェーンを定期的に追加中。EVM チェーンですべての ERC-20 トークンをサポート。"
     },
     "contact": {
-      "title": "__TODO_TRANSLATE__ Contact Sales",
-      "subtitle": "__TODO_TRANSLATE__ Need a custom Enterprise plan, dedicated support, or priority onboarding? Get in touch with our team.",
-      "launchApp": "__TODO_TRANSLATE__ Launch Enterprise App",
-      "scheduleCall": "__TODO_TRANSLATE__ Schedule a Call",
-      "directContactStrong": "__TODO_TRANSLATE__ Prefer direct contact?",
-      "directContactBefore": "__TODO_TRANSLATE__  Reach out to ",
-      "directContactBetween": "__TODO_TRANSLATE__  or DM ",
-      "directContactAfter": "__TODO_TRANSLATE__  on X."
+      "title": "セールスに連絡",
+      "subtitle": "カスタム Enterprise プラン、専用サポート、または優先オンボーディングが必要ですか？チームにご連絡ください。",
+      "launchApp": "Enterprise アプリを起動",
+      "scheduleCall": "通話をスケジュール",
+      "directContactStrong": "ダイレクトコンタクトを希望ですか？",
+      "directContactBefore": " こちらにご連絡ください ",
+      "directContactBetween": " または DM で ",
+      "directContactAfter": " X にて。"
     },
     "form": {
-      "fullNameLabel": "__TODO_TRANSLATE__ Full Name *",
-      "fullNamePlaceholder": "__TODO_TRANSLATE__ Your full name",
-      "emailLabel": "__TODO_TRANSLATE__ Email Address *",
-      "emailPlaceholder": "__TODO_TRANSLATE__ your.email@company.com",
-      "companyLabel": "__TODO_TRANSLATE__ Company / Organization",
-      "companyPlaceholder": "__TODO_TRANSLATE__ Your company name",
-      "teamSizeLabel": "__TODO_TRANSLATE__ Team Size",
-      "teamSizePlaceholder": "__TODO_TRANSLATE__ Select team size",
+      "fullNameLabel": "氏名 *",
+      "fullNamePlaceholder": "お名前",
+      "emailLabel": "メールアドレス *",
+      "emailPlaceholder": "your.email@company.com",
+      "companyLabel": "会社 / 組織",
+      "companyPlaceholder": "会社名",
+      "teamSizeLabel": "チームサイズ",
+      "teamSizePlaceholder": "チームサイズを選択",
       "teamSizeOptions": {
-        "2-5": "__TODO_TRANSLATE__ 2-5 signers",
-        "6-10": "__TODO_TRANSLATE__ 6-10 signers",
-        "11-25": "__TODO_TRANSLATE__ 11-25 signers",
-        "25+": "__TODO_TRANSLATE__ 25+ signers"
+        "2-5": "2-5 名の署名者",
+        "6-10": "6-10 名の署名者",
+        "11-25": "11-25 名の署名者",
+        "25+": "25 名以上の署名者"
       },
-      "useCaseLabel": "__TODO_TRANSLATE__ Primary Use Case",
-      "useCasePlaceholder": "__TODO_TRANSLATE__ Select use case",
+      "useCaseLabel": "主なユースケース",
+      "useCasePlaceholder": "ユースケースを選択",
       "useCaseOptions": {
-        "corporate-treasury": "__TODO_TRANSLATE__ Corporate Treasury",
-        "dao-treasury": "__TODO_TRANSLATE__ DAO Treasury",
-        "investment-fund": "__TODO_TRANSLATE__ Investment Fund",
-        "partnership": "__TODO_TRANSLATE__ Partnership / Joint Venture",
-        "otc-desk": "__TODO_TRANSLATE__ OTC Desk",
-        "mining-operation": "__TODO_TRANSLATE__ Mining Operation",
-        "exchange": "__TODO_TRANSLATE__ Exchange",
-        "other": "__TODO_TRANSLATE__ Other"
+        "corporate-treasury": "法人トレジャリー",
+        "dao-treasury": "DAO トレジャリー",
+        "investment-fund": "投資ファンド",
+        "partnership": "パートナーシップ / ジョイントベンチャー",
+        "otc-desk": "OTC デスク",
+        "mining-operation": "マイニング事業",
+        "exchange": "取引所",
+        "other": "その他"
       },
-      "messageLabel": "__TODO_TRANSLATE__ Tell Us About Your Needs",
-      "messagePlaceholder": "__TODO_TRANSLATE__ What challenges are you facing with crypto custody? What features matter most to your team?",
-      "submitting": "__TODO_TRANSLATE__ Sending Request...",
-      "submit": "__TODO_TRANSLATE__ Get Started",
-      "errorFallback": "__TODO_TRANSLATE__ Failed to send request. Please try again.",
-      "errorGeneric": "__TODO_TRANSLATE__ Failed to send request",
-      "successTitle": "__TODO_TRANSLATE__ Request Received!",
-      "successDescription": "__TODO_TRANSLATE__ Thank you for your interest in SSP Enterprise. We'll be in touch soon.",
-      "successAgain": "__TODO_TRANSLATE__ Submit another request"
+      "messageLabel": "ニーズについてお聞かせください",
+      "messagePlaceholder": "暗号資産のカストディでどのような課題に直面していますか？チームにとって最も重要な機能は何ですか？",
+      "submitting": "リクエスト送信中...",
+      "submit": "始める",
+      "errorFallback": "リクエストの送信に失敗しました。もう一度お試しください。",
+      "errorGeneric": "リクエストの送信に失敗しました",
+      "successTitle": "リクエストを受信しました！",
+      "successDescription": "SSP Enterprise へのご興味をいただきありがとうございます。まもなくご連絡いたします。",
+      "successAgain": "別のリクエストを送信"
     },
     "finalCta": {
-      "title": "__TODO_TRANSLATE__ Your Keys. Your Rules.",
-      "description": "__TODO_TRANSLATE__ SSP Enterprise gives your organization the security of self-custody with the governance of enterprise software. No custodians. No middlemen. No compromises.",
-      "launchApp": "__TODO_TRANSLATE__ Launch Enterprise App",
-      "downloadWallet": "__TODO_TRANSLATE__ Download SSP Wallet",
-      "exploreFeatures": "__TODO_TRANSLATE__ Explore All Features"
+      "title": "あなたの鍵。あなたのルール。",
+      "description": "SSP Enterprise は、エンタープライズソフトウェアのガバナンスとセルフカストディのセキュリティを組織に提供します。カストディアンなし。仲介者なし。妥協なし。",
+      "launchApp": "Enterprise アプリを起動",
+      "downloadWallet": "SSP Wallet をダウンロード",
+      "exploreFeatures": "すべての機能を見る"
     }
   },
   "InteractiveDemo": {
-    "modalTitle": "__TODO_TRANSLATE__ Complete SSP Wallet Experience",
-    "modalSubtitle": "__TODO_TRANSLATE__ Full setup and transaction flow with true 2-of-2 multisig security",
-    "closeDemo": "__TODO_TRANSLATE__ Close demo",
-    "previous": "__TODO_TRANSLATE__ Previous",
-    "next": "__TODO_TRANSLATE__ Next",
-    "restartDemo": "__TODO_TRANSLATE__ Restart Demo",
-    "downloadSspWallet": "__TODO_TRANSLATE__ Download SSP Wallet",
-    "stepCounter": "__TODO_TRANSLATE__ {phase} - Step {current} of {total}",
-    "walletSetupTitle": "__TODO_TRANSLATE__ SSP Wallet Setup",
-    "walletSetupSubtitle": "__TODO_TRANSLATE__ Create your browser wallet with secure seed phrase",
-    "keySetupTitle": "__TODO_TRANSLATE__ SSP Key Setup",
-    "keySetupSubtitle": "__TODO_TRANSLATE__ Set up mobile app with separate seed phrase",
-    "deviceSyncTitle": "__TODO_TRANSLATE__ Device Synchronization",
-    "deviceSyncSubtitle": "__TODO_TRANSLATE__ Connect your browser and mobile securely",
-    "transactionTitle": "__TODO_TRANSLATE__ Send Transaction",
-    "transactionSubtitle": "__TODO_TRANSLATE__ Experience the dual-device security flow",
-    "feedbackCopied": "__TODO_TRANSLATE__ Copied!",
-    "feedbackCopiedCheck": "__TODO_TRANSLATE__ ✓ Copied!",
-    "feedbackConfirmedCheck": "__TODO_TRANSLATE__ ✓ Confirmed!",
-    "chromeWebStore": "__TODO_TRANSLATE__ Chrome Web Store",
-    "sspWalletName": "__TODO_TRANSLATE__ SSP Wallet",
-    "byInfluxTech": "__TODO_TRANSLATE__ by InFlux Technologies",
-    "walletStoreTagline": "__TODO_TRANSLATE__ Secure, Simple, Powerful crypto wallet with 2-of-2 multisig",
-    "getToBrowser": "__TODO_TRANSLATE__ Get to Browser",
-    "walletRating": "__TODO_TRANSLATE__ ⭐ 4.8",
-    "walletUserCount": "__TODO_TRANSLATE__ 1K+ users",
-    "walletAudited": "__TODO_TRANSLATE__ 🛡️ Audited",
-    "installExtensionTitle": "__TODO_TRANSLATE__ Install SSP Wallet Extension",
-    "installExtensionDescription": "__TODO_TRANSLATE__ Download the browser extension from Chrome Web Store. Available for Chrome, Brave, and Firefox.",
-    "sspWalletSetup": "__TODO_TRANSLATE__ SSP Wallet Setup",
-    "sspLogoAlt": "__TODO_TRANSLATE__ SSP Logo",
-    "createYourWallet": "__TODO_TRANSLATE__ Create Your Wallet",
-    "newPasswordLabel": "__TODO_TRANSLATE__ New Password",
-    "enterSecurePasswordPlaceholder": "__TODO_TRANSLATE__ Enter secure password",
-    "confirmPasswordLabel": "__TODO_TRANSLATE__ Confirm Password",
-    "confirmPasswordPlaceholder": "__TODO_TRANSLATE__ Confirm password",
-    "agreeToTerms": "__TODO_TRANSLATE__ I have read and agree to the Terms of Service",
-    "createSecurePasswordTitle": "__TODO_TRANSLATE__ Create Secure Password",
-    "createSecurePasswordDescription": "__TODO_TRANSLATE__ This password encrypts your wallet locally. It never leaves your browser and protects your seed phrase.",
-    "backupRequired": "__TODO_TRANSLATE__ Backup Required",
-    "walletSeedPhraseHeading": "__TODO_TRANSLATE__ Your Wallet Seed Phrase",
-    "writeDownWarning": "__TODO_TRANSLATE__ ⚠️ Write this down and store it safely!",
-    "clickToRevealSeed": "__TODO_TRANSLATE__ Click to reveal your 24-word seed phrase",
-    "showSeedPhrase": "__TODO_TRANSLATE__ Show Seed Phrase",
-    "copy": "__TODO_TRANSLATE__ Copy",
-    "writtenItDown": "__TODO_TRANSLATE__ ✓ I've Written It Down",
-    "seedConfirmedToast": "__TODO_TRANSLATE__ ✓ Seed phrase confirmed and ready to proceed",
-    "backupSeedTitle": "__TODO_TRANSLATE__ Backup Your Seed Phrase",
-    "backupSeedDescription": "__TODO_TRANSLATE__ This 24-word phrase is your master key. Write it down and store it securely offline. This is seed phrase #1 of 2.",
-    "walletCreated": "__TODO_TRANSLATE__ Wallet Created",
-    "sspWalletReady": "__TODO_TRANSLATE__ SSP Wallet Ready!",
-    "walletSetUpWith": "__TODO_TRANSLATE__ Your browser wallet is set up with:",
-    "securePasswordProtection": "__TODO_TRANSLATE__ Secure password protection",
-    "twentyFourWordSeedBackedUp": "__TODO_TRANSLATE__ 24-word seed phrase backed up",
-    "readyForMobileSetup": "__TODO_TRANSLATE__ Ready for mobile app setup",
-    "nextStep": "__TODO_TRANSLATE__ Next Step",
-    "setUpKeyMobile": "__TODO_TRANSLATE__ Set up SSP Key mobile app",
-    "walletSetupCompleteTitle": "__TODO_TRANSLATE__ Wallet Setup Complete",
-    "walletSetupCompleteDescription": "__TODO_TRANSLATE__ Your browser wallet is ready! Now you need to set up the mobile app for the second signature.",
-    "sspKeyName": "__TODO_TRANSLATE__ SSP Key",
-    "twoFaMultisigSecurity": "__TODO_TRANSLATE__ 2FA Multisig Security",
-    "ratingLabel": "__TODO_TRANSLATE__ Rating:",
-    "ratingValue": "__TODO_TRANSLATE__ ⭐⭐⭐⭐⭐ 5.0",
-    "developerLabel": "__TODO_TRANSLATE__ Developer:",
-    "developerValue": "__TODO_TRANSLATE__ Influx Technologies",
-    "downloadsLabel": "__TODO_TRANSLATE__ Downloads:",
-    "downloadsValue": "__TODO_TRANSLATE__ 1,000+",
-    "sizeLabel": "__TODO_TRANSLATE__ Size:",
-    "iosSizeValue": "__TODO_TRANSLATE__ 35 MB",
-    "androidSizeValue": "__TODO_TRANSLATE__ 46 MB",
-    "requiresLabel": "__TODO_TRANSLATE__ Requires:",
-    "iosRequiresValue": "__TODO_TRANSLATE__ iOS 15.1+",
-    "androidRequiresValue": "__TODO_TRANSLATE__ Android 7.0+",
-    "downloadForIos": "__TODO_TRANSLATE__ Download for iOS",
-    "downloadForAndroid": "__TODO_TRANSLATE__ Download for Android",
-    "securityAudited": "__TODO_TRANSLATE__ Security audited",
-    "touchFaceId": "__TODO_TRANSLATE__ Touch ID / Face ID",
-    "biometricUnlock": "__TODO_TRANSLATE__ Biometric unlock",
-    "qrCodePairing": "__TODO_TRANSLATE__ QR code pairing",
-    "zeroDataStorage": "__TODO_TRANSLATE__ Zero data storage",
-    "downloadKeyMobileTitle": "__TODO_TRANSLATE__ Download SSP Key Mobile App",
-    "downloadKeyMobileDescription": "__TODO_TRANSLATE__ Install the mobile companion app from App Store or Google Play. This provides the second signature for your transactions.",
-    "sspKeyAlt": "__TODO_TRANSLATE__ SSP Key",
-    "sspKeySetup": "__TODO_TRANSLATE__ SSP Key Setup",
-    "appPasswordLabel": "__TODO_TRANSLATE__ App Password",
-    "createPasswordPlaceholder": "__TODO_TRANSLATE__ Create password",
-    "enableBiometrics": "__TODO_TRANSLATE__ Enable Biometrics",
-    "continueSetup": "__TODO_TRANSLATE__ Continue Setup",
-    "touchFaceIdEnabled": "__TODO_TRANSLATE__ ✓ Touch ID / Face ID Enabled",
-    "secureMobileKeyTitle": "__TODO_TRANSLATE__ Secure Your Mobile Key",
-    "secureMobileKeyDescription": "__TODO_TRANSLATE__ Create a password for your mobile app and enable biometric authentication for enhanced security.",
-    "keySeedPhrase": "__TODO_TRANSLATE__ Key Seed Phrase",
-    "generateKeySeed": "__TODO_TRANSLATE__ Generate your separate mobile key seed phrase",
-    "showKeySeed": "__TODO_TRANSLATE__ Show Key Seed",
-    "saved": "__TODO_TRANSLATE__ ✓ Saved",
-    "keySeedConfirmedToast": "__TODO_TRANSLATE__ ✓ Key seed confirmed",
-    "storeSeparatelyWarning": "__TODO_TRANSLATE__ ⚠️ Store separately from wallet seed!",
-    "backupKeySeedTitle": "__TODO_TRANSLATE__ Backup Mobile Key Seed",
-    "backupKeySeedDescription": "__TODO_TRANSLATE__ This is a separate 24-word seed phrase for your mobile key. Both seeds are required for full SSP recovery.",
-    "sspKeyReady": "__TODO_TRANSLATE__ SSP Key Ready!",
-    "passwordProtection": "__TODO_TRANSLATE__ Password protection",
-    "biometricSecurity": "__TODO_TRANSLATE__ Biometric security",
-    "keySeedBackedUp": "__TODO_TRANSLATE__ Key seed backed up",
-    "readyToPair": "__TODO_TRANSLATE__ Ready to pair",
-    "nextScanQrToConnect": "__TODO_TRANSLATE__ Next: Scan QR code to connect devices",
-    "mobileKeyCompleteTitle": "__TODO_TRANSLATE__ Mobile Key Setup Complete",
-    "mobileKeyCompleteDescription": "__TODO_TRANSLATE__ Your mobile app is ready! Now let's connect it to your browser wallet for the 2-of-2 security.",
-    "sspWalletSyncDevice": "__TODO_TRANSLATE__ SSP Wallet - Sync Device",
-    "connectMobileDevice": "__TODO_TRANSLATE__ Connect Mobile Device",
-    "scanQrWithKeyApp": "__TODO_TRANSLATE__ Scan this QR code with SSP Key app",
-    "connectionIdLabel": "__TODO_TRANSLATE__ Connection ID:",
-    "learnMoreLink": "__TODO_TRANSLATE__ Learn more at sspwallet.io",
-    "scanQrCode": "__TODO_TRANSLATE__ Scan QR Code",
-    "positionQrInFrame": "__TODO_TRANSLATE__ Position QR code in frame",
-    "readyToScan": "__TODO_TRANSLATE__ Ready to Scan",
-    "generatePairingQrTitle": "__TODO_TRANSLATE__ Generate Pairing QR Code",
-    "generatePairingQrDescription": "__TODO_TRANSLATE__ Your browser wallet shows a QR code with SSP logo. Open SSP Key app and scan to connect securely.",
-    "synchronising": "__TODO_TRANSLATE__ Synchronising...",
-    "pairingInProgress": "__TODO_TRANSLATE__ Pairing in Progress",
-    "establishingSecureConnection": "__TODO_TRANSLATE__ Establishing secure connection with mobile device...",
-    "exchangingKeys": "__TODO_TRANSLATE__ Exchanging encryption keys and public keys...",
-    "connectionDetailsHeading": "__TODO_TRANSLATE__ Connection Details",
-    "establishingSspRelay": "__TODO_TRANSLATE__ Establishing secure SSP relay connection...",
-    "synchronisationComplete": "__TODO_TRANSLATE__ Synchronisation Complete!",
-    "qrCodeScanned": "__TODO_TRANSLATE__ QR Code Scanned!",
-    "browserWalletLabel": "__TODO_TRANSLATE__ Browser Wallet:",
-    "chromeExtensionValue": "__TODO_TRANSLATE__ Chrome Extension",
-    "encryptionLabel": "__TODO_TRANSLATE__ Encryption:",
-    "confirmPairing": "__TODO_TRANSLATE__ Confirm Pairing",
-    "scanningQrCodeTitle": "__TODO_TRANSLATE__ Scanning QR Code",
-    "scanningQrCodeDescription": "__TODO_TRANSLATE__ The mobile app reads the QR code and establishes an encrypted connection with your browser wallet.",
-    "deviceConnected": "__TODO_TRANSLATE__ Device Connected",
-    "successfullyPaired": "__TODO_TRANSLATE__ Successfully Paired!",
-    "devicesSecurelyConnected": "__TODO_TRANSLATE__ Your devices are now securely connected",
-    "encryptionRow": "__TODO_TRANSLATE__ 🔐 Encryption:",
-    "active": "__TODO_TRANSLATE__ Active",
-    "mobileDeviceRow": "__TODO_TRANSLATE__ 📱 Mobile Device:",
-    "connected": "__TODO_TRANSLATE__ Connected",
-    "twoOfTwoMultisigRow": "__TODO_TRANSLATE__ 🔑 2-of-2 Multisig:",
-    "ready": "__TODO_TRANSLATE__ Ready",
-    "secureConnection": "__TODO_TRANSLATE__ Secure Connection",
-    "readyForTransactions": "__TODO_TRANSLATE__ Ready for Transactions",
-    "online": "__TODO_TRANSLATE__ Online",
-    "connectionTypeLabel": "__TODO_TRANSLATE__ Connection Type:",
-    "sspRelaySecured": "__TODO_TRANSLATE__ SSP Relay Secured",
-    "multisigStatusLabel": "__TODO_TRANSLATE__ Multisig Status:",
-    "twoOfTwoActive": "__TODO_TRANSLATE__ 2-of-2 Active",
-    "walletProtectedByMultisig": "__TODO_TRANSLATE__ Wallet protected by true 2-of-2 multisig!",
-    "devicesPairedTitle": "__TODO_TRANSLATE__ Devices Successfully Paired",
-    "devicesPairedDescription": "__TODO_TRANSLATE__ Perfect! Your browser and mobile are now connected with end-to-end encryption. You can now send secure transactions.",
-    "sendTransaction": "__TODO_TRANSLATE__ Send Transaction",
-    "sendEthereum": "__TODO_TRANSLATE__ Send Ethereum",
-    "recipientAddressLabel": "__TODO_TRANSLATE__ Recipient Address",
-    "amountEthLabel": "__TODO_TRANSLATE__ Amount (ETH)",
-    "transactionSummary": "__TODO_TRANSLATE__ Transaction Summary",
-    "amountLabel": "__TODO_TRANSLATE__ Amount:",
-    "gasFeeLabel": "__TODO_TRANSLATE__ Gas Fee:",
-    "totalLabel": "__TODO_TRANSLATE__ Total:",
-    "sendTransactionButton": "__TODO_TRANSLATE__ Send Transaction",
-    "createTransactionTitle": "__TODO_TRANSLATE__ Create Transaction",
-    "createTransactionDescription": "__TODO_TRANSLATE__ Fill in the recipient address and amount. The transaction will require further approval from your mobile device.",
-    "waitingForMobileApproval": "__TODO_TRANSLATE__ Waiting for mobile approval...",
-    "pendingMobileApproval": "__TODO_TRANSLATE__ Pending Mobile Approval",
-    "signatureOneCompleteCheckMobile": "__TODO_TRANSLATE__ Signature 1/2 complete. Check your mobile device to approve the transaction.",
-    "transactionDetails": "__TODO_TRANSLATE__ Transaction Details",
-    "sendAmount": "__TODO_TRANSLATE__ Send {amount} ETH",
-    "toAddress": "__TODO_TRANSLATE__ To: {address}",
-    "notificationSentToMobile": "__TODO_TRANSLATE__ Notification sent to mobile device",
-    "transactionApprovalRequired": "__TODO_TRANSLATE__ Transaction Approval Required",
-    "transactionApproval": "__TODO_TRANSLATE__ Transaction Approval",
-    "amount": "__TODO_TRANSLATE__ Amount",
-    "toAddressLabel": "__TODO_TRANSLATE__ To Address",
-    "gasFee": "__TODO_TRANSLATE__ Gas Fee",
-    "status": "__TODO_TRANSLATE__ Status",
-    "awaitingApproval": "__TODO_TRANSLATE__ Awaiting Approval (2/2)",
-    "approveWithTouchId": "__TODO_TRANSLATE__ Approve with Touch ID",
-    "approveTwoOfTwo": "__TODO_TRANSLATE__ Approve (2/2)",
-    "reject": "__TODO_TRANSLATE__ Reject",
-    "mobileConfirmationTitle": "__TODO_TRANSLATE__ Mobile Confirmation Required",
-    "mobileConfirmationDescriptionBiometric": "__TODO_TRANSLATE__ A notification appeared on your mobile device. Review the transaction details and approve with biometric authentication.",
-    "mobileConfirmationDescriptionPassword": "__TODO_TRANSLATE__ A notification appeared on your mobile device. Review the transaction details and approve with your password.",
-    "transactionBroadcasted": "__TODO_TRANSLATE__ Transaction Broadcasted!",
-    "signaturesCollected": "__TODO_TRANSLATE__ Signatures Collected",
-    "browserWalletOneOfTwo": "__TODO_TRANSLATE__ Browser Wallet (1/2)",
-    "mobileKeyTwoOfTwo": "__TODO_TRANSLATE__ Mobile Key (2/2)",
-    "networkStatus": "__TODO_TRANSLATE__ Network Status",
-    "confirmingOnEthereum": "__TODO_TRANSLATE__ Confirming on Ethereum network",
-    "usuallyTakesMinutes": "__TODO_TRANSLATE__ Usually takes 1-3 minutes",
-    "transactionHash": "__TODO_TRANSLATE__ Transaction Hash",
-    "viewOnEtherscan": "__TODO_TRANSLATE__ View on Etherscan",
-    "transactionSubmittedTitle": "__TODO_TRANSLATE__ Transaction Submitted",
-    "transactionSubmittedDescription": "__TODO_TRANSLATE__ Perfect! Both signatures collected and transaction broadcast to Ethereum. The network is now mining and confirming your secure 2-of-2 multisig transaction.",
-    "transactionConfirmed": "__TODO_TRANSLATE__ Transaction Confirmed",
-    "transactionSuccessful": "__TODO_TRANSLATE__ Transaction Successful!",
-    "confirmedOnEthereum": "__TODO_TRANSLATE__ Confirmed on Ethereum network.",
-    "hashLabel": "__TODO_TRANSLATE__ Hash:",
-    "sendAnotherTransaction": "__TODO_TRANSLATE__ Send Another Transaction",
-    "transactionCompleteCelebration": "__TODO_TRANSLATE__ 🎉 Transaction Complete!",
-    "fundsTransferredSummary": "__TODO_TRANSLATE__ Your funds have been securely transferred using true 2-of-2 multisignature technology. Both devices were required to authorize and sign this transaction.",
-    "whyUltraSecure": "__TODO_TRANSLATE__ Why This Is Ultra-Secure",
-    "twoSeparateDevices": "__TODO_TRANSLATE__ 2 separate devices required",
-    "twoSeparateSeeds": "__TODO_TRANSLATE__ 2 separate seed phrases",
-    "trueMultisigBip48": "__TODO_TRANSLATE__ True multisignature (BIP48)",
-    "zeroServerStorage": "__TODO_TRANSLATE__ Zero server storage"
+    "modalTitle": "SSP Wallet の完全な体験",
+    "modalSubtitle": "真の 2-of-2 multisig セキュリティによる完全なセットアップとトランザクションフロー",
+    "closeDemo": "デモを閉じる",
+    "previous": "前へ",
+    "next": "次へ",
+    "restartDemo": "デモを再起動",
+    "downloadSspWallet": "SSP Wallet をダウンロード",
+    "stepCounter": "{phase} - ステップ {current} / {total}",
+    "walletSetupTitle": "SSP Wallet セットアップ",
+    "walletSetupSubtitle": "安全なシードフレーズでブラウザウォレットを作成",
+    "keySetupTitle": "SSP Key セットアップ",
+    "keySetupSubtitle": "別のシードフレーズでモバイルアプリをセットアップ",
+    "deviceSyncTitle": "デバイスの同期",
+    "deviceSyncSubtitle": "ブラウザとモバイルを安全に接続",
+    "transactionTitle": "トランザクションを送信",
+    "transactionSubtitle": "デュアルデバイスセキュリティフローを体験",
+    "feedbackCopied": "コピーしました！",
+    "feedbackCopiedCheck": "✓ コピーしました！",
+    "feedbackConfirmedCheck": "✓ 確認しました！",
+    "chromeWebStore": "Chrome Web Store",
+    "sspWalletName": "SSP Wallet",
+    "byInfluxTech": "by InFlux Technologies",
+    "walletStoreTagline": "2-of-2 multisig 付きの安全・シンプル・強力な暗号資産ウォレット",
+    "getToBrowser": "ブラウザへ",
+    "walletRating": "⭐ 4.8",
+    "walletUserCount": "1K 以上のユーザー",
+    "walletAudited": "🛡️ 監査済み",
+    "installExtensionTitle": "SSP Wallet 拡張機能をインストール",
+    "installExtensionDescription": "Chrome Web Store からブラウザ拡張機能をダウンロード。Chrome、Brave、Firefox で利用可能。",
+    "sspWalletSetup": "SSP Wallet セットアップ",
+    "sspLogoAlt": "SSP ロゴ",
+    "createYourWallet": "ウォレットを作成",
+    "newPasswordLabel": "新しいパスワード",
+    "enterSecurePasswordPlaceholder": "安全なパスワードを入力",
+    "confirmPasswordLabel": "パスワードを確認",
+    "confirmPasswordPlaceholder": "パスワードを確認",
+    "agreeToTerms": "利用規約を読み、同意します",
+    "createSecurePasswordTitle": "安全なパスワードを作成",
+    "createSecurePasswordDescription": "このパスワードはウォレットをローカルで暗号化します。ブラウザから出ることなく、シードフレーズを保護します。",
+    "backupRequired": "バックアップが必要",
+    "walletSeedPhraseHeading": "ウォレットのシードフレーズ",
+    "writeDownWarning": "⚠️ 書き留めて安全に保管してください！",
+    "clickToRevealSeed": "クリックして 24 ワードのシードフレーズを表示",
+    "showSeedPhrase": "シードフレーズを表示",
+    "copy": "コピー",
+    "writtenItDown": "✓ 書き留めました",
+    "seedConfirmedToast": "✓ シードフレーズが確認され、続行できます",
+    "backupSeedTitle": "シードフレーズをバックアップ",
+    "backupSeedDescription": "この 24 ワードのフレーズはマスターキーです。書き留めてオフラインで安全に保管してください。これは 2 つのシードフレーズのうちの 1 番目です。",
+    "walletCreated": "ウォレットを作成しました",
+    "sspWalletReady": "SSP Wallet の準備完了！",
+    "walletSetUpWith": "ブラウザウォレットのセットアップ内容：",
+    "securePasswordProtection": "安全なパスワード保護",
+    "twentyFourWordSeedBackedUp": "24 ワードのシードフレーズをバックアップ済み",
+    "readyForMobileSetup": "モバイルアプリのセットアップ準備完了",
+    "nextStep": "次のステップ",
+    "setUpKeyMobile": "SSP Key モバイルアプリをセットアップ",
+    "walletSetupCompleteTitle": "ウォレットのセットアップ完了",
+    "walletSetupCompleteDescription": "ブラウザウォレットの準備ができました！次に、2 番目の署名のためにモバイルアプリをセットアップする必要があります。",
+    "sspKeyName": "SSP Key",
+    "twoFaMultisigSecurity": "2FA Multisig セキュリティ",
+    "ratingLabel": "評価:",
+    "ratingValue": "⭐⭐⭐⭐⭐ 5.0",
+    "developerLabel": "開発者:",
+    "developerValue": "Influx Technologies",
+    "downloadsLabel": "ダウンロード数:",
+    "downloadsValue": "1,000 以上",
+    "sizeLabel": "サイズ:",
+    "iosSizeValue": "35 MB",
+    "androidSizeValue": "46 MB",
+    "requiresLabel": "必要条件:",
+    "iosRequiresValue": "iOS 15.1 以上",
+    "androidRequiresValue": "Android 7.0 以上",
+    "downloadForIos": "iOS 向けダウンロード",
+    "downloadForAndroid": "Android 向けダウンロード",
+    "securityAudited": "セキュリティ監査済み",
+    "touchFaceId": "Touch ID / Face ID",
+    "biometricUnlock": "生体認証ロック解除",
+    "qrCodePairing": "QR コードペアリング",
+    "zeroDataStorage": "ゼロデータストレージ",
+    "downloadKeyMobileTitle": "SSP Key モバイルアプリをダウンロード",
+    "downloadKeyMobileDescription": "App Store または Google Play からモバイルコンパニオンアプリをインストール。トランザクションの 2 番目の署名を提供します。",
+    "sspKeyAlt": "SSP Key",
+    "sspKeySetup": "SSP Key セットアップ",
+    "appPasswordLabel": "アプリのパスワード",
+    "createPasswordPlaceholder": "パスワードを作成",
+    "enableBiometrics": "生体認証を有効にする",
+    "continueSetup": "セットアップを続ける",
+    "touchFaceIdEnabled": "✓ Touch ID / Face ID 有効",
+    "secureMobileKeyTitle": "モバイルキーを安全に",
+    "secureMobileKeyDescription": "モバイルアプリのパスワードを作成し、セキュリティ強化のために生体認証を有効にします。",
+    "keySeedPhrase": "キーシードフレーズ",
+    "generateKeySeed": "モバイルキー専用のシードフレーズを生成",
+    "showKeySeed": "キーシードを表示",
+    "saved": "✓ 保存しました",
+    "keySeedConfirmedToast": "✓ キーシードを確認しました",
+    "storeSeparatelyWarning": "⚠️ ウォレットシードとは別に保管してください！",
+    "backupKeySeedTitle": "モバイルキーシードをバックアップ",
+    "backupKeySeedDescription": "これはモバイルキー専用の別の 24 ワードのシードフレーズです。完全な SSP 復旧には両方のシードが必要です。",
+    "sspKeyReady": "SSP Key の準備完了！",
+    "passwordProtection": "パスワード保護",
+    "biometricSecurity": "生体認証セキュリティ",
+    "keySeedBackedUp": "キーシードをバックアップ済み",
+    "readyToPair": "ペアリング準備完了",
+    "nextScanQrToConnect": "次：QR コードをスキャンしてデバイスを接続",
+    "mobileKeyCompleteTitle": "モバイルキーのセットアップ完了",
+    "mobileKeyCompleteDescription": "モバイルアプリの準備ができました！2-of-2 セキュリティのためにブラウザウォレットに接続しましょう。",
+    "sspWalletSyncDevice": "SSP Wallet - デバイスを同期",
+    "connectMobileDevice": "モバイルデバイスを接続",
+    "scanQrWithKeyApp": "SSP Key アプリでこの QR コードをスキャン",
+    "connectionIdLabel": "接続 ID:",
+    "learnMoreLink": "詳しくは sspwallet.io で",
+    "scanQrCode": "QR コードをスキャン",
+    "positionQrInFrame": "フレーム内に QR コードを配置",
+    "readyToScan": "スキャン準備完了",
+    "generatePairingQrTitle": "ペアリング QR コードを生成",
+    "generatePairingQrDescription": "ブラウザウォレットに SSP ロゴ付きの QR コードが表示されます。SSP Key アプリを開いてスキャンして安全に接続します。",
+    "synchronising": "同期中...",
+    "pairingInProgress": "ペアリング中",
+    "establishingSecureConnection": "モバイルデバイスとの安全な接続を確立中...",
+    "exchangingKeys": "暗号化キーと公開鍵を交換中...",
+    "connectionDetailsHeading": "接続の詳細",
+    "establishingSspRelay": "安全な SSP リレー接続を確立中...",
+    "synchronisationComplete": "同期完了！",
+    "qrCodeScanned": "QR コードをスキャンしました！",
+    "browserWalletLabel": "ブラウザウォレット:",
+    "chromeExtensionValue": "Chrome 拡張機能",
+    "encryptionLabel": "暗号化:",
+    "confirmPairing": "ペアリングを確認",
+    "scanningQrCodeTitle": "QR コードをスキャン中",
+    "scanningQrCodeDescription": "モバイルアプリが QR コードを読み取り、ブラウザウォレットとの暗号化接続を確立します。",
+    "deviceConnected": "デバイスが接続されました",
+    "successfullyPaired": "ペアリング成功！",
+    "devicesSecurelyConnected": "デバイスが安全に接続されました",
+    "encryptionRow": "🔐 暗号化:",
+    "active": "アクティブ",
+    "mobileDeviceRow": "📱 モバイルデバイス:",
+    "connected": "接続済み",
+    "twoOfTwoMultisigRow": "🔑 2-of-2 Multisig:",
+    "ready": "準備完了",
+    "secureConnection": "安全な接続",
+    "readyForTransactions": "トランザクション準備完了",
+    "online": "オンライン",
+    "connectionTypeLabel": "接続タイプ:",
+    "sspRelaySecured": "SSP リレーで保護",
+    "multisigStatusLabel": "Multisig ステータス:",
+    "twoOfTwoActive": "2-of-2 アクティブ",
+    "walletProtectedByMultisig": "ウォレットが真の 2-of-2 multisig で保護されています！",
+    "devicesPairedTitle": "デバイスのペアリングに成功しました",
+    "devicesPairedDescription": "完璧！ブラウザとモバイルがエンドツーエンド暗号化で接続されました。これで安全なトランザクションを送信できます。",
+    "sendTransaction": "トランザクションを送信",
+    "sendEthereum": "Ethereum を送信",
+    "recipientAddressLabel": "受取人アドレス",
+    "amountEthLabel": "金額 (ETH)",
+    "transactionSummary": "トランザクションの概要",
+    "amountLabel": "金額:",
+    "gasFeeLabel": "ガス代:",
+    "totalLabel": "合計:",
+    "sendTransactionButton": "トランザクションを送信",
+    "createTransactionTitle": "トランザクションを作成",
+    "createTransactionDescription": "受取人アドレスと金額を入力してください。トランザクションはモバイルデバイスからのさらなる承認が必要です。",
+    "waitingForMobileApproval": "モバイルの承認を待っています...",
+    "pendingMobileApproval": "モバイル承認待ち",
+    "signatureOneCompleteCheckMobile": "署名 1/2 完了。モバイルデバイスでトランザクションを承認してください。",
+    "transactionDetails": "トランザクションの詳細",
+    "sendAmount": "{amount} ETH を送信",
+    "toAddress": "宛先: {address}",
+    "notificationSentToMobile": "モバイルデバイスに通知を送信しました",
+    "transactionApprovalRequired": "トランザクションの承認が必要",
+    "transactionApproval": "トランザクションの承認",
+    "amount": "金額",
+    "toAddressLabel": "宛先アドレス",
+    "gasFee": "ガス代",
+    "status": "ステータス",
+    "awaitingApproval": "承認待ち (2/2)",
+    "approveWithTouchId": "Touch ID で承認",
+    "approveTwoOfTwo": "承認 (2/2)",
+    "reject": "拒否",
+    "mobileConfirmationTitle": "モバイルでの確認が必要",
+    "mobileConfirmationDescriptionBiometric": "モバイルデバイスに通知が表示されました。トランザクションの詳細を確認し、生体認証で承認してください。",
+    "mobileConfirmationDescriptionPassword": "モバイルデバイスに通知が表示されました。トランザクションの詳細を確認し、パスワードで承認してください。",
+    "transactionBroadcasted": "トランザクションをブロードキャストしました！",
+    "signaturesCollected": "署名を収集しました",
+    "browserWalletOneOfTwo": "ブラウザウォレット (1/2)",
+    "mobileKeyTwoOfTwo": "モバイルキー (2/2)",
+    "networkStatus": "ネットワークステータス",
+    "confirmingOnEthereum": "Ethereum ネットワークで確認中",
+    "usuallyTakesMinutes": "通常 1〜3 分かかります",
+    "transactionHash": "トランザクションハッシュ",
+    "viewOnEtherscan": "Etherscan で見る",
+    "transactionSubmittedTitle": "トランザクションを送信しました",
+    "transactionSubmittedDescription": "完璧！両方の署名が収集され、トランザクションが Ethereum にブロードキャストされました。ネットワークは今あなたの安全な 2-of-2 multisig トランザクションをマイニング・確認しています。",
+    "transactionConfirmed": "トランザクションが確認されました",
+    "transactionSuccessful": "トランザクション成功！",
+    "confirmedOnEthereum": "Ethereum ネットワークで確認されました。",
+    "hashLabel": "ハッシュ:",
+    "sendAnotherTransaction": "別のトランザクションを送信",
+    "transactionCompleteCelebration": "🎉 トランザクション完了！",
+    "fundsTransferredSummary": "真の 2-of-2 マルチシグネチャ技術を使用して資金が安全に送金されました。このトランザクションの承認と署名には両デバイスが必要でした。",
+    "whyUltraSecure": "なぜ超安全なのか",
+    "twoSeparateDevices": "2 台の別々のデバイスが必要",
+    "twoSeparateSeeds": "2 つの別々のシードフレーズ",
+    "trueMultisigBip48": "真のマルチシグネチャ (BIP48)",
+    "zeroServerStorage": "サーバーストレージゼロ"
   }
 }
