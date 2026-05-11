@@ -2,11 +2,13 @@ import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
 import Script from 'next/script'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { LocalizedPathsRegistrar } from '@/components/i18n/localized-paths-registrar'
 import { AuthorByline } from '@/components/shared/author-byline'
 import { Breadcrumbs } from '@/components/shared/breadcrumbs'
 import { PostArticle } from '@/components/shared/post-article'
 import { isAcademyCategory } from '@/constants/academy-categories'
 import { routing, type Locale } from '@/i18n/routing'
+import type { LocalizedPaths } from '@/lib/i18n/localized-paths'
 import { getTermMap } from '@/lib/academy-terms'
 import { getAcademyPostBySlug, getAcademySlugs, getAuthorBySlug, getRelatedPosts } from '@/lib/cms'
 import { autoLinkContent } from '@/lib/glossary-linker'
@@ -95,6 +97,13 @@ export default async function AcademyArticlePage({ params }: PageProps) {
   const termMap = getTermMap()
   const linkedContent = autoLinkContent(post.content, post.slug, termMap)
 
+  const localizedPaths: LocalizedPaths = {}
+  for (const [loc, alt] of Object.entries(post.alternates ?? {})) {
+    if (alt?.slug) {
+      localizedPaths[loc as Locale] = `/academy/${category}/${alt.slug}`
+    }
+  }
+
   const categoryTitle = tCategories(`${category}.title`)
   const homeLabel = tCommon('breadcrumbHome')
   const academyTitle = tAcademy('title')
@@ -132,6 +141,7 @@ export default async function AcademyArticlePage({ params }: PageProps) {
       <Script id='academy-article-breadcrumb-jsonld' type='application/ld+json'>
         {JSON.stringify(breadcrumbJsonLd)}
       </Script>
+      <LocalizedPathsRegistrar paths={localizedPaths} />
       <PostArticle
         post={post}
         relatedPosts={relatedPosts}

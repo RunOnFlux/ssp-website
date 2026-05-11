@@ -36,6 +36,7 @@ export interface NewsroomPost {
   slugHistory?: string[]
   locale: Locale
   servedLocale: Locale
+  alternates?: Partial<Record<Locale, { slug: string }>>
 }
 
 export interface Author {

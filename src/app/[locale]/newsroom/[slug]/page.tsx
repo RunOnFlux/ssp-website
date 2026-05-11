@@ -2,9 +2,11 @@ import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
 import Script from 'next/script'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
+import { LocalizedPathsRegistrar } from '@/components/i18n/localized-paths-registrar'
 import { PostArticle } from '@/components/shared/post-article'
 import { routing, type Locale } from '@/i18n/routing'
 import { getAllSlugs, getPostBySlug, getRelatedPosts } from '@/lib/cms'
+import type { LocalizedPaths } from '@/lib/i18n/localized-paths'
 import { createBlogPostingJsonLd, createBreadcrumbJsonLd, createMetadata, siteUrl } from '@/lib/seo'
 
 interface PageProps {
@@ -93,6 +95,13 @@ export default async function NewsroomArticlePage({ params }: PageProps) {
     { name: post.title, url: `/newsroom/${post.slug}` },
   ])
 
+  const localizedPaths: LocalizedPaths = {}
+  for (const [loc, alt] of Object.entries(post.alternates ?? {})) {
+    if (alt?.slug) {
+      localizedPaths[loc as Locale] = `/newsroom/${alt.slug}`
+    }
+  }
+
   return (
     <>
       <Script id='blog-posting-jsonld' type='application/ld+json'>
@@ -101,6 +110,7 @@ export default async function NewsroomArticlePage({ params }: PageProps) {
       <Script id='breadcrumb-jsonld' type='application/ld+json'>
         {JSON.stringify(breadcrumbJsonLd)}
       </Script>
+      <LocalizedPathsRegistrar paths={localizedPaths} />
       <PostArticle
         post={post}
         relatedPosts={relatedPosts}

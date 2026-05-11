@@ -5,6 +5,7 @@ import { Globe } from 'lucide-react'
 import { useLocale, useTranslations } from 'next-intl'
 import { usePathname, useRouter } from '@/i18n/navigation'
 import { type Locale, routing } from '@/i18n/routing'
+import { useLocalizedPaths } from '@/lib/i18n/localized-paths'
 
 const LABELS: Record<Locale, string> = {
   en: 'English',
@@ -28,9 +29,15 @@ export function LocaleSwitcher() {
   const locale = useLocale() as Locale
   const router = useRouter()
   const pathname = usePathname()
+  const localizedPaths = useLocalizedPaths()
 
   function setLocale(next: Locale) {
-    router.replace(pathname, { locale: next })
+    const targetPath = localizedPaths[next]
+    if (targetPath) {
+      router.replace(targetPath, { locale: next })
+    } else {
+      router.replace(pathname, { locale: next })
+    }
   }
 
   return (
@@ -47,7 +54,7 @@ export function LocaleSwitcher() {
       <DropdownMenu.Portal>
         <DropdownMenu.Content
           sideOffset={8}
-          className='rounded-card dark:border-dark-700 dark:bg-dark-800 border border-gray-200 bg-white p-2 shadow-md'
+          className='rounded-card dark:border-dark-700 dark:bg-dark-800 z-50 border border-gray-200 bg-white p-2 shadow-md'
         >
           {routing.locales.map(l => (
             <DropdownMenu.Item
