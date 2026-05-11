@@ -120,4 +120,7 @@ next-env.d.ts
 .turbo
 
 # Contentlayer
-.contentlayer/ .worktrees/
+.contentlayer/
+
+# Local git worktrees (superpowers/brainstorming workflow)
+.worktrees/
