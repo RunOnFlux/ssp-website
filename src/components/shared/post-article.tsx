@@ -143,7 +143,11 @@ export function PostArticle({
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             components={{
-              h2: ({ children }) => <h2 id={slugifyHeading(String(children))}>{children}</h2>,
+              h2: ({ children }) => (
+                <h2 id={slugifyHeading(String(children))} className='scroll-mt-24'>
+                  {children}
+                </h2>
+              ),
               a: ({ href, children, ...props }) => {
                 if (href?.startsWith('http')) {
                   return (
