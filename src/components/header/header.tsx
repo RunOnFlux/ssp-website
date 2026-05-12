@@ -1,8 +1,7 @@
 'use client'
 
-import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
 import { AnimatePresence, motion } from 'framer-motion'
-import { ChevronDown, Download, Menu, Moon, Sun, X } from 'lucide-react'
+import { Download, Menu, Moon, Sun, X } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
 import { LocaleSwitcher } from '@/components/header/locale-switcher'
@@ -26,11 +25,8 @@ export function Header() {
     { name: t('academy'), href: '/academy' },
     { name: t('guide'), href: '/guide' },
     { name: t('support'), href: '/support' },
+    { name: t('contact'), href: '/contact' },
   ]
-
-  const moreNav = [{ name: t('contact'), href: '/contact' }]
-
-  const allNavItems = [...primaryNav, ...moreNav]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,8 +38,6 @@ export function Header() {
   }, [])
 
   const closeMenu = () => setIsMenuOpen(false)
-
-  const isMoreActive = moreNav.some(item => pathname === item.href)
 
   return (
     <header
@@ -84,45 +78,6 @@ export function Header() {
                 )}
               </Link>
             ))}
-
-            {/* More dropdown */}
-            <DropdownMenu.Root>
-              <DropdownMenu.Trigger asChild>
-                <button
-                  className={cn(
-                    'hover:text-primary-600 dark:hover:text-primary-400 inline-flex items-center gap-1 text-sm font-medium transition-colors duration-200',
-                    isMoreActive
-                      ? 'text-primary-600 dark:text-primary-400'
-                      : 'text-gray-700 dark:text-gray-300'
-                  )}
-                >
-                  {t('more')}
-                  <ChevronDown className='h-4 w-4' />
-                </button>
-              </DropdownMenu.Trigger>
-              <DropdownMenu.Portal>
-                <DropdownMenu.Content
-                  sideOffset={8}
-                  className='rounded-card dark:border-dark-700 dark:bg-dark-800 z-50 border border-gray-200 bg-white p-2 shadow-md'
-                >
-                  {moreNav.map(item => (
-                    <DropdownMenu.Item key={item.name} asChild>
-                      <Link
-                        href={item.href}
-                        className={cn(
-                          'dark:hover:bg-dark-700 block cursor-pointer rounded px-3 py-2 text-sm hover:bg-gray-100',
-                          pathname === item.href
-                            ? 'text-primary-600 dark:text-primary-400 font-semibold'
-                            : 'text-gray-700 dark:text-gray-300'
-                        )}
-                      >
-                        {item.name}
-                      </Link>
-                    </DropdownMenu.Item>
-                  ))}
-                </DropdownMenu.Content>
-              </DropdownMenu.Portal>
-            </DropdownMenu.Root>
           </div>
 
           {/* Right side actions */}
@@ -177,7 +132,7 @@ export function Header() {
               className='overflow-hidden lg:hidden'
             >
               <div className='dark:bg-dark-900/95 mt-2 space-y-2 rounded-lg border border-gray-200/20 bg-white/95 py-4 backdrop-blur-md dark:border-white/10'>
-                {allNavItems.map((item, index) => (
+                {primaryNav.map((item, index) => (
                   <motion.div
                     key={item.name}
                     initial={{ opacity: 0, x: -20 }}
@@ -201,7 +156,7 @@ export function Header() {
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: allNavItems.length * 0.03 }}
+                  transition={{ delay: primaryNav.length * 0.03 }}
                   className='px-4 pt-2'
                 >
                   <Link href='/download' onClick={closeMenu} className='btn btn-primary w-full'>
