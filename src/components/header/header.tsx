@@ -20,6 +20,7 @@ export function Header() {
 
   const primaryNav = [
     { name: t('home'), href: '/' },
+    { name: t('enterprise'), href: '/enterprise' },
     { name: t('features'), href: '/features' },
     { name: t('newsroom'), href: '/newsroom' },
     { name: t('academy'), href: '/academy' },
@@ -27,10 +28,7 @@ export function Header() {
     { name: t('support'), href: '/support' },
   ]
 
-  const moreNav = [
-    { name: t('enterprise'), href: '/enterprise' },
-    { name: t('contact'), href: '/contact' },
-  ]
+  const moreNav = [{ name: t('contact'), href: '/contact' }]
 
   const allNavItems = [...primaryNav, ...moreNav]
 
