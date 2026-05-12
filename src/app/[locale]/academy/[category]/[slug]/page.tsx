@@ -20,8 +20,8 @@ interface PageProps {
   params: Promise<{ locale: Locale; category: string; slug: string }>
 }
 
-export async function generateStaticParams({ params }: { params: Promise<{ locale: Locale }> }) {
-  const { locale } = await params
+export async function generateStaticParams({ params }: { params: { locale: string } }) {
+  const locale = params.locale as Locale
   try {
     const slugs = await getAcademySlugs(locale)
     return slugs

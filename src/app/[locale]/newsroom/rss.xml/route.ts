@@ -14,9 +14,9 @@ function escapeXml(s: string): string {
 
 export async function GET(
   _req: Request,
-  { params }: { params: Promise<{ locale: Locale }> }
+  { params }: { params: Promise<{ locale: string }> }
 ): Promise<NextResponse> {
-  const { locale } = await params
+  const locale = (await params).locale as Locale
   const posts = await getAllPosts(locale)
   const items = posts
     .map(
