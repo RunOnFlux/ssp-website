@@ -2,11 +2,11 @@
 /**
  * scaffold-locale.ts
  *
- * Read src/messages/en.json and write src/messages/<locale>.json with the
- * exact same key structure, where every string value is prefixed with
- * `__TODO_TRANSLATE__ <original english>`. ICU placeholders and markdown
- * are preserved verbatim inside the original value, so translator-subagents
- * downstream can pattern-match on the marker prefix.
+ * Copy src/messages/en.json to src/messages/<locale>.json with the same
+ * key structure and the English values verbatim. The output is a starting
+ * point: the caller must translate every string in place before
+ * committing. ICU placeholders and markdown live inside the English
+ * source and survive the copy untouched.
  *
  * Usage: npm run tsx scripts/scaffold-locale.ts <locale-code>
  * Example: npm run tsx scripts/scaffold-locale.ts pt-BR
@@ -15,10 +15,8 @@
 import { promises as fs } from 'node:fs'
 import path from 'node:path'
 
-const MARKER = '__TODO_TRANSLATE__'
-
 export function scaffoldFromEnglish(input: unknown): unknown {
-  if (typeof input === 'string') return `${MARKER} ${input}`
+  if (typeof input === 'string') return input
   if (Array.isArray(input)) return input.map(scaffoldFromEnglish)
   if (input !== null && typeof input === 'object') {
     const out: Record<string, unknown> = {}

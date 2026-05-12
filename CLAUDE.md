@@ -16,7 +16,7 @@ Every public route has a sibling `agent.md` file that is served when a request a
 
 **Locale-aware navigation.** Always import `Link` from `@/i18n/navigation`, never from `next/link`. Same for `useRouter` and `usePathname`. Direct use of the Next.js primitives bypasses locale prefix handling.
 
-**i18n keys.** All user-facing strings flow through `useTranslations('Namespace')`. Add new keys to `src/messages/en.json` first; replicate to `es.json` and `zh.json` with `__TODO_TRANSLATE__` markers, preserving any ICU placeholders.
+**i18n keys.** All user-facing strings flow through `useTranslations('Namespace')`. Add new keys to `src/messages/en.json` first, then translate them into every other locale file under `src/messages/` in the same change. Preserve any ICU placeholders verbatim. Locked terms from `docs/i18n/glossary.md` (brand names, chains, protocols) stay English. Never commit `__TODO_TRANSLATE__` placeholders.
 
 **CMS abstraction.** Use functions from `@/lib/cms.ts` — never call `cmsFetch` or the seed loader directly. The wrapper provides LRU caching (256 entries, 60 s TTL) and seed-fallback.
 
@@ -40,7 +40,7 @@ Every public route has a sibling `agent.md` file that is served when a request a
 
 ## i18n source of truth
 
-`src/messages/en.json` is the canonical English copy. `es.json` and `zh.json` contain `__TODO_TRANSLATE__` markers until human translators replace them. Do not machine-translate.
+`src/messages/en.json` is the canonical English copy. Every other locale file under `src/messages/` is translated directly — there is no human-translator workflow and no `__TODO_TRANSLATE__` placeholder stage. When you add a new key, translate it for every locale in the same commit, respecting the locked-term policy in `docs/i18n/glossary.md`.
 
 ## When in doubt
 

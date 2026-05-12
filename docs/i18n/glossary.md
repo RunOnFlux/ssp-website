@@ -1,13 +1,14 @@
 # SSP Translation Glossary
 
-This glossary is the source of truth for translator-subagents in Phase 2 and
-later. It defines (a) terms that must never be translated, (b) translation
-policies for ambiguous or domain-specific terms, and (c) per-locale style
-notes. Subagents read this file as input alongside the source `en.json`.
+This glossary is the source of truth for translation policy across every
+locale under `src/messages/`. It defines (a) terms that must never be
+translated, (b) translation policies for ambiguous or domain-specific
+terms, and (c) per-locale style notes.
 
-When a translator encounters a term not in this glossary that _should_ be
-locked or has an ambiguous translation, add it here in the same PR that
-introduces the translations.
+New keys are translated directly into every locale file in the same change
+that introduces them — there is no `__TODO_TRANSLATE__` placeholder stage
+and no separate human-translator pass. When a term arises that _should_ be
+locked or has an ambiguous translation, add it here in the same commit.
 
 ## 1. Locked terms — leave-as-is in every locale
 
@@ -57,8 +58,10 @@ Maintained alongside `src/constants/supported-chains.ts`. Currently:
 | airdrop                   | crypto | Leave-as-is in most locales; ja/ko/zh: translate using the locale's standard rendering        |
 | staking                   | crypto | Translate where a clear native term exists; otherwise leave-as-is                             |
 | swap (verb)               | crypto | Translate using the locale's wallet-app convention                                            |
+| Enterprise (nav label)    | UX     | Translate as the locale's B2B audience label (e.g. de "Unternehmen", fr "Entreprise", ja "法人向け"). "SSP Enterprise" as a product name stays English. |
+| Academy (nav label)       | UX     | Translate as the locale's "learning/education section" label (e.g. de "Akademie", ja "アカデミー"). "SSP Academy" as a product name stays English. |
 
-(Add rows as new terms surface during Phase 2.)
+(Add rows as new terms surface.)
 
 ## 3. Per-locale style notes
 

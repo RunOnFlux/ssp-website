@@ -42,7 +42,7 @@ All 83 tests must pass and the build must succeed.
 
 ## i18n
 
-Add new user-facing strings to `src/messages/en.json` first. Copy the keys to `es.json` and `zh.json` with `__TODO_TRANSLATE__` as the value (preserving ICU placeholders). Do not machine-translate.
+Add new user-facing strings to `src/messages/en.json` first, then translate them into every other locale file under `src/messages/` in the same PR. Preserve any ICU placeholders verbatim and keep locked terms from `docs/i18n/glossary.md` (brand names, chains, protocols) in English. Do not commit `__TODO_TRANSLATE__` placeholders.
 
 ## Pull requests
 

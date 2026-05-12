@@ -34,7 +34,7 @@
   },
   "Header": {
     "home": "Главная",
-    "enterprise": "Enterprise",
+    "enterprise": "Бизнес",
     "features": "Возможности",
     "newsroom": "Новости",
     "academy": "Академия",
@@ -66,7 +66,7 @@
       "guide": "Руководство",
       "support": "Поддержка",
       "contact": "Контакты",
-      "enterprise": "Enterprise",
+      "enterprise": "Бизнес",
       "download": "Скачать",
       "mobileSspKey": "Мобильный SSP Key",
       "sspEnterprise": "SSP Enterprise",
@@ -1336,7 +1336,7 @@
   "Enterprise": {
     "metaTitle": "SSP Enterprise | Самостоятельное хранение с multisig для бизнеса",
     "metaDescription": "Хранилища M-of-N multisig с самостоятельным хранением для корпоративного казначейства. Движок политик, лимиты расходов, подписание с двух устройств, доступ на основе ролей. Никаких кастодианов, никакого MPC.",
-    "breadcrumbLabel": "Enterprise",
+    "breadcrumbLabel": "Бизнес",
     "heroBadge": "SSP Enterprise",
     "heroTitlePart1": "Самостоятельное хранение",
     "heroTitlePart2": "для бизнеса",
