@@ -30,6 +30,26 @@ const PERMISSIONS_POLICY = [
 // is local, skip the optimizer so images still render in dev.
 const cmsIsLocal = /^(https?:\/\/)?(localhost|127\.0\.0\.1)/.test(process.env.SSP_CMS_URL ?? '')
 
+// Allow /_next/image to optimize images served from whichever CMS host the
+// site is pointed at. Falls back to localhost:3000 when SSP_CMS_URL is unset.
+const cmsRemotePatterns = (() => {
+  try {
+    const u = new URL(process.env.SSP_CMS_URL ?? 'http://localhost:3000')
+    return [
+      {
+        protocol: u.protocol.replace(':', '') as 'http' | 'https',
+        hostname: u.hostname,
+        ...(u.port ? { port: u.port } : {}),
+        pathname: '/media/**',
+      },
+    ]
+  } catch {
+    return [
+      { protocol: 'http' as const, hostname: 'localhost', port: '3000', pathname: '/media/**' },
+    ]
+  }
+})()
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
@@ -39,10 +59,7 @@ const nextConfig: NextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     unoptimized: cmsIsLocal,
-    remotePatterns: [
-      // Local SSP CMS during development. Production hosts are added per-environment.
-      { protocol: 'http', hostname: 'localhost', port: '3000', pathname: '/media/**' },
-    ],
+    remotePatterns: cmsRemotePatterns,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error', 'warn'] } : false,

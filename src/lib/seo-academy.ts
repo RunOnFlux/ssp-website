@@ -1,5 +1,6 @@
 import type { AcademyCategory } from '@/constants/academy-categories'
 import type { NewsroomPost, Author } from '@/types/newsroom'
+import { cmsMediaUrl } from './cms-media'
 import { siteName, siteUrl, createBreadcrumbJsonLd } from './seo'
 
 function abs(url: string): string {
@@ -18,7 +19,7 @@ export function buildAcademyArticleJsonLd(
     mainEntityOfPage: { '@type': 'WebPage', '@id': abs(`/academy/${category}/${post.slug}`) },
     headline: post.title,
     description: post.description,
-    image: abs(post.image),
+    image: cmsMediaUrl(post.image),
     datePublished: post.date,
     dateModified: post.modifiedDate ?? post.date,
     author: author

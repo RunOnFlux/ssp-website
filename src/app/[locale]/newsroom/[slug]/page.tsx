@@ -6,6 +6,7 @@ import { LocalizedPathsRegistrar } from '@/components/i18n/localized-paths-regis
 import { PostArticle } from '@/components/shared/post-article'
 import { routing, type Locale } from '@/i18n/routing'
 import { getAllSlugs, getPostBySlug, getRelatedPosts } from '@/lib/cms'
+import { cmsMediaUrl } from '@/lib/cms-media'
 import type { LocalizedPaths } from '@/lib/i18n/localized-paths'
 import { createBlogPostingJsonLd, createBreadcrumbJsonLd, createMetadata, siteUrl } from '@/lib/seo'
 
@@ -44,7 +45,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     path: `/newsroom/${post.slug}`,
     type: 'article',
     ogImage: {
-      url: post.image.startsWith('http') ? post.image : `${siteUrl}${post.image}`,
+      url: cmsMediaUrl(post.image),
       width: 1200,
       height: 630,
       alt: post.title,
@@ -80,7 +81,7 @@ export default async function NewsroomArticlePage({ params }: PageProps) {
     title: post.title,
     description: post.description,
     url: `/newsroom/${post.slug}`,
-    imageUrl: post.image,
+    imageUrl: cmsMediaUrl(post.image),
     authorName: post.author,
     publishDate: post.date,
     modifiedDate: post.modifiedDate ?? undefined,

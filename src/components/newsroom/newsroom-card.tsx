@@ -1,6 +1,7 @@
 import { Clock } from 'lucide-react'
 import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
+import { cmsMediaUrl } from '@/lib/cms-media'
 import type { NewsroomPost } from '@/types/newsroom'
 
 function formatDate(d: string): string {
@@ -29,7 +30,7 @@ export function NewsroomCard({ post, href }: NewsroomCardProps) {
       <article className='rounded-card dark:border-dark-700 dark:bg-dark-800 overflow-hidden border border-gray-200 bg-white transition-transform duration-200 group-hover:scale-[1.02]'>
         <div className='relative h-[250px] overflow-hidden md:h-[350px]'>
           <Image
-            src={cardImage}
+            src={cmsMediaUrl(cardImage)}
             alt={cardImageAlt ?? ''}
             fill
             className='object-cover'

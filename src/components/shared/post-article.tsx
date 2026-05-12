@@ -8,6 +8,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { NewsroomCard } from '@/components/newsroom/newsroom-card'
 import { Link } from '@/i18n/navigation'
+import { cmsMediaUrl } from '@/lib/cms-media'
 import { extractHeadings } from '@/lib/content-utils'
 import type { NewsroomPost } from '@/types/newsroom'
 import { TranslationPendingBanner } from './translation-pending-banner'
@@ -134,7 +135,7 @@ export function PostArticle({
 
         <div className='prose prose-lg dark:prose-invert max-w-none'>
           <Image
-            src={post.image}
+            src={cmsMediaUrl(post.image)}
             alt={post.imageAlt}
             width={1200}
             height={630}
@@ -165,7 +166,7 @@ export function PostArticle({
               img: ({ src, alt }) =>
                 src ? (
                   <Image
-                    src={typeof src === 'string' ? src : ''}
+                    src={cmsMediaUrl(typeof src === 'string' ? src : '')}
                     alt={alt ?? ''}
                     width={1200}
                     height={630}

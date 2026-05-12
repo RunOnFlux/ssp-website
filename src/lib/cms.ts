@@ -12,8 +12,24 @@ import type {
 } from '@/types/newsroom'
 import { cmsFetch, isCmsConfigured } from './cms/cms-fetch'
 import { loadAllSeedPosts, loadSeedPostBySlug } from './cms/seed-loader'
+import { cmsMediaUrl } from './cms-media'
 
 const cache = new LRUCache<string, object>({ max: 256, ttl: 60_000 })
+
+// Posts come back from the CMS with `image` / `imageSquare` / `imageStory` as
+// site-rooted paths (e.g. `/media/123.png`). Rewrite them to absolute CMS URLs
+// here, on the server, so client components and OG metadata receive ready-to-
+// fetch URLs without needing the CMS-host env var exposed to the browser.
+function normalizePostMedia<T extends Pick<NewsroomPost, 'image' | 'imageSquare' | 'imageStory'>>(
+  post: T
+): T {
+  return {
+    ...post,
+    image: cmsMediaUrl(post.image),
+    imageSquare: post.imageSquare ? cmsMediaUrl(post.imageSquare) : post.imageSquare,
+    imageStory: post.imageStory ? cmsMediaUrl(post.imageStory) : post.imageStory,
+  }
+}
 
 /** @internal exported for tests only */
 export function __clearCmsCache(): void {
@@ -45,7 +61,7 @@ async function withFallback<T>(
 }
 
 function unwrapPosts(r: NewsroomPost[] | { posts: NewsroomPost[] }): NewsroomPost[] {
-  return Array.isArray(r) ? r : r.posts
+  return (Array.isArray(r) ? r : r.posts).map(normalizePostMedia)
 }
 
 // ---- Newsroom ----
@@ -72,15 +88,19 @@ export async function getPostBySlug(
     `post:${locale}:${slug}`,
     async () => {
       try {
-        return await cmsFetch<NewsroomPost>(`/api/v1/posts/${encodeURIComponent(slug)}`, {
+        const post = await cmsFetch<NewsroomPost>(`/api/v1/posts/${encodeURIComponent(slug)}`, {
           revalidate: 300,
           locale,
         })
+        return normalizePostMedia(post)
       } catch {
         return undefined
       }
     },
-    async () => loadSeedPostBySlug(slug, { locale })
+    async () => {
+      const seed = await loadSeedPostBySlug(slug, { locale })
+      return seed ? normalizePostMedia(seed) : seed
+    }
   )
 }
 
