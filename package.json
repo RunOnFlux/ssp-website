@@ -6,7 +6,7 @@
     "dev": "NODE_OPTIONS=\"--max-old-space-size=8192\" next dev",
     "prebuild": "tsx scripts/check-public-safe.ts && tsx scripts/check-agent-md-staleness.ts && tsx scripts/generate-chains-skill.ts && tsx scripts/check-translations.ts",
     "build": "NODE_OPTIONS=\"--max-old-space-size=8192\" next build",
-    "start": "next start",
+    "start": "node --env-file-if-exists=.env.local --env-file-if-exists=.env node_modules/next/dist/bin/next start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "format": "prettier --write .",
