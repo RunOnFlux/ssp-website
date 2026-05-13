@@ -1,6 +1,21 @@
 import { fireEvent, render, screen } from '@testing-library/react'
+import { NextIntlClientProvider } from 'next-intl'
 import { describe, it, expect, beforeEach } from 'vitest'
 import { GlossarySearch } from './glossary-search'
+
+const messages = {
+  Glossary: {
+    matches: '{count, plural, =0 {No matches} =1 {1 match} other {# matches}}',
+  },
+}
+
+function renderSearch(props: { placeholder: string; totalLabel: string }) {
+  return render(
+    <NextIntlClientProvider locale='en' messages={messages}>
+      <GlossarySearch {...props} />
+    </NextIntlClientProvider>
+  )
+}
 
 describe('GlossarySearch', () => {
   beforeEach(() => {
@@ -19,7 +34,7 @@ describe('GlossarySearch', () => {
   })
 
   it('shows all cards when query is empty', () => {
-    render(<GlossarySearch placeholder='Search…' totalLabel='3 terms' />)
+    renderSearch({ placeholder: 'Search…', totalLabel: '3 terms' })
     expect(screen.getByText('3 terms')).toBeInTheDocument()
     const cards = document.querySelectorAll<HTMLElement>('[data-glossary-card]')
     for (const card of cards) {
@@ -28,18 +43,18 @@ describe('GlossarySearch', () => {
   })
 
   it('filters cards by case-insensitive substring on title', () => {
-    render(<GlossarySearch placeholder='Search…' totalLabel='3 terms' />)
+    renderSearch({ placeholder: 'Search…', totalLabel: '3 terms' })
     const input = screen.getByPlaceholderText('Search…') as HTMLInputElement
     fireEvent.change(input, { target: { value: 'air' } })
 
     const cards = Array.from(document.querySelectorAll<HTMLElement>('[data-glossary-card]'))
     const visible = cards.filter(c => c.style.display !== 'none')
     expect(visible.map(c => c.dataset.title)).toEqual(['Air-gapped'])
-    expect(screen.getByText('1 matches')).toBeInTheDocument()
+    expect(screen.getByText('1 match')).toBeInTheDocument()
   })
 
   it('hides letter sections with no visible cards', () => {
-    render(<GlossarySearch placeholder='Search…' totalLabel='3 terms' />)
+    renderSearch({ placeholder: 'Search…', totalLabel: '3 terms' })
     const input = screen.getByPlaceholderText('Search…') as HTMLInputElement
     fireEvent.change(input, { target: { value: 'bitcoin' } })
 
@@ -51,7 +66,7 @@ describe('GlossarySearch', () => {
   })
 
   it('restores all cards when query is cleared', () => {
-    render(<GlossarySearch placeholder='Search…' totalLabel='3 terms' />)
+    renderSearch({ placeholder: 'Search…', totalLabel: '3 terms' })
     const input = screen.getByPlaceholderText('Search…') as HTMLInputElement
     fireEvent.change(input, { target: { value: 'air' } })
     fireEvent.change(input, { target: { value: '' } })

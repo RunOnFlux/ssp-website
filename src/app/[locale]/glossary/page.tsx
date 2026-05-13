@@ -60,7 +60,6 @@ export default async function GlossaryPage({ params }: PageProps) {
             <GlossarySearch
               placeholder={t('searchPlaceholder')}
               totalLabel={t('total', { count: GLOSSARY.length })}
-              matchesLabel={c => t('matches', { count: c })}
             />
           </div>
         </div>

@@ -1,19 +1,16 @@
 'use client'
 
 import { Search } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
 
 interface Props {
   placeholder: string
   totalLabel: string
-  matchesLabel?: (count: number) => string
 }
 
-export function GlossarySearch({
-  placeholder,
-  totalLabel,
-  matchesLabel = c => c + ' matches',
-}: Props) {
+export function GlossarySearch({ placeholder, totalLabel }: Props) {
+  const t = useTranslations('Glossary')
   const [query, setQuery] = useState('')
   const [visibleCount, setVisibleCount] = useState(0)
 
@@ -54,7 +51,7 @@ export function GlossarySearch({
         />
       </div>
       <p className='mt-2 text-center text-sm text-gray-500 dark:text-gray-400'>
-        {query ? matchesLabel(visibleCount) : totalLabel}
+        {query ? t('matches', { count: visibleCount }) : totalLabel}
       </p>
     </div>
   )
