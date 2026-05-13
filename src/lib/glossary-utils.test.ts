@@ -1,10 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import {
-  normalizeSlug,
-  groupByFirstLetter,
-  difficultyBadgeClass,
-} from './glossary-utils'
 import type { GlossaryEntry } from '@/constants/glossary/types'
+import { normalizeSlug, groupByFirstLetter, difficultyBadgeClass } from './glossary-utils'
 
 describe('normalizeSlug', () => {
   it('lowercases and replaces non-alphanumerics with single dash', () => {

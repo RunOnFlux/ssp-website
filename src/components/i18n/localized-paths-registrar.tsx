@@ -1,7 +1,11 @@
 'use client'
 
 import { useEffect } from 'react'
-import { clearLocalizedPaths, setLocalizedPaths, type LocalizedPaths } from '@/lib/i18n/localized-paths'
+import {
+  clearLocalizedPaths,
+  setLocalizedPaths,
+  type LocalizedPaths,
+} from '@/lib/i18n/localized-paths'
 
 export function LocalizedPathsRegistrar({ paths }: { paths: LocalizedPaths }) {
   useEffect(() => {
