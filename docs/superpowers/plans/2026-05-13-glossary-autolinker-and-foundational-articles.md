@@ -783,7 +783,7 @@ Run:
 ```bash
 [ -n "$SSP_CMS_INTERNAL_API_KEY" ] && echo "key set" || echo "MISSING SSP_CMS_INTERNAL_API_KEY"
 echo "SSP_CMS_BASE_URL=${SSP_CMS_BASE_URL:-http://localhost:3007}"
-curl -sS -o /dev/null -w '%{http_code}\n' "${SSP_CMS_BASE_URL:-http://localhost:3007}/api/v1/admin/authors" -H "x-internal-key: $SSP_CMS_INTERNAL_API_KEY" -H "x-user-role: admin" -H "x-user-email: info@bbsolutions.services"
+curl -sS -o /dev/null -w '%{http_code}\n' "${SSP_CMS_BASE_URL:-http://localhost:3007}/api/v1/admin/authors" -H "x-api-key: $SSP_CMS_INTERNAL_API_KEY" -H "x-user-role: admin" -H "x-user-email: info@bbsolutions.services"
 ```
 
 Expected: `key set`, the base URL, and `200` from the admin endpoint. If anything fails, fix it before invoking the skill.
@@ -793,14 +793,14 @@ Expected: `key set`, the base URL, and `200` from the admin endpoint. If anythin
 Run:
 
 ```bash
-curl -sS "${SSP_CMS_BASE_URL:-http://localhost:3007}/api/v1/admin/authors" -H "x-internal-key: $SSP_CMS_INTERNAL_API_KEY" -H "x-user-role: admin" -H "x-user-email: info@bbsolutions.services" | grep -o '"name":"[^"]*"' | head -20
+curl -sS "${SSP_CMS_BASE_URL:-http://localhost:3007}/api/v1/admin/authors" -H "x-api-key: $SSP_CMS_INTERNAL_API_KEY" -H "x-user-role: admin" -H "x-user-email: info@bbsolutions.services" | grep -o '"name":"[^"]*"' | head -20
 ```
 
 If `"SSP Editorial Team"` does NOT appear in the output, create it:
 
 ```bash
 curl -sS -X POST "${SSP_CMS_BASE_URL:-http://localhost:3007}/api/v1/admin/authors" \
-  -H "x-internal-key: $SSP_CMS_INTERNAL_API_KEY" \
+  -H "x-api-key: $SSP_CMS_INTERNAL_API_KEY" \
   -H "x-user-role: admin" \
   -H "x-user-email: info@bbsolutions.services" \
   -H "content-type: application/json" \
