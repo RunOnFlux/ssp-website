@@ -5,6 +5,7 @@ import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { LocalizedPathsRegistrar } from '@/components/i18n/localized-paths-registrar'
 import { PostArticle } from '@/components/shared/post-article'
 import { routing, type Locale } from '@/i18n/routing'
+import { autoLinkPostContent } from '@/lib/auto-link-post-content'
 import { getAllSlugs, getPostBySlug, getRelatedPosts } from '@/lib/cms'
 import { cmsMediaUrl } from '@/lib/cms-media'
 import type { LocalizedPaths } from '@/lib/i18n/localized-paths'
@@ -76,6 +77,7 @@ export default async function NewsroomArticlePage({ params }: PageProps) {
   }
 
   const relatedPosts = await getRelatedPosts(post)
+  const linkedContent = autoLinkPostContent(post.content, post.slug)
 
   const blogPostingJsonLd = createBlogPostingJsonLd({
     title: post.title,
@@ -116,6 +118,7 @@ export default async function NewsroomArticlePage({ params }: PageProps) {
         post={post}
         relatedPosts={relatedPosts}
         backHref='/newsroom'
+        content={linkedContent}
         showTranslationPendingBanner={post.servedLocale !== post.locale}
       />
     </>
