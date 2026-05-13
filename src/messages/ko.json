@@ -45,7 +45,13 @@
     "download": "다운로드",
     "toggleTheme": "테마 전환",
     "toggleMenu": "메뉴 열기/닫기",
-    "selectLanguage": "언어 선택"
+    "selectLanguage": "언어 선택",
+    "learn": "학습",
+    "series": "시리즈",
+    "learnGlossary": "용어집",
+    "learnAcademyDescription": "카테고리별 심층 기사",
+    "learnSeriesDescription": "여러 부로 구성된 학습 경로",
+    "learnGlossaryDescription": "암호화폐 및 SSP 용어, 2,000개 이상"
   },
   "Footer": {
     "navigation": "탐색",

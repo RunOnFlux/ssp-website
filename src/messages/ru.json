@@ -45,7 +45,13 @@
     "download": "Скачать",
     "toggleTheme": "Переключить тему",
     "toggleMenu": "Открыть меню",
-    "selectLanguage": "Выбрать язык"
+    "selectLanguage": "Выбрать язык",
+    "learn": "Обучение",
+    "series": "Циклы",
+    "learnGlossary": "Глоссарий",
+    "learnAcademyDescription": "Подробные статьи по категориям",
+    "learnSeriesDescription": "Многосерийные учебные маршруты",
+    "learnGlossaryDescription": "Криптовалютные и SSP-термины, более 2 000 записей"
   },
   "Footer": {
     "navigation": "Навигация",

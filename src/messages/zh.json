@@ -45,7 +45,13 @@
     "download": "下载",
     "toggleTheme": "切换主题",
     "toggleMenu": "切换菜单",
-    "selectLanguage": "选择语言"
+    "selectLanguage": "选择语言",
+    "learn": "学习",
+    "series": "系列",
+    "learnGlossary": "术语表",
+    "learnAcademyDescription": "按分类整理的长篇文章",
+    "learnSeriesDescription": "多章节系统学习路径",
+    "learnGlossaryDescription": "加密货币与 SSP 术语，2,000+ 条目"
   },
   "Footer": {
     "navigation": "导航",

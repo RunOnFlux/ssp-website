@@ -45,7 +45,13 @@
     "download": "Pobierz",
     "toggleTheme": "Przełącz motyw",
     "toggleMenu": "Przełącz menu",
-    "selectLanguage": "Wybierz język"
+    "selectLanguage": "Wybierz język",
+    "learn": "Nauka",
+    "series": "Serie",
+    "learnGlossary": "Słownik",
+    "learnAcademyDescription": "Długie artykuły pogrupowane tematycznie",
+    "learnSeriesDescription": "Wieloczęściowe ścieżki nauki",
+    "learnGlossaryDescription": "Pojęcia kryptowalut i SSP, ponad 2000 haseł"
   },
   "Footer": {
     "navigation": "Nawigacja",

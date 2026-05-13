@@ -45,7 +45,13 @@
     "download": "ダウンロード",
     "toggleTheme": "テーマを切り替える",
     "toggleMenu": "メニューを切り替える",
-    "selectLanguage": "言語を選択"
+    "selectLanguage": "言語を選択",
+    "learn": "学ぶ",
+    "series": "シリーズ",
+    "learnGlossary": "用語集",
+    "learnAcademyDescription": "カテゴリー別の詳細記事",
+    "learnSeriesDescription": "複数パートの学習パス",
+    "learnGlossaryDescription": "暗号資産・SSP 用語、2,000+ エントリー"
   },
   "Footer": {
     "navigation": "ナビゲーション",

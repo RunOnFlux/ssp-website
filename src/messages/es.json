@@ -45,7 +45,13 @@
     "download": "Descargar",
     "toggleTheme": "Cambiar tema",
     "toggleMenu": "Abrir menú",
-    "selectLanguage": "Seleccionar idioma"
+    "selectLanguage": "Seleccionar idioma",
+    "learn": "Aprender",
+    "series": "Series",
+    "learnGlossary": "Glosario",
+    "learnAcademyDescription": "Artículos extensos organizados por categoría",
+    "learnSeriesDescription": "Rutas de aprendizaje guiadas en varias partes",
+    "learnGlossaryDescription": "Términos de cripto y SSP, más de 2.000 entradas"
   },
   "Footer": {
     "navigation": "Navegación",

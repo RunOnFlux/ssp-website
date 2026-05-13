@@ -45,7 +45,13 @@
     "download": "Scarica",
     "toggleTheme": "Cambia tema",
     "toggleMenu": "Apri/chiudi menu",
-    "selectLanguage": "Seleziona lingua"
+    "selectLanguage": "Seleziona lingua",
+    "learn": "Impara",
+    "series": "Serie",
+    "learnGlossary": "Glossario",
+    "learnAcademyDescription": "Articoli approfonditi per categoria",
+    "learnSeriesDescription": "Percorsi di apprendimento in più parti",
+    "learnGlossaryDescription": "Termini crypto e SSP, oltre 2.000 voci"
   },
   "Footer": {
     "navigation": "Navigazione",

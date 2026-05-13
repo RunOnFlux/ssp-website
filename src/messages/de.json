@@ -45,7 +45,13 @@
     "download": "Herunterladen",
     "toggleTheme": "Design umschalten",
     "toggleMenu": "Menü umschalten",
-    "selectLanguage": "Sprache wählen"
+    "selectLanguage": "Sprache wählen",
+    "learn": "Lernen",
+    "series": "Reihen",
+    "learnGlossary": "Glossar",
+    "learnAcademyDescription": "Lange Beiträge, nach Kategorie sortiert",
+    "learnSeriesDescription": "Mehrteilige Lernpfade",
+    "learnGlossaryDescription": "Krypto- und SSP-Begriffe, über 2.000 Einträge"
   },
   "Footer": {
     "navigation": "Navigation",

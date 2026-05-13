@@ -45,7 +45,13 @@
     "download": "İndir",
     "toggleTheme": "Temayı değiştir",
     "toggleMenu": "Menüyü aç/kapat",
-    "selectLanguage": "Dil seçin"
+    "selectLanguage": "Dil seçin",
+    "learn": "Öğren",
+    "series": "Seriler",
+    "learnGlossary": "Sözlük",
+    "learnAcademyDescription": "Kategoriye göre düzenlenmiş uzun makaleler",
+    "learnSeriesDescription": "Çok bölümlü rehberli öğrenme yolları",
+    "learnGlossaryDescription": "Kripto ve SSP terimleri, 2.000+ giriş"
   },
   "Footer": {
     "navigation": "Gezinme",

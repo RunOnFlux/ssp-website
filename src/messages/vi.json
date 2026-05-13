@@ -45,7 +45,13 @@
     "download": "Tải xuống",
     "toggleTheme": "Chuyển đổi giao diện",
     "toggleMenu": "Chuyển đổi menu",
-    "selectLanguage": "Chọn ngôn ngữ"
+    "selectLanguage": "Chọn ngôn ngữ",
+    "learn": "Học",
+    "series": "Loạt bài",
+    "learnGlossary": "Bảng thuật ngữ",
+    "learnAcademyDescription": "Bài viết dài được phân loại theo chuyên mục",
+    "learnSeriesDescription": "Lộ trình học nhiều phần",
+    "learnGlossaryDescription": "Thuật ngữ kripto và SSP, hơn 2.000 mục"
   },
   "Footer": {
     "navigation": "Điều hướng",

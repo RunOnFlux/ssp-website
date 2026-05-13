@@ -45,7 +45,13 @@
     "download": "Unduh",
     "toggleTheme": "Ganti tema",
     "toggleMenu": "Buka menu",
-    "selectLanguage": "Pilih bahasa"
+    "selectLanguage": "Pilih bahasa",
+    "learn": "Belajar",
+    "series": "Seri",
+    "learnGlossary": "Glosarium",
+    "learnAcademyDescription": "Artikel panjang yang dikelompokkan per kategori",
+    "learnSeriesDescription": "Jalur belajar multi-bagian",
+    "learnGlossaryDescription": "Istilah kripto dan SSP, lebih dari 2.000 entri"
   },
   "Footer": {
     "navigation": "Navigasi",
