@@ -20,13 +20,18 @@ describe('autoLinkPostContent', () => {
     expect(out).toMatch(/\[merkle tree\]\(\/glossary\/[\w-]+\)/i)
   })
 
-  it('caps total links at MAX_LINKS_PER_POST', () => {
+  it('caps total links at exactly MAX_LINKS_PER_POST when the body has more matches', () => {
+    // Body contains >> MAX_LINKS_PER_POST distinct linkable terms (multisig,
+    // bitcoin, ethereum, seed phrase, BIP48, BIP39, ERC-4337, gas, mempool,
+    // finality, self-custody, hardware wallet, private key, public key,
+    // signer, threshold, WalletConnect) — so the cap must fire and the
+    // assertion pins the exact value, not just an upper bound.
     const body =
       'multisig bitcoin ethereum seed phrase BIP48 BIP39 ERC-4337 gas mempool finality ' +
       'self-custody hardware wallet private key public key signer threshold WalletConnect.'
     const out = autoLinkPostContent(body, 'unrelated-slug')
     const links = out.match(/\[[^\]]+\]\([^)]+\)/g) ?? []
-    expect(links.length).toBeLessThanOrEqual(MAX_LINKS_PER_POST)
+    expect(links.length).toBe(MAX_LINKS_PER_POST)
   })
 
   it('does not link stop-words from common prose', () => {
