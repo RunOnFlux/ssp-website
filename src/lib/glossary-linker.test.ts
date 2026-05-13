@@ -79,4 +79,94 @@ describe('autoLinkContent', () => {
     expect(out).toContain('[multisig](/academy/multisig/x)')
     expect(out.match(/\[multisig\]/g)?.length).toBe(2)
   })
+
+  it('respects the maxLinks cap', () => {
+    const many: GlossaryTerm[] = Array.from({ length: 20 }, (_, i) => ({
+      term: `term${i}`,
+      definition: '',
+      href: `/x/${i}`,
+    }))
+    const manyMap = new Map(many.map(t => [t.term.toLowerCase(), t]))
+    const body = many.map(t => t.term).join(' ')
+    const out = autoLinkContent(body, 'other', manyMap, { maxLinks: 8 })
+    const linkCount = (out.match(/\[term\d+\]\(\/x\/\d+\)/g) ?? []).length
+    expect(linkCount).toBe(8)
+  })
+
+  it('links from the fallback map when not in the primary map', () => {
+    const primary: GlossaryTerm[] = [
+      { term: 'multisig', definition: '', href: '/academy/multisig/x' },
+    ]
+    const fallback: GlossaryTerm[] = [{ term: 'merkle', definition: '', href: '/glossary/merkle' }]
+    const primaryMap = new Map(primary.map(t => [t.term.toLowerCase(), t]))
+    const fallbackMap = new Map(fallback.map(t => [t.term.toLowerCase(), t]))
+    const out = autoLinkContent('A merkle tree is fun.', 'other', primaryMap, {
+      fallbackTermMap: fallbackMap,
+    })
+    expect(out).toContain('[merkle](/glossary/merkle)')
+  })
+
+  it('prefers the primary map over the fallback for the same term', () => {
+    const primaryMap = new Map([
+      ['multisig', { term: 'multisig', definition: '', href: '/academy/multisig/x' }],
+    ])
+    const fallbackMap = new Map([
+      ['multisig', { term: 'multisig', definition: '', href: '/glossary/multisig' }],
+    ])
+    const out = autoLinkContent('A multisig wallet.', 'other', primaryMap, {
+      fallbackTermMap: fallbackMap,
+    })
+    expect(out).toContain('[multisig](/academy/multisig/x)')
+    expect(out).not.toContain('[multisig](/glossary/multisig)')
+  })
+
+  it('cap counts primary and fallback together', () => {
+    const primaryMap = new Map([
+      ['alpha', { term: 'alpha', definition: '', href: '/p/alpha' }],
+      ['beta', { term: 'beta', definition: '', href: '/p/beta' }],
+      ['gamma', { term: 'gamma', definition: '', href: '/p/gamma' }],
+      ['delta', { term: 'delta', definition: '', href: '/p/delta' }],
+    ])
+    const fallbackMap = new Map([
+      ['epsilon', { term: 'epsilon', definition: '', href: '/f/epsilon' }],
+      ['zeta', { term: 'zeta', definition: '', href: '/f/zeta' }],
+      ['eta', { term: 'eta', definition: '', href: '/f/eta' }],
+      ['theta', { term: 'theta', definition: '', href: '/f/theta' }],
+      ['iota', { term: 'iota', definition: '', href: '/f/iota' }],
+    ])
+    const body = 'alpha beta gamma delta epsilon zeta eta theta iota'
+    const out = autoLinkContent(body, 'other', primaryMap, {
+      fallbackTermMap: fallbackMap,
+      maxLinks: 8,
+    })
+    const linkCount = (out.match(/\[\w+\]\([^)]+\)/g) ?? []).length
+    expect(linkCount).toBe(8)
+    expect(out).toContain('[alpha](/p/alpha)')
+    expect(out).toContain('[delta](/p/delta)')
+    expect(out).not.toContain('[iota](/f/iota)')
+  })
+
+  it('does not link if the only matchable term hits a self-referential fallback href', () => {
+    const fallbackMap = new Map([
+      ['bitcoin', { term: 'bitcoin', definition: '', href: '/glossary/bitcoin' }],
+    ])
+    const out = autoLinkContent('Bitcoin is great.', 'bitcoin', new Map(), {
+      fallbackTermMap: fallbackMap,
+    })
+    expect(out).not.toContain('[Bitcoin](')
+    expect(out).not.toContain('[bitcoin](')
+  })
+
+  it('defaults maxLinks to Infinity when not provided (back-compat)', () => {
+    const many: GlossaryTerm[] = Array.from({ length: 12 }, (_, i) => ({
+      term: `t${i}`,
+      definition: '',
+      href: `/x/${i}`,
+    }))
+    const manyMap = new Map(many.map(t => [t.term.toLowerCase(), t]))
+    const body = many.map(t => t.term).join(' ')
+    const out = autoLinkContent(body, 'other', manyMap)
+    const linkCount = (out.match(/\[t\d+\]\(\/x\/\d+\)/g) ?? []).length
+    expect(linkCount).toBe(12)
+  })
 })
