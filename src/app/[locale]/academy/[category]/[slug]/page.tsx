@@ -8,10 +8,9 @@ import { Breadcrumbs } from '@/components/shared/breadcrumbs'
 import { PostArticle } from '@/components/shared/post-article'
 import { isAcademyCategory } from '@/constants/academy-categories'
 import { routing, type Locale } from '@/i18n/routing'
-import { getTermMap } from '@/lib/academy-terms'
+import { autoLinkPostContent } from '@/lib/auto-link-post-content'
 import { getAcademyPostBySlug, getAcademySlugs, getAuthorBySlug, getRelatedPosts } from '@/lib/cms'
 import { cmsMediaUrl } from '@/lib/cms-media'
-import { autoLinkContent } from '@/lib/glossary-linker'
 import type { LocalizedPaths } from '@/lib/i18n/localized-paths'
 import { createMetadata, siteUrl } from '@/lib/seo'
 import { buildAcademyArticleJsonLd, buildAcademyBreadcrumbJsonLd } from '@/lib/seo-academy'
@@ -95,8 +94,7 @@ export default async function AcademyArticlePage({ params }: PageProps) {
     getTranslations({ locale, namespace: 'Common' }),
   ])
 
-  const termMap = getTermMap()
-  const linkedContent = autoLinkContent(post.content, post.slug, termMap)
+  const linkedContent = autoLinkPostContent(post.content, post.slug)
 
   const localizedPaths: LocalizedPaths = {}
   for (const [loc, alt] of Object.entries(post.alternates ?? {})) {
