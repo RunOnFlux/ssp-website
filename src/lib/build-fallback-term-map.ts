@@ -36,7 +36,10 @@ let cached: Map<string, GlossaryTerm> | null = null
 let cachedCuratedKey: string | null = null
 
 function curatedFingerprint(curated: ReadonlySet<string>): string {
-  return [...curated].sort().join('|')
+  // Use a null byte so a curated label that happens to contain a common
+  // delimiter (today's labels never do, but future entries might) cannot
+  // collide with a structurally different set.
+  return [...curated].sort().join('\x00')
 }
 
 /**
