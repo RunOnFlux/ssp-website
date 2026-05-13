@@ -1846,5 +1846,18 @@
     "twoSeparateSeeds": "2 frasa pemulihan terpisah",
     "trueMultisigBip48": "Multisignature sejati (BIP48)",
     "zeroServerStorage": "Nol penyimpanan server"
+  },
+  "Glossary": {
+    "title": "Glosarium",
+    "description": "Istilah kripto, blockchain, dan SSP. Lebih dari 2.000 entri dari CoinMarketCap, Wikipedia, dan tim SSP.",
+    "searchPlaceholder": "Cari lebih dari 2.000 istilah…",
+    "total": "{count} istilah",
+    "matches": "{count, plural, =0 {Tidak ada hasil} =1 {1 hasil} other {# hasil}}",
+    "backToGlossary": "Kembali ke glosarium",
+    "termSeoTitle": "{term} — Glosarium SSP",
+    "seoTitle": "Glosarium Kripto — SSP",
+    "seoDescription": "Glosarium istilah kripto, blockchain, dan SSP. Lebih dari 2.000 entri yang dapat dicari.",
+    "attribution": "Beberapa entri diadaptasi dari \"Glosarium istilah kriptokurensi\" Wikipedia di bawah lisensi CC BY-SA 3.0. Entri lain berasal dari glosarium CoinMarketCap dan kurasi tim SSP.",
+    "contentInEnglishBanner": "Isi glosarium ditampilkan dalam bahasa Inggris. Untuk artikel yang dilokalkan, kunjungi <academyLink>Academy</academyLink>."
   }
 }

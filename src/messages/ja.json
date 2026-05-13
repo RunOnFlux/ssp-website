@@ -1846,5 +1846,18 @@
     "twoSeparateSeeds": "2 つの別々のシードフレーズ",
     "trueMultisigBip48": "真のマルチシグネチャ (BIP48)",
     "zeroServerStorage": "サーバーストレージゼロ"
+  },
+  "Glossary": {
+    "title": "用語集",
+    "description": "暗号資産、ブロックチェーン、SSP 関連用語の解説。CoinMarketCap、Wikipedia、SSP チームによる 2,000+ エントリー。",
+    "searchPlaceholder": "2,000+ 用語を検索…",
+    "total": "{count} 件",
+    "matches": "{count, plural, =0 {一致なし} =1 {1 件一致} other {# 件一致}}",
+    "backToGlossary": "用語集に戻る",
+    "termSeoTitle": "{term} — SSP 用語集",
+    "seoTitle": "暗号資産用語集 — SSP",
+    "seoDescription": "暗号資産、ブロックチェーン、SSP 関連用語の検索可能な用語集。2,000+ エントリー。",
+    "attribution": "一部のエントリーは Wikipedia「暗号資産用語集」(CC BY-SA 3.0) を改変。他は CoinMarketCap 用語集および SSP チームによるキュレーション。",
+    "contentInEnglishBanner": "用語集のコンテンツは英語で表示されます。各言語向けの記事は<academyLink>アカデミー</academyLink>をご覧ください。"
   }
 }

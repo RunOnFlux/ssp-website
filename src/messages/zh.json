@@ -1846,5 +1846,18 @@
     "twoSeparateSeeds": "2 组独立助记词",
     "trueMultisigBip48": "真正的多重签名（BIP48）",
     "zeroServerStorage": "零服务器存储"
+  },
+  "Glossary": {
+    "title": "术语表",
+    "description": "加密货币、区块链和 SSP 相关术语解释。包含来自 CoinMarketCap、维基百科和 SSP 团队整理的 2,000+ 条目。",
+    "searchPlaceholder": "搜索 2,000+ 术语…",
+    "total": "{count} 条",
+    "matches": "{count, plural, =0 {无匹配} =1 {1 条匹配} other {# 条匹配}}",
+    "backToGlossary": "返回术语表",
+    "termSeoTitle": "{term} — SSP 术语表",
+    "seoTitle": "加密货币术语表 — SSP",
+    "seoDescription": "加密货币、区块链和 SSP 相关术语词典。2,000+ 条目可搜索。",
+    "attribution": "部分条目改编自维基百科《加密货币术语表》(CC BY-SA 3.0)。其他条目来自 CoinMarketCap 术语表和 SSP 团队整理。",
+    "contentInEnglishBanner": "术语表内容以英文显示。如需本地化文章，请访问<academyLink>学院</academyLink>。"
   }
 }

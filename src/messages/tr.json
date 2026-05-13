@@ -1846,5 +1846,18 @@
     "twoSeparateSeeds": "2 ayrı kurtarma kelimeleri",
     "trueMultisigBip48": "Gerçek multisig (BIP48)",
     "zeroServerStorage": "Sıfır sunucu depolama"
+  },
+  "Glossary": {
+    "title": "Sözlük",
+    "description": "Kripto, blokzincir ve SSP'ye özgü terimler. CoinMarketCap, Wikipedia ve SSP ekibinden 2.000+ giriş.",
+    "searchPlaceholder": "2.000+ terim arasında ara…",
+    "total": "{count} terim",
+    "matches": "{count, plural, =0 {Eşleşme yok} =1 {1 eşleşme} other {# eşleşme}}",
+    "backToGlossary": "Sözlüğe dön",
+    "termSeoTitle": "{term} — SSP Sözlüğü",
+    "seoTitle": "Kripto Sözlüğü — SSP",
+    "seoDescription": "Kripto para, blokzincir ve SSP terimleri sözlüğü. 2.000+ giriş aranabilir.",
+    "attribution": "Bazı girişler Wikipedia'nın \"Kripto para birimi terimleri sözlüğü\"nden CC BY-SA 3.0 lisansıyla uyarlanmıştır. Diğerleri CoinMarketCap sözlüğünden ve SSP ekibinden.",
+    "contentInEnglishBanner": "Sözlük içeriği İngilizce olarak gösterilmektedir. Yerelleştirilmiş makaleler için <academyLink>Akademi</academyLink>'yi ziyaret edin."
   }
 }

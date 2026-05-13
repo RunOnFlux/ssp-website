@@ -1846,5 +1846,18 @@
     "twoSeparateSeeds": "2 cụm từ khôi phục riêng biệt",
     "trueMultisigBip48": "Đa chữ ký thực sự (BIP48)",
     "zeroServerStorage": "Không lưu trữ máy chủ"
+  },
+  "Glossary": {
+    "title": "Bảng thuật ngữ",
+    "description": "Thuật ngữ về tiền mã hóa, blockchain và SSP. Hơn 2.000 mục từ CoinMarketCap, Wikipedia và đội ngũ SSP.",
+    "searchPlaceholder": "Tìm trong hơn 2.000 thuật ngữ…",
+    "total": "{count} thuật ngữ",
+    "matches": "{count, plural, =0 {Không có kết quả} =1 {1 kết quả} other {# kết quả}}",
+    "backToGlossary": "Quay lại bảng thuật ngữ",
+    "termSeoTitle": "{term} — Bảng thuật ngữ SSP",
+    "seoTitle": "Bảng thuật ngữ tiền mã hóa — SSP",
+    "seoDescription": "Bảng thuật ngữ về tiền mã hóa, blockchain và SSP. Hơn 2.000 mục có thể tìm kiếm.",
+    "attribution": "Một số mục được điều chỉnh từ \"Bảng thuật ngữ tiền mã hóa\" của Wikipedia theo CC BY-SA 3.0. Các mục khác từ bảng thuật ngữ CoinMarketCap và đội ngũ SSP.",
+    "contentInEnglishBanner": "Nội dung bảng thuật ngữ được hiển thị bằng tiếng Anh. Để xem bài viết theo ngôn ngữ của bạn, hãy truy cập <academyLink>Học viện</academyLink>."
   }
 }

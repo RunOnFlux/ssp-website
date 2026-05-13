@@ -1846,5 +1846,18 @@
     "twoSeparateSeeds": "2 separate Seed-Phrasen",
     "trueMultisigBip48": "Echte Multisignatur (BIP48)",
     "zeroServerStorage": "Null Server-Speicherung"
+  },
+  "Glossary": {
+    "title": "Glossar",
+    "description": "Begriffe rund um Krypto, Blockchain und SSP. Über 2.000 Einträge von CoinMarketCap, Wikipedia und dem SSP-Team.",
+    "searchPlaceholder": "2.000+ Begriffe durchsuchen…",
+    "total": "{count} Begriffe",
+    "matches": "{count, plural, =0 {Keine Treffer} =1 {1 Treffer} other {# Treffer}}",
+    "backToGlossary": "Zurück zum Glossar",
+    "termSeoTitle": "{term} — SSP-Glossar",
+    "seoTitle": "Krypto-Glossar — SSP",
+    "seoDescription": "Glossar mit Krypto-, Blockchain- und SSP-Begriffen. Über 2.000 durchsuchbare Einträge.",
+    "attribution": "Einige Einträge stammen aus Wikipedias \"Glossar der Kryptowährungsbegriffe\" unter CC BY-SA 3.0. Andere aus dem CoinMarketCap-Glossar und der Auswahl des SSP-Teams.",
+    "contentInEnglishBanner": "Der Glossar-Inhalt wird in Englisch angezeigt. Lokalisierte Artikel finden Sie in der <academyLink>Akademie</academyLink>."
   }
 }

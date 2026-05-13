@@ -1846,5 +1846,18 @@
     "twoSeparateSeeds": "별도의 시드 구문 2개",
     "trueMultisigBip48": "진정한 다중 서명 (BIP48)",
     "zeroServerStorage": "서버 저장 없음"
+  },
+  "Glossary": {
+    "title": "용어집",
+    "description": "암호화폐, 블록체인, SSP 관련 용어 해설. CoinMarketCap, Wikipedia, SSP 팀이 정리한 2,000개 이상 항목.",
+    "searchPlaceholder": "2,000개 이상 용어 검색…",
+    "total": "{count}개 용어",
+    "matches": "{count, plural, =0 {결과 없음} =1 {1개 일치} other {#개 일치}}",
+    "backToGlossary": "용어집으로 돌아가기",
+    "termSeoTitle": "{term} — SSP 용어집",
+    "seoTitle": "암호화폐 용어집 — SSP",
+    "seoDescription": "암호화폐, 블록체인, SSP 용어집. 2,000개 이상의 검색 가능한 항목.",
+    "attribution": "일부 항목은 Wikipedia의 \"암호화폐 용어집\"(CC BY-SA 3.0)을 각색했습니다. 나머지는 CoinMarketCap 용어집과 SSP 팀의 큐레이션입니다.",
+    "contentInEnglishBanner": "용어집은 영어로 표시됩니다. 현지화된 아티클은 <academyLink>아카데미</academyLink>에서 확인하세요."
   }
 }
