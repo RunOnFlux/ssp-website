@@ -1,0 +1,29 @@
+# Publish log — bitcoin-in-ssp
+
+- **Date:** 2026-05-13
+- **Section / category:** academy / coin-guides (seed article)
+- **CMS post id:** 6a0490f3fe4d3e137fdaa7cd
+- **Author:** SSP Editorial Team (id 6a047789fe4d3e137fdaa7b6)
+- **Translations published:** en, es, zh, pt-BR, ru, tr, ja, de, fr, it, pl, ko, vi, id (14)
+- **Required anchors:** (none required)
+- **Cover images:**
+  - 16:9: https://cms.sspwallet.com/media/1778683634953-cover-bitcoin-in-ssp.png
+  - 1:1: https://cms.sspwallet.com/media/1778683635161-cover-bitcoin-in-ssp-square.png
+- **Smoke test:**
+  - `GET /api/v1/posts/bitcoin-in-ssp?locale=en` → 200
+  - `GET /api/v1/posts/bitcoin-in-ssp?locale=pt-BR` → 200
+- **Word counts per locale:**
+  - en: 1151
+  - es: 1210
+  - zh: 222
+  - pt-BR: 1207
+  - ru: 1020
+  - tr: 926
+  - ja: 223
+  - de: 1102
+  - fr: 1284
+  - it: 1155
+  - pl: 1009
+  - ko: 952
+  - vi: 1546
+  - id: 1035
