@@ -32,16 +32,20 @@ export function autoLinkContent(
   })
 
   // Build a tiered iteration list: primary keys are processed entirely first
-  // (length desc within the tier), then fallback keys not already present in
-  // the primary map (in fallback insertion order). The cap counts both tiers
-  // together, so reserving primary capacity ahead of fallback guarantees the
-  // curated tier wins whenever its terms appear in the content.
+  // (length desc within the tier), then fallback keys (insertion order, no
+  // length sort — the caller's builder is responsible for that ordering) not
+  // already present in the primary map. The cap counts both tiers together,
+  // so reserving primary capacity ahead of fallback guarantees the curated
+  // tier wins whenever its terms appear in the content.
   const primaryKeys: TieredKey[] = [...termMap.keys()]
     .sort((a, b) => b.length - a.length)
     .map(key => ({ key, tier: 0 as const }))
   const fallbackKeys: TieredKey[] = []
   if (fallbackTermMap) {
     for (const key of fallbackTermMap.keys()) {
+      // Defense-in-depth: the upstream builder should already exclude keys
+      // present in `termMap`, but the explicit skip here keeps the curated
+      // tier authoritative even if the builder is wrong.
       if (!termMap.has(key)) fallbackKeys.push({ key, tier: 1 })
     }
   }
