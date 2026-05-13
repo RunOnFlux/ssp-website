@@ -1,0 +1,29 @@
+# Publish log — what-is-account-abstraction-erc-4337
+
+- **Date:** 2026-05-13
+- **Section / category:** academy / defi
+- **CMS post id:** 6a048bd6fe4d3e137fdaa7c7
+- **Author:** SSP Editorial Team (id 6a047789fe4d3e137fdaa7b6)
+- **Translations published:** en, es, zh, pt-BR, ru, tr, ja, de, fr, it, pl, ko, vi, id (14)
+- **Required anchors:** (none required)
+- **Cover images:**
+  - 16:9: https://cms.sspwallet.com/media/1778682137107-cover-erc-4337.png
+  - 1:1: https://cms.sspwallet.com/media/1778682137313-cover-erc-4337-square.png
+- **Smoke test:**
+  - `GET /api/v1/posts/what-is-account-abstraction-erc-4337?locale=en` → 200
+  - `GET /api/v1/posts/what-is-account-abstraction-erc-4337?locale=ko` → 200
+- **Word counts per locale:**
+  - en: 1443
+  - es: 1583
+  - zh: 342
+  - pt-BR: 1595
+  - ru: 1344
+  - tr: 1291
+  - ja: 337
+  - de: 1428
+  - fr: 1670
+  - it: 1538
+  - pl: 1338
+  - ko: 1336
+  - vi: 2037
+  - id: 1389
