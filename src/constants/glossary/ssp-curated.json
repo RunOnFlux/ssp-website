@@ -15,7 +15,7 @@
     "title": "Address Poisoning",
     "slug": "address-poisoning",
     "excerpt": "An attack where an adversary sends a tiny transaction from an address visually similar to one in your history, hoping you copy it from your transaction list when next sending funds. The lookalike address shares the same first and last few characters as the legitimate one. Always verify the full address before signing, or use an address book with verified entries.",
-    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
   },
   {
     "title": "Address Type",
@@ -110,13 +110,13 @@
   {
     "title": "Cold Storage",
     "slug": "cold-storage",
-    "excerpt": "Any method of keeping private keys on a device that has never been connected to the internet — paper wallets, hardware wallets, or air-gapped computers. Cold storage protects against remote hacks but requires physical security for the device itself. SSP Wallet operating in QR-only mode functions as cold storage for the second signing key.",
+    "excerpt": "Any method of keeping private keys on a device that is kept offline and does not have an active internet connection — paper wallets, hardware wallets, or air-gapped computers. Cold storage protects against remote hacks but requires physical security for the device itself. SSP Wallet operating in QR-only mode functions as cold storage for the second signing key.",
     "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
   },
   {
     "title": "Confirmation Depth",
     "slug": "confirmation-depth",
-    "excerpt": "The number of blocks mined on top of the block containing a given transaction. A depth of 1 means the transaction is in the most recent block; a depth of 6 is the traditional threshold for treating a Bitcoin payment as irreversible. Deeper confirmation depth makes a double-spend attack exponentially more expensive for a miner.",
+    "excerpt": "The number of blocks mined on top of the block containing a given transaction. A transaction mined in the most recent block has a depth of 1 (one confirmation); a depth of 6 is the traditional threshold for treating a Bitcoin payment as irreversible. Deeper confirmation depth makes a double-spend attack exponentially more expensive for a miner.",
     "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
   },
   {
@@ -152,7 +152,7 @@
   {
     "title": "ECDSA",
     "slug": "ecdsa",
-    "excerpt": "Elliptic Curve Digital Signature Algorithm — the signature scheme used by Bitcoin and pre-Taproot Ethereum. A private key produces a 64-byte (r, s) signature over a message hash; anyone with the corresponding public key can verify it without learning the private key. Bitcoin's secp256k1 curve is used for ECDSA; Ethereum uses the same curve but with an additional recovery parameter.",
+    "excerpt": "Elliptic Curve Digital Signature Algorithm — the signature scheme used by Bitcoin and pre-Taproot Ethereum. A private key produces a variable-length DER-encoded (r, s) signature (typically 71–72 bytes on Bitcoin) over a message hash; anyone with the corresponding public key can verify it without learning the private key. Bitcoin's secp256k1 curve is used for ECDSA; Ethereum uses the same curve but with an additional recovery parameter.",
     "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
   },
   {
@@ -446,7 +446,7 @@
   {
     "title": "Schnorr Signature",
     "slug": "schnorr-signature",
-    "excerpt": "A digital signature scheme based on the discrete logarithm problem, known for its linear aggregation property: multiple signatures over the same message can be combined into a single signature that verifies against the sum of the public keys. Bitcoin added native Schnorr support via Taproot (BIP-340), enabling key aggregation and threshold schemes like MuSig2. Schnorr signatures are 64 bytes, shorter than ECDSA's variable-length DER encoding.",
+    "excerpt": "A digital signature scheme based on the discrete logarithm problem, known for its linear aggregation property: multiple signatures over the same message can be combined into a single signature that verifies against an aggregated public key (computed via a secure key-aggregation scheme like MuSig2 to prevent rogue-key attacks). Bitcoin added native Schnorr support via Taproot (BIP-340), enabling key aggregation and threshold schemes like MuSig2. Schnorr signatures are 64 bytes, shorter than ECDSA's variable-length DER encoding.",
     "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
   },
   {
@@ -512,7 +512,7 @@
   {
     "title": "SSP Key",
     "slug": "ssp-key",
-    "excerpt": "The SSP application running on your primary mobile device that acts as one of the two cosigners in SSP's 2-of-2 multisig setup. SSP Key holds the first private key, receives relay payloads from SSP Wallet, displays transaction details for user confirmation, and returns the second signature. Because both keys are required to spend, SSP Key alone cannot authorize any transaction.",
+    "excerpt": "The SSP application running on your primary mobile device that acts as one of the two cosigners in SSP's 2-of-2 multisig setup. SSP Key holds one of the two private keys, receives relay payloads from SSP Wallet, displays transaction details for user confirmation, and returns the second signature. Because both keys are required to spend, SSP Key alone cannot authorize any transaction.",
     "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
   },
   {
