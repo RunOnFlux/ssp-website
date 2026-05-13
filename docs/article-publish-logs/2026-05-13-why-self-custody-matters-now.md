@@ -1,0 +1,29 @@
+# Publish log — why-self-custody-matters-now
+
+- **Date:** 2026-05-13
+- **Section / category:** academy / security
+- **CMS post id:** 6a04889efe4d3e137fdaa7c4
+- **Author:** SSP Editorial Team (id 6a047789fe4d3e137fdaa7b6)
+- **Translations published:** en, es, zh, pt-BR, ru, tr, ja, de, fr, it, pl, ko, vi, id (14)
+- **Required anchors:** (none required)
+- **Cover images:**
+  - 16:9: https://cms.sspwallet.com/media/1778681456861-cover-self-custody.png
+  - 1:1: https://cms.sspwallet.com/media/1778681457073-cover-self-custody-square.png
+- **Smoke test:**
+  - `GET /api/v1/posts/why-self-custody-matters-now?locale=en` → 200
+  - `GET /api/v1/posts/why-self-custody-matters-now?locale=fr` → 200
+- **Word counts per locale:**
+  - en: 1004
+  - es: 1120
+  - zh: 159
+  - pt-BR: 1095
+  - ru: 961
+  - tr: 844
+  - ja: 153
+  - de: 1000
+  - fr: 1174
+  - it: 1086
+  - pl: 932
+  - ko: 946
+  - vi: 1518
+  - id: 958
