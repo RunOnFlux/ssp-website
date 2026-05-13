@@ -1864,6 +1864,7 @@
     "seoTitle": "Криптовалютный глоссарий — SSP",
     "seoDescription": "Глоссарий терминов криптовалют, блокчейна и SSP. Более 2 000 записей.",
     "attribution": "Некоторые статьи адаптированы из «Глоссария криптовалютных терминов» «Википедии» (CC BY-SA 3.0). Другие — из глоссария CoinMarketCap и подборки команды SSP.",
-    "contentInEnglishBanner": "Содержимое глоссария показано на английском. Локализованные статьи доступны в <academyLink>Академии</academyLink>."
+    "contentInEnglishBanner": "Содержимое глоссария показано на английском. Локализованные статьи доступны в <academyLink>Академии</academyLink>.",
+    "letterIndexAriaLabel": "Glossary letter index"
   }
 }

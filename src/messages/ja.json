@@ -1864,6 +1864,7 @@
     "seoTitle": "暗号資産用語集 — SSP",
     "seoDescription": "暗号資産、ブロックチェーン、SSP 関連用語の検索可能な用語集。2,000+ エントリー。",
     "attribution": "一部のエントリーは Wikipedia「暗号資産用語集」(CC BY-SA 3.0) を改変。他は CoinMarketCap 用語集および SSP チームによるキュレーション。",
-    "contentInEnglishBanner": "用語集のコンテンツは英語で表示されます。各言語向けの記事は<academyLink>アカデミー</academyLink>をご覧ください。"
+    "contentInEnglishBanner": "用語集のコンテンツは英語で表示されます。各言語向けの記事は<academyLink>アカデミー</academyLink>をご覧ください。",
+    "letterIndexAriaLabel": "Glossary letter index"
   }
 }

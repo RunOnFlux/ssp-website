@@ -1,10 +1,14 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
+
 interface Props {
   letters: string[]
 }
 
 export function LetterIndex({ letters }: Props) {
+  const t = useTranslations('Glossary')
+
   const handleClick = (letter: string) => {
     const el = document.getElementById('letter-' + letter)
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -12,7 +16,7 @@ export function LetterIndex({ letters }: Props) {
 
   return (
     <nav
-      aria-label='Glossary letter index'
+      aria-label={t('letterIndexAriaLabel')}
       className='dark:bg-dark-900/40 sticky top-16 z-10 flex flex-wrap justify-center gap-1 bg-white/80 px-4 py-3 backdrop-blur md:top-20'
     >
       {letters.map(letter => (

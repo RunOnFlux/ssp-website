@@ -1864,6 +1864,7 @@
     "seoTitle": "加密货币术语表 — SSP",
     "seoDescription": "加密货币、区块链和 SSP 相关术语词典。2,000+ 条目可搜索。",
     "attribution": "部分条目改编自维基百科《加密货币术语表》(CC BY-SA 3.0)。其他条目来自 CoinMarketCap 术语表和 SSP 团队整理。",
-    "contentInEnglishBanner": "术语表内容以英文显示。如需本地化文章，请访问<academyLink>学院</academyLink>。"
+    "contentInEnglishBanner": "术语表内容以英文显示。如需本地化文章，请访问<academyLink>学院</academyLink>。",
+    "letterIndexAriaLabel": "Glossary letter index"
   }
 }

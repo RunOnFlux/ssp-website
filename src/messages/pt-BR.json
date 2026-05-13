@@ -1864,6 +1864,7 @@
     "seoTitle": "Glossário de criptomoedas — SSP",
     "seoDescription": "Glossário de termos de criptomoedas, blockchain e SSP. Mais de 2.000 entradas.",
     "attribution": "Algumas entradas adaptadas do \"Glossário de termos de criptomoedas\" da Wikipedia sob CC BY-SA 3.0. Outras do glossário CoinMarketCap e da curadoria SSP.",
-    "contentInEnglishBanner": "O conteúdo do glossário é exibido em inglês. Para artigos localizados, consulte a <academyLink>Academia</academyLink>."
+    "contentInEnglishBanner": "O conteúdo do glossário é exibido em inglês. Para artigos localizados, consulte a <academyLink>Academia</academyLink>.",
+    "letterIndexAriaLabel": "Glossary letter index"
   }
 }

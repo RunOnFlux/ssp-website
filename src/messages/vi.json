@@ -1864,6 +1864,7 @@
     "seoTitle": "Bảng thuật ngữ tiền mã hóa — SSP",
     "seoDescription": "Bảng thuật ngữ về tiền mã hóa, blockchain và SSP. Hơn 2.000 mục có thể tìm kiếm.",
     "attribution": "Một số mục được điều chỉnh từ \"Bảng thuật ngữ tiền mã hóa\" của Wikipedia theo CC BY-SA 3.0. Các mục khác từ bảng thuật ngữ CoinMarketCap và đội ngũ SSP.",
-    "contentInEnglishBanner": "Nội dung bảng thuật ngữ được hiển thị bằng tiếng Anh. Để xem bài viết theo ngôn ngữ của bạn, hãy truy cập <academyLink>Học viện</academyLink>."
+    "contentInEnglishBanner": "Nội dung bảng thuật ngữ được hiển thị bằng tiếng Anh. Để xem bài viết theo ngôn ngữ của bạn, hãy truy cập <academyLink>Học viện</academyLink>.",
+    "letterIndexAriaLabel": "Glossary letter index"
   }
 }

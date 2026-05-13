@@ -1864,6 +1864,7 @@
     "seoTitle": "Słownik kryptowalut — SSP",
     "seoDescription": "Słownik pojęć kryptowalut, blockchaina i SSP. Ponad 2000 wyszukiwalnych haseł.",
     "attribution": "Część haseł zaczerpnięto ze \"Słownika pojęć kryptowalut\" Wikipedii na licencji CC BY-SA 3.0. Inne pochodzą ze słownika CoinMarketCap i kuratorskiego zestawu zespołu SSP.",
-    "contentInEnglishBanner": "Treść słownika wyświetlana jest po angielsku. Artykuły w Twoim języku znajdziesz w <academyLink>Akademii</academyLink>."
+    "contentInEnglishBanner": "Treść słownika wyświetlana jest po angielsku. Artykuły w Twoim języku znajdziesz w <academyLink>Akademii</academyLink>.",
+    "letterIndexAriaLabel": "Glossary letter index"
   }
 }

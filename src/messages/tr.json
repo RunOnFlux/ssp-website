@@ -1864,6 +1864,7 @@
     "seoTitle": "Kripto Sözlüğü — SSP",
     "seoDescription": "Kripto para, blokzincir ve SSP terimleri sözlüğü. 2.000+ giriş aranabilir.",
     "attribution": "Bazı girişler Wikipedia'nın \"Kripto para birimi terimleri sözlüğü\"nden CC BY-SA 3.0 lisansıyla uyarlanmıştır. Diğerleri CoinMarketCap sözlüğünden ve SSP ekibinden.",
-    "contentInEnglishBanner": "Sözlük içeriği İngilizce olarak gösterilmektedir. Yerelleştirilmiş makaleler için <academyLink>Akademi</academyLink>'yi ziyaret edin."
+    "contentInEnglishBanner": "Sözlük içeriği İngilizce olarak gösterilmektedir. Yerelleştirilmiş makaleler için <academyLink>Akademi</academyLink>'yi ziyaret edin.",
+    "letterIndexAriaLabel": "Glossary letter index"
   }
 }

@@ -1864,6 +1864,7 @@
     "seoTitle": "Krypto-Glossar — SSP",
     "seoDescription": "Glossar mit Krypto-, Blockchain- und SSP-Begriffen. Über 2.000 durchsuchbare Einträge.",
     "attribution": "Einige Einträge stammen aus Wikipedias \"Glossar der Kryptowährungsbegriffe\" unter CC BY-SA 3.0. Andere aus dem CoinMarketCap-Glossar und der Auswahl des SSP-Teams.",
-    "contentInEnglishBanner": "Der Glossar-Inhalt wird in Englisch angezeigt. Lokalisierte Artikel finden Sie in der <academyLink>Akademie</academyLink>."
+    "contentInEnglishBanner": "Der Glossar-Inhalt wird in Englisch angezeigt. Lokalisierte Artikel finden Sie in der <academyLink>Akademie</academyLink>.",
+    "letterIndexAriaLabel": "Glossary letter index"
   }
 }

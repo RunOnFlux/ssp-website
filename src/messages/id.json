@@ -1864,6 +1864,7 @@
     "seoTitle": "Glosarium Kripto — SSP",
     "seoDescription": "Glosarium istilah kripto, blockchain, dan SSP. Lebih dari 2.000 entri yang dapat dicari.",
     "attribution": "Beberapa entri diadaptasi dari \"Glosarium istilah kriptokurensi\" Wikipedia di bawah lisensi CC BY-SA 3.0. Entri lain berasal dari glosarium CoinMarketCap dan kurasi tim SSP.",
-    "contentInEnglishBanner": "Isi glosarium ditampilkan dalam bahasa Inggris. Untuk artikel yang dilokalkan, kunjungi <academyLink>Academy</academyLink>."
+    "contentInEnglishBanner": "Isi glosarium ditampilkan dalam bahasa Inggris. Untuk artikel yang dilokalkan, kunjungi <academyLink>Academy</academyLink>.",
+    "letterIndexAriaLabel": "Glossary letter index"
   }
 }

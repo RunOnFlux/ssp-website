@@ -1864,6 +1864,7 @@
     "seoTitle": "암호화폐 용어집 — SSP",
     "seoDescription": "암호화폐, 블록체인, SSP 용어집. 2,000개 이상의 검색 가능한 항목.",
     "attribution": "일부 항목은 Wikipedia의 \"암호화폐 용어집\"(CC BY-SA 3.0)을 각색했습니다. 나머지는 CoinMarketCap 용어집과 SSP 팀의 큐레이션입니다.",
-    "contentInEnglishBanner": "용어집은 영어로 표시됩니다. 현지화된 아티클은 <academyLink>아카데미</academyLink>에서 확인하세요."
+    "contentInEnglishBanner": "용어집은 영어로 표시됩니다. 현지화된 아티클은 <academyLink>아카데미</academyLink>에서 확인하세요.",
+    "letterIndexAriaLabel": "Glossary letter index"
   }
 }
