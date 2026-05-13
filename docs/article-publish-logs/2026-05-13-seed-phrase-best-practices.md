@@ -1,0 +1,30 @@
+# Publish log — seed-phrase-best-practices
+
+- **Date:** 2026-05-13
+- **Section / category:** academy / security
+- **CMS post id:** 6a0482aefe4d3e137fdaa7be
+- **Author:** SSP Editorial Team (id 6a047789fe4d3e137fdaa7b6)
+- **Translations published:** en, es, zh, pt-BR, ru, tr, ja, de, fr, it, pl, ko, vi, id (14)
+- **Required anchors verified in English body:** #bip39, #bip32, #hot-wallet, #cold-wallet, #hardware-wallet, #private-key, #public-key
+- **Cover images:**
+  - 16:9: https://cms.sspwallet.com/media/1778679815229-cover-seed-phrase.png
+  - 1:1: https://cms.sspwallet.com/media/1778679815442-cover-seed-phrase-square.png
+- **Smoke test:**
+  - `GET /api/v1/posts/seed-phrase-best-practices?locale=en` -> 200
+  - `GET /api/v1/posts/seed-phrase-best-practices?locale=ja` -> 200
+  - Anchor ids in English body: bip32, bip39, cold-wallet, hardware-wallet, hot-wallet, private-key, public-key
+- **Word counts per locale:**
+  - en: 1439
+  - es: 1575
+  - zh: 159
+  - pt-BR: 1533
+  - ru: 1317
+  - tr: 1200
+  - ja: 156
+  - de: 1420
+  - fr: 1672
+  - it: 1494
+  - pl: 1321
+  - ko: 1259
+  - vi: 1881
+  - id: 1351
