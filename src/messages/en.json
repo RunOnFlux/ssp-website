@@ -45,7 +45,13 @@
     "download": "Download",
     "toggleTheme": "Toggle theme",
     "toggleMenu": "Toggle menu",
-    "selectLanguage": "Select language"
+    "selectLanguage": "Select language",
+    "learn": "Learn",
+    "series": "Series",
+    "learnGlossary": "Glossary",
+    "learnAcademyDescription": "Long-form articles organized by category",
+    "learnSeriesDescription": "Guided multi-part learning paths",
+    "learnGlossaryDescription": "Crypto and SSP terms, 2,000+ entries"
   },
   "Footer": {
     "navigation": "Navigation",
