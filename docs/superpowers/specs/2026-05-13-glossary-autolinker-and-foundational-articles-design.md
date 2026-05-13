@@ -101,12 +101,11 @@ function autoLinkContent(
 inputs: content, selfSlug, termMap, fallbackTermMap, maxLinks
 
 1. Mask code blocks, inline code, existing links, reference links.
-2. Build a single iteration list: union of termMap and fallbackTermMap keys,
-   each tagged with its source tier ('curated' | 'fallback').
-   Sort by:
-     - length desc (longest first)
-     - tier asc ('curated' before 'fallback' at the same length)
-3. For each key in the sorted list:
+2. Build two tier-tagged key lists:
+     - primaryKeys = termMap.keys(), sorted by length desc
+     - fallbackKeys = fallbackTermMap.keys() that are not in termMap,
+                      preserving fallbackTermMap insertion order
+3. Iterate primaryKeys, then fallbackKeys. For each key:
      skip if href is self-referential (existing rule).
      if linkCount >= maxLinks: break.
      attempt case-insensitive word-boundary match; if hit:
@@ -114,7 +113,11 @@ inputs: content, selfSlug, termMap, fallbackTermMap, maxLinks
 4. Unmask placeholders.
 ```
 
-The "curated before fallback at the same length" tie-breaker is a small but real behavior change: today there is only one map, so no tie-break is needed. The new behavior guarantees that when a term exists in both maps (it shouldn't, because of the dedup filter, but defense in depth) the curated href wins.
+**Why primary processed as a complete block before fallback:** the curated 20 are deliberately chosen short, high-value labels (`gas`, `BIP48`, `multisig`). The 2,157-entry fallback contains many long Wikipedia-titled entries. A naïve unified length-desc would let long fallback terms consume the cap before short curated terms ever get a chance — exactly the wrong outcome for "curated wins." Processing primary as a block guarantees every primary term that matches gets a link (subject to the cap), and fallback fills any remaining capacity.
+
+**Fallback iteration order** is the fallback `Map`'s insertion order. `buildFallbackTermMap` inserts entries in length-desc order so that longer overlapping fallback terms (e.g. "merkle tree" before "merkle") consume their match first and shadow the shorter term in the body. This achieves longest-match-wins within the fallback tier without re-sorting at iteration time.
+
+**Defense-in-depth dedup:** the loop additionally skips any fallback key already present in the primary map, so a key that appears in both (which `buildFallbackTermMap` already filters out) cannot link twice.
 
 **Cap rationale.** 8 is the largest count that still feels editorial rather than encyclopedic. An average 1,200-word academy article produces roughly 1 link per 150 words, which matches the linking density of well-edited explainer content (e.g. Investopedia). The cap is per-article, not per-paragraph, so a long article distributes links naturally.
 

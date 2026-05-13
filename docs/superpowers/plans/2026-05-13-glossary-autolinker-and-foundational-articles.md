@@ -304,6 +304,14 @@ describe('buildFallbackTermMap', () => {
     }
   })
 
+  it('inserts entries in length-desc order (longest first)', () => {
+    const map = buildFallbackTermMap(new Set())
+    const keys = [...map.keys()]
+    for (let i = 1; i < keys.length; i++) {
+      expect(keys[i].length).toBeLessThanOrEqual(keys[i - 1].length)
+    }
+  })
+
   it('STOP_WORDS contains the common prose noise list', () => {
     const expected = [
       'address',
@@ -407,8 +415,13 @@ export function buildFallbackTermMap(
   const fp = curatedFingerprint(curatedLowercaseKeys)
   if (cached && cachedCuratedKey === fp) return cached
 
+  // Sort entries length-desc before inserting so the Map's insertion order is
+  // longest-first. The linker iterates fallback in insertion order, so this
+  // makes longer overlapping terms (e.g. "merkle tree" before "merkle")
+  // consume their match first and shadow the shorter term.
+  const sorted = [...GLOSSARY].sort((a, b) => b.title.length - a.title.length)
   const map = new Map<string, GlossaryTerm>()
-  for (const entry of GLOSSARY) {
+  for (const entry of sorted) {
     const key = entry.title.toLowerCase()
     if (key.length < MIN_TERM_LENGTH) continue
     if (STOP_WORDS.has(key)) continue
