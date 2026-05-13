@@ -18,7 +18,6 @@
  */
 import { promises as fs } from 'node:fs'
 import path from 'node:path'
-
 import type { GlossaryEntrySource } from '../src/constants/glossary/types'
 import { normalizeSlug } from '../src/lib/glossary-utils'
 
@@ -112,7 +111,10 @@ async function fetchCategoryMembers(category: string): Promise<string[]> {
     const cacheKey = 'catmembers__' + category + '__p' + pageNum
     const body = await fetchCached(url, cacheKey)
     if (!body) return titles
-    let data: { query?: { categorymembers?: WikiCategoryMember[] }; continue?: { cmcontinue?: string } }
+    let data: {
+      query?: { categorymembers?: WikiCategoryMember[] }
+      continue?: { cmcontinue?: string }
+    }
     try {
       data = JSON.parse(body)
     } catch {
@@ -217,7 +219,9 @@ async function main() {
   console.log('projected total after merge: ' + totalAfterMerge)
   if (totalAfterMerge < 2000) {
     console.warn(
-      'WARNING: total is ' + totalAfterMerge + ', below 2000 target. Controller will expand SSP-curated to make up the gap.'
+      'WARNING: total is ' +
+        totalAfterMerge +
+        ', below 2000 target. Controller will expand SSP-curated to make up the gap.'
     )
   }
 }

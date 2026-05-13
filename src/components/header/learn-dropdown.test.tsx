@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import { NextIntlClientProvider } from 'next-intl'
 import { describe, it, expect, vi } from 'vitest'
+import { LearnDropdown } from './learn-dropdown'
 
 vi.mock('@/i18n/navigation', () => ({
   Link: ({ href, children, ...props }: any) => (
@@ -9,8 +10,6 @@ vi.mock('@/i18n/navigation', () => ({
     </a>
   ),
 }))
-
-import { LearnDropdown } from './learn-dropdown'
 
 const messages = {
   Header: {

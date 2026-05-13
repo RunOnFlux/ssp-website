@@ -4,7 +4,6 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { Download, Menu, Moon, Sun, X } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
-
 import { LearnDropdown } from '@/components/header/learn-dropdown'
 import { LearnMobileSection } from '@/components/header/learn-mobile-section'
 import { LocaleSwitcher } from '@/components/header/locale-switcher'

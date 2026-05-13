@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-
 import { GLOSSARY } from '@/constants/glossary'
 import { Link } from '@/i18n/navigation'
 import type { Locale } from '@/i18n/routing'
@@ -14,11 +13,7 @@ interface PageProps {
   params: Promise<{ locale: Locale; slug: string }>
 }
 
-export async function generateStaticParams({
-  params,
-}: {
-  params: { locale: string }
-}) {
+export async function generateStaticParams({ params }: { params: { locale: string } }) {
   return GLOSSARY.map(entry => ({ slug: entry.slug }))
 }
 

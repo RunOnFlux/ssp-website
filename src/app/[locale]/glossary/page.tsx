@@ -1,12 +1,10 @@
 import type { Metadata } from 'next'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
-
 import { GLOSSARY } from '@/constants/glossary'
 import { Link } from '@/i18n/navigation'
 import type { Locale } from '@/i18n/routing'
 import { groupByFirstLetter } from '@/lib/glossary-utils'
 import { createMetadata } from '@/lib/seo'
-
 import { GlossaryEntryCard } from './glossary-entry-card'
 import { GlossarySearch } from './glossary-search'
 import { LetterIndex } from './letter-index'

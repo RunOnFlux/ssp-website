@@ -1,5 +1,5 @@
-import { describe, it, expect, beforeEach } from 'vitest'
 import { fireEvent, render, screen } from '@testing-library/react'
+import { describe, it, expect, beforeEach } from 'vitest'
 import { GlossarySearch } from './glossary-search'
 
 describe('GlossarySearch', () => {
@@ -32,9 +32,7 @@ describe('GlossarySearch', () => {
     const input = screen.getByPlaceholderText('Search…') as HTMLInputElement
     fireEvent.change(input, { target: { value: 'air' } })
 
-    const cards = Array.from(
-      document.querySelectorAll<HTMLElement>('[data-glossary-card]')
-    )
+    const cards = Array.from(document.querySelectorAll<HTMLElement>('[data-glossary-card]'))
     const visible = cards.filter(c => c.style.display !== 'none')
     expect(visible.map(c => c.dataset.title)).toEqual(['Air-gapped'])
     expect(screen.getByText('1 matches')).toBeInTheDocument()
@@ -45,9 +43,7 @@ describe('GlossarySearch', () => {
     const input = screen.getByPlaceholderText('Search…') as HTMLInputElement
     fireEvent.change(input, { target: { value: 'bitcoin' } })
 
-    const sections = Array.from(
-      document.querySelectorAll<HTMLElement>('[data-letter-section]')
-    )
+    const sections = Array.from(document.querySelectorAll<HTMLElement>('[data-letter-section]'))
     const sectionA = sections.find(s => s.dataset.letter === 'A')
     const sectionB = sections.find(s => s.dataset.letter === 'B')
     expect(sectionA?.style.display).toBe('none')
@@ -60,9 +56,7 @@ describe('GlossarySearch', () => {
     fireEvent.change(input, { target: { value: 'air' } })
     fireEvent.change(input, { target: { value: '' } })
 
-    const cards = Array.from(
-      document.querySelectorAll<HTMLElement>('[data-glossary-card]')
-    )
+    const cards = Array.from(document.querySelectorAll<HTMLElement>('[data-glossary-card]'))
     for (const card of cards) {
       expect(card.style.display).toBe('')
     }

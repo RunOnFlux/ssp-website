@@ -1,7 +1,7 @@
 import { normalizeSlug } from '@/lib/glossary-utils'
-import type { GlossaryEntry, GlossaryEntrySource } from './types'
 import cmcRaw from './cmc.json'
 import sspCuratedRaw from './ssp-curated.json'
+import type { GlossaryEntry, GlossaryEntrySource } from './types'
 import webSourcedRaw from './web-sourced.json'
 
 const cmc = cmcRaw as GlossaryEntrySource[]
@@ -22,9 +22,7 @@ export function getGlossary(): readonly GlossaryEntry[] {
     map.set(normalizeSlug(entry.slug), { ...entry, source: 'ssp-curated' })
   }
 
-  const merged = Array.from(map.values()).sort((a, b) =>
-    a.title.localeCompare(b.title, 'en')
-  )
+  const merged = Array.from(map.values()).sort((a, b) => a.title.localeCompare(b.title, 'en'))
   return Object.freeze(merged)
 }
 
