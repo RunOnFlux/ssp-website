@@ -124,3 +124,6 @@ next-env.d.ts
 
 # Local git worktrees (superpowers/brainstorming workflow)
 .worktrees/
+
+# Glossary build script cache
+.glossary-cache/
