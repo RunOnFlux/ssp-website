@@ -4,11 +4,18 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { Download, Menu, Moon, Sun, X } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
+
+import { LearnDropdown } from '@/components/header/learn-dropdown'
+import { LearnMobileSection } from '@/components/header/learn-mobile-section'
 import { LocaleSwitcher } from '@/components/header/locale-switcher'
 import { Logo } from '@/components/logo'
 import { useTheme } from '@/hooks/use-theme'
 import { Link, usePathname } from '@/i18n/navigation'
 import { cn } from '@/lib/utils'
+
+type LinkItem = { kind: 'link'; name: string; href: string }
+type GroupItem = { kind: 'group'; key: 'learn'; name: string }
+type NavItem = LinkItem | GroupItem
 
 export function Header() {
   const t = useTranslations('Header')
@@ -17,27 +24,30 @@ export function Header() {
   const { theme, toggleTheme, mounted } = useTheme()
   const pathname = usePathname()
 
-  const primaryNav = [
-    { name: t('home'), href: '/' },
-    { name: t('enterprise'), href: '/enterprise' },
-    { name: t('features'), href: '/features' },
-    { name: t('newsroom'), href: '/newsroom' },
-    { name: t('academy'), href: '/academy' },
-    { name: t('guide'), href: '/guide' },
-    { name: t('support'), href: '/support' },
-    { name: t('contact'), href: '/contact' },
+  const primaryNav: NavItem[] = [
+    { kind: 'link', name: t('home'), href: '/' },
+    { kind: 'link', name: t('enterprise'), href: '/enterprise' },
+    { kind: 'link', name: t('features'), href: '/features' },
+    { kind: 'link', name: t('newsroom'), href: '/newsroom' },
+    { kind: 'group', key: 'learn', name: t('learn') },
+    { kind: 'link', name: t('guide'), href: '/guide' },
+    { kind: 'link', name: t('support'), href: '/support' },
+    { kind: 'link', name: t('contact'), href: '/contact' },
   ]
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-    }
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 20)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const closeMenu = () => setIsMenuOpen(false)
+
+  const isLearnActive =
+    pathname === '/academy' ||
+    pathname.startsWith('/academy/') ||
+    pathname === '/glossary' ||
+    pathname.startsWith('/glossary/')
 
   return (
     <header
@@ -50,42 +60,43 @@ export function Header() {
     >
       <nav className='container-custom'>
         <div className='flex h-16 items-center justify-between md:h-20'>
-          {/* Logo */}
           <Link href='/' className='flex items-center space-x-2'>
             <Logo width={120} height={40} className='h-8 md:h-10' />
           </Link>
 
           {/* Desktop Navigation */}
           <div className='hidden items-center space-x-6 lg:flex'>
-            {primaryNav.map(item => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={cn(
-                  'hover:text-primary-600 dark:hover:text-primary-400 relative text-sm font-medium transition-colors duration-200',
-                  pathname === item.href
-                    ? 'text-primary-600 dark:text-primary-400'
-                    : 'text-gray-700 dark:text-gray-300'
-                )}
-              >
-                {item.name}
-                {pathname === item.href && (
-                  <motion.div
-                    className='bg-primary-600 dark:bg-primary-400 absolute right-0 -bottom-1 left-0 h-0.5'
-                    layoutId='activeTab'
-                    transition={{ type: 'spring', bounce: 0.2, duration: 0.15 }}
-                  />
-                )}
-              </Link>
-            ))}
+            {primaryNav.map(item => {
+              if (item.kind === 'group') {
+                return <LearnDropdown key='learn' isActive={isLearnActive} />
+              }
+              const active = pathname === item.href
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={cn(
+                    'hover:text-primary-600 dark:hover:text-primary-400 relative text-sm font-medium transition-colors duration-200',
+                    active
+                      ? 'text-primary-600 dark:text-primary-400'
+                      : 'text-gray-700 dark:text-gray-300'
+                  )}
+                >
+                  {item.name}
+                  {active && (
+                    <motion.div
+                      className='bg-primary-600 dark:bg-primary-400 absolute right-0 -bottom-1 left-0 h-0.5'
+                      layoutId='activeTab'
+                      transition={{ type: 'spring', bounce: 0.2, duration: 0.15 }}
+                    />
+                  )}
+                </Link>
+              )
+            })}
           </div>
 
-          {/* Right side actions */}
           <div className='flex items-center space-x-3'>
-            {/* Locale Switcher */}
             {mounted && <LocaleSwitcher />}
-
-            {/* Theme Toggle */}
             {mounted && (
               <button
                 onClick={toggleTheme}
@@ -99,14 +110,10 @@ export function Header() {
                 )}
               </button>
             )}
-
-            {/* Download Button */}
             <Link href='/download' className='btn btn-primary hidden md:inline-flex'>
               <Download className='mr-2 h-4 w-4' />
               {t('download')}
             </Link>
-
-            {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className='dark:bg-dark-800 dark:hover:bg-dark-700 rounded-lg bg-gray-100 p-2 transition-colors duration-200 hover:bg-gray-200 lg:hidden'
@@ -121,7 +128,6 @@ export function Header() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
@@ -131,28 +137,42 @@ export function Header() {
               transition={{ duration: 0.1 }}
               className='overflow-hidden lg:hidden'
             >
-              <div className='dark:bg-dark-900/95 mt-2 space-y-2 rounded-lg border border-gray-200/20 bg-white/95 py-4 backdrop-blur-md dark:border-white/10'>
-                {primaryNav.map((item, index) => (
-                  <motion.div
-                    key={item.name}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.03 }}
-                  >
-                    <Link
-                      href={item.href}
-                      onClick={closeMenu}
-                      className={cn(
-                        'block px-4 py-2 text-base font-medium transition-colors duration-200',
-                        pathname === item.href
-                          ? 'bg-primary-50 text-primary-600 dark:bg-primary-900/20 dark:text-primary-400'
-                          : 'hover:text-primary-600 dark:hover:bg-dark-800 dark:hover:text-primary-400 text-gray-700 hover:bg-gray-50 dark:text-gray-300'
-                      )}
+              <div className='dark:bg-dark-900/95 mt-2 space-y-1 rounded-lg border border-gray-200/20 bg-white/95 py-2 backdrop-blur-md dark:border-white/10'>
+                {primaryNav.map((item, index) => {
+                  if (item.kind === 'group') {
+                    return (
+                      <motion.div
+                        key='learn'
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.03 }}
+                      >
+                        <LearnMobileSection pathname={pathname} onItemClick={closeMenu} />
+                      </motion.div>
+                    )
+                  }
+                  return (
+                    <motion.div
+                      key={item.name}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.03 }}
                     >
-                      {item.name}
-                    </Link>
-                  </motion.div>
-                ))}
+                      <Link
+                        href={item.href}
+                        onClick={closeMenu}
+                        className={cn(
+                          'block px-4 py-2 text-base font-medium transition-colors duration-200',
+                          pathname === item.href
+                            ? 'bg-primary-50 text-primary-600 dark:bg-primary-900/20 dark:text-primary-400'
+                            : 'hover:text-primary-600 dark:hover:bg-dark-800 dark:hover:text-primary-400 text-gray-700 hover:bg-gray-50 dark:text-gray-300'
+                        )}
+                      >
+                        {item.name}
+                      </Link>
+                    </motion.div>
+                  )
+                })}
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
