@@ -27,7 +27,6 @@ export function Header() {
     { kind: 'link', name: t('home'), href: '/' },
     { kind: 'link', name: t('enterprise'), href: '/enterprise' },
     { kind: 'link', name: t('features'), href: '/features' },
-    { kind: 'link', name: t('newsroom'), href: '/newsroom' },
     { kind: 'group', key: 'learn', name: t('learn') },
     { kind: 'link', name: t('guide'), href: '/guide' },
     { kind: 'link', name: t('support'), href: '/support' },
@@ -46,7 +45,9 @@ export function Header() {
     pathname === '/academy' ||
     pathname.startsWith('/academy/') ||
     pathname === '/glossary' ||
-    pathname.startsWith('/glossary/')
+    pathname.startsWith('/glossary/') ||
+    pathname === '/newsroom' ||
+    pathname.startsWith('/newsroom/')
 
   return (
     <header
