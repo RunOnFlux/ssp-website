@@ -51,7 +51,8 @@
     "learnGlossary": "Glossary",
     "learnAcademyDescription": "Long-form articles organized by category",
     "learnSeriesDescription": "Guided multi-part learning paths",
-    "learnGlossaryDescription": "Crypto and SSP terms, 2,000+ entries"
+    "learnGlossaryDescription": "Crypto and SSP terms, 2,000+ entries",
+    "learnNewsroomDescription": "Latest announcements and product updates"
   },
   "Footer": {
     "navigation": "Navigation",

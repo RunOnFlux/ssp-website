@@ -51,7 +51,8 @@
     "learnGlossary": "Glossaire",
     "learnAcademyDescription": "Articles approfondis classés par catégorie",
     "learnSeriesDescription": "Parcours d'apprentissage en plusieurs parties",
-    "learnGlossaryDescription": "Termes crypto et SSP, plus de 2 000 entrées"
+    "learnGlossaryDescription": "Termes crypto et SSP, plus de 2 000 entrées",
+    "learnNewsroomDescription": "Dernières annonces et mises à jour produit"
   },
   "Footer": {
     "navigation": "Navigation",

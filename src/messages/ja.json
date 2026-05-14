@@ -51,7 +51,8 @@
     "learnGlossary": "用語集",
     "learnAcademyDescription": "カテゴリー別の詳細記事",
     "learnSeriesDescription": "複数パートの学習パス",
-    "learnGlossaryDescription": "暗号資産・SSP 用語、2,000+ エントリー"
+    "learnGlossaryDescription": "暗号資産・SSP 用語、2,000+ エントリー",
+    "learnNewsroomDescription": "最新のお知らせとプロダクトのアップデート"
   },
   "Footer": {
     "navigation": "ナビゲーション",

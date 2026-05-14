@@ -51,7 +51,8 @@
     "learnGlossary": "Глоссарий",
     "learnAcademyDescription": "Подробные статьи по категориям",
     "learnSeriesDescription": "Многосерийные учебные маршруты",
-    "learnGlossaryDescription": "Криптовалютные и SSP-термины, более 2 000 записей"
+    "learnGlossaryDescription": "Криптовалютные и SSP-термины, более 2 000 записей",
+    "learnNewsroomDescription": "Последние анонсы и обновления продукта"
   },
   "Footer": {
     "navigation": "Навигация",

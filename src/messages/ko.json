@@ -51,7 +51,8 @@
     "learnGlossary": "용어집",
     "learnAcademyDescription": "카테고리별 심층 기사",
     "learnSeriesDescription": "여러 부로 구성된 학습 경로",
-    "learnGlossaryDescription": "암호화폐 및 SSP 용어, 2,000개 이상"
+    "learnGlossaryDescription": "암호화폐 및 SSP 용어, 2,000개 이상",
+    "learnNewsroomDescription": "최신 공지사항 및 제품 업데이트"
   },
   "Footer": {
     "navigation": "탐색",
