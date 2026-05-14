@@ -26,9 +26,7 @@ describe('NavigationMenuTrigger', () => {
   })
 
   it('omits the chevron indicator when hideIndicator is true', () => {
-    const { container } = setup(
-      <NavigationMenuTrigger hideIndicator>Open</NavigationMenuTrigger>
-    )
+    const { container } = setup(<NavigationMenuTrigger hideIndicator>Open</NavigationMenuTrigger>)
     const trigger = container.querySelector('button')
     expect(trigger).not.toBeNull()
     expect(trigger?.querySelector('svg')).toBeNull()

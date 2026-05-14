@@ -5,15 +5,16 @@
 // middleware actually runs.
 import { NextRequest } from 'next/server'
 import { describe, it, expect, vi } from 'vitest'
+import middleware from './middleware'
 
 // The middleware imports @/lib/cms; we mock it so the test stays hermetic even
 // though the agent-md branch never fires for the html-accept requests below.
+// vi.mock is hoisted by Vitest, so its placement after `import middleware`
+// still applies — keeping imports grouped to satisfy `import/order`.
 vi.mock('@/lib/cms', () => ({
   getAuthorBySlug: vi.fn(),
   getPostBySlug: vi.fn(),
 }))
-
-import middleware from './middleware'
 
 function makeReq(path: string, headers: Record<string, string> = {}): NextRequest {
   return new NextRequest(new URL(path, 'http://localhost'), {
