@@ -9,10 +9,13 @@ interface Props {
   onItemClick: () => void
 }
 
+type MobileHref = '/newsroom' | '/academy' | '/academy/series' | '/glossary'
+
 export function LearnMobileSection({ pathname, onItemClick }: Props) {
   const t = useTranslations('Header')
 
-  const items: Array<{ href: '/academy' | '/academy/series' | '/glossary'; label: string }> = [
+  const items: Array<{ href: MobileHref; label: string }> = [
+    { href: '/newsroom', label: t('newsroom') },
     { href: '/academy', label: t('academy') },
     { href: '/academy/series', label: t('series') },
     { href: '/glossary', label: t('learnGlossary') },
