@@ -1,6 +1,6 @@
 'use client'
 
-import { BookA, BookOpen, Compass } from 'lucide-react'
+import { BookA, BookOpen, Compass, Newspaper } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import {
   NavigationMenu,
@@ -16,10 +16,16 @@ interface Props {
   isActive: boolean
 }
 
-export function LearnDropdown({ isActive }: Props) {
-  const t = useTranslations('Header')
+type Translator = (key: string) => string
 
-  const items = [
+export function buildLearnDropdownItems(t: Translator) {
+  return [
+    {
+      href: '/newsroom' as const,
+      icon: Newspaper,
+      label: t('newsroom'),
+      desc: t('learnNewsroomDescription'),
+    },
     {
       href: '/academy' as const,
       icon: BookOpen,
@@ -39,12 +45,18 @@ export function LearnDropdown({ isActive }: Props) {
       desc: t('learnGlossaryDescription'),
     },
   ]
+}
+
+export function LearnDropdown({ isActive }: Props) {
+  const t = useTranslations('Header')
+  const items = buildLearnDropdownItems(t)
 
   return (
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger
+            hideIndicator
             className={isActive ? 'text-primary-600 dark:text-primary-400' : ''}
             data-active={isActive || undefined}
           >
