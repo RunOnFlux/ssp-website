@@ -69,12 +69,22 @@ describe('middleware non-en glossary redirect', () => {
     expect(res!.headers.get('location')).toMatch(/\/en\/glossary\/multisig$/)
   })
 
-  it('does not redirect /en/glossary or /en/glossary/<slug>', async () => {
+  it('does not 308-redirect /en/glossary or /en/glossary/<slug>', async () => {
     for (const path of ['/en/glossary', '/en/glossary/multisig']) {
       const req = makeReq(path)
       const res = await middleware(req)
-      const loc = res?.headers.get('location') ?? ''
-      expect(loc, `unexpected redirect for ${path}`).not.toMatch(/\/en\/glossary/)
+      expect(res?.status, `unexpected 308 for ${path}`).not.toBe(308)
     }
+  })
+
+  it('preserves query string when redirecting non-en glossary paths', async () => {
+    const req = makeReq('/fr/glossary/multisig?utm_source=newsletter&ref=abc')
+    const res = await middleware(req)
+    expect(res).toBeDefined()
+    expect(res!.status).toBe(308)
+    const location = res!.headers.get('location') ?? ''
+    expect(location).toMatch(/\/en\/glossary\/multisig\?/)
+    expect(location).toContain('utm_source=newsletter')
+    expect(location).toContain('ref=abc')
   })
 })

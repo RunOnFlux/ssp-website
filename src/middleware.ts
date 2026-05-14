@@ -73,7 +73,8 @@ export default async function middleware(req: NextRequest) {
   if (glossaryMatch) {
     const [, locale, rest] = glossaryMatch
     if (locale !== 'en' && routing.locales.includes(locale as (typeof routing.locales)[number])) {
-      const target = new URL(`/en${rest}`, req.url)
+      const target = req.nextUrl.clone()
+      target.pathname = `/en${rest}`
       return NextResponse.redirect(target, 308)
     }
   }
