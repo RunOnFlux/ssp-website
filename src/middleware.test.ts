@@ -51,3 +51,30 @@ describe('middleware locale persistence', () => {
     expect(loc).not.toMatch(/\/es(\/|$)/)
   })
 })
+
+describe('middleware non-en glossary redirect', () => {
+  it('redirects /fr/glossary to /en/glossary with status 308', async () => {
+    const req = makeReq('/fr/glossary')
+    const res = await middleware(req)
+    expect(res).toBeDefined()
+    expect(res!.status).toBe(308)
+    expect(res!.headers.get('location')).toMatch(/\/en\/glossary$/)
+  })
+
+  it('redirects a non-en glossary slug to its /en equivalent with status 308', async () => {
+    const req = makeReq('/pl/glossary/multisig')
+    const res = await middleware(req)
+    expect(res).toBeDefined()
+    expect(res!.status).toBe(308)
+    expect(res!.headers.get('location')).toMatch(/\/en\/glossary\/multisig$/)
+  })
+
+  it('does not redirect /en/glossary or /en/glossary/<slug>', async () => {
+    for (const path of ['/en/glossary', '/en/glossary/multisig']) {
+      const req = makeReq(path)
+      const res = await middleware(req)
+      const loc = res?.headers.get('location') ?? ''
+      expect(loc, `unexpected redirect for ${path}`).not.toMatch(/\/en\/glossary/)
+    }
+  })
+})

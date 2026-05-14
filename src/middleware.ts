@@ -65,6 +65,19 @@ export default async function middleware(req: NextRequest) {
     }
   }
 
+  // Glossary is canonical at /en only — see
+  // docs/superpowers/specs/2026-05-14-glossary-en-only-prerender-design.md.
+  // Redirect /<non-en-locale>/glossary[/...] to its /en equivalent with 308
+  // so non-en URLs do not get indexed alongside the English source.
+  const glossaryMatch = req.nextUrl.pathname.match(/^\/([^/]+)(\/glossary(?:\/.*)?)$/)
+  if (glossaryMatch) {
+    const [, locale, rest] = glossaryMatch
+    if (locale !== 'en' && routing.locales.includes(locale as (typeof routing.locales)[number])) {
+      const target = new URL(`/en${rest}`, req.url)
+      return NextResponse.redirect(target, 308)
+    }
+  }
+
   const response = intlMiddleware(req)
   response.headers.set('Vary', 'Accept')
   response.headers.set(
