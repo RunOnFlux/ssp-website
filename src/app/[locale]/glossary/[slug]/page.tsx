@@ -14,6 +14,7 @@ interface PageProps {
 }
 
 export async function generateStaticParams({ params }: { params: { locale: string } }) {
+  if (params.locale !== 'en') return []
   return GLOSSARY.map(entry => ({ slug: entry.slug }))
 }
 
