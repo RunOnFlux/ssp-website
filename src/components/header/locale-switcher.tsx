@@ -7,6 +7,10 @@ import { usePathname, useRouter } from '@/i18n/navigation'
 import { type Locale, routing } from '@/i18n/routing'
 import { useLocalizedPaths } from '@/lib/i18n/localized-paths'
 
+// Persistence rides on the `NEXT_LOCALE` cookie that next-intl writes when
+// `router.replace(..., { locale })` is invoked. The middleware reads the same
+// cookie before falling back to Accept-Language, so the user's choice survives
+// page reloads and new sessions without any client-side storage of our own.
 const LABELS: Record<Locale, string> = {
   en: 'English',
   es: 'Español',
@@ -44,11 +48,10 @@ export function LocaleSwitcher() {
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
         <button
-          className='dark:bg-dark-800 dark:hover:bg-dark-700 inline-flex items-center gap-2 rounded-lg bg-gray-100 p-2 hover:bg-gray-200'
+          className='dark:bg-dark-800 dark:hover:bg-dark-700 inline-flex items-center rounded-lg bg-gray-100 p-2 hover:bg-gray-200'
           aria-label={t('selectLanguage')}
         >
           <Globe className='h-5 w-5 text-gray-700 dark:text-gray-300' />
-          <span className='hidden text-sm font-medium md:inline'>{LABELS[locale]}</span>
         </button>
       </DropdownMenu.Trigger>
       <DropdownMenu.Portal>
