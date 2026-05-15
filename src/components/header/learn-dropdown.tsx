@@ -1,5 +1,6 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import { BookA, BookOpen, Compass, Newspaper } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import {
@@ -11,6 +12,7 @@ import {
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu'
 import { Link } from '@/i18n/navigation'
+import { cn } from '@/lib/utils'
 
 interface Props {
   isActive: boolean
@@ -57,10 +59,22 @@ export function LearnDropdown({ isActive }: Props) {
         <NavigationMenuItem>
           <NavigationMenuTrigger
             hideIndicator
-            className={isActive ? 'text-primary-600 dark:text-primary-400' : ''}
+            className={cn(
+              'relative h-auto cursor-pointer px-0 py-0',
+              isActive
+                ? 'text-primary-600 dark:text-primary-400'
+                : 'text-gray-700 dark:text-gray-300'
+            )}
             data-active={isActive || undefined}
           >
             {t('learn')}
+            {isActive && (
+              <motion.div
+                className='bg-primary-600 dark:bg-primary-400 absolute right-0 -bottom-1 left-0 h-0.5'
+                layoutId='activeTab'
+                transition={{ type: 'spring', bounce: 0.2, duration: 0.15 }}
+              />
+            )}
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className='grid w-[360px] gap-2 p-3'>
