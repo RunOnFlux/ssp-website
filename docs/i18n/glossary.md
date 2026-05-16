@@ -44,22 +44,22 @@ Maintained alongside `src/constants/supported-chains.ts`. Currently:
 
 ## 2. Term policy table
 
-| English term              | Domain | Policy                                                                                        |
-| ------------------------- | ------ | --------------------------------------------------------------------------------------------- |
-| self-custody              | crypto | Translate; preserve the "self-" prefix nuance (e.g. de "Selbstverwahrung", es "autocustodia") |
-| multisig                  | crypto | Leave-as-is in body copy; in glossary-style definitions, optionally expand on first use       |
-| seed phrase               | crypto | Translate to the locale's standard term (ja: シードフレーズ, ko: 시드 구문, zh: 助记词)       |
-| recovery phrase           | crypto | Translate; same locale-standard convention as "seed phrase" — these are often interchangeable |
-| hardware wallet           | crypto | Translate                                                                                     |
-| dApp                      | crypto | Leave-as-is                                                                                   |
-| smart contract            | crypto | Translate                                                                                     |
-| gas fee                   | crypto | Translate                                                                                     |
-| custodial / non-custodial | crypto | Translate; pair with "self-custody" policy                                                    |
-| airdrop                   | crypto | Leave-as-is in most locales; ja/ko/zh: translate using the locale's standard rendering        |
-| staking                   | crypto | Translate where a clear native term exists; otherwise leave-as-is                             |
-| swap (verb)               | crypto | Translate using the locale's wallet-app convention                                            |
+| English term              | Domain | Policy                                                                                                                                                  |
+| ------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| self-custody              | crypto | Translate; preserve the "self-" prefix nuance (e.g. de "Selbstverwahrung", es "autocustodia")                                                           |
+| multisig                  | crypto | Leave-as-is in body copy; in glossary-style definitions, optionally expand on first use                                                                 |
+| seed phrase               | crypto | Translate to the locale's standard term (ja: シードフレーズ, ko: 시드 구문, zh: 助记词)                                                                 |
+| recovery phrase           | crypto | Translate; same locale-standard convention as "seed phrase" — these are often interchangeable                                                           |
+| hardware wallet           | crypto | Translate                                                                                                                                               |
+| dApp                      | crypto | Leave-as-is                                                                                                                                             |
+| smart contract            | crypto | Translate                                                                                                                                               |
+| gas fee                   | crypto | Translate                                                                                                                                               |
+| custodial / non-custodial | crypto | Translate; pair with "self-custody" policy                                                                                                              |
+| airdrop                   | crypto | Leave-as-is in most locales; ja/ko/zh: translate using the locale's standard rendering                                                                  |
+| staking                   | crypto | Translate where a clear native term exists; otherwise leave-as-is                                                                                       |
+| swap (verb)               | crypto | Translate using the locale's wallet-app convention                                                                                                      |
 | Enterprise (nav label)    | UX     | Translate as the locale's B2B audience label (e.g. de "Unternehmen", fr "Entreprise", ja "法人向け"). "SSP Enterprise" as a product name stays English. |
-| Academy (nav label)       | UX     | Translate as the locale's "learning/education section" label (e.g. de "Akademie", ja "アカデミー"). "SSP Academy" as a product name stays English. |
+| Academy (nav label)       | UX     | Translate as the locale's "learning/education section" label (e.g. de "Akademie", ja "アカデミー"). "SSP Academy" as a product name stays English.      |
 
 (Add rows as new terms surface.)
 
