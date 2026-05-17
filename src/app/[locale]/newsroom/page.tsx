@@ -26,7 +26,7 @@ export default async function NewsroomPage({ params }: { params: Promise<{ local
   setRequestLocale(locale)
   const [posts, tags, t, tCommon] = await Promise.all([
     getAllPosts(locale),
-    getAllTags(),
+    getAllTags('newsroom'),
     getTranslations({ locale, namespace: 'Newsroom' }),
     getTranslations({ locale, namespace: 'Common' }),
   ])

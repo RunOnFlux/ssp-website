@@ -381,6 +381,8 @@
     "metaDescription": "Cập nhật tin tức mới nhất, cập nhật sản phẩm và thông báo từ SSP.",
     "filterAll": "Tất cả",
     "loadMore": "Tải thêm",
+    "showMore": "+{count} thêm",
+    "showLess": "Hiển thị ít hơn",
     "noArticles": "Chưa có bài viết nào phù hợp với bộ lọc này.",
     "backToNewsroom": "Quay lại Tin tức",
     "shareTitle": "Chia sẻ bài viết này",

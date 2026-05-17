@@ -381,6 +381,8 @@
     "metaDescription": "Bleiben Sie auf dem neuesten Stand mit den aktuellen Neuigkeiten, Produkt-Updates und Ankündigungen von SSP.",
     "filterAll": "Alle",
     "loadMore": "Mehr laden",
+    "showMore": "+{count} weitere",
+    "showLess": "Weniger anzeigen",
     "noArticles": "Noch keine Artikel entsprechen diesem Filter.",
     "backToNewsroom": "Zurück zum Newsroom",
     "shareTitle": "Diesen Artikel teilen",

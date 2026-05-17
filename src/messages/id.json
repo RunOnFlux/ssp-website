@@ -381,6 +381,8 @@
     "metaDescription": "Tetap up to date dengan berita terbaru, pembaruan produk, dan pengumuman dari SSP.",
     "filterAll": "Semua",
     "loadMore": "Muat lebih banyak",
+    "showMore": "+{count} lagi",
+    "showLess": "Tampilkan lebih sedikit",
     "noArticles": "Belum ada artikel yang cocok dengan filter ini.",
     "backToNewsroom": "Kembali ke Berita",
     "shareTitle": "Bagikan artikel ini",

@@ -381,6 +381,8 @@
     "metaDescription": "Mantente al día con las últimas noticias, actualizaciones de producto y anuncios de SSP.",
     "filterAll": "Todos",
     "loadMore": "Cargar más",
+    "showMore": "+{count} más",
+    "showLess": "Mostrar menos",
     "noArticles": "Aún no hay artículos que coincidan con este filtro.",
     "backToNewsroom": "Volver a la sala de prensa",
     "shareTitle": "Comparte este artículo",

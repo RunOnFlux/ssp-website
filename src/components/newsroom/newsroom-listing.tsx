@@ -7,11 +7,13 @@ import { LocaleBadge } from '@/components/shared/locale-badge'
 import type { NewsroomPost } from '@/types/newsroom'
 
 const POSTS_PER_PAGE = 6
+const TOP_VISIBLE_TAGS = 6
 
 export function NewsroomListing({ posts, tags }: { posts: NewsroomPost[]; tags: string[] }) {
   const t = useTranslations('Newsroom')
   const [activeTag, setActiveTag] = useState<string | null>(null)
   const [visibleCount, setVisibleCount] = useState(POSTS_PER_PAGE)
+  const [tagsExpanded, setTagsExpanded] = useState(false)
 
   const filteredPosts = useMemo(
     () => (activeTag ? posts.filter(p => p.tags.includes(activeTag)) : posts),
@@ -19,6 +21,9 @@ export function NewsroomListing({ posts, tags }: { posts: NewsroomPost[]; tags: 
   )
   const visiblePosts = filteredPosts.slice(0, visibleCount)
   const hasMore = visibleCount < filteredPosts.length
+
+  const visibleTags = tagsExpanded ? tags : tags.slice(0, TOP_VISIBLE_TAGS)
+  const hiddenTagCount = tags.length - TOP_VISIBLE_TAGS
 
   function handleTagClick(tag: string | null) {
     setActiveTag(tag)
@@ -39,7 +44,7 @@ export function NewsroomListing({ posts, tags }: { posts: NewsroomPost[]; tags: 
           >
             {t('filterAll')}
           </button>
-          {tags.map(tag => (
+          {visibleTags.map(tag => (
             <button
               key={tag}
               onClick={() => handleTagClick(tag)}
@@ -52,6 +57,14 @@ export function NewsroomListing({ posts, tags }: { posts: NewsroomPost[]; tags: 
               {tag}
             </button>
           ))}
+          {hiddenTagCount > 0 && (
+            <button
+              onClick={() => setTagsExpanded(e => !e)}
+              className='rounded-pill hover:border-primary-400 dark:border-dark-700 dark:bg-dark-800 border border-gray-300 bg-white px-5 py-2.5 text-sm font-bold text-gray-700 md:text-base dark:text-gray-300'
+            >
+              {tagsExpanded ? t('showLess') : t('showMore', { count: hiddenTagCount })}
+            </button>
+          )}
         </div>
       </div>
 

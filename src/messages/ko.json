@@ -381,6 +381,8 @@
     "metaDescription": "SSP의 최신 뉴스, 제품 업데이트 및 공지사항을 확인하십시오.",
     "filterAll": "전체",
     "loadMore": "더 보기",
+    "showMore": "+{count}개 더",
+    "showLess": "접기",
     "noArticles": "이 필터에 해당하는 글이 아직 없습니다.",
     "backToNewsroom": "뉴스룸으로 돌아가기",
     "shareTitle": "이 글 공유하기",

@@ -104,11 +104,17 @@ export async function getPostBySlug(
   )
 }
 
-export async function getAllTags(): Promise<string[]> {
+export async function getAllTags(section?: 'newsroom' | 'academy'): Promise<string[]> {
+  const cacheKey = `tags:${section ?? 'all'}`
+  const url = section ? `/api/v1/tags?section=${section}` : '/api/v1/tags'
   return withFallback(
-    'tags',
-    async () => (await cmsFetch<{ tag: string; count: number }[]>('/api/v1/tags')).map(t => t.tag),
-    async () => Array.from(new Set((await loadAllSeedPosts()).flatMap(p => p.tags))).sort()
+    cacheKey,
+    async () => (await cmsFetch<{ tag: string; count: number }[]>(url)).map(t => t.tag),
+    async () => {
+      const seed = await loadAllSeedPosts()
+      const filtered = section ? seed.filter(p => p.section === section) : seed
+      return Array.from(new Set(filtered.flatMap(p => p.tags))).sort()
+    }
   )
 }
 

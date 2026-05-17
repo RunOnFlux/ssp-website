@@ -381,6 +381,8 @@
     "metaDescription": "SSP の最新ニュース、プロダクトアップデート、お知らせを随時お届けします。",
     "filterAll": "すべて",
     "loadMore": "もっと読む",
+    "showMore": "+{count} 件",
+    "showLess": "閉じる",
     "noArticles": "このフィルターに一致する記事はまだありません。",
     "backToNewsroom": "ニュースルームに戻る",
     "shareTitle": "この記事をシェアする",

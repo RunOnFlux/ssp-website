@@ -381,6 +381,8 @@
     "metaDescription": "及时了解 SSP 的最新新闻、产品更新与公告。",
     "filterAll": "全部",
     "loadMore": "加载更多",
+    "showMore": "+{count} 更多",
+    "showLess": "收起",
     "noArticles": "暂无符合此筛选条件的文章。",
     "backToNewsroom": "返回新闻中心",
     "shareTitle": "分享本文",

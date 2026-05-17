@@ -91,10 +91,23 @@ describe('getCategories', () => {
 })
 
 describe('getAllTags', () => {
-  it('aggregates unique tags from all posts', async () => {
+  it('aggregates unique tags from all posts (no section)', async () => {
     delete process.env.SSP_CMS_URL
     const tags = await getAllTags()
     expect(Array.isArray(tags)).toBe(true)
+  })
+
+  it('forwards the section arg as a query param to the CMS', async () => {
+    process.env.SSP_CMS_URL = 'https://cms.example.com'
+    process.env.SSP_CMS_API_KEY = 'k'
+    const fetchSpy = vi
+      .spyOn(global, 'fetch')
+      .mockResolvedValue(new Response(JSON.stringify([{ tag: 'foo', count: 1 }]), { status: 200 }))
+    await getAllTags('newsroom')
+    await getAllTags('academy')
+    expect(fetchSpy).toHaveBeenCalledTimes(2)
+    expect(String(fetchSpy.mock.calls[0]?.[0])).toContain('section=newsroom')
+    expect(String(fetchSpy.mock.calls[1]?.[0])).toContain('section=academy')
   })
 })
 

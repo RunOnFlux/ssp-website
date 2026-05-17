@@ -381,6 +381,8 @@
     "metaDescription": "SSP'den en son haberler, ürün güncellemeleri ve duyurulardan haberdar olun.",
     "filterAll": "Tümü",
     "loadMore": "Daha fazla yükle",
+    "showMore": "+{count} daha",
+    "showLess": "Daha az göster",
     "noArticles": "Bu filtreyle eşleşen makale yok.",
     "backToNewsroom": "Basın Odasına geri dön",
     "shareTitle": "Bu makaleyi paylaş",
