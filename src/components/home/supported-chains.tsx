@@ -1,0 +1,252 @@
+'use client'
+
+import { motion, type Variants } from 'framer-motion'
+import { ExternalLink, Plus } from 'lucide-react'
+import Image from 'next/image'
+import { useTranslations } from 'next-intl'
+import { useInView } from 'react-intersection-observer'
+import { SUPPORTED_CHAINS } from '@/constants/supported-chains'
+import { Link } from '@/i18n/navigation'
+
+interface ChainVisual {
+  logo: string
+  color: string
+}
+
+// Visual metadata keyed by chain symbol. Mirrors the legacy embedded list.
+const CHAIN_VISUALS: Record<string, ChainVisual> = {
+  BTC: { logo: '/chains/btc.svg', color: 'from-orange-400 to-orange-600' },
+  ETH: { logo: '/chains/eth.svg', color: 'from-blue-400 to-blue-600' },
+  LTC: { logo: '/chains/ltc.svg', color: 'from-gray-400 to-gray-600' },
+  ZEC: { logo: '/chains/zec.svg', color: 'from-yellow-400 to-yellow-600' },
+  RVN: { logo: '/chains/rvn.svg', color: 'from-blue-400 to-indigo-600' },
+  DOGE: { logo: '/chains/doge.svg', color: 'from-yellow-400 to-orange-500' },
+  BCH: { logo: '/chains/bch.svg', color: 'from-green-400 to-green-600' },
+  FLUX: { logo: '/chains/flux.svg', color: 'from-purple-400 to-purple-600' },
+  MATIC: { logo: '/chains/matic.svg', color: 'from-purple-500 to-indigo-600' },
+  BSC: { logo: '/chains/bnb.svg', color: 'from-yellow-400 to-yellow-600' },
+  AVAX: { logo: '/chains/avax.svg', color: 'from-red-400 to-red-600' },
+  BASE: { logo: '/chains/base.svg', color: 'from-blue-500 to-blue-700' },
+}
+
+const FALLBACK_VISUAL: ChainVisual = {
+  logo: '/chains/btc.svg',
+  color: 'from-gray-400 to-gray-600',
+}
+
+export function SupportedChains() {
+  const t = useTranslations('Home.supportedChains')
+  const tDescriptions = useTranslations('Home.supportedChains.chainDescriptions')
+  const supportedChains = SUPPORTED_CHAINS.map(chain => {
+    const visual = CHAIN_VISUALS[chain.symbol] ?? FALLBACK_VISUAL
+    const description = tDescriptions.has(chain.symbol) ? tDescriptions(chain.symbol) : ''
+    return {
+      symbol: chain.symbol,
+      name: chain.name,
+      ...visual,
+      description,
+    }
+  })
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+  })
+
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  }
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.25,
+        ease: 'easeOut',
+      },
+    },
+  }
+
+  const headerVariants: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.3,
+        ease: 'easeOut',
+      },
+    },
+  }
+
+  return (
+    <section className='section-padding dark:bg-dark-900 bg-white'>
+      <div className='container-custom'>
+        <motion.div
+          ref={ref}
+          initial='hidden'
+          animate={inView ? 'visible' : 'hidden'}
+          variants={containerVariants}
+        >
+          {/* Section Header */}
+          <motion.div variants={headerVariants} className='mb-16 text-center'>
+            <div className='mb-6 inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800 dark:bg-blue-900/30 dark:text-blue-200'>
+              <Plus className='mr-2 h-4 w-4' />
+              {t('badge')}
+            </div>
+
+            <h2 className='mb-6 text-4xl font-bold md:text-5xl'>
+              <span className='gradient-text'>{t('titleHighlight')}</span> {t('titleSuffix')}
+            </h2>
+            <p className='mx-auto max-w-3xl text-xl text-gray-600 dark:text-gray-300'>
+              {t('description')}
+            </p>
+          </motion.div>
+
+          {/* Chains Grid */}
+          <div className='mb-16 grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6'>
+            {supportedChains.map((chain, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className='card card-hover group relative overflow-hidden text-center'
+              >
+                {/* Background Gradient */}
+                <div
+                  className={`absolute inset-0 bg-linear-to-br ${chain.color} opacity-0 transition-opacity duration-300 group-hover:opacity-10`}
+                />
+
+                {/* Content */}
+                <div className='relative z-10 p-4'>
+                  {/* Chain Logo */}
+                  <div className='relative mx-auto mb-3 h-12 w-12'>
+                    <div
+                      className={`absolute inset-0 bg-linear-to-br ${chain.color} rounded-full opacity-20 blur-sm`}
+                    />
+                    <div className='dark:bg-dark-700 relative flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-white shadow-lg'>
+                      <Image
+                        src={chain.logo}
+                        alt={t('chainLogoAlt', { name: chain.name })}
+                        width={36}
+                        height={36}
+                        className='h-9 w-9 object-contain'
+                      />
+                    </div>
+                  </div>
+
+                  {/* Chain Info */}
+                  <h3 className='group-hover:text-primary-600 dark:group-hover:text-primary-400 mb-1 text-sm font-bold transition-colors duration-200'>
+                    {chain.name}
+                  </h3>
+
+                  <p className='mb-2 text-xs text-gray-500 dark:text-gray-400'>{chain.symbol}</p>
+
+                  <p className='text-xs text-gray-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:text-gray-300'>
+                    {chain.description}
+                  </p>
+                </div>
+
+                {/* Hover Border Effect */}
+                <div
+                  className={`absolute inset-0 border-2 border-transparent group-hover:${chain.color} rounded-xl opacity-0 transition-colors duration-300 group-hover:opacity-50`}
+                />
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Additional Info Section */}
+          <motion.div
+            variants={headerVariants}
+            className='dark:bg-dark-800 rounded-2xl bg-gray-50 p-8'
+          >
+            <div className='grid items-center gap-12 lg:grid-cols-2'>
+              {/* Left Content */}
+              <div>
+                <h3 className='mb-6 text-3xl font-bold'>
+                  {t('moreFeaturesTitle')}{' '}
+                  <span className='gradient-text'>{t('moreFeaturesHighlight')}</span>
+                </h3>
+
+                <p className='mb-6 leading-relaxed text-gray-600 dark:text-gray-300'>
+                  {t('moreFeaturesDescription')}
+                </p>
+
+                <div className='mb-8 space-y-4'>
+                  <div className='flex items-center space-x-3'>
+                    <div className='h-2 w-2 rounded-full bg-green-500'></div>
+                    <span className='text-sm'>
+                      <strong>{t('walletConnectStrong')}</strong> - {t('walletConnectAfter')}
+                    </span>
+                  </div>
+                  <div className='flex items-center space-x-3'>
+                    <div className='h-2 w-2 rounded-full bg-green-500'></div>
+                    <span className='text-sm'>
+                      <strong>{t('accountAbstractionStrong')}</strong> -{' '}
+                      {t('accountAbstractionAfter')}
+                    </span>
+                  </div>
+                  <div className='flex items-center space-x-3'>
+                    <div className='h-2 w-2 rounded-full bg-orange-500'></div>
+                    <span className='text-sm'>
+                      <strong>{t('solanaStrong')}</strong> - {t('solanaAfter')}
+                    </span>
+                  </div>
+                </div>
+
+                <Link
+                  href='https://docs.google.com/spreadsheets/d/1GUqGeV4hCwjKlxazY1vPY52owrEqXQ1UTchOKfkyS7c'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 inline-flex items-center font-medium transition-colors duration-200'
+                >
+                  {t('viewFullList')}
+                  <ExternalLink className='ml-2 h-4 w-4' />
+                </Link>
+              </div>
+
+              {/* Right Content - Visual */}
+              <div className='relative'>
+                <div className='grid grid-cols-3 gap-4'>
+                  {supportedChains.slice(0, 9).map((chain, index) => (
+                    <motion.div
+                      key={index}
+                      className='dark:bg-dark-700 flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-white shadow-lg'
+                      animate={{
+                        y: [0, -10, 0],
+                        rotate: [0, 5, 0],
+                      }}
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        delay: index * 0.2,
+                        ease: 'easeInOut',
+                      }}
+                    >
+                      <Image
+                        src={chain.logo}
+                        alt={t('chainLogoAlt', { name: chain.name })}
+                        width={40}
+                        height={40}
+                        className='h-10 w-10 object-contain'
+                      />
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* Background Glow */}
+                <div className='from-primary-500/20 absolute inset-0 -z-10 rounded-full bg-linear-to-r to-blue-500/20 blur-3xl' />
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  )
+}

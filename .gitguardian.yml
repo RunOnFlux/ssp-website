@@ -1,0 +1,8 @@
+version: 2
+
+secret:
+  ignored_paths:
+    # i18n translation files mirror the canonical en.json strings;
+    # password-related UI labels (e.g. "newPasswordLabel", "Nueva contraseña")
+    # trip GitGuardian's Generic Password detector even though no secret is present.
+    - 'src/messages/*.json'

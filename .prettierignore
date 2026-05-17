@@ -42,4 +42,16 @@ Thumbs.db
 coverage/
 
 # TypeScript build info
-*.tsbuildinfo 
+*.tsbuildinfo
+
+# Long-form planning docs are hand-formatted; prettier rewraps prose.
+docs/superpowers/
+
+# Seed content articles use intentional formatting for AI agent surface
+content/
+
+# Imported third-party datasets preserve their upstream formatting
+src/constants/glossary/cmc.json
+
+# Co-located agent.md files served verbatim via Accept: text/markdown
+**/agent.md 

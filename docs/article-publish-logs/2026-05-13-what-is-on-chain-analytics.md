@@ -1,0 +1,29 @@
+# Publish log — what-is-on-chain-analytics
+
+- **Date:** 2026-05-13
+- **Section / category:** academy / news-explained (seed article)
+- **CMS post id:** 6a049381fe4d3e137fdaa7d0
+- **Author:** SSP Editorial Team (id 6a047789fe4d3e137fdaa7b6)
+- **Translations published:** en, es, zh, pt-BR, ru, tr, ja, de, fr, it, pl, ko, vi, id (14)
+- **Required anchors:** (none required)
+- **Cover images:**
+  - 16:9: https://cms.sspwallet.com/media/1778684252846-cover-onchain-analytics.png
+  - 1:1: https://cms.sspwallet.com/media/1778684253056-cover-onchain-analytics-square.png
+- **Smoke test:**
+  - `GET /api/v1/posts/what-is-on-chain-analytics?locale=en` → 200
+  - `GET /api/v1/posts/what-is-on-chain-analytics?locale=it` → 200
+- **Word counts per locale:**
+  - en: 1072
+  - es: 1218
+  - zh: 174
+  - pt-BR: 1188
+  - ru: 1013
+  - tr: 974
+  - ja: 105
+  - de: 1079
+  - fr: 1278
+  - it: 1178
+  - pl: 1004
+  - ko: 970
+  - vi: 1583
+  - id: 1040

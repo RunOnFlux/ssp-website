@@ -120,4 +120,10 @@ next-env.d.ts
 .turbo
 
 # Contentlayer
-.contentlayer/ 
+.contentlayer/
+
+# Local git worktrees (superpowers/brainstorming workflow)
+.worktrees/
+
+# Glossary build script cache
+.glossary-cache/

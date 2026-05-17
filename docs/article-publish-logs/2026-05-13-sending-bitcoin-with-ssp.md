@@ -1,0 +1,30 @@
+# Publish log — sending-bitcoin-with-ssp
+
+- **Date:** 2026-05-13
+- **Section / category:** academy / how-to
+- **CMS post id:** 6a048e8ffe4d3e137fdaa7ca
+- **Author:** SSP Editorial Team (id 6a047789fe4d3e137fdaa7b6)
+- **Translations published:** en, es, zh, pt-BR, ru, tr, ja, de, fr, it, pl, ko, vi, id (14)
+- **Required anchors verified in English body:** #walletconnect
+- **Cover images:**
+  - 16:9: https://cms.sspwallet.com/media/1778682992988-cover-sending-btc.png
+  - 1:1: https://cms.sspwallet.com/media/1778682993198-cover-sending-btc-square.png
+- **Smoke test:**
+  - `GET /api/v1/posts/sending-bitcoin-with-ssp?locale=en` → 200
+  - `GET /api/v1/posts/sending-bitcoin-with-ssp?locale=vi` → 200
+  - Anchor ids in English body: walletconnect
+- **Word counts per locale:**
+  - en: 1128
+  - es: 1255
+  - zh: 267
+  - pt-BR: 1251
+  - ru: 1020
+  - tr: 932
+  - ja: 314
+  - de: 1118
+  - fr: 1281
+  - it: 1174
+  - pl: 1026
+  - ko: 980
+  - vi: 1512
+  - id: 1050

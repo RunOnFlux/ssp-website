@@ -1,0 +1,1871 @@
+{
+  "Common": {
+    "skipToContent": "跳至内容",
+    "loading": "加载中…",
+    "error": "出现错误。",
+    "retry": "重试",
+    "readMore": "阅读更多",
+    "breadcrumbHome": "主页",
+    "breadcrumbAriaLabel": "导航路径",
+    "websiteAriaLabel": "网站",
+    "notFoundTitle": "未找到页面",
+    "notFoundDescription": "你查找的页面不存在或已被移动。",
+    "goHome": "返回首页",
+    "errorTitle": "出错了",
+    "errorDescription": "发生了意外错误。请尝试刷新页面或返回首页。",
+    "tryAgain": "重试",
+    "translationPendingBanner": "本文暂无翻译 — 显示英文版本。",
+    "localeBadge": {
+      "en": "EN",
+      "es": "ES",
+      "zh": "中",
+      "pt-BR": "PT",
+      "ru": "RU",
+      "tr": "TR",
+      "ja": "日",
+      "de": "DE",
+      "fr": "FR",
+      "it": "IT",
+      "pl": "PL",
+      "ko": "한",
+      "vi": "VI",
+      "id": "ID"
+    }
+  },
+  "Header": {
+    "home": "主页",
+    "enterprise": "企业版",
+    "features": "功能",
+    "newsroom": "新闻中心",
+    "academy": "学院",
+    "guide": "指南",
+    "support": "支持",
+    "contact": "联系",
+    "more": "更多",
+    "download": "下载",
+    "toggleTheme": "切换主题",
+    "toggleMenu": "切换菜单",
+    "selectLanguage": "选择语言",
+    "learn": "学习",
+    "series": "系列",
+    "learnGlossary": "术语表",
+    "learnAcademyDescription": "按分类整理的长篇文章",
+    "learnSeriesDescription": "多章节系统学习路径",
+    "learnGlossaryDescription": "加密货币与 SSP 术语，2,000+ 条目",
+    "learnNewsroomDescription": "最新公告与产品更新"
+  },
+  "Footer": {
+    "navigation": "导航",
+    "product": "产品",
+    "learn": "学习",
+    "community": "社区",
+    "legal": "法律",
+    "supportedChains": "支持的区块链",
+    "rssFeed": "RSS 订阅",
+    "cookieSettings": "Cookie 设置",
+    "rights": "保留所有权利。",
+    "builtForWeb3": "用 ❤️ 为 Web3 而打造",
+    "poweredByFlux": "由 Flux 提供支持",
+    "brandDescription": "安全、简洁、强大。SSP 是一款开创性的开源、自托管、BIP48 多重签名浏览器钱包，支持多条区块链并具备账户抽象功能。",
+    "links": {
+      "home": "主页",
+      "features": "功能",
+      "guide": "指南",
+      "support": "支持",
+      "contact": "联系",
+      "enterprise": "企业版",
+      "download": "下载",
+      "mobileSspKey": "移动版 SSP Key",
+      "sspEnterprise": "SSP Enterprise",
+      "securityAudits": "安全审计",
+      "documentation": "文档",
+      "github": "GitHub",
+      "discord": "Discord",
+      "twitter": "Twitter",
+      "medium": "Medium",
+      "youtube": "YouTube",
+      "helpTranslate": "协助翻译",
+      "newsroom": "新闻中心",
+      "academy": "学院",
+      "multisigExplained": "多重签名详解",
+      "security": "安全",
+      "gettingStarted": "快速上手",
+      "rssFeed": "RSS 订阅",
+      "privacyPolicy": "隐私政策",
+      "termsOfService": "服务条款",
+      "cookiePolicy": "Cookie 政策"
+    },
+    "fluxAlt": "Flux"
+  },
+  "Home": {
+    "metaTitle": "SSP Wallet — 安全、简单、强大的加密钱包",
+    "metaDescription": "真正的 2-of-2 多重签名加密钱包。每笔交易都需要浏览器扩展和移动设备。支持 Bitcoin、Ethereum 及 15+ 条区块链。",
+    "hero": {
+      "auditedBadge": "已通过 Halborn 安全审计",
+      "titleSecure": "安全",
+      "titleSimple": "简单",
+      "titlePowerful": "强大",
+      "description": "采用 BIP48 派生的真正 2-of-2 多重签名钱包,每笔交易都需要您的浏览器扩展和移动设备。支持 WalletConnect v2、基于 Schnorr 签名的 ERC-4337 账户抽象以及 15+ 条区块链。",
+      "featureMultisig": "真正的 2-of-2 多重签名",
+      "featureBlockchains": "15+ 条区块链",
+      "featureZeroStorage": "零数据存储",
+      "getStarted": "立即开始",
+      "watchDemo": "观看演示",
+      "statSupportedChains": "支持的链",
+      "statActiveUsers": "活跃用户",
+      "statSecurityAudits": "安全审计",
+      "animationAlt": "SSP Wallet 动画",
+      "closeModal": "关闭弹窗",
+      "videoUnsupported": "您的浏览器不支持视频标签。"
+    },
+    "features": {
+      "titlePart1": "为什么选择",
+      "titleHighlight": "SSP Wallet",
+      "titleSuffix": "?",
+      "description": "在一款全面的加密钱包解决方案中,体验安全、简单与强大的完美结合。",
+      "items": {
+        "0": {
+          "title": "安全的 2-of-2 多重签名",
+          "description": "先进的 BIP48 派生与真正的双因素认证,要求每笔交易都同时由浏览器扩展和移动设备签名。通过双设备保护实现最高安全性。"
+        },
+        "1": {
+          "title": "既简单又先进",
+          "description": "复杂的多资产多重签名技术变得简单。先进的 BIP48 安全性和账户抽象通过任何人都能使用的直观界面呈现。"
+        },
+        "2": {
+          "title": "强大的 dApp 交互",
+          "description": "通过 WalletConnect v2 (Reown) 支持、EIP-712 消息签名以及覆盖所有 EVM 链和 DeFi 协议的实时通信,连接到数千个 dApp。"
+        },
+        "3": {
+          "title": "多链支持",
+          "description": "支持 15+ 条区块链,包括 Bitcoin、Ethereum、Polygon、BSC、Avalanche、Base 等。首款在 Ethereum 上原生支持 Schnorr 多重签名账户抽象 (ERC-4337) 的钱包,无需 EOA 即可启用智能合约钱包。"
+        },
+        "4": {
+          "title": "零数据存储",
+          "description": "完全自托管,无任何服务器端数据存储。私钥、助记词和交易仅保存在您的设备上,采用军工级 AES-GCM 加密和设备指纹,实现最高安全性与隐私性。"
+        },
+        "5": {
+          "title": "买入、卖出与兑换",
+          "description": "可直接通过信用卡或银行转账购买加密货币,将加密货币换回法币,并在钱包内无缝兑换不同的加密货币。由聚合多家服务商的引擎驱动,提供最佳费率和选项。"
+        }
+      },
+      "futureTitlePart1": "为",
+      "futureTitleHighlight": "未来金融",
+      "highlights": {
+        "0": {
+          "title": "高级安全",
+          "description": "军工级加密和多重签名技术保护您的资产"
+        },
+        "1": {
+          "title": "顺畅体验",
+          "description": "直观的界面让加密货币人人皆可使用"
+        },
+        "2": {
+          "title": "开源",
+          "description": "透明、经审计的代码,值得您信任与验证"
+        }
+      },
+      "demoTitle": "试用 SSP Wallet 互动演示",
+      "demoDescription": "体验完整的设置与交易流程",
+      "launchDemo": "启动互动演示",
+      "demoFooter": "无需安装 • 3 分钟体验"
+    },
+    "security": {
+      "badge": "安全优先",
+      "titleHighlight": "银行级安全",
+      "titleSuffix": "值得信赖",
+      "description": "我们的安全性由领先的安全公司独立验证和审计。您的资产受到军工级加密和前沿技术的保护。",
+      "items": {
+        "0": {
+          "title": "已通过安全审计",
+          "description": "由 Halborn 对所有关键组件进行全面的安全审计",
+          "highlight": "Halborn 认证"
+        },
+        "1": {
+          "title": "BIP48 多重签名",
+          "description": "采用 BIP48 派生的真正 2-of-2 多重签名,具备设备指纹与 AES-GCM 加密",
+          "highlight": "密码学安全"
+        },
+        "2": {
+          "title": "开源且确定性构建",
+          "description": "代码透明且采用确定性构建——任何人都可验证所分发的钱包与源代码完全一致",
+          "highlight": "完全可验证"
+        },
+        "3": {
+          "title": "零数据存储",
+          "description": "基于 PBKDF2 的加密结合设备指纹,确保所有本地存储数据极其安全。任何信息都不会上传至服务器。",
+          "highlight": "仅自托管"
+        }
+      },
+      "auditTitlePart1": "经独立机构",
+      "auditTitleHighlight": "安全审计",
+      "auditDescription": "SSP 生态系统的所有关键组件均已通过著名区块链安全公司 Halborn 的严格安全审计。我们对透明度的承诺意味着所有审计报告均公开可查。",
+      "indicators": {
+        "0": "行业领先的最佳实践",
+        "1": "按最高安全标准设计",
+        "2": "持续的安全监测"
+      },
+      "auditedByHalborn": "由 Halborn 审计",
+      "recentReportsTitle": "近期审计报告",
+      "viewReport": "查看报告",
+      "reports": {
+        "0": {
+          "title": "SSP Wallet、Key 与 Relay 审计",
+          "date": "2025 年 3 月",
+          "status": "已完成"
+        },
+        "1": {
+          "title": "智能合约审计",
+          "date": "2025 年 2 月",
+          "status": "已完成"
+        },
+        "2": {
+          "title": "SDK 安全审计",
+          "date": "2025 年 2 月",
+          "status": "已完成"
+        }
+      },
+      "bugBountyPrefix": "安全漏洞赏金:",
+      "bugBountyText": "我们对负责任地披露安全漏洞提供奖励。请帮助我们让 SSP 更加安全。",
+      "lavaMoatTitleHighlight": "LavaMoat",
+      "lavaMoatTitleSuffix": "运行时保护",
+      "lavaMoatDescription": "SSP Wallet 集成了 LavaMoat,这是一个抵御供应链攻击的安全框架。LavaMoat 将每个依赖封装在独立的隔间中,只授予其所需的访问权限,防止恶意代码窃取机密或破坏您的钱包。",
+      "lavaIndicators": {
+        "0": "包封装在 SES 隔间中",
+        "1": "每个包对平台的访问受限",
+        "2": "防止修改 JavaScript 原始对象"
+      },
+      "learnLavaMoat": "了解 LavaMoat",
+      "protectionLayersTitle": "保护层",
+      "layers": {
+        "0": {
+          "title": "包隔间",
+          "description": "每个包在自己的隔间中运行,防止对敏感资源的未授权访问"
+        },
+        "1": {
+          "title": "策略执行",
+          "description": "策略文件精确定义每个包可以访问的资源"
+        },
+        "2": {
+          "title": "供应链防御",
+          "description": "防御被攻陷的依赖尝试执行恶意操作"
+        },
+        "3": {
+          "title": "运行时监测",
+          "description": "持续执行确保安全策略在运行时始终生效"
+        }
+      },
+      "deterministicTitleHighlight": "确定性构建",
+      "deterministicTitleSuffix": "建立终极信任",
+      "deterministicDescription": "SSP Wallet 采用基于 Docker 的确定性构建。这意味着相同的源代码会生成相同的二进制文件,任何人都可独立验证您下载的钱包与我们公开源代码所构建的版本完全一致。",
+      "detIndicators": {
+        "0": "基于 Docker 的隔离构建环境",
+        "1": "经密码学签名的发布校验和",
+        "2": "消除供应链攻击的渠道"
+      },
+      "learnVerify": "了解如何验证",
+      "verificationProcessTitle": "验证流程",
+      "verifySteps": {
+        "0": {
+          "title": "下载发布文件",
+          "description": "从 GitHub 发布页获取扩展文件、SHA256SUMS 与 GPG 签名"
+        },
+        "1": {
+          "title": "验证 GPG 签名",
+          "description": "从 OpenPGP 密钥服务器导入我们的公钥并验证签名后的校验和"
+        },
+        "2": {
+          "title": "验证文件哈希",
+          "description": "确认下载的文件与签名后的校验和相匹配"
+        },
+        "3": {
+          "title": "可选:复现构建",
+          "description": "高级用户可从源代码构建并验证输出完全一致"
+        }
+      }
+    },
+    "enterpriseBand": {
+      "badge": "面向团队与企业",
+      "fluxImageAlt": "Flux Foundation",
+      "titlePart1": "在为团队管理资金?",
+      "titleHighlight": "了解 SSP Enterprise。",
+      "description": "您的团队持有密钥。您的团队进行签名。SSP Enterprise 处理协调工作——提案、策略以及您 CFO 真正想要的审计轨迹。",
+      "highlights": {
+        "0": {
+          "title": "M-of-N 多重签名金库",
+          "description": "可配置任意签名阈值——2-of-3、3-of-5,或任何符合您治理结构的组合。"
+        },
+        "1": {
+          "title": "交易策略引擎",
+          "description": "支出限额、地址白名单、时间锁、管理员审批——14+ 项控制。"
+        },
+        "2": {
+          "title": "无托管。无 MPC。",
+          "description": "企业级自托管。每位签名者使用双设备签名,链上可验证。"
+        }
+      },
+      "fluxEyebrow": "Flux Foundation",
+      "fluxBefore": "使用 SSP Enterprise 来保护",
+      "fluxStrong": "Fusion 桥",
+      "fluxAfter": "并通过多方签名管理基金会金库。",
+      "fluxCta": "阅读案例研究",
+      "explore": "探索 SSP Enterprise",
+      "launchApp": "启动 Enterprise 应用"
+    },
+    "supportedChains": {
+      "badge": "多链支持",
+      "titleHighlight": "15+ 条区块链",
+      "titleSuffix": "尽在一个钱包",
+      "description": "管理从 Bitcoin 到 Ethereum 及更多的所有加密资产。SSP Wallet 提供对多个区块链网络的统一访问,支持 WalletConnect v2 用于 dApp,并支持离线 QR 码交易功能。",
+      "chainDescriptions": {
+        "BTC": "最早的加密货币",
+        "ETH": "智能合约平台",
+        "LTC": "数字白银",
+        "ZEC": "注重隐私",
+        "RVN": "资产转移区块链",
+        "DOGE": "属于人民的加密货币",
+        "BCH": "点对点电子现金",
+        "FLUX": "去中心化计算",
+        "MATIC": "Ethereum 扩容",
+        "BSC": "快速、低费用的交易",
+        "AVAX": "高性能区块链",
+        "BASE": "Coinbase L2 解决方案"
+      },
+      "chainLogoAlt": "{name} 图标",
+      "moreFeaturesTitle": "更多功能",
+      "moreFeaturesHighlight": "即将推出",
+      "moreFeaturesDescription": "我们根据社区需求和技术进步,持续为 SSP Wallet 扩展新的区块链网络与高级安全功能。",
+      "walletConnectStrong": "WalletConnect v2 (Reown)",
+      "walletConnectAfter": "连接到数千个 dApp",
+      "accountAbstractionStrong": "账户抽象 (ERC-4337)",
+      "accountAbstractionAfter": "智能合约钱包",
+      "solanaStrong": "Solana 支持",
+      "solanaAfter": "即将推出多重签名",
+      "viewFullList": "查看完整资产列表"
+    },
+    "cta": {
+      "badge": "准备好开始了吗?",
+      "titlePart1": "加入",
+      "titleHighlight": "加密货币的未来",
+      "description": "立即下载 SSP Wallet,体验下一代加密货币管理,享受无与伦比的安全性与简便性。",
+      "downloadNow": "立即下载",
+      "learnMore": "了解更多",
+      "options": {
+        "0": {
+          "title": "SSP Wallet - 浏览器扩展",
+          "description": "现已上线 - Chrome、Brave、Firefox"
+        },
+        "1": {
+          "title": "SSP Key - 移动端 2FA 应用",
+          "description": "用于审批交易等更多操作"
+        },
+        "2": {
+          "title": "SSP Enterprise - 面向团队",
+          "description": "面向组织的 M-of-N 多重签名金库。现已上线。"
+        }
+      },
+      "availableNow": "现已上线",
+      "comingSoon": "即将推出",
+      "statActiveUsers": "活跃用户",
+      "statAssetsSecured": "受保护资产",
+      "statBlockchainsSupported": "支持的区块链",
+      "indicatorAudited": "已通过安全审计",
+      "indicatorOpenSource": "开源",
+      "indicatorCommunity": "由社区驱动"
+    }
+  },
+  "Newsroom": {
+    "title": "新闻中心",
+    "description": "SSP 的最新新闻、产品更新与公告。",
+    "metaTitle": "新闻中心 — 最新新闻与更新",
+    "metaDescription": "及时了解 SSP 的最新新闻、产品更新与公告。",
+    "filterAll": "全部",
+    "loadMore": "加载更多",
+    "noArticles": "暂无符合此筛选条件的文章。",
+    "backToNewsroom": "返回新闻中心",
+    "shareTitle": "分享本文",
+    "shareTwitter": "分享到 Twitter",
+    "shareFacebook": "分享到 Facebook",
+    "shareTelegram": "分享到 Telegram",
+    "shareReddit": "分享到 Reddit",
+    "shareCopy": "复制链接",
+    "shareCopied": "链接已复制！",
+    "tableOfContents": "本页内容",
+    "relatedArticles": "相关文章",
+    "minRead": "阅读 {minutes} 分钟",
+    "byAuthor": "作者：{author}",
+    "publishedOn": "发布于 {date}",
+    "updatedOn": "更新于 {date}"
+  },
+  "Academy": {
+    "title": "SSP 学院",
+    "description": "通过指南、教程和深度解析，帮助你掌握 SSP 的自托管。",
+    "metaTitle": "SSP 学院 — 学习加密自托管",
+    "metaDescription": "关于 SSP、多重签名、安全、DeFi 等的指南、教程与深入解读。",
+    "browseByTopic": "按主题浏览",
+    "learningPaths": "学习路径",
+    "viewAllSeries": "查看全部",
+    "latestArticles": "最新文章",
+    "comingSoon": "新文章即将上线 — 请稍后再来。",
+    "categoryEmpty": "新文章即将上线。在此期间，请浏览相关主题：",
+    "backToCategory": "返回{category}",
+    "articleCount": "{count, plural, =0 {暂无文章} =1 {1 篇文章} other {# 篇文章}}",
+    "partsCount": "{count, plural, =0 {暂无章节} =1 {1 章} other {# 章}}",
+    "difficulty": {
+      "beginner": "入门",
+      "intermediate": "进阶",
+      "advanced": "高级"
+    },
+    "atAGlance": "概览",
+    "seriesPart": "第 {order} 部分，共 {total} 部分",
+    "previousPart": "上一部分",
+    "nextPart": "下一部分",
+    "seriesMetaDescription": "结构化的多部分系列，引导你从入门到进阶，掌握 SSP 的加密自托管。",
+    "seriesIndexDescription": "结构化的多部分系列，引导你从入门到进阶。",
+    "seriesEmpty": "学习路径即将上线。在此期间，请按主题浏览文章：",
+    "backToAcademy": "返回学院",
+    "seriesPartsEmpty": "章节即将上线。",
+    "viewAllLearningPaths": "查看所有学习路径",
+    "categoryIntros": {
+      "multisig": "多重签名钱包需要多方签名才能授权交易。SSP 在每一次签名操作上都强制执行 2/2 多重签名：浏览器扩展与移动端 SSP Key 应用必须同时批准。本页汇集了深度文章，解释该模型的运作方式、能阻止哪些攻击，以及它的边界在哪里。",
+      "getting-started": "刚接触加密世界，或在长时间停顿后重新回归？请从这里开始。这些指南介绍钱包、地址、交易、Gas、内存池与最终性——在你接触真实资金之前需要掌握的术语。",
+      "security": "自托管之所以困难，是因为攻击手段层出不穷。本合集梳理了真正会影响用户的威胁：钓鱼页面、伪造的客服私信、恶意 dApp、丢失的助记词，以及 SSP 的 2/2 模型如何化解其中大多数风险。",
+      "how-to": "面向 SSP 用户日常操作的图文演练：跨链发送交易、通过 WalletConnect 连接 dApp、兑换代币，以及在设备丢失后恢复访问。",
+      "coin-guides": "SSP 支持的每一种币和每一条链都有其特性——UTXO 与账户模型、原生多重签名与 ERC-4337、手续费机制、最终性时间。本合集逐一进行解析。",
+      "defi": "SSP 在 EVM 链上通过 ERC-4337 账户抽象支持 DeFi。本类文章介绍 AA 是什么、哪些 dApp 可在多重签名钱包中安全使用，以及 SSP 如何在你参与 DeFi 协议时仍保持控制权。",
+      "news-explained": "超越头条：真正影响自托管用户的监管变化、交易所事件、协议事故与标准更新——理性解读，不夸大其词。"
+    }
+  },
+  "Author": {
+    "title": "{name}",
+    "postsBy": "{name} 的文章",
+    "noPosts": "暂无文章。",
+    "metaTitle": "{name} — SSP 作者",
+    "metaDescriptionFallback": "{name} 的文章",
+    "notFoundTitle": "未找到作者",
+    "breadcrumbLabel": "作者"
+  },
+  "Contact": {
+    "metaTitle": "联系我们 - SSP Wallet | 与我们取得联系",
+    "metaDescription": "联系 SSP Wallet 团队。获取支持、咨询问题或洽谈合作。加入我们的 Discord 社区或直接与我们联系。",
+    "breadcrumbLabel": "联系我们",
+    "heroBadge": "联系我们",
+    "heroTitle": "与我们取得联系",
+    "heroDescription": "对 SSP Wallet 有疑问？需要支持或希望洽谈合作？加入我们的社区或直接联系我们——我们随时为你提供帮助。",
+    "methodsTitle": "联系方式",
+    "methodsSubtitle": "选择最适合你需求的联系方式",
+    "methods": {
+      "supportTickets": {
+        "title": "支持工单",
+        "description": "通过我们的工单系统直接获取技术问题的帮助",
+        "responseTime": "24 小时内回复",
+        "action": "创建工单"
+      },
+      "discord": {
+        "title": "Discord 社区",
+        "description": "加入我们活跃的社区，获得实时支持与交流",
+        "responseTime": "活跃社区",
+        "action": "加入 Discord"
+      },
+      "github": {
+        "title": "GitHub 支持",
+        "description": "报告 Bug、提出功能建议或参与开发贡献",
+        "contact": "GitHub Issues 与讨论",
+        "responseTime": "由社区驱动",
+        "action": "访问 GitHub"
+      }
+    },
+    "resourcesTitle": "需要立即帮助？",
+    "resourcesSubtitle": "查看我们的自助资源以获得即时协助",
+    "resources": {
+      "supportCenter": {
+        "title": "支持中心",
+        "description": "完整的常见问题与故障排除指南"
+      },
+      "setupGuide": {
+        "title": "设置指南",
+        "description": "分步安装说明"
+      },
+      "documentation": {
+        "title": "文档",
+        "description": "完整的技术文档"
+      }
+    },
+    "formTitle": "向我们发送消息",
+    "formSubtitle": "填写下方表单，我们会尽快回复你",
+    "formTipPrefix": "提示：",
+    "formTipBefore": "如需更快的技术支持，请考虑使用我们的",
+    "formTipLinkSupport": "支持工单系统",
+    "formTipBetween": "或通过以下方式联系我们：",
+    "form": {
+      "fullNameLabel": "全名 *",
+      "fullNamePlaceholder": "你的全名",
+      "emailLabel": "电子邮箱 *",
+      "emailPlaceholder": "your.email@example.com",
+      "companyLabel": "公司（可选）",
+      "companyPlaceholder": "你的公司名称",
+      "typeLabel": "咨询类型 *",
+      "typeOptions": {
+        "general": "一般咨询",
+        "support": "技术支持",
+        "partnership": "合作",
+        "security": "安全问题",
+        "media": "媒体与新闻",
+        "business": "业务拓展"
+      },
+      "subjectLabel": "主题 *",
+      "subjectPlaceholder": "你的消息主题（简短）",
+      "messageLabel": "消息 *",
+      "messagePlaceholder": "请提供你咨询的详细信息……",
+      "submitting": "正在发送消息……",
+      "submit": "发送消息",
+      "errorFallback": "消息发送失败。请重试。",
+      "errorGeneric": "消息发送失败",
+      "successTitle": "感谢你！",
+      "successDescription": "你的消息已成功发送。我们会尽快回复你。",
+      "successAgain": "再发送一条消息"
+    },
+    "communityTitle": "关注我们的社区",
+    "communitySubtitle": "及时获取最新消息，与其他用户交流，并获得社区支持",
+    "social": {
+      "github": "开源开发与贡献",
+      "discord": "社区交流与实时支持",
+      "twitter": "最新动态、新闻与公告"
+    }
+  },
+  "Download": {
+    "metaTitle": "下载 - SSP Wallet | 获取你的安全加密钱包",
+    "metaDescription": "下载浏览器版 SSP Wallet。安全、简单、强大的加密钱包，配备多重签名安全与移动端认证。",
+    "ogAlt": "下载 SSP Wallet — 安全的加密钱包",
+    "breadcrumbLabel": "下载",
+    "heroBadge": "下载 SSP Wallet",
+    "heroTitle": "开始使用 SSP Wallet",
+    "heroDescription": "请下载两个组件以获得完整的安全保障：用于钱包管理的浏览器扩展，以及用于交易认证的手机应用。",
+    "stepsTitle": "两步配置流程",
+    "stepsSubtitle": "两个组件均为安全的 2-of-2 多重签名系统所必需",
+    "stepLabel": "第 {index} 步",
+    "options": {
+      "chrome": {
+        "title": "SSP Wallet",
+        "subtitle": "浏览器扩展",
+        "description": "可安装于 Chrome、Brave、Firefox 及其他基于 Chromium 的浏览器",
+        "features": {
+          "0": "多重签名安全",
+          "1": "支持 WalletConnect v2",
+          "2": "跨链兼容"
+        },
+        "cta": "下载扩展"
+      },
+      "mobile": {
+        "title": "SSP Key",
+        "subtitle": "移动端 2FA 应用",
+        "description": "面向 iOS 与 Android 的必备配套应用，提供安全的身份认证",
+        "features": {
+          "0": "2FA 身份认证",
+          "1": "二维码同步",
+          "2": "安全密钥存储"
+        },
+        "cta": "查看移动端应用"
+      }
+    },
+    "browsersTitle": "支持的浏览器",
+    "browsersSubtitle": "SSP Wallet 在所有主流浏览器上都能流畅运行",
+    "mobileBadge": "SSP Key 移动应用",
+    "mobileTitle": "完成你的安全配置",
+    "mobileDescription": "SSP Key 提供所有交易所需的第二个签名。请将其安装到你的移动设备以完成 2-of-2 多重签名安全配置。",
+    "mobileEasySetupTitle": "轻松配置",
+    "mobileEasySetupDescription": "扫描二维码即可立即将你的移动设备与浏览器钱包同步",
+    "mobileSecurityTitle": "最高安全性",
+    "mobileSecurityDescription": "即便其中一台设备被攻破，你的资金依然安全",
+    "googlePlayLabel": "可在",
+    "appStoreLabel": "下载于",
+    "mobileAppAlt": "SSP Key 移动应用",
+    "howTitle": "工作原理",
+    "howSubtitle": "了解 2-of-2 多重签名安全模型",
+    "howSteps": {
+      "1": {
+        "title": "安装扩展",
+        "description": "将 SSP Wallet 添加到浏览器，并使用安全的助记词创建你的钱包"
+      },
+      "2": {
+        "title": "设置移动应用",
+        "description": "在手机上安装 SSP Key，并通过二维码与浏览器钱包同步"
+      },
+      "3": {
+        "title": "安全交易",
+        "description": "每一笔交易都需要浏览器和移动设备双重批准"
+      }
+    },
+    "ctaTitle": "准备好开始了吗？",
+    "ctaSubtitle": "按照我们的分步指南配置你的安全加密钱包",
+    "ctaSetupGuide": "查看设置指南",
+    "ctaSupport": "获取支持"
+  },
+  "Features": {
+    "metaTitle": "功能 - SSP Wallet | 先进的加密安全与多链支持",
+    "metaDescription": "真正的 2-of-2 多重签名、WalletConnect v2、15+ 区块链、法币出入金、加密交换、CSV 导出与账户抽象。了解 SSP Wallet 全部功能。",
+    "breadcrumbLabel": "功能",
+    "hero": {
+      "badge": "高级功能",
+      "titleHighlight": "强大功能",
+      "titleSuffix": "为现代加密而生",
+      "description": "了解使 SSP Wallet 成为业界最先进加密钱包的尖端技术与安全功能。",
+      "securityFirst": "安全优先",
+      "lightningFast": "极速响应",
+      "selfCustody": "自托管"
+    },
+    "security": {
+      "titleHighlight": "安全",
+      "titleSuffix": "功能",
+      "description": "你的加密资产安全是我们的首要任务。每项功能都遵循安全优先原则进行设计。",
+      "items": {
+        "0": {
+          "title": "真正的 2-of-2 多重签名保护",
+          "description": "革命性的 BIP48 多重签名要求浏览器与移动设备同时签名。无单点故障——仅靠一台设备无法被攻破。"
+        },
+        "1": {
+          "title": "Halborn 安全审计",
+          "description": "由主流协议信赖的领先区块链安全公司 Halborn 进行专业审计。已完成全面渗透测试与代码审查。"
+        },
+        "2": {
+          "title": "零数据存储策略",
+          "description": "严格的不在服务器存储任何数据的策略，消除中心化攻击面。你的私钥、交易和个人数据从不离开你的设备。"
+        },
+        "3": {
+          "title": "完全开源且透明",
+          "description": "代码库完全透明且支持确定性构建，便于安全研究人员与开发者独立验证构建完整性。没有隐藏后门或专有黑盒。"
+        }
+      }
+    },
+    "technical": {
+      "titleHighlight": "技术",
+      "titleSuffix": "创新",
+      "description": "采用尖端技术构建，面向去中心化金融的未来。",
+      "items": {
+        "0": {
+          "title": "多链支持（15+）",
+          "description": "原生支持 Bitcoin、Ethereum、Polygon、BSC、Avalanche、Base、Arbitrum、Optimism 等，并提供统一的资产管理。"
+        },
+        "1": {
+          "title": "内置加密交易",
+          "description": "通过集成 DEX 聚合器实现无缝加密交换，并支持法币出入金，用支付卡买卖加密资产。"
+        },
+        "2": {
+          "title": "账户抽象（ERC-4337）",
+          "description": "首个在 Ethereum 上原生采用 Schnorr 多重签名账户抽象的钱包，支持无 Gas 交易与智能合约钱包。"
+        },
+        "3": {
+          "title": "真正的 2-of-2 多重签名安全",
+          "description": "革命性的 BIP48 双设备安全：浏览器扩展与移动应用。每笔交易都需要两台设备共同确认——终极保护。"
+        },
+        "4": {
+          "title": "经过安全审计且开源",
+          "description": "代码完全透明、可验证，并由 Halborn 安全专家进行专业审计。开源并具备企业级安全标准。"
+        },
+        "5": {
+          "title": "高级 dApp 集成",
+          "description": "支持 WalletConnect v2、EIP-712 消息签名与全面的浏览器集成，实现与 dApp 的无缝连接。"
+        }
+      }
+    },
+    "comparison": {
+      "titlePrefix": "为什么选择",
+      "titleHighlight": "SSP Wallet",
+      "titleSuffix": "？",
+      "description": "对比 SSP Wallet 与其他加密资产存储方式，看看其中的差异。",
+      "columns": {
+        "feature": "功能",
+        "ssp": "SSP Wallet",
+        "selfCustody": "自托管钱包",
+        "custodial": "托管钱包",
+        "hardware": "硬件钱包",
+        "exchange": "加密交易所"
+      },
+      "values": {
+        "limited": "有限",
+        "some": "部分",
+        "varies": "不同",
+        "rare": "少见",
+        "na": "不适用"
+      },
+      "rows": {
+        "0": {
+          "feature": "真正的 2-of-2 多重签名",
+          "description": "BIP48 真多重签名，要求双设备共同签名"
+        },
+        "1": {
+          "feature": "内置加密交换",
+          "description": "原生 DEX 集成，实现无缝代币交换"
+        },
+        "2": {
+          "feature": "购买/出售加密资产",
+          "description": "支持支付卡的法币出入金"
+        },
+        "3": {
+          "feature": "自托管控制权",
+          "description": "你拥有并掌控自己的私钥"
+        },
+        "4": {
+          "feature": "移动 2FA 安全",
+          "description": "移动应用作为安全的第二认证因子"
+        },
+        "5": {
+          "feature": "dApp 集成",
+          "description": "支持 WalletConnect v2 和直接 dApp 浏览器"
+        },
+        "6": {
+          "feature": "多链支持（15+）",
+          "description": "Bitcoin、Ethereum、Polygon、BSC、Avalanche 等"
+        },
+        "7": {
+          "feature": "零交易对手风险",
+          "description": "没有平台破产或资产被冻结的风险"
+        },
+        "8": {
+          "feature": "开源",
+          "description": "代码完全透明且可验证"
+        },
+        "9": {
+          "feature": "经过安全审计",
+          "description": "由领先公司进行的专业安全审计"
+        },
+        "10": {
+          "feature": "账户抽象（ERC-4337）",
+          "description": "无 Gas 交易与智能合约钱包"
+        },
+        "11": {
+          "feature": "无单一助记词",
+          "description": "消除单一助记词的安全隐患——采用双设备备份"
+        },
+        "12": {
+          "feature": "易用性",
+          "description": "面向新手与专家的简洁直观界面"
+        },
+        "13": {
+          "feature": "交易速度",
+          "description": "快速的交易签名与区块链交互"
+        },
+        "14": {
+          "feature": "隐私保护",
+          "description": "不收集个人数据，不追踪交易"
+        }
+      },
+      "ctaDownload": "下载 SSP Wallet",
+      "ctaGuide": "查看设置指南",
+      "ctaEnterprise": "面向企业的 SSP"
+    }
+  },
+  "Guide": {
+    "metaTitle": "设置指南 - SSP Wallet | 完整安装说明",
+    "metaDescription": "分步指南，介绍如何安装并配置 SSP Wallet 与 SSP Key。具备多重签名保护的安全加密钱包完整设置说明。",
+    "breadcrumbLabel": "设置指南",
+    "videoJsonLdName": "如何安装 SSP Wallet 与 SSP Key",
+    "videoJsonLdDescription": "完整视频演示：安装 SSP Wallet 浏览器扩展，并同步 SSP Key 移动应用，实现 2-of-2 多重签名安全。",
+    "howToJsonLdName": "如何安装 SSP Wallet 与 SSP Key",
+    "howToJsonLdDescription": "SSP Wallet 浏览器扩展与配套 SSP Key 移动应用的完整安装指南，二者均为 2-of-2 多重签名安全所必需。",
+    "howToSupplyDesktop": "桌面浏览器（Chrome、Brave 或 Firefox）",
+    "howToSupplyMobile": "移动设备（iOS 15.1+ 或 Android 7+）",
+    "heroBadge": "完整设置指南",
+    "heroTitle": "如何安装 SSP Wallet 与 SSP Key",
+    "heroDescriptionPart1": "SSP 需要",
+    "heroDescriptionStrong": "两步配置流程",
+    "heroDescriptionPart2": "：同时安装浏览器扩展与移动应用。两台设备均为保护你加密资产的安全 2-of-2 多重签名系统所必需。",
+    "browserExtensionTitle": "浏览器扩展",
+    "browserExtensionSubtitle": "安装钱包",
+    "mobileKeyTitle": "Mobile Key",
+    "mobileKeySubtitle": "移动认证",
+    "videoTitle": "视频设置指南",
+    "videoSubtitle": "完整演示",
+    "videoDescription": "观看我们的完整视频教程，详细分步演示如何配置 SSP Wallet 与 SSP Key。",
+    "videoUnsupported": "你的浏览器不支持视频标签。",
+    "videoBullet1": "浏览器扩展安装",
+    "videoBullet2": "移动应用配置与同步",
+    "videoBullet3": "安全最佳实践",
+    "stepsTitle": "分步说明",
+    "stepsSubtitle": "按照以下详细说明配置你的安全加密钱包",
+    "important": "重要",
+    "openLink": "打开链接 →",
+    "androidLabel": "Android",
+    "iosLabel": "iOS",
+    "phases": {
+      "0": {
+        "phase": "第一部分",
+        "title": "安装 SSP Wallet",
+        "steps": {
+          "0": {
+            "title": "访问扩展商店",
+            "description": "打开浏览器并访问对应浏览器（Chrome、Firefox、Brave）的 SSP Wallet 扩展页面",
+            "action": "前往扩展页面"
+          },
+          "1": {
+            "title": "安装扩展",
+            "description": "点击「添加到 Chrome/Firefox」或「安装」按钮。会弹出窗口询问是否添加 SSP Wallet，点击「添加」或「安装」以完成安装。",
+            "action": "添加到浏览器"
+          },
+          "2": {
+            "title": "打开钱包",
+            "description": "在浏览器中找到 SSP Wallet 图标并点击。按照提示开始使用。",
+            "action": "启动钱包"
+          },
+          "3": {
+            "title": "创建密码",
+            "description": "创建你的密码。请仔细阅读 SSP Wallet 免责声明并确认同意。",
+            "action": "设置密码"
+          },
+          "4": {
+            "title": "创建钱包",
+            "description": "点击「创建钱包」初始化你的新钱包。",
+            "action": "初始化钱包"
+          },
+          "5": {
+            "title": "备份助记词",
+            "description": "点击「显示钱包助记词」。妥善保存助记词并确认你已完成备份。",
+            "action": "安全备份"
+          },
+          "6": {
+            "title": "完成设置",
+            "description": "点击「创建钱包」完成流程。你的浏览器钱包已就绪！",
+            "action": "完成设置"
+          }
+        }
+      },
+      "1": {
+        "phase": "第二部分",
+        "title": "安装 SSP Key 移动应用",
+        "steps": {
+          "0": {
+            "title": "下载移动应用",
+            "description": "在移动设备上下载 SSP Key 并打开应用。",
+            "action": "安装移动应用"
+          },
+          "1": {
+            "title": "开始同步",
+            "description": "点击「同步密钥」开始配置流程。",
+            "action": "开始同步"
+          },
+          "2": {
+            "title": "设置密钥密码",
+            "description": "设置 SSP Key 密码并确认。然后点击「设置密钥」。",
+            "action": "创建密钥密码"
+          },
+          "3": {
+            "title": "备份密钥助记词",
+            "description": "点击「显示密钥助记词」。妥善保存密钥助记词并确认备份。",
+            "action": "安全备份密钥"
+          },
+          "4": {
+            "title": "完成密钥设置",
+            "description": "点击「设置密钥」。SSP Key 现作为 SSP Wallet 的第二认证因子。",
+            "action": "完成密钥配置"
+          },
+          "5": {
+            "title": "扫描二维码",
+            "description": "点击「扫描代码」将 SSP Key 与 SSP Wallet 同步。扫描浏览器中显示的二维码。",
+            "action": "同步设备"
+          },
+          "6": {
+            "title": "批准同步",
+            "description": "点击「批准同步」并使用密钥密码确认。同步成功后会收到通知。",
+            "action": "完成同步"
+          }
+        }
+      }
+    },
+    "tipsTitle": "安全最佳实践",
+    "tipsSubtitle": "请遵循以下重要安全建议，确保你的钱包安全",
+    "tips": {
+      "0": {
+        "title": "妥善保管你的助记词",
+        "description": "将钱包与密钥助记词保存在安全的离线位置。切勿与任何人分享。"
+      },
+      "1": {
+        "title": "使用强密码",
+        "description": "为你的钱包与移动密钥应用分别创建独特且强健的密码。"
+      },
+      "2": {
+        "title": "保障移动设备安全",
+        "description": "确保移动设备已设置锁屏，并考虑启用生物识别认证。"
+      }
+    },
+    "successTitle": "恭喜！",
+    "successDescription": "通过这些步骤，你已成功安装并配置好 SSP Wallet 与 SSP Key，享受安全且流畅的使用体验。",
+    "successDownload": "立即下载",
+    "successSupport": "获取支持"
+  },
+  "Support": {
+    "metaTitle": "支持 - SSP Wallet | 获取帮助与技术支持",
+    "metaDescription": "获得 SSP Wallet 的全面支持。在常见问题中查找答案、访问文档、联系社区，或与我们的专业支持团队取得联系。",
+    "breadcrumbLabel": "支持",
+    "heroBadge": "支持中心",
+    "heroTitle": "我们能为你做什么？",
+    "heroDescription": "在常见问题中查找答案、访问我们的文档，或联系我们的支持团队。",
+    "quickLinks": {
+      "docsTitle": "文档",
+      "docsSubtitle": "指南",
+      "communityTitle": "社区",
+      "communitySubtitle": "交流",
+      "supportTitle": "支持",
+      "supportSubtitle": "帮助"
+    },
+    "channelsTitle": "获取支持",
+    "channelsSubtitle": "根据你的需求选择最合适的求助方式",
+    "channels": {
+      "documentation": {
+        "title": "文档",
+        "description": "完整的指南与文档",
+        "links": {
+          "completeDocs": "完整文档",
+          "setupGuide": "设置指南",
+          "featureDocs": "功能文档"
+        }
+      },
+      "community": {
+        "title": "社区支持",
+        "description": "从我们的社区获得帮助",
+        "links": {
+          "github": "GitHub 讨论",
+          "discord": "Discord 社区",
+          "twitter": "Twitter 支持"
+        }
+      },
+      "direct": {
+        "title": "直接支持",
+        "description": "获得个性化的技术协助",
+        "links": {
+          "ticketSystem": "支持工单系统",
+          "email": "邮件支持"
+        }
+      }
+    },
+    "faqTitle": "常见问题",
+    "faqSubtitle": "快速找到关于 SSP Wallet 最常见问题的答案",
+    "faqCategories": {
+      "gettingStarted": {
+        "title": "快速上手",
+        "items": {
+          "0": {
+            "question": "什么是 SSP Wallet？",
+            "answer": "SSP Wallet 是一个真正的 2-of-2 多重签名系统，由两个组件组成：SSP Wallet（浏览器扩展）和 SSP Key（移动端 2FA 应用）。两台设备均需对交易进行授权，从而为你的加密资产提供跨 15+ 区块链的无与伦比的安全保障。"
+          },
+          "1": {
+            "question": "如何安装 SSP Wallet？",
+            "answer": "你可以从 Chrome Web Store 安装 SSP Wallet 作为 Chrome 扩展。访问我们的下载页面，并按照完整的设置指南进行分步安装。"
+          },
+          "2": {
+            "question": "SSP Wallet 是免费的吗？",
+            "answer": "是的，SSP Wallet 完全免费下载与使用。我们对钱包本身不收取任何费用，但进行链上交易时仍需支付网络手续费。"
+          },
+          "3": {
+            "question": "SSP Wallet 支持哪些加密货币？",
+            "answer": "SSP Wallet 支持 15+ 区块链，包括 Bitcoin (BTC)、Ethereum (ETH)、Litecoin (LTC)、Zcash (ZEC)、Ravencoin (RVN)、Dogecoin (DOGE)、Bitcoin Cash (BCH)、Flux (FLUX)、Polygon (MATIC)、BSC、Avalanche (AVAX) 与 Base。对于 EVM 兼容链，我们支持所有 ERC-20 代币，并可导入你自己的自定义代币列表。Solana 即将推出。"
+          },
+          "4": {
+            "question": "在哪里可以找到完整的支持资产列表？",
+            "answerBefore": "如需获取所有原生支持的链与代币的完整最新列表，请参阅我们的官方 ",
+            "answerLink": "SSP 资产电子表格",
+            "answerAfter": "。该表格会定期更新，并包含每种支持资产的详细信息。"
+          },
+          "5": {
+            "question": "可以将 SSP Wallet 用于 dApp 与 DeFi 吗？",
+            "answer": "可以！SSP Wallet 完整集成 WalletConnect v2（Reown），可在所有受支持的 EVM 链上连接成千上万的去中心化应用。你可以在保持 2-of-2 多重签名安全的前提下使用 DeFi 协议、NFT 市场及其他 dApp。"
+          },
+          "6": {
+            "question": "什么是 FluxNodes？如何使用？",
+            "answer": "FluxNodes 是 Flux 网络中帮助保障与维护区块链的节点。借助 SSP Wallet，你可以轻松搭建并管理 FluxNodes，监控其性能并直接通过钱包界面领取奖励。Fluxnodes 需要质押一定数量的 FLUX 代币，并通过网络奖励提供被动收益。"
+          },
+          "7": {
+            "question": "SSP Wallet 是否支持法币入金与出金？",
+            "answer": "支持！SSP Wallet 通过集成合作伙伴提供法币出入金。你可以使用信用卡、银行转账或其他支付方式直接购买加密货币，也可将加密资产兑换回法币。该功能在受支持地区可用，并需要完成 KYC 验证。"
+          },
+          "8": {
+            "question": "可以在 SSP Wallet 中交换加密货币吗？",
+            "answer": "可以，SSP Wallet 内置加密交换功能。你可以通过我们集成的交换合作伙伴在受支持的区块链之间轻松兑换加密货币。交换功能提供具有竞争力的汇率，并在保护私钥的前提下安全执行。"
+          },
+          "9": {
+            "question": "可以导出我的交易历史吗？",
+            "answer": "可以！SSP Wallet 支持以 CSV 形式导出交易历史。你可以导出详细的交易记录，用于会计、税务或个人记录。CSV 导出包含每条受支持区块链的交易日期、金额、地址、手续费等相关详细信息。"
+          },
+          "10": {
+            "question": "如何申请添加新币种？",
+            "answer": "我们鼓励用户联系支持团队，或直接在我们的 GitHub 仓库提交贡献以申请新加密货币的支持。我们会根据社区需求、技术可行性与安全考虑来评估每一项申请。"
+          },
+          "11": {
+            "question": "是否有移动端钱包？",
+            "answer": "好消息！我们正在积极将 SSP Wallet 拓展到移动平台。目前，SSP Wallet 由浏览器扩展（SSP Wallet）与移动 2FA 应用（SSP Key）组成。完整的移动端钱包体验正在开发中。"
+          },
+          "12": {
+            "question": "可以在多台设备上使用 SSP Wallet 吗？",
+            "answer": "可以，你可以在多台设备上使用 SSP Wallet。在新设备上设置时，需要使用相应的助记词分别恢复你的钱包与密钥。每台设备都需要正确配置与同步。"
+          },
+          "13": {
+            "question": "SSP Wallet 有交易限额吗？",
+            "answer": "SSP Wallet 不设交易限额。但你仍受区块链网络限制及可用余额的约束。某些网络可能对最小交易金额或最大交易体量有协议级别的限制。"
+          },
+          "14": {
+            "question": "可以离线使用 SSP Wallet 吗？",
+            "answer": "SSP Wallet 的大多数操作都需要互联网连接，包括交易广播、余额更新与设备间同步。虽然你可以离线查看部分缓存信息，但没有网络连接时无法发送交易。"
+          }
+        }
+      },
+      "security": {
+        "title": "安全与隐私",
+        "items": {
+          "0": {
+            "question": "SSP Wallet 安全性如何？",
+            "answer": "SSP Wallet 采用结合移动端认证的多重签名技术，提供双密钥保护。我们使用前沿加密技术且不存储你的任何数据——一切均存储在本地并由你掌控。"
+          },
+          "1": {
+            "question": "什么是 SSP Key？为什么需要它？",
+            "answer": "SSP Key 是一个移动应用，持有 2-of-2 多重签名系统所需的第二把私钥。每笔交易都必须由浏览器扩展与移动设备同时签名，因而即便其中一台设备被攻破，资金依然安全。SSP Key 适用于 iOS 15.1+ 与 Android 7+。"
+          },
+          "2": {
+            "question": "丢失设备后还能恢复钱包吗？",
+            "answer": "可以，你可以使用助记词恢复钱包。钱包与密钥拥有各自独立的助记词，应离线安全保存。切勿向任何人透露你的助记词。"
+          },
+          "3": {
+            "question": "SSP Wallet 是否收集我的个人数据？",
+            "answer": "不会，SSP Wallet 承诺不存储任何数据信息。你的私钥、交易历史与个人数据完全由你掌控，并仅存储在你的设备本地。"
+          },
+          "4": {
+            "question": "什么是确定性构建？为什么重要？",
+            "answer": "确定性构建确保相同的源代码生成相同的二进制输出。SSP Wallet 采用基于 Docker 的确定性构建，任何人都可以独立验证发布的扩展与公开源代码构建出的结果完全一致。这消除了潜在的供应链攻击，并以加密学方式证明构建完整性。"
+          },
+          "5": {
+            "question": "如何验证 SSP Wallet 的确定性构建？",
+            "answerIntro": "要验证 SSP Wallet 构建：1) 从 ",
+            "answerLink1": "GitHub 发布页",
+            "answerMiddle1": " 下载发布文件（Chrome/Firefox 压缩包、SHA256SUMS、SHA256SUMS.asc）。2) 从 ",
+            "answerLink2": "OpenPGP 公钥服务器",
+            "answerMiddle2": " 导入我们的公钥。3) 验证 GPG 签名：",
+            "answerCode1": "gpg --verify SHA256SUMS.asc SHA256SUMS",
+            "answerMiddle3": "。4) 验证哈希值：",
+            "answerCode2": "sha256sum -c SHA256SUMS",
+            "answerMiddle4": "。5) 你也可以选择重现构建：",
+            "answerCode3": "git checkout [version] && npm run build:deterministic",
+            "answerOutro": "。"
+          },
+          "6": {
+            "question": "谁为 SSP Wallet 的发布签名？",
+            "answerBefore": "所有 SSP Wallet 发布均由 security@runonflux.io 使用 GPG 进行加密签名。我们的公钥可在 ",
+            "answerLink": "OpenPGP 公钥服务器",
+            "answerAfter": " 上验证。确定性构建流程包含基于 Docker 的隔离环境，以及同样经过 GPG 签名的完整校验和（SHA256SUMS），用于保证真实性与完整性。"
+          },
+          "7": {
+            "question": "一个 SSP Wallet 能配多个 SSP Key 吗？",
+            "answer": "不能，每个 SSP Wallet 只能与一个 SSP Key 配对。2-of-2 多重签名系统对公开 nonce 与链上数据有设备特定的同步要求。使用多个 SSP Key 会导致同步冲突。"
+          }
+        }
+      },
+      "technical": {
+        "title": "技术支持",
+        "items": {
+          "0": {
+            "question": "支持哪些浏览器？",
+            "answer": "SSP Wallet 支持 Google Chrome、Brave、Firefox 以及其他基于 Chromium 的浏览器。对于 Chromium 浏览器，可以从 Chrome Web Store 下载；Firefox 版本可直接从我们的 GitHub 发布页下载。"
+          },
+          "1": {
+            "question": "我无法同步移动密钥",
+            "answer": "请确保两台设备都已联网、二维码清晰可见，并且浏览器扩展与移动应用都为最新版本。如果同步失败，请尝试重启两端应用。"
+          },
+          "2": {
+            "question": "我的交易卡住或处于待确认状态",
+            "answer": "区块链交易可能因网络拥堵而需要时间。请在区块浏览器上查看交易状态。如果使用 Ethereum，可能需要提高 Gas 费以加快确认。"
+          },
+          "3": {
+            "question": "如何更新 SSP Wallet？",
+            "answer": "浏览器扩展通常会自动更新。你可以在浏览器的扩展管理页面手动检查更新。移动应用请通过设备的应用商店检查更新。"
+          },
+          "4": {
+            "question": "什么是 SSP Relay？它是如何工作的？",
+            "answer": "SSP Relay 是一个开源的中继服务，作为 SSP Wallet 与 SSP Key 之间的桥梁。它提供市场信息、手续费数据，实现交易同步并下发推送通知。Relay 在保持安全的同时提升了用户体验。"
+          },
+          "5": {
+            "question": "SSP Wallet 是否支持 Replace-By-Fee（RBF）？",
+            "answer": "是的，SSP Wallet 完整支持 Replace-By-Fee（RBF）。在交易广播后，你可以修改交易手续费，甚至更改收款方，从而灵活管理你在区块链上的交易。"
+          },
+          "6": {
+            "question": "SSP Wallet 收取什么费用？",
+            "answer": "SSP Wallet 不收取任何费用——使用钱包完全免费。你只需支付直接归矿工/验证者所有的标准区块链网络手续费。钱包内置自动费率选择以优化你的交易成本。"
+          },
+          "7": {
+            "question": "为什么有些交易构造失败？",
+            "answer": "某些交易可能由于区块链大小限制与 UTXO 复杂度而失败。当存在大量小额输入时，交易体量可能超出网络限制。此时你可能需要合并 UTXO 或将交易拆分为更小的部分。"
+          },
+          "8": {
+            "question": "更换设备时需要恢复钱包吗？",
+            "answer": "需要，由于设备特定的加密机制，更换设备或进行重大系统变更时，你必须同时恢复钱包与密钥。请妥善保管并随时可访问助记词以完成此过程。"
+          },
+          "9": {
+            "question": "如果丢失了 SSP Key 设备怎么办？",
+            "answer": "如果你丢失了 SSP Key 设备，可以使用 SSP Key 助记词在新设备上恢复。在新设备上安装 SSP Key 应用并使用助记词恢复访问。恢复后，你需要重新与 SSP Wallet 浏览器扩展进行同步。"
+          },
+          "10": {
+            "question": "可以将钱包备份到云端吗？",
+            "answer": "出于安全原因，SSP Wallet 不支持自动云备份。你的助记词应离线保存在安全的位置。切勿将助记词存储在云端、电子邮件或任何可能被泄露的数字媒介中。"
+          },
+          "11": {
+            "question": "SSP Wallet 助记词与 SSP Key 助记词有什么区别？",
+            "answer": "SSP Wallet 与 SSP Key 各自拥有独立的助记词。钱包助记词控制浏览器扩展组件，而密钥助记词控制移动 2FA 组件。完整恢复钱包需要两者，应分开并安全存储。"
+          },
+          "12": {
+            "question": "如何迁移到新电脑？",
+            "answer": "将 SSP Wallet 迁移到新电脑：1) 在新设备上安装 SSP Wallet 扩展，2) 使用钱包助记词恢复浏览器扩展，3) 与现有的 SSP Key 移动应用重新同步。交易历史与设置需要重新配置。"
+          },
+          "13": {
+            "question": "我在移动端收到「Synchronisation with SSP wallet needed」错误",
+            "answer": "该错误通常发生在更换手机或某条区块链尚未与 SSP Key 同步时。解决方法：1) 打开 SSP Wallet，2) 切换到要重新同步的区块链，3) 点击右上角汉堡菜单，4) 选择「SSP Wallet Details」，5) 用密码确认访问，6) 在第一行找到「Chain Sync with SSP Key」，点击眼睛图标显示二维码，7) 用 SSP Key 扫描该二维码并批准链同步。"
+          },
+          "14": {
+            "question": "我收到「SSP Key Public nonces do not match or SSP Key Public nonces are missing」错误",
+            "answer": "该错误发生在用于构造交易的公开 nonce 在 SSP Wallet 与 SSP Key 之间未同步时。解决方法：1) 打开右上角汉堡菜单，2) 进入「设置」，3) 找到「Public Nonces」一节并点击「Sync Public Nonces」，4) 用 SSP Key 扫描显示的二维码，5) 在移动设备上批准请求。公开 nonce 同步完成后即可继续交易。"
+          }
+        }
+      }
+    },
+    "stillNeedHelpTitle": "仍需帮助？",
+    "stillNeedHelpDescription": "找不到所需信息？给我们留言，支持团队会尽快回复你。",
+    "emailSupportTitle": "邮件支持",
+    "emailSupportDescription": "我们通常在 24 小时内回复",
+    "openSourceTitle": "开源",
+    "openSourceDescription": "在 GitHub 上报告 Bug 或贡献代码",
+    "communityTitle": "社区",
+    "communityDescription": "与其他用户交流并获得同行支持",
+    "contactSupportTitle": "联系支持",
+    "form": {
+      "emailLabel": "电子邮箱 *",
+      "emailPlaceholder": "your.email@example.com",
+      "typeLabel": "问题类型 *",
+      "typeOptions": {
+        "Question": "一般问题",
+        "Incident": "技术问题",
+        "Problem": "需要帮助",
+        "Feature Request": "功能请求",
+        "Bug Report": "Bug 反馈"
+      },
+      "subjectLabel": "主题 *",
+      "subjectPlaceholder": "你的问题简要描述",
+      "descriptionLabel": "详细说明 *",
+      "descriptionPlaceholder": "请提供你问题的详细信息……",
+      "submitting": "正在发送……",
+      "submit": "发送消息",
+      "errorFallback": "消息发送失败。请重试。",
+      "errorGeneric": "工单提交失败",
+      "successTitle": "消息发送成功！",
+      "successDescription": "感谢你联系我们。我们会尽快回复你。",
+      "successAgain": "再发送一条消息"
+    }
+  },
+  "Legal": {
+    "lastUpdated": "最后更新：{date}",
+    "privacyPolicy": {
+      "metaTitle": "隐私政策 - SSP 钱包生态系统",
+      "metaDescription": "SSP 钱包完整生态系统的隐私政策。了解我们如何在网站、浏览器扩展、移动应用和中继服务中保护你的隐私。",
+      "heading": "隐私政策"
+    },
+    "termsOfService": {
+      "metaTitle": "服务条款 - SSP 钱包生态系统",
+      "metaDescription": "SSP 钱包完整生态系统的服务条款，包括网站、浏览器扩展、移动应用和中继服务。",
+      "heading": "服务条款"
+    },
+    "cookiePolicy": {
+      "metaTitle": "Cookie 政策 - SSP 钱包网站",
+      "metaDescription": "了解我们如何在 sspwallet.io 网站上使用 Cookie。管理你的 Cookie 偏好，了解我们符合 GDPR 的做法。",
+      "heading": "Cookie 政策"
+    }
+  },
+  "CheckoutSuccess": {
+    "metaTitle": "支付成功 | SSP 钱包",
+    "metaDescription": "你的订单已成功提交。",
+    "heading": "支付成功！",
+    "description": "你的订单已成功提交。感谢你的购买！",
+    "confirmationEmail": "你将很快收到一封确认邮件。",
+    "backToHome": "返回首页",
+    "contactSupport": "联系支持"
+  },
+  "CheckoutFailure": {
+    "metaTitle": "支付未成功 | SSP 钱包",
+    "metaDescription": "你的订单未能完成。请重试。",
+    "heading": "支付未成功",
+    "description": "你的订单未能完成。请重试，如问题持续请联系支持。",
+    "tryAgain": "重试",
+    "contactSupport": "联系支持"
+  },
+  "Categories": {
+    "multisig": {
+      "title": "Multisig 详解",
+      "description": "SSP 中 2-of-2 multisig 的实际工作原理 — 以及为何至关重要。"
+    },
+    "getting-started": {
+      "title": "加密基础知识",
+      "description": "每位加密用户都应掌握的基础概念。"
+    },
+    "security": {
+      "title": "安全与自托管",
+      "description": "保护你的加密资产：助记词、钓鱼攻击、硬件钱包与威胁模型。"
+    },
+    "how-to": {
+      "title": "操作指南",
+      "description": "SSP 常见操作的分步教程。"
+    },
+    "coin-guides": {
+      "title": "币种与链指南",
+      "description": "深入介绍 SSP 支持的各类币种与区块链。"
+    },
+    "defi": {
+      "title": "DeFi 与账户抽象",
+      "description": "质押、借贷、兑换及 ERC-4337 详解。"
+    },
+    "news-explained": {
+      "title": "新闻与行业分析",
+      "description": "对加密行业新闻与监管动态的解读与分析。"
+    }
+  },
+  "CaseStudies": {
+    "breadcrumbLabel": "案例研究",
+    "fluxFoundation": {
+      "metaTitle": "案例研究：Flux 基金会 — 使用 SSP Enterprise 的自托管金库",
+      "metaDescription": "Flux 基金会如何从分散的多重签名和自定义脚本迁移到 SSP Enterprise — 使用 M-of-N 金库在他们使用的每条链上保护 Fusion 桥与基金会金库。",
+      "breadcrumbLabel": "Flux 基金会",
+      "logoAlt": "Flux 基金会",
+      "eyebrow": "案例研究",
+      "titlePart1": "Flux 基金会 ×",
+      "titlePart2": "SSP Enterprise",
+      "subtitle": "Flux 基金会如何从分散的多重签名和自定义脚本迁移到一个统一的自托管平台 — 在不向任何人交出私钥的前提下，保护 Fusion 桥与基金会金库。",
+      "heroQuote": "我们需要对资金的完全掌控、对社区的透明度，以及没有黑盒 MPC 横亘在我们与自家金库之间。SSP Enterprise 是我们找到的第一个同时满足这三点的平台 — 而且覆盖了我们实际使用的每一条链。",
+      "heroQuoteAttribution": "— Tadeas Kmenta，Flux 基金会",
+      "factSheet": {
+        "organizationLabel": "组织",
+        "organizationValue": "Flux 基金会",
+        "industryLabel": "行业",
+        "industryValue": "去中心化基础设施",
+        "useCaseLabel": "用例",
+        "useCaseValue": "基金会金库 + Fusion 桥多重签名",
+        "chainsLabel": "链",
+        "chainsValue": "BTC、ETH、FLUX、EVM L2",
+        "vaultModelLabel": "金库模型",
+        "vaultModelValue": "M-of-N 多重签名，每位签名者两台设备",
+        "statusLabel": "状态",
+        "statusValue": "已上线"
+      },
+      "before": {
+        "title": "之前：分散的多重签名与自定义脚本",
+        "intro": "Flux 基金会多年来一直在管理多方签名。问题不在于缺少多重签名 — 而是没有任何工具能跨链将其串联起来，而所有商业替代方案都要求做出团队不愿接受的取舍。",
+        "items": {
+          "0": {
+            "title": "分散的多重签名设置",
+            "description": "不同链上有不同的多重签名钱包，各自有独特的特性、签名者和恢复流程。"
+          },
+          "1": {
+            "title": "依赖自定义脚本拼接",
+            "description": "用于交易构造、签名协调与广播的内部工具 — 全部靠人工维护。"
+          },
+          "2": {
+            "title": "缺乏统一的审计记录",
+            "description": "审批散落在聊天记录和共享文档中。要弄清谁签了什么需要花费大量时间翻找。"
+          },
+          "3": {
+            "title": "市场上没有折中方案",
+            "description": "托管方与 MPC 厂商意味着信任一个黑盒。现成的多重签名工具又只支持 Ethereum。"
+          }
+        }
+      },
+      "decision": {
+        "title": "决策过程",
+        "intro": "团队评估了备选方案并将其归为三类。每一类都有无法接受的硬伤。",
+        "bucket1Eyebrow": "第 1 类",
+        "bucket1Title": "MPC 托管方",
+        "bucket1Description": "Fireblocks、BitGo 等。厂商持有每把密钥的一部分。",
+        "bucket1Verdict": "并非真正的自托管。",
+        "bucket2Eyebrow": "第 2 类",
+        "bucket2Title": "单链多重签名",
+        "bucket2Description": "Safe 之类。仅支持 Ethereum，没有原生 UTXO 支持。",
+        "bucket2Verdict": "我们也持有 Bitcoin 和 Flux。",
+        "bucket3Eyebrow": "第 3 类",
+        "bucket3Title": "极简多重签名",
+        "bucket3Description": "没有策略引擎、分析或正规审计记录的钱包。",
+        "bucket3Verdict": "我们又得自己来造工具。",
+        "conclusion": "SSP Enterprise 是唯一同时解决这三点的平台：原生多链（UTXO 与 EVM）、真正的自托管且厂商不持有任何密钥分片，并内置策略引擎、分析和审计记录。"
+      },
+      "whatChanged": {
+        "title": "改变了什么",
+        "intro": "一个平台覆盖基金会交互的每一条链，统一一致的签名模型。自定义脚本已退役。聊天记录式的审计被可归属的平台记录所取代。金库与桥的多重签名在同一治理体系下并行运行。",
+        "items": {
+          "0": {
+            "title": "覆盖所有相关链的 M-of-N 金库",
+            "description": "Bitcoin、Ethereum、Flux 与 EVM L2 — 同一平台、同一思维模型、同一安全保障。"
+          },
+          "1": {
+            "title": "每位签名者使用两台设备，无一例外",
+            "description": "每次签名都需要浏览器扩展和移动应用。单台设备被攻破无法签署交易。"
+          },
+          "2": {
+            "title": "经得起检验的审计记录",
+            "description": "每次提案、批准和拒绝都带有签名者和时间戳。取代了从聊天记录拼凑事实的做法。"
+          },
+          "3": {
+            "title": "全程自托管",
+            "description": "厂商不持有任何密钥分片。没有需要信任的 MPC 基础设施。即使 SSP 明天消失，我们的资金仍然可以通过签名者的助记词恢复。"
+          }
+        }
+      },
+      "fusionBridge": {
+        "title": "Fusion 桥",
+        "intro": "Fusion 桥是基金会运营中对安全最敏感的环节之一 — 它在 Flux 与其他链之间协调价值转移，单一签名失败可能造成灾难性后果。它也是 SSP Enterprise 模型最能体现价值的工作负载。",
+        "items": {
+          "0": {
+            "title": "链上多重签名",
+            "description": "桥所触及的每条链都使用原生多重签名 — 没有智能合约托管方，也没有可能拖延或抢跑的中继器。"
+          },
+          "1": {
+            "title": "每位签名者双设备签名",
+            "description": "攻破某位签名者的笔记本或手机不足以推送一笔桥接交易。每次都必须双设备。"
+          },
+          "2": {
+            "title": "按签名者粒度的策略控制",
+            "description": "限额和白名单在组织和金库层级配置，并在收集任何签名之前强制执行。"
+          },
+          "3": {
+            "title": "全程可审计",
+            "description": "每次批准与拒绝都有明确归属与时间戳。在不放弃自托管的前提下对社区负责。"
+          }
+        },
+        "quote": "Fusion 桥现在运行在我们端到端可控的基础设施上。我们对自家金库所拥有的安全保证，已经应用到了我们运营中风险最高的工作流之一。",
+        "quoteAttribution": "— Tadeas Kmenta，Flux 基金会"
+      },
+      "cta": {
+        "title": "同样的模型。同样可以服务你的团队。",
+        "description": "支撑 Flux 基金会运行 Fusion 桥的平台，同样面向任何希望获得无妥协自托管多重签名的团队开放。免费版即可起步。可按需提供定制方案。",
+        "exploreEnterprise": "了解 SSP Enterprise",
+        "launchEnterpriseApp": "启动 Enterprise 应用"
+      }
+    }
+  },
+  "Enterprise": {
+    "metaTitle": "SSP Enterprise | 面向企业的自托管多重签名",
+    "metaDescription": "面向企业资金的 M-of-N 自托管多重签名金库。策略引擎、支出限额、双设备签名与基于角色的访问。无托管方，无 MPC。",
+    "breadcrumbLabel": "企业",
+    "heroBadge": "SSP Enterprise",
+    "heroTitlePart1": "面向企业的",
+    "heroTitlePart2": "自托管",
+    "heroDescription": "为你的组织提供 M-of-N 多重签名金库。每位签名者均使用两台设备——浏览器扩展和移动应用。无托管方，无 MPC，无单点故障。",
+    "heroLaunchApp": "打开 Enterprise 应用",
+    "heroHowItWorks": "工作原理",
+    "fluxBanner": {
+      "imageAlt": "Flux Foundation",
+      "eyebrow": "已与 Flux Foundation 投入生产",
+      "description": "在 BTC、ETH、FLUX 与 EVM L2 上保护 Fusion 跨链桥与基金会资金。",
+      "cta": "阅读案例研究"
+    },
+    "problem": {
+      "title": "现存问题",
+      "subtitle": "当今持有加密资产的企业面临难以兼顾的取舍",
+      "items": {
+        "0": {
+          "title": "托管方案",
+          "problem": "把密钥的信任交给第三方",
+          "risks": {
+            "0": "交易对手风险（FTX、Celsius）",
+            "1": "毫无预警地冻结账户",
+            "2": "厂商锁定与高昂费用"
+          }
+        },
+        "1": {
+          "title": "MPC 提供方",
+          "problem": "密钥分片存放在厂商服务器",
+          "risks": {
+            "0": "厂商关停时你将陷入被动",
+            "1": "无法验证其基础设施",
+            "2": "仍存在信任依赖"
+          }
+        },
+        "2": {
+          "title": "单一硬件钱包",
+          "problem": "一人一台设备",
+          "risks": {
+            "0": "关键人物风险",
+            "1": "缺乏团队治理",
+            "2": "丢失设备就等于丢失资金"
+          }
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "工作原理",
+      "subtitle": "企业级规模下的真正自托管——毫不妥协",
+      "steps": {
+        "0": {
+          "title": "创建你的组织",
+          "description": "使用你的 SSP 身份创建组织——这是从你的设备派生的加密学证明，而不仅仅是邮箱。"
+        },
+        "1": {
+          "title": "邀请你的团队",
+          "description": "通过 SSP 身份添加团队成员，分配 Owner、Admin、Member 或 Viewer 角色。每位成员都需要 SSP Wallet + SSP Key。"
+        },
+        "2": {
+          "title": "创建多重签名金库",
+          "description": "为不同用途配置 M-of-N 金库——运营、库务、薪酬，自定义所需的签名者。"
+        },
+        "3": {
+          "title": "共同签名",
+          "description": "通过 Web 应用发起交易提案。每位必要签名者都需要使用浏览器扩展与移动应用进行批准。达到阈值后再进行广播。"
+        }
+      },
+      "diagramTitle": "签名架构",
+      "diagramSubtitle": "每次签名都需要每位签名者的两台设备",
+      "signerLabel": "签名者 {label}",
+      "signedLabel": "已签名",
+      "waitingLabel": "等待中",
+      "thresholdLabel": "已达到 2/3 阈值——可以广播"
+    },
+    "features": {
+      "title": "企业功能",
+      "subtitle": "你的组织安全管理加密资产所需的一切",
+      "readGuide": "阅读指南",
+      "items": {
+        "0": {
+          "title": "M-of-N 多重签名金库",
+          "description": "为你的团队配置任意签名阈值。2/3、3/5 或任何符合你治理模型的组合。"
+        },
+        "1": {
+          "title": "基于角色的访问",
+          "description": "Owner、Admin、Member 与 Viewer 等角色，控制谁可以发起、签署或仅查看交易。"
+        },
+        "2": {
+          "title": "双设备签名",
+          "description": "每位签名者同时使用浏览器扩展与移动应用。每人两把密钥，团队整体 M-of-N。"
+        },
+        "3": {
+          "title": "多链支持",
+          "description": "Bitcoin、Ethereum、Litecoin、Dogecoin、Flux、Polygon、BSC、Base、Avalanche 等。一个平台覆盖所有链。"
+        },
+        "4": {
+          "title": "交易提案",
+          "description": "用完整细节发起交易提案。团队成员可审核、批准或拒绝。仅在达到阈值后才广播。"
+        },
+        "5": {
+          "title": "完整审计轨迹",
+          "description": "每个动作都被永久记录。成员变更、金库操作、交易批准——全方位的可追责性。"
+        }
+      }
+    },
+    "policy": {
+      "title": "交易策略引擎",
+      "subtitle": "细粒度控制从组织级层层下沉到金库与签名者级别。更严格的策略始终生效。",
+      "tiers": {
+        "organization": "组织",
+        "organizationSub": "默认策略",
+        "vault": "金库",
+        "vaultSub": "覆盖与精化",
+        "signer": "签名者",
+        "signerSub": "个人限额"
+      },
+      "tierFooter": "策略自上而下合并——任意层级中更严格的限制都会生效",
+      "readMore": "了解更多",
+      "items": {
+        "0": {
+          "title": "支出限额",
+          "description": "按交易、按日、按周与按月的限额。可按 USD 或原生代币设定。支持总量与按代币控制。"
+        },
+        "1": {
+          "title": "地址白名单",
+          "description": "三种模式：禁用、警告或强制。可标记地址、按链限制，并完全屏蔽未知目的地址。"
+        },
+        "2": {
+          "title": "时间锁延迟",
+          "description": "广播前的等待期可配置。在超过 USD 阈值时自动触发，可在执行前取消。"
+        },
+        "3": {
+          "title": "管理员审批",
+          "description": "对高额交易要求管理员签字确认。设定 USD 阈值——超过阈值的交易需要明确批准。"
+        },
+        "4": {
+          "title": "按签名者覆盖",
+          "description": "为每位团队成员设定独立的支出限额。初级交易员限额更紧，高级管理者限额更高。"
+        },
+        "5": {
+          "title": "速率追踪",
+          "description": "按金库、按签名者、按代币的滚动 30 天支出窗口，依据 TTL 自动清理。"
+        },
+        "6": {
+          "title": "金库紧急冻结",
+          "description": "通过双设备 WK 签名即时冻结任意金库，禁止全部新提案直到解冻。秒级事件响应。"
+        },
+        "7": {
+          "title": "三层策略层级",
+          "description": "组织默认策略向下传递到金库与签名者。金库级覆盖可细化规则。更严格的策略始终生效。"
+        }
+      },
+      "footerStrong": "三层策略层级，14+ 项可配置控制",
+      "footerSuffix": "——所有套餐均包含。"
+    },
+    "security": {
+      "title": "5 层安全",
+      "subtitle": "纵深防御——必须攻破每一层才能造成入侵",
+      "layerLabel": "第 {n} 层：{name}",
+      "layers": {
+        "0": {
+          "name": "设备安全",
+          "description": "操作系统级安全、生物识别认证、移动端安全飞地"
+        },
+        "1": {
+          "name": "双设备 2FA",
+          "description": "每次签名都需要浏览器扩展与移动应用配合"
+        },
+        "2": {
+          "name": "链上多重签名",
+          "description": "原生 Bitcoin 多重签名与 EVM 智能合约校验"
+        },
+        "3": {
+          "name": "业务策略",
+          "description": "支出限额、地址白名单、时间锁、管理员审批、按签名者覆盖与速率追踪——14+ 项可配置控制"
+        },
+        "4": {
+          "name": "审计与合规",
+          "description": "不可篡改的日志、登录追踪与合规报告"
+        }
+      },
+      "footerBefore": "SSP Wallet 完全开源，并 ",
+      "footerLink": "经 Halborn 审计",
+      "footerAfter": "。你可以亲自核验代码。"
+    },
+    "comparison": {
+      "title": "我们如何比较",
+      "subtitle": "SSP Enterprise 与替代方案对比",
+      "columns": {
+        "feature": "功能",
+        "ssp": "SSP Enterprise"
+      },
+      "values": {
+        "partial": "部分支持"
+      },
+      "rows": {
+        "0": "真正的自托管",
+        "1": "多链",
+        "2": "链上多重签名",
+        "3": "交易策略引擎",
+        "4": "移动端签名",
+        "5": "开源",
+        "6": "无厂商锁定",
+        "7": "价格亲民"
+      },
+      "annualCostLabel": "年费",
+      "annualCostSsp": "免费*",
+      "annualCostFireblocks": "$100K+",
+      "annualCostBitgo": "$50K+",
+      "annualCostSafe": "Gas 费",
+      "footnoteBefore": "* 开源钱包免费。Enterprise 平台提供免费层供你起步。",
+      "footnoteLink": "联系销售",
+      "footnoteAfter": "了解定制方案。",
+      "migrationLabel": "已经在使用以下方案之一？参阅迁移指南：",
+      "migrationFireblocks": "从 Fireblocks 迁移",
+      "migrationSafe": "从 Safe 迁移",
+      "migrationBitgo": "从 BitGo 迁移"
+    },
+    "useCases": {
+      "title": "适用场景",
+      "subtitle": "任何持有加密资产并需要团队签名的组织",
+      "readPlaybook": "查看实施手册",
+      "items": {
+        "0": {
+          "title": "公司财务",
+          "description": "对公司资金的多重签名审批。CEO + CFO + 董事会 = 2/3。",
+          "example": "3 位高管，需 2 人签名"
+        },
+        "1": {
+          "title": "DAO 财务",
+          "description": "去中心化决策与社区资金的链上安全。",
+          "example": "5 位理事，需 3 人签名"
+        },
+        "2": {
+          "title": "投资基金",
+          "description": "面向基金管理人与有限合伙人的机构级自托管。",
+          "example": "基金经理 + 合规 + LP"
+        },
+        "3": {
+          "title": "合作与合资",
+          "description": "合伙人之间的共享控制权，伴随清晰的责任与审计轨迹。",
+          "example": "对等控制，运营透明"
+        }
+      }
+    },
+    "chains": {
+      "title": "原生多链",
+      "subtitle": "一个平台覆盖你所有的链——UTXO 与 EVM",
+      "footer": "会持续新增更多链。EVM 链上支持所有 ERC-20 代币。"
+    },
+    "contact": {
+      "title": "联系销售",
+      "subtitle": "需要定制 Enterprise 套餐、专属支持或优先上线？请联系我们的团队。",
+      "launchApp": "打开 Enterprise 应用",
+      "scheduleCall": "预约通话",
+      "directContactStrong": "希望直接联系？",
+      "directContactBefore": "请发送邮件至 ",
+      "directContactBetween": " 或在 X 上私信 ",
+      "directContactAfter": "。"
+    },
+    "form": {
+      "fullNameLabel": "全名 *",
+      "fullNamePlaceholder": "你的全名",
+      "emailLabel": "电子邮箱 *",
+      "emailPlaceholder": "your.email@company.com",
+      "companyLabel": "公司 / 组织",
+      "companyPlaceholder": "你的公司名称",
+      "teamSizeLabel": "团队规模",
+      "teamSizePlaceholder": "选择团队规模",
+      "teamSizeOptions": {
+        "2-5": "2-5 位签名者",
+        "6-10": "6-10 位签名者",
+        "11-25": "11-25 位签名者",
+        "25+": "25+ 位签名者"
+      },
+      "useCaseLabel": "主要使用场景",
+      "useCasePlaceholder": "选择使用场景",
+      "useCaseOptions": {
+        "corporate-treasury": "公司财务",
+        "dao-treasury": "DAO 财务",
+        "investment-fund": "投资基金",
+        "partnership": "合作 / 合资",
+        "otc-desk": "OTC 交易台",
+        "mining-operation": "矿业运营",
+        "exchange": "交易所",
+        "other": "其他"
+      },
+      "messageLabel": "请告诉我们你的需求",
+      "messagePlaceholder": "你在加密资产托管方面遇到了哪些挑战？哪些功能对你的团队最重要？",
+      "submitting": "正在发送请求……",
+      "submit": "开始",
+      "errorFallback": "请求发送失败。请重试。",
+      "errorGeneric": "请求发送失败",
+      "successTitle": "已收到你的请求！",
+      "successDescription": "感谢你对 SSP Enterprise 的关注。我们会尽快与你联系。",
+      "successAgain": "再次提交请求"
+    },
+    "finalCta": {
+      "title": "你的密钥，你的规则。",
+      "description": "SSP Enterprise 让你的组织既具备自托管的安全性，又拥有企业级软件的治理能力。无托管方，无中介，毫不妥协。",
+      "launchApp": "打开 Enterprise 应用",
+      "downloadWallet": "下载 SSP Wallet",
+      "exploreFeatures": "了解全部功能"
+    }
+  },
+  "InteractiveDemo": {
+    "modalTitle": "完整 SSP Wallet 体验",
+    "modalSubtitle": "通过真正的 2-of-2 多重签名安全机制完成全部设置和交易流程",
+    "closeDemo": "关闭演示",
+    "previous": "上一步",
+    "next": "下一步",
+    "restartDemo": "重新开始演示",
+    "downloadSspWallet": "下载 SSP Wallet",
+    "stepCounter": "{phase} - 第 {current} 步，共 {total} 步",
+    "walletSetupTitle": "SSP Wallet 设置",
+    "walletSetupSubtitle": "使用安全助记词创建你的浏览器钱包",
+    "keySetupTitle": "SSP Key 设置",
+    "keySetupSubtitle": "使用独立助记词设置移动端应用",
+    "deviceSyncTitle": "设备同步",
+    "deviceSyncSubtitle": "安全地连接你的浏览器和移动端",
+    "transactionTitle": "发送交易",
+    "transactionSubtitle": "体验双设备安全流程",
+    "feedbackCopied": "已复制！",
+    "feedbackCopiedCheck": "✓ 已复制！",
+    "feedbackConfirmedCheck": "✓ 已确认！",
+    "chromeWebStore": "Chrome 网上应用店",
+    "sspWalletName": "SSP Wallet",
+    "byInfluxTech": "由 InFlux Technologies 提供",
+    "walletStoreTagline": "安全、简洁、强大的加密钱包，支持 2-of-2 多重签名",
+    "getToBrowser": "前往浏览器",
+    "walletRating": "⭐ 4.8",
+    "walletUserCount": "1K+ 用户",
+    "walletAudited": "🛡️ 已审计",
+    "installExtensionTitle": "安装 SSP Wallet 扩展程序",
+    "installExtensionDescription": "从 Chrome 网上应用店下载浏览器扩展程序。支持 Chrome、Brave 和 Firefox。",
+    "sspWalletSetup": "SSP Wallet 设置",
+    "sspLogoAlt": "SSP 标志",
+    "createYourWallet": "创建你的钱包",
+    "newPasswordLabel": "新密码",
+    "enterSecurePasswordPlaceholder": "输入安全密码",
+    "confirmPasswordLabel": "确认密码",
+    "confirmPasswordPlaceholder": "确认密码",
+    "agreeToTerms": "我已阅读并同意服务条款",
+    "createSecurePasswordTitle": "创建安全密码",
+    "createSecurePasswordDescription": "此密码会在本地加密你的钱包。它不会离开你的浏览器，并保护你的助记词。",
+    "backupRequired": "需要备份",
+    "walletSeedPhraseHeading": "你的钱包助记词",
+    "writeDownWarning": "⚠️ 请抄写下来并妥善保管！",
+    "clickToRevealSeed": "点击以显示你的 24 个单词的助记词",
+    "showSeedPhrase": "显示助记词",
+    "copy": "复制",
+    "writtenItDown": "✓ 我已经记下来了",
+    "seedConfirmedToast": "✓ 助记词已确认，可以继续",
+    "backupSeedTitle": "备份你的助记词",
+    "backupSeedDescription": "这 24 个单词的助记词是你的主密钥。请抄写下来并安全离线保存。这是 2 个助记词中的第 1 个。",
+    "walletCreated": "钱包已创建",
+    "sspWalletReady": "SSP Wallet 准备就绪！",
+    "walletSetUpWith": "你的浏览器钱包已设置：",
+    "securePasswordProtection": "安全密码保护",
+    "twentyFourWordSeedBackedUp": "已备份 24 个单词的助记词",
+    "readyForMobileSetup": "可以开始设置移动端应用",
+    "nextStep": "下一步",
+    "setUpKeyMobile": "设置 SSP Key 移动端应用",
+    "walletSetupCompleteTitle": "钱包设置完成",
+    "walletSetupCompleteDescription": "你的浏览器钱包已就绪！现在需要设置移动端应用以提供第二个签名。",
+    "sspKeyName": "SSP Key",
+    "twoFaMultisigSecurity": "2FA 多重签名安全",
+    "ratingLabel": "评分：",
+    "ratingValue": "⭐⭐⭐⭐⭐ 5.0",
+    "developerLabel": "开发者：",
+    "developerValue": "Influx Technologies",
+    "downloadsLabel": "下载量：",
+    "downloadsValue": "1,000+",
+    "sizeLabel": "大小：",
+    "iosSizeValue": "35 MB",
+    "androidSizeValue": "46 MB",
+    "requiresLabel": "要求：",
+    "iosRequiresValue": "iOS 15.1+",
+    "androidRequiresValue": "Android 7.0+",
+    "downloadForIos": "下载 iOS 版",
+    "downloadForAndroid": "下载 Android 版",
+    "securityAudited": "已通过安全审计",
+    "touchFaceId": "Touch ID / Face ID",
+    "biometricUnlock": "生物识别解锁",
+    "qrCodePairing": "二维码配对",
+    "zeroDataStorage": "零数据存储",
+    "downloadKeyMobileTitle": "下载 SSP Key 移动端应用",
+    "downloadKeyMobileDescription": "从 App Store 或 Google Play 安装移动端配套应用。它将为你的交易提供第二个签名。",
+    "sspKeyAlt": "SSP Key",
+    "sspKeySetup": "SSP Key 设置",
+    "appPasswordLabel": "应用密码",
+    "createPasswordPlaceholder": "创建密码",
+    "enableBiometrics": "启用生物识别",
+    "continueSetup": "继续设置",
+    "touchFaceIdEnabled": "✓ 已启用 Touch ID / Face ID",
+    "secureMobileKeyTitle": "保护你的移动密钥",
+    "secureMobileKeyDescription": "为你的移动端应用创建密码，并启用生物识别身份验证以提升安全性。",
+    "keySeedPhrase": "密钥助记词",
+    "generateKeySeed": "生成你的独立移动密钥助记词",
+    "showKeySeed": "显示密钥助记词",
+    "saved": "✓ 已保存",
+    "keySeedConfirmedToast": "✓ 密钥助记词已确认",
+    "storeSeparatelyWarning": "⚠️ 请与钱包助记词分开保存！",
+    "backupKeySeedTitle": "备份移动密钥助记词",
+    "backupKeySeedDescription": "这是为你的移动密钥准备的另一组 24 个单词的助记词。完整恢复 SSP 时需要两组助记词。",
+    "sspKeyReady": "SSP Key 准备就绪！",
+    "passwordProtection": "密码保护",
+    "biometricSecurity": "生物识别安全",
+    "keySeedBackedUp": "密钥助记词已备份",
+    "readyToPair": "准备配对",
+    "nextScanQrToConnect": "下一步：扫描二维码以连接设备",
+    "mobileKeyCompleteTitle": "移动密钥设置完成",
+    "mobileKeyCompleteDescription": "你的移动端应用已就绪！现在让我们将其连接到浏览器钱包以实现 2-of-2 安全保障。",
+    "sspWalletSyncDevice": "SSP Wallet - 同步设备",
+    "connectMobileDevice": "连接移动设备",
+    "scanQrWithKeyApp": "使用 SSP Key 应用扫描此二维码",
+    "connectionIdLabel": "连接 ID：",
+    "learnMoreLink": "在 sspwallet.io 了解更多",
+    "scanQrCode": "扫描二维码",
+    "positionQrInFrame": "将二维码置于取景框内",
+    "readyToScan": "准备扫描",
+    "generatePairingQrTitle": "生成配对二维码",
+    "generatePairingQrDescription": "你的浏览器钱包将显示带有 SSP 标志的二维码。打开 SSP Key 应用并扫描即可安全连接。",
+    "synchronising": "同步中…",
+    "pairingInProgress": "配对进行中",
+    "establishingSecureConnection": "正在与移动设备建立安全连接…",
+    "exchangingKeys": "正在交换加密密钥和公钥…",
+    "connectionDetailsHeading": "连接详情",
+    "establishingSspRelay": "正在建立安全的 SSP 中继连接…",
+    "synchronisationComplete": "同步完成！",
+    "qrCodeScanned": "二维码已扫描！",
+    "browserWalletLabel": "浏览器钱包：",
+    "chromeExtensionValue": "Chrome 扩展程序",
+    "encryptionLabel": "加密：",
+    "confirmPairing": "确认配对",
+    "scanningQrCodeTitle": "正在扫描二维码",
+    "scanningQrCodeDescription": "移动端应用读取二维码并与你的浏览器钱包建立加密连接。",
+    "deviceConnected": "设备已连接",
+    "successfullyPaired": "配对成功！",
+    "devicesSecurelyConnected": "你的设备已安全连接",
+    "encryptionRow": "🔐 加密：",
+    "active": "已激活",
+    "mobileDeviceRow": "📱 移动设备：",
+    "connected": "已连接",
+    "twoOfTwoMultisigRow": "🔑 2-of-2 多重签名：",
+    "ready": "就绪",
+    "secureConnection": "安全连接",
+    "readyForTransactions": "可以发起交易",
+    "online": "在线",
+    "connectionTypeLabel": "连接类型：",
+    "sspRelaySecured": "SSP 中继已加密",
+    "multisigStatusLabel": "多重签名状态：",
+    "twoOfTwoActive": "2-of-2 已激活",
+    "walletProtectedByMultisig": "钱包由真正的 2-of-2 多重签名保护！",
+    "devicesPairedTitle": "设备成功配对",
+    "devicesPairedDescription": "完美！你的浏览器和移动端现已通过端到端加密相连。你现在可以发送安全的交易了。",
+    "sendTransaction": "发送交易",
+    "sendEthereum": "发送 Ethereum",
+    "recipientAddressLabel": "收款地址",
+    "amountEthLabel": "金额（ETH）",
+    "transactionSummary": "交易摘要",
+    "amountLabel": "金额：",
+    "gasFeeLabel": "Gas 费：",
+    "totalLabel": "合计：",
+    "sendTransactionButton": "发送交易",
+    "createTransactionTitle": "创建交易",
+    "createTransactionDescription": "填写收款地址和金额。该交易还需要在你的移动设备上获得进一步的批准。",
+    "waitingForMobileApproval": "等待移动端批准…",
+    "pendingMobileApproval": "等待移动端批准",
+    "signatureOneCompleteCheckMobile": "1/2 签名已完成。请在移动设备上批准该交易。",
+    "transactionDetails": "交易详情",
+    "sendAmount": "发送 {amount} ETH",
+    "toAddress": "至：{address}",
+    "notificationSentToMobile": "通知已发送至移动设备",
+    "transactionApprovalRequired": "需要批准交易",
+    "transactionApproval": "交易批准",
+    "amount": "金额",
+    "toAddressLabel": "收款地址",
+    "gasFee": "Gas 费",
+    "status": "状态",
+    "awaitingApproval": "等待批准（2/2）",
+    "approveWithTouchId": "使用 Touch ID 批准",
+    "approveTwoOfTwo": "批准（2/2）",
+    "reject": "拒绝",
+    "mobileConfirmationTitle": "需要在移动端确认",
+    "mobileConfirmationDescriptionBiometric": "你的移动设备上已出现通知。请检查交易详情并使用生物识别身份验证批准。",
+    "mobileConfirmationDescriptionPassword": "你的移动设备上已出现通知。请检查交易详情并使用你的密码批准。",
+    "transactionBroadcasted": "交易已广播！",
+    "signaturesCollected": "已收集签名",
+    "browserWalletOneOfTwo": "浏览器钱包（1/2）",
+    "mobileKeyTwoOfTwo": "移动密钥（2/2）",
+    "networkStatus": "网络状态",
+    "confirmingOnEthereum": "正在 Ethereum 网络上确认",
+    "usuallyTakesMinutes": "通常需要 1-3 分钟",
+    "transactionHash": "交易哈希",
+    "viewOnEtherscan": "在 Etherscan 上查看",
+    "transactionSubmittedTitle": "交易已提交",
+    "transactionSubmittedDescription": "完美！两个签名均已收集，交易已广播至 Ethereum。网络正在挖矿并确认你的安全 2-of-2 多重签名交易。",
+    "transactionConfirmed": "交易已确认",
+    "transactionSuccessful": "交易成功！",
+    "confirmedOnEthereum": "已在 Ethereum 网络上确认。",
+    "hashLabel": "哈希：",
+    "sendAnotherTransaction": "再发起一笔交易",
+    "transactionCompleteCelebration": "🎉 交易完成！",
+    "fundsTransferredSummary": "你的资金已通过真正的 2-of-2 多重签名技术安全转出。这笔交易需要两个设备共同授权和签名。",
+    "whyUltraSecure": "为何超高安全",
+    "twoSeparateDevices": "需要 2 台独立设备",
+    "twoSeparateSeeds": "2 组独立助记词",
+    "trueMultisigBip48": "真正的多重签名（BIP48）",
+    "zeroServerStorage": "零服务器存储"
+  },
+  "Glossary": {
+    "title": "术语表",
+    "description": "加密货币、区块链和 SSP 相关术语解释。包含来自 CoinMarketCap、维基百科和 SSP 团队整理的 2,000+ 条目。",
+    "searchPlaceholder": "搜索 2,000+ 术语…",
+    "total": "{count} 条",
+    "matches": "{count, plural, =0 {无匹配} =1 {1 条匹配} other {# 条匹配}}",
+    "backToGlossary": "返回术语表",
+    "termSeoTitle": "{term} — SSP 术语表",
+    "seoTitle": "加密货币术语表 — SSP",
+    "seoDescription": "加密货币、区块链和 SSP 相关术语词典。2,000+ 条目可搜索。",
+    "attribution": "部分条目改编自维基百科《加密货币术语表》(CC BY-SA 3.0)。其他条目来自 CoinMarketCap 术语表和 SSP 团队整理。",
+    "contentInEnglishBanner": "术语表内容以英文显示。如需本地化文章，请访问<academyLink>学院</academyLink>。",
+    "letterIndexAriaLabel": "Glossary letter index"
+  }
+}

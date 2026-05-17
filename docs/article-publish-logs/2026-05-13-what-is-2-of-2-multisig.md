@@ -1,0 +1,30 @@
+# Publish log — what-is-2-of-2-multisig
+
+- **Date:** 2026-05-13
+- **Section / category:** academy / multisig
+- **CMS post id:** 6a047f4efe4d3e137fdaa7bb
+- **Author:** SSP Editorial Team (id 6a047789fe4d3e137fdaa7b6)
+- **Translations published:** en, es, zh, pt-BR, ru, tr, ja, de, fr, it, pl, ko, vi, id (14)
+- **Required anchors verified in English body:** #bip48, #signer, #threshold, #2-of-2
+- **Cover images:**
+  - 16:9: https://cms.sspwallet.com/media/1778678833834-cover-multisig-2of2.png
+  - 1:1: https://cms.sspwallet.com/media/1778678834050-cover-multisig-2of2-square.png
+- **Smoke test:**
+  - `GET /api/v1/posts/what-is-2-of-2-multisig?locale=en` -> 200
+  - `GET /api/v1/posts/what-is-2-of-2-multisig?locale=ja` -> 200
+  - Anchor ids in English body: 2-of-2, bip48, signer, threshold
+- **Word counts per locale:**
+  - en: 1681
+  - es: 1806
+  - zh: 203
+  - pt-BR: 1764
+  - ru: 1445
+  - tr: 1361
+  - ja: 215
+  - de: 1606
+  - fr: 1881
+  - it: 1741
+  - pl: 1470
+  - ko: 1369
+  - vi: 2281
+  - id: 1538

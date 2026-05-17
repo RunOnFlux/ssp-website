@@ -1,0 +1,30 @@
+# Publish log — setting-up-your-first-ssp-wallet
+
+- **Date:** 2026-05-13
+- **Section / category:** academy / getting-started
+- **CMS post id:** 6a0485eefe4d3e137fdaa7c1
+- **Author:** SSP Editorial Team (id 6a047789fe4d3e137fdaa7b6)
+- **Translations published:** en, es, zh, pt-BR, ru, tr, ja, de, fr, it, pl, ko, vi, id (14)
+- **Required anchors verified in English body:** #gas, #mempool, #finality
+- **Cover images:**
+  - 16:9: https://cms.sspwallet.com/media/1778680631971-cover-getting-started.png
+  - 1:1: https://cms.sspwallet.com/media/1778680632190-cover-getting-started-square.png
+- **Smoke test:**
+  - `GET /api/v1/posts/setting-up-your-first-ssp-wallet?locale=en` → 200
+  - `GET /api/v1/posts/setting-up-your-first-ssp-wallet?locale=de` → 200
+  - Anchor ids in English body: finality, gas, mempool
+- **Word counts per locale:**
+  - en: 1255
+  - es: 1361
+  - zh: 196
+  - pt-BR: 1365
+  - ru: 1138
+  - tr: 1060
+  - ja: 243
+  - de: 1261
+  - fr: 1369
+  - it: 1295
+  - pl: 1119
+  - ko: 1081
+  - vi: 1707
+  - id: 1162

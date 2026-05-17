@@ -1,0 +1,1871 @@
+{
+  "Common": {
+    "skipToContent": "Chuyển đến nội dung",
+    "loading": "Đang tải…",
+    "error": "Đã xảy ra lỗi.",
+    "retry": "Thử lại",
+    "readMore": "Đọc thêm",
+    "breadcrumbHome": "Trang chủ",
+    "breadcrumbAriaLabel": "Breadcrumb",
+    "websiteAriaLabel": "Trang web",
+    "notFoundTitle": "Không tìm thấy trang",
+    "notFoundDescription": "Trang bạn đang tìm kiếm không tồn tại hoặc đã được di chuyển.",
+    "goHome": "Về trang chủ",
+    "errorTitle": "Đã xảy ra lỗi",
+    "errorDescription": "Đã xảy ra lỗi không mong muốn. Hãy thử làm mới trang hoặc quay lại trang chủ.",
+    "tryAgain": "Thử lại",
+    "translationPendingBanner": "Bài viết này chưa được dịch — đang hiển thị tiếng Anh.",
+    "localeBadge": {
+      "en": "EN",
+      "es": "ES",
+      "zh": "中",
+      "pt-BR": "PT",
+      "ru": "RU",
+      "tr": "TR",
+      "ja": "日",
+      "de": "DE",
+      "fr": "FR",
+      "it": "IT",
+      "pl": "PL",
+      "ko": "한",
+      "vi": "VI",
+      "id": "ID"
+    }
+  },
+  "Header": {
+    "home": "Trang chủ",
+    "enterprise": "Doanh nghiệp",
+    "features": "Tính năng",
+    "newsroom": "Tin tức",
+    "academy": "Học viện",
+    "guide": "Hướng dẫn",
+    "support": "Hỗ trợ",
+    "contact": "Liên hệ",
+    "more": "Thêm",
+    "download": "Tải xuống",
+    "toggleTheme": "Chuyển đổi giao diện",
+    "toggleMenu": "Chuyển đổi menu",
+    "selectLanguage": "Chọn ngôn ngữ",
+    "learn": "Học",
+    "series": "Loạt bài",
+    "learnGlossary": "Bảng thuật ngữ",
+    "learnAcademyDescription": "Bài viết dài được phân loại theo chuyên mục",
+    "learnSeriesDescription": "Lộ trình học nhiều phần",
+    "learnGlossaryDescription": "Thuật ngữ kripto và SSP, hơn 2.000 mục",
+    "learnNewsroomDescription": "Thông báo mới nhất và cập nhật sản phẩm"
+  },
+  "Footer": {
+    "navigation": "Điều hướng",
+    "product": "Sản phẩm",
+    "learn": "Học hỏi",
+    "community": "Cộng đồng",
+    "legal": "Pháp lý",
+    "supportedChains": "Các blockchain được hỗ trợ",
+    "rssFeed": "RSS Feed",
+    "cookieSettings": "Cài đặt Cookie",
+    "rights": "Bảo lưu mọi quyền.",
+    "builtForWeb3": "Được xây dựng với ❤️ cho Web3",
+    "poweredByFlux": "Được cung cấp bởi Flux",
+    "brandDescription": "Bảo mật, Đơn giản, Mạnh mẽ. SSP là ví trình duyệt đa chữ ký BIP48 mã nguồn mở, tự lưu trữ, đột phá hỗ trợ nhiều blockchain với Account Abstraction.",
+    "links": {
+      "home": "Trang chủ",
+      "features": "Tính năng",
+      "guide": "Hướng dẫn",
+      "support": "Hỗ trợ",
+      "contact": "Liên hệ",
+      "enterprise": "Doanh nghiệp",
+      "download": "Tải xuống",
+      "mobileSspKey": "SSP Key di động",
+      "sspEnterprise": "SSP Enterprise",
+      "securityAudits": "Kiểm toán bảo mật",
+      "documentation": "Tài liệu",
+      "github": "GitHub",
+      "discord": "Discord",
+      "twitter": "Twitter",
+      "medium": "Medium",
+      "youtube": "YouTube",
+      "helpTranslate": "Hỗ trợ dịch thuật",
+      "newsroom": "Tin tức",
+      "academy": "Học viện",
+      "multisigExplained": "Giải thích Multisig",
+      "security": "Bảo mật",
+      "gettingStarted": "Bắt đầu",
+      "rssFeed": "RSS Feed",
+      "privacyPolicy": "Chính sách quyền riêng tư",
+      "termsOfService": "Điều khoản dịch vụ",
+      "cookiePolicy": "Chính sách Cookie"
+    },
+    "fluxAlt": "Flux"
+  },
+  "Home": {
+    "metaTitle": "SSP Wallet — Ví Crypto Bảo mật, Đơn giản, Mạnh mẽ",
+    "metaDescription": "Ví crypto multisig 2-of-2 thực sự. Tiện ích mở rộng trình duyệt + di động cần thiết cho mọi giao dịch. Hỗ trợ Bitcoin, Ethereum và 15+ blockchain.",
+    "hero": {
+      "auditedBadge": "Được kiểm toán bảo mật bởi Halborn",
+      "titleSecure": "Bảo mật",
+      "titleSimple": "Đơn giản",
+      "titlePowerful": "Mạnh mẽ",
+      "description": "Ví đa chữ ký 2-of-2 thực sự sử dụng derivation BIP48, yêu cầu cả tiện ích mở rộng trình duyệt và thiết bị di động cho mỗi giao dịch. Có WalletConnect v2, ERC-4337 Account Abstraction với chữ ký Schnorr và 15+ blockchain.",
+      "featureMultisig": "Multisig 2-of-2 thực sự",
+      "featureBlockchains": "15+ Blockchain",
+      "featureZeroStorage": "Không lưu trữ dữ liệu",
+      "getStarted": "Bắt đầu ngay",
+      "watchDemo": "Xem demo",
+      "statSupportedChains": "Blockchain được hỗ trợ",
+      "statActiveUsers": "Người dùng hoạt động",
+      "statSecurityAudits": "Kiểm toán bảo mật",
+      "animationAlt": "Hoạt ảnh SSP Wallet",
+      "closeModal": "Đóng hộp thoại",
+      "videoUnsupported": "Trình duyệt của bạn không hỗ trợ thẻ video."
+    },
+    "features": {
+      "titlePart1": "Tại sao chọn",
+      "titleHighlight": "SSP Wallet",
+      "titleSuffix": "?",
+      "description": "Trải nghiệm sự kết hợp hoàn hảo giữa bảo mật, đơn giản và sức mạnh trong một giải pháp ví crypto toàn diện.",
+      "items": {
+        "0": {
+          "title": "Đa chữ ký 2-of-2 bảo mật",
+          "description": "Derivation BIP48 nâng cao với xác thực hai yếu tố thực sự yêu cầu cả chữ ký tiện ích mở rộng trình duyệt và thiết bị di động cho mỗi giao dịch. Bảo mật tối đa qua bảo vệ hai thiết bị."
+        },
+        "1": {
+          "title": "Đơn giản nhưng nâng cao",
+          "description": "Công nghệ đa chữ ký đa tài sản phức tạp được đơn giản hóa. Bảo mật BIP48 nâng cao và Account Abstraction được cung cấp qua giao diện trực quan mà ai cũng có thể sử dụng."
+        },
+        "2": {
+          "title": "Tương tác dApp mạnh mẽ",
+          "description": "Kết nối với hàng nghìn dApp với hỗ trợ WalletConnect v2 (Reown), ký tin nhắn EIP-712 và giao tiếp thời gian thực trên tất cả EVM chain và giao thức DeFi."
+        },
+        "3": {
+          "title": "Hỗ trợ đa chuỗi",
+          "description": "Hỗ trợ 15+ blockchain bao gồm Bitcoin, Ethereum, Polygon, BSC, Avalanche, Base và nhiều hơn nữa. Ví đầu tiên với Account Abstraction đa chữ ký Schnorr gốc (ERC-4337) trên Ethereum, cho phép ví hợp đồng thông minh không cần EOA."
+        },
+        "4": {
+          "title": "Không lưu trữ dữ liệu",
+          "description": "Tự lưu trữ hoàn toàn với không lưu trữ dữ liệu phía máy chủ. Khóa riêng tư, seed và giao dịch chỉ lưu trên thiết bị sử dụng mã hóa AES-GCM cấp quân sự và device fingerprinting để bảo mật và quyền riêng tư tối đa."
+        },
+        "5": {
+          "title": "Mua, Bán & Swap",
+          "description": "Mua tiền mã hóa trực tiếp bằng thẻ tín dụng hoặc chuyển khoản ngân hàng, bán crypto về tiền fiat và swap liền mạch giữa các loại tiền mã hóa khác nhau trong ví. Được cung cấp bởi công cụ tổng hợp nhiều nhà cung cấp để có tỷ giá và tùy chọn tốt nhất."
+        }
+      },
+      "futureTitlePart1": "Được xây dựng cho",
+      "futureTitleHighlight": "Tương lai Tài chính",
+      "highlights": {
+        "0": {
+          "title": "Bảo mật nâng cao",
+          "description": "Mã hóa cấp quân sự và công nghệ đa chữ ký bảo vệ tài sản của bạn"
+        },
+        "1": {
+          "title": "Trải nghiệm liền mạch",
+          "description": "Giao diện trực quan giúp crypto có thể tiếp cận với mọi người"
+        },
+        "2": {
+          "title": "Mã nguồn mở",
+          "description": "Mã minh bạch, được kiểm toán mà bạn có thể tin tưởng và xác minh"
+        }
+      },
+      "demoTitle": "Thử demo tương tác SSP Wallet",
+      "demoDescription": "Trải nghiệm quy trình thiết lập và giao dịch đầy đủ",
+      "launchDemo": "Khởi chạy Demo tương tác",
+      "demoFooter": "Không cần cài đặt • Trải nghiệm 3 phút"
+    },
+    "security": {
+      "badge": "Tiếp cận bảo mật là ưu tiên",
+      "titleHighlight": "Bảo mật cấp ngân hàng",
+      "titleSuffix": "bạn có thể tin tưởng",
+      "description": "Bảo mật của chúng tôi được xác minh độc lập và kiểm toán bởi các công ty bảo mật hàng đầu. Tài sản của bạn được bảo vệ bằng mã hóa cấp quân sự và công nghệ tiên tiến.",
+      "items": {
+        "0": {
+          "title": "Được kiểm toán bảo mật",
+          "description": "Kiểm toán bảo mật toàn diện bởi Halborn cho tất cả các thành phần quan trọng",
+          "highlight": "Được Halborn chứng nhận"
+        },
+        "1": {
+          "title": "Đa chữ ký BIP48",
+          "description": "Đa chữ ký 2-of-2 thực sự sử dụng derivation BIP48 với device fingerprinting và mã hóa AES-GCM",
+          "highlight": "Bảo mật mật mã học"
+        },
+        "2": {
+          "title": "Mã nguồn mở & Xác định",
+          "description": "Mã minh bạch với các bản dựng xác định — ai cũng có thể xác minh ví được phân phối khớp chính xác với mã nguồn",
+          "highlight": "Hoàn toàn có thể xác minh"
+        },
+        "3": {
+          "title": "Không lưu trữ dữ liệu",
+          "description": "Mã hóa dựa trên PBKDF2 với device fingerprinting đảm bảo tất cả dữ liệu được lưu trữ cục bộ cực kỳ an toàn. Không có gì chạm đến máy chủ.",
+          "highlight": "Chỉ tự lưu trữ"
+        }
+      },
+      "auditTitlePart1": "Độc lập",
+      "auditTitleHighlight": "Kiểm toán bảo mật",
+      "auditDescription": "Tất cả các thành phần quan trọng của hệ sinh thái SSP đã được kiểm toán bảo mật nghiêm ngặt bởi Halborn, một công ty bảo mật blockchain nổi tiếng. Cam kết minh bạch của chúng tôi có nghĩa là tất cả báo cáo kiểm toán đều có sẵn công khai.",
+      "indicators": {
+        "0": "Thực hành tốt nhất dẫn đầu ngành",
+        "1": "Được thiết kế theo tiêu chuẩn bảo mật cao nhất",
+        "2": "Giám sát bảo mật liên tục"
+      },
+      "auditedByHalborn": "Được kiểm toán bởi Halborn",
+      "recentReportsTitle": "Báo cáo kiểm toán gần đây",
+      "viewReport": "Xem báo cáo",
+      "reports": {
+        "0": {
+          "title": "SSP Wallet, Key & Relay Audit",
+          "date": "Tháng 3 năm 2025",
+          "status": "Hoàn thành"
+        },
+        "1": {
+          "title": "Smart Contracts Audit",
+          "date": "Tháng 2 năm 2025",
+          "status": "Hoàn thành"
+        },
+        "2": {
+          "title": "SDK Security Audit",
+          "date": "Tháng 2 năm 2025",
+          "status": "Hoàn thành"
+        }
+      },
+      "bugBountyPrefix": "Bug Bounty bảo mật:",
+      "bugBountyText": "Chúng tôi cung cấp phần thưởng cho việc tiết lộ có trách nhiệm các lỗ hổng bảo mật. Hãy giúp chúng tôi giữ SSP an toàn.",
+      "lavaMoatTitleHighlight": "LavaMoat",
+      "lavaMoatTitleSuffix": "Bảo vệ thời gian chạy",
+      "lavaMoatDescription": "SSP Wallet tích hợp LavaMoat, một framework bảo mật bảo vệ chống lại các cuộc tấn công chuỗi cung ứng. LavaMoat bọc mỗi phụ thuộc trong các compartment và chỉ cấp cho chúng quyền truy cập vào những gì cần thiết, ngăn mã độc đánh cắp bí mật hoặc xâm phạm ví.",
+      "lavaIndicators": {
+        "0": "Các gói được bọc trong SES Compartments",
+        "1": "Quyền truy cập nền tảng giới hạn theo gói",
+        "2": "Ngăn sửa đổi JavaScript Primordials"
+      },
+      "learnLavaMoat": "Tìm hiểu về LavaMoat",
+      "protectionLayersTitle": "Các lớp bảo vệ",
+      "layers": {
+        "0": {
+          "title": "Compartment gói",
+          "description": "Mỗi gói chạy trong compartment riêng, ngăn truy cập trái phép vào tài nguyên nhạy cảm"
+        },
+        "1": {
+          "title": "Thực thi chính sách",
+          "description": "Các tệp chính sách xác định chính xác tài nguyên nào mỗi gói có thể truy cập"
+        },
+        "2": {
+          "title": "Phòng thủ chuỗi cung ứng",
+          "description": "Bảo vệ chống lại các phụ thuộc bị xâm phạm đang cố thực hiện các hành động độc hại"
+        },
+        "3": {
+          "title": "Giám sát thời gian chạy",
+          "description": "Thực thi liên tục đảm bảo các chính sách bảo mật vẫn hoạt động trong thời gian chạy"
+        }
+      },
+      "deterministicTitleHighlight": "Bản dựng xác định",
+      "deterministicTitleSuffix": "để tin tưởng tuyệt đối",
+      "deterministicDescription": "SSP Wallet có các bản dựng xác định sử dụng Docker. Điều này có nghĩa là mã nguồn giống nhau tạo ra các nhị phân giống nhau, cho phép bất kỳ ai xác minh độc lập rằng ví bạn tải xuống khớp chính xác với những gì được xây dựng từ mã nguồn đã xuất bản.",
+      "detIndicators": {
+        "0": "Môi trường bản dựng biệt lập dựa trên Docker",
+        "1": "Checksum phát hành được ký mật mã học",
+        "2": "Loại bỏ các vector tấn công chuỗi cung ứng"
+      },
+      "learnVerify": "Tìm hiểu cách xác minh",
+      "verificationProcessTitle": "Quy trình xác minh",
+      "verifySteps": {
+        "0": {
+          "title": "Tải xuống tệp phát hành",
+          "description": "Lấy tệp tiện ích mở rộng, SHA256SUMS và chữ ký GPG từ GitHub releases"
+        },
+        "1": {
+          "title": "Xác minh chữ ký GPG",
+          "description": "Nhập khóa công khai từ OpenPGP keyserver và xác minh các checksum đã ký"
+        },
+        "2": {
+          "title": "Xác minh hash tệp",
+          "description": "Kiểm tra rằng các tệp đã tải xuống khớp với các checksum đã ký"
+        },
+        "3": {
+          "title": "Tùy chọn: Tái tạo bản dựng",
+          "description": "Người dùng nâng cao có thể xây dựng từ nguồn và xác minh đầu ra giống nhau"
+        }
+      }
+    },
+    "enterpriseBand": {
+      "badge": "Dành cho nhóm & Doanh nghiệp",
+      "fluxImageAlt": "Flux Foundation",
+      "titlePart1": "Quản lý quỹ cho nhóm?",
+      "titleHighlight": "Gặp gỡ SSP Enterprise.",
+      "description": "Nhóm của bạn giữ khóa. Nhóm của bạn ký. SSP Enterprise xử lý phối hợp — đề xuất, chính sách và nhật ký kiểm toán mà CFO của bạn thực sự cần.",
+      "highlights": {
+        "0": {
+          "title": "Kho M-of-N Multisig",
+          "description": "Cấu hình bất kỳ ngưỡng ký nào — 2-of-3, 3-of-5, tùy theo quản trị của bạn."
+        },
+        "1": {
+          "title": "Công cụ chính sách giao dịch",
+          "description": "Giới hạn chi tiêu, danh sách trắng địa chỉ, time-lock, phê duyệt admin — 14+ kiểm soát."
+        },
+        "2": {
+          "title": "Không lưu ký. Không MPC.",
+          "description": "Tự lưu trữ ở quy mô doanh nghiệp. Ký hai thiết bị mỗi người ký, xác minh trên chuỗi."
+        }
+      },
+      "fluxEyebrow": "Flux Foundation",
+      "fluxBefore": "Sử dụng SSP Enterprise để bảo mật",
+      "fluxStrong": "Fusion bridge",
+      "fluxAfter": "và quản lý quỹ Foundation với ký đa bên.",
+      "fluxCta": "Đọc case study",
+      "explore": "Khám phá SSP Enterprise",
+      "launchApp": "Khởi chạy ứng dụng Enterprise"
+    },
+    "supportedChains": {
+      "badge": "Hỗ trợ đa chuỗi",
+      "titleHighlight": "15+ Blockchain",
+      "titleSuffix": "trong một ví",
+      "description": "Quản lý tất cả tài sản crypto từ Bitcoin đến Ethereum và hơn thế nữa. SSP Wallet cung cấp quyền truy cập thống nhất vào nhiều mạng blockchain với hỗ trợ WalletConnect v2 cho dApp và khả năng giao dịch mã QR ngoại tuyến.",
+      "chainDescriptions": {
+        "BTC": "Tiền mã hóa đầu tiên",
+        "ETH": "Nền tảng hợp đồng thông minh",
+        "LTC": "Bạc kỹ thuật số",
+        "ZEC": "Tập trung vào quyền riêng tư",
+        "RVN": "Blockchain chuyển tài sản",
+        "DOGE": "Crypto của người dân",
+        "BCH": "Tiền mặt điện tử ngang hàng",
+        "FLUX": "Điện toán phi tập trung",
+        "MATIC": "Mở rộng quy mô Ethereum",
+        "BSC": "Giao dịch nhanh, chi phí thấp",
+        "AVAX": "Blockchain hiệu suất cao",
+        "BASE": "Giải pháp L2 của Coinbase"
+      },
+      "chainLogoAlt": "Logo {name}",
+      "moreFeaturesTitle": "Thêm tính năng",
+      "moreFeaturesHighlight": "Sắp ra mắt",
+      "moreFeaturesDescription": "Chúng tôi liên tục mở rộng SSP Wallet với các mạng blockchain mới và tính năng bảo mật nâng cao dựa trên nhu cầu cộng đồng và tiến bộ công nghệ.",
+      "walletConnectStrong": "WalletConnect v2 (Reown)",
+      "walletConnectAfter": "Kết nối với hàng nghìn dApp",
+      "accountAbstractionStrong": "Account Abstraction (ERC-4337)",
+      "accountAbstractionAfter": "Ví hợp đồng thông minh",
+      "solanaStrong": "Hỗ trợ Solana",
+      "solanaAfter": "Sắp ra mắt với multisig",
+      "viewFullList": "Xem danh sách tài sản đầy đủ"
+    },
+    "cta": {
+      "badge": "Sẵn sàng bắt đầu?",
+      "titlePart1": "Tham gia",
+      "titleHighlight": "Tương lai Crypto",
+      "description": "Tải xuống SSP Wallet ngay hôm nay và trải nghiệm thế hệ quản lý tiền mã hóa tiếp theo với bảo mật và đơn giản vượt trội.",
+      "downloadNow": "Tải xuống ngay",
+      "learnMore": "Tìm hiểu thêm",
+      "options": {
+        "0": {
+          "title": "SSP Wallet - Tiện ích mở rộng trình duyệt",
+          "description": "Có sẵn ngay — Chrome, Brave, Firefox"
+        },
+        "1": {
+          "title": "SSP Key - Ứng dụng 2FA di động",
+          "description": "Bắt buộc để phê duyệt giao dịch và nhiều hơn nữa"
+        },
+        "2": {
+          "title": "SSP Enterprise - Dành cho nhóm",
+          "description": "Kho multisig M-of-N cho tổ chức. Có sẵn ngay."
+        }
+      },
+      "availableNow": "Có sẵn ngay",
+      "comingSoon": "Sắp ra mắt",
+      "statActiveUsers": "Người dùng hoạt động",
+      "statAssetsSecured": "Tài sản được bảo mật",
+      "statBlockchainsSupported": "Blockchain được hỗ trợ",
+      "indicatorAudited": "Được kiểm toán bảo mật",
+      "indicatorOpenSource": "Mã nguồn mở",
+      "indicatorCommunity": "Do cộng đồng thúc đẩy"
+    }
+  },
+  "Newsroom": {
+    "title": "Tin tức",
+    "description": "Tin tức mới nhất, cập nhật sản phẩm và thông báo từ SSP.",
+    "metaTitle": "Tin tức — Tin tức & Cập nhật mới nhất",
+    "metaDescription": "Cập nhật tin tức mới nhất, cập nhật sản phẩm và thông báo từ SSP.",
+    "filterAll": "Tất cả",
+    "loadMore": "Tải thêm",
+    "noArticles": "Chưa có bài viết nào phù hợp với bộ lọc này.",
+    "backToNewsroom": "Quay lại Tin tức",
+    "shareTitle": "Chia sẻ bài viết này",
+    "shareTwitter": "Chia sẻ trên Twitter",
+    "shareFacebook": "Chia sẻ trên Facebook",
+    "shareTelegram": "Chia sẻ trên Telegram",
+    "shareReddit": "Chia sẻ trên Reddit",
+    "shareCopy": "Sao chép liên kết",
+    "shareCopied": "Đã sao chép liên kết!",
+    "tableOfContents": "Trên trang này",
+    "relatedArticles": "Bài viết liên quan",
+    "minRead": "{minutes} phút đọc",
+    "byAuthor": "Bởi {author}",
+    "publishedOn": "Đăng ngày {date}",
+    "updatedOn": "Cập nhật ngày {date}"
+  },
+  "Academy": {
+    "title": "SSP Academy",
+    "description": "Hướng dẫn, bài học và phân tích chuyên sâu giúp bạn làm chủ tự lưu trữ với SSP.",
+    "metaTitle": "SSP Academy — Học tự lưu trữ Crypto",
+    "metaDescription": "Hướng dẫn, bài học và phân tích chuyên sâu về SSP, multisig, bảo mật, DeFi và hơn thế nữa.",
+    "browseByTopic": "Duyệt theo chủ đề",
+    "learningPaths": "Lộ trình học tập",
+    "viewAllSeries": "Xem tất cả",
+    "latestArticles": "Bài viết mới nhất",
+    "comingSoon": "Bài viết mới sắp ra mắt — hãy quay lại sớm.",
+    "categoryEmpty": "Bài viết mới sắp ra mắt. Trong thời gian chờ đợi, hãy khám phá các chủ đề liên quan:",
+    "backToCategory": "Quay lại {category}",
+    "articleCount": "{count, plural, =0 {Không có bài viết} =1 {1 bài viết} other {# bài viết}}",
+    "partsCount": "{count, plural, =0 {Không có phần} =1 {1 phần} other {# phần}}",
+    "difficulty": {
+      "beginner": "Cơ bản",
+      "intermediate": "Trung cấp",
+      "advanced": "Nâng cao"
+    },
+    "atAGlance": "Tóm tắt nhanh",
+    "seriesPart": "Phần {order} trong {total}",
+    "previousPart": "Phần trước",
+    "nextPart": "Phần tiếp theo",
+    "seriesMetaDescription": "Chuỗi bài học có cấu trúc nhiều phần hướng dẫn bạn từ cơ bản đến nâng cao về tự lưu trữ crypto với SSP.",
+    "seriesIndexDescription": "Chuỗi bài học có cấu trúc nhiều phần hướng dẫn bạn từ cơ bản đến nâng cao.",
+    "seriesEmpty": "Lộ trình học tập sắp ra mắt. Trong thời gian chờ đợi, hãy duyệt các bài viết theo chủ đề:",
+    "backToAcademy": "Quay lại Academy",
+    "seriesPartsEmpty": "Các phần sắp ra mắt.",
+    "viewAllLearningPaths": "Xem tất cả lộ trình học tập",
+    "categoryIntros": {
+      "multisig": "Ví multisig yêu cầu nhiều chữ ký để ủy quyền giao dịch. SSP thực thi 2-of-2 trên mọi hành động ký: cả tiện ích mở rộng trình duyệt và ứng dụng SSP Key di động đều phải phê duyệt. Trang này tổng hợp các phân tích chuyên sâu giải thích cách thức hoạt động của mô hình, những cuộc tấn công nó ngăn chặn và giới hạn của nó.",
+      "getting-started": "Mới bắt đầu với crypto, hay quay lại sau một thời gian dài? Bắt đầu từ đây. Các hướng dẫn này bao gồm ví, địa chỉ, giao dịch, gas, mempool và finality — vốn từ vựng bạn cần trước khi chạm vào tiền thật.",
+      "security": "Tự lưu trữ khó vì các cuộc tấn công rất sáng tạo. Bộ sưu tập này đi qua các mối đe dọa thực sự bẫy người dùng: trang phishing, tin nhắn hỗ trợ giả mạo, dApp độc hại, mất seed và cách mô hình 2-of-2 của SSP vô hiệu hóa hầu hết chúng.",
+      "how-to": "Hướng dẫn thực tế kèm ảnh chụp màn hình cho những việc người dùng SSP làm hàng ngày: gửi giao dịch qua các chain, kết nối với dApp qua WalletConnect, swap token và khôi phục sau khi mất thiết bị.",
+      "coin-guides": "Mỗi đồng coin hoặc chain mà SSP hỗ trợ đều có những đặc điểm riêng — UTXO so với account-based, multisig gốc so với ERC-4337, động lực phí, thời gian finality. Bộ sưu tập này trình bày từng cái một.",
+      "defi": "SSP hỗ trợ DeFi thông qua ERC-4337 Account Abstraction trên các EVM chain. Các bài viết này giải thích AA là gì, dApp nào bạn có thể sử dụng an toàn từ ví multisig và cách SSP giữ cho bạn kiểm soát trong khi tham gia vào các giao thức DeFi.",
+      "news-explained": "Ngoài các tiêu đề: những thay đổi quy định, thất bại sàn giao dịch, sự cố giao thức và cập nhật tiêu chuẩn thực sự ảnh hưởng đến người dùng tự lưu trữ — được giải thích không phóng đại."
+    }
+  },
+  "Author": {
+    "title": "{name}",
+    "postsBy": "Bài viết bởi {name}",
+    "noPosts": "Chưa có bài viết nào.",
+    "metaTitle": "{name} — Tác giả SSP",
+    "metaDescriptionFallback": "Bài viết của {name}",
+    "notFoundTitle": "Không tìm thấy tác giả",
+    "breadcrumbLabel": "Tác giả"
+  },
+  "Contact": {
+    "metaTitle": "Liên hệ - SSP Wallet | Kết nối với chúng tôi",
+    "metaDescription": "Liên hệ với đội ngũ SSP Wallet. Nhận hỗ trợ, đặt câu hỏi hoặc thảo luận về hợp tác. Tham gia cộng đồng Discord hoặc liên hệ trực tiếp.",
+    "breadcrumbLabel": "Liên hệ",
+    "heroBadge": "Liên hệ chúng tôi",
+    "heroTitle": "Kết nối với chúng tôi",
+    "heroDescription": "Có câu hỏi về SSP Wallet? Cần hỗ trợ hoặc muốn khám phá hợp tác? Tham gia cộng đồng hoặc liên hệ trực tiếp — chúng tôi luôn sẵn sàng hỗ trợ.",
+    "methodsTitle": "Các cách liên hệ chúng tôi",
+    "methodsSubtitle": "Chọn phương thức liên hệ phù hợp nhất với nhu cầu của bạn",
+    "methods": {
+      "supportTickets": {
+        "title": "Phiếu hỗ trợ",
+        "description": "Nhận hỗ trợ trực tiếp cho các vấn đề kỹ thuật qua hệ thống phiếu",
+        "responseTime": "Trong vòng 24 giờ",
+        "action": "Tạo phiếu"
+      },
+      "discord": {
+        "title": "Cộng đồng Discord",
+        "description": "Tham gia cộng đồng sôi động để được hỗ trợ và thảo luận thời gian thực",
+        "responseTime": "Cộng đồng hoạt động",
+        "action": "Tham gia Discord"
+      },
+      "github": {
+        "title": "Hỗ trợ qua GitHub",
+        "description": "Báo cáo lỗi, yêu cầu tính năng hoặc đóng góp phát triển",
+        "contact": "GitHub Issues & Discussions",
+        "responseTime": "Do cộng đồng thúc đẩy",
+        "action": "Truy cập GitHub"
+      }
+    },
+    "resourcesTitle": "Cần hỗ trợ ngay?",
+    "resourcesSubtitle": "Xem các tài nguyên tự phục vụ để được hỗ trợ ngay lập tức",
+    "resources": {
+      "supportCenter": {
+        "title": "Trung tâm hỗ trợ",
+        "description": "FAQ toàn diện và hướng dẫn khắc phục sự cố"
+      },
+      "setupGuide": {
+        "title": "Hướng dẫn thiết lập",
+        "description": "Hướng dẫn cài đặt từng bước"
+      },
+      "documentation": {
+        "title": "Tài liệu",
+        "description": "Tài liệu kỹ thuật đầy đủ"
+      }
+    },
+    "formTitle": "Gửi tin nhắn cho chúng tôi",
+    "formSubtitle": "Điền vào mẫu bên dưới và chúng tôi sẽ phản hồi sớm nhất có thể",
+    "formTipPrefix": "Gợi ý:",
+    "formTipBefore": "Để được hỗ trợ kỹ thuật nhanh hơn, hãy sử dụng",
+    "formTipLinkSupport": "hệ thống phiếu hỗ trợ",
+    "formTipBetween": "hoặc liên hệ qua",
+    "form": {
+      "fullNameLabel": "Họ và tên *",
+      "fullNamePlaceholder": "Họ và tên của bạn",
+      "emailLabel": "Địa chỉ email *",
+      "emailPlaceholder": "email.cua.ban@example.com",
+      "companyLabel": "Công ty (Tùy chọn)",
+      "companyPlaceholder": "Tên công ty của bạn",
+      "typeLabel": "Loại yêu cầu *",
+      "typeOptions": {
+        "general": "Câu hỏi chung",
+        "support": "Hỗ trợ kỹ thuật",
+        "partnership": "Hợp tác",
+        "security": "Vấn đề bảo mật",
+        "media": "Truyền thông & Báo chí",
+        "business": "Phát triển kinh doanh"
+      },
+      "subjectLabel": "Chủ đề *",
+      "subjectPlaceholder": "Chủ đề ngắn gọn của tin nhắn",
+      "messageLabel": "Nội dung *",
+      "messagePlaceholder": "Vui lòng cung cấp chi tiết về yêu cầu của bạn...",
+      "submitting": "Đang gửi tin nhắn...",
+      "submit": "Gửi tin nhắn",
+      "errorFallback": "Gửi tin nhắn thất bại. Vui lòng thử lại.",
+      "errorGeneric": "Gửi tin nhắn thất bại",
+      "successTitle": "Cảm ơn bạn!",
+      "successDescription": "Tin nhắn của bạn đã được gửi thành công. Chúng tôi sẽ phản hồi sớm.",
+      "successAgain": "Gửi tin nhắn khác"
+    },
+    "communityTitle": "Theo dõi cộng đồng chúng tôi",
+    "communitySubtitle": "Cập nhật tin tức mới nhất, kết nối với người dùng khác và nhận hỗ trợ cộng đồng",
+    "social": {
+      "github": "Phát triển mã nguồn mở & đóng góp",
+      "discord": "Trò chuyện cộng đồng & hỗ trợ thời gian thực",
+      "twitter": "Cập nhật, tin tức & thông báo mới nhất"
+    }
+  },
+  "Download": {
+    "metaTitle": "Tải xuống - SSP Wallet | Nhận ví crypto bảo mật của bạn",
+    "metaDescription": "Tải xuống SSP Wallet cho trình duyệt của bạn. Ví crypto bảo mật, đơn giản, mạnh mẽ với bảo mật đa chữ ký và xác thực di động.",
+    "ogAlt": "Tải xuống SSP Wallet - Ví Crypto Bảo mật",
+    "breadcrumbLabel": "Tải xuống",
+    "heroBadge": "Tải xuống SSP Wallet",
+    "heroTitle": "Bắt đầu với SSP Wallet",
+    "heroDescription": "Tải xuống cả hai thành phần để có bảo mật hoàn chỉnh: tiện ích mở rộng trình duyệt để quản lý ví và ứng dụng di động để xác thực giao dịch.",
+    "stepsTitle": "Quy trình thiết lập hai bước",
+    "stepsSubtitle": "Cả hai thành phần đều cần thiết cho hệ thống multisig 2-of-2 bảo mật",
+    "stepLabel": "Bước {index}",
+    "options": {
+      "chrome": {
+        "title": "SSP Wallet",
+        "subtitle": "Tiện ích mở rộng trình duyệt",
+        "description": "Cài đặt trên Chrome, Brave, Firefox và các trình duyệt dựa trên Chromium khác",
+        "features": {
+          "0": "Bảo mật đa chữ ký",
+          "1": "Hỗ trợ WalletConnect v2",
+          "2": "Tương thích đa chuỗi"
+        },
+        "cta": "Tải xuống tiện ích mở rộng"
+      },
+      "mobile": {
+        "title": "SSP Key",
+        "subtitle": "Ứng dụng 2FA di động",
+        "description": "Ứng dụng đồng hành bắt buộc cho thiết bị iOS và Android cung cấp xác thực bảo mật",
+        "features": {
+          "0": "Xác thực 2FA",
+          "1": "Đồng bộ mã QR",
+          "2": "Lưu trữ khóa bảo mật"
+        },
+        "cta": "Xem ứng dụng di động"
+      }
+    },
+    "browsersTitle": "Trình duyệt được hỗ trợ",
+    "browsersSubtitle": "SSP Wallet hoạt động liền mạch trên tất cả các trình duyệt chính",
+    "mobileBadge": "Ứng dụng di động SSP Key",
+    "mobileTitle": "Hoàn thiện thiết lập bảo mật",
+    "mobileDescription": "SSP Key cung cấp chữ ký thứ hai cần thiết cho tất cả các giao dịch. Cài đặt trên thiết bị di động để hoàn thành bảo mật multisig 2-of-2.",
+    "mobileEasySetupTitle": "Thiết lập dễ dàng",
+    "mobileEasySetupDescription": "Quét mã QR để đồng bộ thiết bị di động với ví trình duyệt ngay lập tức",
+    "mobileSecurityTitle": "Bảo mật tối đa",
+    "mobileSecurityDescription": "Tiền của bạn vẫn an toàn ngay cả khi một thiết bị bị xâm phạm",
+    "googlePlayLabel": "Tải trên",
+    "appStoreLabel": "Tải xuống trên",
+    "mobileAppAlt": "Ứng dụng di động SSP Key",
+    "howTitle": "Cách thức hoạt động",
+    "howSubtitle": "Tìm hiểu mô hình bảo mật multisig 2-of-2",
+    "howSteps": {
+      "1": {
+        "title": "Cài đặt tiện ích mở rộng",
+        "description": "Thêm SSP Wallet vào trình duyệt và tạo ví với cụm từ khôi phục bảo mật"
+      },
+      "2": {
+        "title": "Thiết lập ứng dụng di động",
+        "description": "Cài đặt SSP Key trên điện thoại và đồng bộ với ví trình duyệt qua mã QR"
+      },
+      "3": {
+        "title": "Bảo mật giao dịch",
+        "description": "Mọi giao dịch đều yêu cầu phê duyệt từ cả trình duyệt và thiết bị di động"
+      }
+    },
+    "ctaTitle": "Sẵn sàng bắt đầu?",
+    "ctaSubtitle": "Làm theo hướng dẫn từng bước để thiết lập ví crypto bảo mật",
+    "ctaSetupGuide": "Xem hướng dẫn thiết lập",
+    "ctaSupport": "Nhận hỗ trợ"
+  },
+  "Features": {
+    "metaTitle": "Tính năng - SSP Wallet | Bảo mật Crypto nâng cao & Hỗ trợ đa chuỗi",
+    "metaDescription": "Multisig 2-of-2 thực sự, WalletConnect v2, 15+ blockchain, fiat on/off-ramp, swap crypto, xuất CSV và Account Abstraction. Xem tất cả tính năng SSP Wallet.",
+    "breadcrumbLabel": "Tính năng",
+    "hero": {
+      "badge": "Tính năng nâng cao",
+      "titleHighlight": "Tính năng mạnh mẽ",
+      "titleSuffix": "cho Crypto hiện đại",
+      "description": "Khám phá công nghệ tiên tiến và các tính năng bảo mật khiến SSP Wallet trở thành ví crypto tiên tiến nhất hiện có.",
+      "securityFirst": "Bảo mật là ưu tiên",
+      "lightningFast": "Cực kỳ nhanh",
+      "selfCustody": "Tự lưu trữ"
+    },
+    "security": {
+      "titleHighlight": "Bảo mật",
+      "titleSuffix": "Tính năng",
+      "description": "Bảo mật crypto của bạn là ưu tiên hàng đầu. Mọi tính năng đều được thiết kế theo nguyên tắc bảo mật là ưu tiên.",
+      "items": {
+        "0": {
+          "title": "Bảo vệ Multisig 2-of-2 thực sự",
+          "description": "Đa chữ ký BIP48 cách mạng yêu cầu cả chữ ký trình duyệt và thiết bị di động. Không có điểm lỗi đơn — không thể xâm phạm chỉ với một thiết bị."
+        },
+        "1": {
+          "title": "Kiểm toán bảo mật Halborn",
+          "description": "Được kiểm toán chuyên nghiệp bởi Halborn, công ty bảo mật blockchain hàng đầu được tin tưởng bởi các giao thức lớn. Kiểm thử thâm nhập toàn diện và đánh giá mã đã hoàn thành."
+        },
+        "2": {
+          "title": "Chính sách không lưu trữ dữ liệu",
+          "description": "Chính sách không lưu trữ trên máy chủ nghiêm ngặt loại bỏ các vector tấn công tập trung. Khóa riêng tư, giao dịch và dữ liệu cá nhân của bạn không bao giờ rời khỏi thiết bị."
+        },
+        "3": {
+          "title": "Hoàn toàn mã nguồn mở & Minh bạch",
+          "description": "Tính minh bạch toàn bộ codebase với các bản dựng xác định cho phép nhà nghiên cứu bảo mật và nhà phát triển xác minh độc lập tính toàn vẹn. Không có cửa hậu ẩn hoặc hộp đen độc quyền."
+        }
+      }
+    },
+    "technical": {
+      "titleHighlight": "Kỹ thuật",
+      "titleSuffix": "Đổi mới",
+      "description": "Được xây dựng với công nghệ tiên tiến cho tương lai của tài chính phi tập trung.",
+      "items": {
+        "0": {
+          "title": "Hỗ trợ đa chuỗi (15+)",
+          "description": "Hỗ trợ gốc cho Bitcoin, Ethereum, Polygon, BSC, Avalanche, Base, Arbitrum, Optimism và nhiều hơn nữa với quản lý danh mục thống nhất."
+        },
+        "1": {
+          "title": "Giao dịch Crypto tích hợp",
+          "description": "Swap crypto liền mạch qua các DEX aggregator tích hợp, cùng với fiat on-ramp/off-ramp để mua và bán crypto bằng thẻ thanh toán."
+        },
+        "2": {
+          "title": "Account Abstraction (ERC-4337)",
+          "description": "Ví đầu tiên với Account Abstraction đa chữ ký Schnorr gốc trên Ethereum, cho phép giao dịch không cần gas và ví hợp đồng thông minh."
+        },
+        "3": {
+          "title": "Bảo mật Multisig 2-of-2 thực sự",
+          "description": "Bảo mật hai thiết bị BIP48 cách mạng với tiện ích mở rộng trình duyệt và ứng dụng di động. Cả hai thiết bị đều cần thiết cho mọi giao dịch — bảo vệ tối thượng."
+        },
+        "4": {
+          "title": "Được kiểm toán bảo mật & Mã nguồn mở",
+          "description": "Mã hoàn toàn minh bạch, có thể xác minh, được kiểm toán chuyên nghiệp bởi các chuyên gia bảo mật Halborn. Mã nguồn mở với tiêu chuẩn bảo mật cấp doanh nghiệp."
+        },
+        "5": {
+          "title": "Tích hợp dApp nâng cao",
+          "description": "Hỗ trợ WalletConnect v2, ký tin nhắn EIP-712 và tích hợp trình duyệt toàn diện để kết nối dApp liền mạch."
+        }
+      }
+    },
+    "comparison": {
+      "titlePrefix": "Tại sao chọn",
+      "titleHighlight": "SSP Wallet",
+      "titleSuffix": "?",
+      "description": "So sánh SSP Wallet với các phương thức lưu trữ crypto khác và thấy sự khác biệt.",
+      "columns": {
+        "feature": "Tính năng",
+        "ssp": "SSP Wallet",
+        "selfCustody": "Ví tự lưu trữ",
+        "custodial": "Ví lưu ký",
+        "hardware": "Ví cứng",
+        "exchange": "Sàn giao dịch Crypto"
+      },
+      "values": {
+        "limited": "Hạn chế",
+        "some": "Một số",
+        "varies": "Khác nhau",
+        "rare": "Hiếm",
+        "na": "N/A"
+      },
+      "rows": {
+        "0": {
+          "feature": "Multisig 2-of-2 thực sự",
+          "description": "Đa chữ ký BIP48 thực sự với yêu cầu hai thiết bị"
+        },
+        "1": {
+          "feature": "Swap Crypto tích hợp",
+          "description": "Tích hợp DEX gốc để swap token liền mạch"
+        },
+        "2": {
+          "feature": "Mua/Bán Crypto",
+          "description": "Fiat on-ramp/off-ramp với hỗ trợ thẻ thanh toán"
+        },
+        "3": {
+          "feature": "Kiểm soát tự lưu trữ",
+          "description": "Bạn sở hữu và kiểm soát khóa riêng tư"
+        },
+        "4": {
+          "feature": "Bảo mật 2FA di động",
+          "description": "Ứng dụng di động đóng vai trò yếu tố xác thực thứ hai bảo mật"
+        },
+        "5": {
+          "feature": "Tích hợp dApp",
+          "description": "Hỗ trợ WalletConnect v2 và trình duyệt dApp trực tiếp"
+        },
+        "6": {
+          "feature": "Hỗ trợ đa chuỗi (15+)",
+          "description": "Bitcoin, Ethereum, Polygon, BSC, Avalanche và nhiều hơn nữa"
+        },
+        "7": {
+          "feature": "Không có rủi ro đối tác",
+          "description": "Không có rủi ro phá sản hoặc tịch thu nền tảng"
+        },
+        "8": {
+          "feature": "Mã nguồn mở",
+          "description": "Mã hoàn toàn minh bạch và có thể xác minh"
+        },
+        "9": {
+          "feature": "Được kiểm toán bảo mật",
+          "description": "Kiểm toán bảo mật chuyên nghiệp bởi các công ty hàng đầu"
+        },
+        "10": {
+          "feature": "Account Abstraction (ERC-4337)",
+          "description": "Giao dịch không cần gas và ví hợp đồng thông minh"
+        },
+        "11": {
+          "feature": "Không có cụm từ khôi phục đơn lẻ",
+          "description": "Loại bỏ lỗ hổng cụm từ khôi phục đơn lẻ — sử dụng sao lưu hai thiết bị"
+        },
+        "12": {
+          "feature": "Dễ sử dụng",
+          "description": "Giao diện đơn giản, trực quan cho cả người mới bắt đầu và chuyên gia"
+        },
+        "13": {
+          "feature": "Tốc độ giao dịch",
+          "description": "Ký giao dịch nhanh và tương tác blockchain"
+        },
+        "14": {
+          "feature": "Bảo vệ quyền riêng tư",
+          "description": "Không thu thập dữ liệu cá nhân hoặc theo dõi giao dịch"
+        }
+      },
+      "ctaDownload": "Tải xuống SSP Wallet",
+      "ctaGuide": "Đọc hướng dẫn thiết lập",
+      "ctaEnterprise": "SSP cho doanh nghiệp"
+    }
+  },
+  "Guide": {
+    "metaTitle": "Hướng dẫn thiết lập - SSP Wallet | Hướng dẫn cài đặt đầy đủ",
+    "metaDescription": "Hướng dẫn từng bước để cài đặt và thiết lập SSP Wallet và SSP Key. Hướng dẫn thiết lập đầy đủ cho ví crypto bảo mật với bảo vệ đa chữ ký.",
+    "breadcrumbLabel": "Hướng dẫn thiết lập",
+    "videoJsonLdName": "Cách cài đặt SSP Wallet và SSP Key",
+    "videoJsonLdDescription": "Hướng dẫn video đầy đủ: cài đặt tiện ích mở rộng trình duyệt SSP Wallet và đồng bộ ứng dụng di động SSP Key cho bảo mật multisig 2-of-2.",
+    "howToJsonLdName": "Cách cài đặt SSP Wallet & SSP Key",
+    "howToJsonLdDescription": "Hướng dẫn cài đặt đầy đủ cho tiện ích mở rộng trình duyệt SSP Wallet và ứng dụng đồng hành di động SSP Key cần thiết cho bảo mật multisig 2-of-2.",
+    "howToSupplyDesktop": "Trình duyệt máy tính (Chrome, Brave hoặc Firefox)",
+    "howToSupplyMobile": "Thiết bị di động (iOS 15.1+ hoặc Android 7+)",
+    "heroBadge": "Hướng dẫn thiết lập đầy đủ",
+    "heroTitle": "Cách cài đặt SSP Wallet & SSP Key",
+    "heroDescriptionPart1": "SSP yêu cầu",
+    "heroDescriptionStrong": "quy trình thiết lập 2 bước",
+    "heroDescriptionPart2": ": cài đặt tiện ích mở rộng trình duyệt VÀ ứng dụng di động. Cả hai thiết bị đều cần thiết cho hệ thống multisig 2-of-2 bảo mật bảo vệ crypto của bạn.",
+    "browserExtensionTitle": "Tiện ích mở rộng trình duyệt",
+    "browserExtensionSubtitle": "Cài đặt ví",
+    "mobileKeyTitle": "Khóa di động",
+    "mobileKeySubtitle": "Xác thực di động",
+    "videoTitle": "Hướng dẫn thiết lập bằng video",
+    "videoSubtitle": "Hướng dẫn đầy đủ",
+    "videoDescription": "Xem hướng dẫn video toàn diện giới thiệu cách thiết lập cả SSP Wallet và SSP Key với hướng dẫn từng bước chi tiết.",
+    "videoUnsupported": "Trình duyệt của bạn không hỗ trợ thẻ video.",
+    "videoBullet1": "Cài đặt tiện ích mở rộng trình duyệt",
+    "videoBullet2": "Thiết lập và đồng bộ ứng dụng di động",
+    "videoBullet3": "Các phương pháp bảo mật tốt nhất",
+    "stepsTitle": "Hướng dẫn từng bước",
+    "stepsSubtitle": "Làm theo các hướng dẫn chi tiết này để thiết lập ví crypto bảo mật",
+    "important": "Quan trọng",
+    "openLink": "Mở liên kết →",
+    "androidLabel": "Android",
+    "iosLabel": "iOS",
+    "phases": {
+      "0": {
+        "phase": "Phần một",
+        "title": "Cài đặt SSP Wallet",
+        "steps": {
+          "0": {
+            "title": "Truy cập cửa hàng tiện ích mở rộng",
+            "description": "Mở trình duyệt và điều hướng đến trang Tiện ích mở rộng SSP Wallet cho trình duyệt của bạn (Chrome, Firefox, Brave)",
+            "action": "Điều hướng đến trang tiện ích mở rộng"
+          },
+          "1": {
+            "title": "Cài đặt tiện ích mở rộng",
+            "description": "Nhấp 'Thêm vào Chrome/Firefox' hoặc nút 'Cài đặt'. Một cửa sổ pop-up sẽ xuất hiện hỏi bạn có muốn thêm SSP Wallet không. Nhấp 'Thêm' hoặc 'Cài đặt' để hoàn thành cài đặt.",
+            "action": "Thêm vào trình duyệt"
+          },
+          "2": {
+            "title": "Mở ví",
+            "description": "Tìm logo ví SSP trong trình duyệt và nhấp vào đó. Làm theo các lời nhắc để bắt đầu.",
+            "action": "Khởi động ví"
+          },
+          "3": {
+            "title": "Tạo mật khẩu",
+            "description": "Tạo mật khẩu của bạn. Vui lòng đọc kỹ Tuyên bố miễn trách nhiệm của SSP Wallet và xác nhận đồng ý.",
+            "action": "Đặt mật khẩu"
+          },
+          "4": {
+            "title": "Tạo ví",
+            "description": "Nhấp 'Tạo ví' để khởi tạo ví mới.",
+            "action": "Khởi tạo ví"
+          },
+          "5": {
+            "title": "Sao lưu cụm từ khôi phục",
+            "description": "Nhấp 'Hiển thị cụm từ khôi phục ví Mnemonic.' Lưu trữ cụm từ khôi phục an toàn và xác nhận đã sao lưu.",
+            "action": "Sao lưu bảo mật"
+          },
+          "6": {
+            "title": "Hoàn tất thiết lập",
+            "description": "Nhấp 'Tạo ví' để hoàn tất quá trình. Ví trình duyệt của bạn đã sẵn sàng!",
+            "action": "Hoàn thành thiết lập"
+          }
+        }
+      },
+      "1": {
+        "phase": "Phần hai",
+        "title": "Cài đặt ứng dụng di động SSP Key",
+        "steps": {
+          "0": {
+            "title": "Tải xuống ứng dụng di động",
+            "description": "Tải xuống SSP Key trên thiết bị di động và mở ứng dụng.",
+            "action": "Cài đặt ứng dụng di động"
+          },
+          "1": {
+            "title": "Bắt đầu đồng bộ",
+            "description": "Nhấp 'Đồng bộ khóa' để bắt đầu quá trình thiết lập.",
+            "action": "Bắt đầu đồng bộ"
+          },
+          "2": {
+            "title": "Đặt mật khẩu khóa",
+            "description": "Đặt mật khẩu SSP Key và xác nhận. Sau đó nhấp 'Thiết lập khóa.'",
+            "action": "Tạo mật khẩu khóa"
+          },
+          "3": {
+            "title": "Sao lưu seed khóa",
+            "description": "Nhấp 'Hiển thị cụm từ seed khóa Mnemonic.' Lưu trữ cụm từ seed khóa an toàn và xác nhận sao lưu.",
+            "action": "Sao lưu khóa bảo mật"
+          },
+          "4": {
+            "title": "Hoàn tất thiết lập khóa",
+            "description": "Nhấp 'Thiết lập khóa.' SSP Key hiện đóng vai trò yếu tố xác thực thứ hai cho SSP Wallet của bạn.",
+            "action": "Hoàn tất khóa"
+          },
+          "5": {
+            "title": "Quét mã QR",
+            "description": "Nhấp 'Quét mã' để đồng bộ SSP Key với SSP Wallet. Quét mã QR hiển thị trên trình duyệt.",
+            "action": "Đồng bộ thiết bị"
+          },
+          "6": {
+            "title": "Phê duyệt đồng bộ",
+            "description": "Nhấp 'Phê duyệt đồng bộ' và xác nhận bằng mật khẩu Khóa. Bạn sẽ được thông báo khi đồng bộ thành công.",
+            "action": "Hoàn tất đồng bộ"
+          }
+        }
+      }
+    },
+    "tipsTitle": "Các phương pháp bảo mật tốt nhất",
+    "tipsSubtitle": "Làm theo các mẹo bảo mật quan trọng để giữ ví an toàn",
+    "tips": {
+      "0": {
+        "title": "Bảo mật cụm từ khôi phục",
+        "description": "Lưu trữ cả cụm từ khôi phục ví và khóa ở một vị trí an toàn, ngoại tuyến. Không bao giờ chia sẻ với bất kỳ ai."
+      },
+      "1": {
+        "title": "Sử dụng mật khẩu mạnh",
+        "description": "Tạo mật khẩu độc đáo, mạnh cho cả ví và ứng dụng khóa di động."
+      },
+      "2": {
+        "title": "Giữ di động an toàn",
+        "description": "Đảm bảo thiết bị di động có khóa màn hình và cân nhắc sử dụng xác thực sinh trắc học."
+      }
+    },
+    "successTitle": "Chúc mừng!",
+    "successDescription": "Bằng cách làm theo các bước này, bạn đã cài đặt và thiết lập thành công cả SSP Wallet và SSP Key, đảm bảo trải nghiệm người dùng an toàn và liền mạch.",
+    "successDownload": "Tải xuống ngay",
+    "successSupport": "Nhận hỗ trợ"
+  },
+  "Support": {
+    "metaTitle": "Hỗ trợ - SSP Wallet | Nhận trợ giúp & Hỗ trợ kỹ thuật",
+    "metaDescription": "Nhận hỗ trợ toàn diện cho SSP Wallet. Tìm câu trả lời cho các câu hỏi thường gặp, truy cập tài liệu, kết nối với cộng đồng hoặc liên hệ đội hỗ trợ chuyên gia.",
+    "breadcrumbLabel": "Hỗ trợ",
+    "heroBadge": "Trung tâm hỗ trợ",
+    "heroTitle": "Chúng tôi có thể giúp gì cho bạn?",
+    "heroDescription": "Tìm câu trả lời cho các câu hỏi thường gặp, truy cập tài liệu hoặc liên hệ với đội hỗ trợ.",
+    "quickLinks": {
+      "docsTitle": "Tài liệu",
+      "docsSubtitle": "Hướng dẫn",
+      "communityTitle": "Cộng đồng",
+      "communitySubtitle": "Trò chuyện",
+      "supportTitle": "Hỗ trợ",
+      "supportSubtitle": "Giúp đỡ"
+    },
+    "channelsTitle": "Nhận hỗ trợ",
+    "channelsSubtitle": "Chọn cách tốt nhất để được giúp đỡ dựa trên nhu cầu của bạn",
+    "channels": {
+      "documentation": {
+        "title": "Tài liệu",
+        "description": "Hướng dẫn và tài liệu toàn diện",
+        "links": {
+          "completeDocs": "Tài liệu đầy đủ",
+          "setupGuide": "Hướng dẫn thiết lập",
+          "featureDocs": "Tài liệu tính năng"
+        }
+      },
+      "community": {
+        "title": "Hỗ trợ cộng đồng",
+        "description": "Nhận trợ giúp từ cộng đồng",
+        "links": {
+          "github": "Thảo luận GitHub",
+          "discord": "Cộng đồng Discord",
+          "twitter": "Hỗ trợ Twitter"
+        }
+      },
+      "direct": {
+        "title": "Hỗ trợ trực tiếp",
+        "description": "Nhận hỗ trợ kỹ thuật cá nhân",
+        "links": {
+          "ticketSystem": "Hệ thống phiếu hỗ trợ",
+          "email": "Hỗ trợ qua email"
+        }
+      }
+    },
+    "faqTitle": "Câu hỏi thường gặp",
+    "faqSubtitle": "Tìm câu trả lời nhanh cho các câu hỏi phổ biến nhất về SSP Wallet",
+    "faqCategories": {
+      "gettingStarted": {
+        "title": "Bắt đầu",
+        "items": {
+          "0": {
+            "question": "SSP Wallet là gì?",
+            "answer": "SSP Wallet là hệ thống multisig 2-of-2 thực sự gồm hai thành phần: SSP Wallet (tiện ích mở rộng trình duyệt) và SSP Key (ứng dụng 2FA di động). Cả hai thiết bị đều cần thiết để ủy quyền giao dịch, cung cấp bảo mật vượt trội cho tài sản crypto trên 15+ blockchain."
+          },
+          "1": {
+            "question": "Làm thế nào để cài đặt SSP Wallet?",
+            "answer": "Bạn có thể cài đặt SSP Wallet như một tiện ích mở rộng Chrome từ Chrome Web Store. Truy cập trang tải xuống và làm theo hướng dẫn thiết lập toàn diện để có hướng dẫn từng bước."
+          },
+          "2": {
+            "question": "SSP Wallet có miễn phí không?",
+            "answer": "Có, SSP Wallet hoàn toàn miễn phí để tải xuống và sử dụng. Chúng tôi không tính phí cho bản thân ví, mặc dù bạn vẫn phải trả phí giao dịch mạng khi thực hiện các giao dịch blockchain."
+          },
+          "3": {
+            "question": "SSP Wallet hỗ trợ những tiền mã hóa nào?",
+            "answer": "SSP Wallet hỗ trợ 15+ blockchain bao gồm Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), Zcash (ZEC), Ravencoin (RVN), Dogecoin (DOGE), Bitcoin Cash (BCH), Flux (FLUX), Polygon (MATIC), BSC, Avalanche (AVAX) và Base. Đối với các chain tương thích EVM, chúng tôi hỗ trợ tất cả token ERC-20 và bạn có thể nhập danh sách token tùy chỉnh. Hỗ trợ Solana sắp ra mắt."
+          },
+          "4": {
+            "question": "Tôi có thể tìm danh sách đầy đủ tài sản được hỗ trợ ở đâu?",
+            "answerBefore": "Để có danh sách toàn diện và cập nhật của tất cả các chain và token được hỗ trợ gốc, vui lòng tham khảo ",
+            "answerLink": "Bảng tính tài sản SSP",
+            "answerAfter": " chính thức của chúng tôi. Bảng tính này được cập nhật thường xuyên với các bổ sung mới và chứa thông tin chi tiết về từng tài sản được hỗ trợ."
+          },
+          "5": {
+            "question": "Tôi có thể sử dụng SSP Wallet với dApp và DeFi không?",
+            "answer": "Có! SSP Wallet có tích hợp WalletConnect v2 (Reown) đầy đủ, cho phép kết nối hàng nghìn ứng dụng phi tập trung trên tất cả các EVM chain được hỗ trợ. Bạn có thể sử dụng các giao thức DeFi, chợ NFT và các dApp khác trong khi duy trì bảo mật của hệ thống multisig 2-of-2."
+          },
+          "6": {
+            "question": "FluxNodes là gì và tôi có thể sử dụng chúng như thế nào?",
+            "answer": "FluxNodes là các node trong mạng Flux giúp bảo mật và duy trì blockchain. Với SSP Wallet, bạn có thể dễ dàng thiết lập và quản lý Fluxnodes, theo dõi hiệu suất và nhận thưởng trực tiếp qua giao diện ví. Fluxnodes yêu cầu một lượng token FLUX thế chấp và cung cấp thu nhập thụ động qua phần thưởng mạng."
+          },
+          "7": {
+            "question": "SSP Wallet có hỗ trợ nạp và rút tiền fiat không?",
+            "answer": "Có! SSP Wallet hỗ trợ nạp và rút tiền fiat thông qua các đối tác tích hợp. Bạn có thể mua tiền mã hóa trực tiếp bằng thẻ tín dụng, chuyển khoản ngân hàng hoặc các phương thức thanh toán khác, và bán crypto trở lại tiền fiat. Tính năng này khả dụng ở các khu vực được hỗ trợ và yêu cầu xác minh KYC."
+          },
+          "8": {
+            "question": "Tôi có thể swap tiền mã hóa trong SSP Wallet không?",
+            "answer": "Có, SSP Wallet bao gồm chức năng swap crypto tích hợp. Bạn có thể dễ dàng đổi một loại tiền mã hóa sang loại khác qua các blockchain được hỗ trợ thông qua các đối tác swap tích hợp. Tính năng swap cung cấp tỷ giá cạnh tranh và thực hiện swap an toàn trong khi duy trì khóa riêng tư."
+          },
+          "9": {
+            "question": "Tôi có thể xuất lịch sử giao dịch không?",
+            "answer": "Có! SSP Wallet hỗ trợ xuất CSV lịch sử giao dịch. Bạn có thể xuất hồ sơ giao dịch chi tiết cho mục đích kế toán, thuế hoặc lưu trữ cá nhân. Xuất CSV bao gồm ngày giao dịch, số tiền, địa chỉ, phí và các chi tiết liên quan khác cho mỗi blockchain được hỗ trợ."
+          },
+          "10": {
+            "question": "Làm thế nào để yêu cầu thêm đồng coin mới?",
+            "answer": "Chúng tôi khuyến khích người dùng liên hệ với đội hỗ trợ hoặc đóng góp trực tiếp trên kho GitHub để yêu cầu hỗ trợ tiền mã hóa mới. Chúng tôi đánh giá từng yêu cầu dựa trên nhu cầu cộng đồng, tính khả thi kỹ thuật và các cân nhắc bảo mật."
+          },
+          "11": {
+            "question": "Có ví di động không?",
+            "answer": "Tin tốt! Chúng tôi đang tích cực mở rộng SSP Wallet sang các nền tảng di động. Hiện tại, SSP Wallet bao gồm tiện ích mở rộng trình duyệt (SSP Wallet) và ứng dụng 2FA di động (SSP Key). Trải nghiệm ví di động đầy đủ đang được phát triển."
+          },
+          "12": {
+            "question": "Tôi có thể sử dụng SSP Wallet trên nhiều thiết bị không?",
+            "answer": "Có, bạn có thể sử dụng SSP Wallet trên nhiều thiết bị. Để thiết lập trên thiết bị mới, bạn cần khôi phục ví và khóa bằng cụm từ khôi phục tương ứng. Mỗi thiết bị yêu cầu thiết lập và đồng bộ đúng cách."
+          },
+          "13": {
+            "question": "Có giới hạn giao dịch với SSP Wallet không?",
+            "answer": "SSP Wallet không áp đặt giới hạn giao dịch. Tuy nhiên, bạn phải tuân theo giới hạn mạng blockchain và số dư khả dụng. Một số mạng có thể có số tiền giao dịch tối thiểu hoặc kích thước giao dịch tối đa dựa trên giao thức."
+          },
+          "14": {
+            "question": "Tôi có thể sử dụng SSP Wallet ngoại tuyến không?",
+            "answer": "SSP Wallet yêu cầu kết nối internet cho hầu hết các hoạt động bao gồm phát sóng giao dịch, cập nhật số dư và đồng bộ giữa các thiết bị. Mặc dù bạn có thể xem một số thông tin đã lưu trong bộ nhớ cache khi ngoại tuyến, nhưng không thể gửi giao dịch khi không có kết nối."
+          }
+        }
+      },
+      "security": {
+        "title": "Bảo mật & Quyền riêng tư",
+        "items": {
+          "0": {
+            "question": "SSP Wallet có bảo mật không?",
+            "answer": "SSP Wallet sử dụng công nghệ đa chữ ký với xác thực tích hợp di động, cung cấp bảo vệ hai khóa. Chúng tôi sử dụng mã hóa tiên tiến và không lưu trữ bất kỳ dữ liệu nào của bạn — mọi thứ đều được lưu trữ cục bộ và do bạn kiểm soát."
+          },
+          "1": {
+            "question": "SSP Key là gì và tại sao tôi cần nó?",
+            "answer": "SSP Key là ứng dụng di động chứa khóa riêng tư thứ hai cần thiết cho hệ thống multisig 2-of-2. Mọi giao dịch phải được ký bởi cả tiện ích mở rộng trình duyệt VÀ thiết bị di động. Điều này đảm bảo tiền của bạn vẫn an toàn ngay cả khi một thiết bị bị xâm phạm. SSP Key khả dụng cho iOS 15.1+ và Android 7+."
+          },
+          "2": {
+            "question": "Tôi có thể khôi phục ví nếu mất thiết bị không?",
+            "answer": "Có, bạn có thể khôi phục ví bằng cụm từ khôi phục. Cả ví và khóa đều có cụm từ khôi phục riêng biệt cần được lưu trữ an toàn ngoại tuyến. Không bao giờ chia sẻ cụm từ khôi phục với bất kỳ ai."
+          },
+          "3": {
+            "question": "SSP Wallet có thu thập dữ liệu cá nhân không?",
+            "answer": "Không, SSP Wallet cam kết không lưu trữ bất kỳ thông tin dữ liệu nào. Khóa riêng tư, lịch sử giao dịch và dữ liệu cá nhân hoàn toàn nằm trong tầm kiểm soát của bạn và được lưu trữ cục bộ trên thiết bị."
+          },
+          "4": {
+            "question": "Bản dựng xác định là gì và tại sao chúng quan trọng?",
+            "answer": "Các bản dựng xác định đảm bảo rằng mã nguồn giống nhau tạo ra các đầu ra nhị phân giống nhau. SSP Wallet sử dụng các bản dựng xác định dựa trên Docker cho phép bất kỳ ai xác minh độc lập rằng tiện ích mở rộng được phân phối khớp chính xác với những gì được xây dựng từ mã nguồn đã xuất bản. Điều này loại bỏ các cuộc tấn công chuỗi cung ứng tiềm năng và cung cấp bằng chứng mật mã về tính toàn vẹn bản dựng."
+          },
+          "5": {
+            "question": "Làm thế nào để xác minh bản dựng xác định của SSP Wallet?",
+            "answerIntro": "Để xác minh các bản dựng SSP Wallet: 1) Tải xuống các tệp phát hành (Chrome/Firefox zips, SHA256SUMS, SHA256SUMS.asc) từ ",
+            "answerLink1": "GitHub releases",
+            "answerMiddle1": ". 2) Nhập khóa công khai từ ",
+            "answerLink2": "OpenPGP keyserver",
+            "answerMiddle2": ". 3) Xác minh chữ ký GPG: ",
+            "answerCode1": "gpg --verify SHA256SUMS.asc SHA256SUMS",
+            "answerMiddle3": ". 4) Xác minh hash: ",
+            "answerCode2": "sha256sum -c SHA256SUMS",
+            "answerMiddle4": ". 5) Tùy chọn tái tạo bản dựng: ",
+            "answerCode3": "git checkout [version] && npm run build:deterministic",
+            "answerOutro": "."
+          },
+          "6": {
+            "question": "Ai ký các bản phát hành SSP Wallet?",
+            "answerBefore": "Tất cả các bản phát hành SSP Wallet đều được ký mật mã bởi security@runonflux.io sử dụng chữ ký GPG. Khóa công khai của chúng tôi khả dụng trên ",
+            "answerLink": "OpenPGP keyserver",
+            "answerAfter": " để xác minh. Quá trình bản dựng xác định bao gồm các môi trường biệt lập dựa trên Docker và các checksum toàn diện (SHA256SUMS) cũng được ký GPG để đảm bảo tính xác thực và toàn vẹn."
+          },
+          "7": {
+            "question": "Tôi có thể sử dụng nhiều SSP Key với một SSP Wallet không?",
+            "answer": "Không, mỗi SSP Wallet chỉ có thể được ghép nối với một SSP Key. Hệ thống multisig 2-of-2 yêu cầu đồng bộ đặc thù thiết bị cho các nonces công khai và dữ liệu chain. Sử dụng nhiều SSP Key sẽ gây ra xung đột đồng bộ."
+          }
+        }
+      },
+      "technical": {
+        "title": "Hỗ trợ kỹ thuật",
+        "items": {
+          "0": {
+            "question": "Những trình duyệt nào được hỗ trợ?",
+            "answer": "SSP Wallet hỗ trợ Google Chrome, Brave, Firefox và các trình duyệt dựa trên Chromium khác. Bạn có thể tải xuống phiên bản Chrome Web Store cho các trình duyệt Chromium hoặc phiên bản Firefox trực tiếp từ GitHub releases."
+          },
+          "1": {
+            "question": "Tôi gặp sự cố khi đồng bộ khóa di động",
+            "answer": "Đảm bảo cả hai thiết bị đều kết nối internet, mã QR hiển thị rõ ràng và bạn đang sử dụng phiên bản mới nhất của cả tiện ích mở rộng trình duyệt và ứng dụng di động. Hãy thử khởi động lại cả hai ứng dụng nếu đồng bộ thất bại."
+          },
+          "2": {
+            "question": "Giao dịch của tôi bị kẹt hoặc đang chờ xử lý",
+            "answer": "Các giao dịch blockchain đôi khi mất thời gian tùy thuộc vào tắc nghẽn mạng. Kiểm tra trạng thái giao dịch trên blockchain explorer. Nếu sử dụng Ethereum, bạn có thể cần tăng phí gas để xác nhận nhanh hơn."
+          },
+          "3": {
+            "question": "Làm thế nào để cập nhật SSP Wallet?",
+            "answer": "Các tiện ích mở rộng trình duyệt thường cập nhật tự động. Bạn có thể kiểm tra cập nhật thủ công trong trang quản lý tiện ích mở rộng của trình duyệt. Đối với ứng dụng di động, kiểm tra app store của thiết bị để cập nhật."
+          },
+          "4": {
+            "question": "SSP Relay là gì và hoạt động như thế nào?",
+            "answer": "SSP Relay là dịch vụ relay mã nguồn mở đóng vai trò cầu nối giữa SSP Wallet và SSP Key. Nó cung cấp thông tin thị trường, dữ liệu phí, cho phép đồng bộ giao dịch và gửi thông báo đẩy. Relay nâng cao trải nghiệm người dùng trong khi duy trì bảo mật."
+          },
+          "5": {
+            "question": "SSP Wallet có hỗ trợ Replace-By-Fee (RBF) không?",
+            "answer": "Có, SSP Wallet hỗ trợ đầy đủ chức năng Replace-By-Fee (RBF). Bạn có thể thay đổi phí giao dịch và thậm chí thay đổi người nhận sau khi phát sóng giao dịch, cho bạn sự linh hoạt trong quản lý giao dịch trên blockchain."
+          },
+          "6": {
+            "question": "SSP Wallet tính phí bao nhiêu?",
+            "answer": "SSP Wallet không có phí — chúng tôi không tính phí cho việc sử dụng ví. Bạn chỉ trả phí mạng blockchain tiêu chuẩn đi trực tiếp đến các miner/validator để xử lý giao dịch. Ví bao gồm lựa chọn phí tự động để tối ưu chi phí giao dịch."
+          },
+          "7": {
+            "question": "Tại sao một số giao dịch không thể được xây dựng?",
+            "answer": "Một số giao dịch có thể thất bại do giới hạn kích thước blockchain và độ phức tạp UTXO. Khi bạn có nhiều đầu vào nhỏ, kích thước giao dịch có thể vượt giới hạn mạng. Trong những trường hợp đó, bạn có thể cần hợp nhất UTXO hoặc chia giao dịch thành các phần nhỏ hơn."
+          },
+          "8": {
+            "question": "Tôi có cần khôi phục ví khi thay đổi thiết bị không?",
+            "answer": "Có, do mã hóa đặc thù thiết bị, bạn phải khôi phục cả ví và khóa khi thay đổi thiết bị hoặc thực hiện các thay đổi hệ thống đáng kể. Giữ cụm từ khôi phục an toàn và có thể truy cập cho quá trình này."
+          },
+          "9": {
+            "question": "Điều gì xảy ra nếu tôi mất thiết bị SSP Key?",
+            "answer": "Nếu mất thiết bị SSP Key, bạn có thể khôi phục nó trên thiết bị mới bằng cụm từ khôi phục SSP Key. Cài đặt ứng dụng SSP Key trên thiết bị mới và sử dụng cụm từ khôi phục để lấy lại quyền truy cập. Bạn sẽ cần đồng bộ lại với tiện ích mở rộng trình duyệt SSP Wallet sau khi khôi phục."
+          },
+          "10": {
+            "question": "Tôi có thể sao lưu ví lên bộ nhớ đám mây không?",
+            "answer": "SSP Wallet không hỗ trợ sao lưu đám mây tự động vì lý do bảo mật. Cụm từ khôi phục phải được lưu trữ ngoại tuyến ở một vị trí an toàn. Không bao giờ lưu trữ cụm từ khôi phục trong bộ nhớ đám mây, email hoặc bất kỳ định dạng kỹ thuật số nào có thể bị xâm phạm."
+          },
+          "11": {
+            "question": "Sự khác biệt giữa cụm từ khôi phục SSP Wallet và SSP Key là gì?",
+            "answer": "SSP Wallet và SSP Key mỗi cái đều có cụm từ khôi phục riêng biệt. Cụm từ khôi phục ví kiểm soát thành phần tiện ích mở rộng trình duyệt, trong khi cụm từ khôi phục khóa kiểm soát thành phần 2FA di động. Cả hai đều cần thiết để khôi phục ví đầy đủ và phải được lưu trữ riêng biệt và an toàn."
+          },
+          "12": {
+            "question": "Làm thế nào để chuyển sang máy tính mới?",
+            "answer": "Để chuyển SSP Wallet sang máy tính mới: 1) Cài đặt tiện ích mở rộng SSP Wallet trên thiết bị mới, 2) Sử dụng cụm từ khôi phục ví để khôi phục tiện ích mở rộng trình duyệt, 3) Đồng bộ lại với ứng dụng di động SSP Key hiện có. Lịch sử giao dịch và cài đặt sẽ cần được cấu hình lại."
+          },
+          "13": {
+            "question": "Tôi nhận được lỗi \"Synchronisation with SSP wallet needed\" trên di động",
+            "answer": "Lỗi này thường xảy ra khi thay đổi điện thoại hoặc khi một blockchain chưa được đồng bộ với SSP Key. Để giải quyết: 1) Mở SSP Wallet, 2) Chuyển sang blockchain bạn muốn đồng bộ lại, 3) Nhấp menu burger (góc trên phải), 4) Chọn \"SSP Wallet Details\", 5) Xác nhận quyền truy cập bằng mật khẩu, 6) Trong hàng đầu tiên, tìm \"Chain Sync with SSP Key\" và nhấp biểu tượng mắt để hiển thị mã QR, 7) Quét mã QR bằng SSP Key và phê duyệt đồng bộ chain."
+          },
+          "14": {
+            "question": "Tôi nhận được lỗi \"SSP Key Public nonces do not match or SSP Key Public nonces are missing\"",
+            "answer": "Lỗi này xảy ra khi các nonces công khai được sử dụng để xây dựng giao dịch không được đồng bộ giữa SSP Wallet và SSP Key. Để giải quyết: 1) Mở menu burger (góc trên phải), 2) Điều hướng đến Cài đặt, 3) Tìm phần \"Public Nonces\" và nhấp \"Sync Public Nonces\", 4) Quét mã QR hiển thị bằng SSP Key, 5) Phê duyệt yêu cầu trên thiết bị di động. Các nonces công khai hiện đã được đồng bộ và bạn có thể bắt đầu giao dịch."
+          }
+        }
+      }
+    },
+    "stillNeedHelpTitle": "Vẫn cần trợ giúp?",
+    "stillNeedHelpDescription": "Không tìm thấy thứ bạn đang tìm kiếm? Gửi tin nhắn cho chúng tôi và đội hỗ trợ sẽ phản hồi sớm nhất có thể.",
+    "emailSupportTitle": "Hỗ trợ qua email",
+    "emailSupportDescription": "Chúng tôi thường phản hồi trong vòng 24 giờ",
+    "openSourceTitle": "Mã nguồn mở",
+    "openSourceDescription": "Báo cáo lỗi hoặc đóng góp trên GitHub",
+    "communityTitle": "Cộng đồng",
+    "communityDescription": "Kết nối với người dùng khác và nhận hỗ trợ ngang hàng",
+    "contactSupportTitle": "Liên hệ hỗ trợ",
+    "form": {
+      "emailLabel": "Địa chỉ email *",
+      "emailPlaceholder": "email.cua.ban@example.com",
+      "typeLabel": "Loại vấn đề *",
+      "typeOptions": {
+        "Question": "Câu hỏi chung",
+        "Incident": "Sự cố kỹ thuật",
+        "Problem": "Cần giúp đỡ",
+        "Feature Request": "Yêu cầu tính năng",
+        "Bug Report": "Báo cáo lỗi"
+      },
+      "subjectLabel": "Chủ đề *",
+      "subjectPlaceholder": "Mô tả ngắn gọn về vấn đề của bạn",
+      "descriptionLabel": "Mô tả *",
+      "descriptionPlaceholder": "Vui lòng cung cấp thông tin chi tiết về vấn đề của bạn...",
+      "submitting": "Đang gửi...",
+      "submit": "Gửi tin nhắn",
+      "errorFallback": "Gửi tin nhắn thất bại. Vui lòng thử lại.",
+      "errorGeneric": "Gửi phiếu thất bại",
+      "successTitle": "Tin nhắn đã được gửi thành công!",
+      "successDescription": "Cảm ơn bạn đã liên hệ. Chúng tôi sẽ phản hồi sớm nhất có thể.",
+      "successAgain": "Gửi tin nhắn khác"
+    }
+  },
+  "Legal": {
+    "lastUpdated": "Cập nhật lần cuối: {date}",
+    "privacyPolicy": {
+      "metaTitle": "Chính sách quyền riêng tư - Hệ sinh thái SSP Wallet",
+      "metaDescription": "Chính sách quyền riêng tư cho toàn bộ hệ sinh thái SSP Wallet. Tìm hiểu cách chúng tôi bảo vệ quyền riêng tư của bạn trên website, tiện ích mở rộng trình duyệt, ứng dụng di động và dịch vụ relay.",
+      "heading": "Chính sách quyền riêng tư"
+    },
+    "termsOfService": {
+      "metaTitle": "Điều khoản dịch vụ - Hệ sinh thái SSP Wallet",
+      "metaDescription": "Điều khoản dịch vụ cho toàn bộ hệ sinh thái SSP Wallet bao gồm website, tiện ích mở rộng trình duyệt, ứng dụng di động và dịch vụ relay.",
+      "heading": "Điều khoản dịch vụ"
+    },
+    "cookiePolicy": {
+      "metaTitle": "Chính sách Cookie - Website SSP Wallet",
+      "metaDescription": "Tìm hiểu cách chúng tôi sử dụng cookie trên website sspwallet.io. Quản lý tùy chọn cookie của bạn và hiểu các thực hành tuân thủ GDPR của chúng tôi.",
+      "heading": "Chính sách Cookie"
+    }
+  },
+  "CheckoutSuccess": {
+    "metaTitle": "Thanh toán thành công | SSP Wallet",
+    "metaDescription": "Đơn hàng của bạn đã được đặt thành công.",
+    "heading": "Thanh toán thành công!",
+    "description": "Đơn hàng của bạn đã được đặt thành công. Cảm ơn bạn đã mua hàng!",
+    "confirmationEmail": "Bạn sẽ nhận được email xác nhận trong giây lát.",
+    "backToHome": "Về trang chủ",
+    "contactSupport": "Liên hệ hỗ trợ"
+  },
+  "CheckoutFailure": {
+    "metaTitle": "Thanh toán thất bại | SSP Wallet",
+    "metaDescription": "Đơn hàng của bạn không thể được xử lý. Vui lòng thử lại.",
+    "heading": "Thanh toán thất bại",
+    "description": "Đơn hàng của bạn không thể được xử lý. Vui lòng thử lại hoặc liên hệ hỗ trợ nếu vấn đề vẫn tiếp diễn.",
+    "tryAgain": "Thử lại",
+    "contactSupport": "Liên hệ hỗ trợ"
+  },
+  "Categories": {
+    "multisig": {
+      "title": "Giải thích Multisig",
+      "description": "Cách thức hoạt động thực tế của multisig 2-of-2 trong SSP — và tại sao điều đó quan trọng."
+    },
+    "getting-started": {
+      "title": "Kiến thức cơ bản về Crypto",
+      "description": "Các khái niệm nền tảng mà mọi người dùng crypto cần biết."
+    },
+    "security": {
+      "title": "Bảo mật & Tự lưu trữ",
+      "description": "Bảo vệ crypto của bạn: seed, phishing, ví cứng, mô hình mối đe dọa."
+    },
+    "how-to": {
+      "title": "Hướng dẫn thực hành",
+      "description": "Hướng dẫn từng bước cho các tác vụ phổ biến trên SSP."
+    },
+    "coin-guides": {
+      "title": "Hướng dẫn Coin & Chain",
+      "description": "Phân tích chuyên sâu về từng đồng coin và blockchain mà SSP hỗ trợ."
+    },
+    "defi": {
+      "title": "DeFi & Account Abstraction",
+      "description": "Staking, cho vay, swap và ERC-4337 được giải thích."
+    },
+    "news-explained": {
+      "title": "Tin tức & Phân tích ngành",
+      "description": "Bối cảnh và phân tích về tin tức crypto và quy định."
+    }
+  },
+  "CaseStudies": {
+    "breadcrumbLabel": "Case Studies",
+    "fluxFoundation": {
+      "metaTitle": "Case Study: Flux Foundation — Quỹ tự lưu trữ với SSP Enterprise",
+      "metaDescription": "Cách Flux Foundation chuyển từ multisig rải rác và script tùy chỉnh sang SSP Enterprise — bảo mật Fusion bridge và quỹ Foundation với các kho M-of-N trên mọi chain họ sử dụng.",
+      "breadcrumbLabel": "Flux Foundation",
+      "logoAlt": "Flux Foundation",
+      "eyebrow": "Case Study",
+      "titlePart1": "Flux Foundation ×",
+      "titlePart2": "SSP Enterprise",
+      "subtitle": "Cách Flux Foundation chuyển từ multisig rải rác và script tùy chỉnh sang một nền tảng tự lưu trữ duy nhất — bảo mật Fusion bridge và quỹ Foundation mà không giao khóa cho bất kỳ ai.",
+      "heroQuote": "Chúng tôi cần kiểm soát hoàn toàn tài chính của mình, minh bạch với cộng đồng và không có MPC hộp đen nào nằm giữa chúng tôi và quỹ của chính mình. SSP Enterprise là nền tảng đầu tiên chúng tôi tìm thấy đáp ứng cả ba yếu tố — trên mọi chain chúng tôi thực sự sử dụng.",
+      "heroQuoteAttribution": "— Tadeas Kmenta, Flux Foundation",
+      "factSheet": {
+        "organizationLabel": "Tổ chức",
+        "organizationValue": "Flux Foundation",
+        "industryLabel": "Ngành",
+        "industryValue": "Cơ sở hạ tầng phi tập trung",
+        "useCaseLabel": "Trường hợp sử dụng",
+        "useCaseValue": "Quỹ Foundation + multisig Fusion bridge",
+        "chainsLabel": "Các chain",
+        "chainsValue": "BTC, ETH, FLUX, EVM L2s",
+        "vaultModelLabel": "Mô hình kho",
+        "vaultModelValue": "Multisig M-of-N, hai thiết bị mỗi người ký",
+        "statusLabel": "Trạng thái",
+        "statusValue": "Đang vận hành"
+      },
+      "before": {
+        "title": "Trước đây: multisig rải rác và script tùy chỉnh",
+        "intro": "Flux Foundation đã quản lý ký đa bên trong nhiều năm. Vấn đề không phải là thiếu multisig — mà là không có gì kết nối chúng lại với nhau qua các chain, và tất cả các lựa chọn thương mại đều yêu cầu sự đánh đổi mà nhóm không sẵn lòng thực hiện.",
+        "items": {
+          "0": {
+            "title": "Thiết lập multisig rải rác",
+            "description": "Các ví multisig khác nhau trên các chain khác nhau, mỗi cái với đặc điểm riêng, người ký và thủ tục khôi phục."
+          },
+          "1": {
+            "title": "Script tùy chỉnh để kết nối",
+            "description": "Công cụ nội bộ để xây dựng giao dịch, điều phối ký và phát sóng — được duy trì thủ công."
+          },
+          "2": {
+            "title": "Không có nhật ký kiểm toán thống nhất",
+            "description": "Các phê duyệt nằm trong các luồng chat và tài liệu chung. Tái cấu trúc ai đã ký gì yêu cầu phải đào sâu."
+          },
+          "3": {
+            "title": "Không có lựa chọn trung gian trên thị trường",
+            "description": "Các nhà lưu ký và nhà cung cấp MPC có nghĩa là tin tưởng một hộp đen. Các công cụ multisig có sẵn chỉ dành cho Ethereum."
+          }
+        }
+      },
+      "decision": {
+        "title": "Quyết định",
+        "intro": "Nhóm đã đánh giá các lựa chọn thay thế và nhóm chúng thành ba nhóm. Mỗi nhóm đều có điểm bất khả vượt qua.",
+        "bucket1Eyebrow": "Nhóm 1",
+        "bucket1Title": "Nhà lưu ký MPC",
+        "bucket1Description": "Fireblocks, BitGo và tương tự. Nhà cung cấp giữ một phần mỗi khóa.",
+        "bucket1Verdict": "Không phải tự lưu trữ thực sự.",
+        "bucket2Eyebrow": "Nhóm 2",
+        "bucket2Title": "Multisig đơn chuỗi",
+        "bucket2Description": "Safe và tương tự. Chỉ Ethereum, không có hỗ trợ UTXO gốc.",
+        "bucket2Verdict": "Chúng tôi cũng giữ Bitcoin và Flux.",
+        "bucket3Eyebrow": "Nhóm 3",
+        "bucket3Title": "Multisig cơ bản",
+        "bucket3Description": "Ví không có policy engine, phân tích hay nhật ký kiểm toán phù hợp.",
+        "bucket3Verdict": "Chúng tôi sẽ phải tự xây dựng công cụ lại.",
+        "conclusion": "SSP Enterprise là nền tảng duy nhất giải quyết cả ba cùng một lúc: đa chuỗi gốc (UTXO và EVM), tự lưu trữ thực sự không chia sẻ khóa nhà cung cấp, và policy engine tích hợp, phân tích và nhật ký kiểm toán."
+      },
+      "whatChanged": {
+        "title": "Những gì đã thay đổi",
+        "intro": "Một nền tảng, mọi chain mà Foundation tương tác, một mô hình ký nhất quán. Các script tùy chỉnh đã bị dừng. Nhật ký kiểm toán luồng chat được thay thế bởi các hồ sơ có thể quy trách nhiệm trên nền tảng. Multisig quỹ và bridge cùng tồn tại dưới cùng một quản trị.",
+        "items": {
+          "0": {
+            "title": "Kho M-of-N trên mọi chain chúng tôi chạm",
+            "description": "Bitcoin, Ethereum, Flux và EVM L2 — cùng nền tảng, cùng mô hình tinh thần, cùng đảm bảo bảo mật."
+          },
+          "1": {
+            "title": "Hai thiết bị mỗi người ký, không có ngoại lệ",
+            "description": "Tiện ích mở rộng trình duyệt và ứng dụng di động cần thiết cho mỗi chữ ký. Một thiết bị bị xâm phạm không thể ký."
+          },
+          "2": {
+            "title": "Nhật ký kiểm toán đáng tin cậy",
+            "description": "Mỗi đề xuất, phê duyệt và từ chối đều được ghi với người ký và dấu thời gian. Thay thế việc tái cấu trúc luồng chat."
+          },
+          "3": {
+            "title": "Tự lưu trữ từ đầu đến cuối",
+            "description": "Không chia sẻ khóa nhà cung cấp. Không có cơ sở hạ tầng MPC để tin tưởng. Nếu SSP biến mất vào ngày mai, tiền của chúng tôi vẫn có thể phục hồi từ seed người ký."
+          }
+        }
+      },
+      "fusionBridge": {
+        "title": "Fusion bridge",
+        "intro": "Fusion bridge là một trong những bề mặt nhạy cảm bảo mật nhất mà Foundation vận hành — nó điều phối chuyển giá trị giữa Flux và các chain khác, và một lỗi ký đơn lẻ có thể là thảm họa. Đây cũng là khối lượng công việc mà mô hình SSP Enterprise trả kết quả rõ ràng nhất.",
+        "items": {
+          "0": {
+            "title": "Multisig trên chuỗi",
+            "description": "Multisig gốc trên mọi chain mà bridge chạm — không có nhà lưu ký hợp đồng thông minh, không có relayer có thể đình trệ hoặc front-run."
+          },
+          "1": {
+            "title": "Ký hai thiết bị mỗi người ký",
+            "description": "Xâm phạm laptop hoặc điện thoại của một người ký không đủ để đẩy giao dịch bridge. Cả hai thiết bị, mỗi lần."
+          },
+          "2": {
+            "title": "Kiểm soát chính sách từng người ký",
+            "description": "Giới hạn và danh sách trắng được cấu hình ở cấp tổ chức và kho, được thực thi trước khi bất kỳ chữ ký nào được thu thập."
+          },
+          "3": {
+            "title": "Có thể kiểm toán từ đầu đến cuối",
+            "description": "Mỗi phê duyệt và từ chối được quy trách nhiệm và gắn dấu thời gian. Trách nhiệm cộng đồng mà không từ bỏ tự lưu trữ."
+          }
+        },
+        "quote": "Fusion bridge hiện chạy trên cơ sở hạ tầng chúng tôi kiểm soát từ đầu đến cuối. Cùng đảm bảo bảo mật mà chúng tôi có cho quỹ của mình, được áp dụng cho một trong những quy trình công việc có rủi ro cao nhất chúng tôi vận hành.",
+        "quoteAttribution": "— Tadeas Kmenta, Flux Foundation"
+      },
+      "cta": {
+        "title": "Cùng mô hình. Có sẵn cho nhóm của bạn.",
+        "description": "Nền tảng mà Flux Foundation chạy Fusion bridge là nền tảng tương tự có sẵn cho bất kỳ nhóm nào muốn multisig tự lưu trữ không nhượng bộ. Bắt đầu miễn phí. Kế hoạch tùy chỉnh theo yêu cầu.",
+        "exploreEnterprise": "Khám phá SSP Enterprise",
+        "launchEnterpriseApp": "Khởi chạy ứng dụng Enterprise"
+      }
+    }
+  },
+  "Enterprise": {
+    "metaTitle": "SSP Enterprise | Multisig tự lưu trữ cho doanh nghiệp",
+    "metaDescription": "Kho multisig M-of-N tự lưu trữ cho quỹ doanh nghiệp. Policy engine, giới hạn chi tiêu, ký hai thiết bị, phân quyền dựa trên vai trò. Không lưu ký, không MPC.",
+    "breadcrumbLabel": "Doanh nghiệp",
+    "heroBadge": "SSP Enterprise",
+    "heroTitlePart1": "Tự lưu trữ",
+    "heroTitlePart2": "cho doanh nghiệp",
+    "heroDescription": "Kho multisig M-of-N cho tổ chức của bạn. Mỗi người ký sử dụng hai thiết bị — tiện ích mở rộng trình duyệt và ứng dụng di động. Không lưu ký. Không MPC. Không có điểm lỗi đơn lẻ.",
+    "heroLaunchApp": "Khởi chạy ứng dụng Enterprise",
+    "heroHowItWorks": "Cách thức hoạt động",
+    "fluxBanner": {
+      "imageAlt": "Flux Foundation",
+      "eyebrow": "Đang vận hành với Flux Foundation",
+      "description": "Bảo mật Fusion bridge và quỹ Foundation trên BTC, ETH, FLUX và EVM L2s.",
+      "cta": "Đọc case study"
+    },
+    "problem": {
+      "title": "Vấn đề",
+      "subtitle": "Doanh nghiệp nắm giữ crypto ngày nay phải đối mặt với những sự đánh đổi không thể",
+      "items": {
+        "0": {
+          "title": "Giải pháp lưu ký",
+          "problem": "Tin tưởng bên thứ ba với khóa của bạn",
+          "risks": {
+            "0": "Rủi ro đối tác (FTX, Celsius)",
+            "1": "Đóng băng tài khoản không báo trước",
+            "2": "Khóa nhà cung cấp và phí cao"
+          }
+        },
+        "1": {
+          "title": "Nhà cung cấp MPC",
+          "problem": "Shard khóa trên máy chủ nhà cung cấp",
+          "risks": {
+            "0": "Nhà cung cấp đóng cửa, bạn cuống cuồng",
+            "1": "Không thể xác minh cơ sở hạ tầng của họ",
+            "2": "Vẫn phụ thuộc tin tưởng"
+          }
+        },
+        "2": {
+          "title": "Ví cứng đơn lẻ",
+          "problem": "Một người, một thiết bị",
+          "risks": {
+            "0": "Rủi ro người chủ chốt",
+            "1": "Không có quản trị nhóm",
+            "2": "Mất thiết bị = mất tiền"
+          }
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "Cách thức hoạt động",
+      "subtitle": "Tự lưu trữ thực sự ở quy mô doanh nghiệp — không nhượng bộ",
+      "steps": {
+        "0": {
+          "title": "Tạo tổ chức",
+          "description": "Thiết lập tổ chức bằng SSP Identity — bằng chứng mật mã học được rút ra từ thiết bị, không chỉ là email."
+        },
+        "1": {
+          "title": "Mời nhóm của bạn",
+          "description": "Thêm thành viên nhóm bằng SSP Identity của họ. Phân công vai trò: Owner, Admin, Member hoặc Viewer. Mỗi thành viên cần SSP Wallet + SSP Key."
+        },
+        "2": {
+          "title": "Tạo kho Multisig",
+          "description": "Cấu hình kho M-of-N cho các mục đích khác nhau — vận hành, quỹ, lương. Chọn những người ký nào cần thiết."
+        },
+        "3": {
+          "title": "Ký cùng nhau",
+          "description": "Đề xuất giao dịch qua ứng dụng web. Mỗi người ký bắt buộc phê duyệt bằng cả tiện ích mở rộng trình duyệt và ứng dụng di động. Phát sóng khi đạt ngưỡng."
+        }
+      },
+      "diagramTitle": "Kiến trúc ký",
+      "diagramSubtitle": "Mỗi chữ ký yêu cầu hai thiết bị mỗi người ký",
+      "signerLabel": "Người ký {label}",
+      "signedLabel": "Đã ký",
+      "waitingLabel": "Đang chờ",
+      "thresholdLabel": "Đạt ngưỡng 2 trong 3 — sẵn sàng phát sóng"
+    },
+    "features": {
+      "title": "Tính năng Enterprise",
+      "subtitle": "Mọi thứ tổ chức cần để quản lý crypto an toàn",
+      "readGuide": "Đọc hướng dẫn",
+      "items": {
+        "0": {
+          "title": "Kho Multisig M-of-N",
+          "description": "Cấu hình bất kỳ ngưỡng ký nào cho nhóm. 2-of-3, 3-of-5 hoặc bất kỳ kết hợp nào phù hợp với mô hình quản trị."
+        },
+        "1": {
+          "title": "Phân quyền dựa trên vai trò",
+          "description": "Các vai trò Owner, Admin, Member và Viewer. Kiểm soát ai có thể đề xuất, ký hoặc chỉ quan sát giao dịch."
+        },
+        "2": {
+          "title": "Ký hai thiết bị",
+          "description": "Mỗi người ký sử dụng cả tiện ích mở rộng trình duyệt và ứng dụng di động. Hai khóa mỗi người, M-of-N trên toàn nhóm."
+        },
+        "3": {
+          "title": "Hỗ trợ đa chuỗi",
+          "description": "Bitcoin, Ethereum, Litecoin, Dogecoin, Flux, Polygon, BSC, Base, Avalanche và nhiều hơn nữa. Một nền tảng cho tất cả chain."
+        },
+        "4": {
+          "title": "Đề xuất giao dịch",
+          "description": "Đề xuất giao dịch với đầy đủ chi tiết. Thành viên nhóm xem xét, phê duyệt hoặc từ chối. Chỉ phát sóng khi đạt ngưỡng."
+        },
+        "5": {
+          "title": "Nhật ký kiểm toán đầy đủ",
+          "description": "Mỗi hành động được ghi vĩnh viễn. Thay đổi thành viên, vận hành kho, phê duyệt giao dịch — trách nhiệm đầy đủ."
+        }
+      }
+    },
+    "policy": {
+      "title": "Công cụ chính sách giao dịch",
+      "subtitle": "Kiểm soát chi tiết lan truyền từ tổ chức đến kho đến người ký cá nhân. Chính sách nghiêm hơn luôn thắng.",
+      "tiers": {
+        "organization": "Tổ chức",
+        "organizationSub": "Chính sách mặc định",
+        "vault": "Kho",
+        "vaultSub": "Ghi đè & tinh chỉnh",
+        "signer": "Người ký",
+        "signerSub": "Giới hạn cá nhân"
+      },
+      "tierFooter": "Các chính sách hợp nhất từ trên xuống — giới hạn nghiêm hơn ở bất kỳ tầng nào được thực thi",
+      "readMore": "Đọc thêm",
+      "items": {
+        "0": {
+          "title": "Giới hạn chi tiêu",
+          "description": "Giới hạn mỗi giao dịch, hàng ngày, hàng tuần và hàng tháng. Đặt bằng USD hoặc token gốc. Kiểm soát tổng hợp và theo token."
+        },
+        "1": {
+          "title": "Danh sách trắng địa chỉ",
+          "description": "Ba chế độ: vô hiệu hóa, cảnh báo hoặc thực thi. Gắn nhãn địa chỉ, hạn chế theo chain. Chặn hoàn toàn các điểm đến không xác định."
+        },
+        "2": {
+          "title": "Trì hoãn Time-Lock",
+          "description": "Thời gian chờ có thể cấu hình trước khi phát sóng. Kích hoạt tự động trên ngưỡng USD. Hủy trước khi thực thi."
+        },
+        "3": {
+          "title": "Phê duyệt Admin",
+          "description": "Yêu cầu phê duyệt admin cho các giao dịch giá trị cao. Đặt ngưỡng USD — bất cứ thứ gì vượt qua cần phê duyệt rõ ràng."
+        },
+        "4": {
+          "title": "Ghi đè từng người ký",
+          "description": "Đặt giới hạn chi tiêu cá nhân cho mỗi thành viên nhóm. Nhà giao dịch cấp thấp được kiểm soát chặt hơn, giám đốc cấp cao được giới hạn cao hơn."
+        },
+        "5": {
+          "title": "Theo dõi tốc độ",
+          "description": "Cửa sổ chi tiêu 30 ngày cuốn theo kho, theo người ký và theo token. Thực thi tự động với dọn dẹp dựa trên TTL."
+        },
+        "6": {
+          "title": "Đóng băng kho khẩn cấp",
+          "description": "Đóng băng ngay lập tức bất kỳ kho nào bằng ký WK hai thiết bị. Chặn tất cả đề xuất cho đến khi được mở khóa. Phản ứng sự cố trong vài giây."
+        },
+        "7": {
+          "title": "Phân cấp chính sách 3 tầng",
+          "description": "Mặc định tổ chức lan truyền đến kho và người ký. Ghi đè cấp kho tinh chỉnh các quy tắc. Chính sách nghiêm hơn luôn thắng."
+        }
+      },
+      "footerStrong": "Phân cấp chính sách 3 tầng với 14+ kiểm soát có thể cấu hình",
+      "footerSuffix": "— có trong mọi gói."
+    },
+    "security": {
+      "title": "Bảo mật 5 lớp",
+      "subtitle": "Bảo vệ theo chiều sâu — mọi lớp đều phải bị xâm phạm để có vi phạm",
+      "layerLabel": "Lớp {n}: {name}",
+      "layers": {
+        "0": {
+          "name": "Bảo mật thiết bị",
+          "description": "Bảo mật cấp OS, xác thực sinh trắc học, secure enclaves trên di động"
+        },
+        "1": {
+          "name": "2FA hai thiết bị",
+          "description": "Tiện ích mở rộng trình duyệt + ứng dụng di động cần thiết cho mỗi chữ ký"
+        },
+        "2": {
+          "name": "Multisig trên chuỗi",
+          "description": "Multisig Bitcoin gốc và xác minh hợp đồng thông minh EVM"
+        },
+        "3": {
+          "name": "Chính sách doanh nghiệp",
+          "description": "Giới hạn chi tiêu, danh sách trắng địa chỉ, time-lock, phê duyệt admin, ghi đè từng người ký, theo dõi tốc độ — 14+ kiểm soát có thể cấu hình"
+        },
+        "4": {
+          "name": "Kiểm toán & Tuân thủ",
+          "description": "Nhật ký bất biến, theo dõi đăng nhập và báo cáo tuân thủ"
+        }
+      },
+      "footerBefore": "SSP Wallet là mã nguồn mở và ",
+      "footerLink": "được kiểm toán bởi Halborn",
+      "footerAfter": ". Tự xác minh mã."
+    },
+    "comparison": {
+      "title": "Chúng tôi so sánh thế nào",
+      "subtitle": "SSP Enterprise so với các lựa chọn thay thế",
+      "columns": {
+        "feature": "Tính năng",
+        "ssp": "SSP Enterprise"
+      },
+      "values": {
+        "partial": "Một phần"
+      },
+      "rows": {
+        "0": "Tự lưu trữ thực sự",
+        "1": "Đa chuỗi",
+        "2": "Multisig trên chuỗi",
+        "3": "Công cụ chính sách giao dịch",
+        "4": "Ký di động",
+        "5": "Mã nguồn mở",
+        "6": "Không khóa nhà cung cấp",
+        "7": "Chi phí hợp lý"
+      },
+      "annualCostLabel": "Chi phí hàng năm",
+      "annualCostSsp": "Miễn phí*",
+      "annualCostFireblocks": "$100K+",
+      "annualCostBitgo": "$50K+",
+      "annualCostSafe": "Phí gas",
+      "footnoteBefore": "* Ví mã nguồn mở miễn phí. Nền tảng Enterprise có gói miễn phí để bắt đầu. ",
+      "footnoteLink": "Liên hệ kinh doanh",
+      "footnoteAfter": " để có kế hoạch tùy chỉnh.",
+      "migrationLabel": "Đang dùng một trong các nền tảng này? Xem hướng dẫn chuyển đổi:",
+      "migrationFireblocks": "Từ Fireblocks",
+      "migrationSafe": "Từ Safe",
+      "migrationBitgo": "Từ BitGo"
+    },
+    "useCases": {
+      "title": "Được xây dựng cho",
+      "subtitle": "Bất kỳ tổ chức nào nắm giữ crypto và cần ký dựa trên nhóm",
+      "readPlaybook": "Đọc playbook",
+      "items": {
+        "0": {
+          "title": "Quỹ doanh nghiệp",
+          "description": "Phê duyệt đa chữ ký cho tiền của công ty. CEO + CFO + Hội đồng = 2-of-3.",
+          "example": "3 giám đốc, 2 người cần ký"
+        },
+        "1": {
+          "title": "Quỹ DAO",
+          "description": "Ra quyết định phi tập trung với bảo mật trên chuỗi cho tiền cộng đồng.",
+          "example": "5 thành viên hội đồng, 3 người cần thiết"
+        },
+        "2": {
+          "title": "Quỹ đầu tư",
+          "description": "Tự lưu trữ cấp tổ chức cho các nhà quản lý quỹ và đối tác hạn chế.",
+          "example": "Nhà quản lý quỹ + tuân thủ + LP"
+        },
+        "3": {
+          "title": "Hợp tác & Liên doanh",
+          "description": "Kiểm soát chung giữa các đối tác với trách nhiệm rõ ràng và nhật ký kiểm toán.",
+          "example": "Kiểm soát bình đẳng, vận hành minh bạch"
+        }
+      }
+    },
+    "chains": {
+      "title": "Đa chuỗi gốc",
+      "subtitle": "Một nền tảng cho tất cả chain — UTXO và EVM",
+      "footer": "Thêm chain được bổ sung thường xuyên. Tất cả token ERC-20 được hỗ trợ trên EVM chain."
+    },
+    "contact": {
+      "title": "Liên hệ kinh doanh",
+      "subtitle": "Cần kế hoạch Enterprise tùy chỉnh, hỗ trợ chuyên dụng hoặc onboarding ưu tiên? Liên hệ với nhóm.",
+      "launchApp": "Khởi chạy ứng dụng Enterprise",
+      "scheduleCall": "Đặt lịch gọi",
+      "directContactStrong": "Thích liên hệ trực tiếp?",
+      "directContactBefore": " Liên hệ ",
+      "directContactBetween": " hoặc nhắn tin ",
+      "directContactAfter": " trên X."
+    },
+    "form": {
+      "fullNameLabel": "Họ và tên *",
+      "fullNamePlaceholder": "Họ và tên của bạn",
+      "emailLabel": "Địa chỉ email *",
+      "emailPlaceholder": "email.cua.ban@company.com",
+      "companyLabel": "Công ty / Tổ chức",
+      "companyPlaceholder": "Tên công ty của bạn",
+      "teamSizeLabel": "Quy mô nhóm",
+      "teamSizePlaceholder": "Chọn quy mô nhóm",
+      "teamSizeOptions": {
+        "2-5": "2-5 người ký",
+        "6-10": "6-10 người ký",
+        "11-25": "11-25 người ký",
+        "25+": "25+ người ký"
+      },
+      "useCaseLabel": "Trường hợp sử dụng chính",
+      "useCasePlaceholder": "Chọn trường hợp sử dụng",
+      "useCaseOptions": {
+        "corporate-treasury": "Quỹ doanh nghiệp",
+        "dao-treasury": "Quỹ DAO",
+        "investment-fund": "Quỹ đầu tư",
+        "partnership": "Hợp tác / Liên doanh",
+        "otc-desk": "OTC Desk",
+        "mining-operation": "Hoạt động khai thác",
+        "exchange": "Sàn giao dịch",
+        "other": "Khác"
+      },
+      "messageLabel": "Cho chúng tôi biết về nhu cầu của bạn",
+      "messagePlaceholder": "Bạn đang đối mặt với những thách thức gì trong việc lưu ký crypto? Tính năng nào quan trọng nhất với nhóm?",
+      "submitting": "Đang gửi yêu cầu...",
+      "submit": "Bắt đầu",
+      "errorFallback": "Gửi yêu cầu thất bại. Vui lòng thử lại.",
+      "errorGeneric": "Gửi yêu cầu thất bại",
+      "successTitle": "Đã nhận yêu cầu!",
+      "successDescription": "Cảm ơn bạn đã quan tâm đến SSP Enterprise. Chúng tôi sẽ liên hệ sớm.",
+      "successAgain": "Gửi yêu cầu khác"
+    },
+    "finalCta": {
+      "title": "Khóa của bạn. Quy tắc của bạn.",
+      "description": "SSP Enterprise mang lại cho tổ chức bảo mật tự lưu trữ với quản trị phần mềm doanh nghiệp. Không lưu ký. Không trung gian. Không nhượng bộ.",
+      "launchApp": "Khởi chạy ứng dụng Enterprise",
+      "downloadWallet": "Tải xuống SSP Wallet",
+      "exploreFeatures": "Khám phá tất cả tính năng"
+    }
+  },
+  "InteractiveDemo": {
+    "modalTitle": "Trải nghiệm SSP Wallet đầy đủ",
+    "modalSubtitle": "Quy trình thiết lập và giao dịch đầy đủ với bảo mật multisig 2-of-2 thực sự",
+    "closeDemo": "Đóng demo",
+    "previous": "Trước",
+    "next": "Tiếp",
+    "restartDemo": "Khởi động lại demo",
+    "downloadSspWallet": "Tải xuống SSP Wallet",
+    "stepCounter": "{phase} - Bước {current} trong {total}",
+    "walletSetupTitle": "Thiết lập SSP Wallet",
+    "walletSetupSubtitle": "Tạo ví trình duyệt với cụm từ khôi phục bảo mật",
+    "keySetupTitle": "Thiết lập SSP Key",
+    "keySetupSubtitle": "Thiết lập ứng dụng di động với cụm từ khôi phục riêng biệt",
+    "deviceSyncTitle": "Đồng bộ thiết bị",
+    "deviceSyncSubtitle": "Kết nối trình duyệt và di động an toàn",
+    "transactionTitle": "Gửi giao dịch",
+    "transactionSubtitle": "Trải nghiệm quy trình bảo mật hai thiết bị",
+    "feedbackCopied": "Đã sao chép!",
+    "feedbackCopiedCheck": "✓ Đã sao chép!",
+    "feedbackConfirmedCheck": "✓ Đã xác nhận!",
+    "chromeWebStore": "Chrome Web Store",
+    "sspWalletName": "SSP Wallet",
+    "byInfluxTech": "bởi InFlux Technologies",
+    "walletStoreTagline": "Ví crypto Bảo mật, Đơn giản, Mạnh mẽ với multisig 2-of-2",
+    "getToBrowser": "Mở trình duyệt",
+    "walletRating": "⭐ 4.8",
+    "walletUserCount": "1K+ người dùng",
+    "walletAudited": "🛡️ Được kiểm toán",
+    "installExtensionTitle": "Cài đặt tiện ích mở rộng SSP Wallet",
+    "installExtensionDescription": "Tải xuống tiện ích mở rộng trình duyệt từ Chrome Web Store. Có sẵn cho Chrome, Brave và Firefox.",
+    "sspWalletSetup": "Thiết lập SSP Wallet",
+    "sspLogoAlt": "Logo SSP",
+    "createYourWallet": "Tạo ví của bạn",
+    "newPasswordLabel": "Mật khẩu mới",
+    "enterSecurePasswordPlaceholder": "Nhập mật khẩu bảo mật",
+    "confirmPasswordLabel": "Xác nhận mật khẩu",
+    "confirmPasswordPlaceholder": "Xác nhận mật khẩu",
+    "agreeToTerms": "Tôi đã đọc và đồng ý với Điều khoản dịch vụ",
+    "createSecurePasswordTitle": "Tạo mật khẩu bảo mật",
+    "createSecurePasswordDescription": "Mật khẩu này mã hóa ví cục bộ. Nó không bao giờ rời khỏi trình duyệt và bảo vệ cụm từ khôi phục.",
+    "backupRequired": "Sao lưu bắt buộc",
+    "walletSeedPhraseHeading": "Cụm từ khôi phục ví của bạn",
+    "writeDownWarning": "⚠️ Viết ra và lưu trữ an toàn!",
+    "clickToRevealSeed": "Nhấp để xem cụm từ khôi phục 24 từ",
+    "showSeedPhrase": "Hiển thị cụm từ khôi phục",
+    "copy": "Sao chép",
+    "writtenItDown": "✓ Tôi đã ghi lại",
+    "seedConfirmedToast": "✓ Cụm từ khôi phục đã xác nhận và sẵn sàng tiếp tục",
+    "backupSeedTitle": "Sao lưu cụm từ khôi phục",
+    "backupSeedDescription": "Cụm từ 24 từ này là khóa chính của bạn. Viết ra và lưu trữ an toàn ngoại tuyến. Đây là cụm từ khôi phục số 1 trong 2.",
+    "walletCreated": "Ví đã tạo",
+    "sspWalletReady": "SSP Wallet sẵn sàng!",
+    "walletSetUpWith": "Ví trình duyệt được thiết lập với:",
+    "securePasswordProtection": "Bảo vệ mật khẩu bảo mật",
+    "twentyFourWordSeedBackedUp": "Cụm từ khôi phục 24 từ đã sao lưu",
+    "readyForMobileSetup": "Sẵn sàng thiết lập ứng dụng di động",
+    "nextStep": "Bước tiếp theo",
+    "setUpKeyMobile": "Thiết lập ứng dụng di động SSP Key",
+    "walletSetupCompleteTitle": "Thiết lập ví hoàn tất",
+    "walletSetupCompleteDescription": "Ví trình duyệt đã sẵn sàng! Bây giờ bạn cần thiết lập ứng dụng di động cho chữ ký thứ hai.",
+    "sspKeyName": "SSP Key",
+    "twoFaMultisigSecurity": "Bảo mật 2FA Multisig",
+    "ratingLabel": "Đánh giá:",
+    "ratingValue": "⭐⭐⭐⭐⭐ 5.0",
+    "developerLabel": "Nhà phát triển:",
+    "developerValue": "Influx Technologies",
+    "downloadsLabel": "Lượt tải:",
+    "downloadsValue": "1.000+",
+    "sizeLabel": "Kích thước:",
+    "iosSizeValue": "35 MB",
+    "androidSizeValue": "46 MB",
+    "requiresLabel": "Yêu cầu:",
+    "iosRequiresValue": "iOS 15.1+",
+    "androidRequiresValue": "Android 7.0+",
+    "downloadForIos": "Tải xuống cho iOS",
+    "downloadForAndroid": "Tải xuống cho Android",
+    "securityAudited": "Được kiểm toán bảo mật",
+    "touchFaceId": "Touch ID / Face ID",
+    "biometricUnlock": "Mở khóa sinh trắc học",
+    "qrCodePairing": "Ghép nối mã QR",
+    "zeroDataStorage": "Không lưu trữ dữ liệu",
+    "downloadKeyMobileTitle": "Tải xuống ứng dụng di động SSP Key",
+    "downloadKeyMobileDescription": "Cài đặt ứng dụng đồng hành di động từ App Store hoặc Google Play. Đây cung cấp chữ ký thứ hai cho các giao dịch.",
+    "sspKeyAlt": "SSP Key",
+    "sspKeySetup": "Thiết lập SSP Key",
+    "appPasswordLabel": "Mật khẩu ứng dụng",
+    "createPasswordPlaceholder": "Tạo mật khẩu",
+    "enableBiometrics": "Bật sinh trắc học",
+    "continueSetup": "Tiếp tục thiết lập",
+    "touchFaceIdEnabled": "✓ Touch ID / Face ID đã bật",
+    "secureMobileKeyTitle": "Bảo mật khóa di động",
+    "secureMobileKeyDescription": "Tạo mật khẩu cho ứng dụng di động và bật xác thực sinh trắc học để tăng cường bảo mật.",
+    "keySeedPhrase": "Cụm từ seed khóa",
+    "generateKeySeed": "Tạo cụm từ seed khóa di động riêng biệt",
+    "showKeySeed": "Hiển thị seed khóa",
+    "saved": "✓ Đã lưu",
+    "keySeedConfirmedToast": "✓ Seed khóa đã xác nhận",
+    "storeSeparatelyWarning": "⚠️ Lưu trữ riêng biệt với seed ví!",
+    "backupKeySeedTitle": "Sao lưu seed khóa di động",
+    "backupKeySeedDescription": "Đây là cụm từ seed 24 từ riêng biệt cho khóa di động. Cả hai seed đều cần thiết để khôi phục SSP đầy đủ.",
+    "sspKeyReady": "SSP Key sẵn sàng!",
+    "passwordProtection": "Bảo vệ mật khẩu",
+    "biometricSecurity": "Bảo mật sinh trắc học",
+    "keySeedBackedUp": "Seed khóa đã sao lưu",
+    "readyToPair": "Sẵn sàng ghép nối",
+    "nextScanQrToConnect": "Tiếp theo: Quét mã QR để kết nối thiết bị",
+    "mobileKeyCompleteTitle": "Thiết lập khóa di động hoàn tất",
+    "mobileKeyCompleteDescription": "Ứng dụng di động đã sẵn sàng! Bây giờ hãy kết nối với ví trình duyệt để có bảo mật 2-of-2.",
+    "sspWalletSyncDevice": "SSP Wallet - Đồng bộ thiết bị",
+    "connectMobileDevice": "Kết nối thiết bị di động",
+    "scanQrWithKeyApp": "Quét mã QR này bằng ứng dụng SSP Key",
+    "connectionIdLabel": "ID kết nối:",
+    "learnMoreLink": "Tìm hiểu thêm tại sspwallet.io",
+    "scanQrCode": "Quét mã QR",
+    "positionQrInFrame": "Đặt mã QR trong khung",
+    "readyToScan": "Sẵn sàng quét",
+    "generatePairingQrTitle": "Tạo mã QR ghép nối",
+    "generatePairingQrDescription": "Ví trình duyệt hiển thị mã QR với logo SSP. Mở ứng dụng SSP Key và quét để kết nối an toàn.",
+    "synchronising": "Đang đồng bộ...",
+    "pairingInProgress": "Đang ghép nối",
+    "establishingSecureConnection": "Đang thiết lập kết nối bảo mật với thiết bị di động...",
+    "exchangingKeys": "Đang trao đổi khóa mã hóa và khóa công khai...",
+    "connectionDetailsHeading": "Chi tiết kết nối",
+    "establishingSspRelay": "Đang thiết lập kết nối SSP relay bảo mật...",
+    "synchronisationComplete": "Đồng bộ hoàn tất!",
+    "qrCodeScanned": "Mã QR đã quét!",
+    "browserWalletLabel": "Ví trình duyệt:",
+    "chromeExtensionValue": "Chrome Extension",
+    "encryptionLabel": "Mã hóa:",
+    "confirmPairing": "Xác nhận ghép nối",
+    "scanningQrCodeTitle": "Đang quét mã QR",
+    "scanningQrCodeDescription": "Ứng dụng di động đọc mã QR và thiết lập kết nối mã hóa với ví trình duyệt.",
+    "deviceConnected": "Thiết bị đã kết nối",
+    "successfullyPaired": "Ghép nối thành công!",
+    "devicesSecurelyConnected": "Các thiết bị của bạn đã được kết nối bảo mật",
+    "encryptionRow": "🔐 Mã hóa:",
+    "active": "Đang hoạt động",
+    "mobileDeviceRow": "📱 Thiết bị di động:",
+    "connected": "Đã kết nối",
+    "twoOfTwoMultisigRow": "🔑 Multisig 2-of-2:",
+    "ready": "Sẵn sàng",
+    "secureConnection": "Kết nối bảo mật",
+    "readyForTransactions": "Sẵn sàng giao dịch",
+    "online": "Trực tuyến",
+    "connectionTypeLabel": "Loại kết nối:",
+    "sspRelaySecured": "SSP Relay bảo mật",
+    "multisigStatusLabel": "Trạng thái Multisig:",
+    "twoOfTwoActive": "2-of-2 đang hoạt động",
+    "walletProtectedByMultisig": "Ví được bảo vệ bởi multisig 2-of-2 thực sự!",
+    "devicesPairedTitle": "Thiết bị đã ghép nối thành công",
+    "devicesPairedDescription": "Hoàn hảo! Trình duyệt và di động hiện đã được kết nối với mã hóa end-to-end. Bạn có thể gửi các giao dịch bảo mật.",
+    "sendTransaction": "Gửi giao dịch",
+    "sendEthereum": "Gửi Ethereum",
+    "recipientAddressLabel": "Địa chỉ người nhận",
+    "amountEthLabel": "Số lượng (ETH)",
+    "transactionSummary": "Tóm tắt giao dịch",
+    "amountLabel": "Số lượng:",
+    "gasFeeLabel": "Phí gas:",
+    "totalLabel": "Tổng:",
+    "sendTransactionButton": "Gửi giao dịch",
+    "createTransactionTitle": "Tạo giao dịch",
+    "createTransactionDescription": "Điền địa chỉ người nhận và số lượng. Giao dịch sẽ yêu cầu phê duyệt thêm từ thiết bị di động.",
+    "waitingForMobileApproval": "Đang chờ phê duyệt từ di động...",
+    "pendingMobileApproval": "Đang chờ phê duyệt di động",
+    "signatureOneCompleteCheckMobile": "Chữ ký 1/2 hoàn tất. Kiểm tra thiết bị di động để phê duyệt giao dịch.",
+    "transactionDetails": "Chi tiết giao dịch",
+    "sendAmount": "Gửi {amount} ETH",
+    "toAddress": "Đến: {address}",
+    "notificationSentToMobile": "Thông báo đã gửi đến thiết bị di động",
+    "transactionApprovalRequired": "Yêu cầu phê duyệt giao dịch",
+    "transactionApproval": "Phê duyệt giao dịch",
+    "amount": "Số lượng",
+    "toAddressLabel": "Địa chỉ đến",
+    "gasFee": "Phí gas",
+    "status": "Trạng thái",
+    "awaitingApproval": "Đang chờ phê duyệt (2/2)",
+    "approveWithTouchId": "Phê duyệt bằng Touch ID",
+    "approveTwoOfTwo": "Phê duyệt (2/2)",
+    "reject": "Từ chối",
+    "mobileConfirmationTitle": "Yêu cầu xác nhận di động",
+    "mobileConfirmationDescriptionBiometric": "Một thông báo xuất hiện trên thiết bị di động. Xem xét chi tiết giao dịch và phê duyệt bằng xác thực sinh trắc học.",
+    "mobileConfirmationDescriptionPassword": "Một thông báo xuất hiện trên thiết bị di động. Xem xét chi tiết giao dịch và phê duyệt bằng mật khẩu.",
+    "transactionBroadcasted": "Giao dịch đã phát sóng!",
+    "signaturesCollected": "Đã thu thập chữ ký",
+    "browserWalletOneOfTwo": "Ví trình duyệt (1/2)",
+    "mobileKeyTwoOfTwo": "Khóa di động (2/2)",
+    "networkStatus": "Trạng thái mạng",
+    "confirmingOnEthereum": "Đang xác nhận trên mạng Ethereum",
+    "usuallyTakesMinutes": "Thường mất 1-3 phút",
+    "transactionHash": "Hash giao dịch",
+    "viewOnEtherscan": "Xem trên Etherscan",
+    "transactionSubmittedTitle": "Giao dịch đã gửi",
+    "transactionSubmittedDescription": "Hoàn hảo! Cả hai chữ ký đã thu thập và giao dịch phát sóng đến Ethereum. Mạng hiện đang khai thác và xác nhận giao dịch multisig 2-of-2 bảo mật của bạn.",
+    "transactionConfirmed": "Giao dịch đã xác nhận",
+    "transactionSuccessful": "Giao dịch thành công!",
+    "confirmedOnEthereum": "Đã xác nhận trên mạng Ethereum.",
+    "hashLabel": "Hash:",
+    "sendAnotherTransaction": "Gửi giao dịch khác",
+    "transactionCompleteCelebration": "🎉 Giao dịch hoàn tất!",
+    "fundsTransferredSummary": "Tiền của bạn đã được chuyển an toàn bằng công nghệ đa chữ ký 2-of-2 thực sự. Cả hai thiết bị đều cần thiết để ủy quyền và ký giao dịch này.",
+    "whyUltraSecure": "Tại sao điều này cực kỳ bảo mật",
+    "twoSeparateDevices": "2 thiết bị riêng biệt cần thiết",
+    "twoSeparateSeeds": "2 cụm từ khôi phục riêng biệt",
+    "trueMultisigBip48": "Đa chữ ký thực sự (BIP48)",
+    "zeroServerStorage": "Không lưu trữ máy chủ"
+  },
+  "Glossary": {
+    "title": "Bảng thuật ngữ",
+    "description": "Thuật ngữ về tiền mã hóa, blockchain và SSP. Hơn 2.000 mục từ CoinMarketCap, Wikipedia và đội ngũ SSP.",
+    "searchPlaceholder": "Tìm trong hơn 2.000 thuật ngữ…",
+    "total": "{count} thuật ngữ",
+    "matches": "{count, plural, =0 {Không có kết quả} =1 {1 kết quả} other {# kết quả}}",
+    "backToGlossary": "Quay lại bảng thuật ngữ",
+    "termSeoTitle": "{term} — Bảng thuật ngữ SSP",
+    "seoTitle": "Bảng thuật ngữ tiền mã hóa — SSP",
+    "seoDescription": "Bảng thuật ngữ về tiền mã hóa, blockchain và SSP. Hơn 2.000 mục có thể tìm kiếm.",
+    "attribution": "Một số mục được điều chỉnh từ \"Bảng thuật ngữ tiền mã hóa\" của Wikipedia theo CC BY-SA 3.0. Các mục khác từ bảng thuật ngữ CoinMarketCap và đội ngũ SSP.",
+    "contentInEnglishBanner": "Nội dung bảng thuật ngữ được hiển thị bằng tiếng Anh. Để xem bài viết theo ngôn ngữ của bạn, hãy truy cập <academyLink>Học viện</academyLink>.",
+    "letterIndexAriaLabel": "Glossary letter index"
+  }
+}

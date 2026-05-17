@@ -1,0 +1,602 @@
+[
+  {
+    "title": "2-of-2 Multisig",
+    "slug": "2-of-2-multisig",
+    "excerpt": "A signing scheme where two independent private keys must each sign before a transaction is valid. SSP's default setup pairs your phone (SSP Key) and a second device (SSP Wallet); neither can spend on its own. The model removes the single-point-of-failure of one-key wallets without introducing a custodian.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "Account Abstraction",
+    "slug": "account-abstraction",
+    "excerpt": "An Ethereum upgrade that lets smart contracts act as first-class wallets, removing the requirement that transactions originate from an externally owned account (EOA). Under ERC-4337, wallets can sponsor gas, batch calls, and enforce custom signature logic. This opens the door to multisig, social recovery, and spending limits without relying on the base protocol.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Address Poisoning",
+    "slug": "address-poisoning",
+    "excerpt": "An attack where an adversary sends a tiny transaction from an address visually similar to one in your history, hoping you copy it from your transaction list when next sending funds. The lookalike address shares the same first and last few characters as the legitimate one. Always verify the full address before signing, or use an address book with verified entries.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Address Type",
+    "slug": "address-type",
+    "excerpt": "The encoding format that determines how a Bitcoin output script is represented as a human-readable string. Common types include Legacy (P2PKH, starting with '1'), Script Hash (P2SH, starting with '3'), and native SegWit (P2WPKH/P2WSH, starting with 'bc1q'). SSP uses P2WSH for its multisig outputs, which is native SegWit and lower in transaction fees than Legacy equivalents.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Air-Gapped",
+    "slug": "air-gapped",
+    "excerpt": "A device that has no active network connection — no Wi-Fi, Bluetooth, or USB data channel — so that malware cannot exfiltrate private keys over the internet. SSP Wallet can operate in an air-gapped mode where transaction data is exchanged exclusively via QR codes, preventing remote key exposure even if the signing device is compromised at the OS level.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Base Fee",
+    "slug": "base-fee",
+    "excerpt": "The minimum per-gas fee required for a transaction to be included in an Ethereum block, introduced by EIP-1559. The base fee is burned rather than paid to validators and adjusts automatically based on network congestion. Users add a priority fee on top of the base fee to incentivize faster inclusion.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Bech32",
+    "slug": "bech32",
+    "excerpt": "The human-readable address encoding used for native SegWit Bitcoin outputs, defined in BIP-173. Bech32 addresses start with 'bc1' on mainnet, use only lowercase letters and digits, and include an error-detection checksum that catches single-character typos. Taproot addresses use the updated Bech32m variant.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "BIP-32",
+    "slug": "bip-32",
+    "excerpt": "Bitcoin Improvement Proposal 32 defines Hierarchical Deterministic (HD) wallets: a scheme for deriving an unlimited tree of child key pairs from a single root seed. Every address in SSP's wallet is derived from the master seed via a BIP-32 path, so one backup covers all current and future addresses. Child keys can be derived without exposing the parent private key.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "BIP-39",
+    "slug": "bip-39",
+    "excerpt": "The standard that encodes a random seed as a sequence of 12 or 24 words drawn from a fixed 2048-word English dictionary. The mnemonic is a deterministic backup of the entire HD wallet: given the same words and passphrase (if any), you recover every private key. SSP generates one BIP-39 mnemonic per device and instructs you to store each offline and separately.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "BIP-44",
+    "slug": "bip-44",
+    "excerpt": "A convention on top of BIP-32 that defines a five-level derivation path — purpose / coin type / account / change / index — so wallets across different software can reach the same addresses from the same seed. SSP follows BIP-44 paths (and the SegWit equivalents BIP-49 and BIP-84) so your keys are recoverable in any BIP-44-compliant wallet.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "BIP322",
+    "slug": "bip322",
+    "excerpt": "A proposed Bitcoin standard for generic message signing that extends the original signMessage format to support SegWit and Taproot addresses. Unlike the legacy format (which only works cleanly with P2PKH), BIP322 constructs a virtual spending transaction to prove ownership of any address type. Support is still inconsistent across wallets and is not required for core transaction signing.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "Block",
+    "slug": "block",
+    "excerpt": "A batch of validated transactions bundled together by a miner or validator and appended to the blockchain. Each block contains a cryptographic reference to the previous block, forming the chain. Bitcoin produces a new block roughly every ten minutes; Ethereum targets twelve seconds per slot.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "Block Height",
+    "slug": "block-height",
+    "excerpt": "The sequential index of a block, counting from the genesis block at height 0. Block height is used to describe when a transaction was mined, to calculate confirmation depth, and to schedule protocol upgrades (soft forks) that activate at a specific height. For example, the Bitcoin halving occurs every 210,000 blocks.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "Bundler",
+    "slug": "bundler",
+    "excerpt": "An ERC-4337 infrastructure node that collects UserOperations from the alternative mempool and submits them to the EntryPoint smart contract in a single on-chain transaction. Bundlers are compensated from the fees embedded in each UserOperation. They are distinct from validators and can be run permissionlessly by anyone.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "Chain Reorganization",
+    "slug": "chain-reorganization",
+    "excerpt": "An event where the network switches from one chain tip to a longer competing chain, orphaning one or more recently mined blocks and their transactions. Transactions in orphaned blocks return to the mempool and must be re-mined. Exchanges and merchant services typically wait for several confirmations before treating a deposit as final, precisely to survive shallow reorganizations.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "Clipboard Hijack",
+    "slug": "clipboard-hijack",
+    "excerpt": "A malware technique that monitors the system clipboard and silently replaces a copied wallet address with an attacker-controlled address before you paste it into a send field. Because crypto addresses are long and opaque, most users do not notice the substitution. Always verify the first and last characters of a pasted address against the original source, or use QR codes instead of copy-paste.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Co-Signing",
+    "slug": "co-signing",
+    "excerpt": "The act of a second party adding their cryptographic signature to a transaction that has already been signed by the first party. In SSP's 2-of-2 model, co-signing is the final step: SSP Key receives the partially signed transaction from SSP Wallet (via the relay), validates the details, and applies the second signature before broadcast. Neither party can unilaterally complete the transaction.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "Coin Control",
+    "slug": "coin-control",
+    "excerpt": "A wallet feature that lets users manually choose which UTXOs are consumed as inputs in a transaction. Advanced users use coin control to consolidate dust, improve privacy by avoiding address reuse, or reduce fees by selecting large UTXOs. Without coin control, the wallet selects inputs automatically using a coin-selection algorithm.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Cold Storage",
+    "slug": "cold-storage",
+    "excerpt": "Any method of keeping private keys on a device that is kept offline and does not have an active internet connection — paper wallets, hardware wallets, or air-gapped computers. Cold storage protects against remote hacks but requires physical security for the device itself. SSP Wallet operating in QR-only mode functions as cold storage for the second signing key.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "Confirmation Depth",
+    "slug": "confirmation-depth",
+    "excerpt": "The number of blocks mined on top of the block containing a given transaction. A transaction mined in the most recent block has a depth of 1 (one confirmation); a depth of 6 is the traditional threshold for treating a Bitcoin payment as irreversible. Deeper confirmation depth makes a double-spend attack exponentially more expensive for a miner.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "Contract Wallet",
+    "slug": "contract-wallet",
+    "excerpt": "A smart contract deployed on-chain that controls funds according to programmatic rules, rather than a single private key. Contract wallets can enforce multisig quorums, spending limits, time locks, and social recovery. Safe Multisig is the most widely used contract wallet on Ethereum; ERC-4337 generalizes this pattern to make contract wallets first-class transaction senders.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Cosigner",
+    "slug": "cosigner",
+    "excerpt": "Any party that holds one of the keys in a multisig quorum and is authorized to contribute a signature toward spending. In SSP's 2-of-2 setup, both the SSP Wallet device and the SSP Key device are cosigners; every spend requires both. In larger M-of-N arrangements, cosigners may be separate individuals, hardware devices, or automated services.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "Derivation Path",
+    "slug": "derivation-path",
+    "excerpt": "A slash-separated sequence of BIP-32 indices that describes the route from a master key to a specific child key, for example m/84'/0'/0'/0/0 for the first native SegWit address on a Bitcoin mainnet account. Hardened derivation steps (marked with ') prevent a compromised child key from revealing the parent. SSP follows standard BIP paths so wallets remain interoperable.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "Dust Limit",
+    "slug": "dust-limit",
+    "excerpt": "The minimum value an output must have to be considered economically spendable — outputs below this threshold would cost more in fees to spend than they are worth. Bitcoin nodes and miners apply dust limits to prevent UTXO-set bloat. Outputs below the dust limit may be unspendable in practice and are sometimes used in dusting attacks.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Dusting Attack",
+    "slug": "dusting-attack",
+    "excerpt": "A privacy attack where an adversary sends a tiny amount of cryptocurrency (dust) to many addresses and then monitors the blockchain to see which addresses consolidate those outputs together in a later transaction, revealing address clusters and potentially linking addresses to an identity. Ignoring or not spending dust outputs mitigates this risk.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "ECDSA",
+    "slug": "ecdsa",
+    "excerpt": "Elliptic Curve Digital Signature Algorithm — the signature scheme used by Bitcoin and pre-Taproot Ethereum. A private key produces a variable-length DER-encoded (r, s) signature (typically 71–72 bytes on Bitcoin) over a message hash; anyone with the corresponding public key can verify it without learning the private key. Bitcoin's secp256k1 curve is used for ECDSA; Ethereum uses the same curve but with an additional recovery parameter.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "EIP-712",
+    "slug": "eip-712",
+    "excerpt": "An Ethereum standard for structured data signing that produces human-readable signature requests in wallet UIs instead of opaque hex blobs. EIP-712 encodes the domain, type, and data fields so users can see exactly what they are signing — a token permit, a trade order, or a multisig payload. It is the foundation for gasless approvals and off-chain order books.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Elliptic Curve",
+    "slug": "elliptic-curve",
+    "excerpt": "A mathematical structure defined by an equation of the form y² = x³ + ax + b over a finite field, used in public-key cryptography because discrete logarithms on the curve are computationally hard. Bitcoin and Ethereum both use the secp256k1 curve; a 256-bit private key maps to a unique public key, but deriving the private key from the public key is infeasible with current hardware.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "Entropy",
+    "slug": "entropy",
+    "excerpt": "A measure of randomness used as the raw seed material when generating cryptographic keys. BIP-39 wallets require 128 or 256 bits of high-quality entropy to generate a 12- or 24-word mnemonic. Weak entropy — from a predictable source like a date of birth or a poorly seeded RNG — makes private keys susceptible to brute-force generation by an attacker.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "EOA",
+    "slug": "eoa",
+    "excerpt": "Externally Owned Account — an Ethereum account controlled by a private key rather than contract code. EOAs can initiate transactions directly and pay gas; smart contracts cannot initiate transactions on their own. Most Ethereum wallets are EOAs, but account abstraction (ERC-4337) allows contract wallets to behave like EOAs through a bundler and EntryPoint.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "ERC-4337",
+    "slug": "erc-4337",
+    "excerpt": "An Ethereum standard that implements account abstraction without a protocol change, using an alternative mempool of UserOperations, a singleton EntryPoint contract, and a permissionless bundler network. ERC-4337 enables smart-contract wallets to pay gas in ERC-20 tokens, batch transactions, and implement arbitrary signature validation. It is the foundation for most next-generation Ethereum wallet architectures.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "Extended Public Key",
+    "slug": "extended-public-key",
+    "excerpt": "An xpub (or ypub/zpub for SegWit variants) is a BIP-32 node that lets any party derive all child public keys in a subtree without knowing any private key. SSP Wallet and SSP Key each share their xpub with each other during pairing to construct the multisig descriptor; neither device can sign on behalf of the other, but both can generate receive addresses.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "Finality",
+    "slug": "finality",
+    "excerpt": "The point at which a transaction or block is considered irreversible. Bitcoin achieves probabilistic finality: after six confirmations, reverting a transaction would require redoing more proof-of-work than the network produces in that time. Ethereum's proof-of-stake uses Casper FFG checkpointing to reach economic finality after two epochs (~13 minutes), after which reversion would require slashing at least one-third of staked ETH.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Firmware Update",
+    "slug": "firmware-update",
+    "excerpt": "A signed software update applied to the operating system of a hardware wallet or embedded device. Firmware updates can patch security vulnerabilities, add coin support, and improve the signing UI. Before applying a firmware update to a hardware wallet, always back up your seed phrase — some updates reset the device. SSP distributes app updates through standard app stores rather than device firmware.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "FROST",
+    "slug": "frost",
+    "excerpt": "Flexible Round-Optimized Schnorr Threshold signatures — a protocol that allows a group of N parties to collaboratively produce a single Schnorr signature, with any threshold T of them present. Unlike ECDSA-based threshold schemes, FROST signatures are indistinguishable from single-signer Schnorr signatures on-chain, providing privacy and fee savings. FROST is a candidate for future SSP key schemes on Taproot-enabled chains.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "Gas Limit",
+    "slug": "gas-limit",
+    "excerpt": "The maximum number of gas units a sender is willing to consume executing an Ethereum transaction. Simple ETH transfers cost a flat 21,000 gas; contract calls can consume millions. If execution exceeds the gas limit, the transaction reverts but the gas is still consumed. Setting too low a gas limit causes reverts; too high wastes nothing extra (unused gas is refunded).",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Gas Price",
+    "slug": "gas-price",
+    "excerpt": "The amount of ETH a sender pays per unit of gas, denominated in gwei (10⁻⁹ ETH). Before EIP-1559, users set a single gas price to bid for block space; after EIP-1559, the fee is split into a burned base fee and a validator priority fee. High gas prices during network congestion are a primary cost driver for on-chain multisig transactions.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Hard Fork",
+    "slug": "fork-hard",
+    "excerpt": "A protocol upgrade that introduces changes incompatible with the previous rules, requiring all nodes to upgrade or be left on the old chain. Hard forks can be contentious — splitting the network into two separate chains with different histories — or coordinated, where the community agrees to upgrade together. Ethereum's transition from proof-of-work to proof-of-stake (The Merge) was a coordinated hard fork.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Hardware Wallet",
+    "slug": "hardware-wallet",
+    "excerpt": "A purpose-built physical device that stores private keys in a secure element and signs transactions without exposing the key material to a connected computer. The host machine sends an unsigned transaction to the hardware wallet; the device displays the details for confirmation, signs internally, and returns only the signature. SSP Wallet running on a dedicated phone achieves similar isolation through software and air-gap controls.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "Hash Function",
+    "slug": "hash-function",
+    "excerpt": "A deterministic function that maps arbitrary-length input data to a fixed-length output (digest) in a way that is fast to compute but infeasible to reverse. Bitcoin uses SHA-256 (double-hashed) for block mining and transaction IDs; Ethereum uses Keccak-256. Collision resistance — the inability to find two inputs that produce the same hash — is fundamental to blockchain integrity.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "HMAC",
+    "slug": "hmac",
+    "excerpt": "Hash-based Message Authentication Code — a construction that uses a cryptographic hash function together with a secret key to produce an authentication tag for a message. BIP-32 uses HMAC-SHA512 internally to derive child keys from a parent key and a derivation index. An HMAC tag verifies both the integrity and authenticity of data without requiring public-key operations.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "Hot Wallet",
+    "slug": "hot-wallet",
+    "excerpt": "A wallet whose private key is held on a device with an active internet connection, such as a mobile app or browser extension. Hot wallets are convenient for frequent transactions but expose the key to network-based attacks. SSP mitigates the hot-wallet risk by requiring a second independent device signature before any transaction is valid.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "Key Derivation",
+    "slug": "key-derivation",
+    "excerpt": "The process of computing a cryptographic key from source material — a password, a seed, or a parent key — using a deterministic algorithm. BIP-32 key derivation uses HMAC-SHA512 to derive child private and public keys from a parent extended key. Key derivation functions (KDFs) like PBKDF2 are also used to stretch a BIP-39 mnemonic into the 512-bit seed before HD derivation begins.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "M-of-N Multisig",
+    "slug": "m-of-n-multisig",
+    "excerpt": "A generalized multisig scheme requiring M signatures from a set of N cosigners before a transaction is valid. A 2-of-3 setup, for example, tolerates one lost key while still requiring two out of three participants to agree on a spend. SSP uses a 2-of-2 variant — the strictest form — so both devices must sign every transaction.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "Malicious DApp",
+    "slug": "malicious-dapp",
+    "excerpt": "A decentralized application designed to trick users into signing transactions that drain their wallet or grant unlimited token approvals to attacker-controlled contracts. Malicious DApps often impersonate legitimate protocols through typosquatted domains or compromised front-ends. SSP's co-signing model provides a second review point: both devices must confirm the transaction data before it is broadcast.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Mempool",
+    "slug": "mempool",
+    "excerpt": "The in-memory pool of unconfirmed transactions that a node has received and validated but not yet seen included in a block. Miners and validators select transactions from the mempool, typically prioritizing those with higher fees. During periods of congestion the mempool can grow to tens of thousands of pending transactions, driving up the fee required for timely confirmation.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "Mempool Submission",
+    "slug": "mempool-submission",
+    "excerpt": "The act of broadcasting a fully signed transaction to one or more network nodes so it enters the mempool and becomes eligible for inclusion in a block. In SSP's workflow, mempool submission is the final step: after both cosigners have applied their signatures, the completed transaction is broadcast to the network. Submission is irreversible once miners pick up the transaction.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Merkle Proof",
+    "slug": "merkle-proof",
+    "excerpt": "A compact cryptographic proof that a specific transaction is included in a block, consisting of only the sibling hashes on the path from the transaction leaf to the Merkle root. A Merkle proof allows a lightweight client (SPV) to verify inclusion without downloading the full block. The proof size grows logarithmically with the number of transactions in the block.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "Merkle Root",
+    "slug": "merkle-root",
+    "excerpt": "A single 32-byte hash that commits to all transactions in a block by repeatedly hashing pairs of transaction hashes up a binary tree. The Merkle root is stored in the block header; changing any transaction would change the root and invalidate the block's proof-of-work. It allows efficient proof of transaction inclusion without downloading the full block.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "Mining",
+    "slug": "mining",
+    "excerpt": "The process of expending computational work to find a block header hash below a network-defined difficulty target, thereby earning the right to append a new block and claim the block reward. Bitcoin uses SHA-256 proof-of-work; miners iterate a nonce until a valid hash is found. Mining secures the network by making history rewriting prohibitively expensive.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Multisig",
+    "slug": "multisig",
+    "excerpt": "Short for multi-signature — any scheme that requires more than one cryptographic signature to authorize a transaction. Multisig can be implemented at the script level (Bitcoin P2SH/P2WSH), via threshold signature protocols (MuSig2, FROST), or through smart contracts (Safe Multisig on Ethereum). SSP's 2-of-2 multisig uses Bitcoin's native P2WSH script for its default Bitcoin wallet.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "MuSig2",
+    "slug": "musig2",
+    "excerpt": "A Schnorr-based multisig protocol that aggregates several signatures into a single 64-byte signature indistinguishable from a single-signer transaction. Lower on-chain cost and better privacy than script-based multisig, at the price of an interactive signing round between cosigners. Not used in SSP's default 2-of-2 flow today (which uses P2WSH/script-based multisig), but a candidate for future Taproot-based variants.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "Nonce",
+    "slug": "nonce",
+    "excerpt": "In Ethereum, a per-account counter that increments with each transaction sent from that account. The nonce ensures transactions are processed in order and prevents replay attacks: a transaction with a nonce that has already been used will be rejected. If you send a transaction with nonce 5 while nonce 4 is still pending, the nonce-5 transaction will be stuck until nonce 4 confirms.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Nonce (Bitcoin)",
+    "slug": "nonce-bitcoin",
+    "excerpt": "A 32-bit field in the Bitcoin block header that miners increment to change the block hash during proof-of-work mining. Unlike the Ethereum account nonce (which counts transactions), the Bitcoin nonce has no transaction-ordering role — it simply gives miners a variable to iterate over when searching for a hash below the difficulty target. When the 32-bit space is exhausted, miners also vary the extra nonce in the coinbase transaction.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "OP_CHECKMULTISIG",
+    "slug": "op-checkmultisig",
+    "excerpt": "A Bitcoin Script opcode that verifies M-of-N signatures against a list of public keys embedded in the redeem script. It is the foundation of Legacy and P2SH multisig outputs; P2WSH multisig uses the SegWit-compatible OP_CHECKMULTISIG inside a witness script. A well-known off-by-one bug requires scripts to push a dummy OP_0 element before the signatures; Tapscript replaces this opcode with OP_CHECKSIGADD to fix the issue.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "P2SH",
+    "slug": "p2sh",
+    "excerpt": "Pay-to-Script-Hash — a Bitcoin output type that locks funds to the hash of a redeem script, deferring the script complexity to spend time. P2SH addresses start with '3' and enabled wallets to encode multisig and other complex conditions without the sender needing to know the full script. Superseded by P2WSH for new multisig deployments because P2WSH moves the witness data outside the transaction weight.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "P2WSH",
+    "slug": "p2wsh",
+    "excerpt": "Pay-to-Witness-Script-Hash — the native SegWit equivalent of P2SH, where the redeem script and witness data are moved to the segregated witness field. P2WSH addresses start with 'bc1q' and benefit from reduced transaction weight (lower fees) and the elimination of transaction malleability. SSP uses P2WSH for its Bitcoin multisig outputs.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Passphrase",
+    "slug": "passphrase",
+    "excerpt": "An optional extra string — sometimes called the '25th word' — appended to a BIP-39 mnemonic before the seed is derived. A passphrase creates a completely separate wallet from the same seed words, so an attacker who finds the mnemonic still cannot access funds without the passphrase. The passphrase is not stored anywhere and must be memorized or stored separately from the seed words.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Paymaster",
+    "slug": "paymaster",
+    "excerpt": "An ERC-4337 contract that sponsors the gas fees for a UserOperation, allowing the user to pay in ERC-20 tokens or receive completely gasless transactions. Paymasters inspect the UserOperation and agree to reimburse the bundler in ETH if the operation succeeds according to their rules. They are optional; without a paymaster the smart-contract wallet must hold ETH to pay its own gas.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "Phishing",
+    "slug": "phishing",
+    "excerpt": "A social-engineering attack that tricks users into visiting a fraudulent website or app that mimics a legitimate one, then harvests seed phrases, private keys, or wallet signatures. Crypto phishing pages often rank in search results or arrive via direct messages on social platforms. SSP's two-device model does not protect against a user who voluntarily enters their seed phrase into a fake site.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "PIN",
+    "slug": "pin",
+    "excerpt": "A numeric or alphanumeric code that unlocks a wallet app or hardware device without requiring the full seed phrase. PINs protect against casual physical access but are not a substitute for seed backup — if the device is wiped or lost, the PIN is useless without the seed. SSP apps use a PIN or biometric unlock for daily use; the seed phrase is the ultimate recovery mechanism.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "Priority Fee",
+    "slug": "priority-fee",
+    "excerpt": "The optional tip paid directly to the block proposer on Ethereum, on top of the burned base fee, to incentivize faster transaction inclusion. Also called the miner tip (EIP-1559 terminology: maxPriorityFeePerGas). During low congestion the priority fee can be near zero; during NFT drops or arbitrage races it can spike to many gwei. Wallets typically suggest priority fees based on recent block history.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Private Key",
+    "slug": "private-key",
+    "excerpt": "A 256-bit random integer that is the ultimate proof of ownership for a blockchain address. Anyone who possesses the private key can sign transactions spending from the corresponding address. Private keys must never leave a secure environment — SSP keeps each device's private key confined to that device and never transmits it, even encrypted, through the relay.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "Proof of Stake",
+    "slug": "proof-of-stake",
+    "excerpt": "A Sybil-resistance mechanism that selects block proposers in proportion to the amount of cryptocurrency they have locked (staked) as collateral, rather than the computational work they expend. Ethereum uses proof-of-stake since The Merge (2022), with validators staking 32 ETH each. Misbehaving validators can have their stake slashed, making attacks economically costly.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Proof of Work",
+    "slug": "proof-of-work",
+    "excerpt": "A consensus mechanism requiring block producers to solve a computationally expensive puzzle — finding a hash below a target — before appending a block. Bitcoin uses SHA-256 proof-of-work; the difficulty adjusts every 2016 blocks to keep block time near ten minutes. The energy cost of proof-of-work is what makes rewriting history expensive.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "PSBT",
+    "slug": "psbt",
+    "excerpt": "Partially Signed Bitcoin Transaction — the BIP-174 format for passing a half-built transaction between signers. SSP uses PSBTs internally: SSP Wallet builds and signs first, then ships the PSBT through the encrypted relay to SSP Key for the second signature. Once both signatures are attached, the transaction broadcasts.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "PSBT Coordination",
+    "slug": "psbt-coordination",
+    "excerpt": "The end-to-end workflow of constructing, partially signing, relaying, and completing a PSBT across SSP's two devices. SSP Wallet initiates the PSBT by selecting UTXOs, attaching its signature, and encrypting the payload for relay; SSP Key decrypts, verifies the outputs, applies the second signature, and returns the finalized transaction. The coordination layer ensures neither device ever holds a complete transaction until both have reviewed it.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Public Key",
+    "slug": "public-key",
+    "excerpt": "A point on an elliptic curve derived from a private key via scalar multiplication — a one-way operation that cannot be reversed to recover the private key. Public keys are hashed to produce wallet addresses and embedded in scripts to define spending conditions. In SSP's multisig setup, both devices share their public keys to construct the joint spending script without revealing any private key.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "QR Signing",
+    "slug": "qr-signing",
+    "excerpt": "A signing workflow where transaction data is exchanged between devices exclusively through QR codes rather than a network connection. One device displays the unsigned transaction as a QR; the signing device scans it, displays the details for confirmation, signs, and displays the result as a QR for the initiating device to scan. SSP supports QR signing as an air-gapped alternative to relay-based coordination.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Recovery Phrase",
+    "slug": "recovery-phrase",
+    "excerpt": "A synonym for seed phrase or mnemonic — the sequence of 12 or 24 words generated by a BIP-39 wallet that can reconstruct all private keys in the wallet. The term is common in wallet UIs because it emphasizes the phrase's role in recovering access after device loss or failure. SSP generates two independent recovery phrases, one per device, and each must be backed up separately.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "Relay Payload",
+    "slug": "relay-payload",
+    "excerpt": "The encrypted data package sent through SSP Relay to pass signing state between the two SSP devices. A relay payload typically contains the partially signed transaction (PSBT for Bitcoin, or an equivalent EVM structure) along with metadata such as the target network and fee parameters, encrypted with a key negotiated during pairing. The relay server handles delivery but cannot read or tamper with the payload.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Replace-by-Fee",
+    "slug": "replace-by-fee",
+    "excerpt": "A Bitcoin mechanism (BIP-125) that allows a sender to replace an unconfirmed transaction in the mempool with a new version paying a higher fee, signaled by setting a sequence number below 0xFFFFFFFE. RBF is used to unstick stuck transactions or to cancel a send before it confirms. Merchants who accept zero-confirmation payments must account for RBF risk.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "Replay Attack",
+    "slug": "replay-attack",
+    "excerpt": "An attack in which a valid signed transaction on one network is broadcast on a different network where it is also accepted, moving funds without the user's knowledge of the second spend. Replay attacks are most common after hard forks that produce two chains with shared transaction history. Chains defend against this with replay protection: chain-specific identifiers (chain ID in Ethereum, SIGHASH_FORKID in Bitcoin Cash) that invalidate signatures on other chains.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "Safe Multisig",
+    "slug": "safe-multisig",
+    "excerpt": "The most widely deployed Ethereum smart-contract multisig wallet, originally called Gnosis Safe. Safe holds funds in a smart contract and requires M-of-N owner signatures — delivered as EIP-712 structured messages — before executing any transaction. It supports modules, guards, and delegate calls, making it the standard infrastructure for DAO treasuries, protocol upgrades, and institutional custody.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Schnorr Signature",
+    "slug": "schnorr-signature",
+    "excerpt": "A digital signature scheme based on the discrete logarithm problem, known for its linear aggregation property: multiple signatures over the same message can be combined into a single signature that verifies against an aggregated public key (computed via a secure key-aggregation scheme like MuSig2 to prevent rogue-key attacks). Bitcoin added native Schnorr support via Taproot (BIP-340), enabling key aggregation and threshold schemes like MuSig2. Schnorr signatures are 64 bytes, shorter than ECDSA's variable-length DER encoding.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Script Type",
+    "slug": "script-type",
+    "excerpt": "The category of Bitcoin locking script applied to an output, which determines how funds can be spent and what address format is used. Common script types are P2PKH (Legacy), P2SH (Script Hash), P2WPKH (native SegWit single-key), P2WSH (native SegWit script), and P2TR (Taproot). SSP multisig outputs use P2WSH; the script type affects fee cost, privacy, and hardware wallet compatibility.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "Seed Leak",
+    "slug": "seed-leak",
+    "excerpt": "The unintentional exposure of a BIP-39 seed phrase or the entropy it was derived from, whether through a photo, cloud backup, clipboard, or insecure note. A seed leak gives an attacker complete, irrevocable access to all funds in the wallet. SSP mitigates seed leak risk partly through its 2-of-2 structure: even if one device's seed is leaked, the attacker still lacks the second key.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "Seed Phrase",
+    "slug": "seed-phrase",
+    "excerpt": "A human-readable backup of a wallet's private key, encoded as 12 or 24 dictionary words via BIP-39. Anyone with the phrase can recreate the wallet on any device, so it must be stored offline and never typed into a website or photographed. SSP generates two independent seed phrases — one per device — and you back up each separately.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "Side Channel",
+    "slug": "side-channel",
+    "excerpt": "An attack that extracts secret information by measuring physical or environmental characteristics of a device — power consumption, electromagnetic emissions, timing variations, or acoustic noise — rather than by exploiting logical flaws in the algorithm. Hardware wallets use secure elements with countermeasures such as constant-time operations and power-line filtering to resist side-channel attacks during key operations.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "Sighash",
+    "slug": "sighash",
+    "excerpt": "A flag in a Bitcoin transaction signature that specifies which parts of the transaction the signature commits to. SIGHASH_ALL (default) signs all inputs and outputs; SIGHASH_NONE signs inputs but no outputs; SIGHASH_SINGLE signs the input and the corresponding output. The sighash type is appended to the DER-encoded signature and affects what aspects of a transaction can be modified after signing.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "Signature",
+    "slug": "signature",
+    "excerpt": "A cryptographic value computed from a private key and a message hash that proves the key holder authorized the message without revealing the key itself. On Bitcoin, signatures are ECDSA (Legacy/SegWit) or Schnorr (Taproot); on Ethereum, ECDSA over secp256k1. Signatures are the fundamental primitive that authorizes every on-chain transaction.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "Signing Quorum",
+    "slug": "signing-quorum",
+    "excerpt": "The minimum set of cosigners whose signatures are required to authorize a transaction under a given multisig policy. In SSP's 2-of-2 setup, the signing quorum is both devices — SSP Wallet and SSP Key — with no exceptions or override mechanism. Meeting the quorum is a necessary and sufficient condition for a transaction to be valid.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Slashing",
+    "slug": "slashing",
+    "excerpt": "A penalty mechanism in proof-of-stake protocols that destroys part of a validator's staked collateral for provable misbehavior — specifically double voting (signing two conflicting blocks at the same height) or surround voting. Slashing creates strong economic disincentives against attacks and is enforced automatically by the protocol. A slashed validator is also forcibly ejected from the validator set.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "Social Engineering",
+    "slug": "social-engineering",
+    "excerpt": "Manipulation techniques that exploit human psychology rather than technical vulnerabilities to extract secrets or approvals. In crypto, this includes impersonating support staff to ask for seed phrases, urgency scams claiming an account is at risk, and romance scams that build trust before requesting transfers. Technical safeguards like 2-of-2 multisig cannot protect against a user who willingly reveals their seed phrase.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "Soft Fork",
+    "slug": "fork-soft",
+    "excerpt": "A backward-compatible protocol upgrade that tightens validity rules so new blocks are also valid under the old rules, allowing unupgraded nodes to continue following the chain. SegWit was deployed as a soft fork via BIP-141; Taproot was activated as a soft fork via BIP-341. Miners signal readiness during a lock-in period; once a threshold is reached, the new rules activate at a future block height.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "SSP Key",
+    "slug": "ssp-key",
+    "excerpt": "The SSP application running on your primary mobile device that acts as one of the two cosigners in SSP's 2-of-2 multisig setup. SSP Key holds one of the two private keys, receives relay payloads from SSP Wallet, displays transaction details for user confirmation, and returns the second signature. Because both keys are required to spend, SSP Key alone cannot authorize any transaction.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "SSP Pairing",
+    "slug": "ssp-pairing",
+    "excerpt": "The one-time setup process that links SSP Wallet and SSP Key by exchanging extended public keys and establishing an encrypted relay channel between them. During pairing, each device displays or scans a QR code containing its xpub and relay credentials; once paired, the devices can exchange relay payloads for transaction signing. Pairing must be completed before any funds can be sent.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "SSP Relay",
+    "slug": "ssp-relay",
+    "excerpt": "The encrypted message-passing service that routes signing payloads between SSP Wallet and SSP Key without holding any private keys. SSP Relay acts as a blind intermediary: it delivers end-to-end encrypted packages but cannot read transaction contents or forge signatures. The relay is a convenience layer; users who prefer maximum isolation can bypass it by using QR codes instead.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "SSP Wallet",
+    "slug": "ssp-wallet",
+    "excerpt": "The SSP application that initiates transactions and holds one of the two private keys in SSP's 2-of-2 multisig setup. SSP Wallet constructs the transaction, applies its first signature, and forwards the partially signed payload to SSP Key via the relay (or QR code). It also manages address generation, balance display, and network broadcasting once both signatures are collected.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "Staking",
+    "slug": "staking",
+    "excerpt": "The act of locking cryptocurrency as collateral in a proof-of-stake network to participate in block validation and earn rewards. On Ethereum, validators stake exactly 32 ETH and are selected pseudo-randomly to propose and attest to blocks. Staking rewards compensate validators for honest participation; misbehavior can result in slashing — the partial or full loss of staked funds.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Supply Chain Attack",
+    "slug": "supply-chain-attack",
+    "excerpt": "An attack that compromises software or hardware during development or distribution — injecting malicious code into an open-source dependency, a compiler, a firmware image, or a hardware device — so that end users receive a backdoored product. Supply chain attacks are particularly dangerous in crypto because even technically careful users may rely on compromised tooling. Verifying checksums, reproducible builds, and using air-gapped signing devices reduces exposure.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "Sweep",
+    "slug": "sweep",
+    "excerpt": "The act of moving all funds from one wallet address or private key to another in a single transaction, typically to consolidate UTXOs, migrate to a new key, or empty a compromised wallet. A sweep differs from a standard send in that it drains the entire balance and leaves the source address empty. In SSP, sweeping still requires both cosigners to approve the transaction.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "Taproot",
+    "slug": "taproot",
+    "excerpt": "A Bitcoin soft fork (BIP-341) that introduced Schnorr signatures and Merklized Abstract Syntax Trees (MAST), allowing complex scripts to look like simple single-key spends when all parties cooperate. Taproot improves privacy, reduces fees for cooperative closings, and enables aggregated signatures via MuSig2. SSP's future Taproot multisig would have the same on-chain footprint as a single-key spend in the cooperative case.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "Threshold Signature",
+    "slug": "threshold-signature",
+    "excerpt": "A cryptographic scheme where a signing key is distributed among N parties and any M of them can produce a valid signature without any single party knowing the full key. Unlike script-based multisig, a threshold signature produces a single on-chain signature that reveals nothing about the signing structure. FROST and MuSig2 are threshold signature protocols applicable to Schnorr-based chains.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "Transaction Broadcast",
+    "slug": "transaction-broadcast",
+    "excerpt": "The act of transmitting a fully signed, serialized transaction to a node so it propagates across the peer-to-peer network and becomes visible to miners and validators. SSP performs broadcast after both devices have signed; before broadcast the transaction exists only locally and can still be abandoned. Most wallets broadcast to multiple nodes or use a provider API for reliability.",
+    "difficulty": { "level": 1, "label": "Beginner", "slug": "beginner", "language": "en" }
+  },
+  {
+    "title": "User Operation",
+    "slug": "user-operation",
+    "excerpt": "The ERC-4337 equivalent of a standard Ethereum transaction for smart-contract wallets — a data structure containing the sender, call data, gas limits, nonce, signature, and optional paymaster fields. UserOperations are submitted to an alternative mempool and bundled into regular on-chain transactions by bundlers. They enable features impossible for EOAs, such as batched calls, sponsored gas, and custom signature validation.",
+    "difficulty": { "level": 3, "label": "Advanced", "slug": "advanced", "language": "en" }
+  },
+  {
+    "title": "UTXO",
+    "slug": "utxo",
+    "excerpt": "Unspent Transaction Output — the fundamental unit of Bitcoin value, representing a discrete amount of BTC locked to a specific script and available to be spent as an input in a future transaction. Your Bitcoin balance is the sum of all UTXOs your keys can unlock. SSP wallets track UTXOs per address and use them in PSBT construction when you initiate a send.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Validator",
+    "slug": "validator",
+    "excerpt": "A node in a proof-of-stake network that stakes collateral and participates in block proposal and attestation. Ethereum validators stake 32 ETH and earn rewards for honest participation; they risk slashing for double-signing or other provable violations. Unlike Bitcoin miners, validators do not expend significant computation — their influence is proportional to their stake.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Wallet Drainer",
+    "slug": "wallet-drainer",
+    "excerpt": "A malicious smart contract or script that, once granted a token approval or a signed permit, transfers all fungible and non-fungible tokens from a victim's wallet in a single transaction. Drainers are deployed as fake mint pages, phishing DApps, or compromised front-ends. SSP's 2-of-2 requirement means a drainer needs both devices to sign an approval; a single device interaction is insufficient.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  },
+  {
+    "title": "Watch-Only Wallet",
+    "slug": "watch-only-wallet",
+    "excerpt": "A wallet configured with only public keys or xpubs, able to track balances and generate receive addresses but unable to sign transactions. Watch-only wallets are used alongside air-gapped signers: the online watch-only wallet constructs the transaction and the offline device signs it. In SSP's architecture, pairing involves each device holding the other's xpub, enabling both to function as watch-only observers for address verification.",
+    "difficulty": { "level": 2, "label": "Moderate", "slug": "intermediate", "language": "en" }
+  }
+]

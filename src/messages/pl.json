@@ -1,0 +1,1871 @@
+{
+  "Common": {
+    "skipToContent": "Przejdź do treści",
+    "loading": "Ładowanie…",
+    "error": "Coś poszło nie tak.",
+    "retry": "Ponów",
+    "readMore": "Czytaj więcej",
+    "breadcrumbHome": "Strona główna",
+    "breadcrumbAriaLabel": "Nawigacja okruszkowa",
+    "websiteAriaLabel": "Strona internetowa",
+    "notFoundTitle": "Strona nie została znaleziona",
+    "notFoundDescription": "Strona, której szukano, nie istnieje lub została przeniesiona.",
+    "goHome": "Przejdź do strony głównej",
+    "errorTitle": "Coś poszło nie tak",
+    "errorDescription": "Wystąpił nieoczekiwany błąd. Odśwież stronę lub wróć do strony głównej.",
+    "tryAgain": "Spróbuj ponownie",
+    "translationPendingBanner": "Ten artykuł nie został jeszcze przetłumaczony — wyświetlana jest wersja angielska.",
+    "localeBadge": {
+      "en": "EN",
+      "es": "ES",
+      "zh": "中",
+      "pt-BR": "PT",
+      "ru": "RU",
+      "tr": "TR",
+      "ja": "日",
+      "de": "DE",
+      "fr": "FR",
+      "it": "IT",
+      "pl": "PL",
+      "ko": "한",
+      "vi": "VI",
+      "id": "ID"
+    }
+  },
+  "Header": {
+    "home": "Strona główna",
+    "enterprise": "Dla firm",
+    "features": "Funkcje",
+    "newsroom": "Aktualności",
+    "academy": "Akademia",
+    "guide": "Przewodnik",
+    "support": "Wsparcie",
+    "contact": "Kontakt",
+    "more": "Więcej",
+    "download": "Pobierz",
+    "toggleTheme": "Przełącz motyw",
+    "toggleMenu": "Przełącz menu",
+    "selectLanguage": "Wybierz język",
+    "learn": "Nauka",
+    "series": "Serie",
+    "learnGlossary": "Słownik",
+    "learnAcademyDescription": "Długie artykuły pogrupowane tematycznie",
+    "learnSeriesDescription": "Wieloczęściowe ścieżki nauki",
+    "learnGlossaryDescription": "Pojęcia kryptowalut i SSP, ponad 2000 haseł",
+    "learnNewsroomDescription": "Najnowsze ogłoszenia i aktualizacje produktu"
+  },
+  "Footer": {
+    "navigation": "Nawigacja",
+    "product": "Produkt",
+    "learn": "Nauka",
+    "community": "Społeczność",
+    "legal": "Informacje prawne",
+    "supportedChains": "Obsługiwane sieci",
+    "rssFeed": "Kanał RSS",
+    "cookieSettings": "Ustawienia plików cookie",
+    "rights": "Wszelkie prawa zastrzeżone.",
+    "builtForWeb3": "Stworzone z ❤️ dla Web3",
+    "poweredByFlux": "Powered by Flux",
+    "brandDescription": "Bezpieczny, prosty, potężny. SSP to przełomowy, otwartoźródłowy portfel przeglądarkowy z samodzielnym przechowywaniem, obsługujący BIP48 multi-signature dla wielu blockchainów z Account Abstraction.",
+    "links": {
+      "home": "Strona główna",
+      "features": "Funkcje",
+      "guide": "Przewodnik",
+      "support": "Wsparcie",
+      "contact": "Kontakt",
+      "enterprise": "Dla firm",
+      "download": "Pobierz",
+      "mobileSspKey": "Mobilny SSP Key",
+      "sspEnterprise": "SSP Enterprise",
+      "securityAudits": "Audyty bezpieczeństwa",
+      "documentation": "Dokumentacja",
+      "github": "GitHub",
+      "discord": "Discord",
+      "twitter": "Twitter",
+      "medium": "Medium",
+      "youtube": "YouTube",
+      "helpTranslate": "Pomóż w tłumaczeniu",
+      "newsroom": "Aktualności",
+      "academy": "Akademia",
+      "multisigExplained": "Multisig — wyjaśnienie",
+      "security": "Bezpieczeństwo",
+      "gettingStarted": "Pierwsze kroki",
+      "rssFeed": "Kanał RSS",
+      "privacyPolicy": "Polityka prywatności",
+      "termsOfService": "Warunki korzystania z usług",
+      "cookiePolicy": "Polityka plików cookie"
+    },
+    "fluxAlt": "Flux"
+  },
+  "Home": {
+    "metaTitle": "SSP Wallet — bezpieczny, prosty, potężny portfel krypto",
+    "metaDescription": "Prawdziwy portfel krypto multisig 2-z-2. Rozszerzenie przeglądarki + urządzenie mobilne wymagane przy każdej transakcji. Obsługuje Bitcoin, Ethereum i ponad 15 blockchainów.",
+    "hero": {
+      "auditedBadge": "Audyt bezpieczeństwa przeprowadzony przez Halborn",
+      "titleSecure": "Bezpieczny",
+      "titleSimple": "Prosty",
+      "titlePowerful": "Potężny",
+      "description": "Prawdziwy portfel multisig 2-z-2 używający derywacji BIP48, wymagający zarówno rozszerzenia przeglądarki, jak i urządzenia mobilnego przy każdej transakcji. Obsługuje WalletConnect v2, ERC-4337 Account Abstraction z podpisami Schnorr oraz ponad 15 blockchainów.",
+      "featureMultisig": "Prawdziwy multisig 2-z-2",
+      "featureBlockchains": "15+ blockchainów",
+      "featureZeroStorage": "Zerowe przechowywanie danych",
+      "getStarted": "Zacznij teraz",
+      "watchDemo": "Obejrzyj demo",
+      "statSupportedChains": "Obsługiwane sieci",
+      "statActiveUsers": "Aktywni użytkownicy",
+      "statSecurityAudits": "Audyty bezpieczeństwa",
+      "animationAlt": "Animacja SSP Wallet",
+      "closeModal": "Zamknij okno",
+      "videoUnsupported": "Twoja przeglądarka nie obsługuje tagu wideo."
+    },
+    "features": {
+      "titlePart1": "Dlaczego wybrać",
+      "titleHighlight": "SSP Wallet",
+      "titleSuffix": "?",
+      "description": "Doświadcz doskonałego połączenia bezpieczeństwa, prostoty i mocy w jednym kompleksowym rozwiązaniu portfela krypto.",
+      "items": {
+        "0": {
+          "title": "Bezpieczny multisig 2-z-2",
+          "description": "Zaawansowana derywacja BIP48 z prawdziwym uwierzytelnianiem dwuskładnikowym wymagającym podpisów zarówno rozszerzenia przeglądarki, jak i urządzenia mobilnego przy każdej transakcji. Maksymalne bezpieczeństwo dzięki ochronie dwóch urządzeń."
+        },
+        "1": {
+          "title": "Prosty, a jednocześnie zaawansowany",
+          "description": "Złożona technologia multisig wielu aktywów stała się prosta. Zaawansowane bezpieczeństwo BIP48 i Account Abstraction dostarczone przez intuicyjny interfejs, z którego może korzystać każdy."
+        },
+        "2": {
+          "title": "Potężna interakcja z dApp",
+          "description": "Połącz się z tysiącami dApps dzięki obsłudze WalletConnect v2 (Reown), podpisywaniu wiadomości EIP-712 i komunikacji w czasie rzeczywistym we wszystkich sieciach EVM i protokołach DeFi."
+        },
+        "3": {
+          "title": "Obsługa wielu sieci",
+          "description": "Obsługa ponad 15 blockchainów, w tym Bitcoin, Ethereum, Polygon, BSC, Avalanche, Base i innych. Pierwszy portfel z natywnym multisig Schnorr Account Abstraction (ERC-4337) na Ethereum, umożliwiający portfele smart kontraktów bez EOA."
+        },
+        "4": {
+          "title": "Zerowe przechowywanie danych",
+          "description": "Pełna samodzielna opieka z zerowym przechowywaniem danych po stronie serwera. Klucze prywatne, frazy seed i transakcje pozostają wyłącznie na urządzeniach, używając szyfrowania AES-GCM klasy wojskowej i odcisku urządzenia dla maksymalnego bezpieczeństwa i prywatności."
+        },
+        "5": {
+          "title": "Kupuj, sprzedawaj i zamieniaj",
+          "description": "Kupuj kryptowaluty bezpośrednio kartą kredytową lub przelewem bankowym, sprzedawaj krypto z powrotem do waluty fiducjarnej i zamieniaj między różnymi kryptowalutami bezproblemowo w portfelu. Zasilany przez zagregowany silnik wielu dostawców dla najlepszych kursów i opcji."
+        }
+      },
+      "futureTitlePart1": "Zbudowany dla",
+      "futureTitleHighlight": "przyszłości finansów",
+      "highlights": {
+        "0": {
+          "title": "Zaawansowane bezpieczeństwo",
+          "description": "Szyfrowanie klasy wojskowej i technologia multi-signature chronią Twoje aktywa"
+        },
+        "1": {
+          "title": "Płynne doświadczenie",
+          "description": "Intuicyjny interfejs czyni krypto dostępnym dla każdego"
+        },
+        "2": {
+          "title": "Otwartoźródłowy",
+          "description": "Przejrzysty, audytowany kod, któremu możesz zaufać i który możesz zweryfikować"
+        }
+      },
+      "demoTitle": "Wypróbuj interaktywne demo SSP Wallet",
+      "demoDescription": "Doświadcz pełnego procesu konfiguracji i transakcji",
+      "launchDemo": "Uruchom interaktywne demo",
+      "demoFooter": "Instalacja niewymagana • 3-minutowe doświadczenie"
+    },
+    "security": {
+      "badge": "Podejście bezpieczeństwo przede wszystkim",
+      "titleHighlight": "Bezpieczeństwo bankowe",
+      "titleSuffix": "któremu możesz zaufać",
+      "description": "Nasze bezpieczeństwo jest niezależnie weryfikowane i audytowane przez wiodące firmy ds. bezpieczeństwa. Twoje aktywa są chronione szyfrowaniem klasy wojskowej i najnowocześniejszą technologią.",
+      "items": {
+        "0": {
+          "title": "Audyt bezpieczeństwa",
+          "description": "Kompleksowe audyty bezpieczeństwa przez Halborn dla wszystkich krytycznych komponentów",
+          "highlight": "Certyfikat Halborn"
+        },
+        "1": {
+          "title": "Multisig BIP48",
+          "description": "Prawdziwy multisig 2-z-2 używający derywacji BIP48 z odciskiem urządzenia i szyfrowaniem AES-GCM",
+          "highlight": "Kryptograficznie bezpieczny"
+        },
+        "2": {
+          "title": "Otwartoźródłowy i deterministyczny",
+          "description": "Przejrzysty kod z deterministycznymi kompilacjami — każdy może zweryfikować, że dystrybuowany portfel dokładnie odpowiada kodowi źródłowemu",
+          "highlight": "W pełni weryfikowalny"
+        },
+        "3": {
+          "title": "Zerowe przechowywanie danych",
+          "description": "Szyfrowanie oparte na PBKDF2 z odciskiem urządzenia zapewnia super bezpieczeństwo wszystkich lokalnie przechowywanych danych. Nic nigdy nie trafia na serwery.",
+          "highlight": "Tylko samodzielna opieka"
+        }
+      },
+      "auditTitlePart1": "Niezależnie",
+      "auditTitleHighlight": "audytowany pod kątem bezpieczeństwa",
+      "auditDescription": "Wszystkie krytyczne komponenty ekosystemu SSP przeszły rygorystyczne audyty bezpieczeństwa przeprowadzone przez Halborn, renomowaną firmę ds. bezpieczeństwa blockchain. Nasze zaangażowanie w przejrzystość oznacza, że wszystkie raporty z audytów są publicznie dostępne.",
+      "indicators": {
+        "0": "Najlepsze praktyki wiodące w branży",
+        "1": "Zaprojektowany zgodnie z najwyższymi standardami bezpieczeństwa",
+        "2": "Ciągłe monitorowanie bezpieczeństwa"
+      },
+      "auditedByHalborn": "Audytowany przez Halborn",
+      "recentReportsTitle": "Ostatnie raporty z audytów",
+      "viewReport": "Wyświetl raport",
+      "reports": {
+        "0": {
+          "title": "Audyt SSP Wallet, Key i Relay",
+          "date": "Marzec 2025",
+          "status": "Ukończony"
+        },
+        "1": {
+          "title": "Audyt smart kontraktów",
+          "date": "Luty 2025",
+          "status": "Ukończony"
+        },
+        "2": {
+          "title": "Audyt bezpieczeństwa SDK",
+          "date": "Luty 2025",
+          "status": "Ukończony"
+        }
+      },
+      "bugBountyPrefix": "Program bug bounty bezpieczeństwa:",
+      "bugBountyText": "Oferujemy nagrody za odpowiedzialne ujawnianie luk bezpieczeństwa. Pomóż nam utrzymać bezpieczeństwo SSP.",
+      "lavaMoatTitleHighlight": "LavaMoat",
+      "lavaMoatTitleSuffix": "Ochrona w czasie wykonywania",
+      "lavaMoatDescription": "SSP Wallet integruje LavaMoat, framework bezpieczeństwa chroniący przed atakami na łańcuch dostaw. LavaMoat opakowuje każdą zależność w kompartmenty i daje im dostęp tylko do tego, czego potrzebują, zapobiegając kradzieży tajemnic lub przejęciu portfela przez złośliwy kod.",
+      "lavaIndicators": {
+        "0": "Pakiety opakowane w kompartmenty SES",
+        "1": "Ograniczony dostęp do platformy na pakiet",
+        "2": "Zapobiega modyfikacji prymitywów JavaScript"
+      },
+      "learnLavaMoat": "Dowiedz się o LavaMoat",
+      "protectionLayersTitle": "Warstwy ochrony",
+      "layers": {
+        "0": {
+          "title": "Kompartmenty pakietów",
+          "description": "Każdy pakiet działa we własnym kompartmencie, zapobiegając nieautoryzowanemu dostępowi do wrażliwych zasobów"
+        },
+        "1": {
+          "title": "Egzekwowanie polityk",
+          "description": "Pliki polityk definiują dokładnie, do których zasobów każdy pakiet może mieć dostęp"
+        },
+        "2": {
+          "title": "Obrona łańcucha dostaw",
+          "description": "Chroni przed skompromitowanymi zależnościami próbującymi wykonać złośliwe działania"
+        },
+        "3": {
+          "title": "Monitorowanie w czasie wykonywania",
+          "description": "Ciągłe egzekwowanie zapewnia aktywność polityk bezpieczeństwa w czasie wykonywania"
+        }
+      },
+      "deterministicTitleHighlight": "Deterministyczne kompilacje",
+      "deterministicTitleSuffix": "dla absolutnego zaufania",
+      "deterministicDescription": "SSP Wallet oferuje deterministyczne kompilacje przy użyciu Docker. Oznacza to, że identyczny kod źródłowy producuje identyczne pliki binarne, umożliwiając każdemu niezależną weryfikację, że pobierany portfel dokładnie odpowiada temu, co zostało zbudowane z naszego opublikowanego kodu źródłowego.",
+      "detIndicators": {
+        "0": "Izolowane środowisko kompilacji oparte na Docker",
+        "1": "Kryptograficznie podpisane sumy kontrolne wydań",
+        "2": "Eliminuje wektory ataku na łańcuch dostaw"
+      },
+      "learnVerify": "Dowiedz się, jak weryfikować",
+      "verificationProcessTitle": "Proces weryfikacji",
+      "verifySteps": {
+        "0": {
+          "title": "Pobierz pliki wydania",
+          "description": "Pobierz pliki rozszerzenia, SHA256SUMS i podpis GPG z wydań GitHub"
+        },
+        "1": {
+          "title": "Zweryfikuj podpis GPG",
+          "description": "Zaimportuj nasz klucz publiczny z serwera kluczy OpenPGP i zweryfikuj podpisane sumy kontrolne"
+        },
+        "2": {
+          "title": "Zweryfikuj skróty plików",
+          "description": "Sprawdź, czy pobrane pliki odpowiadają podpisanym sumom kontrolnym"
+        },
+        "3": {
+          "title": "Opcjonalnie: odtwórz kompilację",
+          "description": "Zaawansowani użytkownicy mogą zbudować ze źródła i zweryfikować identyczne dane wyjściowe"
+        }
+      }
+    },
+    "enterpriseBand": {
+      "badge": "Dla zespołów i firm",
+      "fluxImageAlt": "Flux Foundation",
+      "titlePart1": "Zarządzasz skarbcem dla zespołu?",
+      "titleHighlight": "Poznaj SSP Enterprise.",
+      "description": "Twój zespół trzyma klucze. Twój zespół podpisuje. SSP Enterprise obsługuje koordynację — propozycje, polityki i ścieżkę audytu, której Twój CFO naprawdę chce.",
+      "highlights": {
+        "0": {
+          "title": "Sejfy multisig M-z-N",
+          "description": "Konfiguruj dowolny próg podpisywania — 2-z-3, 3-z-5, cokolwiek pasuje do modelu zarządzania."
+        },
+        "1": {
+          "title": "Silnik polityk transakcji",
+          "description": "Limity wydatków, białe listy adresów, blokady czasowe, zatwierdzenia administratora — 14+ kontroli."
+        },
+        "2": {
+          "title": "Żadnego powiernika. Żadnego MPC.",
+          "description": "Samodzielna opieka na skalę enterprise. Podpisywanie na dwóch urządzeniach na sygnatariusza, zweryfikowane on-chain."
+        }
+      },
+      "fluxEyebrow": "Flux Foundation",
+      "fluxBefore": "Używa SSP Enterprise do zabezpieczenia",
+      "fluxStrong": "mostu Fusion",
+      "fluxAfter": "i zarządzania skarbcem fundacji z podpisywaniem wielostronnym.",
+      "fluxCta": "Przeczytaj przypadek użycia",
+      "explore": "Poznaj SSP Enterprise",
+      "launchApp": "Uruchom aplikację Enterprise"
+    },
+    "supportedChains": {
+      "badge": "Obsługa wielu sieci",
+      "titleHighlight": "15+ blockchainów",
+      "titleSuffix": "w jednym portfelu",
+      "description": "Zarządzaj wszystkimi aktywami krypto od Bitcoin po Ethereum i dalej. SSP Wallet zapewnia ujednolicony dostęp do wielu sieci blockchain z obsługą WalletConnect v2 dla dApps i możliwością transakcji za pomocą kodu QR offline.",
+      "chainDescriptions": {
+        "BTC": "Oryginalna kryptowaluta",
+        "ETH": "Platforma smart kontraktów",
+        "LTC": "Cyfrowe srebro",
+        "ZEC": "Skoncentrowany na prywatności",
+        "RVN": "Blockchain transferu aktywów",
+        "DOGE": "Krypto ludzi",
+        "BCH": "Elektroniczna gotówka peer-to-peer",
+        "FLUX": "Zdecentralizowane obliczenia",
+        "MATIC": "Skalowanie Ethereum",
+        "BSC": "Szybkie, tanie transakcje",
+        "AVAX": "Wysokowydajny blockchain",
+        "BASE": "Rozwiązanie L2 Coinbase"
+      },
+      "chainLogoAlt": "Logo {name}",
+      "moreFeaturesTitle": "Więcej funkcji",
+      "moreFeaturesHighlight": "Wkrótce",
+      "moreFeaturesDescription": "Stale rozszerzamy SSP Wallet o nowe sieci blockchain i zaawansowane funkcje bezpieczeństwa oparte na popycie społeczności i postępie technologicznym.",
+      "walletConnectStrong": "WalletConnect v2 (Reown)",
+      "walletConnectAfter": "Połącz się z tysiącami dApps",
+      "accountAbstractionStrong": "Account Abstraction (ERC-4337)",
+      "accountAbstractionAfter": "Portfele smart kontraktów",
+      "solanaStrong": "Obsługa Solana",
+      "solanaAfter": "Wkrótce z multisig",
+      "viewFullList": "Wyświetl pełną listę aktywów"
+    },
+    "cta": {
+      "badge": "Gotowy, aby zacząć?",
+      "titlePart1": "Dołącz do",
+      "titleHighlight": "przyszłości krypto",
+      "description": "Pobierz SSP Wallet dziś i doświadcz następnej generacji zarządzania kryptowalutami z niezrównanym bezpieczeństwem i prostotą.",
+      "downloadNow": "Pobierz teraz",
+      "learnMore": "Dowiedz się więcej",
+      "options": {
+        "0": {
+          "title": "SSP Wallet — rozszerzenie przeglądarki",
+          "description": "Dostępny teraz — Chrome, Brave, Firefox"
+        },
+        "1": {
+          "title": "SSP Key — mobilna aplikacja 2FA",
+          "description": "Wymagany do zatwierdzania transakcji i nie tylko"
+        },
+        "2": {
+          "title": "SSP Enterprise — dla zespołów",
+          "description": "Sejfy multisig M-z-N dla organizacji. Dostępny teraz."
+        }
+      },
+      "availableNow": "Dostępny teraz",
+      "comingSoon": "Wkrótce",
+      "statActiveUsers": "Aktywni użytkownicy",
+      "statAssetsSecured": "Zabezpieczone aktywa",
+      "statBlockchainsSupported": "Obsługiwane blockchainy",
+      "indicatorAudited": "Audytowany pod kątem bezpieczeństwa",
+      "indicatorOpenSource": "Otwartoźródłowy",
+      "indicatorCommunity": "Wspierany przez społeczność"
+    }
+  },
+  "Newsroom": {
+    "title": "Aktualności",
+    "description": "Najnowsze wiadomości, aktualizacje produktów i ogłoszenia od SSP.",
+    "metaTitle": "Aktualności — Najnowsze wiadomości i aktualizacje",
+    "metaDescription": "Bądź na bieżąco z najnowszymi wiadomościami, aktualizacjami produktów i ogłoszeniami od SSP.",
+    "filterAll": "Wszystkie",
+    "loadMore": "Załaduj więcej",
+    "noArticles": "Brak artykułów pasujących do tego filtra.",
+    "backToNewsroom": "Wróć do aktualności",
+    "shareTitle": "Udostępnij ten artykuł",
+    "shareTwitter": "Udostępnij na Twitter",
+    "shareFacebook": "Udostępnij na Facebook",
+    "shareTelegram": "Udostępnij na Telegram",
+    "shareReddit": "Udostępnij na Reddit",
+    "shareCopy": "Kopiuj link",
+    "shareCopied": "Link skopiowany!",
+    "tableOfContents": "Na tej stronie",
+    "relatedArticles": "Powiązane artykuły",
+    "minRead": "{minutes} min czytania",
+    "byAuthor": "Autor: {author}",
+    "publishedOn": "Opublikowano {date}",
+    "updatedOn": "Zaktualizowano {date}"
+  },
+  "Academy": {
+    "title": "SSP Academy",
+    "description": "Przewodniki, samouczki i dogłębne analizy, które pomogą opanować samodzielne przechowywanie z SSP.",
+    "metaTitle": "SSP Academy — Naucz się samodzielnego przechowywania krypto",
+    "metaDescription": "Przewodniki, samouczki i dogłębne analizy dotyczące SSP, multisig, bezpieczeństwa, DeFi i nie tylko.",
+    "browseByTopic": "Przeglądaj według tematu",
+    "learningPaths": "Ścieżki nauki",
+    "viewAllSeries": "Wyświetl wszystkie",
+    "latestArticles": "Najnowsze artykuły",
+    "comingSoon": "Nowe artykuły wkrótce — zajrzyj ponownie.",
+    "categoryEmpty": "Nowe artykuły wkrótce. W międzyczasie zapoznaj się z powiązanymi tematami:",
+    "backToCategory": "Wróć do {category}",
+    "articleCount": "{count, plural, =0 {Brak artykułów} =1 {1 artykuł} other {# artykułów}}",
+    "partsCount": "{count, plural, =0 {Brak części} =1 {1 część} other {# części}}",
+    "difficulty": {
+      "beginner": "Początkujący",
+      "intermediate": "Średniozaawansowany",
+      "advanced": "Zaawansowany"
+    },
+    "atAGlance": "W skrócie",
+    "seriesPart": "Część {order} z {total}",
+    "previousPart": "Poprzednia część",
+    "nextPart": "Następna część",
+    "seriesMetaDescription": "Wieloczęściowe serie prowadzące od poziomu podstawowego do zaawansowanego w zakresie samodzielnego przechowywania krypto z SSP.",
+    "seriesIndexDescription": "Wieloczęściowe serie prowadzące od poziomu podstawowego do zaawansowanego.",
+    "seriesEmpty": "Ścieżki nauki wkrótce. W międzyczasie przeglądaj artykuły według tematu:",
+    "backToAcademy": "Wróć do Academy",
+    "seriesPartsEmpty": "Części wkrótce.",
+    "viewAllLearningPaths": "Wyświetl wszystkie ścieżki nauki",
+    "categoryIntros": {
+      "multisig": "Portfele multisig wymagają wielu podpisów do autoryzacji transakcji. SSP wymusza model 2-z-2 przy każdej podpisanej akcji: rozszerzenie przeglądarki i mobilna aplikacja SSP Key muszą obydwie zatwierdzić operację. Ta strona zbiera dogłębne analizy wyjaśniające, jak działa ten model, jakim atakom zapobiega i jakie są jego ograniczenia.",
+      "getting-started": "Zaczynasz przygodę z krypto lub wracasz po długiej przerwie? Zacznij tutaj. Przewodniki obejmują portfele, adresy, transakcje, opłaty gas, mempools i nieodwołalność — słownictwo potrzebne przed dotknięciem prawdziwych środków.",
+      "security": "Samodzielne przechowywanie jest trudne, bo ataki są pomysłowe. Ten zbiór omawia zagrożenia, które naprawdę dosięgają użytkowników: strony phishingowe, fałszywe wiadomości od supportu, złośliwe dApps, zgubione frazy seed — i jak model 2-z-2 SSP neutralizuje większość z nich.",
+      "how-to": "Praktyczne, oparte na zrzutach ekranu instrukcje dotyczące czynności, które użytkownicy SSP wykonują codziennie: wysyłanie transakcji między sieciami, łączenie z dApps przez WalletConnect, zamiana tokenów i odzyskiwanie po utracie urządzenia.",
+      "coin-guides": "Każda moneta lub sieć obsługiwana przez SSP ma swoje osobliwości — UTXO a model kont, natywny multisig a ERC-4337, dynamika opłat, czasy nieodwołalności. Ten zbiór omawia je po kolei.",
+      "defi": "SSP obsługuje DeFi przez ERC-4337 Account Abstraction na sieciach EVM. Artykuły wyjaśniają, czym jest AA, z jakich dApps można bezpiecznie korzystać z portfela multisig i jak SSP utrzymuje kontrolę, pozwalając jednocześnie uczestniczyć w protokołach DeFi.",
+      "news-explained": "Poza nagłówkami: zmiany regulacyjne, upadki giełd, incydenty protokołów i aktualizacje standardów, które naprawdę dotyczą użytkowników samodzielnie przechowujących krypto — wyjaśnione bez zbędnego szumu."
+    }
+  },
+  "Author": {
+    "title": "{name}",
+    "postsBy": "Artykuły autora {name}",
+    "noPosts": "Brak artykułów.",
+    "metaTitle": "{name} — autor SSP",
+    "metaDescriptionFallback": "Artykuły autorstwa {name}",
+    "notFoundTitle": "Autor nie został znaleziony",
+    "breadcrumbLabel": "Autorzy"
+  },
+  "Contact": {
+    "metaTitle": "Kontakt — SSP Wallet | Skontaktuj się z nami",
+    "metaDescription": "Skontaktuj się z zespołem SSP Wallet. Uzyskaj pomoc, zadaj pytania lub omów partnerstwo. Dołącz do społeczności Discord lub skontaktuj się bezpośrednio.",
+    "breadcrumbLabel": "Kontakt",
+    "heroBadge": "Skontaktuj się z nami",
+    "heroTitle": "Nawiąż kontakt",
+    "heroDescription": "Masz pytania dotyczące SSP Wallet? Potrzebujesz wsparcia lub chcesz omówić partnerstwo? Dołącz do społeczności lub skontaktuj się bezpośrednio — jesteśmy tu, aby pomóc.",
+    "methodsTitle": "Sposoby kontaktu",
+    "methodsSubtitle": "Wybierz metodę kontaktu najlepiej pasującą do Twoich potrzeb",
+    "methods": {
+      "supportTickets": {
+        "title": "Zgłoszenia pomocy technicznej",
+        "description": "Uzyskaj bezpośrednią pomoc z problemami technicznymi przez nasz system zgłoszeń",
+        "responseTime": "W ciągu 24 godzin",
+        "action": "Utwórz zgłoszenie"
+      },
+      "discord": {
+        "title": "Społeczność Discord",
+        "description": "Dołącz do naszej aktywnej społeczności, aby uzyskać wsparcie w czasie rzeczywistym i dyskutować",
+        "responseTime": "Aktywna społeczność",
+        "action": "Dołącz do Discord"
+      },
+      "github": {
+        "title": "Wsparcie GitHub",
+        "description": "Zgłaszaj błędy, proś o funkcje lub przyczyniaj się do rozwoju",
+        "contact": "GitHub Issues & Discussions",
+        "responseTime": "Wsparcie społeczności",
+        "action": "Odwiedź GitHub"
+      }
+    },
+    "resourcesTitle": "Potrzebujesz pomocy natychmiast?",
+    "resourcesSubtitle": "Skorzystaj z naszych zasobów samoobsługi, aby uzyskać natychmiastową pomoc",
+    "resources": {
+      "supportCenter": {
+        "title": "Centrum pomocy",
+        "description": "Obszerne FAQ i przewodniki rozwiązywania problemów"
+      },
+      "setupGuide": {
+        "title": "Przewodnik konfiguracji",
+        "description": "Instrukcje instalacji krok po kroku"
+      },
+      "documentation": {
+        "title": "Dokumentacja",
+        "description": "Kompletna dokumentacja techniczna"
+      }
+    },
+    "formTitle": "Wyślij nam wiadomość",
+    "formSubtitle": "Wypełnij poniższy formularz, a odpowiemy najszybciej, jak to możliwe",
+    "formTipPrefix": "Wskazówka:",
+    "formTipBefore": "Aby uzyskać szybszą pomoc techniczną, rozważ skorzystanie z naszego",
+    "formTipLinkSupport": "systemu zgłoszeń",
+    "formTipBetween": "lub kontakt przez",
+    "form": {
+      "fullNameLabel": "Imię i nazwisko *",
+      "fullNamePlaceholder": "Twoje imię i nazwisko",
+      "emailLabel": "Adres e-mail *",
+      "emailPlaceholder": "twoj.email@przyklad.com",
+      "companyLabel": "Firma (opcjonalnie)",
+      "companyPlaceholder": "Nazwa Twojej firmy",
+      "typeLabel": "Rodzaj zapytania *",
+      "typeOptions": {
+        "general": "Zapytanie ogólne",
+        "support": "Pomoc techniczna",
+        "partnership": "Partnerstwo",
+        "security": "Problem z bezpieczeństwem",
+        "media": "Media i prasa",
+        "business": "Rozwój biznesu"
+      },
+      "subjectLabel": "Temat *",
+      "subjectPlaceholder": "Krótki temat wiadomości",
+      "messageLabel": "Wiadomość *",
+      "messagePlaceholder": "Prosimy o podanie szczegółów dotyczących zapytania…",
+      "submitting": "Wysyłanie wiadomości...",
+      "submit": "Wyślij wiadomość",
+      "errorFallback": "Nie udało się wysłać wiadomości. Spróbuj ponownie.",
+      "errorGeneric": "Nie udało się wysłać wiadomości",
+      "successTitle": "Dziękujemy!",
+      "successDescription": "Wiadomość została wysłana pomyślnie. Odpowiemy wkrótce.",
+      "successAgain": "Wyślij kolejną wiadomość"
+    },
+    "communityTitle": "Śledź naszą społeczność",
+    "communitySubtitle": "Bądź na bieżąco z najnowszymi wiadomościami, nawiązuj kontakt z innymi użytkownikami i uzyskaj wsparcie społeczności",
+    "social": {
+      "github": "Rozwój open source i wkład w projekt",
+      "discord": "Czat społeczności i wsparcie w czasie rzeczywistym",
+      "twitter": "Najnowsze aktualizacje, wiadomości i ogłoszenia"
+    }
+  },
+  "Download": {
+    "metaTitle": "Pobierz — SSP Wallet | Zdobądź swój bezpieczny portfel krypto",
+    "metaDescription": "Pobierz SSP Wallet na swój browser. Bezpieczny, prosty, potężny portfel krypto z zabezpieczeniem multi-signature i uwierzytelnianiem mobilnym.",
+    "ogAlt": "Pobierz SSP Wallet — bezpieczny portfel krypto",
+    "breadcrumbLabel": "Pobierz",
+    "heroBadge": "Pobierz SSP Wallet",
+    "heroTitle": "Zacznij korzystać z SSP Wallet",
+    "heroDescription": "Pobierz oba komponenty, aby zapewnić pełne bezpieczeństwo: rozszerzenie przeglądarki do zarządzania portfelem i aplikację mobilną do uwierzytelniania transakcji.",
+    "stepsTitle": "Dwuetapowy proces konfiguracji",
+    "stepsSubtitle": "Oba komponenty są wymagane do bezpiecznego systemu multisig 2-z-2",
+    "stepLabel": "Krok {index}",
+    "options": {
+      "chrome": {
+        "title": "SSP Wallet",
+        "subtitle": "Rozszerzenie przeglądarki",
+        "description": "Zainstaluj w Chrome, Brave, Firefox i innych przeglądarkach opartych na Chromium",
+        "features": {
+          "0": "Zabezpieczenie multi-signature",
+          "1": "Obsługa WalletConnect v2",
+          "2": "Kompatybilność między sieciami"
+        },
+        "cta": "Pobierz rozszerzenie"
+      },
+      "mobile": {
+        "title": "SSP Key",
+        "subtitle": "Mobilna aplikacja 2FA",
+        "description": "Wymagana aplikacja towarzysząca dla urządzeń iOS i Android zapewniająca bezpieczne uwierzytelnianie",
+        "features": {
+          "0": "Uwierzytelnianie 2FA",
+          "1": "Synchronizacja kodem QR",
+          "2": "Bezpieczne przechowywanie kluczy"
+        },
+        "cta": "Wyświetl aplikacje mobilne"
+      }
+    },
+    "browsersTitle": "Obsługiwane przeglądarki",
+    "browsersSubtitle": "SSP Wallet działa bezproblemowo we wszystkich głównych przeglądarkach",
+    "mobileBadge": "Mobilna aplikacja SSP Key",
+    "mobileTitle": "Ukończ konfigurację bezpieczeństwa",
+    "mobileDescription": "SSP Key dostarcza drugi podpis wymagany dla wszystkich transakcji. Zainstaluj aplikację na urządzeniu mobilnym, aby ukończyć konfigurację multisig 2-z-2.",
+    "mobileEasySetupTitle": "Łatwa konfiguracja",
+    "mobileEasySetupDescription": "Zeskanuj kod QR, aby natychmiast zsynchronizować urządzenie mobilne z portfelem przeglądarkowym",
+    "mobileSecurityTitle": "Maksymalne bezpieczeństwo",
+    "mobileSecurityDescription": "Środki pozostają bezpieczne nawet w razie przejęcia jednego urządzenia",
+    "googlePlayLabel": "Pobierz z",
+    "appStoreLabel": "Dostępne w",
+    "mobileAppAlt": "Mobilna aplikacja SSP Key",
+    "howTitle": "Jak to działa",
+    "howSubtitle": "Zrozumienie modelu bezpieczeństwa multisig 2-z-2",
+    "howSteps": {
+      "1": {
+        "title": "Zainstaluj rozszerzenie",
+        "description": "Dodaj SSP Wallet do przeglądarki i utwórz portfel z bezpieczną frazą odzyskiwania"
+      },
+      "2": {
+        "title": "Skonfiguruj aplikację mobilną",
+        "description": "Zainstaluj SSP Key na telefonie i zsynchronizuj z portfelem przeglądarkowym za pomocą kodu QR"
+      },
+      "3": {
+        "title": "Bezpieczne transakcje",
+        "description": "Każda transakcja wymaga zatwierdzenia zarówno przez przeglądarkę, jak i urządzenie mobilne"
+      }
+    },
+    "ctaTitle": "Gotowy, aby zacząć?",
+    "ctaSubtitle": "Postępuj zgodnie z naszym przewodnikiem krok po kroku, aby skonfigurować bezpieczny portfel krypto",
+    "ctaSetupGuide": "Wyświetl przewodnik konfiguracji",
+    "ctaSupport": "Uzyskaj pomoc"
+  },
+  "Features": {
+    "metaTitle": "Funkcje — SSP Wallet | Zaawansowane bezpieczeństwo i obsługa wielu sieci",
+    "metaDescription": "Prawdziwy multisig 2-z-2, WalletConnect v2, 15+ blockchainów, bramka fiat, zamiana krypto, eksport CSV i Account Abstraction. Zapoznaj się ze wszystkimi funkcjami SSP Wallet.",
+    "breadcrumbLabel": "Funkcje",
+    "hero": {
+      "badge": "Zaawansowane funkcje",
+      "titleHighlight": "Potężne funkcje",
+      "titleSuffix": "dla nowoczesnego krypto",
+      "description": "Odkryj najnowocześniejsze technologie i funkcje bezpieczeństwa, które czynią SSP Wallet najbardziej zaawansowanym dostępnym portfelem krypto.",
+      "securityFirst": "Bezpieczeństwo przede wszystkim",
+      "lightningFast": "Błyskawicznie szybki",
+      "selfCustody": "Samodzielna opieka"
+    },
+    "security": {
+      "titleHighlight": "Bezpieczeństwo",
+      "titleSuffix": "Funkcje",
+      "description": "Bezpieczeństwo krypto to nasz priorytet. Każda funkcja zaprojektowana jest zgodnie z zasadą bezpieczeństwo przede wszystkim.",
+      "items": {
+        "0": {
+          "title": "Prawdziwa ochrona multisig 2-z-2",
+          "description": "Rewolucyjny multisig BIP48 wymagający podpisów zarówno przeglądarki, jak i urządzenia mobilnego. Brak pojedynczego punktu awarii — niemożliwe do przejęcia za pomocą jednego urządzenia."
+        },
+        "1": {
+          "title": "Audyt bezpieczeństwa Halborn",
+          "description": "Profesjonalnie audytowany przez Halborn, wiodącą firmę ds. bezpieczeństwa blockchain, zaufaną przez główne protokoły. Ukończone kompleksowe testy penetracyjne i przegląd kodu."
+        },
+        "2": {
+          "title": "Polityka zerowego przechowywania danych",
+          "description": "Ścisła polityka braku przechowywania na serwerach eliminuje scentralizowane wektory ataku. Klucze prywatne, transakcje i dane osobowe nigdy nie opuszczają urządzeń."
+        },
+        "3": {
+          "title": "W pełni otwartoźródłowy i przejrzysty",
+          "description": "Pełna transparentność kodu z deterministycznymi kompilacjami pozwala badaczom bezpieczeństwa i deweloperom niezależnie weryfikować integralność kompilacji. Brak ukrytych tylnych drzwi ani zastrzeżonych czarnych skrzynek."
+        }
+      }
+    },
+    "technical": {
+      "titleHighlight": "Technologiczna",
+      "titleSuffix": "innowacja",
+      "description": "Zbudowany z wykorzystaniem najnowocześniejszych technologii na potrzeby przyszłości zdecentralizowanych finansów.",
+      "items": {
+        "0": {
+          "title": "Obsługa wielu sieci (15+)",
+          "description": "Natywna obsługa Bitcoin, Ethereum, Polygon, BSC, Avalanche, Base, Arbitrum, Optimism i innych z ujednoliconym zarządzaniem portfelem."
+        },
+        "1": {
+          "title": "Wbudowany handel krypto",
+          "description": "Bezproblemowa zamiana krypto przez zintegrowane agregatory DEX, plus bramka fiat do kupowania i sprzedawania krypto kartą płatniczą."
+        },
+        "2": {
+          "title": "Account Abstraction (ERC-4337)",
+          "description": "Pierwszy portfel z natywnym multisig Schnorr Account Abstraction na Ethereum, umożliwiający bezopłatowe transakcje i portfele smart kontraktów."
+        },
+        "3": {
+          "title": "Prawdziwe zabezpieczenie multisig 2-z-2",
+          "description": "Rewolucyjne zabezpieczenie BIP48 z dwoma urządzeniami — rozszerzenie przeglądarki i aplikacja mobilna. Oba urządzenia wymagane przy każdej transakcji — maksymalna ochrona."
+        },
+        "4": {
+          "title": "Audytowany i otwartoźródłowy",
+          "description": "W pełni przejrzysty, weryfikowalny kod profesjonalnie audytowany przez ekspertów Halborn. Otwartoźródłowy ze standardami bezpieczeństwa klasy enterprise."
+        },
+        "5": {
+          "title": "Zaawansowana integracja z dApp",
+          "description": "Obsługa WalletConnect v2, podpisywanie wiadomości EIP-712 i kompleksowa integracja z przeglądarką dla bezproblemowej łączności z dApps."
+        }
+      }
+    },
+    "comparison": {
+      "titlePrefix": "Dlaczego wybrać",
+      "titleHighlight": "SSP Wallet",
+      "titleSuffix": "?",
+      "description": "Porównaj SSP Wallet z innymi metodami przechowywania krypto i przekonaj się o różnicy.",
+      "columns": {
+        "feature": "Funkcja",
+        "ssp": "SSP Wallet",
+        "selfCustody": "Portfele z samodzielną opieką",
+        "custodial": "Portfele powiernicze",
+        "hardware": "Portfele sprzętowe",
+        "exchange": "Giełdy krypto"
+      },
+      "values": {
+        "limited": "Ograniczona",
+        "some": "Częściowa",
+        "varies": "Zróżnicowana",
+        "rare": "Rzadko",
+        "na": "N/D"
+      },
+      "rows": {
+        "0": {
+          "feature": "Prawdziwy multisig 2-z-2",
+          "description": "Prawdziwy multisig BIP48 z wymogiem dwóch urządzeń"
+        },
+        "1": {
+          "feature": "Wbudowana zamiana krypto",
+          "description": "Natywna integracja DEX dla bezproblemowej zamiany tokenów"
+        },
+        "2": {
+          "feature": "Kupno/sprzedaż krypto",
+          "description": "Bramka fiat z obsługą kart płatniczych"
+        },
+        "3": {
+          "feature": "Kontrola z samodzielną opieką",
+          "description": "Posiadasz i kontrolujesz swoje klucze prywatne"
+        },
+        "4": {
+          "feature": "Mobilne zabezpieczenie 2FA",
+          "description": "Aplikacja mobilna jako bezpieczny drugi czynnik uwierzytelniania"
+        },
+        "5": {
+          "feature": "Integracja z dApp",
+          "description": "WalletConnect v2 i bezpośrednia obsługa przeglądarki dApp"
+        },
+        "6": {
+          "feature": "Obsługa wielu sieci (15+)",
+          "description": "Bitcoin, Ethereum, Polygon, BSC, Avalanche i inne"
+        },
+        "7": {
+          "feature": "Zerowe ryzyko kontrahenta",
+          "description": "Brak ryzyka upadłości platformy lub zajęcia środków"
+        },
+        "8": {
+          "feature": "Otwartoźródłowy",
+          "description": "W pełni przejrzysty i weryfikowalny kod"
+        },
+        "9": {
+          "feature": "Audytowany pod kątem bezpieczeństwa",
+          "description": "Profesjonalny audyt bezpieczeństwa przez wiodące firmy"
+        },
+        "10": {
+          "feature": "Account Abstraction (ERC-4337)",
+          "description": "Bezopłatowe transakcje i portfele smart kontraktów"
+        },
+        "11": {
+          "feature": "Brak jednej frazy seed",
+          "description": "Eliminuje podatność jednej frazy seed — stosuje kopię zapasową na dwóch urządzeniach"
+        },
+        "12": {
+          "feature": "Łatwość użycia",
+          "description": "Prosty, intuicyjny interfejs dla początkujących i ekspertów"
+        },
+        "13": {
+          "feature": "Szybkość transakcji",
+          "description": "Szybkie podpisywanie transakcji i interakcja z blockchainem"
+        },
+        "14": {
+          "feature": "Ochrona prywatności",
+          "description": "Brak gromadzenia danych osobowych ani śledzenia transakcji"
+        }
+      },
+      "ctaDownload": "Pobierz SSP Wallet",
+      "ctaGuide": "Przeczytaj przewodnik konfiguracji",
+      "ctaEnterprise": "SSP dla firm"
+    }
+  },
+  "Guide": {
+    "metaTitle": "Przewodnik konfiguracji — SSP Wallet | Kompletne instrukcje instalacji",
+    "metaDescription": "Przewodnik krok po kroku dotyczący instalacji i konfiguracji SSP Wallet i SSP Key. Kompletne instrukcje konfiguracji bezpiecznego portfela krypto z ochroną multi-signature.",
+    "breadcrumbLabel": "Przewodnik konfiguracji",
+    "videoJsonLdName": "Jak zainstalować SSP Wallet i SSP Key",
+    "videoJsonLdDescription": "Kompletny przewodnik wideo: instalacja rozszerzenia SSP Wallet i synchronizacja aplikacji mobilnej SSP Key dla bezpieczeństwa multisig 2-z-2.",
+    "howToJsonLdName": "Jak zainstalować SSP Wallet i SSP Key",
+    "howToJsonLdDescription": "Kompletny przewodnik instalacji rozszerzenia przeglądarki SSP Wallet i mobilnej aplikacji towarzyszącej SSP Key wymaganej do multisig 2-z-2.",
+    "howToSupplyDesktop": "Przeglądarka desktopowa (Chrome, Brave lub Firefox)",
+    "howToSupplyMobile": "Urządzenie mobilne (iOS 15.1+ lub Android 7+)",
+    "heroBadge": "Kompletny przewodnik konfiguracji",
+    "heroTitle": "Jak zainstalować SSP Wallet i SSP Key",
+    "heroDescriptionPart1": "SSP wymaga",
+    "heroDescriptionStrong": "dwuetapowego procesu konfiguracji",
+    "heroDescriptionPart2": ": zainstaluj rozszerzenie przeglądarki ORAZ aplikację mobilną. Oba urządzenia są wymagane do bezpiecznego systemu multisig 2-z-2 chroniącego krypto.",
+    "browserExtensionTitle": "Rozszerzenie przeglądarki",
+    "browserExtensionSubtitle": "Zainstaluj portfel",
+    "mobileKeyTitle": "Mobilny klucz",
+    "mobileKeySubtitle": "Uwierzytelnianie mobilne",
+    "videoTitle": "Wideo przewodnik konfiguracji",
+    "videoSubtitle": "Kompletny opis",
+    "videoDescription": "Obejrzyj nasz kompleksowy samouczek wideo pokazujący, jak skonfigurować SSP Wallet i SSP Key ze szczegółowymi instrukcjami krok po kroku.",
+    "videoUnsupported": "Twoja przeglądarka nie obsługuje tagu wideo.",
+    "videoBullet1": "Instalacja rozszerzenia przeglądarki",
+    "videoBullet2": "Konfiguracja i synchronizacja aplikacji mobilnej",
+    "videoBullet3": "Najlepsze praktyki bezpieczeństwa",
+    "stepsTitle": "Instrukcje krok po kroku",
+    "stepsSubtitle": "Postępuj zgodnie z tymi szczegółowymi instrukcjami, aby skonfigurować bezpieczny portfel krypto",
+    "important": "Ważne",
+    "openLink": "Otwórz link →",
+    "androidLabel": "Android",
+    "iosLabel": "iOS",
+    "phases": {
+      "0": {
+        "phase": "Część pierwsza",
+        "title": "Instalacja SSP Wallet",
+        "steps": {
+          "0": {
+            "title": "Odwiedź sklep z rozszerzeniami",
+            "description": "Otwórz przeglądarkę i przejdź do strony rozszerzenia SSP Wallet dla swojej przeglądarki (Chrome, Firefox, Brave)",
+            "action": "Przejdź do strony rozszerzenia"
+          },
+          "1": {
+            "title": "Zainstaluj rozszerzenie",
+            "description": "Kliknij przycisk 'Dodaj do Chrome/Firefox' lub 'Zainstaluj'. Pojawi się okno dialogowe z pytaniem, czy chcesz dodać SSP Wallet. Kliknij 'Dodaj' lub 'Zainstaluj', aby ukończyć instalację.",
+            "action": "Dodaj do przeglądarki"
+          },
+          "2": {
+            "title": "Otwórz portfel",
+            "description": "Znajdź logo portfela SSP w przeglądarce i kliknij je. Postępuj zgodnie z komunikatami, aby rozpocząć.",
+            "action": "Uruchom portfel"
+          },
+          "3": {
+            "title": "Utwórz hasło",
+            "description": "Utwórz hasło. Uważnie przeczytaj zastrzeżenie SSP Wallet i potwierdź swoją zgodę.",
+            "action": "Ustaw hasło"
+          },
+          "4": {
+            "title": "Utwórz portfel",
+            "description": "Kliknij 'Utwórz portfel', aby zainicjować nowy portfel.",
+            "action": "Zainicjuj portfel"
+          },
+          "5": {
+            "title": "Utwórz kopię zapasową frazy odzyskiwania",
+            "description": "Kliknij 'Pokaż frazę seed portfela mnemonicznego'. Przechowuj frazę odzyskiwania w bezpiecznym miejscu i potwierdź wykonanie kopii zapasowej.",
+            "action": "Bezpieczna kopia zapasowa"
+          },
+          "6": {
+            "title": "Zakończ konfigurację",
+            "description": "Kliknij 'Utwórz portfel', aby zakończyć proces. Portfel przeglądarkowy jest teraz gotowy!",
+            "action": "Ukończ konfigurację"
+          }
+        }
+      },
+      "1": {
+        "phase": "Część druga",
+        "title": "Instalacja mobilnej aplikacji SSP Key",
+        "steps": {
+          "0": {
+            "title": "Pobierz aplikację mobilną",
+            "description": "Pobierz SSP Key na urządzenie mobilne i otwórz aplikację.",
+            "action": "Zainstaluj aplikację mobilną"
+          },
+          "1": {
+            "title": "Rozpocznij synchronizację",
+            "description": "Kliknij 'Synchronizuj klucz', aby rozpocząć proces konfiguracji.",
+            "action": "Rozpocznij synchronizację"
+          },
+          "2": {
+            "title": "Ustaw hasło klucza",
+            "description": "Ustaw hasło SSP Key i potwierdź je. Następnie kliknij 'Konfiguruj klucz'.",
+            "action": "Utwórz hasło klucza"
+          },
+          "3": {
+            "title": "Utwórz kopię zapasową frazy seed klucza",
+            "description": "Kliknij 'Pokaż frazę seed klucza mnemonicznego'. Przechowuj frazę seed klucza w bezpiecznym miejscu i potwierdź wykonanie kopii zapasowej.",
+            "action": "Bezpieczna kopia zapasowa klucza"
+          },
+          "4": {
+            "title": "Ukończ konfigurację klucza",
+            "description": "Kliknij 'Konfiguruj klucz'. SSP Key pełni teraz funkcję drugiego czynnika uwierzytelniania dla SSP Wallet.",
+            "action": "Finalizuj klucz"
+          },
+          "5": {
+            "title": "Zeskanuj kod QR",
+            "description": "Kliknij 'Skanuj kod', aby zsynchronizować SSP Key z SSP Wallet. Zeskanuj kod QR wyświetlony w przeglądarce.",
+            "action": "Synchronizuj urządzenia"
+          },
+          "6": {
+            "title": "Zatwierdź synchronizację",
+            "description": "Kliknij 'Zatwierdź synchronizację' i potwierdź hasłem klucza. Zostaniesz powiadomiony o pomyślnej synchronizacji.",
+            "action": "Ukończ synchronizację"
+          }
+        }
+      }
+    },
+    "tipsTitle": "Najlepsze praktyki bezpieczeństwa",
+    "tipsSubtitle": "Postępuj zgodnie z tymi ważnymi wskazówkami bezpieczeństwa, aby utrzymać portfel w bezpieczności",
+    "tips": {
+      "0": {
+        "title": "Zabezpiecz frazy odzyskiwania",
+        "description": "Przechowuj frazy seed portfela i klucza w bezpiecznym, offline miejscu. Nigdy nie udostępniaj ich nikomu."
+      },
+      "1": {
+        "title": "Używaj silnych haseł",
+        "description": "Utwórz unikalne, silne hasła zarówno dla portfela, jak i mobilnej aplikacji klucza."
+      },
+      "2": {
+        "title": "Dbaj o bezpieczeństwo urządzenia mobilnego",
+        "description": "Upewnij się, że urządzenie mobilne ma włączoną blokadę ekranu, i rozważ korzystanie z uwierzytelniania biometrycznego."
+      }
+    },
+    "successTitle": "Gratulacje!",
+    "successDescription": "Postępując zgodnie z tymi krokami, pomyślnie zainstalowano i skonfigurowano SSP Wallet i SSP Key, zapewniając bezpieczne i płynne użytkowanie.",
+    "successDownload": "Pobierz teraz",
+    "successSupport": "Uzyskaj pomoc"
+  },
+  "Support": {
+    "metaTitle": "Wsparcie — SSP Wallet | Uzyskaj pomoc i wsparcie techniczne",
+    "metaDescription": "Uzyskaj kompleksowe wsparcie dla SSP Wallet. Znajdź odpowiedzi na FAQ, uzyskaj dostęp do dokumentacji, połącz się ze społecznością lub skontaktuj się z naszym zespołem.",
+    "breadcrumbLabel": "Wsparcie",
+    "heroBadge": "Centrum pomocy",
+    "heroTitle": "Jak możemy pomóc?",
+    "heroDescription": "Znajdź odpowiedzi na często zadawane pytania, uzyskaj dostęp do dokumentacji lub skontaktuj się z naszym zespołem wsparcia.",
+    "quickLinks": {
+      "docsTitle": "Dokumentacja",
+      "docsSubtitle": "Przewodniki",
+      "communityTitle": "Społeczność",
+      "communitySubtitle": "Czat",
+      "supportTitle": "Wsparcie",
+      "supportSubtitle": "Pomoc"
+    },
+    "channelsTitle": "Uzyskaj wsparcie",
+    "channelsSubtitle": "Wybierz najlepszy sposób uzyskania pomocy odpowiadający Twoim potrzebom",
+    "channels": {
+      "documentation": {
+        "title": "Dokumentacja",
+        "description": "Obszerne przewodniki i dokumentacja",
+        "links": {
+          "completeDocs": "Pełna dokumentacja",
+          "setupGuide": "Przewodnik konfiguracji",
+          "featureDocs": "Dokumentacja funkcji"
+        }
+      },
+      "community": {
+        "title": "Wsparcie społeczności",
+        "description": "Uzyskaj pomoc od naszej społeczności",
+        "links": {
+          "github": "Dyskusje GitHub",
+          "discord": "Społeczność Discord",
+          "twitter": "Wsparcie Twitter"
+        }
+      },
+      "direct": {
+        "title": "Bezpośrednie wsparcie",
+        "description": "Uzyskaj spersonalizowaną pomoc techniczną",
+        "links": {
+          "ticketSystem": "System zgłoszeń pomocy technicznej",
+          "email": "Wsparcie e-mail"
+        }
+      }
+    },
+    "faqTitle": "Często zadawane pytania",
+    "faqSubtitle": "Znajdź szybkie odpowiedzi na najczęstsze pytania dotyczące SSP Wallet",
+    "faqCategories": {
+      "gettingStarted": {
+        "title": "Pierwsze kroki",
+        "items": {
+          "0": {
+            "question": "Czym jest SSP Wallet?",
+            "answer": "SSP Wallet to prawdziwy system multisig 2-z-2 składający się z dwóch komponentów: SSP Wallet (rozszerzenie przeglądarki) i SSP Key (mobilna aplikacja 2FA). Oba urządzenia są wymagane do autoryzacji transakcji, zapewniając niezrównane bezpieczeństwo aktywów krypto na ponad 15 blockchainach."
+          },
+          "1": {
+            "question": "Jak zainstalować SSP Wallet?",
+            "answer": "SSP Wallet można zainstalować jako rozszerzenie Chrome ze sklepu Chrome Web Store. Odwiedź stronę pobierania i postępuj zgodnie z naszym kompleksowym przewodnikiem konfiguracji krok po kroku."
+          },
+          "2": {
+            "question": "Czy SSP Wallet jest bezpłatny?",
+            "answer": "Tak, SSP Wallet jest całkowicie bezpłatny do pobrania i używania. Nie pobieramy żadnych opłat za sam portfel, choć nadal będą pobierane sieciowe opłaty transakcyjne przy dokonywaniu transakcji blockchain."
+          },
+          "3": {
+            "question": "Jakie kryptowaluty obsługuje SSP Wallet?",
+            "answer": "SSP Wallet obsługuje ponad 15 blockchainów, w tym Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), Zcash (ZEC), Ravencoin (RVN), Dogecoin (DOGE), Bitcoin Cash (BCH), Flux (FLUX), Polygon (MATIC), BSC, Avalanche (AVAX) i Base. Dla sieci kompatybilnych z EVM obsługujemy wszystkie tokeny ERC-20 i można importować własne listy tokenów. Obsługa Solana wkrótce."
+          },
+          "4": {
+            "question": "Gdzie mogę znaleźć kompletną listę obsługiwanych aktywów?",
+            "answerBefore": "Aby uzyskać kompleksową i aktualną listę wszystkich natywnie obsługiwanych sieci i tokenów, zapoznaj się z naszym oficjalnym ",
+            "answerLink": "arkuszem aktywów SSP",
+            "answerAfter": ". Ten arkusz jest regularnie aktualizowany o nowe dodatki i zawiera szczegółowe informacje o każdym obsługiwanym aktywie."
+          },
+          "5": {
+            "question": "Czy mogę używać SSP Wallet z dApps i DeFi?",
+            "answer": "Tak! SSP Wallet oferuje pełną integrację WalletConnect v2 (Reown), umożliwiając połączenie z tysiącami zdecentralizowanych aplikacji na wszystkich obsługiwanych sieciach EVM. Można korzystać z protokołów DeFi, rynków NFT i innych dApps przy zachowaniu bezpieczeństwa systemu multisig 2-z-2."
+          },
+          "6": {
+            "question": "Czym są FluxNodes i jak z nich korzystać?",
+            "answer": "FluxNodes to węzły w sieci Flux pomagające zabezpieczać i utrzymywać blockchain. Dzięki SSP Wallet można łatwo konfigurować i zarządzać Fluxnodes, monitorować ich wydajność i odbierać nagrody bezpośrednio przez interfejs portfela. Fluxnodes wymagają kwoty zabezpieczenia w tokenach FLUX i zapewniają pasywny dochód z nagród sieciowych."
+          },
+          "7": {
+            "question": "Czy SSP Wallet obsługuje wejście i wyjście z fiat?",
+            "answer": "Tak! SSP Wallet obsługuje wejście i wyjście z fiat przez zintegrowanych partnerów. Można kupować kryptowaluty bezpośrednio kartą kredytową, przelewem bankowym lub innymi metodami płatności i sprzedawać krypto z powrotem do waluty fiducjarnej. Ta funkcja jest dostępna w obsługiwanych regionach i wymaga weryfikacji KYC."
+          },
+          "8": {
+            "question": "Czy mogę zamieniać kryptowaluty w SSP Wallet?",
+            "answer": "Tak, SSP Wallet zawiera wbudowaną funkcję zamiany krypto. Można łatwo wymienić jedną kryptowalutę na inną w obsługiwanych blockchainach przez zintegrowanych partnerów zamiany. Funkcja zamiany zapewnia konkurencyjne kursy i realizuje zamiany bezpiecznie przy zachowaniu kluczy prywatnych."
+          },
+          "9": {
+            "question": "Czy mogę eksportować historię transakcji?",
+            "answer": "Tak! SSP Wallet obsługuje eksport CSV historii transakcji. Można eksportować szczegółowe rekordy transakcji do celów księgowych, podatkowych lub osobistej ewidencji. Eksport CSV zawiera daty transakcji, kwoty, adresy, opłaty i inne istotne szczegóły dla każdego obsługiwanego blockchainu."
+          },
+          "10": {
+            "question": "Jak zgłosić prośbę o dodanie nowej monety?",
+            "answer": "Zachęcamy użytkowników do kontaktu z naszym zespołem wsparcia lub bezpośredniego wkładu w repozytorium GitHub z prośbą o obsługę nowej kryptowaluty. Oceniamy każde zgłoszenie na podstawie popytu społeczności, wykonalności technicznej i względów bezpieczeństwa."
+          },
+          "11": {
+            "question": "Czy dostępny jest mobilny portfel?",
+            "answer": "Dobra wiadomość! Aktywnie pracujemy nad rozszerzeniem SSP Wallet na platformy mobilne. Obecnie SSP Wallet składa się z rozszerzenia przeglądarki (SSP Wallet) i mobilnej aplikacji 2FA (SSP Key). Pełne mobilne doświadczenie portfela jest w fazie rozwoju."
+          },
+          "12": {
+            "question": "Czy mogę używać SSP Wallet na wielu urządzeniach?",
+            "answer": "Tak, można używać SSP Wallet na wielu urządzeniach. Aby skonfigurować na nowym urządzeniu, konieczne jest przywrócenie portfela i klucza przy użyciu odpowiednich fraz seed. Każde urządzenie wymaga prawidłowej konfiguracji i synchronizacji."
+          },
+          "13": {
+            "question": "Czy SSP Wallet ma limit transakcji?",
+            "answer": "SSP Wallet nie narzuca limitów transakcji. Jednak obowiązują limity sieci blockchain i dostępne saldo. Niektóre sieci mogą mieć minimalne kwoty transakcji lub maksymalne rozmiary transakcji oparte na swoich protokołach."
+          },
+          "14": {
+            "question": "Czy mogę używać SSP Wallet offline?",
+            "answer": "SSP Wallet wymaga połączenia internetowego do większości operacji, w tym nadawania transakcji, aktualizacji sald i synchronizacji między urządzeniami. Można przeglądać niektóre buforowane informacje offline, ale nie można wysyłać transakcji bez łączności."
+          }
+        }
+      },
+      "security": {
+        "title": "Bezpieczeństwo i prywatność",
+        "items": {
+          "0": {
+            "question": "Jak bezpieczny jest SSP Wallet?",
+            "answer": "SSP Wallet używa technologii multi-signature ze zintegrowanym uwierzytelnianiem mobilnym, zapewniając ochronę dwoma kluczami. Stosujemy najnowocześniejsze szyfrowanie i nie przechowujemy żadnych danych — wszystko jest przechowywane lokalnie i kontrolowane przez użytkownika."
+          },
+          "1": {
+            "question": "Czym jest SSP Key i dlaczego jest potrzebny?",
+            "answer": "SSP Key to aplikacja mobilna przechowująca drugi klucz prywatny wymagany przez system multisig 2-z-2. Każda transakcja musi być podpisana zarówno przez rozszerzenie przeglądarki, jak i urządzenie mobilne. Zapewnia to bezpieczeństwo środków nawet w razie przejęcia jednego urządzenia. SSP Key jest dostępny dla iOS 15.1+ i Android 7+."
+          },
+          "2": {
+            "question": "Czy mogę odzyskać portfel po utracie urządzenia?",
+            "answer": "Tak, portfel można odzyskać za pomocą frazy odzyskiwania. Zarówno portfel, jak i klucz mają oddzielne frazy seed, które powinny być przechowywane bezpiecznie offline. Nigdy nie udostępniaj fraz seed nikomu."
+          },
+          "3": {
+            "question": "Czy SSP Wallet zbiera moje dane osobowe?",
+            "answer": "Nie, SSP Wallet jest zobowiązany do nieprzechowywania żadnych danych. Klucze prywatne, historia transakcji i dane osobowe pozostają całkowicie pod kontrolą użytkownika i są przechowywane lokalnie na urządzeniach."
+          },
+          "4": {
+            "question": "Czym są deterministyczne kompilacje i dlaczego mają znaczenie?",
+            "answer": "Deterministyczne kompilacje zapewniają, że identyczny kod źródłowy producuje identyczne pliki binarne. SSP Wallet używa deterministycznych kompilacji opartych na Docker, które umożliwiają każdemu niezależną weryfikację, że dystrybuowane rozszerzenie dokładnie odpowiada temu, co zostało zbudowane z opublikowanego kodu źródłowego. Eliminuje to potencjalne ataki na łańcuch dostaw i zapewnia kryptograficzny dowód integralności kompilacji."
+          },
+          "5": {
+            "question": "Jak mogę zweryfikować deterministyczną kompilację SSP Wallet?",
+            "answerIntro": "Aby zweryfikować kompilacje SSP Wallet: 1) Pobierz pliki wydania (paczki Chrome/Firefox, SHA256SUMS, SHA256SUMS.asc) z ",
+            "answerLink1": "wydań GitHub",
+            "answerMiddle1": ". 2) Zaimportuj nasz klucz publiczny z ",
+            "answerLink2": "serwera kluczy OpenPGP",
+            "answerMiddle2": ". 3) Zweryfikuj podpis GPG: ",
+            "answerCode1": "gpg --verify SHA256SUMS.asc SHA256SUMS",
+            "answerMiddle3": ". 4) Zweryfikuj skróty: ",
+            "answerCode2": "sha256sum -c SHA256SUMS",
+            "answerMiddle4": ". 5) Opcjonalnie odtwórz kompilację: ",
+            "answerCode3": "git checkout [version] && npm run build:deterministic",
+            "answerOutro": "."
+          },
+          "6": {
+            "question": "Kto podpisuje wydania SSP Wallet?",
+            "answerBefore": "Wszystkie wydania SSP Wallet są kryptograficznie podpisywane przez security@runonflux.io przy użyciu podpisów GPG. Nasz klucz publiczny jest dostępny na ",
+            "answerLink": "serwerze kluczy OpenPGP",
+            "answerAfter": " do weryfikacji. Proces deterministycznej kompilacji obejmuje izolowane środowiska oparte na Docker i kompleksowe sumy kontrolne (SHA256SUMS), które są również podpisane GPG w celu zapewnienia autentyczności i integralności."
+          },
+          "7": {
+            "question": "Czy mogę używać wielu SSP Key z jednym SSP Wallet?",
+            "answer": "Nie, każdy SSP Wallet może być sparowany tylko z jednym SSP Key. System multisig 2-z-2 wymaga synchronizacji specyficznej dla urządzenia dla publicznych nonce i danych sieciowych. Użycie wielu SSP Key spowodowałoby konflikty synchronizacji."
+          }
+        }
+      },
+      "technical": {
+        "title": "Pomoc techniczna",
+        "items": {
+          "0": {
+            "question": "Które przeglądarki są obsługiwane?",
+            "answer": "SSP Wallet obsługuje Google Chrome, Brave, Firefox i inne przeglądarki oparte na Chromium. Wersję dla sklepu Chrome Web Store można pobrać dla przeglądarek Chromium lub wersję Firefox bezpośrednio z wydań GitHub."
+          },
+          "1": {
+            "question": "Mam problem z synchronizacją mobilnego klucza",
+            "answer": "Upewnij się, że oba urządzenia są podłączone do internetu, kod QR jest wyraźnie widoczny i używasz najnowszych wersji zarówno rozszerzenia przeglądarki, jak i aplikacji mobilnej. Spróbuj ponownie uruchomić obie aplikacje, jeśli synchronizacja nie powiedzie się."
+          },
+          "2": {
+            "question": "Moja transakcja utknęła lub jest w toku",
+            "answer": "Transakcje blockchain mogą czasami trwać dłużej w zależności od przeciążenia sieci. Sprawdź status transakcji w eksploratorze blockchain. W przypadku korzystania z Ethereum może być konieczne zwiększenie opłat gas w celu szybszego potwierdzenia."
+          },
+          "3": {
+            "question": "Jak zaktualizować SSP Wallet?",
+            "answer": "Rozszerzenia przeglądarki zazwyczaj aktualizują się automatycznie. Można ręcznie sprawdzić aktualizacje na stronie zarządzania rozszerzeniami w przeglądarce. W przypadku aplikacji mobilnej sprawdź aktualizacje w sklepie z aplikacjami urządzenia."
+          },
+          "4": {
+            "question": "Czym jest SSP Relay i jak działa?",
+            "answer": "SSP Relay to otwartoźródłowa usługa przekaźnikowa działająca jako most między SSP Wallet a SSP Key. Dostarcza informacje rynkowe, dane o opłatach, umożliwia synchronizację transakcji i dostarcza powiadomienia push. Przekaźnik poprawia doświadczenia użytkownika przy zachowaniu bezpieczeństwa."
+          },
+          "5": {
+            "question": "Czy SSP Wallet obsługuje Replace-By-Fee (RBF)?",
+            "answer": "Tak, SSP Wallet w pełni obsługuje funkcję Replace-By-Fee (RBF). Można modyfikować opłaty transakcyjne, a nawet zmieniać odbiorców po nadaniu transakcji, co daje elastyczność w zarządzaniu transakcjami na blockchainie."
+          },
+          "6": {
+            "question": "Jakie opłaty pobiera SSP Wallet?",
+            "answer": "SSP Wallet ma zerowe opłaty — nie pobieramy nic za korzystanie z portfela. Płaci się tylko standardowe sieciowe opłaty blockchain trafiające bezpośrednio do górników/walidatorów za przetworzenie transakcji. Portfel zawiera automatyczny wybór opłat w celu optymalizacji kosztów transakcji."
+          },
+          "7": {
+            "question": "Dlaczego niektóre transakcje nie mogą być zbudowane?",
+            "answer": "Niektóre transakcje mogą nie powieść się z powodu ograniczeń rozmiaru blockchain i złożoności UTXO. Gdy istnieje wiele małych wejść, rozmiar transakcji może przekroczyć limity sieciowe. W takich przypadkach może być konieczne skonsolidowanie UTXO lub podzielenie transakcji na mniejsze części."
+          },
+          "8": {
+            "question": "Czy muszę przywrócić portfel przy zmianie urządzeń?",
+            "answer": "Tak, ze względu na szyfrowanie specyficzne dla urządzenia, konieczne jest przywrócenie zarówno portfela, jak i klucza przy zmianie urządzeń lub wprowadzaniu znaczących zmian systemowych. Przechowuj frazy seed bezpiecznie i dostępnie do tego procesu."
+          },
+          "9": {
+            "question": "Co się dzieje, gdy zgubię urządzenie SSP Key?",
+            "answer": "Jeśli zgubisz urządzenie SSP Key, możesz je przywrócić na nowym urządzeniu za pomocą frazy seed SSP Key. Zainstaluj aplikację SSP Key na nowym urządzeniu i użyj frazy seed, aby odzyskać dostęp. Po przywróceniu konieczna będzie ponowna synchronizacja z rozszerzeniem przeglądarki SSP Wallet."
+          },
+          "10": {
+            "question": "Czy mogę tworzyć kopie zapasowe portfela w chmurze?",
+            "answer": "SSP Wallet nie obsługuje automatycznych kopii zapasowych w chmurze ze względów bezpieczeństwa. Frazy seed powinny być przechowywane offline w bezpiecznym miejscu. Nigdy nie przechowuj fraz seed w magazynie chmurowym, poczcie e-mail ani żadnym formacie cyfrowym, który mógłby zostać przejęty."
+          },
+          "11": {
+            "question": "Jaka jest różnica między frazą seed SSP Wallet a frazą seed SSP Key?",
+            "answer": "SSP Wallet i SSP Key mają oddzielne frazy seed. Fraza seed portfela kontroluje komponent rozszerzenia przeglądarki, podczas gdy fraza seed klucza kontroluje mobilny komponent 2FA. Obie są wymagane do pełnego odzyskania portfela i powinny być przechowywane oddzielnie i bezpiecznie."
+          },
+          "12": {
+            "question": "Jak przenieść portfel na nowy komputer?",
+            "answer": "Aby przenieść SSP Wallet na nowy komputer: 1) Zainstaluj rozszerzenie SSP Wallet na nowym urządzeniu, 2) Użyj frazy seed portfela, aby przywrócić rozszerzenie przeglądarki, 3) Ponownie zsynchronizuj z istniejącą mobilną aplikacją SSP Key. Historia transakcji i ustawienia będą wymagały ponownej konfiguracji."
+          },
+          "13": {
+            "question": "Pojawia się błąd 'Synchronisation with SSP wallet needed' na urządzeniu mobilnym",
+            "answer": "Ten błąd zwykle pojawia się przy zmianie telefonu lub gdy blockchain nie jest jeszcze zsynchronizowany z SSP Key. Aby rozwiązać: 1) Otwórz SSP Wallet, 2) Przełącz na blockchain do ponownej synchronizacji, 3) Kliknij menu hamburger (prawy górny róg), 4) Wybierz 'SSP Wallet Details', 5) Potwierdź dostęp hasłem, 6) W pierwszym wierszu znajdź 'Chain Sync with SSP Key' i kliknij ikonę oka, aby pokazać kod QR, 7) Zeskanuj kod QR za pomocą SSP Key i zatwierdź synchronizację sieci."
+          },
+          "14": {
+            "question": "Pojawia się błąd 'SSP Key Public nonces do not match or SSP Key Public nonces are missing'",
+            "answer": "Ten błąd pojawia się, gdy publiczne nonce używane do konstruowania transakcji nie są zsynchronizowane między SSP Wallet a SSP Key. Aby rozwiązać: 1) Otwórz menu hamburger (prawy górny róg), 2) Przejdź do Ustawień, 3) Znajdź sekcję 'Public Nonces' i kliknij 'Sync Public Nonces', 4) Zeskanuj wyświetlony kod QR za pomocą SSP Key, 5) Zatwierdź żądanie na urządzeniu mobilnym. Publiczne nonce są teraz zsynchronizowane i można rozpocząć transakcje."
+          }
+        }
+      }
+    },
+    "stillNeedHelpTitle": "Nadal potrzebujesz pomocy?",
+    "stillNeedHelpDescription": "Nie możesz znaleźć tego, czego szukasz? Wyślij nam wiadomość, a nasz zespół wsparcia odpowie najszybciej, jak to możliwe.",
+    "emailSupportTitle": "Wsparcie e-mail",
+    "emailSupportDescription": "Zazwyczaj odpowiadamy w ciągu 24 godzin",
+    "openSourceTitle": "Otwartoźródłowy",
+    "openSourceDescription": "Zgłaszaj błędy lub przyczyniaj się na GitHub",
+    "communityTitle": "Społeczność",
+    "communityDescription": "Nawiązuj kontakt z innymi użytkownikami i uzyskaj wsparcie od społeczności",
+    "contactSupportTitle": "Skontaktuj się z pomocą techniczną",
+    "form": {
+      "emailLabel": "Adres e-mail *",
+      "emailPlaceholder": "twoj.email@przyklad.com",
+      "typeLabel": "Rodzaj problemu *",
+      "typeOptions": {
+        "Question": "Pytanie ogólne",
+        "Incident": "Problem techniczny",
+        "Problem": "Potrzebna pomoc",
+        "Feature Request": "Prośba o funkcję",
+        "Bug Report": "Zgłoszenie błędu"
+      },
+      "subjectLabel": "Temat *",
+      "subjectPlaceholder": "Krótki opis problemu",
+      "descriptionLabel": "Opis *",
+      "descriptionPlaceholder": "Prosimy o podanie szczegółowych informacji o problemie…",
+      "submitting": "Wysyłanie...",
+      "submit": "Wyślij wiadomość",
+      "errorFallback": "Nie udało się wysłać wiadomości. Spróbuj ponownie.",
+      "errorGeneric": "Nie udało się przesłać zgłoszenia",
+      "successTitle": "Wiadomość wysłana pomyślnie!",
+      "successDescription": "Dziękujemy za kontakt. Odpowiemy najszybciej, jak to możliwe.",
+      "successAgain": "Wyślij kolejną wiadomość"
+    }
+  },
+  "Legal": {
+    "lastUpdated": "Ostatnia aktualizacja: {date}",
+    "privacyPolicy": {
+      "metaTitle": "Polityka prywatności — ekosystem SSP Wallet",
+      "metaDescription": "Polityka prywatności całego ekosystemu SSP Wallet. Dowiedz się, jak chronimy prywatność użytkowników na stronie, w rozszerzeniu, aplikacji mobilnej i usłudze relay.",
+      "heading": "Polityka prywatności"
+    },
+    "termsOfService": {
+      "metaTitle": "Warunki korzystania z usług — ekosystem SSP Wallet",
+      "metaDescription": "Warunki korzystania z usług całego ekosystemu SSP Wallet, w tym strony, rozszerzenia, aplikacji mobilnej i usługi relay.",
+      "heading": "Warunki korzystania z usług"
+    },
+    "cookiePolicy": {
+      "metaTitle": "Polityka plików cookie — strona SSP Wallet",
+      "metaDescription": "Dowiedz się, jak używamy plików cookie na stronie sspwallet.io. Zarządzaj preferencjami i zapoznaj się z naszymi praktykami zgodnymi z RODO.",
+      "heading": "Polityka plików cookie"
+    }
+  },
+  "CheckoutSuccess": {
+    "metaTitle": "Zamówienie zakończone sukcesem | SSP Wallet",
+    "metaDescription": "Zamówienie zostało złożone pomyślnie.",
+    "heading": "Zamówienie zakończone sukcesem!",
+    "description": "Zamówienie zostało złożone pomyślnie. Dziękujemy za zakup!",
+    "confirmationEmail": "Wkrótce otrzymasz wiadomość e-mail z potwierdzeniem.",
+    "backToHome": "Wróć do strony głównej",
+    "contactSupport": "Skontaktuj się z pomocą techniczną"
+  },
+  "CheckoutFailure": {
+    "metaTitle": "Zamówienie nie powiodło się | SSP Wallet",
+    "metaDescription": "Przetworzenie zamówienia nie było możliwe. Spróbuj ponownie.",
+    "heading": "Zamówienie nie powiodło się",
+    "description": "Przetworzenie zamówienia nie było możliwe. Spróbuj ponownie lub skontaktuj się z pomocą techniczną, jeśli problem się powtarza.",
+    "tryAgain": "Spróbuj ponownie",
+    "contactSupport": "Skontaktuj się z pomocą techniczną"
+  },
+  "Categories": {
+    "multisig": {
+      "title": "Multisig — wyjaśnienie",
+      "description": "Jak działa multisig 2-z-2 w SSP — i dlaczego ma to znaczenie."
+    },
+    "getting-started": {
+      "title": "Podstawy krypto",
+      "description": "Podstawowe pojęcia, które powinien znać każdy użytkownik kryptowalut."
+    },
+    "security": {
+      "title": "Bezpieczeństwo i samodzielne przechowywanie",
+      "description": "Chroń swoje krypto: frazy seed, phishing, sprzęt, modele zagrożeń."
+    },
+    "how-to": {
+      "title": "Przewodniki krok po kroku",
+      "description": "Szczegółowe instrukcje dla typowych zadań w SSP."
+    },
+    "coin-guides": {
+      "title": "Przewodniki po monetach i sieciach",
+      "description": "Szczegółowa analiza poszczególnych monet i sieci obsługiwanych przez SSP."
+    },
+    "defi": {
+      "title": "DeFi i Account Abstraction",
+      "description": "Staking, pożyczki, swapy i ERC-4337 — wyjaśnienie."
+    },
+    "news-explained": {
+      "title": "Aktualności i analiza branżowa",
+      "description": "Kontekst i analiza wiadomości kryptowalutowych i regulacji."
+    }
+  },
+  "CaseStudies": {
+    "breadcrumbLabel": "Przypadki użycia",
+    "fluxFoundation": {
+      "metaTitle": "Przypadek użycia: Flux Foundation — samodzielne przechowywanie skarbu z SSP Enterprise",
+      "metaDescription": "Jak Flux Foundation przeszło od rozproszonych konfiguracji multisig i niestandardowych skryptów do SSP Enterprise — zabezpieczając most Fusion i skarbiec fundacji za pomocą sejfów M-z-N na każdej używanej sieci.",
+      "breadcrumbLabel": "Flux Foundation",
+      "logoAlt": "Flux Foundation",
+      "eyebrow": "Przypadek użycia",
+      "titlePart1": "Flux Foundation ×",
+      "titlePart2": "SSP Enterprise",
+      "subtitle": "Jak Flux Foundation przeszło od rozproszonych konfiguracji multisig i niestandardowych skryptów do jednej platformy z samodzielnym przechowywaniem — zabezpieczając most Fusion i skarbiec fundacji bez przekazywania kluczy komukolwiek.",
+      "heroQuote": "Potrzebowaliśmy pełnej kontroli nad środkami, przejrzystości dla społeczności i żadnego nieprzejrzystego MPC między nami a własnym skarbcem. SSP Enterprise było pierwszą platformą, którą znaleźliśmy spełniającą wszystkie trzy warunki — na każdej sieci, z której faktycznie korzystamy.",
+      "heroQuoteAttribution": "— Tadeas Kmenta, Flux Foundation",
+      "factSheet": {
+        "organizationLabel": "Organizacja",
+        "organizationValue": "Flux Foundation",
+        "industryLabel": "Branża",
+        "industryValue": "Zdecentralizowana infrastruktura",
+        "useCaseLabel": "Zastosowanie",
+        "useCaseValue": "Skarbiec fundacji + multisig mostu Fusion",
+        "chainsLabel": "Sieci",
+        "chainsValue": "BTC, ETH, FLUX, EVM L2s",
+        "vaultModelLabel": "Model sejfu",
+        "vaultModelValue": "Multisig M-z-N, dwa urządzenia na sygnatariusza",
+        "statusLabel": "Status",
+        "statusValue": "W produkcji"
+      },
+      "before": {
+        "title": "Wcześniej: rozproszone konfiguracje multisig i niestandardowe skrypty",
+        "intro": "Flux Foundation zarządzała podpisywaniem wielostronnym od lat. Problemem nie był brak multisig — brakowało czegoś, co łączyłoby wszystko w różnych sieciach, a dostępne komercyjne alternatywy wymagały kompromisu, na który zespół nie chciał się zgodzić.",
+        "items": {
+          "0": {
+            "title": "Rozproszone konfiguracje multisig",
+            "description": "Różne portfele multisig na różnych sieciach, każdy ze swoimi osobliwościami, sygnatariuszami i procedurami odzyskiwania."
+          },
+          "1": {
+            "title": "Niestandardowe skrypty spinające całość",
+            "description": "Wewnętrzne narzędzia do konstruowania transakcji, koordynacji podpisywania i nadawania — utrzymywane ręcznie."
+          },
+          "2": {
+            "title": "Brak ujednoliconej ścieżki audytu",
+            "description": "Zatwierdzenia znajdowały się w wątkach czatu i wspólnych dokumentach. Odtworzenie, kto co podpisał, wymagało żmudnego poszukiwania."
+          },
+          "3": {
+            "title": "Brak złotego środka na rynku",
+            "description": "Powiernicze rozwiązania i dostawcy MPC oznaczały zaufanie do nieprzejrzystych systemów. Gotowe narzędzia multisig działały tylko na Ethereum."
+          }
+        }
+      },
+      "decision": {
+        "title": "Decyzja",
+        "intro": "Zespół ocenił alternatywy i podzielił je na trzy kategorie. Każda miała czynnik dyskwalifikujący.",
+        "bucket1Eyebrow": "Kategoria 1",
+        "bucket1Title": "Powiernicze MPC",
+        "bucket1Description": "Fireblocks, BitGo i podobne. Dostawca przechowuje część każdego klucza.",
+        "bucket1Verdict": "To nie jest prawdziwa samodzielna opieka.",
+        "bucket2Eyebrow": "Kategoria 2",
+        "bucket2Title": "Multisig jednej sieci",
+        "bucket2Description": "Safe i podobne. Tylko Ethereum, bez natywnej obsługi UTXO.",
+        "bucket2Verdict": "Posiadamy też Bitcoin i Flux.",
+        "bucket3Eyebrow": "Kategoria 3",
+        "bucket3Title": "Podstawowy multisig",
+        "bucket3Description": "Portfele bez silnika polityk, analityki ani właściwej ścieżki audytu.",
+        "bucket3Verdict": "Wrócilibyśmy do budowania narzędzi we własnym zakresie.",
+        "conclusion": "SSP Enterprise była jedyną platformą rozwiązującą wszystkie trzy problemy jednocześnie: natywna wielosieciowość (UTXO i EVM), prawdziwa samodzielna opieka bez współdzielenia klucza z dostawcą, oraz wbudowany silnik polityk, analityka i ścieżka audytu."
+      },
+      "whatChanged": {
+        "title": "Co się zmieniło",
+        "intro": "Jedna platforma, każda sieć, z którą Fundacja wchodzi w interakcje, jeden spójny model podpisywania. Niestandardowe skrypty zostały wycofane. Ścieżka audytu oparta na wątkach czatu została zastąpiona przez przypisane rekordy na platformie. Multisig skarbca i mostu funkcjonują obok siebie w ramach tego samego zarządzania.",
+        "items": {
+          "0": {
+            "title": "Sejfy M-z-N na każdej sieci",
+            "description": "Bitcoin, Ethereum, Flux i EVM L2s — ta sama platforma, ten sam model myślowy, te same gwarancje bezpieczeństwa."
+          },
+          "1": {
+            "title": "Dwa urządzenia na sygnatariusza, bez wyjątków",
+            "description": "Rozszerzenie przeglądarki i aplikacja mobilna wymagane przy każdym podpisie. Jedno skompromitowane urządzenie nie może podpisać."
+          },
+          "2": {
+            "title": "Ścieżka audytu, która wytrzymuje próbę",
+            "description": "Każda propozycja, zatwierdzenie i odrzucenie zapisane z sygnatariuszem i znacznikiem czasu. Zastępuje rekonstrukcję z wątków czatu."
+          },
+          "3": {
+            "title": "Samodzielna opieka od początku do końca",
+            "description": "Żadnego współdzielenia klucza z dostawcą. Żadnej infrastruktury MPC, której trzeba ufać. Nawet gdyby SSP zniknęło jutro, środki pozostają możliwe do odzyskania z fraz seed sygnatariuszy."
+          }
+        }
+      },
+      "fusionBridge": {
+        "title": "Most Fusion",
+        "intro": "Most Fusion to jedna z najbardziej wrażliwych pod względem bezpieczeństwa powierzchni obsługiwanych przez Fundację — koordynuje transfer wartości między Flux a innymi sieciami, a pojedynczy błąd podpisywania mógłby być katastrofalny. To też obszar, w którym model SSP Enterprise przynosi największe korzyści.",
+        "items": {
+          "0": {
+            "title": "Multisig on-chain",
+            "description": "Natywny multisig na każdej sieci, której dotyka most — żadnego powiernika smart kontraktów, żadnego relaiera, który może spowolnić lub przeprowadzić front-run."
+          },
+          "1": {
+            "title": "Podpisywanie dwoma urządzeniami na sygnatariusza",
+            "description": "Przejęcie laptopa lub telefonu jednego sygnatariusza nie wystarczy, aby przepchnąć transakcję przez most. Oba urządzenia, za każdym razem."
+          },
+          "2": {
+            "title": "Kontrole polityk na poziomie sygnatariusza",
+            "description": "Limity i białe listy skonfigurowane na poziomie organizacji i sejfu, egzekwowane przed zebraniem jakiegokolwiek podpisu."
+          },
+          "3": {
+            "title": "Pełna możliwość audytu",
+            "description": "Każde zatwierdzenie i odrzucenie przypisane i opatrzone znacznikiem czasu. Rozliczalność wobec społeczności bez rezygnacji z samodzielnej opieki."
+          }
+        },
+        "quote": "Most Fusion działa teraz na infrastrukturze, którą kontrolujemy od początku do końca. Te same gwarancje bezpieczeństwa co nasz własny skarbiec, zastosowane do jednego z procesów o najwyższej stawce, jakie obsługujemy.",
+        "quoteAttribution": "— Tadeas Kmenta, Flux Foundation"
+      },
+      "cta": {
+        "title": "Ten sam model. Dostępny dla Twojego zespołu.",
+        "description": "Platforma, na której Flux Foundation obsługuje most Fusion, jest tą samą platformą dostępną dla każdego zespołu chcącego multisig z samodzielną opieką bez kompromisów. Bezpłatny poziom startowy. Niestandardowe plany na żądanie.",
+        "exploreEnterprise": "Poznaj SSP Enterprise",
+        "launchEnterpriseApp": "Uruchom aplikację Enterprise"
+      }
+    }
+  },
+  "Enterprise": {
+    "metaTitle": "SSP Enterprise | Multisig z samodzielną opieką dla firm",
+    "metaDescription": "Sejfy multisig M-z-N z samodzielną opieką dla skarbców firmowych. Silnik polityk, limity wydatków, podpisywanie na dwóch urządzeniach, dostęp oparty na rolach. Żadnych powierników, żadnego MPC.",
+    "breadcrumbLabel": "Dla firm",
+    "heroBadge": "SSP Enterprise",
+    "heroTitlePart1": "Samodzielna opieka",
+    "heroTitlePart2": "dla firm",
+    "heroDescription": "Sejfy multisig M-z-N dla Twojej organizacji. Każdy sygnatariusz używa dwóch urządzeń — rozszerzenia przeglądarki i aplikacji mobilnej. Żadnych powierników. Żadnego MPC. Żadnego pojedynczego punktu awarii.",
+    "heroLaunchApp": "Uruchom aplikację Enterprise",
+    "heroHowItWorks": "Jak to działa",
+    "fluxBanner": {
+      "imageAlt": "Flux Foundation",
+      "eyebrow": "W produkcji z Flux Foundation",
+      "description": "Zabezpieczanie mostu Fusion i skarbca Fundacji na BTC, ETH, FLUX i EVM L2s.",
+      "cta": "Przeczytaj przypadek użycia"
+    },
+    "problem": {
+      "title": "Problem",
+      "subtitle": "Firmy posiadające krypto dziś stają przed niemożliwymi kompromisami",
+      "items": {
+        "0": {
+          "title": "Rozwiązania powiernicze",
+          "problem": "Zaufaj stronie trzeciej z kluczami",
+          "risks": {
+            "0": "Ryzyko kontrahenta (FTX, Celsius)",
+            "1": "Blokada konta bez ostrzeżenia",
+            "2": "Uzależnienie od dostawcy i wysokie opłaty"
+          }
+        },
+        "1": {
+          "title": "Dostawcy MPC",
+          "problem": "Fragmenty kluczy na serwerach dostawcy",
+          "risks": {
+            "0": "Dostawca kończy działalność, Ty musisz się ratować",
+            "1": "Nie możesz zweryfikować ich infrastruktury",
+            "2": "Nadal zależność od zaufania"
+          }
+        },
+        "2": {
+          "title": "Pojedynczy portfel sprzętowy",
+          "problem": "Jedna osoba, jedno urządzenie",
+          "risks": {
+            "0": "Ryzyko kluczowej osoby",
+            "1": "Brak zarządzania zespołem",
+            "2": "Utracone urządzenie = utracone środki"
+          }
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "Jak to działa",
+      "subtitle": "Prawdziwa samodzielna opieka na skalę enterprise — bez kompromisów",
+      "steps": {
+        "0": {
+          "title": "Utwórz organizację",
+          "description": "Skonfiguruj organizację używając SSP Identity — kryptograficznego dowodu wywodzonego z urządzeń, nie tylko e-maila."
+        },
+        "1": {
+          "title": "Zaproś swój zespół",
+          "description": "Dodaj członków zespołu za pomocą ich SSP Identity. Przypisz role: Właściciel, Administrator, Członek lub Obserwator. Każdy członek potrzebuje SSP Wallet + SSP Key."
+        },
+        "2": {
+          "title": "Utwórz sejfy multisig",
+          "description": "Konfiguruj sejfy M-z-N dla różnych celów — operacje, skarbiec, lista płac. Wybierz wymaganych sygnatariuszy."
+        },
+        "3": {
+          "title": "Podpisujcie razem",
+          "description": "Proponuj transakcje przez aplikację internetową. Każdy wymagany sygnatariusz zatwierdza zarówno rozszerzeniem przeglądarki, jak i aplikacją mobilną. Nadaj, gdy próg zostanie osiągnięty."
+        }
+      },
+      "diagramTitle": "Architektura podpisywania",
+      "diagramSubtitle": "Każdy podpis wymaga dwóch urządzeń na sygnatariusza",
+      "signerLabel": "Sygnatariusz {label}",
+      "signedLabel": "Podpisano",
+      "waitingLabel": "Oczekiwanie",
+      "thresholdLabel": "Próg 2 z 3 osiągnięty — gotowy do nadania"
+    },
+    "features": {
+      "title": "Funkcje Enterprise",
+      "subtitle": "Wszystko, czego organizacja potrzebuje do bezpiecznego zarządzania krypto",
+      "readGuide": "Przeczytaj przewodnik",
+      "items": {
+        "0": {
+          "title": "Sejfy multisig M-z-N",
+          "description": "Konfiguruj dowolny próg podpisywania dla zespołu. 2-z-3, 3-z-5 lub dowolna kombinacja pasująca do modelu zarządzania."
+        },
+        "1": {
+          "title": "Dostęp oparty na rolach",
+          "description": "Role Właściciel, Administrator, Członek i Obserwator. Kontroluj, kto może proponować, podpisywać lub tylko obserwować transakcje."
+        },
+        "2": {
+          "title": "Podpisywanie na dwóch urządzeniach",
+          "description": "Każdy sygnatariusz używa zarówno rozszerzenia przeglądarki, jak i aplikacji mobilnej. Dwa klucze na osobę, M-z-N w całym zespole."
+        },
+        "3": {
+          "title": "Obsługa wielu sieci",
+          "description": "Bitcoin, Ethereum, Litecoin, Dogecoin, Flux, Polygon, BSC, Base, Avalanche i więcej. Jedna platforma dla wszystkich sieci."
+        },
+        "4": {
+          "title": "Propozycje transakcji",
+          "description": "Proponuj transakcje z pełnymi szczegółami. Członkowie zespołu przeglądają, zatwierdzają lub odrzucają. Nadaj tylko po osiągnięciu progu."
+        },
+        "5": {
+          "title": "Kompletna ścieżka audytu",
+          "description": "Każda akcja zapisana trwale. Zmiany członków, operacje sejfu, zatwierdzenia transakcji — pełna rozliczalność."
+        }
+      }
+    },
+    "policy": {
+      "title": "Silnik polityk transakcji",
+      "subtitle": "Szczegółowe kontrole kaskadujące od organizacji przez sejf do poszczególnych sygnatariuszy. Surowsza polityka zawsze wygrywa.",
+      "tiers": {
+        "organization": "Organizacja",
+        "organizationSub": "Domyślne polityki",
+        "vault": "Sejf",
+        "vaultSub": "Nadpisz i doprecyzuj",
+        "signer": "Sygnatariusz",
+        "signerSub": "Indywidualne limity"
+      },
+      "tierFooter": "Polityki łączą się od góry do dołu — obowiązuje surowszy limit na dowolnym poziomie",
+      "readMore": "Czytaj więcej",
+      "items": {
+        "0": {
+          "title": "Limity wydatków",
+          "description": "Limity na transakcję, dzienne, tygodniowe i miesięczne. Ustaw w USD lub natywnym tokenie. Kontrole zbiorcze i na token."
+        },
+        "1": {
+          "title": "Biała lista adresów",
+          "description": "Trzy tryby: wyłączony, ostrzeżenie lub egzekwowanie. Oznaczaj adresy, ograniczaj według sieci. Całkowicie blokuj nieznane miejsca docelowe."
+        },
+        "2": {
+          "title": "Opóźnienia blokady czasowej",
+          "description": "Konfigurowalny okres oczekiwania przed nadaniem. Automatyczne uruchamianie powyżej progu USD. Anulowanie przed wykonaniem."
+        },
+        "3": {
+          "title": "Zatwierdzenie administratora",
+          "description": "Wymagaj zatwierdzenia administratora przy transakcjach o wysokiej wartości. Ustaw próg USD — wszystko powyżej wymaga wyraźnego zatwierdzenia."
+        },
+        "4": {
+          "title": "Nadpisania na sygnatariusza",
+          "description": "Ustaw indywidualne limity wydatków dla każdego członka zespołu. Młodsi traderzy otrzymują ściślejsze kontrole, starsi menedżerowie — wyższe limity."
+        },
+        "5": {
+          "title": "Śledzenie prędkości",
+          "description": "Kroczące 30-dniowe okna wydatków na sejf, sygnatariusza i token. Automatyczne egzekwowanie z czyszczeniem opartym na TTL."
+        },
+        "6": {
+          "title": "Awaryjne zamrożenie sejfu",
+          "description": "Natychmiast zamroź dowolny sejf podpisywaniem WK na dwóch urządzeniach. Blokuje wszystkie propozycje do odmrożenia. Reakcja na incydent w ciągu sekund."
+        },
+        "7": {
+          "title": "3-poziomowa hierarchia polityk",
+          "description": "Domyślne ustawienia organizacji kaskadują do sejfów i sygnatariuszy. Nadpisania na poziomie sejfu doprecyzowują reguły. Surowsza polityka zawsze wygrywa."
+        }
+      },
+      "footerStrong": "3-poziomowa hierarchia polityk z 14+ konfigurowalnymi kontrolami",
+      "footerSuffix": " — w każdym planie."
+    },
+    "security": {
+      "title": "5-warstwowe bezpieczeństwo",
+      "subtitle": "Ochrona wgłąb — każda warstwa musi zostać przejęta, aby doszło do naruszenia",
+      "layerLabel": "Warstwa {n}: {name}",
+      "layers": {
+        "0": {
+          "name": "Bezpieczeństwo urządzenia",
+          "description": "Bezpieczeństwo na poziomie OS, uwierzytelnianie biometryczne, bezpieczne enklawy na urządzeniach mobilnych"
+        },
+        "1": {
+          "name": "2FA na dwóch urządzeniach",
+          "description": "Rozszerzenie przeglądarki + aplikacja mobilna wymagana przy każdym podpisie"
+        },
+        "2": {
+          "name": "Multisig on-chain",
+          "description": "Natywny multisig Bitcoin i weryfikacja smart kontraktów EVM"
+        },
+        "3": {
+          "name": "Polityki biznesowe",
+          "description": "Limity wydatków, białe listy adresów, blokady czasowe, zatwierdzenia administratora, nadpisania na sygnatariusza, śledzenie prędkości — 14+ konfigurowalnych kontroli"
+        },
+        "4": {
+          "name": "Audyt i zgodność",
+          "description": "Niezmienne dzienniki, śledzenie logowań i raportowanie zgodności"
+        }
+      },
+      "footerBefore": "SSP Wallet jest otwartoźródłowy i ",
+      "footerLink": "audytowany przez Halborn",
+      "footerAfter": ". Zweryfikuj kod samodzielnie."
+    },
+    "comparison": {
+      "title": "Jak wypadamy w porównaniu",
+      "subtitle": "SSP Enterprise vs. alternatywy",
+      "columns": {
+        "feature": "Funkcja",
+        "ssp": "SSP Enterprise"
+      },
+      "values": {
+        "partial": "Częściowa"
+      },
+      "rows": {
+        "0": "Prawdziwa samodzielna opieka",
+        "1": "Wielosieciowy",
+        "2": "Multisig on-chain",
+        "3": "Silnik polityk transakcji",
+        "4": "Podpisywanie mobilne",
+        "5": "Otwartoźródłowy",
+        "6": "Brak uzależnienia od dostawcy",
+        "7": "Przystępny cenowo"
+      },
+      "annualCostLabel": "Roczny koszt",
+      "annualCostSsp": "Bezpłatny*",
+      "annualCostFireblocks": "$100K+",
+      "annualCostBitgo": "$50K+",
+      "annualCostSafe": "Opłaty gas",
+      "footnoteBefore": "* Portfel otwartoźródłowy jest bezpłatny. Platforma Enterprise ma bezpłatny poziom startowy. ",
+      "footnoteLink": "Skontaktuj się z działem sprzedaży",
+      "footnoteAfter": " aby uzyskać niestandardowe plany.",
+      "migrationLabel": "Już korzystasz z jednego z tych? Zobacz przewodnik migracji:",
+      "migrationFireblocks": "Z Fireblocks",
+      "migrationSafe": "Z Safe",
+      "migrationBitgo": "Z BitGo"
+    },
+    "useCases": {
+      "title": "Zbudowany dla",
+      "subtitle": "Każdej organizacji posiadającej krypto i potrzebującej podpisywania zespołowego",
+      "readPlaybook": "Przeczytaj poradnik",
+      "items": {
+        "0": {
+          "title": "Skarbiec korporacyjny",
+          "description": "Zatwierdzenie multi-signature dla środków firmowych. CEO + CFO + Zarząd = 2-z-3.",
+          "example": "3 kadra kierownicza, 2 wymaganych do podpisania"
+        },
+        "1": {
+          "title": "Skarbiec DAO",
+          "description": "Zdecentralizowane podejmowanie decyzji z bezpieczeństwem on-chain dla środków społeczności.",
+          "example": "5 członków rady, 3 wymaganych"
+        },
+        "2": {
+          "title": "Fundusze inwestycyjne",
+          "description": "Samodzielna opieka klasy instytucjonalnej dla zarządzających funduszami i wspólników.",
+          "example": "Zarządzający funduszem + dział zgodności + LP"
+        },
+        "3": {
+          "title": "Partnerstwa i JV",
+          "description": "Wspólna kontrola między partnerami z wyraźną rozliczalnością i ścieżkami audytu.",
+          "example": "Równa kontrola, przejrzyste operacje"
+        }
+      }
+    },
+    "chains": {
+      "title": "Natywnie wielosieciowy",
+      "subtitle": "Jedna platforma dla wszystkich sieci — UTXO i EVM",
+      "footer": "Nowe sieci dodawane regularnie. Wszystkie tokeny ERC-20 obsługiwane na sieciach EVM."
+    },
+    "contact": {
+      "title": "Kontakt z działem sprzedaży",
+      "subtitle": "Potrzebujesz niestandardowego planu Enterprise, dedykowanego wsparcia lub priorytetowego wdrożenia? Skontaktuj się z naszym zespołem.",
+      "launchApp": "Uruchom aplikację Enterprise",
+      "scheduleCall": "Zaplanuj rozmowę",
+      "directContactStrong": "Wolisz bezpośredni kontakt?",
+      "directContactBefore": " Skontaktuj się z ",
+      "directContactBetween": " lub wyślij DM do ",
+      "directContactAfter": " na X."
+    },
+    "form": {
+      "fullNameLabel": "Imię i nazwisko *",
+      "fullNamePlaceholder": "Twoje imię i nazwisko",
+      "emailLabel": "Adres e-mail *",
+      "emailPlaceholder": "twoj.email@firma.com",
+      "companyLabel": "Firma / Organizacja",
+      "companyPlaceholder": "Nazwa Twojej firmy",
+      "teamSizeLabel": "Wielkość zespołu",
+      "teamSizePlaceholder": "Wybierz wielkość zespołu",
+      "teamSizeOptions": {
+        "2-5": "2-5 sygnatariuszy",
+        "6-10": "6-10 sygnatariuszy",
+        "11-25": "11-25 sygnatariuszy",
+        "25+": "25+ sygnatariuszy"
+      },
+      "useCaseLabel": "Główne zastosowanie",
+      "useCasePlaceholder": "Wybierz zastosowanie",
+      "useCaseOptions": {
+        "corporate-treasury": "Skarbiec korporacyjny",
+        "dao-treasury": "Skarbiec DAO",
+        "investment-fund": "Fundusz inwestycyjny",
+        "partnership": "Partnerstwo / Joint Venture",
+        "otc-desk": "Biuro OTC",
+        "mining-operation": "Operacja wydobywcza",
+        "exchange": "Giełda",
+        "other": "Inne"
+      },
+      "messageLabel": "Powiedz nam o swoich potrzebach",
+      "messagePlaceholder": "Jakie wyzwania napotykasz w zakresie przechowywania krypto? Jakie funkcje są najważniejsze dla Twojego zespołu?",
+      "submitting": "Wysyłanie żądania...",
+      "submit": "Zacznij",
+      "errorFallback": "Nie udało się wysłać żądania. Spróbuj ponownie.",
+      "errorGeneric": "Nie udało się wysłać żądania",
+      "successTitle": "Żądanie odebrane!",
+      "successDescription": "Dziękujemy za zainteresowanie SSP Enterprise. Wkrótce się odezwiemy.",
+      "successAgain": "Prześlij kolejne żądanie"
+    },
+    "finalCta": {
+      "title": "Twoje klucze. Twoje zasady.",
+      "description": "SSP Enterprise daje organizacji bezpieczeństwo samodzielnej opieki z zarządzaniem oprogramowania enterprise. Żadnych powierników. Żadnych pośredników. Żadnych kompromisów.",
+      "launchApp": "Uruchom aplikację Enterprise",
+      "downloadWallet": "Pobierz SSP Wallet",
+      "exploreFeatures": "Przeglądaj wszystkie funkcje"
+    }
+  },
+  "InteractiveDemo": {
+    "modalTitle": "Pełne doświadczenie SSP Wallet",
+    "modalSubtitle": "Kompletny przepływ konfiguracji i transakcji z prawdziwym bezpieczeństwem multisig 2-z-2",
+    "closeDemo": "Zamknij demo",
+    "previous": "Poprzedni",
+    "next": "Następny",
+    "restartDemo": "Uruchom ponownie demo",
+    "downloadSspWallet": "Pobierz SSP Wallet",
+    "stepCounter": "{phase} — Krok {current} z {total}",
+    "walletSetupTitle": "Konfiguracja SSP Wallet",
+    "walletSetupSubtitle": "Utwórz portfel przeglądarkowy z bezpieczną frazą odzyskiwania",
+    "keySetupTitle": "Konfiguracja SSP Key",
+    "keySetupSubtitle": "Skonfiguruj aplikację mobilną z oddzielną frazą seed",
+    "deviceSyncTitle": "Synchronizacja urządzeń",
+    "deviceSyncSubtitle": "Połącz przeglądarkę i urządzenie mobilne bezpiecznie",
+    "transactionTitle": "Wyślij transakcję",
+    "transactionSubtitle": "Doświadcz przepływu bezpieczeństwa na dwóch urządzeniach",
+    "feedbackCopied": "Skopiowano!",
+    "feedbackCopiedCheck": "✓ Skopiowano!",
+    "feedbackConfirmedCheck": "✓ Potwierdzono!",
+    "chromeWebStore": "Chrome Web Store",
+    "sspWalletName": "SSP Wallet",
+    "byInfluxTech": "od InFlux Technologies",
+    "walletStoreTagline": "Bezpieczny, prosty, potężny portfel krypto z multisig 2-z-2",
+    "getToBrowser": "Przejdź do przeglądarki",
+    "walletRating": "⭐ 4.8",
+    "walletUserCount": "1K+ użytkowników",
+    "walletAudited": "🛡️ Audytowany",
+    "installExtensionTitle": "Zainstaluj rozszerzenie SSP Wallet",
+    "installExtensionDescription": "Pobierz rozszerzenie przeglądarki ze sklepu Chrome Web Store. Dostępne dla Chrome, Brave i Firefox.",
+    "sspWalletSetup": "Konfiguracja SSP Wallet",
+    "sspLogoAlt": "Logo SSP",
+    "createYourWallet": "Utwórz portfel",
+    "newPasswordLabel": "Nowe hasło",
+    "enterSecurePasswordPlaceholder": "Wprowadź bezpieczne hasło",
+    "confirmPasswordLabel": "Potwierdź hasło",
+    "confirmPasswordPlaceholder": "Potwierdź hasło",
+    "agreeToTerms": "Przeczytałem/-am i akceptuję Warunki korzystania z usług",
+    "createSecurePasswordTitle": "Utwórz bezpieczne hasło",
+    "createSecurePasswordDescription": "To hasło szyfruje portfel lokalnie. Nigdy nie opuszcza przeglądarki i chroni frazę odzyskiwania.",
+    "backupRequired": "Kopia zapasowa wymagana",
+    "walletSeedPhraseHeading": "Fraza seed portfela",
+    "writeDownWarning": "⚠️ Zapisz to i przechowuj bezpiecznie!",
+    "clickToRevealSeed": "Kliknij, aby ujawnić 24-słowną frazę seed",
+    "showSeedPhrase": "Pokaż frazę seed",
+    "copy": "Kopiuj",
+    "writtenItDown": "✓ Zapisałem/-am",
+    "seedConfirmedToast": "✓ Fraza seed potwierdzona — gotowy/-a do kontynuacji",
+    "backupSeedTitle": "Utwórz kopię zapasową frazy seed",
+    "backupSeedDescription": "Ta 24-słowna fraza to Twój klucz główny. Zapisz ją i przechowuj bezpiecznie offline. To jest fraza seed nr 1 z 2.",
+    "walletCreated": "Portfel utworzony",
+    "sspWalletReady": "SSP Wallet gotowy!",
+    "walletSetUpWith": "Portfel przeglądarkowy skonfigurowany z:",
+    "securePasswordProtection": "Ochrona bezpiecznym hasłem",
+    "twentyFourWordSeedBackedUp": "24-słowna fraza seed zarchiwizowana",
+    "readyForMobileSetup": "Gotowy do konfiguracji aplikacji mobilnej",
+    "nextStep": "Następny krok",
+    "setUpKeyMobile": "Skonfiguruj mobilną aplikację SSP Key",
+    "walletSetupCompleteTitle": "Konfiguracja portfela ukończona",
+    "walletSetupCompleteDescription": "Portfel przeglądarkowy gotowy! Teraz skonfiguruj aplikację mobilną dla drugiego podpisu.",
+    "sspKeyName": "SSP Key",
+    "twoFaMultisigSecurity": "Bezpieczeństwo multisig 2FA",
+    "ratingLabel": "Ocena:",
+    "ratingValue": "⭐⭐⭐⭐⭐ 5.0",
+    "developerLabel": "Deweloper:",
+    "developerValue": "Influx Technologies",
+    "downloadsLabel": "Pobrania:",
+    "downloadsValue": "1 000+",
+    "sizeLabel": "Rozmiar:",
+    "iosSizeValue": "35 MB",
+    "androidSizeValue": "46 MB",
+    "requiresLabel": "Wymaga:",
+    "iosRequiresValue": "iOS 15.1+",
+    "androidRequiresValue": "Android 7.0+",
+    "downloadForIos": "Pobierz dla iOS",
+    "downloadForAndroid": "Pobierz dla Android",
+    "securityAudited": "Audytowany pod kątem bezpieczeństwa",
+    "touchFaceId": "Touch ID / Face ID",
+    "biometricUnlock": "Odblokowanie biometryczne",
+    "qrCodePairing": "Parowanie kodem QR",
+    "zeroDataStorage": "Zerowe przechowywanie danych",
+    "downloadKeyMobileTitle": "Pobierz mobilną aplikację SSP Key",
+    "downloadKeyMobileDescription": "Zainstaluj mobilną aplikację towarzyszącą ze sklepu App Store lub Google Play. Dostarcza drugi podpis dla transakcji.",
+    "sspKeyAlt": "SSP Key",
+    "sspKeySetup": "Konfiguracja SSP Key",
+    "appPasswordLabel": "Hasło aplikacji",
+    "createPasswordPlaceholder": "Utwórz hasło",
+    "enableBiometrics": "Włącz biometrię",
+    "continueSetup": "Kontynuuj konfigurację",
+    "touchFaceIdEnabled": "✓ Touch ID / Face ID włączony",
+    "secureMobileKeyTitle": "Zabezpiecz klucz mobilny",
+    "secureMobileKeyDescription": "Utwórz hasło dla aplikacji mobilnej i włącz uwierzytelnianie biometryczne dla zwiększonego bezpieczeństwa.",
+    "keySeedPhrase": "Fraza seed klucza",
+    "generateKeySeed": "Wygeneruj oddzielną frazę seed klucza mobilnego",
+    "showKeySeed": "Pokaż seed klucza",
+    "saved": "✓ Zapisano",
+    "keySeedConfirmedToast": "✓ Seed klucza potwierdzony",
+    "storeSeparatelyWarning": "⚠️ Przechowuj oddzielnie od seeda portfela!",
+    "backupKeySeedTitle": "Utwórz kopię zapasową seeda klucza mobilnego",
+    "backupKeySeedDescription": "To oddzielna 24-słowna fraza seed dla klucza mobilnego. Oba seedy są wymagane do pełnego odzyskania SSP.",
+    "sspKeyReady": "SSP Key gotowy!",
+    "passwordProtection": "Ochrona hasłem",
+    "biometricSecurity": "Bezpieczeństwo biometryczne",
+    "keySeedBackedUp": "Seed klucza zarchiwizowany",
+    "readyToPair": "Gotowy do parowania",
+    "nextScanQrToConnect": "Następny: Zeskanuj kod QR, aby połączyć urządzenia",
+    "mobileKeyCompleteTitle": "Konfiguracja klucza mobilnego ukończona",
+    "mobileKeyCompleteDescription": "Aplikacja mobilna gotowa! Teraz połączmy ją z portfelem przeglądarkowym dla bezpieczeństwa 2-z-2.",
+    "sspWalletSyncDevice": "SSP Wallet — synchronizacja urządzenia",
+    "connectMobileDevice": "Połącz urządzenie mobilne",
+    "scanQrWithKeyApp": "Zeskanuj ten kod QR aplikacją SSP Key",
+    "connectionIdLabel": "ID połączenia:",
+    "learnMoreLink": "Dowiedz się więcej na sspwallet.io",
+    "scanQrCode": "Skanuj kod QR",
+    "positionQrInFrame": "Ustaw kod QR w kadrze",
+    "readyToScan": "Gotowy do skanowania",
+    "generatePairingQrTitle": "Wygeneruj kod QR parowania",
+    "generatePairingQrDescription": "Portfel przeglądarkowy wyświetla kod QR z logo SSP. Otwórz aplikację SSP Key i zeskanuj, aby bezpiecznie się połączyć.",
+    "synchronising": "Synchronizacja...",
+    "pairingInProgress": "Parowanie w toku",
+    "establishingSecureConnection": "Nawiązywanie bezpiecznego połączenia z urządzeniem mobilnym...",
+    "exchangingKeys": "Wymiana kluczy szyfrowania i kluczy publicznych...",
+    "connectionDetailsHeading": "Szczegóły połączenia",
+    "establishingSspRelay": "Nawiązywanie bezpiecznego połączenia z przekaźnikiem SSP...",
+    "synchronisationComplete": "Synchronizacja zakończona!",
+    "qrCodeScanned": "Kod QR zeskanowany!",
+    "browserWalletLabel": "Portfel przeglądarkowy:",
+    "chromeExtensionValue": "Rozszerzenie Chrome",
+    "encryptionLabel": "Szyfrowanie:",
+    "confirmPairing": "Potwierdź parowanie",
+    "scanningQrCodeTitle": "Skanowanie kodu QR",
+    "scanningQrCodeDescription": "Aplikacja mobilna odczytuje kod QR i nawiązuje szyfrowane połączenie z portfelem przeglądarkowym.",
+    "deviceConnected": "Urządzenie połączone",
+    "successfullyPaired": "Pomyślnie sparowano!",
+    "devicesSecurelyConnected": "Urządzenia są teraz bezpiecznie połączone",
+    "encryptionRow": "🔐 Szyfrowanie:",
+    "active": "Aktywne",
+    "mobileDeviceRow": "📱 Urządzenie mobilne:",
+    "connected": "Połączone",
+    "twoOfTwoMultisigRow": "🔑 Multisig 2-z-2:",
+    "ready": "Gotowe",
+    "secureConnection": "Bezpieczne połączenie",
+    "readyForTransactions": "Gotowy do transakcji",
+    "online": "Online",
+    "connectionTypeLabel": "Typ połączenia:",
+    "sspRelaySecured": "Przekaźnik SSP zabezpieczony",
+    "multisigStatusLabel": "Status multisig:",
+    "twoOfTwoActive": "2-z-2 aktywny",
+    "walletProtectedByMultisig": "Portfel chroniony prawdziwym multisig 2-z-2!",
+    "devicesPairedTitle": "Urządzenia sparowane pomyślnie",
+    "devicesPairedDescription": "Doskonale! Przeglądarka i urządzenie mobilne są teraz połączone szyfrowaniem end-to-end. Możesz teraz wysyłać bezpieczne transakcje.",
+    "sendTransaction": "Wyślij transakcję",
+    "sendEthereum": "Wyślij Ethereum",
+    "recipientAddressLabel": "Adres odbiorcy",
+    "amountEthLabel": "Kwota (ETH)",
+    "transactionSummary": "Podsumowanie transakcji",
+    "amountLabel": "Kwota:",
+    "gasFeeLabel": "Opłata gas:",
+    "totalLabel": "Łącznie:",
+    "sendTransactionButton": "Wyślij transakcję",
+    "createTransactionTitle": "Utwórz transakcję",
+    "createTransactionDescription": "Wypełnij adres odbiorcy i kwotę. Transakcja będzie wymagać dalszego zatwierdzenia z urządzenia mobilnego.",
+    "waitingForMobileApproval": "Oczekiwanie na zatwierdzenie mobilne...",
+    "pendingMobileApproval": "Oczekujące zatwierdzenie mobilne",
+    "signatureOneCompleteCheckMobile": "Podpis 1/2 ukończony. Sprawdź urządzenie mobilne, aby zatwierdzić transakcję.",
+    "transactionDetails": "Szczegóły transakcji",
+    "sendAmount": "Wyślij {amount} ETH",
+    "toAddress": "Do: {address}",
+    "notificationSentToMobile": "Powiadomienie wysłane do urządzenia mobilnego",
+    "transactionApprovalRequired": "Wymagane zatwierdzenie transakcji",
+    "transactionApproval": "Zatwierdzenie transakcji",
+    "amount": "Kwota",
+    "toAddressLabel": "Adres docelowy",
+    "gasFee": "Opłata gas",
+    "status": "Status",
+    "awaitingApproval": "Oczekiwanie na zatwierdzenie (2/2)",
+    "approveWithTouchId": "Zatwierdź przez Touch ID",
+    "approveTwoOfTwo": "Zatwierdź (2/2)",
+    "reject": "Odrzuć",
+    "mobileConfirmationTitle": "Wymagane potwierdzenie mobilne",
+    "mobileConfirmationDescriptionBiometric": "Powiadomienie pojawiło się na urządzeniu mobilnym. Przejrzyj szczegóły transakcji i zatwierdź uwierzytelnianiem biometrycznym.",
+    "mobileConfirmationDescriptionPassword": "Powiadomienie pojawiło się na urządzeniu mobilnym. Przejrzyj szczegóły transakcji i zatwierdź hasłem.",
+    "transactionBroadcasted": "Transakcja nadana!",
+    "signaturesCollected": "Podpisy zebrane",
+    "browserWalletOneOfTwo": "Portfel przeglądarkowy (1/2)",
+    "mobileKeyTwoOfTwo": "Klucz mobilny (2/2)",
+    "networkStatus": "Status sieci",
+    "confirmingOnEthereum": "Potwierdzanie w sieci Ethereum",
+    "usuallyTakesMinutes": "Zwykle zajmuje 1-3 minuty",
+    "transactionHash": "Hash transakcji",
+    "viewOnEtherscan": "Wyświetl na Etherscan",
+    "transactionSubmittedTitle": "Transakcja przesłana",
+    "transactionSubmittedDescription": "Doskonale! Oba podpisy zebrane i transakcja nadana do Ethereum. Sieć teraz wydobywa i potwierdza bezpieczną transakcję multisig 2-z-2.",
+    "transactionConfirmed": "Transakcja potwierdzona",
+    "transactionSuccessful": "Transakcja zakończona sukcesem!",
+    "confirmedOnEthereum": "Potwierdzone w sieci Ethereum.",
+    "hashLabel": "Hash:",
+    "sendAnotherTransaction": "Wyślij kolejną transakcję",
+    "transactionCompleteCelebration": "🎉 Transakcja zakończona!",
+    "fundsTransferredSummary": "Środki zostały bezpiecznie przelane przy użyciu prawdziwej technologii multisig 2-z-2. Oba urządzenia były wymagane do autoryzacji i podpisania tej transakcji.",
+    "whyUltraSecure": "Dlaczego to jest ultra-bezpieczne",
+    "twoSeparateDevices": "2 oddzielne urządzenia wymagane",
+    "twoSeparateSeeds": "2 oddzielne frazy seed",
+    "trueMultisigBip48": "Prawdziwy multisig (BIP48)",
+    "zeroServerStorage": "Zerowe przechowywanie na serwerze"
+  },
+  "Glossary": {
+    "title": "Słownik",
+    "description": "Pojęcia kryptowalut, blockchaina i SSP. Ponad 2000 haseł z CoinMarketCap, Wikipedii i zespołu SSP.",
+    "searchPlaceholder": "Szukaj wśród ponad 2000 haseł…",
+    "total": "{count} haseł",
+    "matches": "{count, plural, =0 {Brak wyników} one {# wynik} few {# wyniki} many {# wyników} other {# wyników}}",
+    "backToGlossary": "Wróć do słownika",
+    "termSeoTitle": "{term} — Słownik SSP",
+    "seoTitle": "Słownik kryptowalut — SSP",
+    "seoDescription": "Słownik pojęć kryptowalut, blockchaina i SSP. Ponad 2000 wyszukiwalnych haseł.",
+    "attribution": "Część haseł zaczerpnięto ze \"Słownika pojęć kryptowalut\" Wikipedii na licencji CC BY-SA 3.0. Inne pochodzą ze słownika CoinMarketCap i kuratorskiego zestawu zespołu SSP.",
+    "contentInEnglishBanner": "Treść słownika wyświetlana jest po angielsku. Artykuły w Twoim języku znajdziesz w <academyLink>Akademii</academyLink>.",
+    "letterIndexAriaLabel": "Glossary letter index"
+  }
+}
