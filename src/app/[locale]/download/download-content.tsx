@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { Link } from '@/i18n/navigation'
+import { trackEvent } from '@/lib/gtag'
 
 const CHROME_STORE_LINK =
   'https://chromewebstore.google.com/detail/ssp-wallet/mgfbabcnedcejkfibpafadgkhmkifhbd'
@@ -147,6 +148,12 @@ export function DownloadContent() {
                         href={extensionLink}
                         target='_blank'
                         rel='noopener noreferrer'
+                        onClick={() =>
+                          trackEvent('cta_click', {
+                            cta_id: 'download_option',
+                            platform: option.id,
+                          })
+                        }
                         className='bg-primary-600 hover:bg-primary-700 block w-full rounded-lg px-6 py-3 text-center font-medium text-white transition-colors'
                       >
                         {t(`options.${option.id}.cta`)}
@@ -154,6 +161,12 @@ export function DownloadContent() {
                     ) : (
                       <Link
                         href={option.link}
+                        onClick={() =>
+                          trackEvent('cta_click', {
+                            cta_id: 'download_option',
+                            platform: option.id,
+                          })
+                        }
                         className='bg-primary-600 hover:bg-primary-700 block w-full rounded-lg px-6 py-3 text-center font-medium text-white transition-colors'
                       >
                         {t(`options.${option.id}.cta`)}
@@ -270,6 +283,9 @@ export function DownloadContent() {
                   href='https://play.google.com/store/apps/details?id=io.runonflux.sspkey'
                   target='_blank'
                   rel='noopener noreferrer'
+                  onClick={() =>
+                    trackEvent('cta_click', { cta_id: 'download_mobile', platform: 'android' })
+                  }
                   className='dark:bg-dark-800 flex items-center justify-center rounded-lg border border-gray-200 bg-white p-4 transition-all hover:shadow-md dark:border-gray-700'
                 >
                   <div className='mr-3 h-8 w-8'>
@@ -293,6 +309,9 @@ export function DownloadContent() {
                   href='https://apps.apple.com/us/app/ssp-key/id6463717332'
                   target='_blank'
                   rel='noopener noreferrer'
+                  onClick={() =>
+                    trackEvent('cta_click', { cta_id: 'download_mobile', platform: 'ios' })
+                  }
                   className='dark:bg-dark-800 flex items-center justify-center rounded-lg border border-gray-200 bg-white p-4 transition-all hover:shadow-md dark:border-gray-700'
                 >
                   <div className='mr-3 h-8 w-8'>

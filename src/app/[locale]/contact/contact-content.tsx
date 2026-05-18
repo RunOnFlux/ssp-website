@@ -18,6 +18,7 @@ import { useState } from 'react'
 import type { ComponentType, SVGProps } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { Link } from '@/i18n/navigation'
+import { trackEvent } from '@/lib/gtag'
 
 interface ContactMethod {
   key: 'supportTickets' | 'discord' | 'github'
@@ -128,6 +129,7 @@ function ContactForm() {
       }
 
       setIsSubmitted(true)
+      trackEvent('form_submit', { form_id: 'contact' })
       setFormData({ name: '', email: '', company: '', subject: '', message: '', type: 'general' })
     } catch (err) {
       setError(err instanceof Error ? err.message : t('errorFallback'))
