@@ -6,6 +6,7 @@ import Script from 'next/script'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, setRequestLocale } from 'next-intl/server'
 import type { ReactNode } from 'react'
+import { WebVitalsReporter } from '@/components/analytics/web-vitals-reporter'
 import CookieConsent from '@/components/cookie-consent'
 import { Footer } from '@/components/footer/footer'
 import { Header } from '@/components/header/header'
@@ -101,6 +102,7 @@ export default async function LocaleLayout({
               <main className='flex-1 overflow-x-hidden pt-16 md:pt-20'>{children}</main>
               <Footer />
             </div>
+            <WebVitalsReporter />
             <CookieConsent />
           </ThemeProvider>
         </NextIntlClientProvider>
