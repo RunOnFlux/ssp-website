@@ -54,3 +54,38 @@ export const initGA = (): void => {
 export const isGALoaded = (): boolean => {
   return typeof window !== 'undefined' && typeof window.gtag === 'function'
 }
+
+function consentGranted(): boolean {
+  if (typeof window === 'undefined') return false
+  const fn = (window as unknown as { hasAnalyticsConsent?: () => boolean }).hasAnalyticsConsent
+  return typeof fn === 'function' ? fn() : false
+}
+
+export interface TrackEventParams {
+  [key: string]: string | number | boolean | undefined
+}
+
+export const trackEvent = (name: string, params: TrackEventParams = {}): void => {
+  if (typeof window === 'undefined' || typeof window.gtag !== 'function') return
+  if (!consentGranted()) return
+  window.gtag('event', name, params)
+}
+
+export interface ContentContext {
+  section: 'academy' | 'newsroom' | 'academy_category'
+  slug?: string
+  category?: string
+  locale: string
+}
+
+export const setContentContext = (ctx: ContentContext): void => {
+  if (typeof window === 'undefined' || typeof window.gtag !== 'function') return
+  if (!consentGranted()) return
+  window.gtag('set', {
+    content_group: ctx.section === 'academy_category' ? 'academy' : ctx.section,
+    post_section: ctx.section,
+    post_slug: ctx.slug ?? '',
+    post_locale: ctx.locale,
+    ...(ctx.category ? { post_category: ctx.category } : {}),
+  })
+}
