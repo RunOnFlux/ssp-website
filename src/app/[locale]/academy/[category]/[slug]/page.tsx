@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
 import Script from 'next/script'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { PageContext } from '@/components/analytics/page-context'
 import { LocalizedPathsRegistrar } from '@/components/i18n/localized-paths-registrar'
 import { AuthorByline } from '@/components/shared/author-byline'
 import { Breadcrumbs } from '@/components/shared/breadcrumbs'
@@ -134,6 +135,7 @@ export default async function AcademyArticlePage({ params }: PageProps) {
 
   return (
     <>
+      <PageContext section='academy' slug={slug} category={category} locale={locale} />
       <Script id='academy-article-jsonld' type='application/ld+json'>
         {JSON.stringify(articleJsonLd)}
       </Script>
