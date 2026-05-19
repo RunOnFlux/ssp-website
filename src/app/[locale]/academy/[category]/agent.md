@@ -2,7 +2,7 @@
 title: SSP Academy — Category Hub
 url: https://sspwallet.io/academy/{category}
 description: Category landing page listing all academy posts for a given topic.
-last_reviewed: 2026-05-08
+last_reviewed: 2026-05-19
 ---
 
 # SSP Academy — Category Hub
@@ -14,3 +14,4 @@ Renders the post listing for a single academy category. Category title and descr
 - `generateStaticParams` emits one route per `ACADEMY_CATEGORY_SLUGS` entry.
 - Invalid category slugs trigger `notFound()`.
 - Empty categories show a fallback with links to three other categories.
+- Mounts `<PageContext section="academy_category" category={category} locale={locale} />` so GA4 events on this page carry `content_group=academy`, `post_section=academy_category`, `post_category=<slug>`, and `post_locale=<locale>`. See `src/components/analytics/page-context.tsx`.
