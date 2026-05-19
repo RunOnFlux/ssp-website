@@ -10,6 +10,7 @@ import { LocaleSwitcher } from '@/components/header/locale-switcher'
 import { Logo } from '@/components/logo'
 import { useTheme } from '@/hooks/use-theme'
 import { Link, usePathname } from '@/i18n/navigation'
+import { trackEvent } from '@/lib/gtag'
 import { cn } from '@/lib/utils'
 
 type LinkItem = { kind: 'link'; name: string; href: string }
@@ -110,7 +111,11 @@ export function Header() {
                 )}
               </button>
             )}
-            <Link href='/download' className='btn btn-primary hidden md:inline-flex'>
+            <Link
+              href='/download'
+              className='btn btn-primary hidden md:inline-flex'
+              onClick={() => trackEvent('cta_click', { cta_id: 'download_header' })}
+            >
               <Download className='mr-2 h-4 w-4' />
               {t('download')}
             </Link>
@@ -179,7 +184,14 @@ export function Header() {
                   transition={{ delay: primaryNav.length * 0.03 }}
                   className='px-4 pt-2'
                 >
-                  <Link href='/download' onClick={closeMenu} className='btn btn-primary w-full'>
+                  <Link
+                    href='/download'
+                    onClick={() => {
+                      trackEvent('cta_click', { cta_id: 'download_header_mobile' })
+                      closeMenu()
+                    }}
+                    className='btn btn-primary w-full'
+                  >
                     <Download className='mr-2 h-4 w-4' />
                     {t('download')}
                   </Link>

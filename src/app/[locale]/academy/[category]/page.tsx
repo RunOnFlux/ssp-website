@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Script from 'next/script'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { PageContext } from '@/components/analytics/page-context'
 import { PageHeader } from '@/components/header/page-header'
 import { NewsroomCard } from '@/components/newsroom/newsroom-card'
 import { Breadcrumbs } from '@/components/shared/breadcrumbs'
@@ -64,6 +65,7 @@ export default async function CategoryHubPage({
 
   return (
     <>
+      <PageContext section='academy_category' category={category} locale={locale} />
       <Script id='academy-category-breadcrumb-jsonld' type='application/ld+json'>
         {JSON.stringify(
           buildAcademyBreadcrumbJsonLd([

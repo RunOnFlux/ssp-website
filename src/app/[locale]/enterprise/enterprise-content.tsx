@@ -34,6 +34,7 @@ import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { Link } from '@/i18n/navigation'
+import { trackEvent } from '@/lib/gtag'
 
 const DOCS_BASE = 'https://docs.sspwallet.io/enterprise'
 const POLICIES_DOCS = `${DOCS_BASE}/policies`
@@ -427,6 +428,7 @@ export function EnterpriseContent() {
                 href='https://enterprise.sspwallet.com'
                 target='_blank'
                 rel='noopener noreferrer'
+                onClick={() => trackEvent('cta_click', { cta_id: 'enterprise_launch_app' })}
                 className='btn btn-primary'
               >
                 {t('heroLaunchApp')}
@@ -1102,6 +1104,9 @@ export function EnterpriseContent() {
                   href='https://enterprise.sspwallet.com'
                   target='_blank'
                   rel='noopener noreferrer'
+                  onClick={() =>
+                    trackEvent('cta_click', { cta_id: 'enterprise_launch_app_contact' })
+                  }
                   className='btn btn-primary'
                 >
                   {t('contact.launchApp')}
@@ -1170,6 +1175,7 @@ export function EnterpriseContent() {
                 href='https://enterprise.sspwallet.com'
                 target='_blank'
                 rel='noopener noreferrer'
+                onClick={() => trackEvent('cta_click', { cta_id: 'enterprise_launch_app_footer' })}
                 className='btn btn-primary'
               >
                 {t('finalCta.launchApp')}

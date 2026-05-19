@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
 import Script from 'next/script'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
+import { PageContext } from '@/components/analytics/page-context'
 import { LocalizedPathsRegistrar } from '@/components/i18n/localized-paths-registrar'
 import { PostArticle } from '@/components/shared/post-article'
 import { routing, type Locale } from '@/i18n/routing'
@@ -107,6 +108,7 @@ export default async function NewsroomArticlePage({ params }: PageProps) {
 
   return (
     <>
+      <PageContext section='newsroom' slug={slug} locale={locale} />
       <Script id='blog-posting-jsonld' type='application/ld+json'>
         {JSON.stringify(blogPostingJsonLd)}
       </Script>
