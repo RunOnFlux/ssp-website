@@ -29,15 +29,15 @@ That's the only var required client-side. If unset, all tracking no-ops.
 
 ### `cta_id` reference
 
-| cta_id | Where | Notes |
-|---|---|---|
-| `download_header` | Top nav, desktop | |
-| `download_header_mobile` | Top nav, mobile | |
-| `download_option` | Download page extension/section cards | `platform` = the option's id (e.g. `chrome`, `firefox`, `mobile`). Note: `platform: 'mobile'` is a click on the "scroll to mobile section" card, not an actual install. |
-| `download_mobile` | Download page Play Store / App Store anchors | `platform: 'android' \| 'ios'`. These are real install-intent taps. |
-| `enterprise_launch_app` | Enterprise hero CTA | |
-| `enterprise_launch_app_contact` | Enterprise contact section | |
-| `enterprise_launch_app_footer` | Enterprise final CTA | |
+| cta_id                          | Where                                        | Notes                                                                                                                                                                   |
+| ------------------------------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `download_header`               | Top nav, desktop                             |                                                                                                                                                                         |
+| `download_header_mobile`        | Top nav, mobile                              |                                                                                                                                                                         |
+| `download_option`               | Download page extension/section cards        | `platform` = the option's id (e.g. `chrome`, `firefox`, `mobile`). Note: `platform: 'mobile'` is a click on the "scroll to mobile section" card, not an actual install. |
+| `download_mobile`               | Download page Play Store / App Store anchors | `platform: 'android' \| 'ios'`. These are real install-intent taps.                                                                                                     |
+| `enterprise_launch_app`         | Enterprise hero CTA                          |                                                                                                                                                                         |
+| `enterprise_launch_app_contact` | Enterprise contact section                   |                                                                                                                                                                         |
+| `enterprise_launch_app_footer`  | Enterprise final CTA                         |                                                                                                                                                                         |
 
 ## GA4 admin steps (one-time)
 
