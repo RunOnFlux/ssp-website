@@ -43,7 +43,7 @@ export function Footer() {
       { name: t('links.multisigExplained'), href: '/academy/multisig', external: false },
       { name: t('links.security'), href: '/academy/security', external: false },
       { name: t('links.gettingStarted'), href: '/academy/getting-started', external: false },
-      { name: t('links.rssFeed'), href: '/newsroom/rss.xml', external: true },
+      { name: t('links.rssFeed'), href: '/newsroom/rss.xml', external: false },
     ],
     legal: [
       { name: t('links.privacyPolicy'), href: '/privacy-policy' },
