@@ -1595,6 +1595,36 @@
       "subtitle": "One platform for all your chains — UTXO and EVM",
       "footer": "More chains added regularly. All ERC-20 tokens supported on EVM chains."
     },
+    "pricing": {
+      "title": "Pricing",
+      "subtitle": "The SSP Wallet is completely free for everyone. SSP Enterprise adds team multisig vaults, the policy engine, and treasury analytics — priced per organization.",
+      "perMonth": "/mo",
+      "mostPopular": "Most popular",
+      "customPrice": "Custom",
+      "startFree": "Start free",
+      "getStarted": "Get started",
+      "contactSales": "Contact sales",
+      "footnote": "Prices in USD, billed per organization. Start free — no card required. See the full plan comparison inside the app.",
+      "walletFreeTitle": "Just need the personal wallet?",
+      "walletFreeBody": "The SSP Wallet is 100% free — true 2-of-2 self-custody for individuals, with no subscription, ever.",
+      "walletFreeCta": "Download the free wallet",
+      "tiers": {
+        "free": { "name": "Free", "desc": "Launch your first team vault." },
+        "starter": {
+          "name": "Starter",
+          "desc": "For growing teams that need more vaults and members."
+        },
+        "pro": { "name": "Pro", "desc": "The full policy engine and treasury analytics." },
+        "business": {
+          "name": "Business",
+          "desc": "Scale across many vaults, signers, and chains."
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "desc": "Custom contract, SSO, and dedicated support."
+        }
+      }
+    },
     "contact": {
       "title": "Contact Sales",
       "subtitle": "Need a custom Enterprise plan, dedicated support, or priority onboarding? Get in touch with our team.",

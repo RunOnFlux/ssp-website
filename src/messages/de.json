@@ -1595,6 +1595,42 @@
       "subtitle": "Eine Plattform für alle Ihre Chains — UTXO und EVM",
       "footer": "Weitere Chains werden regelmäßig hinzugefügt. Alle ERC-20-Token werden auf EVM-Chains unterstützt."
     },
+    "pricing": {
+      "title": "Preise",
+      "subtitle": "Die SSP Wallet ist für alle völlig kostenlos. SSP Enterprise ergänzt Multisig-Tresore für Teams, die Policy-Engine und Treasury-Analysen – mit Preisen pro Organisation.",
+      "perMonth": "/Mon.",
+      "mostPopular": "Am beliebtesten",
+      "customPrice": "Individuell",
+      "startFree": "Kostenlos starten",
+      "getStarted": "Loslegen",
+      "contactSales": "Vertrieb kontaktieren",
+      "footnote": "Preise in USD, Abrechnung pro Organisation. Kostenlos starten – keine Karte erforderlich. Den vollständigen Tarifvergleich finden Sie in der App.",
+      "walletFreeTitle": "Brauchen Sie nur die persönliche Wallet?",
+      "walletFreeBody": "Die SSP Wallet ist zu 100 % kostenlos – echte 2-of-2-Selbstverwahrung für Einzelpersonen, ohne Abonnement, für immer.",
+      "walletFreeCta": "Kostenlose Wallet herunterladen",
+      "tiers": {
+        "free": {
+          "name": "Free",
+          "desc": "Starten Sie Ihren ersten Team-Tresor."
+        },
+        "starter": {
+          "name": "Starter",
+          "desc": "Für wachsende Teams, die mehr Tresore und Mitglieder benötigen."
+        },
+        "pro": {
+          "name": "Pro",
+          "desc": "Die vollständige Policy-Engine und Treasury-Analysen."
+        },
+        "business": {
+          "name": "Business",
+          "desc": "Skalieren Sie über viele Tresore, Unterzeichner und Chains."
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "desc": "Individueller Vertrag, SSO und dedizierter Support."
+        }
+      }
+    },
     "contact": {
       "title": "Vertrieb kontaktieren",
       "subtitle": "Benötigen Sie einen individuellen Enterprise-Plan, dedizierten Support oder Priority-Onboarding? Wenden Sie sich an unser Team.",

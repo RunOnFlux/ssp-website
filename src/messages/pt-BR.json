@@ -1595,6 +1595,42 @@
       "subtitle": "Uma plataforma para todas as suas redes — UTXO e EVM",
       "footer": "Mais redes adicionadas regularmente. Todos os tokens ERC-20 suportados nas redes EVM."
     },
+    "pricing": {
+      "title": "Preços",
+      "subtitle": "A SSP Wallet é totalmente gratuita para todos. O SSP Enterprise adiciona cofres multisig para equipes, o motor de políticas e a análise de tesouraria, com cobrança por organização.",
+      "perMonth": "/mês",
+      "mostPopular": "Mais popular",
+      "customPrice": "Personalizado",
+      "startFree": "Comece grátis",
+      "getStarted": "Começar",
+      "contactSales": "Falar com vendas",
+      "footnote": "Preços em USD, cobrados por organização. Comece grátis — sem cartão. Veja a comparação completa de planos dentro do app.",
+      "walletFreeTitle": "Precisa apenas da carteira pessoal?",
+      "walletFreeBody": "A SSP Wallet é 100% gratuita — verdadeira autocustódia 2-of-2 para indivíduos, sem assinatura, para sempre.",
+      "walletFreeCta": "Baixar a carteira gratuita",
+      "tiers": {
+        "free": {
+          "name": "Free",
+          "desc": "Lance o seu primeiro cofre de equipe."
+        },
+        "starter": {
+          "name": "Starter",
+          "desc": "Para equipes em crescimento que precisam de mais cofres e membros."
+        },
+        "pro": {
+          "name": "Pro",
+          "desc": "O motor de políticas completo e a análise de tesouraria."
+        },
+        "business": {
+          "name": "Business",
+          "desc": "Escale por muitos cofres, signatários e cadeias."
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "desc": "Contrato personalizado, SSO e suporte dedicado."
+        }
+      }
+    },
     "contact": {
       "title": "Contatar Vendas",
       "subtitle": "Precisa de um plano Enterprise personalizado, suporte dedicado ou onboarding prioritário? Entre em contato com nossa equipe.",

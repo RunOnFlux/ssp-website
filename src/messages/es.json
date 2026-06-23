@@ -1595,6 +1595,42 @@
       "subtitle": "Una sola plataforma para todas tus cadenas: UTXO y EVM",
       "footer": "Se añaden cadenas con regularidad. Todos los tokens ERC-20 están soportados en cadenas EVM."
     },
+    "pricing": {
+      "title": "Precios",
+      "subtitle": "La SSP Wallet es completamente gratuita para todos. SSP Enterprise añade bóvedas multifirma para equipos, el motor de políticas y análisis de tesorería, con precios por organización.",
+      "perMonth": "/mes",
+      "mostPopular": "Más popular",
+      "customPrice": "Personalizado",
+      "startFree": "Empezar gratis",
+      "getStarted": "Comenzar",
+      "contactSales": "Contactar con ventas",
+      "footnote": "Precios en USD, facturados por organización. Empieza gratis: no se requiere tarjeta. Consulta la comparación completa de planes dentro de la app.",
+      "walletFreeTitle": "¿Solo necesitas la wallet personal?",
+      "walletFreeBody": "La SSP Wallet es 100 % gratuita: verdadera autocustodia 2-of-2 para particulares, sin suscripción, nunca.",
+      "walletFreeCta": "Descargar la wallet gratuita",
+      "tiers": {
+        "free": {
+          "name": "Free",
+          "desc": "Lanza tu primera bóveda de equipo."
+        },
+        "starter": {
+          "name": "Starter",
+          "desc": "Para equipos en crecimiento que necesitan más bóvedas y miembros."
+        },
+        "pro": {
+          "name": "Pro",
+          "desc": "El motor de políticas completo y los análisis de tesorería."
+        },
+        "business": {
+          "name": "Business",
+          "desc": "Escala a través de muchas bóvedas, firmantes y cadenas."
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "desc": "Contrato personalizado, SSO y soporte dedicado."
+        }
+      }
+    },
     "contact": {
       "title": "Contactar con ventas",
       "subtitle": "¿Necesitas un plan Enterprise a medida, soporte dedicado u onboarding prioritario? Habla con nuestro equipo.",

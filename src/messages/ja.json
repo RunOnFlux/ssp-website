@@ -1595,6 +1595,42 @@
       "subtitle": "すべてのチェーンに対応する 1 つのプラットフォーム — UTXO と EVM",
       "footer": "チェーンを定期的に追加中。EVM チェーンですべての ERC-20 トークンをサポート。"
     },
+    "pricing": {
+      "title": "料金",
+      "subtitle": "SSP Wallet はすべての人に完全無料です。SSP Enterprise は、チーム向けのマルチシグ保管庫、ポリシーエンジン、トレジャリー分析を追加し、組織単位で課金されます。",
+      "perMonth": "/月",
+      "mostPopular": "最も人気",
+      "customPrice": "カスタム",
+      "startFree": "無料で始める",
+      "getStarted": "始める",
+      "contactSales": "営業へ問い合わせる",
+      "footnote": "価格は USD、組織単位での請求です。無料で開始でき、カードは不要です。プランの詳細な比較はアプリ内でご確認ください。",
+      "walletFreeTitle": "個人向けウォレットだけが必要ですか?",
+      "walletFreeBody": "SSP Wallet は 100% 無料です。個人向けの真の 2-of-2 セルフカストディで、サブスクリプションは一切ありません。",
+      "walletFreeCta": "無料のウォレットをダウンロード",
+      "tiers": {
+        "free": {
+          "name": "Free",
+          "desc": "最初のチーム保管庫を立ち上げましょう。"
+        },
+        "starter": {
+          "name": "Starter",
+          "desc": "より多くの保管庫とメンバーを必要とする成長中のチーム向け。"
+        },
+        "pro": {
+          "name": "Pro",
+          "desc": "完全なポリシーエンジンとトレジャリー分析。"
+        },
+        "business": {
+          "name": "Business",
+          "desc": "多数の保管庫、署名者、チェーンにわたって拡張できます。"
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "desc": "カスタム契約、SSO、専任サポート。"
+        }
+      }
+    },
     "contact": {
       "title": "セールスに連絡",
       "subtitle": "カスタム Enterprise プラン、専用サポート、または優先オンボーディングが必要ですか？チームにご連絡ください。",

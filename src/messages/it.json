@@ -1595,6 +1595,42 @@
       "subtitle": "Un'unica piattaforma per tutte le sue chain — UTXO ed EVM",
       "footer": "Altre chain aggiunte regolarmente. Tutti i token ERC-20 supportati sulle chain EVM."
     },
+    "pricing": {
+      "title": "Prezzi",
+      "subtitle": "SSP Wallet è completamente gratuito per tutti. SSP Enterprise aggiunge vault multisig per team, il motore delle policy e l'analisi della tesoreria, con prezzi per organizzazione.",
+      "perMonth": "/mese",
+      "mostPopular": "Più popolare",
+      "customPrice": "Personalizzato",
+      "startFree": "Inizia gratis",
+      "getStarted": "Inizia",
+      "contactSales": "Contatta le vendite",
+      "footnote": "Prezzi in USD, fatturati per organizzazione. Inizia gratis: nessuna carta richiesta. Consulta il confronto completo dei piani nell'app.",
+      "walletFreeTitle": "Ti serve solo il wallet personale?",
+      "walletFreeBody": "SSP Wallet è gratuito al 100%: vera autocustodia 2-of-2 per i singoli utenti, senza abbonamento, per sempre.",
+      "walletFreeCta": "Scarica il wallet gratuito",
+      "tiers": {
+        "free": {
+          "name": "Free",
+          "desc": "Avvia il tuo primo vault di team."
+        },
+        "starter": {
+          "name": "Starter",
+          "desc": "Per team in crescita che hanno bisogno di più vault e membri."
+        },
+        "pro": {
+          "name": "Pro",
+          "desc": "Il motore delle policy completo e l'analisi della tesoreria."
+        },
+        "business": {
+          "name": "Business",
+          "desc": "Scala su molti vault, firmatari e chain."
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "desc": "Contratto personalizzato, SSO e supporto dedicato."
+        }
+      }
+    },
     "contact": {
       "title": "Contatta le Vendite",
       "subtitle": "Ha bisogno di un piano Enterprise personalizzato, supporto dedicato o onboarding prioritario? Si metta in contatto con il nostro team.",

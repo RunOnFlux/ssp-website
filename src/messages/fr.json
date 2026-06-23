@@ -1595,6 +1595,42 @@
       "subtitle": "Une plateforme pour toutes vos chaînes — UTXO et EVM",
       "footer": "Plus de chaînes ajoutées régulièrement. Tous les tokens ERC-20 pris en charge sur les chaînes EVM."
     },
+    "pricing": {
+      "title": "Tarifs",
+      "subtitle": "Le SSP Wallet est entièrement gratuit pour tous. SSP Enterprise ajoute des coffres multisig pour les équipes, le moteur de règles et l'analyse de trésorerie, facturés par organisation.",
+      "perMonth": "/mois",
+      "mostPopular": "Le plus populaire",
+      "customPrice": "Sur mesure",
+      "startFree": "Démarrer gratuitement",
+      "getStarted": "Commencer",
+      "contactSales": "Contacter le service commercial",
+      "footnote": "Prix en USD, facturés par organisation. Démarrez gratuitement, sans carte bancaire. Consultez le comparatif complet des forfaits dans l'application.",
+      "walletFreeTitle": "Vous avez seulement besoin du wallet personnel ?",
+      "walletFreeBody": "Le SSP Wallet est 100 % gratuit : une véritable auto-conservation 2-of-2 pour les particuliers, sans abonnement, à vie.",
+      "walletFreeCta": "Télécharger le wallet gratuit",
+      "tiers": {
+        "free": {
+          "name": "Free",
+          "desc": "Lancez votre premier coffre d'équipe."
+        },
+        "starter": {
+          "name": "Starter",
+          "desc": "Pour les équipes en croissance qui ont besoin de plus de coffres et de membres."
+        },
+        "pro": {
+          "name": "Pro",
+          "desc": "Le moteur de règles complet et l'analyse de trésorerie."
+        },
+        "business": {
+          "name": "Business",
+          "desc": "Passez à l'échelle sur de nombreux coffres, signataires et chaînes."
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "desc": "Contrat sur mesure, SSO et support dédié."
+        }
+      }
+    },
     "contact": {
       "title": "Contacter les ventes",
       "subtitle": "Besoin d'un plan Enterprise personnalisé, d'une assistance dédiée ou d'un onboarding prioritaire ? Contactez notre équipe.",

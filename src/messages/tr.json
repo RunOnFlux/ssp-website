@@ -1595,6 +1595,42 @@
       "subtitle": "Tüm zincirleriniz için tek platform — UTXO ve EVM",
       "footer": "Düzenli olarak daha fazla zincir ekleniyor. EVM zincirlerinde tüm ERC-20 tokenler destekleniyor."
     },
+    "pricing": {
+      "title": "Fiyatlandırma",
+      "subtitle": "SSP Wallet herkes için tamamen ücretsizdir. SSP Enterprise, ekip için çoklu imza kasaları, politika motoru ve hazine analitiği ekler ve kuruluş başına ücretlendirilir.",
+      "perMonth": "/ay",
+      "mostPopular": "En popüler",
+      "customPrice": "Özel",
+      "startFree": "Ücretsiz başlayın",
+      "getStarted": "Başlayın",
+      "contactSales": "Satış ekibine ulaşın",
+      "footnote": "Fiyatlar USD cinsindendir, kuruluş başına faturalandırılır. Ücretsiz başlayın — kart gerekmez. Tüm plan karşılaştırmasını uygulama içinde görün.",
+      "walletFreeTitle": "Yalnızca kişisel cüzdana mı ihtiyacınız var?",
+      "walletFreeBody": "SSP Wallet %100 ücretsizdir — bireyler için gerçek 2-of-2 öz saklama, abonelik olmadan, sonsuza dek.",
+      "walletFreeCta": "Ücretsiz cüzdanı indirin",
+      "tiers": {
+        "free": {
+          "name": "Free",
+          "desc": "İlk ekip kasanızı oluşturun."
+        },
+        "starter": {
+          "name": "Starter",
+          "desc": "Daha fazla kasaya ve üyeye ihtiyaç duyan büyüyen ekipler için."
+        },
+        "pro": {
+          "name": "Pro",
+          "desc": "Tam politika motoru ve hazine analitiği."
+        },
+        "business": {
+          "name": "Business",
+          "desc": "Birçok kasa, imzacı ve zincir genelinde ölçeklendirin."
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "desc": "Özel sözleşme, SSO ve özel destek."
+        }
+      }
+    },
     "contact": {
       "title": "Satışla İletişime Geçin",
       "subtitle": "Özel bir Enterprise planına, özel desteğe veya öncelikli yerleşime mi ihtiyacınız var? Ekibimizle iletişime geçin.",

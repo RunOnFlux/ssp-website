@@ -1595,6 +1595,42 @@
       "subtitle": "Một nền tảng cho tất cả chain — UTXO và EVM",
       "footer": "Thêm chain được bổ sung thường xuyên. Tất cả token ERC-20 được hỗ trợ trên EVM chain."
     },
+    "pricing": {
+      "title": "Bảng giá",
+      "subtitle": "SSP Wallet hoàn toàn miễn phí cho mọi người. SSP Enterprise bổ sung kho đa chữ ký cho nhóm, công cụ chính sách và phân tích ngân quỹ, tính phí theo tổ chức.",
+      "perMonth": "/tháng",
+      "mostPopular": "Phổ biến nhất",
+      "customPrice": "Tùy chỉnh",
+      "startFree": "Bắt đầu miễn phí",
+      "getStarted": "Bắt đầu",
+      "contactSales": "Liên hệ bộ phận kinh doanh",
+      "footnote": "Giá tính bằng USD, thanh toán theo tổ chức. Bắt đầu miễn phí — không cần thẻ. Xem so sánh đầy đủ các gói trong ứng dụng.",
+      "walletFreeTitle": "Bạn chỉ cần ví cá nhân?",
+      "walletFreeBody": "SSP Wallet hoàn toàn miễn phí 100% — tự lưu ký 2-of-2 thực sự cho cá nhân, không bao giờ có phí đăng ký.",
+      "walletFreeCta": "Tải ví miễn phí",
+      "tiers": {
+        "free": {
+          "name": "Free",
+          "desc": "Khởi chạy kho nhóm đầu tiên của bạn."
+        },
+        "starter": {
+          "name": "Starter",
+          "desc": "Dành cho các nhóm đang phát triển cần thêm kho và thành viên."
+        },
+        "pro": {
+          "name": "Pro",
+          "desc": "Công cụ chính sách đầy đủ và phân tích ngân quỹ."
+        },
+        "business": {
+          "name": "Business",
+          "desc": "Mở rộng trên nhiều kho, người ký và chuỗi."
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "desc": "Hợp đồng tùy chỉnh, SSO và hỗ trợ chuyên trách."
+        }
+      }
+    },
     "contact": {
       "title": "Liên hệ kinh doanh",
       "subtitle": "Cần kế hoạch Enterprise tùy chỉnh, hỗ trợ chuyên dụng hoặc onboarding ưu tiên? Liên hệ với nhóm.",

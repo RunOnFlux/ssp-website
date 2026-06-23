@@ -1,7 +1,7 @@
 ---
 title: SSP Enterprise
 url: https://sspwallet.io/enterprise
-last_reviewed: 2026-04-28
+last_reviewed: 2026-06-23
 ---
 
 SSP Enterprise is the multisig vault product for organisations — true
@@ -22,6 +22,10 @@ self-custody at team scale. No custodians, no MPC vendors holding key shards.
   Zcash, Flux, Polygon, BSC, Avalanche, Base.
 - Complete audit trail — every proposal, approval, rejection logged.
 - In production with the Flux Foundation (Fusion bridge + treasury).
+- Pricing (per organisation, billed in USD): Free $0/mo, Starter $49/mo, Pro
+  $149/mo, Business $399/mo, Enterprise custom. Start free, no card required. The
+  SSP Wallet itself is 100% free — pricing applies only to SSP Enterprise team
+  features (multisig vaults, policy engine, treasury analytics).
 
 ## What you can do
 

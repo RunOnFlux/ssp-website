@@ -1595,6 +1595,42 @@
       "subtitle": "一个平台覆盖你所有的链——UTXO 与 EVM",
       "footer": "会持续新增更多链。EVM 链上支持所有 ERC-20 代币。"
     },
+    "pricing": {
+      "title": "价格",
+      "subtitle": "SSP Wallet 对所有人完全免费。SSP Enterprise 增加了团队多重签名金库、策略引擎和资金分析，按组织计费。",
+      "perMonth": "/月",
+      "mostPopular": "最受欢迎",
+      "customPrice": "定制",
+      "startFree": "免费开始",
+      "getStarted": "开始使用",
+      "contactSales": "联系销售",
+      "footnote": "价格以美元计，按组织计费。免费开始，无需绑卡。完整的套餐对比请在应用内查看。",
+      "walletFreeTitle": "只需要个人钱包?",
+      "walletFreeBody": "SSP Wallet 100% 免费——为个人提供真正的 2-of-2 自我托管，永不收取订阅费。",
+      "walletFreeCta": "下载免费钱包",
+      "tiers": {
+        "free": {
+          "name": "Free",
+          "desc": "启动你的第一个团队金库。"
+        },
+        "starter": {
+          "name": "Starter",
+          "desc": "适合需要更多金库和成员的成长型团队。"
+        },
+        "pro": {
+          "name": "Pro",
+          "desc": "完整的策略引擎和资金分析。"
+        },
+        "business": {
+          "name": "Business",
+          "desc": "在众多金库、签名者和链上进行扩展。"
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "desc": "定制合同、SSO 和专属支持。"
+        }
+      }
+    },
     "contact": {
       "title": "联系销售",
       "subtitle": "需要定制 Enterprise 套餐、专属支持或优先上线？请联系我们的团队。",

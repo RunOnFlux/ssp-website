@@ -374,6 +374,14 @@ function ContactForm() {
   )
 }
 
+const pricingTiers: { key: string; price: number | null; popular: boolean; href: string }[] = [
+  { key: 'free', price: 0, popular: false, href: 'https://enterprise.sspwallet.com' },
+  { key: 'starter', price: 49, popular: false, href: 'https://enterprise.sspwallet.com' },
+  { key: 'pro', price: 149, popular: true, href: 'https://enterprise.sspwallet.com' },
+  { key: 'business', price: 399, popular: false, href: 'https://enterprise.sspwallet.com' },
+  { key: 'enterprise', price: null, popular: false, href: '#get-started' },
+]
+
 export function EnterpriseContent() {
   const t = useTranslations('Enterprise')
   const [heroRef, heroInView] = useInView({ threshold: 0.3, triggerOnce: true })
@@ -1080,6 +1088,109 @@ export function EnterpriseContent() {
             </div>
 
             <p className='mt-4 text-sm text-gray-400 dark:text-gray-500'>{t('chains.footer')}</p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Pricing Section — enterprise plans only; the consumer wallet is free */}
+      <section id='pricing' className='section-padding dark:bg-dark-900 bg-gray-50'>
+        <div className='container-custom'>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            viewport={{ once: true }}
+            className='mx-auto mb-12 max-w-3xl text-center'
+          >
+            <h2 className='heading-2 mb-4'>{t('pricing.title')}</h2>
+            <p className='text-lg text-gray-600 dark:text-gray-400'>{t('pricing.subtitle')}</p>
+          </motion.div>
+
+          <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-5'>
+            {pricingTiers.map((tier, index) => (
+              <motion.div
+                key={tier.key}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: index * 0.06 }}
+                viewport={{ once: true }}
+                className={`relative flex flex-col rounded-2xl border p-6 ${
+                  tier.popular
+                    ? 'border-primary-500 dark:bg-dark-800 bg-white shadow-lg'
+                    : 'dark:bg-dark-800 dark:border-dark-700 border-gray-200 bg-white'
+                }`}
+              >
+                {tier.popular && (
+                  <span className='bg-primary-600 absolute -top-3 left-1/2 -translate-x-1/2 rounded-full px-3 py-1 text-xs font-semibold text-white'>
+                    {t('pricing.mostPopular')}
+                  </span>
+                )}
+                <h3 className='mb-1 text-lg font-bold text-gray-900 dark:text-white'>
+                  {t(`pricing.tiers.${tier.key}.name`)}
+                </h3>
+                <div className='mb-3 flex items-baseline gap-1'>
+                  {tier.price === null ? (
+                    <span className='text-2xl font-bold text-gray-900 dark:text-white'>
+                      {t('pricing.customPrice')}
+                    </span>
+                  ) : (
+                    <>
+                      <span className='text-3xl font-bold text-gray-900 dark:text-white'>
+                        ${tier.price}
+                      </span>
+                      {tier.price > 0 && (
+                        <span className='text-sm text-gray-500 dark:text-gray-400'>
+                          {t('pricing.perMonth')}
+                        </span>
+                      )}
+                    </>
+                  )}
+                </div>
+                <p className='mb-6 flex-1 text-sm text-gray-600 dark:text-gray-400'>
+                  {t(`pricing.tiers.${tier.key}.desc`)}
+                </p>
+                <a
+                  href={tier.href}
+                  {...(tier.href.startsWith('http')
+                    ? { target: '_blank', rel: 'noopener noreferrer' }
+                    : {})}
+                  onClick={() =>
+                    trackEvent('cta_click', { cta_id: `enterprise_pricing_${tier.key}` })
+                  }
+                  className={`btn w-full ${tier.popular ? 'btn-primary' : 'btn-secondary'}`}
+                >
+                  {tier.key === 'free'
+                    ? t('pricing.startFree')
+                    : tier.key === 'enterprise'
+                      ? t('pricing.contactSales')
+                      : t('pricing.getStarted')}
+                </a>
+              </motion.div>
+            ))}
+          </div>
+
+          <p className='mt-6 text-center text-sm text-gray-400 dark:text-gray-500'>
+            {t('pricing.footnote')}
+          </p>
+
+          {/* The consumer wallet is completely free */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            viewport={{ once: true }}
+            className='border-primary-200 bg-primary-50 dark:border-primary-800 dark:bg-primary-900/20 mx-auto mt-10 max-w-3xl rounded-2xl border p-6 text-center'
+          >
+            <h3 className='mb-2 text-lg font-bold text-gray-900 dark:text-white'>
+              {t('pricing.walletFreeTitle')}
+            </h3>
+            <p className='mb-4 text-sm text-gray-600 dark:text-gray-400'>
+              {t('pricing.walletFreeBody')}
+            </p>
+            <Link href='/download' className='btn btn-secondary'>
+              {t('pricing.walletFreeCta')}
+              <ArrowRight className='ml-2 h-4 w-4' />
+            </Link>
           </motion.div>
         </div>
       </section>

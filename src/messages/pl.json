@@ -1595,6 +1595,42 @@
       "subtitle": "Jedna platforma dla wszystkich sieci — UTXO i EVM",
       "footer": "Nowe sieci dodawane regularnie. Wszystkie tokeny ERC-20 obsługiwane na sieciach EVM."
     },
+    "pricing": {
+      "title": "Cennik",
+      "subtitle": "SSP Wallet jest całkowicie darmowy dla wszystkich. SSP Enterprise dodaje zespołowe skarbce multisig, silnik zasad i analitykę skarbca, z rozliczeniem za organizację.",
+      "perMonth": "/mies.",
+      "mostPopular": "Najpopularniejszy",
+      "customPrice": "Indywidualny",
+      "startFree": "Zacznij za darmo",
+      "getStarted": "Rozpocznij",
+      "contactSales": "Skontaktuj się z działem sprzedaży",
+      "footnote": "Ceny w USD, rozliczane za organizację. Zacznij za darmo — bez karty. Pełne porównanie planów znajdziesz w aplikacji.",
+      "walletFreeTitle": "Potrzebujesz tylko portfela osobistego?",
+      "walletFreeBody": "SSP Wallet jest w 100% darmowy — prawdziwa samodzielna kontrola 2-of-2 dla osób prywatnych, bez subskrypcji, na zawsze.",
+      "walletFreeCta": "Pobierz darmowy portfel",
+      "tiers": {
+        "free": {
+          "name": "Free",
+          "desc": "Uruchom swój pierwszy skarbiec zespołowy."
+        },
+        "starter": {
+          "name": "Starter",
+          "desc": "Dla rozwijających się zespołów potrzebujących więcej skarbców i członków."
+        },
+        "pro": {
+          "name": "Pro",
+          "desc": "Pełny silnik zasad i analityka skarbca."
+        },
+        "business": {
+          "name": "Business",
+          "desc": "Skaluj się na wielu skarbcach, sygnatariuszach i łańcuchach."
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "desc": "Indywidualna umowa, SSO i dedykowane wsparcie."
+        }
+      }
+    },
     "contact": {
       "title": "Kontakt z działem sprzedaży",
       "subtitle": "Potrzebujesz niestandardowego planu Enterprise, dedykowanego wsparcia lub priorytetowego wdrożenia? Skontaktuj się z naszym zespołem.",

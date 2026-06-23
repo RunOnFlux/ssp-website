@@ -1595,6 +1595,42 @@
       "subtitle": "Satu platform untuk semua chain Anda — UTXO dan EVM",
       "footer": "Chain lebih banyak ditambahkan secara berkala. Semua token ERC-20 didukung di chain EVM."
     },
+    "pricing": {
+      "title": "Harga",
+      "subtitle": "SSP Wallet sepenuhnya gratis untuk semua orang. SSP Enterprise menambahkan brankas multisig tim, mesin kebijakan, dan analitik treasury, dengan harga per organisasi.",
+      "perMonth": "/bln",
+      "mostPopular": "Paling populer",
+      "customPrice": "Kustom",
+      "startFree": "Mulai gratis",
+      "getStarted": "Mulai",
+      "contactSales": "Hubungi tim penjualan",
+      "footnote": "Harga dalam USD, ditagih per organisasi. Mulai gratis — tanpa kartu. Lihat perbandingan paket lengkap di dalam aplikasi.",
+      "walletFreeTitle": "Hanya butuh wallet pribadi?",
+      "walletFreeBody": "SSP Wallet 100% gratis — penyimpanan mandiri 2-of-2 yang sesungguhnya untuk individu, tanpa langganan, selamanya.",
+      "walletFreeCta": "Unduh wallet gratis",
+      "tiers": {
+        "free": {
+          "name": "Free",
+          "desc": "Luncurkan brankas tim pertama Anda."
+        },
+        "starter": {
+          "name": "Starter",
+          "desc": "Untuk tim yang berkembang dan membutuhkan lebih banyak brankas serta anggota."
+        },
+        "pro": {
+          "name": "Pro",
+          "desc": "Mesin kebijakan lengkap dan analitik treasury."
+        },
+        "business": {
+          "name": "Business",
+          "desc": "Skalakan di banyak brankas, penanda tangan, dan rantai."
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "desc": "Kontrak kustom, SSO, dan dukungan khusus."
+        }
+      }
+    },
     "contact": {
       "title": "Hubungi Penjualan",
       "subtitle": "Butuh paket Enterprise kustom, dukungan dedicated, atau onboarding prioritas? Hubungi tim kami.",

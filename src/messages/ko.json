@@ -1595,6 +1595,42 @@
       "subtitle": "모든 체인을 위한 하나의 플랫폼 — UTXO 및 EVM",
       "footer": "체인이 정기적으로 추가됩니다. EVM 체인에서 모든 ERC-20 토큰 지원."
     },
+    "pricing": {
+      "title": "요금제",
+      "subtitle": "SSP Wallet은 모두에게 완전히 무료입니다. SSP Enterprise는 팀용 멀티시그 볼트, 정책 엔진, 트레저리 분석을 추가하며 조직 단위로 과금됩니다.",
+      "perMonth": "/월",
+      "mostPopular": "가장 인기",
+      "customPrice": "맞춤형",
+      "startFree": "무료로 시작",
+      "getStarted": "시작하기",
+      "contactSales": "영업팀 문의",
+      "footnote": "가격은 USD이며 조직 단위로 청구됩니다. 카드 없이 무료로 시작하세요. 전체 요금제 비교는 앱 내에서 확인할 수 있습니다.",
+      "walletFreeTitle": "개인용 지갑만 필요하신가요?",
+      "walletFreeBody": "SSP Wallet은 100% 무료입니다. 개인을 위한 진정한 2-of-2 자가 수탁 방식이며, 구독료가 영원히 없습니다.",
+      "walletFreeCta": "무료 지갑 다운로드",
+      "tiers": {
+        "free": {
+          "name": "Free",
+          "desc": "첫 팀 볼트를 시작하세요."
+        },
+        "starter": {
+          "name": "Starter",
+          "desc": "더 많은 볼트와 멤버가 필요한 성장하는 팀을 위한 요금제."
+        },
+        "pro": {
+          "name": "Pro",
+          "desc": "완전한 정책 엔진과 트레저리 분석."
+        },
+        "business": {
+          "name": "Business",
+          "desc": "여러 볼트, 서명자, 체인에 걸쳐 확장하세요."
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "desc": "맞춤형 계약, SSO, 전담 지원."
+        }
+      }
+    },
     "contact": {
       "title": "영업팀 문의",
       "subtitle": "커스텀 Enterprise 플랜, 전담 지원 또는 우선 온보딩이 필요하십니까? 팀에 문의하십시오.",
