@@ -115,6 +115,8 @@ export default async function LocaleLayout({
           {JSON.stringify(createSoftwareApplicationJsonLd())}
         </Script>
 
+        {/* Kapa AI widget temporarily disabled
+
         <Script
           async
           strategy='afterInteractive'
@@ -139,6 +141,7 @@ export default async function LocaleLayout({
           data-mcp-enabled='true'
           data-mcp-server-url='https://flux.mcp.kapa.ai'
         />
+        */}
       </body>
     </html>
   )
