@@ -107,6 +107,15 @@ export default async function LocaleLayout({
           </ThemeProvider>
         </NextIntlClientProvider>
 
+        {/* Flux AI documentation assistant (self-hosted, github.com/RunOnFlux/ownllm).
+            Served by the assistant itself; its origin is the endpoint. */}
+        <Script
+          src='https://ownllmrouter.app.runonflux.io/widget.js'
+          strategy='lazyOnload'
+          data-title='Ask the SSP docs'
+          data-subtitle='Answers from the SSP Wallet documentation, with sources'
+          data-suggestions='What is SSP Wallet and how does the 2-of-2 security work?|How do I restore my wallet?|Which chains does SSP support?|How do I set up SSP Key?'
+        />
         <Script
           id='ssp-software-application-jsonld'
           type='application/ld+json'
