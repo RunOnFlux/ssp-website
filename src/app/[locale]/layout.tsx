@@ -112,8 +112,13 @@ export default async function LocaleLayout({
         <Script
           src='https://ownllmrouter.app.runonflux.io/widget.js'
           strategy='lazyOnload'
-          data-title='Ask the SSP docs'
-          data-subtitle='Answers from the SSP Wallet documentation, with sources'
+          data-title='Ask SSP AI'
+          data-subject='SSP Wallet'
+          data-launcher-label='Ask AI'
+          data-accent='#fbbf24'
+          data-logo='/Icon%20Logo%20White.svg'
+          data-logo-light='/Icon%20Logo%20Black.svg'
+          data-launcher-bg='#1f2937'
           data-suggestions='What is SSP Wallet and how does the 2-of-2 security work?|How do I restore my wallet?|Which chains does SSP support?|How do I set up SSP Key?'
         />
         <Script
@@ -123,34 +128,6 @@ export default async function LocaleLayout({
         >
           {JSON.stringify(createSoftwareApplicationJsonLd())}
         </Script>
-
-        {/* Kapa AI widget temporarily disabled
-
-        <Script
-          async
-          strategy='afterInteractive'
-          src='https://widget.kapa.ai/kapa-widget.bundle.js'
-          data-website-id='1d29b730-6686-4ae2-b724-41d41c754e7b'
-          data-project-name='SSP'
-          data-project-color='#f59e0b'
-          data-user-analytics-fingerprint-enabled='true'
-          data-search-mode-enabled='true'
-          data-project-logo='https://raw.githubusercontent.com/RunOnFlux/ssp-wallet/refs/heads/master/public/ssp-logo-white.svg'
-          data-modal-image='https://raw.githubusercontent.com/RunOnFlux/ssp-wallet/refs/heads/master/public/ssp-logo-black.svg'
-          data-button-image-width='18'
-          data-button-image-height='24'
-          data-button-height='3.125rem'
-          data-button-width='2.8125rem'
-          data-button-text-font-size='0.7rem'
-          data-modal-image-width='36'
-          data-modal-image-height='48'
-          data-modal-disclaimer='This is a custom LLM for answering questions about SSP and other Flux products. The answers are based on the contents of Whitepapers, Documentation, Support articles, API references, website and knowledgebases. Give it a try!'
-          data-button-hide='false'
-          data-modal-override-open-id='kapa-button'
-          data-mcp-enabled='true'
-          data-mcp-server-url='https://flux.mcp.kapa.ai'
-        />
-        */}
       </body>
     </html>
   )
