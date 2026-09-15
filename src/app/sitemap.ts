@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { routing } from '@/i18n/routing'
-import { getAllPosts, getAcademySlugs, getAllSeries } from '@/lib/cms'
+import { getAllPosts, getAcademyPosts, getAllSeries } from '@/lib/cms'
 import { siteUrl } from '@/lib/seo'
 
 const STATIC_ROUTES: Array<{
@@ -26,15 +26,15 @@ function buildLocaleUrl(locale: string, path: string): string {
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const lastModified = new Date()
   const entries: MetadataRoute.Sitemap = []
 
-  // Static routes
+  // Static routes carry no content date. Stamping build time on them would tell
+  // Google every page changed on every deploy, which costs us the credibility of
+  // the dates that are real — so the field is omitted instead.
   for (const route of STATIC_ROUTES) {
     for (const locale of routing.locales) {
       entries.push({
         url: buildLocaleUrl(locale, route.path),
-        lastModified,
         changeFrequency: route.changeFrequency,
         priority: route.priority,
         alternates: {
@@ -66,11 +66,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Academy articles — per locale, only emit when the post is genuinely translated
   for (const locale of routing.locales) {
     try {
-      const academySlugs = await getAcademySlugs(locale)
-      for (const { category, slug } of academySlugs) {
+      // getAcademySlugs() discards the post dates, so read the posts directly.
+      const academyPosts = await getAcademyPosts({ limit: 1000 }, locale)
+      for (const post of academyPosts.filter(p => p.category)) {
         entries.push({
-          url: buildLocaleUrl(locale, `/academy/${category}/${slug}`),
-          lastModified,
+          url: buildLocaleUrl(locale, `/academy/${post.category}/${post.slug}`),
+          lastModified: new Date(post.modifiedDate ?? post.date),
           changeFrequency: 'monthly',
           priority: 0.7,
         })
@@ -109,7 +110,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       for (const locale of routing.locales) {
         entries.push({
           url: buildLocaleUrl(locale, `/author/${slug}`),
-          lastModified,
           changeFrequency: 'monthly',
           priority: 0.5,
         })
