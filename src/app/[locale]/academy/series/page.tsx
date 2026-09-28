@@ -7,7 +7,7 @@ import { LocaleBadge } from '@/components/shared/locale-badge'
 import { Link } from '@/i18n/navigation'
 import type { Locale } from '@/i18n/routing'
 import { getAllSeries } from '@/lib/cms'
-import { createMetadata } from '@/lib/seo'
+import { createMetadata, localeAlternates } from '@/lib/seo'
 import { buildAcademyBreadcrumbJsonLd } from '@/lib/seo-academy'
 
 export async function generateMetadata({
@@ -22,6 +22,7 @@ export async function generateMetadata({
     description: tAcademy('seriesMetaDescription'),
     path: '/academy/series',
     locale,
+    alternates: { languages: localeAlternates('/academy/series') },
   })
 }
 

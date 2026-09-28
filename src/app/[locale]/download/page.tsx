@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
-import { createBreadcrumbJsonLd, createMetadata } from '@/lib/seo'
+import { createBreadcrumbJsonLd, createMetadata, localeAlternates } from '@/lib/seo'
 import { DownloadContent } from './download-content'
 
 export async function generateMetadata({
@@ -16,6 +16,7 @@ export async function generateMetadata({
     description: t('metaDescription'),
     path: '/download',
     locale,
+    alternates: { languages: localeAlternates('/download') },
     ogImage: {
       url: '/og-image.png',
       width: 1200,

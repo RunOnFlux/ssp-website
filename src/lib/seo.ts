@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { routing } from '@/i18n/routing'
 
 export const siteUrl = 'https://sspwallet.io'
 export const siteName = 'SSP Wallet'
@@ -43,6 +44,17 @@ interface CreateMetadataInput {
 /** Absolute URL of `path` under `locale`, e.g. `https://sspwallet.io/de/features`. */
 export function localeUrl(locale: string, path: string): string {
   return `${siteUrl}/${locale}${path === '/' ? '' : path}`
+}
+
+/**
+ * hreflang map for a page that exists at the same path in every locale: one
+ * entry per locale, plus x-default pointing at English.
+ */
+export function localeAlternates(path: string): Record<string, string> {
+  return {
+    ...Object.fromEntries(routing.locales.map(l => [l, localeUrl(l, path)])),
+    'x-default': localeUrl(routing.defaultLocale, path),
+  }
 }
 
 function absoluteUrl(url: string): string {

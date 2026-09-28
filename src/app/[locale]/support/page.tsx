@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
-import { createBreadcrumbJsonLd, createMetadata } from '@/lib/seo'
+import { createBreadcrumbJsonLd, createMetadata, localeAlternates } from '@/lib/seo'
 import { SupportContent } from './support-content'
 
 export async function generateMetadata({
@@ -16,6 +16,7 @@ export async function generateMetadata({
     description: t('metaDescription'),
     path: '/support',
     locale,
+    alternates: { languages: localeAlternates('/support') },
   })
 }
 

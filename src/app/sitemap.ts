@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { routing, type Locale } from '@/i18n/routing'
 import { getAllPosts, getAcademyPosts, getAllSeries } from '@/lib/cms'
-import { localeUrl } from '@/lib/seo'
+import { localeAlternates, localeUrl } from '@/lib/seo'
 import type { NewsroomPost, SeriesSummary } from '@/types/newsroom'
 
 type ChangeFrequency = MetadataRoute.Sitemap[number]['changeFrequency']
@@ -34,18 +34,23 @@ const INDEX_ROUTES: Array<{
   priority: number
   changeFrequency: ChangeFrequency
   datedFrom: 'newsroom' | 'academy' | 'series' | 'nothing'
+  /** Locales the page exists in. Defaults to all of them. */
+  locales?: readonly Locale[]
 }> = [
   { path: '/newsroom', priority: 0.8, changeFrequency: 'daily', datedFrom: 'newsroom' },
   { path: '/academy', priority: 0.8, changeFrequency: 'daily', datedFrom: 'academy' },
   { path: '/academy/articles', priority: 0.7, changeFrequency: 'weekly', datedFrom: 'academy' },
   { path: '/academy/series', priority: 0.7, changeFrequency: 'weekly', datedFrom: 'series' },
-  // The glossary is a static term list with no dated source.
-  { path: '/glossary', priority: 0.6, changeFrequency: 'monthly', datedFrom: 'nothing' },
+  // The glossary is a static term list with no dated source. It is English-only:
+  // the middleware 308-redirects every other locale to /en/glossary.
+  {
+    path: '/glossary',
+    priority: 0.6,
+    changeFrequency: 'monthly',
+    datedFrom: 'nothing',
+    locales: ['en'],
+  },
 ]
-
-function languagesFor(path: string): Record<string, string> {
-  return Object.fromEntries(routing.locales.map(l => [l, localeUrl(l, path)]))
-}
 
 /** Newest of a set of date strings, or undefined when none are usable. */
 function newestDate(values: Array<string | null | undefined>): Date | undefined {
@@ -104,14 +109,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         url: localeUrl(locale, route.path),
         changeFrequency: route.changeFrequency,
         priority: route.priority,
-        alternates: { languages: languagesFor(route.path) },
+        alternates: { languages: localeAlternates(route.path) },
       })
     }
   }
 
   // Listing pages, dated from the newest item each one lists.
   for (const route of INDEX_ROUTES) {
-    for (const locale of routing.locales) {
+    const locales = route.locales ?? routing.locales
+    for (const locale of locales) {
       const date =
         route.datedFrom === 'newsroom'
           ? newestDate(translatedPosts(locale).map(contentDate))
@@ -126,7 +132,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         ...lastModified(date),
         changeFrequency: route.changeFrequency,
         priority: route.priority,
-        alternates: { languages: languagesFor(route.path) },
+        // A single-locale page has no alternates to declare.
+        ...(locales.length > 1 ? { alternates: { languages: localeAlternates(route.path) } } : {}),
       })
     }
   }

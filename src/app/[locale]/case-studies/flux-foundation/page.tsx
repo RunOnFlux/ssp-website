@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
-import { createMetadata } from '@/lib/seo'
+import { createMetadata, localeAlternates } from '@/lib/seo'
 import { FluxFoundationContent } from './flux-foundation-content'
 
 export async function generateMetadata({
@@ -15,6 +15,7 @@ export async function generateMetadata({
     description: t('metaDescription'),
     path: '/case-studies/flux-foundation',
     locale,
+    alternates: { languages: localeAlternates('/case-studies/flux-foundation') },
   })
 }
 

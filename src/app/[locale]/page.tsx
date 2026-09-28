@@ -6,7 +6,7 @@ import { Features } from '@/components/home/features'
 import { Hero } from '@/components/home/hero'
 import { Security } from '@/components/home/security'
 import { SupportedChains } from '@/components/home/supported-chains'
-import { createMetadata } from '@/lib/seo'
+import { createMetadata, localeAlternates } from '@/lib/seo'
 
 export async function generateMetadata({
   params,
@@ -20,6 +20,7 @@ export async function generateMetadata({
     description: t('metaDescription'),
     path: '/',
     locale,
+    alternates: { languages: localeAlternates('/') },
   })
 }
 

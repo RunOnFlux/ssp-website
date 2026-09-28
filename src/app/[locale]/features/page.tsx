@@ -5,7 +5,7 @@ import { ComparisonSection } from '@/components/features/comparison-section'
 import { FeaturesHero } from '@/components/features/features-hero'
 import { SecurityFeatures } from '@/components/features/security-features'
 import { TechnicalFeatures } from '@/components/features/technical-features'
-import { createBreadcrumbJsonLd, createMetadata } from '@/lib/seo'
+import { createBreadcrumbJsonLd, createMetadata, localeAlternates } from '@/lib/seo'
 
 export async function generateMetadata({
   params,
@@ -19,6 +19,7 @@ export async function generateMetadata({
     description: t('metaDescription'),
     path: '/features',
     locale,
+    alternates: { languages: localeAlternates('/features') },
   })
 }
 

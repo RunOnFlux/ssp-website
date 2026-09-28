@@ -5,6 +5,7 @@ import {
   createCollectionPageJsonLd,
   createMetadata,
   createSoftwareApplicationJsonLd,
+  localeAlternates,
   localeUrl,
   siteName,
   siteUrl,
@@ -31,6 +32,20 @@ describe('localeUrl', () => {
 
   it('drops the trailing slash for the home path', () => {
     expect(localeUrl('es', '/')).toBe('https://sspwallet.io/es')
+  })
+})
+
+describe('localeAlternates', () => {
+  it('lists every locale plus an English x-default', () => {
+    const langs = localeAlternates('/features')
+    expect(Object.keys(langs)).toHaveLength(15)
+    expect(langs.de).toBe('https://sspwallet.io/de/features')
+    expect(langs['pt-BR']).toBe('https://sspwallet.io/pt-BR/features')
+    expect(langs['x-default']).toBe('https://sspwallet.io/en/features')
+  })
+
+  it('maps the home path to each locale root', () => {
+    expect(localeAlternates('/').ja).toBe('https://sspwallet.io/ja')
   })
 })
 
