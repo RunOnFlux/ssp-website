@@ -90,6 +90,11 @@ describe('middleware non-en glossary redirect', () => {
 })
 
 describe('middleware canonical Link header', () => {
+  it('sets no Link header built from the request host on HTML responses', async () => {
+    const res = await middleware(makeReq('/en/academy'))
+    expect(res?.headers.get('link') ?? '').not.toContain('localhost')
+  })
+
   it('sets no canonical Link header on HTML responses', async () => {
     // The page's <link rel="canonical"> is the only canonical signal; a header
     // derived from the request path would contradict it on fallback pages.
