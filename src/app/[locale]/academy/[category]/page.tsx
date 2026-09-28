@@ -30,6 +30,7 @@ export async function generateMetadata({
       title: tAcademy('title'),
       description: siteDescription,
       path: '/academy',
+      locale,
     })
   }
   const tCategories = await getTranslations({ locale, namespace: 'Categories' })
@@ -38,6 +39,7 @@ export async function generateMetadata({
     title: `${tCategories(`${category}.title`)} | ${tAcademy('title')}`,
     description: tCategories(`${category}.description`),
     path: `/academy/${category}`,
+    locale,
     noindex: posts.length === 0,
   })
 }

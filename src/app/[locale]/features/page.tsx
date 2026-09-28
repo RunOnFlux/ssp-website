@@ -18,6 +18,7 @@ export async function generateMetadata({
     title: t('metaTitle'),
     description: t('metaDescription'),
     path: '/features',
+    locale,
   })
 }
 

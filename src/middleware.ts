@@ -5,6 +5,7 @@ import { routing } from '@/i18n/routing'
 import { renderArticleAsAgentMd, renderAuthorAsAgentMd } from '@/lib/agent-md/render'
 import { isDynamicArticleRoute, resolveAgentMdPath } from '@/lib/agent-md/resolve'
 import { getAuthorBySlug, getPostBySlug } from '@/lib/cms'
+import { siteUrl } from '@/lib/seo'
 
 export const runtime = 'nodejs'
 
@@ -15,7 +16,9 @@ function mdResponse(md: string, req: NextRequest): NextResponse {
     headers: {
       'Content-Type': 'text/markdown; charset=utf-8',
       'Cache-Control': 'public, max-age=300, s-maxage=300',
-      Link: `<${req.nextUrl.origin}${req.nextUrl.pathname}>; rel="canonical"`,
+      // The HTML page is the canonical version of this Markdown. Use the public
+      // origin: behind the proxy `req.nextUrl.origin` is the internal localhost.
+      Link: `<${siteUrl}${req.nextUrl.pathname}>; rel="canonical"`,
       Vary: 'Accept',
     },
   })
@@ -81,10 +84,10 @@ export default async function middleware(req: NextRequest) {
 
   const response = intlMiddleware(req)
   response.headers.set('Vary', 'Accept')
-  response.headers.set(
-    'Link',
-    `<${req.nextUrl.origin}${req.nextUrl.pathname}>; rel="canonical"; type="text/html"`
-  )
+  // No canonical Link header on HTML responses: the page's own
+  // <link rel="canonical"> is the single source of truth. The middleware cannot
+  // know it (untranslated posts point at their English original, and the CMS
+  // can override it), so a header built from the request path would contradict it.
   return response
 }
 

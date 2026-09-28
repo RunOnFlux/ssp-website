@@ -20,6 +20,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: t('seoTitle'),
     description: t('seoDescription'),
     path: '/glossary',
+    locale,
   })
 }
 

@@ -24,12 +24,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: `${tAcademy('learningPaths')} | ${tAcademy('title')}`,
       description: siteDescription,
       path: '/academy/series',
+      locale,
     })
   }
   return createMetadata({
     title: `${series.seoTitle ?? series.title} | ${tAcademy('title')}`,
     description: series.seoDescription ?? series.description,
     path: `/academy/series/${series.slug}`,
+    // An untranslated series is served in English under this locale.
+    locale: series.servedLocale,
   })
 }
 

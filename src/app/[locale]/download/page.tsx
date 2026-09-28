@@ -15,6 +15,7 @@ export async function generateMetadata({
     title: t('metaTitle'),
     description: t('metaDescription'),
     path: '/download',
+    locale,
     ogImage: {
       url: '/og-image.png',
       width: 1200,

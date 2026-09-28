@@ -24,6 +24,7 @@ export async function generateMetadata({
     title: t('metaTitle', { name: author.name }),
     description: author.bio ?? t('metaDescriptionFallback', { name: author.name }),
     path: `/author/${slug}`,
+    locale,
   })
 }
 
