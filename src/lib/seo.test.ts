@@ -5,6 +5,7 @@ import {
   createCollectionPageJsonLd,
   createMetadata,
   createSoftwareApplicationJsonLd,
+  localeUrl,
   siteName,
   siteUrl,
 } from './seo'
@@ -21,10 +22,37 @@ describe('siteName', () => {
   })
 })
 
+describe('localeUrl', () => {
+  it('prefixes the path with the locale', () => {
+    expect(localeUrl('en', '/academy/security/foo')).toBe(
+      'https://sspwallet.io/en/academy/security/foo'
+    )
+  })
+
+  it('drops the trailing slash for the home path', () => {
+    expect(localeUrl('es', '/')).toBe('https://sspwallet.io/es')
+  })
+})
+
 describe('createMetadata', () => {
-  it('builds a canonical URL from path', () => {
-    const m = createMetadata({ title: 'X', description: 'Y', path: '/foo' })
-    expect(m.alternates?.canonical).toBe('https://sspwallet.io/foo')
+  it('builds a locale-prefixed canonical URL from path', () => {
+    const m = createMetadata({ title: 'X', description: 'Y', path: '/foo', locale: 'en' })
+    expect(m.alternates?.canonical).toBe('https://sspwallet.io/en/foo')
+  })
+
+  it('points a non-English page at itself, not at the English URL', () => {
+    const m = createMetadata({ title: 'X', description: 'Y', path: '/features', locale: 'de' })
+    expect(m.alternates?.canonical).toBe('https://sspwallet.io/de/features')
+  })
+
+  it('maps the home path to the bare locale root', () => {
+    const m = createMetadata({ title: 'X', description: 'Y', path: '/', locale: 'pt-BR' })
+    expect(m.alternates?.canonical).toBe('https://sspwallet.io/pt-BR')
+  })
+
+  it('uses the canonical as og:url', () => {
+    const m = createMetadata({ title: 'X', description: 'Y', path: '/foo', locale: 'fr' })
+    expect(m.openGraph?.url).toBe('https://sspwallet.io/fr/foo')
   })
 
   it('respects an override canonical', () => {
@@ -32,13 +60,20 @@ describe('createMetadata', () => {
       title: 'X',
       description: 'Y',
       path: '/foo',
+      locale: 'en',
       canonical: 'https://example.com/x',
     })
     expect(m.alternates?.canonical).toBe('https://example.com/x')
   })
 
   it('flips to noindex when noindex=true', () => {
-    const m = createMetadata({ title: 'X', description: 'Y', path: '/foo', noindex: true })
+    const m = createMetadata({
+      title: 'X',
+      description: 'Y',
+      path: '/foo',
+      locale: 'en',
+      noindex: true,
+    })
     expect(m.robots).toEqual({ index: false, follow: true })
   })
 
@@ -47,6 +82,7 @@ describe('createMetadata', () => {
       title: 'X',
       description: 'Y',
       path: '/foo',
+      locale: 'en',
       ogImage: { url: '/x.png', width: 1200, height: 630, alt: 'x' },
     })
     expect((m.openGraph?.images as Array<{ url: string }>)[0].url).toBe(
@@ -59,6 +95,7 @@ describe('createMetadata', () => {
       title: 'X',
       description: 'Y',
       path: '/foo',
+      locale: 'en',
       ogImage: { url: 'https://cdn.example.com/x.png', width: 1200, height: 630, alt: 'x' },
     })
     expect((m.openGraph?.images as Array<{ url: string }>)[0].url).toBe(
@@ -71,6 +108,7 @@ describe('createMetadata', () => {
       title: 'X',
       description: 'Y',
       path: '/n/x',
+      locale: 'en',
       type: 'article',
       articleMeta: {
         publishedTime: '2025-01-01',

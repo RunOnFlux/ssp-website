@@ -15,6 +15,7 @@ export async function generateMetadata({
     title: t('metaTitle'),
     description: t('metaDescription'),
     path: '/checkout_failure',
+    locale,
     noindex: true,
   })
 }

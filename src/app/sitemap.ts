@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { routing, type Locale } from '@/i18n/routing'
 import { getAllPosts, getAcademyPosts, getAllSeries } from '@/lib/cms'
-import { siteUrl } from '@/lib/seo'
+import { localeUrl } from '@/lib/seo'
 import type { NewsroomPost, SeriesSummary } from '@/types/newsroom'
 
 type ChangeFrequency = MetadataRoute.Sitemap[number]['changeFrequency']
@@ -43,12 +43,8 @@ const INDEX_ROUTES: Array<{
   { path: '/glossary', priority: 0.6, changeFrequency: 'monthly', datedFrom: 'nothing' },
 ]
 
-function buildLocaleUrl(locale: string, path: string): string {
-  return `${siteUrl}/${locale}${path === '/' ? '' : path}`
-}
-
 function languagesFor(path: string): Record<string, string> {
-  return Object.fromEntries(routing.locales.map(l => [l, buildLocaleUrl(l, path)]))
+  return Object.fromEntries(routing.locales.map(l => [l, localeUrl(l, path)]))
 }
 
 /** Newest of a set of date strings, or undefined when none are usable. */
@@ -105,7 +101,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const route of STATIC_ROUTES) {
     for (const locale of routing.locales) {
       entries.push({
-        url: buildLocaleUrl(locale, route.path),
+        url: localeUrl(locale, route.path),
         changeFrequency: route.changeFrequency,
         priority: route.priority,
         alternates: { languages: languagesFor(route.path) },
@@ -126,7 +122,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
               : undefined
 
       entries.push({
-        url: buildLocaleUrl(locale, route.path),
+        url: localeUrl(locale, route.path),
         ...lastModified(date),
         changeFrequency: route.changeFrequency,
         priority: route.priority,
@@ -148,7 +144,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     for (const [category, dates] of datesByCategory) {
       entries.push({
-        url: buildLocaleUrl(locale, `/academy/${category}`),
+        url: localeUrl(locale, `/academy/${category}`),
         ...lastModified(newestDate(dates)),
         changeFrequency: 'weekly',
         priority: 0.7,
@@ -160,7 +156,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const locale of routing.locales) {
     for (const post of translatedPosts(locale)) {
       entries.push({
-        url: buildLocaleUrl(locale, `/newsroom/${post.slug}`),
+        url: localeUrl(locale, `/newsroom/${post.slug}`),
         lastModified: new Date(contentDate(post)),
         changeFrequency: 'monthly',
         priority: 0.6,
@@ -172,7 +168,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const locale of routing.locales) {
     for (const post of categorisedAcademy(locale)) {
       entries.push({
-        url: buildLocaleUrl(locale, `/academy/${post.category}/${post.slug}`),
+        url: localeUrl(locale, `/academy/${post.category}/${post.slug}`),
         lastModified: new Date(contentDate(post)),
         changeFrequency: 'monthly',
         priority: 0.7,
@@ -184,7 +180,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const locale of routing.locales) {
     for (const series of translatedSeries(locale)) {
       entries.push({
-        url: buildLocaleUrl(locale, `/academy/series/${series.slug}`),
+        url: localeUrl(locale, `/academy/series/${series.slug}`),
         lastModified: new Date(series.updatedAt),
         changeFrequency: 'monthly',
         priority: 0.6,
@@ -203,7 +199,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       const slug = entry.replace(/\.json$/, '')
       for (const locale of routing.locales) {
         entries.push({
-          url: buildLocaleUrl(locale, `/author/${slug}`),
+          url: localeUrl(locale, `/author/${slug}`),
           changeFrequency: 'monthly',
           priority: 0.5,
         })

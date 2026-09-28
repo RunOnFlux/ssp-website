@@ -24,7 +24,14 @@ interface ArticleMeta {
 interface CreateMetadataInput {
   title: string
   description: string
+  /** Locale-less route path, e.g. `/academy/security/foo`. */
   path: string
+  /**
+   * Locale the canonical URL points at. Every route is served under a locale
+   * prefix (`localePrefix: 'always'`), and the unprefixed URL only redirects,
+   * so a canonical without the prefix would name a redirect.
+   */
+  locale: string
   ogImage?: OgImage
   type?: 'website' | 'article'
   articleMeta?: ArticleMeta
@@ -33,13 +40,18 @@ interface CreateMetadataInput {
   alternates?: { languages?: Record<string, string> }
 }
 
+/** Absolute URL of `path` under `locale`, e.g. `https://sspwallet.io/de/features`. */
+export function localeUrl(locale: string, path: string): string {
+  return `${siteUrl}/${locale}${path === '/' ? '' : path}`
+}
+
 function absoluteUrl(url: string): string {
   if (url.startsWith('http://') || url.startsWith('https://')) return url
   return `${siteUrl}${url.startsWith('/') ? url : `/${url}`}`
 }
 
 export function createMetadata(input: CreateMetadataInput): Metadata {
-  const canonical = input.canonical ?? absoluteUrl(input.path)
+  const canonical = input.canonical ?? localeUrl(input.locale, input.path)
   const og = input.ogImage ?? {
     url: defaultOgImage,
     width: 1200,

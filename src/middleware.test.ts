@@ -88,3 +88,27 @@ describe('middleware non-en glossary redirect', () => {
     expect(location).toContain('ref=abc')
   })
 })
+
+describe('middleware canonical Link header', () => {
+  it('sets no Link header built from the request host on HTML responses', async () => {
+    const res = await middleware(makeReq('/en/academy'))
+    expect(res?.headers.get('link') ?? '').not.toContain('localhost')
+  })
+
+  it('sets no canonical Link header on HTML responses', async () => {
+    // The page's <link rel="canonical"> is the only canonical signal; a header
+    // derived from the request path would contradict it on fallback pages.
+    for (const path of ['/en/academy', '/de/features', '/academy/security/foo']) {
+      const res = await middleware(makeReq(path))
+      expect(res?.headers.get('link') ?? '', `canonical header on ${path}`).not.toMatch(
+        /rel="canonical"/
+      )
+    }
+  })
+
+  it('points the Markdown canonical at the public origin, never the request host', async () => {
+    const res = await middleware(makeReq('/en/academy', { accept: 'text/markdown' }))
+    expect(res?.headers.get('content-type')).toMatch(/text\/markdown/)
+    expect(res?.headers.get('link')).toBe('<https://sspwallet.io/en/academy>; rel="canonical"')
+  })
+})

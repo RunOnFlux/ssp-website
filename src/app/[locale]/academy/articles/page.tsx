@@ -20,6 +20,7 @@ export async function generateMetadata({
     title: t('allArticlesMetaTitle'),
     description: t('allArticlesMetaDescription'),
     path: '/academy/articles',
+    locale,
   })
 }
 

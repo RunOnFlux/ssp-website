@@ -49,6 +49,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: post.seoTitle ?? post.title,
     description: post.seoDescription ?? post.description,
     path: `/academy/${category}/${post.slug}`,
+    // An untranslated post is served in English under this locale; point at
+    // the locale it is actually written in so the fallback copy is not a duplicate.
+    locale: post.servedLocale,
     type: 'article',
     ogImage: {
       url: cmsMediaUrl(post.image),

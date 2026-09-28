@@ -27,6 +27,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: t('termSeoTitle', { term: entry.title }),
     description: entry.excerpt.slice(0, 160),
     path: '/glossary/' + slug,
+    locale,
   })
 }
 

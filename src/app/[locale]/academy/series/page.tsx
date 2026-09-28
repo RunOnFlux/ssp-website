@@ -21,6 +21,7 @@ export async function generateMetadata({
     title: `${tAcademy('learningPaths')} | ${tAcademy('title')}`,
     description: tAcademy('seriesMetaDescription'),
     path: '/academy/series',
+    locale,
   })
 }
 

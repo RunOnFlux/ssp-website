@@ -25,6 +25,10 @@ describe('routing', () => {
     expect(routing.defaultLocale).toBe('en')
   })
 
+  it('does not emit hreflang Link headers from the request origin', () => {
+    expect(routing.alternateLinks).toBe(false)
+  })
+
   it('always emits a locale prefix', () => {
     expect(routing.localePrefix).toBe('always')
   })
