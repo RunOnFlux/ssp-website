@@ -186,6 +186,23 @@ describe('sitemap index pages', () => {
     }
   })
 
+  it('lists the English-only glossary once, without alternates', async () => {
+    const entries = await loadSitemap()
+    const glossary = entries.filter(e => /\/glossary$/.test(e.url))
+
+    // Every other locale 308-redirects to /en/glossary, so listing them only
+    // hands Google redirects.
+    expect(glossary.map(e => e.url)).toEqual(['https://sspwallet.io/en/glossary'])
+    expect((glossary[0] as Entry).alternates).toBeUndefined()
+  })
+
+  it('declares an English x-default on multi-locale index pages', async () => {
+    const entries = await loadSitemap()
+    expect(find(entries, '/fr/newsroom')!.alternates?.languages['x-default']).toBe(
+      'https://sspwallet.io/en/newsroom'
+    )
+  })
+
   it('dates /newsroom and /academy from their newest post', async () => {
     const entries = await loadSitemap({
       getAllPosts: vi.fn(async (locale: string) =>

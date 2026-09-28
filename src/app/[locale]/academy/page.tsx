@@ -8,7 +8,7 @@ import { isAcademyCategory } from '@/constants/academy-categories'
 import { Link } from '@/i18n/navigation'
 import type { Locale } from '@/i18n/routing'
 import { getAcademyPosts, getAllSeries, getCategories } from '@/lib/cms'
-import { createMetadata } from '@/lib/seo'
+import { createMetadata, localeAlternates } from '@/lib/seo'
 import { buildAcademyBreadcrumbJsonLd } from '@/lib/seo-academy'
 
 export async function generateMetadata({
@@ -23,6 +23,7 @@ export async function generateMetadata({
     description: t('metaDescription'),
     path: '/academy',
     locale,
+    alternates: { languages: localeAlternates('/academy') },
   })
 }
 

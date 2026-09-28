@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
-import { createMetadata } from '@/lib/seo'
+import { createMetadata, localeAlternates } from '@/lib/seo'
 
 export async function generateMetadata({
   params,
@@ -15,6 +15,7 @@ export async function generateMetadata({
     description: t('metaDescription'),
     path: '/terms-of-service',
     locale,
+    alternates: { languages: localeAlternates('/terms-of-service') },
   })
 }
 

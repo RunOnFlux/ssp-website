@@ -5,7 +5,12 @@ import { PageHeader } from '@/components/header/page-header'
 import { NewsroomListing } from '@/components/newsroom/newsroom-listing'
 import type { Locale } from '@/i18n/routing'
 import { getAllPosts, getAllTags } from '@/lib/cms'
-import { createBreadcrumbJsonLd, createCollectionPageJsonLd, createMetadata } from '@/lib/seo'
+import {
+  createBreadcrumbJsonLd,
+  createCollectionPageJsonLd,
+  createMetadata,
+  localeAlternates,
+} from '@/lib/seo'
 
 export async function generateMetadata({
   params,
@@ -19,6 +24,7 @@ export async function generateMetadata({
     description: t('metaDescription'),
     path: '/newsroom',
     locale,
+    alternates: { languages: localeAlternates('/newsroom') },
   })
 }
 
