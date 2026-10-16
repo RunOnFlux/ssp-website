@@ -19,6 +19,7 @@ const STATIC_ROUTES: Array<{
   { path: '/support', priority: 0.7, changeFrequency: 'weekly' },
   { path: '/case-studies/flux-foundation', priority: 0.7, changeFrequency: 'weekly' },
   { path: '/contact', priority: 0.6, changeFrequency: 'monthly' },
+  { path: '/brand', priority: 0.5, changeFrequency: 'monthly' },
   { path: '/privacy-policy', priority: 0.3, changeFrequency: 'yearly' },
   { path: '/terms-of-service', priority: 0.3, changeFrequency: 'yearly' },
   { path: '/cookie-policy', priority: 0.2, changeFrequency: 'yearly' },

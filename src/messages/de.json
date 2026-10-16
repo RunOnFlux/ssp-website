@@ -84,6 +84,7 @@
       "twitter": "Twitter",
       "medium": "Medium",
       "youtube": "YouTube",
+      "brandKit": "Brand Kit",
       "helpTranslate": "Bei der Übersetzung helfen",
       "newsroom": "Newsroom",
       "academy": "Akademie",
@@ -1864,5 +1865,185 @@
     "attribution": "Einige Einträge stammen aus Wikipedias \"Glossar der Kryptowährungsbegriffe\" unter CC BY-SA 3.0. Andere aus dem CoinMarketCap-Glossar und der Auswahl des SSP-Teams.",
     "contentInEnglishBanner": "Der Glossar-Inhalt wird in Englisch angezeigt. Lokalisierte Artikel finden Sie in der <academyLink>Akademie</academyLink>.",
     "letterIndexAriaLabel": "Glossary letter index"
+  },
+  "Brand": {
+    "metaTitle": "SSP Brand Kit: Logos, Farben und Richtlinien",
+    "metaDescription": "Laden Sie die offiziellen Logos, Icons und Farben von SSP Wallet und SSP Key herunter — mit Richtlinien zur Verwendung der Marke SSP in Artikeln, Listings und Integrationen.",
+    "ogAlt": "SSP Brand Kit",
+    "breadcrumbLabel": "Brand Kit",
+    "heroBadge": "Brand Kit",
+    "heroTitle": "SSP Brand Kit",
+    "heroDescription": "Offizielle Logos, Farben und Richtlinien für SSP Wallet und SSP Key. Verwenden Sie sie in Artikeln, Integrationen, Börsen- und Anbieter-Listings sowie in Videos.",
+    "downloadAll": "Komplettes Kit herunterladen (ZIP)",
+    "viewOnGithub": "Auf GitHub ansehen",
+    "svgNote": "SVG ist die Quelle für jedes Logo. Verwenden Sie nach Möglichkeit SVG und PNG nur dort, wo eine Vektorgrafik nicht funktioniert.",
+    "quickPick": {
+      "title": "SSP neben anderen Anbietern aufführen?",
+      "description": "Verwenden Sie das runde Icon in Bernstein. Es bleibt auch in Avatargröße in Swap-, Wallet- und Börsenlisten gut erkennbar."
+    },
+    "nav": {
+      "label": "Auf dieser Seite",
+      "logo": "Logo",
+      "symbol": "Symbol",
+      "icon": "Icon",
+      "colors": "Farben",
+      "typography": "Typografie",
+      "usage": "Verwendung",
+      "name": "Schreibweise des Namens",
+      "images": "Produktbilder",
+      "legal": "Rechtliches"
+    },
+    "downloadFile": "{file} herunterladen",
+    "logo": {
+      "title": "Logo",
+      "description": "Das vollständige Logo: das Drei-Säulen-Symbol mit der SSP-Wortmarke. Wählen Sie die Datei, die zu Ihrem Hintergrund passt.",
+      "pngNote": "PNG-Dateien sind 2048 px breit und haben einen transparenten Hintergrund."
+    },
+    "symbol": {
+      "title": "Symbol",
+      "description": "Die drei Säulen allein — für Flächen, die für das vollständige Logo zu klein oder zu quadratisch sind.",
+      "pngNote": "PNG-Dateien sind 1024 px hoch und haben einen transparenten Hintergrund."
+    },
+    "variants": {
+      "onDark": {
+        "name": "Auf Dunkel",
+        "use": "Dunkle Hintergründe (Standard)"
+      },
+      "onLight": {
+        "name": "Auf Hell",
+        "use": "Helle Hintergründe"
+      },
+      "black": {
+        "name": "Schwarz",
+        "use": "SSP Amber und einfarbiger Druck"
+      },
+      "white": {
+        "name": "Weiß",
+        "use": "Fotos sowie unruhige oder farbige Hintergründe"
+      }
+    },
+    "icon": {
+      "title": "Icon",
+      "description": "Das Symbol auf einer vollflächigen Kachel — für Avatare, Anbieter- und Wallet-Listen, App-Kacheln und Social-Media-Profile. Standard ist Bernstein. Dunkel oder Hell eignen sich, wenn Bernstein nicht zu Ihrer Oberfläche passt.",
+      "recommended": "Empfohlen für Anbieterlisten",
+      "circle": "Kreis",
+      "square": "Quadrat",
+      "amber": "Bernstein",
+      "dark": "Dunkel",
+      "light": "Hell",
+      "keyAppTitle": "App-Icon von SSP Key",
+      "keyAppDescription": "Die mobile App SSP Key hat ein eigenes Icon. Verwenden Sie es nur, wenn Sie sich auf die mobile App beziehen."
+    },
+    "colors": {
+      "title": "Farben",
+      "description": "Die Bernstein-Farbskala stammt aus den Säulen des Symbols. Klicken Sie auf einen Wert, um ihn zu kopieren.",
+      "copy": "{value} kopieren",
+      "copied": "Kopiert",
+      "amberRule": "Text und Icons auf SSP Amber sind immer schwarz, niemals weiß.",
+      "items": {
+        "amber": {
+          "name": "SSP Amber",
+          "use": "Primäre Markenfarbe: Buttons, Hervorhebungen, Akzente"
+        },
+        "amberLight": {
+          "name": "Bernstein Hell",
+          "use": "Mittlere Säule des Symbols"
+        },
+        "amberDeep": {
+          "name": "Bernstein Tief",
+          "use": "Linke Säule des Symbols, Hover-Zustände"
+        },
+        "amberAction": {
+          "name": "Bernstein Aktion",
+          "use": "Call-to-Action-Elemente, Endfarbe von Verläufen im Marketing"
+        },
+        "graphite": {
+          "name": "Graphit",
+          "use": "Rechte Säule und Wortmarke auf hellen Hintergründen"
+        },
+        "night": {
+          "name": "Nacht",
+          "use": "Dunkle Hintergründe und Flächen"
+        },
+        "white": {
+          "name": "Weiß",
+          "use": "Rechte Säule und Wortmarke auf dunklen Hintergründen"
+        }
+      }
+    },
+    "typography": {
+      "title": "Typografie",
+      "description": "Zwei kostenlose Google Fonts: Montserrat für Überschriften, Inter für alles andere.",
+      "displayRole": "Überschriften und Display",
+      "bodyRole": "Fließtext und UI",
+      "weights": "Schriftschnitte {weights}",
+      "getFont": "Bei Google Fonts herunterladen",
+      "displaySample": "Zwei Schlüssel. Eine Wallet.",
+      "bodySample": "Jede Transaktion muss sowohl von Ihrem Browser als auch von Ihrem Smartphone signiert werden — ein gestohlenes Gerät allein kann Ihre Gelder also nicht bewegen.",
+      "license": "Beide sind unter der SIL Open Font License kostenlos verfügbar. Die SSP-Wortmarke ist ein eigens gestalteter Schriftzug und keine Schriftart — verwenden Sie daher immer die Logodateien und schreiben Sie sie niemals mit einer Schrift nach."
+    },
+    "usage": {
+      "title": "Verwendung",
+      "clearSpaceTitle": "Schutzzone",
+      "clearSpaceText": "Halten Sie rund um das Logo einen Freiraum von x ein — das entspricht der Breite einer Säule. Innerhalb dieses Bereichs dürfen weder Text noch Kanten oder andere Grafiken stehen.",
+      "minSizeTitle": "Mindestgrößen",
+      "minSizeText": "Unterhalb dieser Größen verschwimmen die Säulen ineinander. Verwenden Sie bei wenig Platz das Symbol oder das Icon.",
+      "digital": "Digital",
+      "print": "Druck",
+      "logo": "Logo",
+      "symbol": "Symbol",
+      "icon": "Icon",
+      "wide": "{size} breit",
+      "tall": "{size} hoch",
+      "dosTitle": "Richtige und falsche Verwendung",
+      "do": "Richtig",
+      "dont": "Falsch",
+      "dos": {
+        "onDark": "Verwenden Sie auf dunklen Hintergründen das Logo „Auf Dunkel“ und auf hellen Hintergründen das Logo „Auf Hell“.",
+        "onAmber": "Verwenden Sie das schwarze Logo auf SSP Amber und das weiße Logo auf Fotos oder unruhigen Farbflächen."
+      },
+      "donts": {
+        "stretch": "Verzerren, stauchen oder beschneiden Sie das Logo nicht.",
+        "rotate": "Drehen Sie das Logo nicht.",
+        "recolor": "Ändern Sie nicht die Farben der Säulen und fügen Sie keine Verläufe hinzu.",
+        "effects": "Fügen Sie keine Konturen, Leuchteffekte oder Schlagschatten hinzu.",
+        "contrast": "Verringern Sie nicht den Kontrast und verwenden Sie das Logo nicht mit reduzierter Deckkraft.",
+        "retype": "Schreiben Sie die Wortmarke nicht mit einer Schrift nach, verschieben Sie das Symbol nicht und ändern Sie keine Abstände."
+      },
+      "lowRes": "Verwenden Sie keine Dateien mit niedriger Auflösung. Nutzen Sie das SVG oder ein PNG, das mindestens so groß ist wie die Anzeigegröße."
+    },
+    "name": {
+      "title": "Schreibweise des Namens",
+      "capitals": "<b>SSP</b> wird immer in Großbuchstaben geschrieben, niemals Ssp oder S.S.P.",
+      "products": "Die Produkte heißen <b>SSP Wallet</b> (Browser-Erweiterung) und <b>SSP Key</b> (mobile App). Schreiben Sie beide Wörter groß.",
+      "taglineLabel": "Slogan",
+      "oneLinerLabel": "Kurzbeschreibung in einem Satz",
+      "oneLiner": "SSP ist eine echte 2-von-2-Multisig-Krypto-Wallet: ein Schlüssel in Ihrem Browser, einer auf Ihrem Smartphone."
+    },
+    "images": {
+      "title": "Produktbilder",
+      "description": "Marketingbilder mit Demo-Guthaben — bereit für Artikel und Listings.",
+      "browse": "Auf GitHub durchsuchen",
+      "banners": {
+        "title": "Banner",
+        "description": "SSP Wallet: Banner 1400×560 und Kachel 440×280; SSP Key: Banner 1024×500."
+      },
+      "wallet": {
+        "title": "Grafiken für SSP Wallet",
+        "description": "Fünf Funktionsgrafiken, 1280×800."
+      },
+      "key": {
+        "title": "Grafiken für SSP Key",
+        "description": "Sechs Funktionsgrafiken, 1290×2796, Smartphone im Hochformat."
+      }
+    },
+    "legal": {
+      "title": "Rechtliches",
+      "trademark": "Der Name SSP, die Logos und die Produktnamen sind Marken der InFlux Technologies Limited. Sie dürfen nur wie in diesen Richtlinien beschrieben oder mit schriftlicher Genehmigung der InFlux Technologies Limited verwendet werden.",
+      "restrictions": "Sie dürfen die SSP-Marken oder ihnen zum Verwechseln ähnliche Zeichen weder als Marke, Dienstleistungsmarke, Firmenname, Handelsname, Benutzername oder Domainname noch als Bestandteil davon verwenden oder eintragen lassen. Verwenden Sie die Marke SSP nicht in einer Weise, die eine Partnerschaft, ein Sponsoring oder eine Befürwortung nahelegt, sofern keine solche besteht, und nicht für Zwecke, die mit den Nutzungsbedingungen von SSP unvereinbar sind. Wir können die Erlaubnis zur Nutzung der SSP-Marken jederzeit widerrufen und Inhalten, die wir als unvereinbar mit der Marke SSP betrachten, unsere Zustimmung verweigern.",
+      "notOpenSource": "Diese Materialien werden bereitgestellt, um auf SSP Bezug zu nehmen. Sie sind nicht als Open Source lizenziert.",
+      "contactTitle": "Fragen?",
+      "contact": "Fragen zu Marke, Presse und Partnerschaften: {email}"
+    }
   }
 }

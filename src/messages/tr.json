@@ -84,6 +84,7 @@
       "twitter": "Twitter",
       "medium": "Medium",
       "youtube": "YouTube",
+      "brandKit": "Marka Kiti",
       "helpTranslate": "Çeviriye Yardım Et",
       "newsroom": "Basın Odası",
       "academy": "Akademi",
@@ -1864,5 +1865,185 @@
     "attribution": "Bazı girişler Wikipedia'nın \"Kripto para birimi terimleri sözlüğü\"nden CC BY-SA 3.0 lisansıyla uyarlanmıştır. Diğerleri CoinMarketCap sözlüğünden ve SSP ekibinden.",
     "contentInEnglishBanner": "Sözlük içeriği İngilizce olarak gösterilmektedir. Yerelleştirilmiş makaleler için <academyLink>Akademi</academyLink>'yi ziyaret edin.",
     "letterIndexAriaLabel": "Glossary letter index"
+  },
+  "Brand": {
+    "metaTitle": "SSP Marka Kiti: Logolar, Renkler ve Kılavuzlar",
+    "metaDescription": "Resmi SSP Wallet ve SSP Key logolarını, simgelerini ve renklerini, SSP markasının makalelerde, listelemelerde ve entegrasyonlarda kullanımına ilişkin kılavuzlarla birlikte indirin.",
+    "ogAlt": "SSP marka kiti",
+    "breadcrumbLabel": "Marka Kiti",
+    "heroBadge": "Marka Kiti",
+    "heroTitle": "SSP Marka Kiti",
+    "heroDescription": "SSP Wallet ve SSP Key için resmi logolar, renkler ve kılavuzlar. Bunları makalelerde, entegrasyonlarda, borsa ve sağlayıcı listelemelerinde ve videolarda kullanın.",
+    "downloadAll": "Tüm Kiti İndir (ZIP)",
+    "viewOnGithub": "GitHub'da Görüntüle",
+    "svgNote": "Her logonun kaynak dosyası SVG'dir. Mümkün olan her yerde SVG'yi, yalnızca vektörün işe yaramadığı durumlarda PNG'yi kullanın.",
+    "quickPick": {
+      "title": "SSP'yi Diğer Sağlayıcılarla Birlikte mi Listeliyorsunuz?",
+      "description": "Kehribar renkli yuvarlak simgeyi kullanın. Takas, cüzdan ve borsa listelerinde avatar boyutunda bile net görünür."
+    },
+    "nav": {
+      "label": "Bu Sayfada",
+      "logo": "Logo",
+      "symbol": "Sembol",
+      "icon": "Simge",
+      "colors": "Renkler",
+      "typography": "Tipografi",
+      "usage": "Kullanım",
+      "name": "İsmin Yazımı",
+      "images": "Ürün Görselleri",
+      "legal": "Yasal"
+    },
+    "downloadFile": "{file} dosyasını indir",
+    "logo": {
+      "title": "Logo",
+      "description": "Tam logo: üç sütunlu sembol ve SSP yazısı. Arka planınıza uygun dosyayı seçin.",
+      "pngNote": "PNG dosyaları 2048 px genişliğinde ve şeffaf arka planlıdır."
+    },
+    "symbol": {
+      "title": "Sembol",
+      "description": "Yalnızca üç sütun; alan tam logo için çok küçük veya fazla kare olduğunda kullanılır.",
+      "pngNote": "PNG dosyaları 1024 px yüksekliğinde ve şeffaf arka planlıdır."
+    },
+    "variants": {
+      "onDark": {
+        "name": "Koyu Zemin İçin",
+        "use": "Koyu arka planlar (varsayılan)"
+      },
+      "onLight": {
+        "name": "Açık Zemin İçin",
+        "use": "Açık arka planlar"
+      },
+      "black": {
+        "name": "Siyah",
+        "use": "SSP Amber ve tek renkli baskı"
+      },
+      "white": {
+        "name": "Beyaz",
+        "use": "Fotoğraflar ve karmaşık veya renkli arka planlar"
+      }
+    },
+    "icon": {
+      "title": "Simge",
+      "description": "Düz renkli bir kutucuk üzerindeki sembol; avatarlar, sağlayıcı ve cüzdan listeleri, uygulama kutucukları ve sosyal medya profilleri için. Varsayılan renk kehribardır. Kehribar arayüzünüzle uyuşmadığında koyu veya açık sürümü kullanabilirsiniz.",
+      "recommended": "Sağlayıcı listeleri için önerilir",
+      "circle": "Yuvarlak",
+      "square": "Kare",
+      "amber": "Kehribar",
+      "dark": "Koyu",
+      "light": "Açık",
+      "keyAppTitle": "SSP Key Uygulama Simgesi",
+      "keyAppDescription": "SSP Key mobil uygulamasının kendine ait bir simgesi vardır. Bunu yalnızca mobil uygulamadan bahsederken kullanın."
+    },
+    "colors": {
+      "title": "Renkler",
+      "description": "Kehribar tonları sembolün sütunlarından gelir. Kopyalamak için herhangi bir değere tıklayın.",
+      "copy": "{value} değerini kopyala",
+      "copied": "Kopyalandı",
+      "amberRule": "SSP Amber üzerindeki metin ve simgeler her zaman siyahtır, asla beyaz değildir.",
+      "items": {
+        "amber": {
+          "name": "SSP Amber",
+          "use": "Ana marka rengi: düğmeler, vurgular ve detaylar"
+        },
+        "amberLight": {
+          "name": "Açık Kehribar",
+          "use": "Sembolün orta sütunu"
+        },
+        "amberDeep": {
+          "name": "Koyu Kehribar",
+          "use": "Sembolün sol sütunu, üzerine gelme durumları"
+        },
+        "amberAction": {
+          "name": "Eylem Kehribarı",
+          "use": "Harekete geçirici öğeler, pazarlama görsellerinde gradyanın bitiş rengi"
+        },
+        "graphite": {
+          "name": "Grafit",
+          "use": "Açık arka planlarda sağ sütun ve SSP yazısı"
+        },
+        "night": {
+          "name": "Gece",
+          "use": "Koyu arka planlar ve yüzeyler"
+        },
+        "white": {
+          "name": "Beyaz",
+          "use": "Koyu arka planlarda sağ sütun ve SSP yazısı"
+        }
+      }
+    },
+    "typography": {
+      "title": "Tipografi",
+      "description": "İki ücretsiz Google Fonts yazı tipi: başlıklar için Montserrat, diğer her şey için Inter.",
+      "displayRole": "Başlıklar ve öne çıkan metinler",
+      "bodyRole": "Gövde metni ve arayüz",
+      "weights": "Ağırlıklar {weights}",
+      "getFont": "Google Fonts'tan Edinin",
+      "displaySample": "İki anahtar. Tek cüzdan.",
+      "bodySample": "Her işlemin hem tarayıcınız hem de telefonunuz tarafından imzalanması gerekir; böylece çalınan tek bir cihaz fonlarınızı hareket ettiremez.",
+      "license": "Her ikisi de SIL Open Font License kapsamında ücretsizdir. SSP yazısı bir yazı tipi değil, özel olarak tasarlanmış harflerden oluşur; bu nedenle her zaman logo dosyalarını kullanın ve yazıyı asla bir yazı tipiyle yeniden oluşturmayın."
+    },
+    "usage": {
+      "title": "Kullanım",
+      "clearSpaceTitle": "Koruma Alanı",
+      "clearSpaceText": "Logonun çevresinde, bir sütunun genişliği olan x kadar boşluk bırakın. Bu alana metin, kenar veya başka bir grafik girmemelidir.",
+      "minSizeTitle": "Minimum Boyutlar",
+      "minSizeText": "Bu boyutların altında sütunlar birbirine karışır. Alan dar olduğunda sembolü veya simgeyi kullanın.",
+      "digital": "Dijital",
+      "print": "Baskı",
+      "logo": "Logo",
+      "symbol": "Sembol",
+      "icon": "Simge",
+      "wide": "{size} genişlik",
+      "tall": "{size} yükseklik",
+      "dosTitle": "Doğru ve Yanlış Kullanımlar",
+      "do": "Doğru",
+      "dont": "Yanlış",
+      "dos": {
+        "onDark": "Koyu arka planlarda koyu zemin sürümünü, açık arka planlarda açık zemin sürümünü kullanın.",
+        "onAmber": "SSP Amber üzerinde siyah logoyu, fotoğraflarda veya karmaşık renkli zeminlerde beyaz logoyu kullanın."
+      },
+      "donts": {
+        "stretch": "Logoyu esnetmeyin, sıkıştırmayın veya kırpmayın.",
+        "rotate": "Logoyu döndürmeyin.",
+        "recolor": "Sütun renklerini değiştirmeyin veya gradyan eklemeyin.",
+        "effects": "Kontur, parlama veya gölge eklemeyin.",
+        "contrast": "Kontrastı düşürmeyin veya logoyu düşük opaklıkta kullanmayın.",
+        "retype": "SSP yazısını bir yazı tipiyle yeniden oluşturmayın, sembolü taşımayın veya aralıkları değiştirmeyin."
+      },
+      "lowRes": "Düşük çözünürlüklü dosyalar kullanmayın. SVG'yi veya en az görüntüleme boyutunda bir PNG'yi kullanın."
+    },
+    "name": {
+      "title": "İsmin Yazımı",
+      "capitals": "<b>SSP</b> her zaman büyük harflerle yazılır; asla Ssp veya S.S.P. şeklinde yazılmaz.",
+      "products": "Ürünlerin adı <b>SSP Wallet</b> (tarayıcı uzantısı) ve <b>SSP Key</b> (mobil uygulama) şeklindedir. Her iki kelime de büyük harfle başlar.",
+      "taglineLabel": "Slogan",
+      "oneLinerLabel": "Tek Cümlelik Açıklama",
+      "oneLiner": "SSP, gerçek bir 2-of-2 multisig kripto cüzdanıdır: bir anahtar tarayıcınızda, diğeri telefonunuzda."
+    },
+    "images": {
+      "title": "Ürün Görselleri",
+      "description": "Demo bakiyeler içeren, makaleler ve listelemeler için hazır pazarlama görselleri.",
+      "browse": "GitHub'da Göz At",
+      "banners": {
+        "title": "Bannerlar",
+        "description": "1400×560 SSP Wallet bannerı ve 440×280 kutucuk, 1024×500 SSP Key bannerı."
+      },
+      "wallet": {
+        "title": "SSP Wallet Panelleri",
+        "description": "1280×800 boyutunda beş özellik paneli."
+      },
+      "key": {
+        "title": "SSP Key Panelleri",
+        "description": "1290×2796 boyutunda, dikey telefon formatında altı özellik paneli."
+      }
+    },
+    "legal": {
+      "title": "Yasal",
+      "trademark": "SSP adı, logoları ve ürün adları InFlux Technologies Limited'in ticari markalarıdır. Bunlar yalnızca bu kılavuzlarda açıklandığı şekilde veya InFlux Technologies Limited'in yazılı izniyle kullanılabilir.",
+      "restrictions": "SSP ticari markalarını veya bunlarla karıştırılabilecek derecede benzer herhangi bir işareti; herhangi bir ticari marka, hizmet markası, şirket adı, ticari unvan, kullanıcı adı veya alan adı olarak ya da bunların bir parçası olarak kullanamaz veya tescil ettiremezsiniz. SSP markası, gerçekte mevcut olmayan bir ortaklık, sponsorluk veya onay ilişkisini ima edecek şekilde ya da SSP Kullanım Koşulları ile bağdaşmayan herhangi bir amaçla kullanılamaz. SSP ticari markalarını kullanma iznini dilediğimiz zaman geri alabilir ve SSP markasıyla bağdaşmadığını düşündüğümüz içeriklere onay vermeyebiliriz.",
+      "notOpenSource": "Bu materyaller SSP'ye atıfta bulunmak amacıyla sunulmaktadır. Açık kaynak olarak lisanslanmamıştır.",
+      "contactTitle": "Sorularınız mı var?",
+      "contact": "Marka, basın ve iş ortaklığı soruları için: {email}"
+    }
   }
 }
