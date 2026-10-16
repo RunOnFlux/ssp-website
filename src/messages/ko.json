@@ -84,6 +84,7 @@
       "twitter": "Twitter",
       "medium": "Medium",
       "youtube": "YouTube",
+      "brandKit": "브랜드 키트",
       "helpTranslate": "번역 참여",
       "newsroom": "뉴스룸",
       "academy": "아카데미",
@@ -1864,5 +1865,185 @@
     "attribution": "일부 항목은 Wikipedia의 \"암호화폐 용어집\"(CC BY-SA 3.0)을 각색했습니다. 나머지는 CoinMarketCap 용어집과 SSP 팀의 큐레이션입니다.",
     "contentInEnglishBanner": "용어집은 영어로 표시됩니다. 현지화된 아티클은 <academyLink>아카데미</academyLink>에서 확인하세요.",
     "letterIndexAriaLabel": "Glossary letter index"
+  },
+  "Brand": {
+    "metaTitle": "SSP 브랜드 키트: 로고, 색상 및 가이드라인",
+    "metaDescription": "SSP Wallet과 SSP Key의 공식 로고, 아이콘, 색상을 다운로드하고 기사, 리스팅, 통합에서 SSP 브랜드를 사용하기 위한 가이드라인을 확인하십시오.",
+    "ogAlt": "SSP 브랜드 키트",
+    "breadcrumbLabel": "브랜드 키트",
+    "heroBadge": "브랜드 키트",
+    "heroTitle": "SSP 브랜드 키트",
+    "heroDescription": "SSP Wallet과 SSP Key의 공식 로고, 색상 및 가이드라인입니다. 기사, 통합, 거래소 및 제공업체 리스팅, 동영상에 사용하십시오.",
+    "downloadAll": "전체 키트 다운로드 (ZIP)",
+    "viewOnGithub": "GitHub에서 보기",
+    "svgNote": "모든 로고의 원본은 SVG입니다. 가능한 한 SVG를 사용하고, 벡터를 사용할 수 없는 경우에만 PNG를 사용하십시오.",
+    "quickPick": {
+      "title": "다른 제공업체와 나란히 SSP를 게시하십니까?",
+      "description": "앰버 원형 아이콘을 사용하십시오. 스왑, 지갑, 거래소 목록에서 아바타 크기로 표시해도 선명하게 보입니다."
+    },
+    "nav": {
+      "label": "이 페이지의 내용",
+      "logo": "로고",
+      "symbol": "심볼",
+      "icon": "아이콘",
+      "colors": "색상",
+      "typography": "타이포그래피",
+      "usage": "사용 지침",
+      "name": "이름 표기",
+      "images": "제품 이미지",
+      "legal": "법적 고지"
+    },
+    "downloadFile": "{file} 다운로드",
+    "logo": {
+      "title": "로고",
+      "description": "세 개의 기둥으로 된 심볼과 SSP 워드마크를 결합한 전체 로고입니다. 배경에 맞는 파일을 선택하십시오.",
+      "pngNote": "PNG 파일은 너비 2048 px이며 배경이 투명합니다."
+    },
+    "symbol": {
+      "title": "심볼",
+      "description": "세 개의 기둥만 단독으로 사용하는 심볼입니다. 공간이 너무 작거나 정사각형에 가까워 전체 로고를 넣기 어려울 때 사용하십시오.",
+      "pngNote": "PNG 파일은 높이 1024 px이며 배경이 투명합니다."
+    },
+    "variants": {
+      "onDark": {
+        "name": "어두운 배경용",
+        "use": "어두운 배경 (기본값)"
+      },
+      "onLight": {
+        "name": "밝은 배경용",
+        "use": "밝은 배경"
+      },
+      "black": {
+        "name": "블랙",
+        "use": "SSP Amber 배경 및 단색 인쇄"
+      },
+      "white": {
+        "name": "화이트",
+        "use": "사진, 복잡하거나 색이 있는 배경"
+      }
+    },
+    "icon": {
+      "title": "아이콘",
+      "description": "단색 타일 위에 심볼을 배치한 것으로, 아바타, 제공업체 및 지갑 목록, 앱 타일, 소셜 프로필에 사용합니다. 기본값은 앰버입니다. 앰버가 UI와 어울리지 않으면 다크 또는 라이트를 사용하십시오.",
+      "recommended": "제공업체 목록에 권장",
+      "circle": "원형",
+      "square": "정사각형",
+      "amber": "앰버",
+      "dark": "다크",
+      "light": "라이트",
+      "keyAppTitle": "SSP Key 앱 아이콘",
+      "keyAppDescription": "SSP Key 모바일 앱에는 별도의 아이콘이 있습니다. 모바일 앱을 언급할 때만 사용하십시오."
+    },
+    "colors": {
+      "title": "색상",
+      "description": "앰버 계열 색상은 심볼의 기둥에서 가져왔습니다. 값을 클릭하면 복사됩니다.",
+      "copy": "{value} 복사",
+      "copied": "복사됨",
+      "amberRule": "SSP Amber 위의 텍스트와 아이콘은 항상 검은색이며, 흰색은 절대 사용하지 않습니다.",
+      "items": {
+        "amber": {
+          "name": "SSP Amber",
+          "use": "기본 브랜드 색상: 버튼, 하이라이트, 강조 요소"
+        },
+        "amberLight": {
+          "name": "라이트 앰버",
+          "use": "심볼의 가운데 기둥"
+        },
+        "amberDeep": {
+          "name": "딥 앰버",
+          "use": "심볼의 왼쪽 기둥, 호버 상태"
+        },
+        "amberAction": {
+          "name": "액션 앰버",
+          "use": "행동 유도 버튼, 마케팅 그라데이션의 끝 색상"
+        },
+        "graphite": {
+          "name": "그래파이트",
+          "use": "밝은 배경에서의 오른쪽 기둥과 워드마크"
+        },
+        "night": {
+          "name": "나이트",
+          "use": "어두운 배경과 표면"
+        },
+        "white": {
+          "name": "화이트",
+          "use": "어두운 배경에서의 오른쪽 기둥과 워드마크"
+        }
+      }
+    },
+    "typography": {
+      "title": "타이포그래피",
+      "description": "무료 Google Fonts 두 가지를 사용합니다. 제목에는 Montserrat, 그 외에는 모두 Inter를 사용합니다.",
+      "displayRole": "제목 및 디스플레이",
+      "bodyRole": "본문 및 UI",
+      "weights": "굵기 {weights}",
+      "getFont": "Google Fonts에서 받기",
+      "displaySample": "두 개의 키. 하나의 지갑.",
+      "bodySample": "모든 트랜잭션에는 브라우저와 휴대폰 양쪽의 서명이 필요하므로, 기기 하나를 도난당해도 자금을 옮길 수 없습니다.",
+      "license": "두 글꼴 모두 SIL Open Font License에 따라 무료로 사용할 수 있습니다. SSP 워드마크는 글꼴이 아닌 맞춤 제작 레터링이므로, 항상 로고 파일을 사용하고 절대 직접 타이핑하지 마십시오."
+    },
+    "usage": {
+      "title": "사용 지침",
+      "clearSpaceTitle": "보호 영역",
+      "clearSpaceText": "로고 주위에 기둥 하나의 너비인 x만큼의 여백을 두십시오. 이 영역 안에는 텍스트, 가장자리 또는 다른 그래픽이 들어가서는 안 됩니다.",
+      "minSizeTitle": "최소 크기",
+      "minSizeText": "이보다 작으면 기둥이 서로 뭉개져 보입니다. 공간이 부족할 때는 심볼이나 아이콘을 사용하십시오.",
+      "digital": "디지털",
+      "print": "인쇄",
+      "logo": "로고",
+      "symbol": "심볼",
+      "icon": "아이콘",
+      "wide": "너비 {size}",
+      "tall": "높이 {size}",
+      "dosTitle": "권장 및 금지 사항",
+      "do": "권장",
+      "dont": "금지",
+      "dos": {
+        "onDark": "어두운 배경에는 어두운 배경용 로고를, 밝은 배경에는 밝은 배경용 로고를 사용하십시오.",
+        "onAmber": "SSP Amber 배경에는 블랙 로고를, 사진이나 색상이 복잡한 배경에는 화이트 로고를 사용하십시오."
+      },
+      "donts": {
+        "stretch": "로고를 늘리거나, 찌그러뜨리거나, 자르지 마십시오.",
+        "rotate": "로고를 회전하지 마십시오.",
+        "recolor": "기둥 색상을 변경하거나 그라데이션을 추가하지 마십시오.",
+        "effects": "외곽선, 글로우 또는 그림자 효과를 추가하지 마십시오.",
+        "contrast": "대비를 낮추거나 로고를 반투명하게 사용하지 마십시오.",
+        "retype": "워드마크를 직접 타이핑하거나, 심볼을 옮기거나, 간격을 변경하지 마십시오."
+      },
+      "lowRes": "저해상도 파일을 사용하지 마십시오. SVG 또는 표시 크기 이상의 PNG를 사용하십시오."
+    },
+    "name": {
+      "title": "이름 표기",
+      "capitals": "<b>SSP</b>는 항상 대문자로 표기하며, Ssp나 S.S.P.로 쓰지 않습니다.",
+      "products": "제품명은 <b>SSP Wallet</b>(브라우저 확장 프로그램)과 <b>SSP Key</b>(모바일 앱)입니다. 두 단어 모두 첫 글자를 대문자로 표기하십시오.",
+      "taglineLabel": "태그라인",
+      "oneLinerLabel": "한 줄 소개",
+      "oneLiner": "SSP는 진정한 2-of-2 다중 서명 암호화폐 지갑입니다. 키 하나는 브라우저에, 다른 하나는 휴대폰에 있습니다."
+    },
+    "images": {
+      "title": "제품 이미지",
+      "description": "데모 잔액이 표시된 마케팅 이미지로, 기사와 리스팅에 바로 사용할 수 있습니다.",
+      "browse": "GitHub에서 둘러보기",
+      "banners": {
+        "title": "배너",
+        "description": "SSP Wallet 배너 1400×560 및 타일 440×280, SSP Key 배너 1024×500."
+      },
+      "wallet": {
+        "title": "SSP Wallet 패널",
+        "description": "기능 소개 패널 5개, 1280×800."
+      },
+      "key": {
+        "title": "SSP Key 패널",
+        "description": "기능 소개 패널 6개, 1290×2796, 휴대폰 세로 방향."
+      }
+    },
+    "legal": {
+      "title": "법적 고지",
+      "trademark": "SSP 이름, 로고 및 제품명은 InFlux Technologies Limited의 상표입니다. 본 가이드라인에 명시된 방식에 따르거나 InFlux Technologies Limited의 서면 허가를 받은 경우에만 사용할 수 있습니다.",
+      "restrictions": "SSP 상표 또는 이와 혼동을 일으킬 정도로 유사한 표장을 상표, 서비스표, 회사명, 상호, 사용자 이름 또는 도메인 이름으로 또는 그 일부로 사용하거나 등록할 수 없습니다. 실제로 파트너십, 후원 또는 보증 관계가 없는 한 이를 암시하는 방식으로 SSP 브랜드를 사용하지 마십시오. 또한 SSP 서비스 이용약관에 부합하지 않는 목적으로도 사용하지 마십시오. 당사는 언제든지 SSP 상표 사용 허가를 철회할 수 있으며, SSP 브랜드에 부합하지 않는다고 판단하는 콘텐츠에 대해서는 승인을 보류할 수 있습니다.",
+      "notOpenSource": "이 자료는 SSP를 언급하기 위한 용도로 제공됩니다. 오픈 소스로 라이선스되지 않습니다.",
+      "contactTitle": "문의 사항이 있으십니까?",
+      "contact": "브랜드, 언론 및 파트너십 문의: {email}"
+    }
   }
 }

@@ -8,6 +8,7 @@ const STATIC_ROUTES: Record<string, string> = {
   guide: 'src/app/[locale]/guide/agent.md',
   support: 'src/app/[locale]/support/agent.md',
   contact: 'src/app/[locale]/contact/agent.md',
+  brand: 'src/app/[locale]/brand/agent.md',
   download: 'src/app/[locale]/download/agent.md',
   enterprise: 'src/app/[locale]/enterprise/agent.md',
   'case-studies/flux-foundation': 'src/app/[locale]/case-studies/flux-foundation/agent.md',

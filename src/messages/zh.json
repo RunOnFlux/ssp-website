@@ -84,6 +84,7 @@
       "twitter": "Twitter",
       "medium": "Medium",
       "youtube": "YouTube",
+      "brandKit": "品牌资源包",
       "helpTranslate": "协助翻译",
       "newsroom": "新闻中心",
       "academy": "学院",
@@ -1864,5 +1865,185 @@
     "attribution": "部分条目改编自维基百科《加密货币术语表》(CC BY-SA 3.0)。其他条目来自 CoinMarketCap 术语表和 SSP 团队整理。",
     "contentInEnglishBanner": "术语表内容以英文显示。如需本地化文章，请访问<academyLink>学院</academyLink>。",
     "letterIndexAriaLabel": "Glossary letter index"
+  },
+  "Brand": {
+    "metaTitle": "SSP 品牌资源包：标志、颜色与使用规范",
+    "metaDescription": "下载 SSP Wallet 与 SSP Key 的官方标志、图标和颜色，并了解在文章、上架页面和集成中使用 SSP 品牌的规范。",
+    "ogAlt": "SSP 品牌资源包",
+    "breadcrumbLabel": "品牌资源包",
+    "heroBadge": "品牌资源包",
+    "heroTitle": "SSP 品牌资源包",
+    "heroDescription": "SSP Wallet 与 SSP Key 的官方标志、颜色和使用规范，可用于文章、集成、交易所与服务商上架页面以及视频。",
+    "downloadAll": "下载完整资源包（ZIP）",
+    "viewOnGithub": "在 GitHub 上查看",
+    "svgNote": "所有标志均以 SVG 为源文件。请尽量使用 SVG，仅在无法使用矢量图时才使用 PNG。",
+    "quickPick": {
+      "title": "要将 SSP 与其他服务商并列展示？",
+      "description": "请使用琥珀色圆形图标。在兑换、钱包和交易所列表中，即使缩小到头像尺寸也依然清晰。"
+    },
+    "nav": {
+      "label": "本页内容",
+      "logo": "标志",
+      "symbol": "图形标",
+      "icon": "图标",
+      "colors": "颜色",
+      "typography": "字体",
+      "usage": "使用规范",
+      "name": "名称写法",
+      "images": "产品图片",
+      "legal": "法律声明"
+    },
+    "downloadFile": "下载 {file}",
+    "logo": {
+      "title": "标志",
+      "description": "完整标志由三柱图形标和 SSP 文字标组成。请根据背景选择对应的文件。",
+      "pngNote": "PNG 文件宽 2048 px，背景透明。"
+    },
+    "symbol": {
+      "title": "图形标",
+      "description": "单独使用的三根立柱，适用于空间太小或过于方正、放不下完整标志的场合。",
+      "pngNote": "PNG 文件高 1024 px，背景透明。"
+    },
+    "variants": {
+      "onDark": {
+        "name": "深色背景版",
+        "use": "深色背景（默认）"
+      },
+      "onLight": {
+        "name": "浅色背景版",
+        "use": "浅色背景"
+      },
+      "black": {
+        "name": "黑色",
+        "use": "SSP Amber 底色及单色印刷"
+      },
+      "white": {
+        "name": "白色",
+        "use": "照片及杂乱或彩色背景"
+      }
+    },
+    "icon": {
+      "title": "图标",
+      "description": "置于纯色底块上的图形标，适用于头像、服务商和钱包列表、应用图标及社交媒体主页。默认使用琥珀色；若琥珀色与你的界面不协调，可改用深色或浅色版本。",
+      "recommended": "推荐用于服务商列表",
+      "circle": "圆形",
+      "square": "方形",
+      "amber": "琥珀色",
+      "dark": "深色",
+      "light": "浅色",
+      "keyAppTitle": "SSP Key 应用图标",
+      "keyAppDescription": "SSP Key 移动应用有自己的专属图标，仅在提及该移动应用时使用。"
+    },
+    "colors": {
+      "title": "颜色",
+      "description": "琥珀色系源自图形标中的立柱。点击任意色值即可复制。",
+      "copy": "复制 {value}",
+      "copied": "已复制",
+      "amberRule": "SSP Amber 上的文字和图标一律使用黑色，切勿使用白色。",
+      "items": {
+        "amber": {
+          "name": "SSP Amber",
+          "use": "品牌主色：按钮、高亮与点缀"
+        },
+        "amberLight": {
+          "name": "浅琥珀色",
+          "use": "图形标中间的立柱"
+        },
+        "amberDeep": {
+          "name": "深琥珀色",
+          "use": "图形标左侧的立柱、悬停状态"
+        },
+        "amberAction": {
+          "name": "琥珀行动色",
+          "use": "行动号召按钮、营销素材中渐变的终点色"
+        },
+        "graphite": {
+          "name": "石墨灰",
+          "use": "浅色背景上的右侧立柱和文字标"
+        },
+        "night": {
+          "name": "夜色",
+          "use": "深色背景与界面面板"
+        },
+        "white": {
+          "name": "白色",
+          "use": "深色背景上的右侧立柱和文字标"
+        }
+      }
+    },
+    "typography": {
+      "title": "字体",
+      "description": "两款免费的 Google Fonts 字体：标题使用 Montserrat，其余内容均使用 Inter。",
+      "displayRole": "标题与展示",
+      "bodyRole": "正文与界面",
+      "weights": "字重 {weights}",
+      "getFont": "前往 Google Fonts 获取",
+      "displaySample": "两把密钥，一个钱包。",
+      "bodySample": "每笔交易都需要你的浏览器和手机共同签名，因此即使一台设备被盗，也无法转走你的资金。",
+      "license": "两款字体均依据 SIL Open Font License 免费使用。SSP 文字标为定制字形，并非字体，因此请始终使用标志文件，切勿自行重新输入。"
+    },
+    "usage": {
+      "title": "使用规范",
+      "clearSpaceTitle": "安全留白",
+      "clearSpaceText": "标志四周应保留宽度为 x 的留白，x 即一根立柱的宽度。该区域内不得出现文字、边缘或其他图形。",
+      "minSizeTitle": "最小尺寸",
+      "minSizeText": "低于以下尺寸时，各立柱会糊成一片。空间有限时，请改用图形标或图标。",
+      "digital": "数字媒体",
+      "print": "印刷",
+      "logo": "标志",
+      "symbol": "图形标",
+      "icon": "图标",
+      "wide": "宽 {size}",
+      "tall": "高 {size}",
+      "dosTitle": "推荐与禁止用法",
+      "do": "推荐",
+      "dont": "禁止",
+      "dos": {
+        "onDark": "在深色背景上使用深色背景版标志，在浅色背景上使用浅色背景版标志。",
+        "onAmber": "在 SSP Amber 底色上使用黑色标志，在照片或杂乱色彩上使用白色标志。"
+      },
+      "donts": {
+        "stretch": "请勿拉伸、压扁或裁切标志。",
+        "rotate": "请勿旋转标志。",
+        "recolor": "请勿更改立柱颜色或添加渐变。",
+        "effects": "请勿添加描边、外发光或投影。",
+        "contrast": "请勿降低对比度，或以降低不透明度的方式使用标志。",
+        "retype": "请勿重新输入文字标、移动图形标或更改间距。"
+      },
+      "lowRes": "请勿使用低分辨率文件。请使用 SVG，或不小于显示尺寸的 PNG。"
+    },
+    "name": {
+      "title": "名称写法",
+      "capitals": "<b>SSP</b> 始终全部大写，切勿写成 Ssp 或 S.S.P. 等形式。",
+      "products": "产品名称为 <b>SSP Wallet</b>（浏览器扩展）和 <b>SSP Key</b>（移动应用），两个单词的首字母均需大写。",
+      "taglineLabel": "标语",
+      "oneLinerLabel": "一句话介绍",
+      "oneLiner": "SSP 是一款真正的 2-of-2 多重签名加密钱包：一把密钥在你的浏览器中，另一把在你的手机上。"
+    },
+    "images": {
+      "title": "产品图片",
+      "description": "带有演示余额的营销图片，可直接用于文章和上架页面。",
+      "browse": "在 GitHub 上浏览",
+      "banners": {
+        "title": "横幅",
+        "description": "SSP Wallet 横幅 1400×560 及宣传图块 440×280，SSP Key 横幅 1024×500。"
+      },
+      "wallet": {
+        "title": "SSP Wallet 功能图",
+        "description": "五张功能展示图，1280×800。"
+      },
+      "key": {
+        "title": "SSP Key 功能图",
+        "description": "六张功能展示图，1290×2796，手机竖屏。"
+      }
+    },
+    "legal": {
+      "title": "法律声明",
+      "trademark": "SSP 名称、标志及产品名称均为 InFlux Technologies Limited 的商标。仅可按照本规范所述方式使用，或在获得 InFlux Technologies Limited 书面许可后使用。",
+      "restrictions": "不得将 SSP 商标或任何与之易混淆的近似标识用作或注册为任何商标、服务标志、公司名称、商号、用户名或域名，或其组成部分。除非确实存在合作、赞助或背书关系，否则不得以暗示存在此类关系的方式使用 SSP 品牌，亦不得将其用于任何与 SSP 服务条款不符的用途。我们可随时撤销对 SSP 商标的使用许可，并可拒绝批准我们认为与 SSP 品牌不符的内容。",
+      "notOpenSource": "这些素材仅供提及 SSP 时使用，不以开源许可方式授权。",
+      "contactTitle": "有疑问？",
+      "contact": "品牌、媒体及合作相关问题：{email}"
+    }
   }
 }

@@ -84,6 +84,7 @@
       "twitter": "Twitter",
       "medium": "Medium",
       "youtube": "YouTube",
+      "brandKit": "Kit Merek",
       "helpTranslate": "Bantu Terjemahkan",
       "newsroom": "Berita",
       "academy": "Akademi",
@@ -1864,5 +1865,185 @@
     "attribution": "Beberapa entri diadaptasi dari \"Glosarium istilah kriptokurensi\" Wikipedia di bawah lisensi CC BY-SA 3.0. Entri lain berasal dari glosarium CoinMarketCap dan kurasi tim SSP.",
     "contentInEnglishBanner": "Isi glosarium ditampilkan dalam bahasa Inggris. Untuk artikel yang dilokalkan, kunjungi <academyLink>Academy</academyLink>.",
     "letterIndexAriaLabel": "Glossary letter index"
+  },
+  "Brand": {
+    "metaTitle": "Kit Merek SSP: Logo, Warna, dan Panduan",
+    "metaDescription": "Unduh logo, ikon, dan warna resmi SSP Wallet dan SSP Key, beserta panduan penggunaan merek SSP di artikel, listing, dan integrasi.",
+    "ogAlt": "Kit merek SSP",
+    "breadcrumbLabel": "Kit Merek",
+    "heroBadge": "Kit Merek",
+    "heroTitle": "Kit Merek SSP",
+    "heroDescription": "Logo, warna, dan panduan resmi untuk SSP Wallet dan SSP Key. Gunakan di artikel, integrasi, listing bursa dan penyedia layanan, serta video.",
+    "downloadAll": "Unduh kit lengkap (ZIP)",
+    "viewOnGithub": "Lihat di GitHub",
+    "svgNote": "SVG adalah file sumber untuk setiap logo. Gunakan SVG sebisa mungkin, dan PNG hanya jika format vektor tidak dapat digunakan.",
+    "quickPick": {
+      "title": "Menampilkan SSP bersama penyedia lain?",
+      "description": "Gunakan ikon lingkaran amber. Ikon ini tetap jelas dalam ukuran avatar di daftar swap, dompet, dan bursa."
+    },
+    "nav": {
+      "label": "Di halaman ini",
+      "logo": "Logo",
+      "symbol": "Simbol",
+      "icon": "Ikon",
+      "colors": "Warna",
+      "typography": "Tipografi",
+      "usage": "Penggunaan",
+      "name": "Penulisan nama",
+      "images": "Gambar produk",
+      "legal": "Hukum"
+    },
+    "downloadFile": "Unduh {file}",
+    "logo": {
+      "title": "Logo",
+      "description": "Logo lengkap: simbol tiga pilar ditambah logotipe SSP. Pilih file yang sesuai dengan latar belakang Anda.",
+      "pngNote": "File PNG memiliki lebar 2048 px dengan latar belakang transparan."
+    },
+    "symbol": {
+      "title": "Simbol",
+      "description": "Tiga pilar saja, untuk ruang yang terlalu kecil atau terlalu persegi bagi logo lengkap.",
+      "pngNote": "File PNG memiliki tinggi 1024 px dengan latar belakang transparan."
+    },
+    "variants": {
+      "onDark": {
+        "name": "Untuk latar gelap",
+        "use": "Latar belakang gelap (default)"
+      },
+      "onLight": {
+        "name": "Untuk latar terang",
+        "use": "Latar belakang terang"
+      },
+      "black": {
+        "name": "Hitam",
+        "use": "SSP Amber dan cetak satu warna"
+      },
+      "white": {
+        "name": "Putih",
+        "use": "Foto serta latar belakang yang ramai atau berwarna"
+      }
+    },
+    "icon": {
+      "title": "Ikon",
+      "description": "Simbol di atas petak berwarna solid, untuk avatar, daftar penyedia dan dompet, ikon aplikasi, serta profil media sosial. Amber adalah pilihan default. Gunakan versi gelap atau terang jika amber berbenturan dengan UI Anda.",
+      "recommended": "Direkomendasikan untuk daftar penyedia",
+      "circle": "Lingkaran",
+      "square": "Persegi",
+      "amber": "Amber",
+      "dark": "Gelap",
+      "light": "Terang",
+      "keyAppTitle": "Ikon aplikasi SSP Key",
+      "keyAppDescription": "Aplikasi mobile SSP Key memiliki ikon tersendiri. Gunakan ikon ini hanya saat merujuk ke aplikasi mobile tersebut."
+    },
+    "colors": {
+      "title": "Warna",
+      "description": "Gradasi amber berasal dari pilar-pilar simbol. Klik nilai mana pun untuk menyalinnya.",
+      "copy": "Salin {value}",
+      "copied": "Tersalin",
+      "amberRule": "Teks dan ikon di atas SSP Amber selalu berwarna hitam, tidak pernah putih.",
+      "items": {
+        "amber": {
+          "name": "SSP Amber",
+          "use": "Warna utama merek: tombol, sorotan, aksen"
+        },
+        "amberLight": {
+          "name": "Amber Terang",
+          "use": "Pilar tengah simbol"
+        },
+        "amberDeep": {
+          "name": "Amber Pekat",
+          "use": "Pilar kiri simbol, status hover"
+        },
+        "amberAction": {
+          "name": "Amber Aksi",
+          "use": "Ajakan bertindak, ujung gradien pada materi pemasaran"
+        },
+        "graphite": {
+          "name": "Grafit",
+          "use": "Pilar kanan dan logotipe di latar terang"
+        },
+        "night": {
+          "name": "Malam",
+          "use": "Latar belakang dan permukaan gelap"
+        },
+        "white": {
+          "name": "Putih",
+          "use": "Pilar kanan dan logotipe di latar gelap"
+        }
+      }
+    },
+    "typography": {
+      "title": "Tipografi",
+      "description": "Dua font gratis dari Google Fonts: Montserrat untuk judul, Inter untuk semua teks lainnya.",
+      "displayRole": "Judul dan display",
+      "bodyRole": "Teks isi dan UI",
+      "weights": "Ketebalan {weights}",
+      "getFont": "Dapatkan di Google Fonts",
+      "displaySample": "Dua kunci. Satu dompet.",
+      "bodySample": "Setiap transaksi harus ditandatangani oleh browser dan ponsel Anda, sehingga satu perangkat yang dicuri tidak dapat memindahkan dana Anda.",
+      "license": "Keduanya gratis di bawah SIL Open Font License. Logotipe SSP adalah huruf yang dirancang khusus, bukan font, jadi selalu gunakan file logo dan jangan pernah mengetiknya ulang."
+    },
+    "usage": {
+      "title": "Penggunaan",
+      "clearSpaceTitle": "Ruang kosong",
+      "clearSpaceText": "Sisakan ruang kosong di sekeliling logo selebar x, yaitu lebar satu pilar. Jangan letakkan teks, tepi, atau grafis lain di dalamnya.",
+      "minSizeTitle": "Ukuran minimum",
+      "minSizeText": "Di bawah ukuran ini, pilar-pilarnya akan tampak menyatu. Gunakan simbol atau ikon jika ruang terbatas.",
+      "digital": "Digital",
+      "print": "Cetak",
+      "logo": "Logo",
+      "symbol": "Simbol",
+      "icon": "Ikon",
+      "wide": "Lebar {size}",
+      "tall": "Tinggi {size}",
+      "dosTitle": "Yang boleh dan tidak boleh",
+      "do": "Boleh",
+      "dont": "Jangan",
+      "dos": {
+        "onDark": "Gunakan logo untuk latar gelap di latar belakang gelap, dan logo untuk latar terang di latar belakang terang.",
+        "onAmber": "Gunakan logo hitam di atas SSP Amber, dan logo putih di atas foto atau warna yang ramai."
+      },
+      "donts": {
+        "stretch": "Jangan meregangkan, memampatkan, atau memotong logo.",
+        "rotate": "Jangan memutar logo.",
+        "recolor": "Jangan mengubah warna pilar atau menambahkan gradien.",
+        "effects": "Jangan menambahkan garis tepi, efek cahaya, atau bayangan.",
+        "contrast": "Jangan menurunkan kontras atau menampilkan logo dengan opasitas yang dikurangi.",
+        "retype": "Jangan mengetik ulang logotipe, memindahkan simbol, atau mengubah jaraknya."
+      },
+      "lowRes": "Jangan gunakan file beresolusi rendah. Gunakan SVG, atau PNG yang berukuran sama dengan atau lebih besar dari ukuran tampilannya."
+    },
+    "name": {
+      "title": "Penulisan nama",
+      "capitals": "<b>SSP</b> selalu ditulis dengan huruf kapital, tidak pernah Ssp atau S.S.P.",
+      "products": "Produknya adalah <b>SSP Wallet</b> (ekstensi browser) dan <b>SSP Key</b> (aplikasi mobile). Gunakan huruf kapital di awal kedua kata.",
+      "taglineLabel": "Slogan",
+      "oneLinerLabel": "Deskripsi satu kalimat",
+      "oneLiner": "SSP adalah dompet kripto multisig 2-of-2 sejati: satu kunci di browser Anda, satu lagi di ponsel Anda."
+    },
+    "images": {
+      "title": "Gambar produk",
+      "description": "Gambar pemasaran dengan saldo demo, siap digunakan untuk artikel dan listing.",
+      "browse": "Jelajahi di GitHub",
+      "banners": {
+        "title": "Banner",
+        "description": "Banner SSP Wallet 1400×560 dan petak promosi 440×280, banner SSP Key 1024×500."
+      },
+      "wallet": {
+        "title": "Panel SSP Wallet",
+        "description": "Lima panel fitur, 1280×800."
+      },
+      "key": {
+        "title": "Panel SSP Key",
+        "description": "Enam panel fitur, 1290×2796, ponsel dalam mode potret."
+      }
+    },
+    "legal": {
+      "title": "Hukum",
+      "trademark": "Nama, logo, dan nama produk SSP adalah merek dagang milik InFlux Technologies Limited. Semuanya hanya boleh digunakan sebagaimana dijelaskan dalam panduan ini atau dengan izin tertulis dari InFlux Technologies Limited.",
+      "restrictions": "Anda tidak boleh menggunakan atau mendaftarkan merek dagang SSP, atau apa pun yang mirip hingga dapat menimbulkan kebingungan, sebagai atau sebagai bagian dari merek dagang, merek jasa, nama perusahaan, nama dagang, nama pengguna, atau nama domain apa pun. Jangan gunakan merek SSP dengan cara yang menyiratkan adanya kemitraan, sponsor, atau dukungan resmi kecuali hal tersebut memang ada, atau untuk apa pun yang tidak sesuai dengan Ketentuan Layanan SSP. Kami dapat mencabut izin penggunaan merek dagang SSP kapan saja, dan kami dapat menolak memberikan persetujuan atas konten yang kami anggap tidak sesuai dengan merek SSP.",
+      "notOpenSource": "Aset ini disediakan untuk merujuk pada SSP. Aset ini tidak dilisensikan sebagai open source.",
+      "contactTitle": "Ada pertanyaan?",
+      "contact": "Pertanyaan seputar merek, pers, dan kemitraan: {email}"
+    }
   }
 }

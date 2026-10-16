@@ -84,6 +84,7 @@
       "twitter": "Twitter",
       "medium": "Medium",
       "youtube": "YouTube",
+      "brandKit": "Bộ nhận diện thương hiệu",
       "helpTranslate": "Hỗ trợ dịch thuật",
       "newsroom": "Tin tức",
       "academy": "Học viện",
@@ -1864,5 +1865,185 @@
     "attribution": "Một số mục được điều chỉnh từ \"Bảng thuật ngữ tiền mã hóa\" của Wikipedia theo CC BY-SA 3.0. Các mục khác từ bảng thuật ngữ CoinMarketCap và đội ngũ SSP.",
     "contentInEnglishBanner": "Nội dung bảng thuật ngữ được hiển thị bằng tiếng Anh. Để xem bài viết theo ngôn ngữ của bạn, hãy truy cập <academyLink>Học viện</academyLink>.",
     "letterIndexAriaLabel": "Glossary letter index"
+  },
+  "Brand": {
+    "metaTitle": "Bộ nhận diện thương hiệu SSP: Logo, màu sắc và hướng dẫn",
+    "metaDescription": "Tải xuống logo, biểu tượng và màu sắc chính thức của SSP Wallet và SSP Key, kèm hướng dẫn sử dụng thương hiệu SSP trong bài viết, trang niêm yết và tích hợp.",
+    "ogAlt": "Bộ nhận diện thương hiệu SSP",
+    "breadcrumbLabel": "Bộ nhận diện thương hiệu",
+    "heroBadge": "Bộ nhận diện thương hiệu",
+    "heroTitle": "Bộ nhận diện thương hiệu SSP",
+    "heroDescription": "Logo, màu sắc và hướng dẫn chính thức cho SSP Wallet và SSP Key. Sử dụng trong bài viết, tích hợp, trang niêm yết trên sàn giao dịch và nhà cung cấp, cũng như video.",
+    "downloadAll": "Tải trọn bộ (ZIP)",
+    "viewOnGithub": "Xem trên GitHub",
+    "svgNote": "SVG là tệp gốc của mọi logo. Hãy dùng SVG bất cứ khi nào có thể và chỉ dùng PNG khi không thể dùng ảnh vector.",
+    "quickPick": {
+      "title": "Hiển thị SSP cùng các nhà cung cấp khác?",
+      "description": "Hãy dùng biểu tượng tròn màu hổ phách. Biểu tượng vẫn rõ nét ở kích thước ảnh đại diện trong danh sách swap, ví và sàn giao dịch."
+    },
+    "nav": {
+      "label": "Trên trang này",
+      "logo": "Logo",
+      "symbol": "Ký hiệu",
+      "icon": "Biểu tượng",
+      "colors": "Màu sắc",
+      "typography": "Kiểu chữ",
+      "usage": "Cách sử dụng",
+      "name": "Cách viết tên",
+      "images": "Hình ảnh sản phẩm",
+      "legal": "Pháp lý"
+    },
+    "downloadFile": "Tải xuống {file}",
+    "logo": {
+      "title": "Logo",
+      "description": "Logo đầy đủ: ký hiệu ba cột cùng chữ SSP. Hãy chọn tệp phù hợp với màu nền của bạn.",
+      "pngNote": "Tệp PNG rộng 2048 px, nền trong suốt."
+    },
+    "symbol": {
+      "title": "Ký hiệu",
+      "description": "Riêng ba cột, dùng khi không gian quá nhỏ hoặc quá vuông để đặt logo đầy đủ.",
+      "pngNote": "Tệp PNG cao 1024 px, nền trong suốt."
+    },
+    "variants": {
+      "onDark": {
+        "name": "Cho nền tối",
+        "use": "Nền tối (mặc định)"
+      },
+      "onLight": {
+        "name": "Cho nền sáng",
+        "use": "Nền sáng"
+      },
+      "black": {
+        "name": "Đen",
+        "use": "Nền SSP Amber và in một màu"
+      },
+      "white": {
+        "name": "Trắng",
+        "use": "Ảnh chụp và nền rối mắt hoặc có màu"
+      }
+    },
+    "icon": {
+      "title": "Biểu tượng",
+      "description": "Ký hiệu đặt trên ô nền đặc, dùng cho ảnh đại diện, danh sách nhà cung cấp và ví, biểu tượng ứng dụng và hồ sơ mạng xã hội. Màu hổ phách là mặc định. Hãy dùng bản tối hoặc sáng khi màu hổ phách không hợp với giao diện của bạn.",
+      "recommended": "Khuyên dùng cho danh sách nhà cung cấp",
+      "circle": "Tròn",
+      "square": "Vuông",
+      "amber": "Hổ phách",
+      "dark": "Tối",
+      "light": "Sáng",
+      "keyAppTitle": "Biểu tượng ứng dụng SSP Key",
+      "keyAppDescription": "Ứng dụng di động SSP Key có biểu tượng riêng. Chỉ dùng biểu tượng này khi nói đến ứng dụng di động."
+    },
+    "colors": {
+      "title": "Màu sắc",
+      "description": "Dải màu hổ phách lấy từ các cột của ký hiệu. Nhấp vào giá trị bất kỳ để sao chép.",
+      "copy": "Sao chép {value}",
+      "copied": "Đã sao chép",
+      "amberRule": "Chữ và biểu tượng trên nền SSP Amber luôn có màu đen, không bao giờ dùng màu trắng.",
+      "items": {
+        "amber": {
+          "name": "SSP Amber",
+          "use": "Màu thương hiệu chính: nút bấm, điểm nhấn, chi tiết nổi bật"
+        },
+        "amberLight": {
+          "name": "Hổ phách nhạt",
+          "use": "Cột giữa của ký hiệu"
+        },
+        "amberDeep": {
+          "name": "Hổ phách đậm",
+          "use": "Cột trái của ký hiệu, trạng thái di chuột"
+        },
+        "amberAction": {
+          "name": "Hổ phách hành động",
+          "use": "Nút kêu gọi hành động, điểm cuối dải chuyển màu trong tài liệu marketing"
+        },
+        "graphite": {
+          "name": "Than chì",
+          "use": "Cột phải và chữ SSP trên nền sáng"
+        },
+        "night": {
+          "name": "Đêm",
+          "use": "Nền và bề mặt tối"
+        },
+        "white": {
+          "name": "Trắng",
+          "use": "Cột phải và chữ SSP trên nền tối"
+        }
+      }
+    },
+    "typography": {
+      "title": "Kiểu chữ",
+      "description": "Hai phông chữ miễn phí từ Google Fonts: Montserrat cho tiêu đề, Inter cho mọi nội dung còn lại.",
+      "displayRole": "Tiêu đề và hiển thị",
+      "bodyRole": "Nội dung và giao diện",
+      "weights": "Độ đậm {weights}",
+      "getFont": "Tải trên Google Fonts",
+      "displaySample": "Hai khóa. Một ví.",
+      "bodySample": "Mọi giao dịch đều cần cả trình duyệt và điện thoại của bạn cùng ký, nên dù một thiết bị bị đánh cắp, kẻ gian cũng không thể chuyển tiền của bạn.",
+      "license": "Cả hai đều miễn phí theo SIL Open Font License. Chữ SSP trong logo là nét chữ thiết kế riêng, không phải phông chữ, vì vậy hãy luôn dùng tệp logo và không bao giờ tự gõ lại."
+    },
+    "usage": {
+      "title": "Cách sử dụng",
+      "clearSpaceTitle": "Khoảng trống an toàn",
+      "clearSpaceText": "Giữ khoảng trống quanh logo bằng x, tức chiều rộng của một cột. Không đặt chữ, đường viền hay đồ họa nào khác vào vùng này.",
+      "minSizeTitle": "Kích thước tối thiểu",
+      "minSizeText": "Nhỏ hơn các kích thước này, các cột sẽ nhòe vào nhau. Hãy dùng ký hiệu hoặc biểu tượng khi không gian chật hẹp.",
+      "digital": "Kỹ thuật số",
+      "print": "In ấn",
+      "logo": "Logo",
+      "symbol": "Ký hiệu",
+      "icon": "Biểu tượng",
+      "wide": "Rộng {size}",
+      "tall": "Cao {size}",
+      "dosTitle": "Nên và không nên",
+      "do": "Nên",
+      "dont": "Không nên",
+      "dos": {
+        "onDark": "Dùng logo cho nền tối trên nền tối và logo cho nền sáng trên nền sáng.",
+        "onAmber": "Dùng logo đen trên nền SSP Amber và logo trắng trên ảnh chụp hoặc nền nhiều màu."
+      },
+      "donts": {
+        "stretch": "Không kéo giãn, bóp méo hay cắt xén logo.",
+        "rotate": "Không xoay logo.",
+        "recolor": "Không thay đổi màu các cột hoặc thêm hiệu ứng chuyển màu.",
+        "effects": "Không thêm đường viền, hiệu ứng phát sáng hay đổ bóng.",
+        "contrast": "Không giảm độ tương phản hoặc làm logo trong suốt một phần.",
+        "retype": "Không gõ lại chữ SSP, di chuyển ký hiệu hay thay đổi khoảng cách."
+      },
+      "lowRes": "Không dùng tệp có độ phân giải thấp. Hãy dùng SVG, hoặc PNG có kích thước bằng hoặc lớn hơn kích thước hiển thị."
+    },
+    "name": {
+      "title": "Cách viết tên",
+      "capitals": "<b>SSP</b> luôn được viết hoa toàn bộ, không bao giờ viết là Ssp hay S.S.P.",
+      "products": "Các sản phẩm gồm <b>SSP Wallet</b> (tiện ích mở rộng trình duyệt) và <b>SSP Key</b> (ứng dụng di động). Viết hoa chữ cái đầu của cả hai từ.",
+      "taglineLabel": "Khẩu hiệu",
+      "oneLinerLabel": "Mô tả một câu",
+      "oneLiner": "SSP là ví crypto multisig 2-of-2 thực sự: một khóa trong trình duyệt, một khóa trên điện thoại của bạn."
+    },
+    "images": {
+      "title": "Hình ảnh sản phẩm",
+      "description": "Hình ảnh marketing với số dư minh họa, sẵn sàng cho bài viết và trang niêm yết.",
+      "browse": "Duyệt trên GitHub",
+      "banners": {
+        "title": "Banner",
+        "description": "Banner SSP Wallet 1400×560 và ô quảng bá 440×280, banner SSP Key 1024×500."
+      },
+      "wallet": {
+        "title": "Ảnh giới thiệu SSP Wallet",
+        "description": "Năm ảnh giới thiệu tính năng, 1280×800."
+      },
+      "key": {
+        "title": "Ảnh giới thiệu SSP Key",
+        "description": "Sáu ảnh giới thiệu tính năng, 1290×2796, màn hình điện thoại dọc."
+      }
+    },
+    "legal": {
+      "title": "Pháp lý",
+      "trademark": "Tên SSP, các logo và tên sản phẩm là nhãn hiệu của InFlux Technologies Limited. Chúng chỉ được sử dụng theo cách mô tả trong hướng dẫn này hoặc khi có sự cho phép bằng văn bản của InFlux Technologies Limited.",
+      "restrictions": "Bạn không được sử dụng hoặc đăng ký nhãn hiệu SSP, hoặc bất kỳ dấu hiệu nào tương tự đến mức gây nhầm lẫn, làm hoặc làm một phần của bất kỳ nhãn hiệu hàng hóa, nhãn hiệu dịch vụ, tên công ty, tên thương mại, tên người dùng hoặc tên miền nào. Không sử dụng thương hiệu SSP theo cách ngụ ý có quan hệ đối tác, tài trợ hoặc chứng thực khi không có quan hệ đó, hoặc cho bất kỳ mục đích nào không phù hợp với Điều khoản dịch vụ của SSP. Chúng tôi có thể thu hồi quyền sử dụng nhãn hiệu SSP vào bất kỳ lúc nào và có thể từ chối phê duyệt nội dung mà chúng tôi cho là không phù hợp với thương hiệu SSP.",
+      "notOpenSource": "Các tài nguyên này được cung cấp để đề cập đến SSP. Chúng không được cấp phép dưới dạng mã nguồn mở.",
+      "contactTitle": "Có câu hỏi?",
+      "contact": "Câu hỏi về thương hiệu, báo chí và hợp tác: {email}"
+    }
   }
 }

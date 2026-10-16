@@ -84,6 +84,7 @@
       "twitter": "Twitter",
       "medium": "Medium",
       "youtube": "YouTube",
+      "brandKit": "Materiały marki",
       "helpTranslate": "Pomóż w tłumaczeniu",
       "newsroom": "Aktualności",
       "academy": "Akademia",
@@ -1864,5 +1865,185 @@
     "attribution": "Część haseł zaczerpnięto ze \"Słownika pojęć kryptowalut\" Wikipedii na licencji CC BY-SA 3.0. Inne pochodzą ze słownika CoinMarketCap i kuratorskiego zestawu zespołu SSP.",
     "contentInEnglishBanner": "Treść słownika wyświetlana jest po angielsku. Artykuły w Twoim języku znajdziesz w <academyLink>Akademii</academyLink>.",
     "letterIndexAriaLabel": "Glossary letter index"
+  },
+  "Brand": {
+    "metaTitle": "Materiały marki SSP: logo, kolory i wytyczne",
+    "metaDescription": "Pobierz oficjalne logo, ikony i kolory SSP Wallet i SSP Key wraz z wytycznymi dotyczącymi używania marki SSP w artykułach, katalogach i integracjach.",
+    "ogAlt": "Materiały marki SSP",
+    "breadcrumbLabel": "Materiały marki",
+    "heroBadge": "Materiały marki",
+    "heroTitle": "Materiały marki SSP",
+    "heroDescription": "Oficjalne logo, kolory i wytyczne dla SSP Wallet i SSP Key. Używaj ich w artykułach, integracjach, na listach giełd i dostawców oraz w filmach.",
+    "downloadAll": "Pobierz cały zestaw (ZIP)",
+    "viewOnGithub": "Zobacz w serwisie GitHub",
+    "svgNote": "SVG to plik źródłowy każdego logo. Używaj SVG wszędzie, gdzie to możliwe, a PNG tylko tam, gdzie grafika wektorowa się nie sprawdzi.",
+    "quickPick": {
+      "title": "Umieszczasz SSP obok innych dostawców?",
+      "description": "Użyj okrągłej, bursztynowej ikony. Pozostaje czytelna nawet w rozmiarze awatara na listach swapów, portfeli i giełd."
+    },
+    "nav": {
+      "label": "Na tej stronie",
+      "logo": "Logo",
+      "symbol": "Sygnet",
+      "icon": "Ikona",
+      "colors": "Kolory",
+      "typography": "Typografia",
+      "usage": "Zastosowanie",
+      "name": "Pisownia nazwy",
+      "images": "Grafiki produktowe",
+      "legal": "Informacje prawne"
+    },
+    "downloadFile": "Pobierz {file}",
+    "logo": {
+      "title": "Logo",
+      "description": "Pełne logo: sygnet z trzech filarów i logotyp SSP. Wybierz plik pasujący do tła.",
+      "pngNote": "Pliki PNG mają 2048 px szerokości i przezroczyste tło."
+    },
+    "symbol": {
+      "title": "Sygnet",
+      "description": "Same trzy filary — na wypadek, gdy miejsca jest za mało lub jest zbyt kwadratowe na pełne logo.",
+      "pngNote": "Pliki PNG mają 1024 px wysokości i przezroczyste tło."
+    },
+    "variants": {
+      "onDark": {
+        "name": "Na ciemne tło",
+        "use": "Ciemne tła (domyślnie)"
+      },
+      "onLight": {
+        "name": "Na jasne tło",
+        "use": "Jasne tła"
+      },
+      "black": {
+        "name": "Czarne",
+        "use": "SSP Amber i druk jednokolorowy"
+      },
+      "white": {
+        "name": "Białe",
+        "use": "Zdjęcia oraz złożone lub kolorowe tła"
+      }
+    },
+    "icon": {
+      "title": "Ikona",
+      "description": "Sygnet na jednolitym kafelku — do awatarów, list dostawców i portfeli, ikon aplikacji i profili w mediach społecznościowych. Domyślna jest wersja bursztynowa. Ciemna lub jasna sprawdzi się tam, gdzie bursztyn gryzie się z Twoim interfejsem.",
+      "recommended": "Zalecana na listy dostawców",
+      "circle": "Okrągła",
+      "square": "Kwadratowa",
+      "amber": "Bursztynowa",
+      "dark": "Ciemna",
+      "light": "Jasna",
+      "keyAppTitle": "Ikona aplikacji SSP Key",
+      "keyAppDescription": "Aplikacja mobilna SSP Key ma własną ikonę. Używaj jej tylko wtedy, gdy piszesz o aplikacji mobilnej."
+    },
+    "colors": {
+      "title": "Kolory",
+      "description": "Bursztynowa paleta pochodzi z filarów sygnetu. Kliknij dowolną wartość, aby ją skopiować.",
+      "copy": "Kopiuj {value}",
+      "copied": "Skopiowano",
+      "amberRule": "Tekst i ikony na SSP Amber są zawsze czarne, nigdy białe.",
+      "items": {
+        "amber": {
+          "name": "SSP Amber",
+          "use": "Główny kolor marki: przyciski, wyróżnienia, akcenty"
+        },
+        "amberLight": {
+          "name": "Jasny bursztyn",
+          "use": "Środkowy filar sygnetu"
+        },
+        "amberDeep": {
+          "name": "Głęboki bursztyn",
+          "use": "Lewy filar sygnetu, stany po najechaniu kursorem"
+        },
+        "amberAction": {
+          "name": "Bursztyn akcji",
+          "use": "Wezwania do działania, koniec gradientu w materiałach marketingowych"
+        },
+        "graphite": {
+          "name": "Grafit",
+          "use": "Prawy filar i logotyp na jasnym tle"
+        },
+        "night": {
+          "name": "Noc",
+          "use": "Ciemne tła i powierzchnie"
+        },
+        "white": {
+          "name": "Biel",
+          "use": "Prawy filar i logotyp na ciemnym tle"
+        }
+      }
+    },
+    "typography": {
+      "title": "Typografia",
+      "description": "Dwa darmowe kroje z Google Fonts: Montserrat do nagłówków i Inter do całej reszty.",
+      "displayRole": "Nagłówki i tytuły",
+      "bodyRole": "Tekst i interfejs",
+      "weights": "Grubości {weights}",
+      "getFont": "Pobierz z Google Fonts",
+      "displaySample": "Dwa klucze. Jeden portfel.",
+      "bodySample": "Każdą transakcję muszą podpisać zarówno przeglądarka, jak i telefon, więc jedno skradzione urządzenie nie wystarczy, by przenieść Twoje środki.",
+      "license": "Oba kroje są darmowe na licencji SIL Open Font License. Logotyp SSP to autorskie liternictwo, a nie font, dlatego zawsze używaj plików logo i nigdy nie odtwarzaj go za pomocą fontu."
+    },
+    "usage": {
+      "title": "Zastosowanie",
+      "clearSpaceTitle": "Pole ochronne",
+      "clearSpaceText": "Zachowaj wokół logo wolną przestrzeń równą x, czyli szerokości jednego filaru. Nie może się w niej znaleźć tekst, krawędź ani inna grafika.",
+      "minSizeTitle": "Minimalne rozmiary",
+      "minSizeText": "Poniżej tych rozmiarów filary zlewają się ze sobą. Gdy brakuje miejsca, użyj sygnetu lub ikony.",
+      "digital": "Cyfrowe",
+      "print": "Druk",
+      "logo": "Logo",
+      "symbol": "Sygnet",
+      "icon": "Ikona",
+      "wide": "{size} szerokości",
+      "tall": "{size} wysokości",
+      "dosTitle": "Co robić, a czego unikać",
+      "do": "Tak",
+      "dont": "Nie",
+      "dos": {
+        "onDark": "Na ciemnym tle używaj wersji na ciemne tło, a na jasnym — wersji na jasne tło.",
+        "onAmber": "Na SSP Amber używaj czarnego logo, a na zdjęciach lub złożonych, kolorowych tłach — białego."
+      },
+      "donts": {
+        "stretch": "Nie rozciągaj, nie spłaszczaj ani nie przycinaj logo.",
+        "rotate": "Nie obracaj logo.",
+        "recolor": "Nie zmieniaj kolorów filarów ani nie dodawaj gradientów.",
+        "effects": "Nie dodawaj obrysów, poświaty ani cieni.",
+        "contrast": "Nie obniżaj kontrastu ani nie zmniejszaj krycia logo.",
+        "retype": "Nie odtwarzaj logotypu za pomocą fontu, nie przesuwaj sygnetu i nie zmieniaj odstępów."
+      },
+      "lowRes": "Nie używaj plików w niskiej rozdzielczości. Użyj SVG lub PNG o rozmiarze co najmniej równym rozmiarowi wyświetlania."
+    },
+    "name": {
+      "title": "Pisownia nazwy",
+      "capitals": "<b>SSP</b> zawsze piszemy wielkimi literami, nigdy Ssp ani S.S.P.",
+      "products": "Produkty to <b>SSP Wallet</b> (rozszerzenie przeglądarki) i <b>SSP Key</b> (aplikacja mobilna). Oba wyrazy piszemy wielką literą.",
+      "taglineLabel": "Hasło",
+      "oneLinerLabel": "Opis w jednym zdaniu",
+      "oneLiner": "SSP to prawdziwy portfel krypto multisig 2-z-2: jeden klucz w przeglądarce, drugi w telefonie."
+    },
+    "images": {
+      "title": "Grafiki produktowe",
+      "description": "Grafiki marketingowe z przykładowymi saldami, gotowe do artykułów i katalogów.",
+      "browse": "Przeglądaj w serwisie GitHub",
+      "banners": {
+        "title": "Banery",
+        "description": "Baner SSP Wallet 1400×560 i kafelek 440×280, baner SSP Key 1024×500."
+      },
+      "wallet": {
+        "title": "Panele SSP Wallet",
+        "description": "Pięć paneli z funkcjami, 1280×800."
+      },
+      "key": {
+        "title": "Panele SSP Key",
+        "description": "Sześć paneli z funkcjami, 1290×2796, w pionowym formacie telefonu."
+      }
+    },
+    "legal": {
+      "title": "Informacje prawne",
+      "trademark": "Nazwa SSP, logo i nazwy produktów są znakami towarowymi InFlux Technologies Limited. Można ich używać wyłącznie w sposób opisany w niniejszych wytycznych lub za pisemną zgodą InFlux Technologies Limited.",
+      "restrictions": "Zabrania się używania lub rejestrowania znaków towarowych SSP, a także jakichkolwiek oznaczeń myląco do nich podobnych, jako znaku towarowego, znaku usługowego, nazwy firmy, nazwy handlowej, nazwy użytkownika lub nazwy domeny albo jako ich części. Nie wolno używać marki SSP w sposób sugerujący partnerstwo, sponsorowanie lub poparcie, jeśli takie powiązanie nie istnieje, ani w jakikolwiek sposób niezgodny z Warunkami korzystania z usług SSP. Możemy w każdej chwili cofnąć zgodę na używanie znaków towarowych SSP oraz odmówić akceptacji treści, które uznamy za niezgodne z marką SSP.",
+      "notOpenSource": "Materiały te udostępniamy w celu odwoływania się do SSP. Nie są one objęte licencją open source.",
+      "contactTitle": "Masz pytania?",
+      "contact": "Pytania dotyczące marki, mediów i partnerstwa: {email}"
+    }
   }
 }
