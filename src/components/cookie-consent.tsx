@@ -38,6 +38,41 @@ export default function CookieConsent() {
     analytics: false,
   })
 
+  const initializeGoogleAnalytics = () => {
+    // Load Google Analytics script only after consent
+    if (typeof window !== 'undefined' && process.env.NEXT_PUBLIC_GA_ID) {
+      const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID
+
+      // Create and append GA script
+      const script1 = document.createElement('script')
+      script1.async = true
+      script1.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`
+      document.head.appendChild(script1)
+
+      // Initialize gtag
+      const script2 = document.createElement('script')
+      script2.text = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${GA_TRACKING_ID}', {
+          page_path: window.location.pathname,
+        });
+      `
+      document.head.appendChild(script2)
+
+      // Track the consent event after gtag is loaded
+      setTimeout(() => {
+        if (window.gtag) {
+          window.gtag('event', 'consent_granted', {
+            event_category: 'engagement',
+            event_label: 'analytics',
+          })
+        }
+      }, 100)
+    }
+  }
+
   useEffect(() => {
     // Check if user has already made a choice
     const consent = localStorage.getItem('cookie-consent')
@@ -102,41 +137,6 @@ export default function CookieConsent() {
       }
     }
   }, [showBanner])
-
-  const initializeGoogleAnalytics = () => {
-    // Load Google Analytics script only after consent
-    if (typeof window !== 'undefined' && process.env.NEXT_PUBLIC_GA_ID) {
-      const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID
-
-      // Create and append GA script
-      const script1 = document.createElement('script')
-      script1.async = true
-      script1.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`
-      document.head.appendChild(script1)
-
-      // Initialize gtag
-      const script2 = document.createElement('script')
-      script2.text = `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '${GA_TRACKING_ID}', {
-          page_path: window.location.pathname,
-        });
-      `
-      document.head.appendChild(script2)
-
-      // Track the consent event after gtag is loaded
-      setTimeout(() => {
-        if (window.gtag) {
-          window.gtag('event', 'consent_granted', {
-            event_category: 'engagement',
-            event_label: 'analytics',
-          })
-        }
-      }, 100)
-    }
-  }
 
   const disableGoogleAnalytics = () => {
     // Disable Google Analytics if it's loaded
