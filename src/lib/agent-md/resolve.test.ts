@@ -1,5 +1,21 @@
+import { readdirSync } from 'node:fs'
+import path from 'node:path'
 import { describe, it, expect } from 'vitest'
 import { resolveAgentMdPath, isDynamicArticleRoute } from './resolve'
+
+const APP_DIR = 'src/app/[locale]'
+
+/** Route paths (relative to APP_DIR) of every static page that ships a sibling agent.md. */
+function staticAgentMdRoutes(dir = ''): string[] {
+  const entries = readdirSync(path.join(APP_DIR, dir), { withFileTypes: true })
+  return entries.flatMap(entry => {
+    if (entry.isFile() && entry.name === 'agent.md') return [dir]
+    if (entry.isDirectory() && !entry.name.startsWith('[')) {
+      return staticAgentMdRoutes(dir ? `${dir}/${entry.name}` : entry.name)
+    }
+    return []
+  })
+}
 
 describe('resolveAgentMdPath', () => {
   it('maps /en/features to its sibling agent.md', () => {
@@ -16,6 +32,15 @@ describe('resolveAgentMdPath', () => {
 
   it('returns null for routes without static agent.md', () => {
     expect(resolveAgentMdPath('/api/contact')).toBeNull()
+  })
+
+  it('maps every static page that has a sibling agent.md', () => {
+    const routes = staticAgentMdRoutes()
+    expect(routes).toContain('brand')
+    for (const route of routes) {
+      const expected = route ? `${APP_DIR}/${route}/agent.md` : `${APP_DIR}/agent.md`
+      expect(resolveAgentMdPath(route ? `/en/${route}` : '/en')).toBe(expected)
+    }
   })
 })
 

@@ -26,6 +26,7 @@ and the mobile SSP Key app — a single compromised device cannot sign.
 - Read the latest news → /newsroom
 - Learn crypto self-custody → /academy
 - For enterprise inquiries → /enterprise
+- Logos, colors and brand guidelines → /brand
 
 ## Related pages
 

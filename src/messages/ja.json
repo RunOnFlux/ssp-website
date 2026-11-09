@@ -84,6 +84,7 @@
       "twitter": "Twitter",
       "medium": "Medium",
       "youtube": "YouTube",
+      "brandKit": "ブランドキット",
       "helpTranslate": "翻訳に協力する",
       "newsroom": "ニュースルーム",
       "academy": "アカデミー",
@@ -1864,5 +1865,185 @@
     "attribution": "一部のエントリーは Wikipedia「暗号資産用語集」(CC BY-SA 3.0) を改変。他は CoinMarketCap 用語集および SSP チームによるキュレーション。",
     "contentInEnglishBanner": "用語集のコンテンツは英語で表示されます。各言語向けの記事は<academyLink>アカデミー</academyLink>をご覧ください。",
     "letterIndexAriaLabel": "Glossary letter index"
+  },
+  "Brand": {
+    "metaTitle": "SSP ブランドキット：ロゴ、カラー、ガイドライン",
+    "metaDescription": "SSP Wallet と SSP Key の公式ロゴ、アイコン、カラーをダウンロードできます。記事、掲載ページ、インテグレーションで SSP ブランドを使用するためのガイドラインも掲載しています。",
+    "ogAlt": "SSP ブランドキット",
+    "breadcrumbLabel": "ブランドキット",
+    "heroBadge": "ブランドキット",
+    "heroTitle": "SSP ブランドキット",
+    "heroDescription": "SSP Wallet と SSP Key の公式ロゴ、カラー、ガイドラインです。記事、インテグレーション、取引所やプロバイダーの掲載ページ、動画でご利用ください。",
+    "downloadAll": "キット一式をダウンロード (ZIP)",
+    "viewOnGithub": "GitHub で見る",
+    "svgNote": "すべてのロゴは SVG が元データです。できる限り SVG を使用し、ベクター形式が使えない場合にのみ PNG をご利用ください。",
+    "quickPick": {
+      "title": "他のプロバイダーと並べて SSP を掲載しますか？",
+      "description": "アンバーの円形アイコンをご利用ください。スワップ、ウォレット、取引所の一覧でアバターサイズに縮小しても鮮明に表示されます。"
+    },
+    "nav": {
+      "label": "このページの内容",
+      "logo": "ロゴ",
+      "symbol": "シンボル",
+      "icon": "アイコン",
+      "colors": "カラー",
+      "typography": "タイポグラフィ",
+      "usage": "使用方法",
+      "name": "名称の表記",
+      "images": "製品画像",
+      "legal": "法的情報"
+    },
+    "downloadFile": "{file} をダウンロード",
+    "logo": {
+      "title": "ロゴ",
+      "description": "3 本の柱のシンボルと SSP のワードマークを組み合わせたフルロゴです。背景に合ったファイルをお選びください。",
+      "pngNote": "PNG ファイルは幅 2048 px、背景は透過です。"
+    },
+    "symbol": {
+      "title": "シンボル",
+      "description": "3 本の柱だけのシンボルです。スペースが小さすぎる場合や、正方形に近くフルロゴが収まらない場合にご利用ください。",
+      "pngNote": "PNG ファイルは高さ 1024 px、背景は透過です。"
+    },
+    "variants": {
+      "onDark": {
+        "name": "暗い背景用",
+        "use": "暗い背景 (デフォルト)"
+      },
+      "onLight": {
+        "name": "明るい背景用",
+        "use": "明るい背景"
+      },
+      "black": {
+        "name": "ブラック",
+        "use": "SSP Amber の背景と単色印刷"
+      },
+      "white": {
+        "name": "ホワイト",
+        "use": "写真、複雑な背景や色付きの背景"
+      }
+    },
+    "icon": {
+      "title": "アイコン",
+      "description": "塗りつぶしのタイルにシンボルを配置したもので、アバター、プロバイダーやウォレットの一覧、アプリタイル、SNS プロフィールに使用します。デフォルトはアンバーです。アンバーが UI と合わない場合は、ダークまたはライトをご利用ください。",
+      "recommended": "プロバイダー一覧におすすめ",
+      "circle": "円形",
+      "square": "正方形",
+      "amber": "アンバー",
+      "dark": "ダーク",
+      "light": "ライト",
+      "keyAppTitle": "SSP Key アプリアイコン",
+      "keyAppDescription": "SSP Key モバイルアプリには専用のアイコンがあります。モバイルアプリについて言及する場合にのみ使用してください。"
+    },
+    "colors": {
+      "title": "カラー",
+      "description": "アンバー系のカラーはシンボルの柱から取られています。値をクリックするとコピーできます。",
+      "copy": "{value} をコピー",
+      "copied": "コピーしました",
+      "amberRule": "SSP Amber 上のテキストやアイコンは常に黒にし、白は使用しないでください。",
+      "items": {
+        "amber": {
+          "name": "SSP Amber",
+          "use": "メインのブランドカラー：ボタン、ハイライト、アクセント"
+        },
+        "amberLight": {
+          "name": "アンバーライト",
+          "use": "シンボルの中央の柱"
+        },
+        "amberDeep": {
+          "name": "アンバーディープ",
+          "use": "シンボルの左の柱、ホバー状態"
+        },
+        "amberAction": {
+          "name": "アンバーアクション",
+          "use": "CTA、マーケティング素材のグラデーションの終点"
+        },
+        "graphite": {
+          "name": "グラファイト",
+          "use": "明るい背景での右の柱とワードマーク"
+        },
+        "night": {
+          "name": "ナイト",
+          "use": "暗い背景とサーフェス"
+        },
+        "white": {
+          "name": "ホワイト",
+          "use": "暗い背景での右の柱とワードマーク"
+        }
+      }
+    },
+    "typography": {
+      "title": "タイポグラフィ",
+      "description": "無料の Google Fonts を 2 種類使用しています。見出しには Montserrat、それ以外にはすべて Inter を使用します。",
+      "displayRole": "見出し・ディスプレイ",
+      "bodyRole": "本文・UI",
+      "weights": "ウェイト {weights}",
+      "getFont": "Google Fonts で入手",
+      "displaySample": "2 つの鍵。1 つのウォレット。",
+      "bodySample": "すべてのトランザクションにはブラウザとスマートフォンの両方の署名が必要なため、デバイスが 1 台盗まれても資金を動かされることはありません。",
+      "license": "どちらも SIL Open Font License のもとで無料で利用できます。SSP のワードマークはフォントではなく独自にデザインされたレタリングのため、必ずロゴファイルを使用し、文字で打ち直さないでください。"
+    },
+    "usage": {
+      "title": "使用方法",
+      "clearSpaceTitle": "アイソレーション (余白)",
+      "clearSpaceText": "ロゴの周囲には、柱 1 本分の幅である x と同じ余白を確保してください。この範囲にはテキストや紙面・画面の端、その他のグラフィックが入らないようにしてください。",
+      "minSizeTitle": "最小サイズ",
+      "minSizeText": "これより小さいと柱同士がつぶれて見えます。スペースが限られる場合は、シンボルまたはアイコンをご利用ください。",
+      "digital": "デジタル",
+      "print": "印刷",
+      "logo": "ロゴ",
+      "symbol": "シンボル",
+      "icon": "アイコン",
+      "wide": "幅 {size}",
+      "tall": "高さ {size}",
+      "dosTitle": "使用例と禁止例",
+      "do": "OK",
+      "dont": "NG",
+      "dos": {
+        "onDark": "暗い背景には暗い背景用のロゴを、明るい背景には明るい背景用のロゴを使用してください。",
+        "onAmber": "SSP Amber の背景にはブラックのロゴを、写真や色の多い背景にはホワイトのロゴを使用してください。"
+      },
+      "donts": {
+        "stretch": "ロゴを引き伸ばしたり、つぶしたり、切り取ったりしないでください。",
+        "rotate": "ロゴを回転させないでください。",
+        "recolor": "柱の色を変更したり、グラデーションを加えたりしないでください。",
+        "effects": "アウトライン、光彩、ドロップシャドウを加えないでください。",
+        "contrast": "コントラストを下げたり、ロゴを半透明にしたりしないでください。",
+        "retype": "ワードマークを文字で打ち直したり、シンボルの位置や間隔を変えたりしないでください。"
+      },
+      "lowRes": "低解像度のファイルは使用しないでください。SVG、または表示サイズ以上の PNG を使用してください。"
+    },
+    "name": {
+      "title": "名称の表記",
+      "capitals": "<b>SSP</b> は常に大文字で表記します。Ssp や S.S.P. とは表記しません。",
+      "products": "製品名は <b>SSP Wallet</b> (ブラウザ拡張機能) と <b>SSP Key</b> (モバイルアプリ) です。どちらも両方の単語の頭文字を大文字にします。",
+      "taglineLabel": "タグライン",
+      "oneLinerLabel": "一文での説明",
+      "oneLiner": "SSP は真の 2-of-2 マルチシグネチャ暗号資産ウォレットです。鍵の 1 つはブラウザに、もう 1 つはスマートフォンにあります。"
+    },
+    "images": {
+      "title": "製品画像",
+      "description": "デモ残高を表示したマーケティング画像です。記事や掲載ページにそのままご利用いただけます。",
+      "browse": "GitHub で見る",
+      "banners": {
+        "title": "バナー",
+        "description": "SSP Wallet のバナー 1400×560 とタイル 440×280、SSP Key のバナー 1024×500。"
+      },
+      "wallet": {
+        "title": "SSP Wallet パネル",
+        "description": "機能紹介パネル 5 枚、1280×800。"
+      },
+      "key": {
+        "title": "SSP Key パネル",
+        "description": "機能紹介パネル 6 枚、1290×2796、スマートフォン縦向き。"
+      }
+    },
+    "legal": {
+      "title": "法的情報",
+      "trademark": "SSP の名称、ロゴ、製品名は InFlux Technologies Limited の商標です。本ガイドラインに記載された方法に従う場合、または InFlux Technologies Limited の書面による許可を得た場合に限り使用できます。",
+      "restrictions": "SSP の商標、またはそれと紛らわしいほど類似したものを、商標、サービスマーク、会社名、商号、ユーザー名、ドメイン名として、またはそれらの一部として使用または登録することはできません。提携、スポンサーシップ、推奨の関係が実際に存在しない限り、それを示唆するような形で SSP ブランドを使用しないでください。また、SSP 利用規約に反する目的にも使用しないでください。当社はいつでも SSP 商標の使用許可を取り消すことができ、SSP ブランドにふさわしくないと判断したコンテンツについては承認を保留する場合があります。",
+      "notOpenSource": "これらの素材は SSP に言及するために提供されています。オープンソースとしてライセンスされたものではありません。",
+      "contactTitle": "ご質問がありますか？",
+      "contact": "ブランド、プレス、パートナーシップに関するお問い合わせ：{email}"
+    }
   }
 }

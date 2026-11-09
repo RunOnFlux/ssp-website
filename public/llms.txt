@@ -21,6 +21,7 @@ Native support: Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), Zcash (ZEC), Rave
 - [Full documentation](https://docs.sspwallet.io): technical docs, developer guides, integration references
 - [Support](https://sspwallet.io/support): 38 FAQ entries across Getting Started, Security & Privacy, and Technical Support, plus contact form
 - [Contact](https://sspwallet.io/contact): partnership inquiries and direct communication
+- [Brand Kit](https://sspwallet.io/brand): official SSP logos, icons, colors and usage guidelines in SVG and PNG, also at https://github.com/RunOnFlux/ssp-brand-kit
 
 ## Community and source
 

@@ -84,6 +84,7 @@
       "twitter": "Twitter",
       "medium": "Medium",
       "youtube": "YouTube",
+      "brandKit": "Brand Kit",
       "helpTranslate": "Help Translate",
       "newsroom": "Newsroom",
       "academy": "Academy",
@@ -1864,5 +1865,185 @@
     "attribution": "Some entries adapted from Wikipedia's \"Glossary of cryptocurrency terms\" under CC BY-SA 3.0. Other entries from the CoinMarketCap glossary and SSP team curation.",
     "contentInEnglishBanner": "Glossary content is shown in English. For localized articles, see the <academyLink>Academy</academyLink>.",
     "letterIndexAriaLabel": "Glossary letter index"
+  },
+  "Brand": {
+    "metaTitle": "SSP Brand Kit: Logos, Colors and Guidelines",
+    "metaDescription": "Download the official SSP Wallet and SSP Key logos, icons and colors, with guidelines for using the SSP brand in articles, listings and integrations.",
+    "ogAlt": "SSP brand kit",
+    "breadcrumbLabel": "Brand Kit",
+    "heroBadge": "Brand Kit",
+    "heroTitle": "SSP Brand Kit",
+    "heroDescription": "Official logos, colors and guidelines for SSP Wallet and SSP Key. Use them in articles, integrations, exchange and provider listings, and videos.",
+    "downloadAll": "Download full kit (ZIP)",
+    "viewOnGithub": "View on GitHub",
+    "svgNote": "SVG is the source for every logo. Use SVG wherever you can and PNG only where a vector won't work.",
+    "quickPick": {
+      "title": "Listing SSP next to other providers?",
+      "description": "Use the amber circle icon. It stays clear at avatar size in swap, wallet and exchange lists."
+    },
+    "nav": {
+      "label": "On this page",
+      "logo": "Logo",
+      "symbol": "Symbol",
+      "icon": "Icon",
+      "colors": "Colors",
+      "typography": "Typography",
+      "usage": "Usage",
+      "name": "Writing the name",
+      "images": "Product images",
+      "legal": "Legal"
+    },
+    "downloadFile": "Download {file}",
+    "logo": {
+      "title": "Logo",
+      "description": "The full logo: the three-pillar symbol plus the SSP wordmark. Pick the file that matches your background.",
+      "pngNote": "PNG files are 2048 px wide with a transparent background."
+    },
+    "symbol": {
+      "title": "Symbol",
+      "description": "The three pillars on their own, for when the space is too small or too square for the full logo.",
+      "pngNote": "PNG files are 1024 px tall with a transparent background."
+    },
+    "variants": {
+      "onDark": {
+        "name": "On dark",
+        "use": "Dark backgrounds (default)"
+      },
+      "onLight": {
+        "name": "On light",
+        "use": "Light backgrounds"
+      },
+      "black": {
+        "name": "Black",
+        "use": "SSP Amber and one-color print"
+      },
+      "white": {
+        "name": "White",
+        "use": "Photos and busy or colored backgrounds"
+      }
+    },
+    "icon": {
+      "title": "Icon",
+      "description": "The symbol on a solid tile, for avatars, provider and wallet lists, app tiles and social profiles. Amber is the default. Dark or light work where amber clashes with your UI.",
+      "recommended": "Recommended for provider lists",
+      "circle": "Circle",
+      "square": "Square",
+      "amber": "Amber",
+      "dark": "Dark",
+      "light": "Light",
+      "keyAppTitle": "SSP Key app icon",
+      "keyAppDescription": "The SSP Key mobile app has its own icon. Use it only when you refer to the mobile app."
+    },
+    "colors": {
+      "title": "Colors",
+      "description": "The amber ramp comes from the pillars of the symbol. Click any value to copy it.",
+      "copy": "Copy {value}",
+      "copied": "Copied",
+      "amberRule": "Text and icons on SSP Amber are always black, never white.",
+      "items": {
+        "amber": {
+          "name": "SSP Amber",
+          "use": "Primary brand color: buttons, highlights, accents"
+        },
+        "amberLight": {
+          "name": "Amber Light",
+          "use": "Center pillar of the symbol"
+        },
+        "amberDeep": {
+          "name": "Amber Deep",
+          "use": "Left pillar of the symbol, hover states"
+        },
+        "amberAction": {
+          "name": "Amber Action",
+          "use": "Calls to action, gradient end on marketing"
+        },
+        "graphite": {
+          "name": "Graphite",
+          "use": "Right pillar and wordmark on light backgrounds"
+        },
+        "night": {
+          "name": "Night",
+          "use": "Dark backgrounds and surfaces"
+        },
+        "white": {
+          "name": "White",
+          "use": "Right pillar and wordmark on dark backgrounds"
+        }
+      }
+    },
+    "typography": {
+      "title": "Typography",
+      "description": "Two free Google Fonts: Montserrat for headings, Inter for everything else.",
+      "displayRole": "Headings and display",
+      "bodyRole": "Body and UI",
+      "weights": "Weights {weights}",
+      "getFont": "Get it on Google Fonts",
+      "displaySample": "Two keys. One wallet.",
+      "bodySample": "Every transaction needs both your browser and your phone to sign it, so one stolen device can't move your funds.",
+      "license": "Both are free under the SIL Open Font License. The SSP wordmark is custom lettering, not a font, so always use the logo files and never retype it."
+    },
+    "usage": {
+      "title": "Usage",
+      "clearSpaceTitle": "Clear space",
+      "clearSpaceText": "Keep free space around the logo equal to x, the width of one pillar. No text, edges or other graphics go inside it.",
+      "minSizeTitle": "Minimum sizes",
+      "minSizeText": "Below these sizes the pillars blur together. Use the symbol or the icon when space is tight.",
+      "digital": "Digital",
+      "print": "Print",
+      "logo": "Logo",
+      "symbol": "Symbol",
+      "icon": "Icon",
+      "wide": "{size} wide",
+      "tall": "{size} tall",
+      "dosTitle": "Do's and don'ts",
+      "do": "Do",
+      "dont": "Don't",
+      "dos": {
+        "onDark": "Use the on-dark logo on dark backgrounds and the on-light logo on light ones.",
+        "onAmber": "Use the black logo on SSP Amber and the white logo on photos or busy color."
+      },
+      "donts": {
+        "stretch": "Don't stretch, squash or crop the logo.",
+        "rotate": "Don't rotate the logo.",
+        "recolor": "Don't change the pillar colors or add gradients.",
+        "effects": "Don't add outlines, glows or drop shadows.",
+        "contrast": "Don't lower the contrast or set the logo at reduced opacity.",
+        "retype": "Don't retype the wordmark, move the symbol or change the spacing."
+      },
+      "lowRes": "Don't use low-resolution files. Use the SVG, or a PNG at or above display size."
+    },
+    "name": {
+      "title": "Writing the name",
+      "capitals": "<b>SSP</b> is always written in capitals, never Ssp or S.S.P.",
+      "products": "The products are <b>SSP Wallet</b> (browser extension) and <b>SSP Key</b> (mobile app). Capitalize both words.",
+      "taglineLabel": "Tagline",
+      "oneLinerLabel": "One-line description",
+      "oneLiner": "SSP is a true 2-of-2 multisig crypto wallet: one key in your browser, one on your phone."
+    },
+    "images": {
+      "title": "Product images",
+      "description": "Marketing images with demo balances, ready for articles and listings.",
+      "browse": "Browse on GitHub",
+      "banners": {
+        "title": "Banners",
+        "description": "SSP Wallet banner 1400×560 and tile 440×280, SSP Key banner 1024×500."
+      },
+      "wallet": {
+        "title": "SSP Wallet panels",
+        "description": "Five feature panels, 1280×800."
+      },
+      "key": {
+        "title": "SSP Key panels",
+        "description": "Six feature panels, 1290×2796, phone portrait."
+      }
+    },
+    "legal": {
+      "title": "Legal",
+      "trademark": "The SSP name, logos and product names are trademarks of InFlux Technologies Limited. They may only be used as described in these guidelines or with written permission from InFlux Technologies Limited.",
+      "restrictions": "You may not use or register the SSP trademarks, or anything confusingly similar to them, as or as part of any trademark, service mark, company name, trade name, username or domain name. Don't use the SSP brand in a way that suggests partnership, sponsorship or endorsement unless one exists, or for anything inconsistent with the SSP Terms of Service. We may revoke permission to use the SSP trademarks at any time, and we may withhold approval of content we consider inconsistent with the SSP brand.",
+      "notOpenSource": "These assets are provided for referencing SSP. They are not licensed as open source.",
+      "contactTitle": "Questions?",
+      "contact": "Brand, press and partnership questions: {email}"
+    }
   }
 }

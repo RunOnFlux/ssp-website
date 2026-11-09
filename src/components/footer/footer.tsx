@@ -29,6 +29,7 @@ export function Footer() {
         external: true,
       },
       { name: t('links.documentation'), href: 'https://docs.sspwallet.io', external: true },
+      { name: t('links.brandKit'), href: '/brand', external: false },
     ],
     community: [
       { name: t('links.github'), href: 'https://github.com/RunOnFlux/ssp-wallet', external: true },
